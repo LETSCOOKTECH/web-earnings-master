@@ -11,4 +11,4 @@ This library is intended to be PRIVATE under LETSCOOKTECH. Never publish site an
 - Never turn `robots.txt` into an access control for private content.
 
 ## Publication
-`bash scripts/publish-private.sh` creates a **new private GitHub repo** using authenticated GitHub CLI and confirms visibility. Script refuses to overwrite an existing repository. GitHub-side creation has not been executed within the generation environment.
+**Published:** `https://github.com/LETSCOOKTECH/web-earnings-master` is a private repository. The legacy `scripts/publish-private.sh` and `.ps1` scripts are for creating a *new*, not-yet-existing repository; they intentionally refuse to overwrite this existing repository. To work on the live private repository, use `gh repo clone LETSCOOKTECH/web-earnings-master` and ordinary reviewed Git commits/pull requests. Never force-push the main branch to compensate for mismatched local history. Reverify visibility after permissions or repository settings change.

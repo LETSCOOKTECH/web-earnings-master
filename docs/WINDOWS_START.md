@@ -1,12 +1,16 @@
-# Windows setup, GitHub publication and Codex reuse
+# Windows setup, private GitHub access and Codex reuse
 
-1. Extract `web-earnings-master` ZIP somewhere outside your website codebase. Review the content before publishing to your private repository. Never commit passwords, ad keys, Google OAuth credentials or private user datasets.
-2. Install Git and GitHub CLI (`gh`) if not available. Open PowerShell in the extracted repository folder. Run `gh auth login` and choose your LETSCOOKTECH account.
-3. Validate (Node.js 20+): `npm test`. Optional `node scripts/verify-source-links.mjs --limit 12` needs network and can fail on anti-bot sites.
-4. Run `./scripts/publish-private.ps1` in PowerShell, or `bash scripts/publish-private.sh` from Git Bash. If execution policies block `.ps1`, do not bypass security globally; use Git Bash or run the equivalent `gh repo create` commands manually.
-5. Verify `gh repo view LETSCOOKTECH/web-earnings-master --json visibility --jq .visibility` prints `PRIVATE`. Do not change visibility unless you intentionally choose to publish the methods and have redacted proprietary research.
-6. For a Codex session in another repo, make the skills available there via a documented clone/copy or equivalent supported Codex skill installation. Copy `.agents/skills` as well as necessary referenced `references/`, `sources/`, `templates/`, `scripts/` and `docs/` to preserve relative paths, or instruct Codex explicitly to open this private companion repo and cite its files.
-7. Example prompt: `Read the Web Earnings Master AGENTS.md and the web-technical-seo, web-ai-discovery and web-adsense-readiness skills from my private repository. Audit this actual production Astro website and run the applicable tests. Reverify current Google policies; do not claim approved/ranked unless proven.`
-8. Keep this master repo version-controlled; use pull requests for rule/source updates. Record official policy change date, evidence and why it affects deployed sites; do not continuously change websites without a real reason.
+The canonical private repository is `https://github.com/LETSCOOKTECH/web-earnings-master`. Do not attempt to create another repository with the legacy publication scripts.
 
-The package does **not** include a live AdSense account, active Google Search Console property, connected Semrush subscription, actual publisher account data, or automatic GitHub repository creation. Those require user/provider authorization.
+1. Install Git, GitHub CLI (`gh`), and Node.js 20+ if needed. Authenticate to the LETSCOOKTECH account with `gh auth login`.
+2. Clone the existing private repository: `gh repo clone LETSCOOKTECH/web-earnings-master`, then `cd web-earnings-master`.
+3. Verify visibility with `gh repo view LETSCOOKTECH/web-earnings-master --json visibility --jq .visibility`; expected value: `PRIVATE`.
+4. Run `npm test`. `node scripts/verify-source-links.mjs --limit 12` is optional and needs network access; HTTP availability does not validate policy interpretation.
+5. Open this repository as a workspace for Codex. Read `AGENTS.md`, then select only the relevant skills in `.agents/skills/`. Review `docs/START_HERE.md` and `docs/RESEARCH_PROTOCOL.md`.
+6. In another website repository, copy the relevant skills **with** their required `references/`, `sources/`, `templates/`, `scripts/` and `docs/`, or explicitly make this private repository available as a companion workspace. A private repository is not automatically loaded into another Codex session.
+7. Use feature branches and reviewed pull requests for updates. Record dates and authoritative URLs for provider-policy changes; never assume old research is current.
+8. Never commit credentials, unpublished ad or search account records, analytics identifying users, or uploaded user files.
+
+Example task: `Read Web Earnings Master AGENTS.md and the technical SEO, AI discovery, and AdSense skills. Audit my production Astro site, run the relevant checks and reverify official policies. Distinguish verified results from assumptions.`
+
+The repository does not include access to an AdSense account, Search Console property, Semrush subscription, or permission to deploy websites. These are separate per-project connections and authorizations.
