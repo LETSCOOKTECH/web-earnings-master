@@ -1,0 +1,2 @@
+claim_id,claim_type,provider,geography_or_account_scope,claim,source_url,published_or_updated_date,checked_at,interpretation,confidence,owner,follow_up
+C001,official-policy,Google AdSense,general,No universal published 10000 visit prerequisite,https://support.google.com/adsense/answer/9724,,2026-11-22,Site still needs original value and policy review,high,web-earnings-master,reverify before application

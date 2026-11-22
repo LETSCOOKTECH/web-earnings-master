@@ -1,0 +1,2 @@
+test_id,tool,input_fixture,expected_result,platform,browser,actual_result,evidence,pass_fail_unknown
+T001,image resizer,tests/fixtures/image-small.png,output dimension matches settings,desktop,Chromium,,,unknown

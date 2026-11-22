@@ -1,0 +1,14 @@
+# High-value tool page brief
+- Canonical task and intended query cluster, geography, sources/date:
+- What the tool genuinely does / cannot do:
+- Distinct from existing pages? (Yes, measured reason / No, improve existing):
+- Core UI above fold:
+- Actual user question and output:
+- Original explanation/method and factual sources:
+- Examples (tested) and relevant limitations:
+- Real media/alt/licensing:
+- Internal links to next useful task:
+- Title/H1/description/URL/canonical:
+- Structured data type / visible data cross-check:
+- Ad placement safety:
+- Indexability test and GSC follow-up:

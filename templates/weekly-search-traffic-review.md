@@ -1,0 +1,11 @@
+# Weekly search / AI / revenue diagnosis
+- Site / period / baseline / sources and retrieval dates:
+- Search Console indexed URLs, nonbrand impressions/clicks, CTR, positions by page/intent/geo/device:
+- Bing queries, clicks and citation/topic data:
+- Google AI visibility vs actual AI human referrals:
+- Tool start / success / failure / download / repeat usage:
+- Legitimate referral sources, videos, community outreach:
+- Gross revenue, page RPM, costs, consent and bot exclusions:
+- Critical change since previous period (algorithm, feature, site release):
+- Most likely bottleneck with counterevidence:
+- Single next low-risk experiment and rollback:

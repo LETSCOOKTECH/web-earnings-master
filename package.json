@@ -1,0 +1,21 @@
+{
+  "name": "web-earnings-master",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "lint:skills": "node scripts/validate-skills.mjs",
+    "audit:sources": "node scripts/check-sources.mjs",
+    "audit:fixture": "node scripts/audit-static-site.mjs --dist tests/fixtures/site --origin https://fixture.example",
+    "test": "node --test tests/*.test.mjs && npm run lint:skills && npm run audit:sources && npm run audit:fixture && npm run audit:evidence && npm run audit:adstxt && npm run audit:intents && npm run audit:robots",
+    "audit:evidence": "node scripts/check-evidence.mjs --file templates/evidence-manifest.example.json",
+    "audit:adstxt": "node scripts/audit-ads-txt.mjs --file tests/fixtures/ads.txt --seller google.com",
+    "audit:intents": "node scripts/audit-page-intents.mjs --file templates/page-intents.example.json",
+    "audit:robots": "node scripts/check-robots-policy.mjs --file tests/fixtures/robots-policy-valid.txt",
+    "audit:links": "node scripts/verify-source-links.mjs --limit 12"
+  },
+  "description": "Private evidence-first Codex skills for SEO, AI discovery, Astro, AdSense and website revenue"
+}

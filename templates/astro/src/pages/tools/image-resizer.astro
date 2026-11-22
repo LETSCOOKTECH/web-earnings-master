@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ToolIntro from '../../components/ToolIntro.astro';
+const title = 'Resize Images to Exact Dimensions | Example Tool';
+const description = 'Resize supported JPG, PNG or WebP images with explicit pixel dimensions and inspect your downloaded result.';
+---
+<BaseLayout title={title} description={description} canonicalPath="/tools/image-resizer/">
+  <ToolIntro heading="Image Resizer" summary="Set your output width and height, process the image, and verify the resulting pixels." limitations="Supported browser codecs and maximum input size must be documented after real device testing." />
+  <section aria-label="Interactive resizer">
+    <p>This is the search-readable page scaffold. Add the tested image-processing island here before launch. Do not publish an inactive fake Convert button.</p>
+  </section>
+  <section><h2>How resizing works</h2><p>Resizing changes pixel dimensions. It can affect sharpness, aspect ratio and total file size. Test output before use.</p></section>
+  <nav aria-label="Related image tools"><a href="/tools/image-compressor/">Compress image size</a></nav>
+</BaseLayout>

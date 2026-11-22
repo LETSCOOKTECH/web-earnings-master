@@ -1,0 +1,23 @@
+---
+name: web-adsense-readiness
+description: "Check Google AdSense eligibility, account and site review, original publisher value, policy restrictions, invalid traffic, ads.txt and payment readiness without myths."
+---
+
+# Adsense Readiness
+
+**Use when:** Check Google AdSense eligibility, account and site review, original publisher value, policy restrictions, invalid traffic, ads.txt and payment readiness without myths.
+
+**Workflow contract:** Follow the next steps proportionally to the request. Prefer current primary sources to saved claims. Adapt the sequence when evidence suggests a better route; do not overbuild a minor task. Show exact verification, uncertainty, and safety boundaries. Read `AGENTS.md` and the matching `references/` files when carrying out substantial work.
+
+## Publisher qualification walkthrough — official Google sources mandatory
+1. Verify publisher/account eligibility (age 18+ for own account or authorized adult account alternative; one-account restrictions; owned/controlled domain; accurate identity and payment details; supported country/language; current account status).
+2. Product/site value: site publicly usable, navigation complete, substantive original tool or content, legal rights, accurate contact/privacy disclosures and enough evaluable material. There is no general official minimum 30 articles, 1000 words, 10,000 visits or fixed global domain age.
+3. Review current Google Publisher Policies, Restrictions, AdSense Program Policies, screens without meaningful publisher content, navigation behavior, misleading software/downloads and prohibited content. A working UI alone is insufficient if the site lacks meaningful value.
+4. Add domain using current AdSense Sites flow, verify owner with one supported method, ensure Mediapartners-Google and other official relevant ad crawlers can access content; site must reach **Ready** for serving Google ads. Review conditional identity/payment/address/tax verification as required.
+5. Confirm ads.txt root path, real publisher ID, seller relationships and crawler access once network ID exists. Do not publish example publisher IDs or assert ads.txt alone means ad approval.
+6. For applicable EEA/UK/Swiss advertising, use a Google-certified CMP integrated with relevant IAB TCF per current official rules; check actual version and region at deployment. Observe US-state and other jurisdiction rules; counsel if material.
+7. Traffic integrity: don't click own ads, buy low-quality bots, incentivize clicks, place ads misleadingly, create unwanted pop-unders, or block navigation. Audit actual page ad units and third-party scripts.
+8. Submit only when site content + live function + policy + identity are ready; record screenshots, responses, results and policy center status. Approval not guaranteed; respond to exact issues from Google rather than guessing why.
+
+## Go / no-go output
+`templates/ads-review.md`, `templates/adsense-evidence.md`, link each finding to applicable official help page. Differentiate eligible/review-pending/Ready/account-limited from site ranking.

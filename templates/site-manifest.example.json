@@ -1,0 +1,20 @@
+{
+  "site_name": "Sense Image Tools (example)",
+  "canonical_origin": "https://example.com",
+  "status": "DRAFT_NOT_DEPLOYED",
+  "publisher_operator": "TO_BE_VERIFIED",
+  "privacy_contact": "TO_BE_CONFIGURED",
+  "hosting_provider": "UNDECIDED",
+  "legal_jurisdictions": ["UNKNOWN"],
+  "languages": ["en"],
+  "audience_countries": ["US","GB","CA","AU","IN"],
+  "tools": ["image-resizer","image-compressor","image-converter","batch-image-tools"],
+  "file_processing": "browser-local-for-supported-inputs",
+  "analytics_consent_mode": "REQUIRES_DESIGN",
+  "monetization_provider": "NONE_NOT_APPROVED",
+  "google_search_console_verified": false,
+  "bing_webmaster_verified": false,
+  "google_ai_inclusion_checked": false,
+  "public_release_approved": false
+}
+

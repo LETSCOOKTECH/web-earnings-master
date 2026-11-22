@@ -1,0 +1,12 @@
+# Fill before first site implementation (examples are placeholders, not actual domain or measured data)
+site_name: "Sense Image Tools"
+site_url: ""             # production HTTPS origin; empty means not ready
+owner: "LetsCookTech"
+primary_user_job: "Resize, compress and convert images with verifiable output"
+target_countries: ["US", "GB", "CA", "AU", "IN"]
+monetization: "AdSense after review; test conservative third-party ads only if policy-compatible"
+processor: "browser-first"
+max_cost_per_month_usd: null
+analytics_provider: ""
+policy_owner: ""
+readiness: "draft"

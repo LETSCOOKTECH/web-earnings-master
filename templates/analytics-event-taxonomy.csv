@@ -1,0 +1,6 @@
+event,meaning,properties_without_pii,client_or_server,requires_consent_review
+page_view,Actual human page view,pathname country_coarse source,client,yes
+tool_start,User actively initiates processing,tool_id file_type_group,client,yes
+process_success,Tool produced verified result,tool_id bytes_bucket format,client,yes
+process_failure,Tool failed with safe category,tool_id error_code,client,yes
+download_trigger,User requested completed result,tool_id output_type,client,yes

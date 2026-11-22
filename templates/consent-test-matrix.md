@@ -1,0 +1,11 @@
+# Consent test matrix — country/browser/network
+- Region, legal/ad network rule/source/date:
+- New user choice and consent banner visible and accessible:
+- Refuse nonessential storage behavior confirmed:
+- Accept behavior and TCF signals validated:
+- Preferences change/revoke and retention tested:
+- Analytics/ad requests before/after consent observed:
+- Third-party scripts and potential service workers enumerated:
+- Vendor/cookie disclosure matches real implementation:
+- Localization and screen-reader checks:
+- Open legal questions and assigned reviewer:

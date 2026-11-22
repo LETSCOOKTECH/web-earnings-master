@@ -1,0 +1,78 @@
+SENSE IMAGE TOOLS | 03 - STEP-BY-STEP RELEASE GATES AND EXECUTION
+Date: 2026-11-22 | This is our engineering plan, not an assurance of ranking or approval.
+
+DEFINITION OF DONE: A claim is PASS only when backed by an actual test, live URL, screenshot, log, or platform status. Otherwise mark UNKNOWN/FAIL.
+
+GATE 0 - IDENTITY/DOMAIN (BLOCKS PRODUCTION LAUNCH)
+[ ] Final public domain owned and DNS controlled; brand/domain conflict check.
+[ ] Real publisher identity and support contact; lawful privacy/terms text matching real handling.
+[ ] Deployment hosting terms permit commercial ad-supported tools.
+[ ] Choose supported ad geographies and plan a consent solution for EEA/UK/Swiss visitors.
+[ ] Decide whether temporary Monetag advertising is worth the future AdSense/UX risk.
+
+GATE 1 - ORIGINAL PRODUCT (BLOCKS ADSENSE REVIEW)
+[ ] Resizer generates correct dimensions and preserves ratio as chosen.
+[ ] Compressor displays ACTUAL bytes, target-limit failures, and image quality tradeoffs.
+[ ] Converter verifies JPEG/PNG/WebP file signatures and transparency options.
+[ ] Batch processing supports multiple files, partial errors, cancellation and verified ZIP outputs.
+[ ] Inputs controlled: file type/bytes/pixel count, EXIF-orientation handling, memory budget, safe errors.
+[ ] Test a real lower-end Android device plus desktop Safari/Chrome/Firefox where possible.
+[ ] No fake loading, nonfunctional buttons, broken links, or unverifiable claims.
+
+GATE 2 - CONTENT + ADSENSE ELIGIBILITY (BLOCKS APPLICATION)
+[ ] Home + 4 DISTINCT tool pages + 2 original useful guides are live and individually usable.
+[ ] About, Contact, Privacy, Terms reflect the actual site and operator; footer access.
+[ ] Accuracy: examples genuinely tested; explain formats, limitations, unsupported transformations.
+[ ] No scraped/duplicated AI-written filler; no thin parameter pages or indexable file outputs.
+[ ] Site live, crawlable and reviewable; account payee >=18, real info and identity when required.
+[ ] Ad layout: no misleading download ads; no ad overload or blank result ads; no popunders.
+[ ] Privacy notices + certified CMP setup for applicable Google ads in EEA/UK/Switzerland.
+[ ] Site verification configured; when approved, correct ads.txt including real pub-ID.
+
+GATE 3 - SEO + AI INDEX ELIGIBILITY (BLOCKS SEARCH SUBMISSION)
+[ ] HTTPS; stable host redirects; correct status codes, true 404s, valid canonical URLs.
+[ ] Raw HTML readable without JS; titles/H1/descriptions unique and factual.
+[ ] sitemap-index.xml real and correct; robots.txt points to actual sitemap and allows intended crawlers.
+[ ] No accidental noindex/nosnippet; internal HTML <a> linking works.
+[ ] Valid supported JSON-LD, no fake review ratings.
+[ ] Production WAF/CDN doesn't challenge legitimate search crawlers; check bot logs, not fake UA only.
+[ ] Search Console domain property, indexing and Google generative AI inclusion checked.
+[ ] Bing Webmaster Tools property, sitemap, optional IndexNow, AI Performance reviewed.
+[ ] OpenAI OAI-SearchBot, Claude-SearchBot, PerplexityBot public-page access checked.
+[ ] Mobile usability, accessibility, reduced motion and Core Web Vitals measured.
+
+GATE 4 - LAUNCH + EARLY TRAFFIC (START AFTER GATES 0-3)
+[ ] Publish 2 or 3 factual demos showing complete image transformation and measurements.
+[ ] Publish first authentic benchmark only after test files/methods/results are recorded.
+[ ] Place useful links in legitimate relevant guides/community replies with disclosure; no mass posting.
+[ ] Offer genuinely reusable mini-demo or open-source component for relevant developer audiences.
+[ ] Track NON-BRANDED Google clicks and qualified referrals; do not count crawler visits as people.
+[ ] Do not buy bots, exchange clicks, or game AdSense/Monetag traffic.
+
+GATE 5 - AD NETWORK, APPROVAL AND REVENUE
+[ ] Monetag site verified if used; install only conservative non-deceptive ad format and audit user experience.
+[ ] Apply for AdSense on quality/readiness, NOT an arbitrary visits/article threshold.
+[ ] Only call AdSense approval a success after its Sites status becomes Ready.
+[ ] Monitor ads.txt, Policy Center, consent, invalid traffic and technical errors.
+[ ] Compare net earnings after costs and visitor loss from ads before expanding ad slots.
+
+30/60/90-DAY REVIEW (DIAGNOSTICS ONLY; NOT TIME-TO-RANK PROMISES)
+Day 30: index status, query impressions, direct/referral visitors, processing completion, technical errors.
+Day 60: non-branded query clusters, page CTR, competitor SERP changes, retention and field CWV.
+Day 90: qualified traffic, task completion, returning users, valid revenue, hosting/maintenance costs; expand or pivot based on evidence.
+
+NEXT 5 ACTIONS IN ORDER
+1. Open EXISTING Astro repo; run install, typecheck, unit/E2E and production build. Capture failures.
+2. Audit actual routes and tool outputs against GATE 1; fix functionality before adding SEO pages.
+3. Confirm public domain, operator identity and accurate privacy/consent plan (GATE 0).
+4. Implement shared SEOHead, sitemap, crawler policy, schema, canonical and tool-page templates (GATE 3).
+5. Deploy an ad-free production candidate, verify live crawler/indexability, then request monetization review when eligible.
+
+STOP CONDITIONS
+- Tools not functional: don't apply for ads.
+- Pages merely duplicated: don't generate more.
+- WAF blocks search robots: fix infrastructure before distribution.
+- Third-party popunder/forced redirects: remove before AdSense.
+- No impressions despite indexing: revisit market demand/relevance; don't spam URLs.
+
+SOURCES: See files 01 and 02 for official URLs. Always re-check policy before live monetization.

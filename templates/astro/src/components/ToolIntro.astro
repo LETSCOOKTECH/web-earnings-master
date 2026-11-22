@@ -1,0 +1,10 @@
+---
+interface Props { heading: string; summary: string; limitations?: string; }
+const {heading,summary,limitations}=Astro.props;
+---
+<section aria-labelledby="tool-title">
+  <h1 id="tool-title">{heading}</h1>
+  <p>{summary}</p>
+  {limitations && <p class="tool-limitations"><strong>Important:</strong> {limitations}</p>}
+</section>
+<!-- Place interactive tool controls in a separate accessible island. Text remains readable without JS. -->

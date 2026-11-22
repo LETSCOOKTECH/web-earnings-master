@@ -1,0 +1,927 @@
+{
+  "registry_version": "2.0",
+  "checked_on": "2026-11-22",
+  "notes": "Sources are link registry, not certification of current terms. Most URL locations were confirmed via public search on 2026-11-22; exact source text and relevance MUST be re-opened at execution time. Legacy entries may include unverified old paths. Mark such entries unverified until checked live.",
+  "sources": [
+    {
+      "id": "google-adsense-eligibility",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/9724",
+      "purpose": "Publisher, original content, age and baseline eligibility",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-adsense-site-ready",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/7299563",
+      "purpose": "Original useful pages, navigation and readiness",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-adsense-site-status",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/12131223",
+      "purpose": "Site ownership, verification and Ready status",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-adsense-program",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/48182",
+      "purpose": "Invalid traffic, deceptive ads and publisher responsibilities",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-publisher-policies",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/10502938",
+      "purpose": "Disallowed inventory, publisher restrictions, requirements",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-ads-placement",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/1346295",
+      "purpose": "Accidental clicks, proximity, windows and misleading UI",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-inventory-no-content",
+      "category": "google-ads",
+      "url": "https://support.google.com/publisherpolicies/answer/11112688",
+      "purpose": "Screens without meaningful publisher content",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-adsense-other-networks",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/9728",
+      "purpose": "Other ad networks with AdSense",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-adsense-cmp",
+      "category": "privacy",
+      "url": "https://support.google.com/adsense/answer/13554116",
+      "purpose": "EEA/UK/Swiss certified CMP and IAB TCF requirement",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-ads-txt",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/12171612",
+      "purpose": "Authorized seller declarations",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-adsense-site-verification",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/12169212",
+      "purpose": "AdSense site verification and crawl access",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-search-essentials",
+      "category": "google-search",
+      "url": "https://developers.google.com/search/docs/essentials",
+      "purpose": "Core Search eligibility",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-search-spam",
+      "category": "google-search",
+      "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "purpose": "Scaled content, doorways, link abuse and other spam",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-seo-starter",
+      "category": "google-search",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+      "purpose": "Search fundamentals and user-first links",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-sitemaps",
+      "category": "google-search",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
+      "purpose": "Sitemaps are discovery hints, not ranking guarantees",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-js-seo",
+      "category": "google-search",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
+      "purpose": "JavaScript rendering and crawlable content",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-image-seo",
+      "category": "google-search",
+      "url": "https://developers.google.com/search/docs/appearance/google-images",
+      "purpose": "Images metadata, alt and context",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-software-schema",
+      "category": "google-search",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/software-app",
+      "purpose": "SoftwareApplication rich-result eligibility",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-core-web-vitals",
+      "category": "google-search",
+      "url": "https://developers.google.com/search/docs/appearance/core-web-vitals",
+      "purpose": "Field LCP/INP/CLS and Search relevance caveat",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-search-console",
+      "category": "google-search",
+      "url": "https://developers.google.com/search/docs/monitor-debug/search-console-start/",
+      "purpose": "First-party search monitoring",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-generative-guidance",
+      "category": "google-ai",
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "purpose": "AI Mode/Overviews, no magic llms.txt/schema",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-ai-features",
+      "category": "google-ai",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "purpose": "AI feature inclusion and citations",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-ai-inclusion",
+      "category": "google-ai",
+      "url": "https://support.google.com/webmasters/answer/16908024",
+      "purpose": "Search generative AI inclusion control",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-ai-report",
+      "category": "google-ai",
+      "url": "https://support.google.com/webmasters/answer/16984139",
+      "purpose": "Google generative AI performance reporting",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-crawlers",
+      "category": "google-ai",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+      "purpose": "Googlebot, Google-Extended and bot properties",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "openai-crawlers",
+      "category": "ai-bots",
+      "url": "https://developers.openai.com/api/docs/bots",
+      "purpose": "OAI-SearchBot, ChatGPT-User, GPTBot, IP lists",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "anthropic-crawlers",
+      "category": "ai-bots",
+      "url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "purpose": "Claude-SearchBot, Claude-User, ClaudeBot",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "perplexity-crawlers",
+      "category": "ai-bots",
+      "url": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
+      "purpose": "PerplexityBot and user fetch bot",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "duckassist-bot",
+      "category": "ai-bots",
+      "url": "https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot",
+      "purpose": "DuckAssistBot and AI answer crawl policy",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "bing-guidelines",
+      "category": "bing",
+      "url": "https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a",
+      "purpose": "Bing indexing and AI grounding principles",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "bing-ai-performance",
+      "category": "bing",
+      "url": "https://www.bing.com/webmasters/help/ai-performance-9f8e7d6c",
+      "purpose": "Bing AI citations/topics/queries metrics",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "bing-ai-grounding",
+      "category": "bing",
+      "url": "https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/",
+      "purpose": "Separate training and grounding preferences; dated rollouts",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "indexnow",
+      "category": "bing",
+      "url": "https://www.indexnow.org/documentation",
+      "purpose": "IndexNow protocol and its limited scope",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "astro-islands",
+      "category": "astro",
+      "url": "https://docs.astro.build/en/concepts/islands/",
+      "purpose": "Static HTML and selective hydration",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "astro-sitemap",
+      "category": "astro",
+      "url": "https://docs.astro.build/en/guides/integrations-guide/sitemap/",
+      "purpose": "Astro sitemap-index output",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "astro-config",
+      "category": "astro",
+      "url": "https://docs.astro.build/en/reference/configuration-reference/",
+      "purpose": "site, redirects, output and trailingSlash",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "monetag-add-verify",
+      "category": "monetag",
+      "url": "https://help.monetag.com/en/articles/6726312-how-do-i-get-started-as-a-publisher-add-and-verify-your-website-s",
+      "purpose": "Website verification and ad-format selection",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "monetag-tags",
+      "category": "monetag",
+      "url": "https://help.monetag.com/en/articles/6726318-how-do-i-get-started-as-a-publisher-paste-the-ad-tag-into-your-website",
+      "purpose": "Ad script integration rules",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "monetag-adsense",
+      "category": "monetag",
+      "url": "https://help.monetag.com/en/articles/6738501-can-i-use-monetag-with-adsense-on-the-same-page-is-it-safe",
+      "purpose": "Monetag claimed network coexistence, subject to Google rules",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "monetag-popunder",
+      "category": "monetag",
+      "url": "https://help.monetag.com/en/articles/6726321-onclick-popunder-ads",
+      "purpose": "OnClick ad product, disallowed for our design",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 14,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "monetag-earnings",
+      "category": "monetag",
+      "url": "https://help.monetag.com/en/articles/6738521-how-much-revenue-will-i-generate",
+      "purpose": "Revenue varies by GEO, device, format and quality",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "media-net-inventory",
+      "category": "other-ads",
+      "url": "https://www.media.net/legal/inventorypolicies/",
+      "purpose": "Third-party network inventory and traffic restrictions",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "raptive-faq",
+      "category": "other-ads",
+      "url": "https://help.raptive.com/hc/en-us/articles/360031181471-Raptive-FAQs",
+      "purpose": "Premium network requirements; current site terms apply",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "journey-start",
+      "category": "other-ads",
+      "url": "https://www.journeymv.com/getting-started-with-journey-by-mediavine/",
+      "purpose": "Journey enrollment prerequisites; current updates apply",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "semrush-kd",
+      "category": "market",
+      "url": "https://www.semrush.com/kb/1158-what-is-kd",
+      "purpose": "Semrush keyword difficulty is estimate",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "semrush-traffic",
+      "category": "market",
+      "url": "https://www.semrush.com/kb/1656-organic-traffic",
+      "purpose": "Modeled competitor traffic is not GSC clicks",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "semrush-volume",
+      "category": "market",
+      "url": "https://www.semrush.com/kb/683-what-is-search-volume-in-semrush",
+      "purpose": "Estimated volume",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-trends-data",
+      "category": "market",
+      "url": "https://support.google.com/trends/answer/4365533",
+      "purpose": "Google Trends scores are normalized 0–100",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "keyword-planner",
+      "category": "market",
+      "url": "https://support.google.com/google-ads/answer/3022575",
+      "purpose": "Ads competition reflects advertiser activity",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "openai-codex-skills",
+      "category": "codex",
+      "url": "https://developers.openai.com/codex/skills",
+      "purpose": "Skill file convention",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "first-party documentation",
+      "verification": "official page identified; re-open immediately before production policy decision"
+    },
+    {
+      "id": "google-how-search-works",
+      "category": "google-search",
+      "url": "https://developers.google.com/search/docs/fundamentals/how-search-works",
+      "purpose": "Crawling vs indexing vs serving",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-search-updates",
+      "category": "google-search",
+      "url": "https://developers.google.com/search/updates",
+      "purpose": "Search documentation changes and policy updates",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-search-blog",
+      "category": "google-search",
+      "url": "https://developers.google.com/search/blog",
+      "purpose": "News and algorithm update announcements",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-generative-report-launch",
+      "category": "google-ai",
+      "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+      "purpose": "Search Console GenAI feature reporting introduction",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-crawling-changelog",
+      "category": "google-search",
+      "url": "https://developers.google.com/crawling/docs/changelog",
+      "purpose": "Crawler documentation changes and IP range relocation",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-crawler-overview",
+      "category": "google-search",
+      "url": "https://developers.google.com/crawling",
+      "purpose": "Google crawler documentation index",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-publisher-restrictions",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/10008391",
+      "purpose": "Difference between publisher restrictions and policy violations",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-adsense-account-create",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/7402253",
+      "purpose": "Create own AdSense account",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-adsense-account-activate",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/7402256",
+      "purpose": "Account setup and identification requirements",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-adsense-link",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/7584263",
+      "purpose": "Site ownership and ad code verification",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-adsense-not-approved",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/81904",
+      "purpose": "Common application rejection reasons",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-adsense-ads-txt-crawl",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/7679060",
+      "purpose": "ads.txt crawler reachability",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-adsense-ads-txt-faq",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/9785052",
+      "purpose": "ads.txt publisher questions",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-adsense-ads-txt-issues",
+      "category": "google-ads",
+      "url": "https://support.google.com/adsense/answer/12171244",
+      "purpose": "Ads.txt troubleshooting",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-publisher-inventory",
+      "category": "google-ads",
+      "url": "https://support.google.com/publisherpolicies/answer/11128498",
+      "purpose": "Authorized seller inventory policy",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-adsense-consent-questions",
+      "category": "privacy",
+      "url": "https://support.google.com/adsense/answer/11546682",
+      "purpose": "European regulations consent details",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-adsense-cmp-management",
+      "category": "privacy",
+      "url": "https://support.google.com/adsense/answer/7670013",
+      "purpose": "CMP setup and management",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-adsense-cmp-framework",
+      "category": "privacy",
+      "url": "https://support.google.com/adsense/answer/9804260",
+      "purpose": "IAB TCF integration and current versions",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-adsense-cmp-messages",
+      "category": "privacy",
+      "url": "https://support.google.com/adsense/answer/10961068",
+      "purpose": "Google publisher CMP European regulations messages",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-search-robots",
+      "category": "google-search",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/robots/intro",
+      "purpose": "Robots syntax and behavior",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-search-canonical",
+      "category": "google-search",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+      "purpose": "Canonical guidance",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-search-links",
+      "category": "google-search",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable",
+      "purpose": "Real crawlable anchor links",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-search-indexing-debug",
+      "category": "google-search",
+      "url": "https://support.google.com/webmasters/answer/9012289",
+      "purpose": "URL Inspection tool",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-search-ai-generated",
+      "category": "google-ai",
+      "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content",
+      "purpose": "Helpful content vs scaled generation",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "bing-ai-performance-launch",
+      "category": "bing-ai",
+      "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+      "purpose": "Bing Webmaster AI citations report introduction",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "bing-ai-performance-topics",
+      "category": "bing-ai",
+      "url": "https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/",
+      "purpose": "Topics Portfolio beta",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "bing-ai-visibility-2026",
+      "category": "bing-ai",
+      "url": "https://blogs.bing.com/search/2026/6/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare/",
+      "purpose": "AI citations/topics comparisons",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "anthropic-agent-browser",
+      "category": "ai-crawlers",
+      "url": "https://support.claude.com/en/articles/18234133-how-do-anthropic-hosted-browsers-identify-themselves-when-they-browse-the-web-on-a-user-s-behalf",
+      "purpose": "Claude-Agent browser identification",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "brave-bot",
+      "category": "ai-crawlers",
+      "url": "https://search.brave.com/help/brave-search-crawler",
+      "purpose": "Brave crawler behavior; no distinct user agent",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "monetag-publisher-rules",
+      "category": "ad-networks",
+      "url": "https://help.monetag.com/en/articles/6726292-website-content-main-rules-for-publishers",
+      "purpose": "Monetag publisher website restrictions",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "monetag-multitag",
+      "category": "ad-networks",
+      "url": "https://help.monetag.com/en/articles/6726670-multitag-all-in-one",
+      "purpose": "Monetag MultiTag format stack",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "monetag-ad-count",
+      "category": "ad-networks",
+      "url": "https://help.monetag.com/en/articles/6726726-how-many-ads-can-i-place-on-one-webpage",
+      "purpose": "Tag duplication and UX warnings",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "monetag-by-site",
+      "category": "ad-networks",
+      "url": "https://help.monetag.com/en/articles/6745773-how-can-i-check-my-earnings-for-each-site-separately",
+      "purpose": "Monetag publisher reporting by site",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "raptive-eligibility-2026",
+      "category": "ad-networks",
+      "url": "https://help.raptive.com/hc/en-us/articles/360032840891-Who-is-eligible-for-Raptive",
+      "purpose": "Raptive 2026 pageview and geo requirements",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "raptive-terms",
+      "category": "ad-networks",
+      "url": "https://help.raptive.com/hc/en-us/articles/29872333292443-Raptive-Content-and-Traffic-Policies",
+      "purpose": "Raptive publisher content and traffic rules",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "mediavine-apply",
+      "category": "ad-networks",
+      "url": "https://help.mediavine.com/what-does-it-take-to-get-approved-by-mediavine",
+      "purpose": "Mediavine and Journey criteria",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "ezoic-requirements",
+      "category": "ad-networks",
+      "url": "https://support.ezoic.com/kb/article/getting-started-ezoics-requirements",
+      "purpose": "Ezoic site/MAU and exceptions",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 30,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "astro-official-courses",
+      "category": "learning",
+      "url": "https://docs.astro.build/en/astro-courses/",
+      "purpose": "Astro courses verified by project",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "codex-skills-build",
+      "category": "codex",
+      "url": "https://developers.openai.com/plugins/build/skills",
+      "purpose": "Skill directory and SKILL.md guidance",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "codex-skills-concepts",
+      "category": "codex",
+      "url": "https://developers.openai.com/plugins/concepts/skills",
+      "purpose": "Reusable skill semantics",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "codex-skills-evals",
+      "category": "codex",
+      "url": "https://developers.openai.com/blog/eval-skills",
+      "purpose": "Testing whether skills trigger correctly",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "google-seo-learning-paths",
+      "category": "learning",
+      "url": "https://developers.google.com/search/blog/2026/10/seo-learning-paths",
+      "purpose": "Official curated YouTube SEO learning paths",
+      "reviewed_at": "2026-11-22",
+      "review_every_days": 60,
+      "authority": "official first-party documentation",
+      "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    }
+  ]
+}

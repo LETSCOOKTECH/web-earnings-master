@@ -1,0 +1,29 @@
+# Practical runbook — from blank domain to measured business
+
+This is the orchestration playbook. Skills are modular; execute the next highest-risk gate first and revisit earlier steps when evidence changes.
+
+**0. Specify the business:** audience/geos, exact user job, alternatives, consent regions, monetization priority, domain and cost envelope. Record baseline in `templates/site-brief.yaml`.
+
+**1. Verify sources:** read official policies and changelogs at execution time, and create/update `templates/claim-ledger.csv`. If external access fails, label unverified and do not assert compliance. See `web-research-freshness`.
+
+**2. Demand and SERP evidence:** list exact task/search queries, collect 12-month volume and trend, distinguish advertiser competition from SEO difficulty, inspect top 10 organic results (country/device), SERP features, source of traffic and queries with clicks; document whether Google answers the query without a click. Use GSC when existing site has impressions. Reject ideas with no practical acquisition angle.
+
+**3. Competitor job tests:** attempt identical tasks on at least 3 relevant tools, including adverse cases and mobile if relevant. Record steps, time, actual outputs, pricing and trust problems. Only claim a gap if reproducible. Test original value of planned product.
+
+**4. Build a working product:** create exact output specs, data handling/privacy requirements, edge cases and release criteria. Use static/server-rendered Astro HTML for public explanations, isolate browser JS processing in components and workers, avoid unnecessary backend. Test real file outputs, low-memory devices, error states and cancellation.
+
+**5. Build discoverability into the product:** unique title/H1/intents, canonical, sitemap XML index, robots, noindex where necessary, semantic links, original evidence, accurate schema, original image examples, meaningful FAQ where genuinely helpful, Core Web Vitals and rendering tests. Never create near-duplicate pages solely for keyword variation.
+
+**6. Configure AI/search access:** ensure Googlebot, Bingbot and documented search crawlers are permitted and not challenged at CDN/WAF; differentiate training bots. Check Google generative AI Search Console inclusion controls, Bing AI reporting/preferences, and human/agent ability to use forms. Test real HTTP logs.
+
+**7. Monetization/publisher safety:** verify 18+/ownership/account, legal content rights, original site value, privacy policy and regional CMP obligations; compare network terms, ad formats, ads.txt and contract restrictions. Preserve an ad-free working tool path, clearly distinguish ads from controls, eliminate popunders and deceptive interactions. Apply for AdSense when ready—no mythical mandatory traffic minimum.
+
+**8. Launch gates:** `npm test`, build, static audit, live audit, mobile/keyboard/agent tests, real 404, CDN bot access, log review, AdSense prep evidence, credentials/secret scan; use `scripts/check-evidence.mjs` for self-attestation completeness, not a Google approval guarantee.
+
+**9. Distribution:** publish legitimate demos and technically accurate guides, open-source a useful part when appropriate, contact relevant maintainers/educators or communities without link spam, encourage shareable results and returning users. Track first-party human task completion and qualified referrals.
+
+**10. Weekly diagnostics:** compare GSC clicks and impressions, query clusters, ranking changes, Bing citations, AI referrals, tool conversion funnel, Core Web Vitals, ad revenue, RPM, geo and cost; form an experiment only when a concrete bottleneck is observed. Continue, improve, pivot or stop on evidence.
+
+**11. Monthly portfolio review:** calculate gross margin and net operating costs per site, remove unproductive work, review policy deltas, update benchmarks, and expand only where actual usage or demand shows a need. No fixed number of sites or URLs.
+
+**Hard stop**: if a provider changes policy, privacy is unresolved, a tool can silently corrupt data, or an ad creates deceptive UX, remediate before growth experiments.

@@ -1,0 +1,2 @@
+category,data_or_cookie,purpose,processor_or_vendor,region,retention,lawful_basis_or_consent,proof_url,status
+browser processing,image bytes,local image transformation,user browser,all,until page closes,no network upload,client processing test,pending

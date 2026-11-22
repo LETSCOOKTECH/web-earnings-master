@@ -1,0 +1,107 @@
+SENSE IMAGE TOOLS | 02 - ASTRO + GOOGLE SEO + GENERATIVE AI + AGENT ARCHITECTURE
+Reference design: 2026-11-22 | Not a top-ranking guarantee
+
+1. PRIMARY DESIGN
+Astro static output + TypeScript. Static semantic HTML for search landing pages, content, main navigation, footers, links, image captions, methodology and limitations. Isolated browser-side TypeScript/React islands only for the working tools. NO server upload/storage of user images for supported transforms.
+One site/domain with 4 high-value, distinct-intent tool pages rather than 100 near-duplicate keyword URLs.
+Core features: Resize; Compress (best-effort target KB with truthful output); Convert JPG/PNG/WebP; Batch transform and ZIP. Shared engine, one-upload workflow, verified output bytes/dimensions/MIME, transparent PNG -> JPEG background choice.
+
+2. SITE MAP - FIRST PUBLIC RELEASE
+/                                  [Home, main tool directory and why use it]
+/tools/image-resizer/              [Exact dimensions, keep aspect ratio, examples]
+/tools/image-compressor/           [Quality and optional target size, real limits]
+/tools/image-converter/            [JPG/PNG/WebP conversions with format limitations]
+/tools/batch-image-tools/          [Batch resize/compress/convert; ZIP]
+/guides/image-quality-and-size/    [Original explanation + real examples]
+/guides/image-formats/             [Original comparison of JPG/PNG/WebP]
+/research/...                      [Only after genuine measured experiments]
+/about/ /contact/ /privacy/ /terms/
+/robots.txt /sitemap-index.xml /ads.txt (with real publisher details only)
+No indexable dynamic uploaded filenames, results, URL params, ZIP exports, search permutations or thin presets.
+
+3. REPOSITORY LAYOUT (TARGET)
+astro.config.mjs                    site origin + @astrojs/sitemap + trailingSlash policy
+public/robots.txt                   crawlers + correct sitemap URL
+public/favicon.svg                 genuine brand icon
+public/images/                     original screenshots/diagrams with licenses
+src/pages/                         static canonical page routes
+src/layouts/BaseLayout.astro        accessible shell + canonical meta + ad/consent slots
+src/components/SEOHead.astro        validated metadata + Open Graph + JSON-LD
+src/components/ToolShell.astro      readable content surrounding interactive tool
+src/components/ToolApp.tsx          single shared client UI with per-route mode
+src/lib/image/                      parsing, conversion, compression, workers, integrity checks
+src/lib/seo/                        site URL, metadata, schema, link graph
+src/lib/analytics/                  privacy-aware task-start/complete/error events
+src/styles/                        tokens, compact responsive utility-first layout
+src/content/                       curated guides, source history, update dates
+tests/unit/ tests/e2e/              codecs, image QA, navigation, output, accessibility
+scripts/audit-seo.mjs               post-build automated audit
+
+4. EVERY INDEXABLE PAGE: SEARCH TECHNICAL GATE
+- Real HTTPS origin, status 200 for live pages; real 404/410 for deleted pages; correct redirects for canonical host and trailing slash.
+- Unique, truthful title, meta description, one clear H1, useful intro and HTML headings; no fake ratings.
+- Absolute self-canonical; no conflicting HTTP/header canonical and no accidental noindex/nosnippet.
+- Semantic HTML present before hydration: main, heading, navigation, tool description, limits, errors, related links.
+- Descriptive real <a href> links from homepage/category/related tools; no JS-only internal navigation.
+- Sitemap auto-generated using @astrojs/sitemap; include only production-worthy canonical URLs; check actual build path.
+- Accurate WebSite, Organization (real organization), WebApplication/SoftwareApplication and BreadcrumbList where applicable; visible content must match schema. No special AI schema.
+- Unique original images/examples; image alt text reflects actual image, responsive sizes and correct filenames.
+- No mass-generated modifier pages for '20KB', '50KB' etc unless a truly different, valuable task and content justify them.
+- Performance: mobile-first. Measured 75th-percentile good CWV: LCP <= 2.5s, INP <= 200ms, CLS <= 0.1. These are quality targets, NOT automatic ranking/approval rules.
+
+5. AI SEARCH AND BOT ELIGIBILITY (VERIFY ACTUAL LIVE WAF RESPONSES)
+Google Search/AI Overviews/AI Mode: Search indexing + snippet eligibility + Search Console generative-AI inclusion control; no llms.txt or AI-exclusive schema needed.
+Google Images: crawlable original visuals + supporting HTML, alt and image optimization.
+ChatGPT Search: allow OAI-SearchBot; consider published IP ranges. GPTBot is for training and can be managed separately. ChatGPT-User is user-triggered.
+Bing/Copilot: allow bingbot, Bing Webmaster Tools, sitemap, optional IndexNow for important changed URLs, review AI grounding controls and AI Performance.
+Claude: allow Claude-SearchBot and normal public-page user retrieval; ClaudeBot training is separate.
+Perplexity: allow PerplexityBot and verify WAF against official IPs; distinguish user-requested fetch.
+Other crawlers: normal public pages accessible under wildcard policy, verify using provider-specific official docs; do NOT invent an individual ranking switch for every model.
+Google-Extended: applies to specified Gemini training/grounding use cases, not the Google Search ranking mechanism; make a deliberate content-rights choice separately.
+Bots named in access logs can be spoofed. Use provider IP/rDNS verification when available.
+Browser agents: labeled file inputs, no custom inaccessible upload widget, actual buttons and errors, visible progress and output metadata, keyboard and screen-reader access. Never require an agent to bypass CAPTCHA or security restrictions.
+
+6. MINIMAL ROBOTS.TXT (AFTER REAL DOMAIN IS SET)
+User-agent: *
+Allow: /
+
+Sitemap: https://REPLACE-WITH-REAL-DOMAIN/sitemap-index.xml
+
+Wildcard already allows compliant search crawlers. Do not repeat dozens of Allow rules as if they improve rank. Never block a page in robots.txt and expect Google to see a noindex on that page. Do not list private data or output URLs in sitemap.
+
+7. INDEXING/RETRIEVAL QUALITY ENGINE
+- Automate build checks for canonical uniqueness, index/noindex state, H1/title/description, robots, sitemap links, broken internal links, structured data and responsive rendering.
+- GitHub CI: npm install/lockfile, astro check, test, build, E2E, code/security scan; prohibit merging failing production gates.
+- Post-deploy crawl: fetch raw HTML with curl and verify Googlebot/CDN access, 200/301/404, robots, schema, sitemap and correct source titles.
+- Tool correctness: inspect actual decoded output pixel sizes, mime signatures, compression target warnings, alpha transparency conversions, cancellation, large files, memory limits, mobile fail states.
+- Treat unsupported HEIC/AVIF/SVG as out-of-scope until browser/device support and sanitization are verified.
+
+8. ON-PAGE 'ANSWER + ACTION' TEMPLATE (ALL FOUR TOOLS)
+Above fold: clear promise + usable uploader, no blocking ad.
+Immediately below: supported formats, actual limitations, how to run, output interpretation and privacy.
+Lower page: worked example using genuine test files, troubleshooting, 3-5 contextually relevant questions (not keyword stuffed), actual links to companion tools.
+Original research: reproducible measured results, sample licenses, test conditions, transparent methodology, dated updates. No invented benchmarks.
+
+9. MEASUREMENT; SEARCH VISIBILITY IS NOT TRAFFIC
+Search Console: approved indexed URLs; per-query non-branded impressions, CTR, clicks, country, page; Google generative AI reporting where available.
+Bing Webmaster Tools: index/keyword reports, AI Performance citations/grounding where available.
+Product analytics: upload_start, transform_success, transform_error, download, supported format, device class, country in privacy-aware aggregate. NO file bytes, personal filenames, or uploaded image content in analytics.
+CDN logs: Googlebot/OAI/Claude/Perplexity response codes and challenges; filter bot visits from human traffic.
+Advertising: pageviews, geographic mix, valid earnings, page RPM and third-party performance after authorization; watch CWV degradation.
+Monthly decision: indexed-but-no-impressions => intent/relevance/competitive authority; impressions-no-clicks => SERP; clicks-no-completion => product; usage-no-revenue => economics.
+
+10. WHAT DOES NOT GUARANTEE RANKING
+Astro itself, a perfect Lighthouse score, structured data, sitemaps, robots Allow, internal linking counts, keyword density, fake reviews, AI-labeled JSON-LD, llms.txt, reciprocal link schemes, or submitting the URL every day.
+The sustainable route is verified demand + superior real tool + relevant search pages + legitimate references + actual distribution + performance and reliability.
+
+OFFICIAL IMPLEMENTATION SOURCES
+Google Search Essentials: https://developers.google.com/search/docs/essentials
+Google AI features: https://developers.google.com/search/docs/appearance/ai-features
+Google generative optimization: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
+Google generative inclusion: https://support.google.com/webmasters/answer/16908024
+Google common crawlers: https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers
+Google structured data: https://developers.google.com/search/docs/appearance/structured-data/software-app
+OpenAI bots: https://developers.openai.com/api/docs/bots
+Bing Webmaster AI: https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/
+Astro islands: https://docs.astro.build/en/concepts/islands/
+Astro sitemap: https://docs.astro.build/en/guides/integrations-guide/sitemap/

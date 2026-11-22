@@ -1,0 +1,18 @@
+{
+  "pages": [
+    {
+      "path": "/tools/image-resizer/",
+      "user_job": "Resize a photo to exact output dimensions",
+      "demand_evidence_status": "hypothesis",
+      "status": "index",
+      "title": "Resize Images to Exact Dimensions"
+    },
+    {
+      "path": "/tools/image-compressor/",
+      "user_job": "Reduce photo file bytes while preserving usable quality",
+      "demand_evidence_status": "hypothesis",
+      "status": "index",
+      "title": "Image Compressor"
+    }
+  ]
+}

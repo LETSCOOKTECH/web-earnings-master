@@ -1,0 +1,11 @@
+# Security and data threat model
+- Inputs and trust boundaries:
+- File size/pixel/decompression limits:
+- Third-party assets/codecs/licenses/CVEs:
+- XSS, malicious metadata, sandbox/WASM controls:
+- Analytics/ad scripts, CMP and data leakage:
+- CDN, WAF, CORS and crawler access:
+- Authentication or server endpoints (if any):
+- Secrets/public build and logs scan:
+- Mobile OOM/cancellation/retry behavior:
+- Incident response, monitoring, rollback:

@@ -1,0 +1,28 @@
+{
+  "site_url": "https://example.test",
+  "notes": "Example demonstration, NOT actual site readiness. Replace all example evidence before use.",
+  "checks": [
+    {
+      "id": "build-test",
+      "status": "pass",
+      "evidence": [
+        "tests/fixtures/site/index.html (synthetic fixture only)"
+      ]
+    },
+    {
+      "id": "gsc-domain-verified",
+      "status": "unknown",
+      "evidence": []
+    },
+    {
+      "id": "publisher-site-ready",
+      "status": "unknown",
+      "evidence": []
+    },
+    {
+      "id": "privacy-law-review",
+      "status": "not-applicable",
+      "reason": "Synthetic test fixture is not a real website"
+    }
+  ]
+}

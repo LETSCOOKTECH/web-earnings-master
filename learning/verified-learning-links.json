@@ -1,0 +1,94 @@
+{
+  "reviewed_at": "2026-11-22",
+  "important": "Video/course links are educational, not evidence of current eligibility. Reopen before recommending. No videos embedded or copied.",
+  "items": [
+    {
+      "type": "video",
+      "title": "Introducing How Search Works",
+      "provider": "Google Search Central",
+      "url": "https://www.youtube.com/watch?v=5MIAugQ17ks",
+      "topic": "Crawling, indexing, serving",
+      "verified": "Official Google Search Central video found in 2026-11-22 search"
+    },
+    {
+      "type": "video",
+      "title": "Complete AI SEO Course for Beginners (AEO)",
+      "provider": "Ahrefs / Sam Oh",
+      "url": "https://www.youtube.com/watch?v=uza9GX0E2mw",
+      "topic": "AI-search research and methods; third-party opinions, not platform policy",
+      "verified": "YouTube result found in 2026-11-22 search"
+    },
+    {
+      "type": "official-learning-path",
+      "title": "Google Search Central SEO learning paths",
+      "provider": "Google Search Central",
+      "url": "https://developers.google.com/search/blog/2026/10/seo-learning-paths",
+      "topic": "Curated technical SEO YouTube playlists",
+      "verified": "Official Google blog post found in 2026-11-22 search"
+    },
+    {
+      "type": "course",
+      "title": "Ahrefs SEO Course for Beginners",
+      "provider": "Ahrefs Academy",
+      "url": "https://ahrefs.com/academy/seo-training-course",
+      "topic": "Keyword research, on-page, backlinks",
+      "verified": "Official Ahrefs Academy result found in 2026-11-22 search"
+    },
+    {
+      "type": "course",
+      "title": "Ahrefs Technical SEO Course",
+      "provider": "Ahrefs Academy",
+      "url": "https://ahrefs.com/academy/technical-seo-course",
+      "topic": "Technical SEO and audits",
+      "verified": "Official Ahrefs Academy result found in 2026-11-22 search"
+    },
+    {
+      "type": "course",
+      "title": "Astro Official Courses",
+      "provider": "Astro",
+      "url": "https://docs.astro.build/en/astro-courses/",
+      "topic": "Astro code and website build tutorials",
+      "verified": "Official Astro page found in 2026-11-22 search"
+    },
+    {
+      "type": "learning-path",
+      "title": "Codex Skills Construction",
+      "provider": "OpenAI Developers",
+      "url": "https://developers.openai.com/plugins/build/skills",
+      "topic": "Skills, references, validation",
+      "verified": "Official OpenAI Developers result found in 2026-11-22 search"
+    },
+    {
+      "type": "course",
+      "title": "Ahrefs Best of AhrefsTV",
+      "provider": "Ahrefs Academy",
+      "url": "https://ahrefs.com/academy/ahrefs-youtube",
+      "topic": "Curated YouTube technical SEO and content hubs",
+      "verified": "Official Ahrefs Academy result found in 2026-11-22 search"
+    },
+    {
+      "type": "course",
+      "title": "Ahrefs Keyword Research lesson",
+      "provider": "Ahrefs Academy",
+      "url": "https://ahrefs.com/academy/seo-training-course/lesson-1-2",
+      "topic": "Search intent analysis",
+      "verified": "Official Ahrefs Academy result found in 2026-11-22 search"
+    },
+    {
+      "type": "video",
+      "title": "How to get your site approved for AdSense?",
+      "provider": "Google AdSense (official)",
+      "url": "https://www.youtube.com/watch?v=lZUG0XGlZZY",
+      "topic": "AdSense site readiness and rejection reasons; older tutorial, current policies supersede",
+      "verified": "Official verified Google AdSense video found on 2026-11-22, originally published 2020"
+    },
+    {
+      "type": "channel",
+      "title": "Google Search Central official channel",
+      "provider": "Google Search Central",
+      "url": "https://www.youtube.com/channel/UCWf2ZlNsCGDS89VBF_awNvA",
+      "topic": "Search Console Training, Google Trends tutorials, How Search Works and SEO basics",
+      "verified": "Official verified channel found 2026-11-22"
+    }
+  ]
+}

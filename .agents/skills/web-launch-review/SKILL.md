@@ -1,0 +1,23 @@
+---
+name: web-launch-review
+description: "Run evidence-based prelaunch and postlaunch release gates for Astro tools, SEO/AI access, privacy, ads, production reliability and business measurement."
+---
+
+# Launch Review
+
+**Use when:** Run evidence-based prelaunch and postlaunch release gates for Astro tools, SEO/AI access, privacy, ads, production reliability and business measurement.
+
+**Workflow contract:** Follow the next steps proportionally to the request. Prefer current primary sources to saved claims. Adapt the sequence when evidence suggests a better route; do not overbuild a minor task. Show exact verification, uncertainty, and safety boundaries. Read `AGENTS.md` and the matching `references/` files when carrying out substantial work.
+
+## Evidence gates
+1. Market: genuine job, proven demand and distribution hypothesis recorded. Engineering: source checked into versioned repo, site config and domain verified.
+2. Security/product: tests on actual output, errors, file sizes, browsers, mobile device and accessibility; no secrets or destructive unverified changes.
+3. Build/SEO: Astro build output correct, sitemap and robots verified, canonical/title/H1/links/schema validated, intentional 404/410 and redirects, no example.com in deployed output.
+4. Search/AI: live server response from normal browser and documented crawlers, no WAF challenge, Search Console and Bing properties verified where credentials available, generative AI inclusion checked if desired; no claim of ranking.
+5. Monetization: publisher identity, actual ownership, policies, consent, ads.txt, ad placement and network approval, ad script compatibility, fraud risk and privacy policy reviewed.
+6. Observability: analytics events tested in real browser, monitor tool errors, bot/user separation, revenue and costs; rollback plan documented.
+7. After release: smoke test live tools and static pages, 24–48h error review, indexing checks and acquisition baseline. Do not declare DONE because CI script exists; label external approval separately.
+8. Use `scripts/check-evidence.mjs` to check manifest completeness, then manual sign-off; automated scripts are **not certification**.
+
+## Output
+`templates/release-evidence.md` with PASS/FAIL/UNKNOWN, evidence links, owner, test date, risk and release decision. GO only after critical gates demonstrated.

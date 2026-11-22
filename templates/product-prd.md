@@ -1,0 +1,16 @@
+# Product PRD — one user job
+- Date / decision owner / repository:
+- User and context / real pain evidence:
+- Exact input → output:
+- Current competitors and experimentally verified deficiency:
+- Success definition and metric:
+- Scope: MUST / NICE / DEFER (based on evidence):
+- Browser compatibility, file-type and size limits:
+- Correctness/quality limits and warnings:
+- Privacy and security treatment:
+- Full user journey including empty/loading/success/failure/retry:
+- Accessibility/agent operation:
+- SEO landing page intent and accurate claims:
+- Variable and hosting costs:
+- Test fixtures and acceptance checks:
+- Rollback and unsupported behavior:

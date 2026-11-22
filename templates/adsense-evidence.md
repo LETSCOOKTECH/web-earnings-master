@@ -1,0 +1,16 @@
+# AdSense site review evidence (do not mark approved without provider status)
+- Site URL / verification method / publisher/account eligibility:
+- Domain ownership live proof:
+- Functional original content URLs / original work evidence:
+- Navigable homepage/category/tool/about/contact/privacy/terms:
+- Rights, unsupported content and languages checked:
+- Actual selected ad network and formats:
+- No popunder / misleading download / invalid clicks:
+- Google Publisher Policies / Restrictions verified at date:
+- Consent regions / certified CMP requirement reviewed:
+- Root ads.txt checked and publisher ID validated (if applicable):
+- Mediapartners-Google crawler and WAF access evidence:
+- Actual site status (Not submitted / In review / Ready / Needs attention):
+- Identity, payment and tax obligations in account:
+- Remaining manual/legal checks:
+- Final reviewer / date / GO or NO-GO:

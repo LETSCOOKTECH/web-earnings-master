@@ -1,0 +1,8 @@
+# Illustrative Cloudflare Pages _headers file. NEVER deploy blindly without testing ad scripts/CSP/codecs.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Content-Security-Policy is intentionally absent; design from actual dependencies,
+# CMP/ad vendor domains and file/image-worker requirements before enforcement.

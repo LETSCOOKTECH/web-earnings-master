@@ -1,0 +1,71 @@
+SENSE IMAGE TOOLS | 01 - ADSENSE + EARLY MONETIZATION ELIGIBILITY
+Policy verification: 2026-11-22 | Status: requirements specification, NOT an approval certificate
+Legend: [GOOGLE RULE] = official requirement/policy; [INTERNAL GATE] = our quality threshold; [PROVIDER] = network-specific.
+
+A. NON-NEGOTIABLE ADSENSE ELIGIBILITY
+[GOOGLE RULE] Publisher must be at least 18 to hold own AdSense account (parent/guardian route for minors).
+[GOOGLE RULE] Own/control the site and be able to verify it; accessible live pages and usable HTML.
+[GOOGLE RULE] Original, useful, high-quality content and compliance with Program + Publisher policies.
+[GOOGLE RULE] Site must be functional, accessible, navigable and contain enough original content for review; no placeholder/under-construction site.
+[GOOGLE RULE] Site added/verified and reviewed. AdSense ads may serve only after its site status is Ready.
+[GOOGLE RULE] Accurate payment/payee details; complete identity verification if requested. Avoid duplicate accounts for the same publisher.
+[GOOGLE RULE] Supported main language (English supported). Content must not violate copyright, malicious software or prohibited-content rules.
+[GOOGLE RULE] No artificially inflated ad impressions/clicks, click-exchanges, purchased bot traffic or instructions to click ads.
+[GOOGLE RULE] No ads on blank/low-value/replicated-content screens; no more ads/promotions than publisher content; no misleading ad placement.
+[GOOGLE RULE] Advertising privacy-policy disclosures: cookies, data use, third-party vendors, Google ad cookies, personalization and opt-out information as applicable.
+[GOOGLE RULE] EEA/UK/Swiss users: Google-certified CMP integrating IAB TCF for applicable Google ad serving; obtain required consent and honor decisions.
+[GOOGLE RULE] Do not display AdSense on a site that contains/triggers popunders, or on pages with ads disguised as navigation/download controls.
+
+B. IMPORTANT: NOT OFFICIAL NUMERIC MINIMUMS
+NO universal AdSense requirement of 10,000 visits, 30 posts, 1,000 words/page, 6-month-old domain, minimum backlinks, specific CMS, or a fixed count of tools. Google's setup deadline of 6 months for an unfinished ACCOUNT is NOT a 6-month domain-age prerequisite.
+NO guaranteed approval, ranking, or revenue after satisfying this checklist.
+
+C. USEFUL TRUST/QUALITY STANDARDS - OUR OWN LAUNCH GATES
+[INTERNAL GATE] Homepage + 4 fully working core tools + two first-hand useful guides; add research page ONLY after completing real experiments.
+[INTERNAL GATE] About (real publisher identity), Contact (working method), Privacy (accurate), Terms (service limitations); visible navigation and footer. About/Contact/Terms are trust best practices, not individually published universal AdSense mandatory-page rules.
+[INTERNAL GATE] Each tool page: immediately useful tool, supported formats, limits, steps, realistic examples, failure handling, output validation, local-processing disclosure, helpful links. No fake testimonials or fabricated 'tests'.
+[INTERNAL GATE] No empty result pages with ads, no indexable temporary results, no duplicate keyword-template pages, no fake upload/download buttons.
+[INTERNAL GATE] Actual processing works on modern desktop + low-memory Android; unsupported format/size/quality targets produce honest error or warning.
+[INTERNAL GATE] No ad blocks adjacent to upload, resize, convert, submit, or download controls; avoid obstructive mobile overlays; separate ads clearly from utilities.
+[INTERNAL GATE] Review all third-party scripts, user consent, tracking, CSP, mobile rendering, and cumulative ad density before monetization.
+[INTERNAL GATE] Keep a change log and evidence: tests, screenshots, crawl results, consent checks, and pages reviewed.
+
+D. ADS.TXT AND OWNERSHIP DETAILS
+[GOOGLE RULE] AdSense accepts supported site-verification methods; verification is a separate step from search indexing.
+[GOOGLE GUIDANCE] ads.txt is NOT a universal signup prerequisite but is highly recommended; publish correct record after receiving REAL publisher ID and keep it crawlable. Never paste an invented pub-identifier.
+[INTERNAL GATE] Expose /ads.txt at domain root once publisher ID known; match account and ad network sellers; no fabricated entries.
+[INTERNAL GATE] Allow Mediapartners-Google (ad crawler) and Googlebot to fetch public pages through robots and CDN/WAF.
+[INTERNAL GATE] Check Google AdSense Sites status after submission; accept Ready only when Google reports it.
+
+E. MONETAG (EARLY ADS) WITH A FUTURE ADSENSE PATH
+[PROVIDER] Monetag publicly states no fixed minimum traffic; still requires real traffic, original content, and policy-compliant verified site. Earnings are NOT immediate merely because a site is verified.
+[PROVIDER] Verify by provider-specified file or meta tag, and only install code from the legitimate dashboard. Confirm their current service-worker requirements BEFORE installing any push product.
+[INTERNAL GATE] NEVER use Monetag OnClick/popunder, forced redirects, deceptive SmartLink placement, or intrusive push subscription to grow this site. Google explicitly disallows AdSense on sites containing/triggering popunders.
+[INTERNAL GATE] Prefer no ads until basic quality/traffic testing is finished; if using Monetag before AdSense, test a conservative non-deceptive format, disclose its tracking, avoid overlaying the tool, audit publisher terms, and remove incompatible code before applying.
+[INTERNAL GATE] Keep ad providers modular and disable third-party ads with configuration, so switching providers does not require rewriting page templates.
+[INTERNAL GATE] No claim that Monetag + AdSense are automatically compatible; compatibility depends on the actual units and site behavior.
+
+F. ACTUAL ADSENSE APPLICATION SEQUENCE
+1. Finish real product and public content; fix broken/empty routes.
+2. Publish real domain on HTTPS; verify ownership, navigability, policy disclosures and consent setup.
+3. Inspect actual mobile pages, noindex/robots, content and ad-placement risks.
+4. Create/use one eligible AdSense account; supply accurate identity/payment info.
+5. Add domain under Sites; implement offered ownership verification; submit review.
+6. Wait for Google to mark it Ready; fix any report issues and resubmit as required.
+7. Publish correct ads.txt record; add consent-aware restrained ad placements; monitor Policy Center and invalid traffic.
+
+G. OFFICIAL POLICY SOURCES
+Google eligibility: https://support.google.com/adsense/answer/9724
+Google site readiness: https://support.google.com/adsense/answer/7299563
+Account setup: https://support.google.com/adsense/answer/7402256
+Site review/status: https://support.google.com/adsense/answer/12131223
+Publisher policies: https://support.google.com/publisherpolicies/answer/10502938
+Ads on screens without content: https://support.google.com/publisherpolicies/answer/11112688
+More ads than content: https://support.google.com/publisherpolicies/answer/11169917
+Ad placement: https://support.google.com/adsense/answer/1346295
+Invalid traffic: https://support.google.com/adsense/answer/16737
+Privacy disclosure: https://support.google.com/adsense/answer/1348695
+EU/UK/Swiss CMP: https://support.google.com/adsense/answer/13554116
+ads.txt guidance: https://support.google.com/adsense/answer/12171612
+Monetag requirements: https://monetag.com/
+Monetag verification: https://help.monetag.com/en/articles/6726312-how-do-i-get-started-as-a-publisher-add-and-verify-your-website-s

@@ -1,0 +1,3 @@
+platform,search_bot,user_fetcher,training_bot,control_or_setting,official_url,verified_on,server_response_status,source_visibility,referral_visitors,task_completions
+Google,Googlebot,,Google-Extended,Search Console genAI control,https://developers.google.com/search/docs/fundamentals/ai-optimization-guide,2026-11-22,,,,
+ChatGPT,OAI-SearchBot,ChatGPT-User,GPTBot,robots + verified WAF,https://developers.openai.com/api/docs/bots,2026-11-22,,,,

@@ -1,0 +1,3 @@
+path,primary_user_job,primary_keyword_cluster,country,distinct_from_existing_page,source_url,research_date,status
+/tools/image-resizer/,Resize images to exact pixel dimensions,image resizer,US,yes,,2026-11-22,hypothesis
+/tools/image-compressor/,Reduce image bytes subject to constraints,image compressor,US,yes,,2026-11-22,hypothesis

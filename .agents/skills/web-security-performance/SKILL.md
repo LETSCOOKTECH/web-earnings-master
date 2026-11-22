@@ -1,0 +1,22 @@
+---
+name: web-security-performance
+description: "Secure low-cost Astro and browser-file processing while optimizing field Core Web Vitals, safe hosting, crawler access and operational resilience."
+---
+
+# Security Performance
+
+**Use when:** Secure low-cost Astro and browser-file processing while optimizing field Core Web Vitals, safe hosting, crawler access and operational resilience.
+
+**Workflow contract:** Follow the next steps proportionally to the request. Prefer current primary sources to saved claims. Adapt the sequence when evidence suggests a better route; do not overbuild a minor task. Show exact verification, uncertainty, and safety boundaries. Read `AGENTS.md` and the matching `references/` files when carrying out substantial work.
+
+## Security and performance gate
+1. Model threats: malicious uploads, decompression bombs, untrusted metadata, cross-site scripting, worker and WASM vulnerabilities, hidden third-party tracking, advertising scripts, hotlink and rate abuse, request flooding, leaked API keys and host/CDN mistakes.
+2. Enforce input MIME validation by file signature where feasible, limits on bytes/pixels/frames/batch size, memory/CPU timeouts, output decoding validation, object URL cleanup and zero unnecessary remote upload.
+3. Audit dependencies and CSP; use TLS, protective response headers after compatibility testing, safe link targets, no cookies unless needed and least-privilege permissions. Don't break image engine / third-party policy scripts with untested headers.
+4. Prefer static CDN serving and client-side work where suitable; quantify free-tier bandwidth/request constraints, compute/memory budgets and risk of browser lockups. Offload CPU work to workers, yield or cancel and fail gracefully.
+5. Measure LCP/INP/CLS with real users where possible; synthetic Lighthouse alone not enough. Reserve image/ad sizes, optimize fonts and image src sets, lazy-load heavy processing code and ads cautiously.
+6. Protect crawlers through bot verification, not user-agent spoof exceptions. Monitor real WAF 4xx/429 and rate-limits; bots should not be forced through a JS challenge on public pages.
+7. Define incident response, backups for any server data, monitoring on failures and deployment rollback. Secrets remain in host env or vault; never in public source or logs.
+
+## Outputs
+`templates/security-threat-model.md`, performance traces, mobile memory test, dependency/license audit and evidence. See official Astro/Google/web.dev documentation.

@@ -1,0 +1,11 @@
+# Ad placement and UX audit
+- Page and network format / current policy URL and date:
+- Desktop/mobile screenshot/viewport:
+- Primary upload/process/download controls and distance from ad:
+- Ad clearly labeled? Hidden click risk? Overlay or shift?
+- No empty/low-value screen ad insertion?
+- Push/service worker/popunder/forced redirect absent?
+- CMP/region tested?
+- Field/synthetic CWV and actual tool completion impact:
+- Ad traffic validity and permission:
+- Approval / disable / rollback:

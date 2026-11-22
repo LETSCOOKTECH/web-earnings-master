@@ -1,0 +1,7 @@
+# Replace example origin and confirm actual sitemap output before publishing.
+# Wildcard permits compliant search and AI search bots; specific training policy is a separate business decision.
+User-agent: *
+Allow: /
+
+Sitemap: https://example.com/sitemap-index.xml
+
