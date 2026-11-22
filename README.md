@@ -1,0 +1,149 @@
+<div align="center">
+
+# Web Earnings Master
+
+### Engineering knowledge. Evidence-based discovery. Sustainable website businesses.
+
+**Private Codex skill system maintained by LETSCOOKTECH**
+
+[Getting started](docs/START_HERE.md) · [Skill library](#skill-library) · [Research protocol](docs/RESEARCH_PROTOCOL.md) · [Official sources](sources/official_sources.json) · [Governance](AGENTS.md)
+
+</div>
+
+---
+
+## Mission
+
+A continuously improved technical research and execution library for the **entire lifecycle of high-value websites**: understanding browsers and servers; validating genuine market demand; designing and shipping useful products; making pages eligible for search and AI retrieval; building legitimate distribution; meeting monetization and privacy requirements; and improving profitability from observed data.
+
+**This repository is a knowledge and verification system—not a website template, not a guarantee of Google rankings, and not proof of AdSense approval.** Research is dated; provider rules must be checked against current primary sources before consequential decisions.
+
+## The operating loop
+
+```text
+Research the user problem and market
+    ↓
+Measure search demand and real competitors
+    ↓
+Design a distinctly valuable end-to-end workflow
+    ↓
+Build accessible, secure and fast web software
+    ↓
+Verify crawlability, indexing, SEO and AI retrieval
+    ↓
+Validate publisher compliance and ad experience
+    ↓
+Acquire real people through search and distribution
+    ↓
+Measure task success, qualified traffic and economics
+    ↺  Investigate failures, improve and retest
+```
+
+The loop is adaptive. Codex must investigate the current problem and only invoke applicable skills, rather than following an arbitrary fixed sequence or adding features for their own sake.
+
+## Skill library
+
+**21 specialized Codex skills**, stored under [`.agents/skills/`](.agents/skills/), cover:
+
+| Workstream | Skills | What they produce |
+| --- | --- | --- |
+| Research and market selection | `web-research-freshness`, `web-niche-validation`, `web-keyword-intent`, `web-competitor-audit` | Dated evidence ledger, query clusters, SERP reviews and documented opportunity decisions |
+| Product and architecture | `web-product-spec`, `web-astro-engineering`, `web-accessibility-agent-ux`, `web-security-performance` | Testable product requirements, static-first architecture, accessible workflows and risk controls |
+| Search and AI discovery | `web-technical-seo`, `web-content-and-image-seo`, `web-ai-discovery`, `web-authority-distribution` | Indexability audits, high-value information, crawl policy and earned distribution plans |
+| Monetization and trust | `web-adsense-readiness`, `web-network-monetization`, `web-privacy-consent`, `web-ad-experience` | Publisher eligibility evidence, network comparisons, privacy/consent and safe ad layouts |
+| Reliability and growth | `web-product-validation`, `web-search-analytics`, `web-experiments`, `web-launch-review`, `web-portfolio-growth` | Real tests, conversion funnels, experiments, release decisions and portfolio economics |
+
+Full routing is in [`AGENTS.md`](AGENTS.md). The [master curriculum](docs/MASTER_CURRICULUM.md) organizes the knowledge domains, while [`docs/START_HERE.md`](docs/START_HERE.md) covers practical usage.
+
+## Knowledge layers
+
+| Directory | Contents |
+| --- | --- |
+| [`.agents/skills/`](.agents/skills/) | Codex-compatible `SKILL.md` instructions and trigger descriptions |
+| [`docs/`](docs/) | Extended lifecycle guides: AdSense, SEO, AI, security, analytics, distribution, technical research |
+| [`references/`](references/) | Subject-specific field notes for working through a skill |
+| [`sources/`](sources/) | Curated primary-source URLs and verification metadata; links are not permanent policy certificates |
+| [`learning/`](learning/) | Supplementary tutorials and training resources, distinct from authoritative policies |
+| [`scripts/`](scripts/) | Local audits for rendered HTML, links, robots, page intent, ads.txt and evidence |
+| [`templates/`](templates/) | Evidence, market, competitor, publisher, UX, and Astro patterns |
+| [`tests/`](tests/) | Tests and deliberately failing examples validating audit behavior |
+| [`research/`](research/) | Dated historical studies, with their original uncertainty preserved |
+| [`archive/`](archive/) | Earlier skill generations retained for provenance; not the active instructions |
+
+## Using with Codex
+
+1. **Open this repository as a workspace.** Codex can follow [`AGENTS.md`](AGENTS.md) and select `.agents/skills/*/SKILL.md` in that repository context.
+2. **State the concrete job**, such as “audit the crawlability of my deployed Astro site” or “research and verify this niche before implementation.”
+3. **Verify live evidence.** Read the relevant skill and current official documentation; collect first-party data only when access has been granted. Report unknowns clearly.
+4. **Make changes and test them.** Every implementation or research decision should include commands, outputs or verifiable evidence.
+5. **Reuse across other projects deliberately.** Clone, copy or reference the skills and their supporting documents; a private repository is not automatically available in another Codex workspace.
+
+Example tasks:
+
+```text
+Audit this Astro site's rendered output against web-technical-seo.
+Show every check, evidence, failed URL, proposed repair and verification.
+
+Verify current AdSense and Monetag eligibility for my actual site,
+country and ad formats. Separate hard policies from recommendations.
+
+Analyze Search Console queries and competitor SERPs; identify one
+high-intent workflow worth building, with source confidence and costs.
+
+Test ChatGPT, Google, Bing, Claude and Perplexity crawler eligibility.
+Distinguish crawl access, indexing, AI citations, referrals and visits.
+```
+
+### Run automated checks
+
+Requires **Node.js 20+**; the audit scripts do not require installing dependencies:
+
+```bash
+npm test
+npm run lint:skills
+npm run audit:sources
+npm run audit:fixture
+```
+
+For an Astro static build:
+
+```bash
+node scripts/audit-static-site.mjs --dist ./dist --origin https://your-real-domain.example
+node scripts/audit-live-site.mjs --origin https://your-real-domain.example
+node scripts/check-evidence.mjs --file templates/evidence-manifest.example.json
+```
+
+The example origin is **not** a real deployment URL. The live audit needs a deployed website and network access; it cannot be passed by inspecting source code alone. Full instructions and limitations are in [`docs/WHAT_AUTOMATION_CAN_AND_CANNOT_VERIFY.md`](docs/WHAT_AUTOMATION_CAN_AND_CANNOT_VERIFY.md).
+
+## Evidence standard
+
+Use the [research protocol](docs/RESEARCH_PROTOCOL.md) and [claim ledger](templates/claim-ledger.csv): **question → primary sources and checking date → observations → inference/uncertainty → proposed action → tests → measured result → rollback**.
+
+- **Policies** are not the same as official guidance, industry anecdotes, market estimates or internal quality gates.
+- **SEO eligibility** is not a Google #1 ranking guarantee; **AI crawler access** is not citation or referral traffic.
+- **Ad network signup** is not publisher approval; approval is not meaningful revenue.
+- **Search volume** is not obtainable traffic, and third-party competitor traffic estimates are not first-party analytics.
+- **A passing script** is not a live compliance certificate; manual, provider and legal reviews remain necessary.
+
+## Maintenance and contribution
+
+For each change: cite a current source or test, explain the affected scope, update the relevant skill/reference, add or adjust a test where possible, and document known uncertainty. Follow [`CONTRIBUTING.md`](CONTRIBUTING.md), [`SECURITY.md`](SECURITY.md), and [`CHANGELOG.md`](CHANGELOG.md).
+
+**No API keys, publisher IDs, private customer records, unredacted analytics or uploaded user files belong in this repository.** Use least-privilege access and protected branches where available.
+
+## Status and ownership
+
+- **Repository:** `LETSCOOKTECH/web-earnings-master` — intended **private** research and skills workspace.
+- **Baseline:** 21 Codex skills and a dated primary-source registry. These are living references, not a comprehensive proof that every provider requirement has been satisfied.
+- **Scope today:** Research, verification and skill improvement. Site development begins separately when requirements and evidence justify it.
+- **License:** [Proprietary — All rights reserved](LICENSE). Authorized internal use only. External references and third-party components retain their own terms.
+
+---
+
+<div align="center">
+
+**Build what people need. Prove what works. Earn trust before revenue.**
+
+Maintained by **LETSCOOKTECH**.
+
+</div>
