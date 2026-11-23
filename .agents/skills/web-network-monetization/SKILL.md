@@ -21,3 +21,10 @@ description: "Compare Monetag, Google AdSense, Journey/Mediavine, Raptive, Ezoic
 
 ## Output
 `templates/network-comparison.csv`, `templates/ads-review.md`, `references/monetag-and-networks.md` and expected net-revenue range with explicit evidence caveats.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Network choice and actual publisher economics. **Routing:** web-ad-experience owns layout and web-adsense-readiness owns AdSense review.
+**Official source entry points requiring action-time reopening:** https://support.google.com/adsense/answer/48182;https://help.monetag.com/. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Current network publisher contracts, verified eligibility, consent, account revenue, costs.
+**Critical FAIL / UNKNOWN:** No claims of instant approval or RPM from third-party screenshots.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

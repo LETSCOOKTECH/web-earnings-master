@@ -1,0 +1,35 @@
+name: Real browser engine integration laboratory
+on:
+  pull_request:
+    paths:
+      - 'scripts/owned-web-lab.mjs'
+      - 'scripts/robots-evaluator.mjs'
+      - 'tests/browser-e2e.test.mjs'
+      - 'tests/owned-web-lab.test.mjs'
+      - '.github/workflows/browser-engine-e2e.yml'
+      - 'package.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browsers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned Playwright 1.65.1 and actual browser builds
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.65.1
+          npx playwright install --with-deps chromium firefox webkit
+      - name: Run local owned-server browser tests (all three engines)
+        run: node --test tests/browser-e2e.test.mjs
+      - name: Upload versioned evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-engine-results-${{ github.run_id }}
+          path: .tmp/browser-e2e-results.json
+          if-no-files-found: warn

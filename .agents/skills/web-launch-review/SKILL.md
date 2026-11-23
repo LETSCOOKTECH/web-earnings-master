@@ -21,3 +21,10 @@ description: "Run evidence-based prelaunch and postlaunch release gates for Astr
 
 ## Output
 `templates/release-evidence.md` with PASS/FAIL/UNKNOWN, evidence links, owner, test date, risk and release decision. GO only after critical gates demonstrated.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Production and account release signoff. **Routing:** web-product-validation supplies test artifacts; launch owns GO/NO-GO.
+**Official source entry points requiring action-time reopening:** https://developers.google.com/search/docs/fundamentals/how-search-works;https://support.google.com/adsense/answer/48182. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Deployed hash, live HTTP/browser, verified task, owner Search Console and publisher states; rollback.
+**Critical FAIL / UNKNOWN:** Local CI cannot certify real indexing, AdSense approval or revenue.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

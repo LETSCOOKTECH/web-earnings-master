@@ -20,3 +20,10 @@ description: "Map query clusters to distinct high-value tool pages; use Google T
 
 ## Outputs
 Intent map (`templates/keyword-research.csv`), page mapping (`templates/page-intent-map.csv`), rank/feature audit; explicit citations and source dates. Separate SEO difficulty estimate from a true controlled ranking experiment.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Real user search jobs mapped to distinct URLs. **Routing:** web-niche-validation decides task, keyword skill clusters queries.
+**Official source entry points requiring action-time reopening:** https://support.google.com/webmasters/answer/7576553;https://trends.google.com/trends/. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Current actual SERP/country/device and task grouping; no volume double-counting.
+**Critical FAIL / UNKNOWN:** Trends scores not searches, advertiser competition not organic KD.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

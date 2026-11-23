@@ -21,3 +21,10 @@ description: "Diagnose first-party Google Search Console, Google Trends, Semrush
 
 ## Outputs
 `templates/weekly-search-traffic-review.md`, `templates/analytics-event-taxonomy.csv`, `templates/portfolio-weekly.csv`. Prefer first-party results with caveats.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Grounded GSC/referrer/product/revenue metrics. **Routing:** web-experiments owns controlled interventions, not initial diagnosis.
+**Official source entry points requiring action-time reopening:** https://developers.google.com/search/docs/monitor-debug/identify-google-search-traffic;https://developers.google.com/search/docs/monitor-debug/search-console-start. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Owned property permissions, exact source units, privacy, referrer and verified human funnel.
+**Critical FAIL / UNKNOWN:** Google Referer does not contain keyword; AI citation isn't pageview; CPC isn't ad RPM.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

@@ -1,0 +1,197 @@
+{
+  "version": "2.3",
+  "audited_on": "2026-11-23",
+  "audit_scope": "Full text of each of original 21 SKILL.md files, not all references or real deployed websites",
+  "reviewed_count": 21,
+  "entries": [
+    {
+      "name": "web-accessibility-agent-ux",
+      "domain": "Accessibility",
+      "gap": "Actual screen reader/mobile/agent tests absent from text",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "browser E2E plus manual assistive-tech",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-ad-experience",
+      "domain": "Ad placement",
+      "gap": "Network policy and live accidental-click evidence account-specific",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "real signed-off layout/user task",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-adsense-readiness",
+      "domain": "AdSense policy",
+      "gap": "No direct account-site approval evidence",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "official account state plus policy",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-ai-discovery",
+      "domain": "AI citations and bot roles",
+      "gap": "Need distinct bot purpose, real verified identity and citations",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "provider report+live cite+referral",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-astro-engineering",
+      "domain": "Astro implementation",
+      "gap": "Version/deployment-specific build/hosting tests required",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "built HTML and browser E2E",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-authority-distribution",
+      "domain": "Referrals and link ethics",
+      "gap": "Risk assuming link rank causation or cold outreach scope",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "earned asset and attributable task completions",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-competitor-audit",
+      "domain": "Competitor benchmarking",
+      "gap": "Model estimates and screenshots not observed output",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "same-input task and verified artifacts",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-content-and-image-seo",
+      "domain": "Original pages/media",
+      "gap": "Google FAQ rich result deprecated in May 2026",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "current rich features and actual original assets",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-experiments",
+      "domain": "Causal tests",
+      "gap": "SEO confounding and measurement denominator",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "baseline/guardrails/rollback",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-keyword-intent",
+      "domain": "Intent clustering",
+      "gap": "Trends/KD/CPC category errors and fake long-tail pages",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "geo/device intent measurements",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-launch-review",
+      "domain": "Production release",
+      "gap": "Local test ≠ live indexing/publisher approval",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "actual deploy and authorization",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-network-monetization",
+      "domain": "Ad networks",
+      "gap": "Dynamic eligibility/contracts/RPM cannot be assumed",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "live supplier docs and actual yield",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-niche-validation",
+      "domain": "Real demand",
+      "gap": "Modeled volume not new-entrant obtainable traffic",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "real SERP click opportunity and output advantage",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-portfolio-growth",
+      "domain": "Portfolio operations",
+      "gap": "No true profit without first-party cost and revenue",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "site-level net economics",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-privacy-consent",
+      "domain": "Privacy/legal",
+      "gap": "Law and consent needs country-specific legal validation",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "actual data inventory and consent tests",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-product-spec",
+      "domain": "Product requirements",
+      "gap": "Feature lists without output oracle",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "real acceptance fixture",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-product-validation",
+      "domain": "QA",
+      "gap": "Real browser families and device limits not demonstrated",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "Playwright cross-engine and device gap marking",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-research-freshness",
+      "domain": "Policy change governance",
+      "gap": "Generic 'verify latest' instruction not enforceable",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "original body+ledger+watch+review PR",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-search-analytics",
+      "domain": "Attribution",
+      "gap": "Google Referer does not include query; citations not sessions",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "GSC and actual referral events",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-security-performance",
+      "domain": "Security",
+      "gap": "Robots, UA spoof and CSP inference security risks",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "actual auth/CSP/WAF tests",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    },
+    {
+      "name": "web-technical-seo",
+      "domain": "Indexability",
+      "gap": "Robots and canonical errors cannot prove GSC index",
+      "remediation": "Added v2.3 production evidence contract in original SKILL.md, includes named source entry points, required evidence, no-go status, routing and source refresh.",
+      "required_evidence": "real HTTP and owned account inspection",
+      "contract_review": "PATCHED_AND_STRUCTURALLY_CHECKABLE",
+      "real_production_execution": "NOT_PROVEN_BY_THIS_SKILL_AUDIT"
+    }
+  ]
+}

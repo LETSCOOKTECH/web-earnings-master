@@ -19,3 +19,10 @@ description: "Design measurable SEO, product, referral and ad monetization exper
 
 ## Deliverable
 `templates/growth-experiment.md`, baseline/after exports and decision record. Every experiment should advance real human value, not just crawler impression count.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Controlled product/SEO intervention analysis. **Routing:** web-search-analytics diagnoses; this owns intervention.
+**Official source entry points requiring action-time reopening:** https://developers.google.com/search/docs/monitor-debug/search-console-start. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Preregistered hypothesis, baseline, denominators, guardrails, actual results and rollback.
+**Critical FAIL / UNKNOWN:** No posthoc claim a ranking change was caused by confounded edits.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

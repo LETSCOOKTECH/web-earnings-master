@@ -1,0 +1,329 @@
+{
+  "version": "2026-11-23.v3",
+  "meaning": "Dated source-body access audit; does not certify every policy sentence or auto-update instructions",
+  "targets_reviewed_for_access": 32,
+  "accessed_count": 31,
+  "unverified_count": 1,
+  "targets": [
+    {
+      "id": "google-search-updates",
+      "url": "https://developers.google.com/search/updates/search_docs_updates.rss",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "google-crawling-updates",
+      "url": "https://developers.google.com/crawling/docs/changelog/crawling_docs_updates.rss",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "google-ai-optimization",
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "google-ai-features",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "google-preferred-sources",
+      "url": "https://developers.google.com/search/docs/appearance/preferred-sources",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "google-genai-report",
+      "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "google-crawler-list",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "google-user-fetchers",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "openai-crawlers",
+      "url": "https://developers.openai.com/api/docs/bots",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "anthropic-crawlers",
+      "url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "perplexity-crawlers",
+      "url": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "bing-ai-grounding-2027",
+      "url": "https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "bing-ai-performance",
+      "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "brave-crawler",
+      "url": "https://safe.search.brave.com/help/brave-search-crawler",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "kagi-sources",
+      "url": "https://help.kagi.com/kagi/search-details/search-sources.html",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "chromium-processes",
+      "url": "https://www.chromium.org/developers/design-documents/multi-process-architecture/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "firefox-gecko",
+      "url": "https://firefox-source-docs.mozilla.org/overview/gecko.html",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "webkit-processes",
+      "url": "https://docs.webkit.org/Getting%20Started/Introduction.html",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "chrome-webmcp",
+      "url": "https://developer.chrome.com/docs/modern-web-guidance/guides/webmcp/webmcp",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "ietf-aipref",
+      "url": "https://datatracker.ietf.org/group/aipref/documents/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "google-play-aso",
+      "url": "https://support.google.com/googleplay/android-developer/answer/4448378",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "apple-app-store-aso",
+      "url": "https://developer.apple.com/app-store/search/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "baidu-search-docs",
+      "url": "https://ziyuan.baidu.com/doc",
+      "reviewed_on": "2026-11-23",
+      "body_access": "TIMEOUT_UNVERIFIED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "UNKNOWN_UNTIL_CHINESE_OFFICIAL_BODY_READ"
+    },
+    {
+      "id": "naver-seo",
+      "url": "https://searchadvisor.naver.com/guide/seo-help",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "yandex-webmaster",
+      "url": "https://yandex.com/support/webmaster/en/yandex-indexing/site-indexing",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "mojeekbot",
+      "url": "https://www.mojeek.com/bot.html",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "google-agent-allow",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/allow-google-agent",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "google-googlebot-bytes",
+      "url": "https://developers.google.com/search/blog/2026/03/crawler-blog-post",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "google-shared-training-control",
+      "url": "https://developers.google.com/search/blog/2026/10/ai-training-control",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "google-robots-spec",
+      "url": "https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "google-search-referrer-2026",
+      "url": "https://developers.google.com/search/docs/monitor-debug/identify-google-search-traffic",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "playwright-browser-compatibility",
+      "url": "https://playwright.dev/docs/browsers",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "NORMAL_FRESHNESS_REVIEW"
+    }
+  ]
+}

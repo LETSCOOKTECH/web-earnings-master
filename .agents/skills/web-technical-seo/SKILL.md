@@ -25,3 +25,10 @@ description: "Audit and improve crawlability, indexability, rendered HTML, canon
 
 ## Expanded technical operations (v2.2)
 Read chapters 11–14 and 17–18 for browser protocol, search indexing and SERP tests. Diagnose by first failed observable gate (DNS/TLS/HTTP/robots/WAF -> HTML/render -> canonical/index -> retrieval/position -> SERP click opportunity -> task completion). Current Google documentation, not static checklist, governs eligible rich-result types and 2026 deprecations. Validate important browser DOM and no-JS/initial HTML separately, and treat search console property observations as external to local audit. For new crawler families and Microsoft 2027 preferences, do NOT blindly rewrite production robots.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Actual crawl/render/index technical audit. **Routing:** web-search-internals teaches generic algorithms; this audits deployed pages.
+**Official source entry points requiring action-time reopening:** https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec;https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls;https://www.rfc-editor.org/info/rfc9309/. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Owned HTTP lab + actual live URL Inspection, status, canonical/robots and indexed visibility if account connected.
+**Critical FAIL / UNKNOWN:** Do not declare index/AI visibility from static HTML and robots alone.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

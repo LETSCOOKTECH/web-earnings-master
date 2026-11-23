@@ -20,3 +20,10 @@ description: "Create professional accessible responsive utility interfaces usabl
 
 ## Outputs
 Accessible task-state inventory and tests; see `references/astro-production.md` and `templates/ux-state-matrix.md`.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Native semantic user/agent task journey. **Routing:** Own accessibility; web-browser-runtime owns engine faults.
+**Official source entry points requiring action-time reopening:** https://www.w3.org/TR/WCAG22/. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Browser E2E role/name/control, keyboard and actual task output; manual assistive-tech evaluation separate.
+**Critical FAIL / UNKNOWN:** Static HTML or Playwright role selectors alone do not prove WCAG compliance.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; the source watch's hash changes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

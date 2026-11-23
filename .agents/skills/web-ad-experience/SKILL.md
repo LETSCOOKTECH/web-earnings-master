@@ -20,3 +20,10 @@ description: "Implement restrained, policy-aware ad layouts and measurable user 
 
 ## Deliverables
 `templates/ad-placement-review.md` with desktop/mobile annotated layouts, consent state, network terms, approved regions, test evidence and rollback procedure.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Publisher-safe ad layout and real task completion. **Routing:** web-adsense-readiness handles application and policy approval.
+**Official source entry points requiring action-time reopening:** https://support.google.com/adsense/answer/1346295. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Live approved ad layout, CLS, mobile interaction, consent and task completion.
+**Critical FAIL / UNKNOWN:** No fake download/accidental-click layout and no live ad clicks during tests.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; the source watch's hash changes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

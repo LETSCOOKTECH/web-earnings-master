@@ -21,3 +21,10 @@ description: "Check Google AdSense eligibility, account and site review, origina
 
 ## Go / no-go output
 `templates/ads-review.md`, `templates/adsense-evidence.md`, link each finding to applicable official help page. Differentiate eligible/review-pending/Ready/account-limited from site ranking.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Real AdSense site/account eligibility. **Routing:** web-ad-experience handles placement; monetization compares networks.
+**Official source entry points requiring action-time reopening:** https://support.google.com/adsense/answer/48182. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Actual AdSense status, verified ownership, current policy, site usefulness, ads.txt.
+**Critical FAIL / UNKNOWN:** No approval claims from a static test or minimum articles/visits myth.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; the source watch's hash changes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

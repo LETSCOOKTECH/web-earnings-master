@@ -20,3 +20,10 @@ description: "Secure low-cost Astro and browser-file processing while optimizing
 
 ## Outputs
 `templates/security-threat-model.md`, performance traces, mobile memory test, dependency/license audit and evidence. See official Astro/Google/web.dev documentation.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Server/browser/worker/WAF threat controls. **Routing:** web-browser-runtime explains engine mechanics; this owns defense.
+**Official source entry points requiring action-time reopening:** https://owasp.org/www-project-top-ten/;https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP;https://www.rfc-editor.org/rfc/rfc9110. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Reproduce private-route auth, file limits, CSP, cache leak protections and verified crawler exceptions.
+**Critical FAIL / UNKNOWN:** robots is not a privacy mechanism; spoofed User-Agent is not bot identity.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

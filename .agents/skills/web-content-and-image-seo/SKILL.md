@@ -22,3 +22,10 @@ description: "Create original high-value tool landing pages, troubleshooting gui
 
 ## Deliverable
 High-value page brief (`templates/high-value-page-brief.md`) including source evidence, UX, search intent, schema and validation steps. A published page is not automatically indexed.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Original task pages, search media and valid schema. **Routing:** web-technical-seo owns crawl/index, this authors content.
+**Official source entry points requiring action-time reopening:** https://developers.google.com/search/docs/appearance/google-images;https://developers.google.com/search/updates. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Direct HTML/media URL verification, current supported rich result tests, original evidence rights.
+**Critical FAIL / UNKNOWN:** FAQ rich snippets retired in 2026; no fake ratings, keyword-doorway duplicates.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
