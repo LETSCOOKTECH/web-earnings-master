@@ -1,0 +1,14 @@
+{
+  "source": "google_trends",
+  "scale": "relative_index",
+  "query": "compress photo",
+  "geo": "IN",
+  "time_window": "past_12_months",
+  "term_or_topic": "term",
+  "search_type": "web",
+  "observed_at": "2026-11-24T00:00:00Z",
+  "source_url": "https://trends.google.com/trends/explore",
+  "artifact": "templates/opportunity/google-trends-SYNTHETIC.csv",
+  "synthetic": true,
+  "disclaimer": "This CSV is a synthetic software test fixture, not downloaded Google Trends data."
+}

@@ -13,7 +13,7 @@ const claim=read('sources/verified_claims.json');
 const knownNames=fs.readdirSync(path.join(root,'.agents/skills'),{withFileTypes:true}).filter(x=>x.isDirectory()&&exists('.agents/skills/'+x.name+'/SKILL.md')).map(x=>x.name);
 if(original.entries.length!==21)errors.push('Original skill list not 21');
 if(new Set(original.entries.map(e=>e.name)).size!==21)errors.push('Original skills duplicate');
-if(knownNames.length!==47)errors.push('Expected 47 skills (21 originals, 7 foundations, 4 discovery, 6 architecture, 8 V6, 1 Traffic Hunter), got '+knownNames.length);
+if(knownNames.length!==48)errors.push('Expected 48 skills (21 originals, 7 foundations, 4 discovery, 6 architecture, 8 V6, 1 Traffic Hunter, 1 Opportunity Intelligence), got '+knownNames.length);
 for(const e of original.entries){
  if(!knownNames.includes(e.name))errors.push('Original skill missing: '+e.name);
  const file='.agents/skills/'+e.name+'/SKILL.md';

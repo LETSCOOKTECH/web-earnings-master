@@ -1,6 +1,6 @@
 {
   "name": "web-earnings-master",
-  "version": "3.5.0-draft.1",
+  "version": "3.6.0-draft.1",
   "private": true,
   "type": "module",
   "engines": {
@@ -10,7 +10,7 @@
     "lint:skills": "node scripts/validate-skills.mjs",
     "audit:sources": "node scripts/check-sources.mjs",
     "audit:fixture": "node scripts/audit-static-site.mjs --dist tests/fixtures/site --origin https://fixture.example",
-    "test": "node --test tests/*.test.mjs && npm run lint:skills && npm run audit:sources && npm run audit:fixture && npm run audit:evidence && npm run audit:adstxt && npm run audit:intents && npm run audit:robots && npm run audit:discovery && npm run audit:architecture && npm run audit:v6 && npm run audit:production && npm run audit:traffic",
+    "test": "node --test tests/*.test.mjs && npm run lint:skills && npm run audit:sources && npm run audit:fixture && npm run audit:evidence && npm run audit:adstxt && npm run audit:intents && npm run audit:robots && npm run audit:discovery && npm run audit:architecture && npm run audit:v6 && npm run audit:production && npm run audit:traffic && npm run audit:opportunity && npm run audit:trends:sample",
     "audit:evidence": "node scripts/check-evidence.mjs --file templates/evidence-manifest.example.json",
     "audit:adstxt": "node scripts/audit-ads-txt.mjs --file tests/fixtures/ads.txt --seller google.com",
     "audit:intents": "node scripts/audit-page-intents.mjs --file templates/page-intents.example.json",
@@ -42,7 +42,9 @@
     "audit:publisher-networks": "node scripts/evaluate-publisher-eligibility.mjs --file templates/v6/publisher-site-example.json",
     "audit:web-security": "node scripts/audit-web-security-manifest.mjs --file templates/v6/security-example.json",
     "audit:production": "node scripts/check-production-skills-v7.mjs",
-    "audit:traffic": "node scripts/evaluate-traffic-hunter.mjs"
+    "audit:traffic": "node scripts/evaluate-traffic-hunter.mjs",
+    "audit:opportunity": "node scripts/evaluate-opportunity.mjs",
+    "audit:trends:sample": "node scripts/verify-trends-csv.mjs --csv templates/opportunity/google-trends-SYNTHETIC.csv --meta templates/opportunity/google-trends-SYNTHETIC.meta.json"
   },
   "description": "Evidence-first Codex skill engine for SEO/AEO/GEO/ASO, safe utility execution, million-user capacity and publisher-margin planning"
 }

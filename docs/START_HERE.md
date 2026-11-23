@@ -68,3 +68,6 @@ Offline audits: `scripts/audit-publisher-page.mjs`, `scripts/evaluate-publisher-
 
 ## V8 — Find actual people, not vanity traffic
 Use `web-traffic-hunter` before deciding where to distribute a tested web utility. Hunt real public task signals, compare audience/channel fit and ethical rules, prepare 2–3 bounded evidence-scored pilot briefs, and attribute actual human task completions after authorized publication. See `docs/traffic-hunter/README.md`, `templates/traffic-hunter/` and `npm run audit:traffic`. No bot clicks, artificial impressions, link spam, unapproved automated posts, or imagined traffic numbers.
+
+## V9 — Before coding, validate the market
+Invoke `web-opportunity-intelligence` to check user-job authenticity, localized search demand and Trends, licensed Semrush/Ahrefs and Keyword Planner estimates, independent Reddit/forum issues where permitted, actual same-input competitor outputs and operating costs. Produce a decision with sources, contradictory evidence and cheapest pilot under explicit research credit budget. Reference `docs/opportunity/README.md`; no full-site build merely because a dashboard shows volume.

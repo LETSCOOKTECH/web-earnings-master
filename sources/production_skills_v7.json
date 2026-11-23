@@ -1,7 +1,7 @@
 {
   "schema": "sense-production-skill-gates-v7",
-  "edition": "2026-11-23-v8",
-  "expectSkills": 47,
+  "edition": "2026-11-24-v9",
+  "expectSkills": 48,
   "scope": "instruction contracts only; external property validation is separate",
   "statuses": [
     "PENDING",
@@ -241,6 +241,14 @@
       "localGate": "Validate sourced market estimates task gap and downside",
       "externalGate": "Observe actual search and user validation evidence",
       "blocker": "Commodity clone without defensible workflow"
+    },
+    {
+      "id": "web-opportunity-intelligence",
+      "category": "Research",
+      "deliverable": "Browser-first independent market demand and user pain evidence ledger with feasible idea decision and bounded research spend",
+      "localGate": "Validate evidence provenance, Trends CSV metadata, independent origin clusters, hard budget caps, contradictory sources and real competitor output test requirements",
+      "externalGate": "Authorize relevant browser/account scope, open original Google Trends and licensed keyword UI/CSV, inspect human problems and reproduce competitor tasks before owner-reviewed MVP decision",
+      "blocker": "Unauthorized scraping or paid API; fake market metrics, synthetic human sources, absent product oracle/first user acquisition or unapproved development spend"
     },
     {
       "id": "web-portfolio-growth",

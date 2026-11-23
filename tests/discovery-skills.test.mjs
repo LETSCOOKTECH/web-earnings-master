@@ -24,7 +24,7 @@ test('4 new specialized Codex skills have meaningful instructions and official s
 });
 test('28 existing plus four new skill manifests and 4 deep discovery manuals exist',()=>{
  const names=fs.readdirSync(path.join(root,'.agents/skills'),{withFileTypes:true}).filter(e=>e.isDirectory());
- assert.equal(names.length,47);
+ assert.equal(names.length,48);
  for(const f of ['01-answer-engine-optimization.md','02-generative-engine-optimization.md','03-google-play-aso.md','04-apple-app-store-aso.md','05-geo-provider-surface-atlas.md']){
   const s=fs.readFileSync(path.join(root,'docs/discovery',f),'utf8');
   assert.ok(s.length>5500);

@@ -5,7 +5,7 @@ const root=path.resolve(import.meta.dirname,'..'), read=p=>JSON.parse(fs.readFil
 const errors=[],exists=p=>fs.existsSync(path.join(root,p));
 const skillNames=['web-workload-architecture-router','web-browser-compute','web-conversion-job-platform','web-unit-economics-finops','web-scale-reliability','web-hosting-vendor-evaluation'];
 const all=fs.readdirSync(path.join(root,'.agents/skills'),{withFileTypes:true}).filter(x=>x.isDirectory());
-if(all.length!==47)errors.push('Expected 47 total skill manifests, got '+all.length);
+if(all.length!==48)errors.push('Expected 48 total skill manifests, got '+all.length);
 for(const name of skillNames){
  const p='.agents/skills/'+name+'/SKILL.md';
  if(!exists(p))errors.push('Missing architecture skill '+name);
@@ -37,4 +37,4 @@ for(const file of ['million-browser-local.json','million-hybrid-file-tools.json'
  if(!exists('templates/architecture/scenarios/'+file))errors.push('Missing example workload '+file);
 }
 if(errors.length){console.error('FAIL architecture source/skill contracts:\n'+errors.join('\n'));process.exitCode=1;}
-else console.log('PASS architecture evidence: 47 skill manifests, 6 architecture specialists, 6 chapters, 18 infra claims, 12 vendor claims, '+watch.monitored.length+' source targets ('+review.unverified_count+' partial); economic estimates are NOT actual invoices or load tests.');
+else console.log('PASS architecture evidence: 48 skill manifests, 6 architecture specialists, 6 chapters, 18 infra claims, 12 vendor claims, '+watch.monitored.length+' source targets ('+review.unverified_count+' partial); economic estimates are NOT actual invoices or load tests.');

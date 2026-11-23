@@ -1,6 +1,6 @@
 # Production skill acceptance — v7
 
-This is the canonical **47-skill evidence gate** for the combined V3–V6 research branches. It covers the existing 28 plus 18 specialized additions. Every skill gets a unique artifact, independently verifiable local check, actual external verification requirement, and explicit hard stop. Do not inflate the repository by writing another copy of the same instructions into every skill.
+This is the canonical **48-skill evidence gate** for the combined V3–V6 research branches. It covers the existing 28 plus 18 specialized additions. Every skill gets a unique artifact, independently verifiable local check, actual external verification requirement, and explicit hard stop. Do not inflate the repository by writing another copy of the same instructions into every skill.
 
 ## Bounded definitions
 - **DOCUMENTED:** SKILL.md and linked manuals supply a repeatable workflow, inputs, negative checks, observable outputs and source boundaries.
@@ -42,3 +42,6 @@ Documentation/skill merge may proceed with clean CI and review; it must **not** 
 
 ## V8 registry extension
 Traffic Hunter is the 47th skill. The same per-skill evidence contract applies; local channel evaluation cannot certify a live campaign or actual AdSense traffic quality. See `docs/traffic-hunter/ACCEPTANCE.md`.
+
+## V9 appendix
+Opportunity Intelligence adds the 48th per-skill contract. Actual browser access, source rights, legitimate independent user reports and market fit are external; local npm tests cannot certify any commercial outcome.

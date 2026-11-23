@@ -16,7 +16,7 @@ const tool=read('templates/architecture/tool-design-input.example.json');
 test('five differentiated engineering skills exist with thorough workflow and primary URLs',()=>{
  const names=['web-workload-architecture-router','web-browser-compute','web-conversion-job-platform','web-unit-economics-finops','web-scale-reliability','web-hosting-vendor-evaluation'];
  const dirs=fs.readdirSync(path.join(root,'.agents/skills'),{withFileTypes:true}).filter(x=>x.isDirectory());
- assert.equal(dirs.length,47);
+ assert.equal(dirs.length,48);
  for(const n of names){
   const content=fs.readFileSync(path.join(root,'.agents/skills',n,'SKILL.md'),'utf8');
   assert.match(content,new RegExp('^---\\nname: '+n+'\\n'));
@@ -219,6 +219,6 @@ test('hosting options CLI runs and returns modeled unknowns',()=>{
 test('Architecture evidence contract checks all six specialized skills and dated claims',()=>{
  const r=spawnSync(process.execPath,['scripts/check-architecture-evidence.mjs'],{cwd:root,encoding:'utf8'});
  assert.equal(r.status,0,r.stderr+'\n'+r.stdout);
- assert.match(r.stdout,/47 skill manifests/);
+ assert.match(r.stdout,/48 skill manifests/);
  assert.match(r.stdout,/NOT actual invoices/);
 });
