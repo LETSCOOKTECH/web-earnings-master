@@ -76,7 +76,7 @@ export function validatePlan(plan,now=Date.now()){
  if(!STAGES.includes(plan.stage))errs.push('Unknown research stage');
  const idea=plan.idea||{};
  for(const k of ['name','job','customer','geography','language','product','desired_output'])
-  if(!isStr(idea[k],k==='geography'?2:3))errs.push('Idea '+k+' required');
+  if(!isStr(idea[k],(k==='geography'||k==='language')?2:3))errs.push('Idea '+k+' required');
  if(!Array.isArray(idea.constraints)||!idea.constraints.length)errs.push('Explicit constraints required');
  errs.push(...validateBudget(plan.budget));
  if(!Array.isArray(plan.evidence))errs.push('Evidence array required');
