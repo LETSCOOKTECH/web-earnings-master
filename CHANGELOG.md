@@ -2,7 +2,7 @@
 
 ## 2.3.0 — 2026-11-23 (same draft foundation PR branch)
 - Performed full individual text audit of all 21 original SKILL.md files and patched each with scoped current-source and production-evidence contracts. Retained seven new foundation skills.
-- Created 46 selected first-party provider claim records + 2 explicitly unverified, with date, source, scope and temporal mode. Expanded official-source watchlist from 26 to 32.
+- Created 48 selected first-party provider claim records + 1 explicitly unverified (Applebot), with date, source, scope and temporal mode. Expanded official-source watchlist from 26 to 33.
 - Added foundation chapters 19/20 with mandatory action-time live verification and a real owned HTTP/robots laboratory.
 - Added Node HTTP server fixture for 200/404/503/308, 200 soft404, meta/header noindex, canonical conflicts, WAF challenge HTML, JS hydration, CSP block, ETag/304, authentication and sitemap. Added per-bot robots evaluator with documented RFC subset limitations and regression tests.
 - Added pinned three-engine Playwright E2E job (Chromium, Firefox/Gecko, WebKit) with explicit browser-version/result artifact, independent from base offline CI.

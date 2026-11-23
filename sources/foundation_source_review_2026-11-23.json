@@ -1,9 +1,9 @@
 {
-  "version": "2026-11-23.v3",
+  "version": "2026-11-23.v3.1",
   "meaning": "Dated source-body access audit; does not certify every policy sentence or auto-update instructions",
-  "targets_reviewed_for_access": 32,
-  "accessed_count": 31,
-  "unverified_count": 1,
+  "targets_reviewed_for_access": 33,
+  "accessed_count": 33,
+  "unverified_count": 0,
   "targets": [
     {
       "id": "google-search-updates",
@@ -229,11 +229,11 @@
       "id": "baidu-search-docs",
       "url": "https://ziyuan.baidu.com/doc",
       "reviewed_on": "2026-11-23",
-      "body_access": "TIMEOUT_UNVERIFIED",
-      "scope": "Target page body accessed; only selected claims recorded in sources/verified_claims.json are semantically supported. Do not treat every paragraph verified.",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Baidu original /doc overview opened via live source, indexing tools visible; only claims BAIDU-PORTAL-TOOLS and related bounded assertions verified. No site account data.",
       "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
       "change_control": "Task-time re-open required",
-      "risk": "UNKNOWN_UNTIL_CHINESE_OFFICIAL_BODY_READ"
+      "risk": "Chinese source translation and account-specific dashboard semantics require action-time review"
     },
     {
       "id": "naver-seo",
@@ -324,6 +324,16 @@
       "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
       "change_control": "Task-time re-open required",
       "risk": "NORMAL_FRESHNESS_REVIEW"
+    },
+    {
+      "id": "baidu-ai-traffic",
+      "url": "https://ziyuan.baidu.com/aiflow/index",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Baidu original AI traffic analysis landing page opened; login/site verification required for actual metrics; only selected claims recorded in sources/verified_claims.json are semantically supported.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open required",
+      "risk": "No verified site data; no metric meaning inferred"
     }
   ]
 }

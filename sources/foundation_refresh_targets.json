@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-23.v3",
+  "version": "2026-11-23.v3.1",
   "intent": "Automated change *signals* only. Do not update policy semantics or provider eligibility without human/agent reading official source.",
   "monitored": [
     {
@@ -254,6 +254,14 @@
       "id": "playwright-browser-compatibility",
       "category": "browser",
       "url": "https://playwright.dev/docs/browsers",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "baidu-ai-traffic",
+      "category": "analytics",
+      "url": "https://ziyuan.baidu.com/aiflow/index",
       "kind": "html",
       "semantic_review_required": true,
       "source_owner": "official_provider"

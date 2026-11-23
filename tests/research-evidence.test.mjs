@@ -20,13 +20,14 @@ test('dated claims identify 2027 FUTURE and 2026 experimental/draft status',()=>
 });
 test('source error is UNKNOWN, not fabricated semantic verification',()=>{
  const claims=read('sources/verified_claims.json').claims;
- for(const id of ['BAIDU-DIRECT-BLOCKED','APPLEBOT-DIRECT-RATELIMIT']){
+ for(const id of ['APPLEBOT-DIRECT-RATELIMIT']){
   const c=claims.find(x=>x.id===id);
   assert.equal(c.mode,'UNVERIFIED');assert.notEqual(c.evidence,'FIRST_PARTY_BODY_OPENED');
  }
  const review=read('sources/foundation_source_review_2026-11-23.json');
- assert.equal(review.unverified_count,1);
- assert.equal(review.targets.find(x=>x.id==='baidu-search-docs').body_access,'TIMEOUT_UNVERIFIED');
+ assert.equal(review.unverified_count,0);
+ assert.equal(review.targets.find(x=>x.id==='baidu-search-docs').body_access,'OFFICIAL_ORIGINAL_BODY_OPENED');
+ assert.ok(claims.some(x=>x.id==='BAIDU-AI-FLOW-PORTAL'&&x.evidence==='FIRST_PARTY_BODY_OPENED'));
 });
 test('user agent sniffing and private routes are denied as sufficient identity/security',()=>{
  const ai=fs.readFileSync(path.join(root,'docs/foundations/19-provider-source-verification.md'),'utf8');

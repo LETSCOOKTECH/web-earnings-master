@@ -75,3 +75,6 @@ Choose exact surface, actual country/language/device, search index sourcing and 
 
 ## False assumptions to flag
 All engines independently own a web index; DuckDuckGo's links are exclusively Bing; Brave uses distinctive Bravebot token; Yahoo has a globally fixed index supplier; model training bot governs Search inclusion; AI citation is an ad-eligible human visit; generic .com gives a universal rank boost; an IndexNow submission guarantees indexing; ASO improves an unpublished web-only tool.
+
+## Baidu first-party portal verification update (2026-11-23)
+Baidu original public documentation [Search Resource Platform overview](https://ziyuan.baidu.com/doc) was opened in the latest evidence pass. It has distinct quick/ordinary submission, index count, crawl diagnostics, robots, web property and search analytics interfaces. The official [AI traffic analysis portal](https://ziyuan.baidu.com/aiflow/index) visibly has the menu item `AI流量分析`; without adding/verifying a site it restricts the available interface. This verifies that the entry point exists, NOT the visibility metrics, dataset, referral classification or any specific publisher's traffic. An earlier timed-out access attempt to /doc is superseded by this later direct body inspection. Preserve Chinese-language and account-context caveats.

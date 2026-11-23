@@ -1,5 +1,5 @@
 # 19 — First-party source verification, live-recheck contract and change-response protocol
-Date: 2026-11-23. This is an ENGINEERING CONTROL document, not a "we verified every sentence in the whole web" claim. Primary input: sources/verified_claims.json (46 discrete selected factual claims supported by opened official pages, plus 2 explicitly unverified), and sources/foundation_refresh_targets.json (32 priority URLs). The original 32 reference links and 92 general links remain navigation catalogs, NOT 100% semantically audited knowledge.
+Date: 2026-11-23. This is an ENGINEERING CONTROL document, not a "we verified every sentence in the whole web" claim. Primary input: sources/verified_claims.json (48 discrete selected factual claims supported by opened official pages, plus 1 explicitly unverified), and sources/foundation_refresh_targets.json (33 priority URLs). The original 32 reference links and 92 general links remain navigation catalogs, NOT 100% semantically audited knowledge.
 
 ## Canonical evidence levels
 E0 NO SOURCE: pure hypothesis or claim awaiting authoritative documentation.
@@ -43,7 +43,7 @@ Moving a claim from E1 to E2 requires reading the actual relevant body; a 200, s
 - Apple App Store and Google Play: own published listing/search guidance; only for actual store listings.
 - IETF AIPREF: Internet-Drafts at review date, not an RFC or universal publisher enforcement.
 - Chrome WebMCP: opt-in early preview/origin trial, not an SEO requirement or production compatibility guarantee.
-- **Baidu** documentation https://ziyuan.baidu.com/doc timed out during live review on 2026-11-23; re-open original Chinese docs before making detailed Baidu rules.
+- **Baidu:** original https://ziyuan.baidu.com/doc and https://ziyuan.baidu.com/aiflow/index were opened on 2026-11-23; the portal visibly lists submission/index/crawl tools and an AI traffic analysis interface. Its site-specific dashboard requires a verified website; no AI traffic performance data or detailed algorithm claims were obtained. Re-open Chinese original content before changes.
 - **Applebot** https://support.apple.com/en-in/119829 returned 429; do not claim full current Applebot instruction verification.
 
 ## Machine-readable verification contract
@@ -63,6 +63,6 @@ Schedule on GitHub default branch (after PR merge only); read pinned original UR
 Provider, product/surface, claim IDs, sources (old and new), exact effective date, scope, observed diff, semantic decision, affected skills/references/tests, user impact, rollback, accountable reviewer, PR commit and execution evidence. Keep professional legal/privacy boundaries.
 
 ## Explicit unsupported claims
-"Search ranking is complete/guaranteed", "all 26 URLs were semantically read word-for-word", "all ~92 general sources fresh", "Google's exact model weights known", "all AI engines use the same crawler", "an unverified 429 means blocked by provider", "source-watch automatically rewrites our skills", "GitHub cron is active while PR is draft", "local Playwright proves Google indexed us" are NEVER allowed.
+"Search ranking is complete/guaranteed", "all 33 URLs were semantically read word-for-word", "all ~92 general sources fresh", "Google's exact model weights known", "all AI engines use the same crawler", "an unverified 429 means blocked by provider", "source-watch automatically rewrites our skills", "GitHub cron is active while PR is draft", "local Playwright proves Google indexed us" are NEVER allowed.
 
 **Identity control invariant:** USER-AGENT alone is insufficient to authenticate a crawler or hosted browser agent; follow current verified IP list or experimental HTTP signatures for the exact provider and purpose.

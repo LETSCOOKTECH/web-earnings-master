@@ -56,7 +56,7 @@ Provider-doc-excerpt / original-body-inspected / scholarly reference / locally r
 
 
 ## Release v2.3 — verification and owned executable behavior
-19. [First-party source and change governance](19-provider-source-verification.md): claim evidence E0–E5, 46 dated first-party selected claims, two explicitly unverified, 32 monitored current documents, per-action mandatory live source reading, semantic review, correction and effective dates. The monitor creates a review queue only when the Actions workflow is running from default branch; a fingerprint is NOT a policy.
+19. [First-party source and change governance](19-provider-source-verification.md): claim evidence E0–E5, 48 dated first-party selected claims, one explicitly unverified, 33 monitored current documents, per-action mandatory live source reading, semantic review, correction and effective dates. The monitor creates a review queue only when the Actions workflow is running from default branch; a fingerprint is NOT a policy.
 20. [Actual owned HTTP and browser lab](20-owned-web-lab-and-robots.md): real Node server cases for redirects, 404/soft404, canonical vs noindex, robots, ETag, private 401, JavaScript hydration, CSP, and testable cross-browser Chromium, Firefox and WebKit.
 [Section 1 evaluation and outstanding external limits](../SECTION1_ACCEPTANCE.md) and [21 original skill audit](../audits/ORIGINAL_21_SKILLS_AUDIT_2026-11-23.md).
 

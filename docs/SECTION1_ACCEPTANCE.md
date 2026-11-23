@@ -5,8 +5,8 @@ Reviewed on 2026-11-23. This project's goal is an up-to-date, authoritative **en
 ## Delivery inventory
 - 28 active Codex skills: 21 original individually read, reviewed and appended with exact v2.3 evidence/source contracts; 7 special foundation skills.
 - 20 foundation chapters: protocol fundamentals, browser engines, search indexes/retrieval, independent/partner/global engines, AI search/RAG/agents, all SEO/GEO/AEO/ASO mechanics and source governance.
-- 46 individually bounded primary-source claims with checked date, known source/exception, + two UNKNOWN cases (Applebot HTTP 429, Baidu official-doc timeout).
-- 32 priority first-party documentation URLs/feeds with a read-only hash-change watcher; 31 accessible dated page bodies and one inaccessible watch page as recorded at 2026-11-23. 32-watch targets ≠ all official pages on earth; 46 claims ≠ every paragraph inspected.
+- 48 individually bounded primary-source claims with checked date and scope, plus one UNKNOWN Applebot case (HTTP 429). Baidu's original Search Resource Platform and AI traffic page are accessible, but the account dashboard is not.
+- 33 priority first-party documentation URLs/feeds with a read-only hash-change watcher; 33 accessible dated public page bodies (not account data) as recorded at 2026-11-23. 33-watch targets ≠ all official pages on earth; 48 claims ≠ every paragraph inspected.
 - Node-owned HTTP fixture: real request-response handling, RFC9309 subset evaluator, soft404/actual 404, robots groups, noindex/headers, 308, cache 304, 401 auth, JS vs raw HTML, CSP/WAF/503.
 - Independent Playwright CI for current pinned Chromium, Firefox and WebKit builds. Check actual Actions logs before declaring PASS.
 - Day-specific source-change review GitHub issue after default-branch schedule starts; robot does not rewrite live policies.
@@ -35,7 +35,7 @@ INTERNAL V2.3 FOUNDATION: can be marked PASS after S1–S6 proofs including gree
 6. Human merge. No automatic trust of LLM/HTML text as instructions and no unattended live robots/ads/legal modification.
 
 ## Known unresolved external boundaries
-- Baidu and Applebot live bodies unavailable in one verification session; retained UNKNOWN; other provider docs can change tomorrow.
+- Applebot original body returned 429; retained UNKNOWN. Baidu portal was re-opened successfully later, but account-specific AI traffic data requires site verification. Other provider docs can change tomorrow.
 - Current Google/Bing/Brave model weights and AI citation selection weights are private; label unknown not guessed.
 - World-scale live indexing/ranking requires authorized Search Console/Bing/robots logs and provider SERP samples; local snippets don't prove this.
 - AdSense approval, ad yields, GDPR/DPDP compliance and app-store ranks depend on actual account/region/site evidence.

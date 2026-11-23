@@ -1,7 +1,7 @@
 {
-  "version": "2026-11-23.v3",
+  "version": "2026-11-23.v3.1",
   "claim_contract": "Current primary-source body inspection is a dated baseline, NOT permanent verification. For every consequential action re-open source and current changelog at task time; unknowns block unsupported deploy changes.",
-  "claim_count": 46,
+  "claim_count": 48,
   "claims": [
     {
       "id": "G-AI-INDEX",
@@ -602,16 +602,6 @@
       "not_proof": "Not evidence of proprietary weights, source selection, website eligibility, traffic or compliance."
     },
     {
-      "id": "BAIDU-DIRECT-BLOCKED",
-      "source": "https://ziyuan.baidu.com/doc",
-      "topic": "Baidu official docs",
-      "reviewed_on": "2026-11-23",
-      "evidence": "FETCH_TIMEOUT",
-      "mode": "UNVERIFIED",
-      "claim": "Original body could not be inspected; no detailed Chinese-market policy certified in this pass.",
-      "scope": "Baidu docs"
-    },
-    {
       "id": "APPLEBOT-DIRECT-RATELIMIT",
       "source": "https://support.apple.com/en-in/119829",
       "topic": "Applebot",
@@ -620,6 +610,32 @@
       "mode": "UNVERIFIED",
       "claim": "Original Applebot guidance blocked inspection; defer robot-control assertions requiring the current body.",
       "scope": "Applebot"
+    },
+    {
+      "id": "BAIDU-PORTAL-TOOLS",
+      "source": "https://ziyuan.baidu.com/doc",
+      "topic": "Baidu Search Resource Platform",
+      "claim": "Official Baidu webmaster overview lists URL submission, fast crawling, indexing status, crawler frequency/diagnostics and robots tools; these are visibility/support interfaces, not promises of inclusion or ranking.",
+      "scope": "Baidu webmaster portal public documentation overview; features may require site verification",
+      "mode": "CURRENT",
+      "section": "资源提交 / 数据统计 / 网站抓取及索引",
+      "evidence": "FIRST_PARTY_BODY_OPENED",
+      "reviewed_on": "2026-11-23",
+      "recheck": "Read current original Chinese language source before action",
+      "not_proof": "No Baidu property account connected; no guarantee of indexing or ranking."
+    },
+    {
+      "id": "BAIDU-AI-FLOW-PORTAL",
+      "source": "https://ziyuan.baidu.com/aiflow/index",
+      "topic": "Baidu AI traffic analytics",
+      "claim": "Baidu Search Resource Platform publicly lists AI流量分析 (AI traffic analysis). Without an added/verified site, the dashboard page says only limited public content is accessible. Actual measurements and attribution definitions were NOT available.",
+      "scope": "Baidu Search Resource Platform; verified site data not accessible",
+      "mode": "CURRENT",
+      "section": "AI流量分析 / 添加网站",
+      "evidence": "FIRST_PARTY_BODY_OPENED",
+      "reviewed_on": "2026-11-23",
+      "recheck": "Inspect official page and account guidance before claiming metrics",
+      "not_proof": "Public page link is not evidence of any site's AI impressions, referrals, citations or revenue."
     }
   ]
 }
