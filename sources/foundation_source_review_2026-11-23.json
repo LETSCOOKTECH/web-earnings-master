@@ -1,9 +1,9 @@
 {
-  "version": "2026-11-23.v4",
+  "version": "2026-11-23.v5.1",
   "meaning": "Dated source-body access audit; does not certify every policy sentence or auto-update instructions",
-  "targets_reviewed_for_access": 53,
-  "accessed_count": 38,
-  "unverified_count": 15,
+  "targets_reviewed_for_access": 80,
+  "accessed_count": 54,
+  "unverified_count": 26,
   "targets": [
     {
       "id": "google-search-updates",
@@ -534,6 +534,276 @@
       "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
       "change_control": "Reopen original source and check account, locale, effective date before action",
       "risk": "PPO test supports 3 treatments"
+    },
+    {
+      "id": "architecture-workers-pricing",
+      "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Worker paid base/CPU/request meters"
+    },
+    {
+      "id": "architecture-workers-limits",
+      "url": "https://developers.cloudflare.com/workers/platform/limits/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "128MB memory per isolate, CPU and body limits"
+    },
+    {
+      "id": "architecture-pages-limits",
+      "url": "https://developers.cloudflare.com/pages/platform/limits/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "20K files free and 25MiB per asset"
+    },
+    {
+      "id": "architecture-r2-pricing",
+      "url": "https://developers.cloudflare.com/r2/pricing/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Standard GB-month, Class A/B operation and direct egress meters"
+    },
+    {
+      "id": "architecture-r2-direct-upload",
+      "url": "https://developers.cloudflare.com/r2/objects/upload-objects/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Direct object upload with presigned grant"
+    },
+    {
+      "id": "architecture-r2-presigned",
+      "url": "https://developers.cloudflare.com/r2/api/s3/presigned-urls/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed official/provider excerpt was inspected, original body was not fully semantically verified in this turn.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Sign operation/key/expiry for direct upload"
+    },
+    {
+      "id": "architecture-queues-pricing",
+      "url": "https://developers.cloudflare.com/queues/platform/pricing/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Message 64KB operations and retry billing"
+    },
+    {
+      "id": "architecture-queues-limits",
+      "url": "https://developers.cloudflare.com/queues/platform/limits/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed official/provider excerpt was inspected, original body was not fully semantically verified in this turn.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Queue capacity and message constraints"
+    },
+    {
+      "id": "architecture-d1-pricing",
+      "url": "https://developers.cloudflare.com/d1/platform/pricing/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "D1 rows/storage billing"
+    },
+    {
+      "id": "architecture-browser-upscaler-case",
+      "url": "https://web.dev/case-studies/ai-video-upscaler-case-study",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "250K MAU client-side video case, owner claim"
+    },
+    {
+      "id": "architecture-browser-wasm-perf",
+      "url": "https://web.dev/articles/webassembly-performance-patterns-for-web-apps",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed official/provider excerpt was inspected, original body was not fully semantically verified in this turn.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Native/WASM and Web Worker code tradeoffs"
+    },
+    {
+      "id": "architecture-opfs",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Origin-private storage and worker access"
+    },
+    {
+      "id": "architecture-browser-quotas",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Storage quota and eviction rules"
+    },
+    {
+      "id": "architecture-owasp-api4",
+      "url": "https://api-security.owasp.org/editions/2023/en/0xa4-unrestricted-resource-consumption/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed official/provider excerpt was inspected, original body was not fully semantically verified in this turn.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Unrestricted cloud resource costs attack"
+    },
+    {
+      "id": "architecture-aws-lambda-price",
+      "url": "https://aws.amazon.com/lambda/pricing/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Request/GB-seconds serverless model, separate from Workers"
+    },
+    {
+      "id": "architecture-core-web-vitals",
+      "url": "https://developers.google.com/search/docs/appearance/core-web-vitals",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed official/provider excerpt was inspected, original body was not fully semantically verified in this turn.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "CWV measured field/core criteria"
+    },
+    {
+      "id": "vendor-vercel-hobby",
+      "url": "https://vercel.com/docs/plans/hobby",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party excerpt seen; full current original body NOT verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "Hobby noncommercial terms"
+    },
+    {
+      "id": "vendor-vercel-pricing",
+      "url": "https://vercel.com/pricing",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party excerpt seen; full current original body NOT verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "Pro and tier pricing"
+    },
+    {
+      "id": "vendor-github-pages-commercial",
+      "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body verified for this date, not contractual account eligibility.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "GitHub Pages online business/SaaS restriction"
+    },
+    {
+      "id": "vendor-supabase-pricing",
+      "url": "https://supabase.com/pricing",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body verified for this date, not contractual account eligibility.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "MAU-dependent Auth, storage, egress, compute plans"
+    },
+    {
+      "id": "vendor-supabase-free-pause",
+      "url": "https://supabase.com/kb/faqs/platform/free-postgres-for-side-projects",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party excerpt seen; full current original body NOT verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "Supabase free project pausing"
+    },
+    {
+      "id": "vendor-hetzner-pricing-change",
+      "url": "https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body verified for this date, not contractual account eligibility.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "June 2026 price change and regional/vat"
+    },
+    {
+      "id": "vendor-render-pricing",
+      "url": "https://render.com/pricing",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body verified for this date, not contractual account eligibility.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "Managed compute plan cost"
+    },
+    {
+      "id": "vendor-backblaze-storage",
+      "url": "https://www.backblaze.com/cloud-storage/pricing",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body verified for this date, not contractual account eligibility.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "B2 storage price and 3x stored free egress"
+    },
+    {
+      "id": "vendor-bunny-cdn",
+      "url": "https://bunny.net/pricing",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party excerpt seen; full current original body NOT verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "Regional CDN unit charge"
+    },
+    {
+      "id": "vendor-cloudfront-pricing",
+      "url": "https://aws.amazon.com/cloudfront/pricing/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party excerpt seen; full current original body NOT verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "CloudFront flat rate and other CDN prices"
+    },
+    {
+      "id": "vendor-vercel-flat-cdn",
+      "url": "https://vercel.com/changelog/flat-rate-cdn-is-now-ga-for-pro-teams",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party excerpt seen; full current original body NOT verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "New September 2026 flat-rate CDN scope"
     }
   ]
 }

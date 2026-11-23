@@ -22,7 +22,7 @@ export const interpretChange=(before,now)=>{
 };
 const root=path.resolve(import.meta.dirname,'..');
 const targets=JSON.parse(fs.readFileSync(path.join(root,'sources/foundation_refresh_targets.json'),'utf8')).monitored;
-const allowedHosts = new Set(["developers.google.com","blog.google","developers.openai.com","support.claude.com","docs.perplexity.ai","blogs.bing.com","safe.search.brave.com","help.kagi.com","www.chromium.org","firefox-source-docs.mozilla.org","docs.webkit.org","developer.chrome.com","datatracker.ietf.org","support.google.com","developer.apple.com","developer.android.com","ziyuan.baidu.com","searchadvisor.naver.com","yandex.com","www.mojeek.com","playwright.dev"]);
+const allowedHosts = new Set(["developers.google.com","blog.google","developers.openai.com","support.claude.com","docs.perplexity.ai","blogs.bing.com","safe.search.brave.com","help.kagi.com","www.chromium.org","firefox-source-docs.mozilla.org","docs.webkit.org","developer.chrome.com","datatracker.ietf.org","support.google.com","developer.apple.com","developer.android.com","web.dev","developer.mozilla.org","aws.amazon.com","api-security.owasp.org","vercel.com","docs.github.com","supabase.com","docs.hetzner.com","render.com","www.backblaze.com","bunny.net","ziyuan.baidu.com","searchadvisor.naver.com","yandex.com","www.mojeek.com","playwright.dev"]);
 const args=process.argv.slice(2);
 const flag=(name,defaultValue)=>{const i=args.indexOf(name);return i<0?defaultValue:args[i+1];};
 const statePath=path.resolve(flag('--state',path.join(root,'.cache/official-source-state.json')));

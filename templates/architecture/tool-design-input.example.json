@@ -1,0 +1,21 @@
+{
+  "workload_family": "browser_media",
+  "user_job": "Resize one JPEG to 1200px with local processing",
+  "output_oracles": [
+    "Decodes as JPEG with expected dimensions",
+    "Output bytes below chosen cap"
+  ],
+  "max_input_mb": 20,
+  "peak_browser_ram_mb": 135,
+  "cpu_seconds_per_job": 0.7,
+  "browser_capability_tested": false,
+  "real_fixture_tested": false,
+  "one_million_mau_load_tested": false,
+  "device_ram_budget_mb": 256,
+  "local_processing_allowed": true,
+  "local_claim": false,
+  "network_upload_tested": false,
+  "cloud_execution_allowed": false,
+  "edge_worker_execution_proposed": false,
+  "claims_million_user_ready": false
+}

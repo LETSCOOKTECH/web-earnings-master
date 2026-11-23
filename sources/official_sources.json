@@ -1,5 +1,5 @@
 {
-  "registry_version": "2026-11-23.v4",
+  "registry_version": "2026-11-23.v5.1",
   "checked_on": "2026-11-22",
   "notes": "Sources are link registry, not certification of current terms. Most URL locations were confirmed via public search on 2026-11-22; exact source text and relevance MUST be re-opened at execution time. Legacy entries may include unverified old paths. Mark such entries unverified until checked live.",
   "sources": [
@@ -1102,6 +1102,266 @@
       "review_every_days": 30,
       "authority": "first-party documentation",
       "verification": "Indexed official provider excerpt only; original full body recheck required at action time"
+    },
+    {
+      "id": "architecture-workers-pricing",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+      "purpose": "Worker paid base/CPU/request meters",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected only for bounded assertions"
+    },
+    {
+      "id": "architecture-workers-limits",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/workers/platform/limits/",
+      "purpose": "128MB memory per isolate, CPU and body limits",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected only for bounded assertions"
+    },
+    {
+      "id": "architecture-pages-limits",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/pages/platform/limits/",
+      "purpose": "20K files free and 25MiB per asset",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected only for bounded assertions"
+    },
+    {
+      "id": "architecture-r2-pricing",
+      "category": "storage",
+      "url": "https://developers.cloudflare.com/r2/pricing/",
+      "purpose": "Standard GB-month, Class A/B operation and direct egress meters",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected only for bounded assertions"
+    },
+    {
+      "id": "architecture-r2-direct-upload",
+      "category": "storage",
+      "url": "https://developers.cloudflare.com/r2/objects/upload-objects/",
+      "purpose": "Direct object upload with presigned grant",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected only for bounded assertions"
+    },
+    {
+      "id": "architecture-r2-presigned",
+      "category": "security",
+      "url": "https://developers.cloudflare.com/r2/api/s3/presigned-urls/",
+      "purpose": "Sign operation/key/expiry for direct upload",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed source excerpt; original full body pending"
+    },
+    {
+      "id": "architecture-queues-pricing",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/queues/platform/pricing/",
+      "purpose": "Message 64KB operations and retry billing",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected only for bounded assertions"
+    },
+    {
+      "id": "architecture-queues-limits",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/queues/platform/limits/",
+      "purpose": "Queue capacity and message constraints",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed source excerpt; original full body pending"
+    },
+    {
+      "id": "architecture-d1-pricing",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/d1/platform/pricing/",
+      "purpose": "D1 rows/storage billing",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected only for bounded assertions"
+    },
+    {
+      "id": "architecture-browser-upscaler-case",
+      "category": "browser",
+      "url": "https://web.dev/case-studies/ai-video-upscaler-case-study",
+      "purpose": "250K MAU client-side video case, owner claim",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected only for bounded assertions"
+    },
+    {
+      "id": "architecture-browser-wasm-perf",
+      "category": "browser",
+      "url": "https://web.dev/articles/webassembly-performance-patterns-for-web-apps",
+      "purpose": "Native/WASM and Web Worker code tradeoffs",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed source excerpt; original full body pending"
+    },
+    {
+      "id": "architecture-opfs",
+      "category": "browser",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system",
+      "purpose": "Origin-private storage and worker access",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected only for bounded assertions"
+    },
+    {
+      "id": "architecture-browser-quotas",
+      "category": "browser",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria",
+      "purpose": "Storage quota and eviction rules",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected only for bounded assertions"
+    },
+    {
+      "id": "architecture-owasp-api4",
+      "category": "security",
+      "url": "https://api-security.owasp.org/editions/2023/en/0xa4-unrestricted-resource-consumption/",
+      "purpose": "Unrestricted cloud resource costs attack",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed source excerpt; original full body pending"
+    },
+    {
+      "id": "architecture-aws-lambda-price",
+      "category": "infrastructure",
+      "url": "https://aws.amazon.com/lambda/pricing/",
+      "purpose": "Request/GB-seconds serverless model, separate from Workers",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected only for bounded assertions"
+    },
+    {
+      "id": "vendor-vercel-hobby",
+      "category": "vendor",
+      "url": "https://vercel.com/docs/plans/hobby",
+      "purpose": "Hobby noncommercial terms",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt only"
+    },
+    {
+      "id": "vendor-vercel-pricing",
+      "category": "vendor",
+      "url": "https://vercel.com/pricing",
+      "purpose": "Pro and tier pricing",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt only"
+    },
+    {
+      "id": "vendor-github-pages-commercial",
+      "category": "vendor",
+      "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits",
+      "purpose": "GitHub Pages online business/SaaS restriction",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected for selected assertion"
+    },
+    {
+      "id": "vendor-supabase-pricing",
+      "category": "vendor",
+      "url": "https://supabase.com/pricing",
+      "purpose": "MAU-dependent Auth, storage, egress, compute plans",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected for selected assertion"
+    },
+    {
+      "id": "vendor-supabase-free-pause",
+      "category": "vendor",
+      "url": "https://supabase.com/kb/faqs/platform/free-postgres-for-side-projects",
+      "purpose": "Supabase free project pausing",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt only"
+    },
+    {
+      "id": "vendor-hetzner-pricing-change",
+      "category": "vendor",
+      "url": "https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/",
+      "purpose": "June 2026 price change and regional/vat",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected for selected assertion"
+    },
+    {
+      "id": "vendor-render-pricing",
+      "category": "vendor",
+      "url": "https://render.com/pricing",
+      "purpose": "Managed compute plan cost",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected for selected assertion"
+    },
+    {
+      "id": "vendor-backblaze-storage",
+      "category": "vendor",
+      "url": "https://www.backblaze.com/cloud-storage/pricing",
+      "purpose": "B2 storage price and 3x stored free egress",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body inspected for selected assertion"
+    },
+    {
+      "id": "vendor-bunny-cdn",
+      "category": "vendor",
+      "url": "https://bunny.net/pricing",
+      "purpose": "Regional CDN unit charge",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt only"
+    },
+    {
+      "id": "vendor-cloudfront-pricing",
+      "category": "vendor",
+      "url": "https://aws.amazon.com/cloudfront/pricing/",
+      "purpose": "CloudFront flat rate and other CDN prices",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt only"
+    },
+    {
+      "id": "vendor-vercel-flat-cdn",
+      "category": "vendor",
+      "url": "https://vercel.com/changelog/flat-rate-cdn-is-now-ga-for-pro-teams",
+      "purpose": "New September 2026 flat-rate CDN scope",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt only"
     }
   ]
 }
