@@ -71,13 +71,13 @@ test('licensed estimate cannot assert owner-observed traffic',()=>{
 });
 test('two syndications same independence group not two independent pains',()=>{
  const p=goodPlan();const a=e();a.id='user1';a.kind='original_user_report';a.pillar='human_pain';a.source_platform='reddit';a.metric=undefined;a.observation_type='quoted';
- const b={...a,id:'user2',url:'https://www.news.example.org/copy'};
+ const b={...a,id:'user2',url:'https://www.reddit.com/r/processing/comments/cross_post'};
  p.evidence=[e(),a,b];
  const x=assessOpportunity(p,{now:NOW});assert.equal(x.gates.per_pillar.human_pain,1);
 });
 test('independent user reports still do not prove market fit',()=>{
- const p=goodPlan();const a=e();a.id='u1';a.pillar='human_pain';a.kind='original_user_report';a.observation_type='quoted';delete a.metric;a.source_platform='reddit';
- const b={...a,id:'u2',independence_group:'other_thread',url:'https://github.com/example/example/issues/1'};
+ const p=goodPlan();const a=e();a.id='user_one';a.pillar='human_pain';a.kind='original_user_report';a.observation_type='quoted';delete a.metric;a.source_platform='reddit';
+ const b={...a,id:'user_two',independence_group:'other_thread',url:'https://github.com/example/example/issues/1'};
  p.evidence=[e(),a,b];p.decision.requested='GO_FOR_MVP';
  const x=assessOpportunity(p,{now:NOW});assert.equal(x.decision,'TEST_FIRST');assert.equal(x.gates.per_pillar.human_pain,2);
 });
