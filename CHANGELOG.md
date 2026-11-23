@@ -1,5 +1,31 @@
 # Changelog
 
+## v3.2 — 2026-11-23 (research branch only; corrected current Google Search AI rollout)
+- Action-time official cross-check identified a stale Google Search Console Help cache describing a subset pilot, while the newer official announcement and indexed current Help page confirm **worldwide rollout on August 31, 2026** for Search generative AI inclusion control. Marked direct Help HTTP 429 and cached announcement uncertainty explicitly. Updated AI discovery skill, research dossier and tests. Property-specific settings still require owner authorization; inclusion is not a rank boost.
+- Expanded first-party documentation freshness monitor to 36 targets: Google Search Console AI control Help, dated Google announcement, experimental Chrome Lighthouse agentic scoring. Two added source pages have **incomplete latest direct-body evidence**; watchlist does not claim they are fully semantically verified. Added vetted `blog.google` host to read-only source allowlist.
+- Added 32 user-report priority claim assessments, six local URL-path-versus-link-graph regression tests and eight uploader audit tests; updated three existing skills without inventing proprietary ranking weights. Uploaded report is 84,607 chars; whole report not certified.
+
+
+
+## v3.1 uploaded FreeConvert fact-check — 2026-11-23 (research branch only)
+- Reopened current official Google Search URL structure, SEO guide, links, AI Mode/Overviews, generative AI guidance, ranking systems, spam policies, structured data and Chrome Lighthouse experimental agentic documentation.
+- Reviewed 32 selected high-impact causal/technical claims from the user-provided 85KB FreeConvert report; recorded explicit status, original section and external verification gaps. Full report not certified.
+- Corrected shallow URL depth = Google PageRank/rank hack; added runnable link-graph distance versus pathname segment diagnostic and six tests.
+- Upgraded three existing skills: web-technical-seo, web-ai-discovery and web-competitor-audit with falsifiable scope rules, no unsupported ranking/AI citations and current official source links.
+- Distinguished optional Chrome experimental Agentic Browsing from actual Google AI Mode eligibility; identified sources unavailable without competitor private GSC/AdSense.
+
+
+
+## v3 research intake — 2026-11-23 (separate research branch; no production skill rewrite)
+- FreeConvert observed product/acquisition/SEO footprint and named competitive comparisons from published official first-party pages and clearly labeled public Ahrefs/Semrush modeled estimates.
+- Explicit data access failure: connected premium Ahrefs Site Explorer reports Insufficient plan, so no raw traffic/keyword/refdomain exports claimed.
+- 24 scoped public/provider observations and 7 UNPROVEN causal hypotheses in sources/research/freeconvert-2026-11-23.json.
+- 84 open research questions across 12 dimensions in sources/research/website-growth-research-atlas.json with existing skill ownership and actual evidence acceptance rules.
+- Manual, adversarial, independently verified research → skill-upgrade protocol; first pass does not claim 100% SEO or AdSense outcomes.
+- Added structural tests for research provenance and non-fabrication.
+
+
+
 ## 2.3.1 — 2026-11-23 (per-action source evidence gate)
 - Added executable scripts/require-action-time-sources.mjs and seven negative/positive tests to reject stale, unverifiable, snippet-only and future-effective documentation when preparing consequential crawler/AI/ads/security changes.
 - Source evidence requires official URL, fresh UTC observation, bounded directly checked text, exact scope/section, effectivity, reviewer and real test/account result. Code validation checks structure/time, never semantic truth.
