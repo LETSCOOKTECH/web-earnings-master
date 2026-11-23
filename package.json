@@ -1,6 +1,6 @@
 {
   "name": "web-earnings-master",
-  "version": "3.0.0-draft.1",
+  "version": "3.2.0-draft.1",
   "private": true,
   "type": "module",
   "engines": {
@@ -10,7 +10,7 @@
     "lint:skills": "node scripts/validate-skills.mjs",
     "audit:sources": "node scripts/check-sources.mjs",
     "audit:fixture": "node scripts/audit-static-site.mjs --dist tests/fixtures/site --origin https://fixture.example",
-    "test": "node --test tests/*.test.mjs && npm run lint:skills && npm run audit:sources && npm run audit:fixture && npm run audit:evidence && npm run audit:adstxt && npm run audit:intents && npm run audit:robots && npm run audit:discovery",
+    "test": "node --test tests/*.test.mjs && npm run lint:skills && npm run audit:sources && npm run audit:fixture && npm run audit:evidence && npm run audit:adstxt && npm run audit:intents && npm run audit:robots && npm run audit:discovery && npm run audit:architecture",
     "audit:evidence": "node scripts/check-evidence.mjs --file templates/evidence-manifest.example.json",
     "audit:adstxt": "node scripts/audit-ads-txt.mjs --file tests/fixtures/ads.txt --seller google.com",
     "audit:intents": "node scripts/audit-page-intents.mjs --file templates/page-intents.example.json",
@@ -28,7 +28,14 @@
     "audit:aso:apple": "node scripts/audit-aso-listing.mjs --file templates/discovery/apple-app-store.example.json",
     "eval:geo": "node scripts/evaluate-ai-citations.mjs --file templates/discovery/ai-citation-batch.example.json",
     "test:discovery": "node --test tests/discovery-skills.test.mjs",
-    "audit:discovery": "node scripts/check-discovery-evidence.mjs"
+    "audit:discovery": "node scripts/check-discovery-evidence.mjs",
+    "audit:architecture": "node scripts/check-architecture-evidence.mjs",
+    "model:local": "node scripts/model-tool-economics.mjs --scenario templates/architecture/scenarios/million-browser-local.json",
+    "model:hybrid": "node scripts/model-tool-economics.mjs --scenario templates/architecture/scenarios/million-hybrid-file-tools.json",
+    "model:ai": "node scripts/model-tool-economics.mjs --scenario templates/architecture/scenarios/million-ai-token-tool.json",
+    "audit:hosting": "node scripts/evaluate-hosting-options.mjs --file templates/architecture/hosting-choice.example.json",
+    "audit:tool-architecture": "node scripts/assess-tool-architecture.mjs --file templates/architecture/tool-design-input.example.json",
+    "test:architecture": "node --test tests/architecture-economics.test.mjs"
   },
-  "description": "Source-governed Codex skills for web SEO, AEO, GEO/AI retrieval, Google Play/Apple ASO, AdSense and growth"
+  "description": "Evidence-first Codex skill engine for SEO/AEO/GEO/ASO, safe utility execution, million-user capacity and publisher-margin planning"
 }

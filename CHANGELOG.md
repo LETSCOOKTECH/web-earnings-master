@@ -1,5 +1,14 @@
 # Changelog
 
+## V5: real tool architecture / cost-to-serve / 1M MAU quality, 2026-11-23 (draft research branch)
+- Added six purpose-separated specialist Codex skills covering workload topology, browser native/WASM compute, consented cloud job pipeline, per-success FinOps economics, peak load reliability, and commercial hosting/vendor selection. Library 38 total on V5 branch.
+- Added six detailed architecture research manuals, dated Cloudflare Workers/R2/Queues/D1 source card, four distinct 1M MAU scenario fixtures and two additional architecture/vendor QA tools.
+- Added executable cost model for separate CPU/worker requests, file-ops, queue/retries, DB rows, AI tokens, direct/static egress and external CPU; unknown charges kept null rather than zero. Cloud-heavy example intentionally breaches declared budget.
+- Confirmed official Vercel Hobby noncommercial, GitHub Pages business/SaaS hosting restriction, Supabase Auth 1M MAU charges and Backblaze B2 3x stored-data egress; source/access statuses recorded.
+- Added security/quality gate routing from existing Astro, spec, validator, portfolio, monetization and security skills. No actual site deployed, 1M load run, codec oracle certified, or hosting bill observed.
+
+
+
 ## V4.1 GEO regional/provider atlas — 2026-11-23 (draft research branch)
 - Extended generative-search skill with 21 provider/surface decision entries and a 5th deep manual; distinguishes Google AI Mode from Gemini, ChatGPT Search from API web search, Kagi Assistant, Brave AI Answers, DuckDuckGo Search Assist from Duck.ai, Baidu AI, and 8 unknown-sourced products.
 - Evidence classes are source body, official indexed excerpt, contrast-only, or UNKNOWN; no reverse-engineered hidden ranking weights or unsupported crawler claims.

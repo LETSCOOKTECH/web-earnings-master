@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-23.v4",
+  "version": "2026-11-23.v5.1",
   "intent": "Automated change *signals* only. Do not update policy semantics or provider eligibility without human/agent reading official source.",
   "monitored": [
     {
@@ -422,6 +422,222 @@
       "id": "apple-product-page-optimization",
       "category": "appstore",
       "url": "https://developer.apple.com/help/app-store-connect/create-product-page-optimization-tests/overview-of-product-page-optimization/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-workers-pricing",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-workers-limits",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/workers/platform/limits/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-pages-limits",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/pages/platform/limits/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-r2-pricing",
+      "category": "storage",
+      "url": "https://developers.cloudflare.com/r2/pricing/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-r2-direct-upload",
+      "category": "storage",
+      "url": "https://developers.cloudflare.com/r2/objects/upload-objects/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-r2-presigned",
+      "category": "security",
+      "url": "https://developers.cloudflare.com/r2/api/s3/presigned-urls/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-queues-pricing",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/queues/platform/pricing/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-queues-limits",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/queues/platform/limits/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-d1-pricing",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/d1/platform/pricing/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-browser-upscaler-case",
+      "category": "browser",
+      "url": "https://web.dev/case-studies/ai-video-upscaler-case-study",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-browser-wasm-perf",
+      "category": "browser",
+      "url": "https://web.dev/articles/webassembly-performance-patterns-for-web-apps",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-opfs",
+      "category": "browser",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-browser-quotas",
+      "category": "browser",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-owasp-api4",
+      "category": "security",
+      "url": "https://api-security.owasp.org/editions/2023/en/0xa4-unrestricted-resource-consumption/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-aws-lambda-price",
+      "category": "infrastructure",
+      "url": "https://aws.amazon.com/lambda/pricing/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-core-web-vitals",
+      "category": "performance",
+      "url": "https://developers.google.com/search/docs/appearance/core-web-vitals",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-vercel-hobby",
+      "category": "vendor",
+      "url": "https://vercel.com/docs/plans/hobby",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-vercel-pricing",
+      "category": "vendor",
+      "url": "https://vercel.com/pricing",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-github-pages-commercial",
+      "category": "vendor",
+      "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-supabase-pricing",
+      "category": "vendor",
+      "url": "https://supabase.com/pricing",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-supabase-free-pause",
+      "category": "vendor",
+      "url": "https://supabase.com/kb/faqs/platform/free-postgres-for-side-projects",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-hetzner-pricing-change",
+      "category": "vendor",
+      "url": "https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-render-pricing",
+      "category": "vendor",
+      "url": "https://render.com/pricing",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-backblaze-storage",
+      "category": "vendor",
+      "url": "https://www.backblaze.com/cloud-storage/pricing",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-bunny-cdn",
+      "category": "vendor",
+      "url": "https://bunny.net/pricing",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-cloudfront-pricing",
+      "category": "vendor",
+      "url": "https://aws.amazon.com/cloudfront/pricing/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-vercel-flat-cdn",
+      "category": "vendor",
+      "url": "https://vercel.com/changelog/flat-rate-cdn-is-now-ga-for-pro-teams",
       "kind": "html",
       "semantic_review_required": true,
       "source_owner": "official_provider"

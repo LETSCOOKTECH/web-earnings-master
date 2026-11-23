@@ -1,0 +1,118 @@
+{
+  "version": "2026-11-23.v5.1",
+  "source_date": "2026-11-23",
+  "provider_claim_count": 12,
+  "opened": 7,
+  "partial": 5,
+  "claims": [
+    {
+      "id": "VEND-01",
+      "claim": "Vercel Hobby restricts use to personal and non-commercial contexts; commercial sites require an appropriate plan.",
+      "source": "https://vercel.com/docs/plans/hobby",
+      "evidence": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "reviewed_on": "2026-11-23",
+      "scope": "Plan/account/region/service/contract and effective date specific; do not infer actual profit or rank.",
+      "limitation": "Do not infer exact terms for a specific AdSense account without reading live contract."
+    },
+    {
+      "id": "VEND-02",
+      "claim": "GitHub Pages is not intended or permitted as free business/e-commerce/primarily commercial SaaS hosting.",
+      "source": "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "reviewed_on": "2026-11-23",
+      "scope": "Plan/account/region/service/contract and effective date specific; do not infer actual profit or rank.",
+      "limitation": "Not a categorical statement about every hobby blog with some ads."
+    },
+    {
+      "id": "VEND-03",
+      "claim": "Supabase Free includes 50,000 MAU and 500MB database; Free projects pause after a week inactive.",
+      "source": "https://supabase.com/pricing",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "reviewed_on": "2026-11-23",
+      "scope": "Plan/account/region/service/contract and effective date specific; do not infer actual profit or rank.",
+      "limitation": "Product-specific auth MAU counting; separate from unique visitors of a stateless website."
+    },
+    {
+      "id": "VEND-04",
+      "claim": "Supabase Pro starts at $25/month with 100,000 MAU included, then lists $0.00325 per additional MAU.",
+      "source": "https://supabase.com/pricing",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "reviewed_on": "2026-11-23",
+      "scope": "Plan/account/region/service/contract and effective date specific; do not infer actual profit or rank.",
+      "limitation": "A hypothetical 1M authenticating users may entail meaningful extra spend; not 1M anonymous tool visitors."
+    },
+    {
+      "id": "VEND-05",
+      "claim": "Backblaze B2 standard lists $6.95/TB-month and egress free up to three times monthly stored amount.",
+      "source": "https://www.backblaze.com/cloud-storage/pricing",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "reviewed_on": "2026-11-23",
+      "scope": "Plan/account/region/service/contract and effective date specific; do not infer actual profit or rank.",
+      "limitation": "Not unlimited egress for frequently downloaded short-lived conversion outputs; B2 Overdrive distinct product."
+    },
+    {
+      "id": "VEND-06",
+      "claim": "Hetzner announced pricing adjustment effective 15 June 2026 and regional/legacy pricing caveats.",
+      "source": "https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "reviewed_on": "2026-11-23",
+      "scope": "Plan/account/region/service/contract and effective date specific; do not infer actual profit or rank.",
+      "limitation": "Self-managed server labor, backups, VAT and outbound traffic must be priced separately."
+    },
+    {
+      "id": "VEND-07",
+      "claim": "Render offers hosted compute and managed background workers; actual CPU/RAM/plan prices vary by selected service.",
+      "source": "https://render.com/pricing",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "reviewed_on": "2026-11-23",
+      "scope": "Plan/account/region/service/contract and effective date specific; do not infer actual profit or rank.",
+      "limitation": "No verified total costs for specific file-conversion workload."
+    },
+    {
+      "id": "VEND-08",
+      "claim": "Vercel Pro and its CDN pricing models evolved during 2026; Hobby free-tier billing is not an eligible default for commercial SaaS.",
+      "source": "https://vercel.com/pricing",
+      "evidence": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "reviewed_on": "2026-11-23",
+      "scope": "Plan/account/region/service/contract and effective date specific; do not infer actual profit or rank.",
+      "limitation": "Need live effective plan and billing meter before comparison."
+    },
+    {
+      "id": "VEND-09",
+      "claim": "CloudFront provides newer flat-rate plans, but account quotas and request/bandwidth allowances are product-specific.",
+      "source": "https://aws.amazon.com/cloudfront/pricing/",
+      "evidence": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "reviewed_on": "2026-11-23",
+      "scope": "Plan/account/region/service/contract and effective date specific; do not infer actual profit or rank.",
+      "limitation": "Do not generalize CloudFront CDN limits to Lambda request/CPU pricing."
+    },
+    {
+      "id": "VEND-10",
+      "claim": "Bunny CDN has pay-as-you-go bandwidth pricing that needs exact geography and current service tier to compare.",
+      "source": "https://bunny.net/pricing",
+      "evidence": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "reviewed_on": "2026-11-23",
+      "scope": "Plan/account/region/service/contract and effective date specific; do not infer actual profit or rank.",
+      "limitation": "Without selected plan/region/traffic, no definitive price should be recorded."
+    },
+    {
+      "id": "VEND-11",
+      "claim": "Vercel September 2026 announcement added a flat-rate CDN option for Pro teams.",
+      "source": "https://vercel.com/changelog/flat-rate-cdn-is-now-ga-for-pro-teams",
+      "evidence": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "reviewed_on": "2026-11-23",
+      "scope": "Plan/account/region/service/contract and effective date specific; do not infer actual profit or rank.",
+      "limitation": "Availability, quotas and scope must be checked in current owner account."
+    },
+    {
+      "id": "VEND-12",
+      "claim": "Supabase free tier is project/account scoped and separate from the economics of auth, database, file storage, subscriptions and egress.",
+      "source": "https://supabase.com/pricing",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "reviewed_on": "2026-11-23",
+      "scope": "Plan/account/region/service/contract and effective date specific; do not infer actual profit or rank.",
+      "limitation": "Do not put anonymous utility visitors in Auth MAU model automatically."
+    }
+  ],
+  "meaning": "Provider first-party plan facts and dated excerpts; not real bills, commercial legal advice, deployment or benchmark"
+}
