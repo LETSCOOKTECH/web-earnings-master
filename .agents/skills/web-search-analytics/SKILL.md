@@ -21,3 +21,13 @@ description: "Diagnose first-party Google Search Console, Google Trends, Semrush
 
 ## Outputs
 `templates/weekly-search-traffic-review.md`, `templates/analytics-event-taxonomy.csv`, `templates/portfolio-weekly.csv`. Prefer first-party results with caveats.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Grounded GSC/referrer/product/revenue metrics. **Routing:** web-experiments owns controlled interventions, not initial diagnosis.
+**Official source entry points requiring action-time reopening:** https://developers.google.com/search/docs/monitor-debug/identify-google-search-traffic;https://developers.google.com/search/docs/monitor-debug/search-console-start. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Owned property permissions, exact source units, privacy, referrer and verified human funnel.
+**Critical FAIL / UNKNOWN:** Google Referer does not contain keyword; AI citation isn't pageview; CPC isn't ad RPM.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
+
+## Baidu AI traffic analysis source confirmation (2026-11-23)
+Baidu's primary public platform at https://ziyuan.baidu.com/doc and AI traffic entry at https://ziyuan.baidu.com/aiflow/index were successfully opened: the interface displays `AI流量分析` and requires a site addition/verification to access full data. Do not claim these AI analytics are Google GenAI GSC counts, Bing citations, ChatGPT referrals or human visits; dashboard definitions remain UNKNOWN without owner account and current help. See claim BAIDU-AI-FLOW-PORTAL in sources/verified_claims.json and reopen the current Chinese-language original at use time.

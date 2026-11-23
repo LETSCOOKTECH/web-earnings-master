@@ -21,3 +21,10 @@ description: "Implement production-oriented Astro websites with search-readable 
 
 ## Starter examples
 `templates/astro/astro.config.mjs`, `templates/astro/src/components/SEOHead.astro`, `templates/astro/src/layouts/BaseLayout.astro`, `templates/astro/src/lib/seo/schema.ts`, `templates/astro/src/pages/robots.txt.ts`; test with `node scripts/audit-static-site.mjs` and `scripts/audit-live-site.mjs`.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Versioned Astro engineering and static output. **Routing:** web-product-validation executes real output correctness.
+**Official source entry points requiring action-time reopening:** https://docs.astro.build/en/getting-started/. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Built HTML metadata and no-JS meaningful purpose; E2E actual tool and honest 404.
+**Critical FAIL / UNKNOWN:** No automatic search rank boost from choosing Astro.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; the source watch's hash changes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

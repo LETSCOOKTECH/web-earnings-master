@@ -1,0 +1,21 @@
+{
+  "task": "Example only: decide whether llms.txt is necessary for Google Search; NOT live evidence",
+  "required_claim_ids": [
+    "G-AI-NOLLM"
+  ],
+  "records": [
+    {
+      "claim_id": "G-AI-NOLLM",
+      "source_url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "checked_at_utc": "2026-11-23T00:00:00Z",
+      "access_method": "ORIGINAL_BODY_INSPECTED",
+      "source_section": "Things to ignore",
+      "relevant_excerpt": "Example excerpt only; re-open original source and replace before use.",
+      "applies_to": "Example: Google Search AI indexing, not other AI services",
+      "reviewer": "EXAMPLE_NOT_VERIFIED",
+      "implementation_status": "CURRENTLY_ENFORCED",
+      "test_or_account_evidence": "EXAMPLE_ONLY_NO_REAL_SITE_TEST"
+    }
+  ],
+  "warning": "This is a template. Do not use this example as a source of actual current evidence."
+}

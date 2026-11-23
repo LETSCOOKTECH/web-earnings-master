@@ -21,3 +21,10 @@ description: "Research and rank website and free-tool niches using exact human s
 
 ## Artifacts
 `templates/niche-decision.md`, `templates/keyword-research.csv`, `templates/serp-audit.csv`, `references/market-research.md`, `docs/MASTER_CURRICULUM.md`. No implementation approval based on search volume alone.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Obtainable traffic and legitimate user job. **Routing:** web-keyword-intent handles query grouping after niche decision.
+**Official source entry points requiring action-time reopening:** https://developers.google.com/search/docs/fundamentals/creating-helpful-content;https://trends.google.com/trends/. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Current market/locale SERP, competitor task oracle, expected human clicks and costs.
+**Critical FAIL / UNKNOWN:** No automatic niche GO from keyword volume or third-party authority score.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

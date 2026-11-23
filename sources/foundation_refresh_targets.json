@@ -1,0 +1,270 @@
+{
+  "version": "2026-11-23.v3.1",
+  "intent": "Automated change *signals* only. Do not update policy semantics or provider eligibility without human/agent reading official source.",
+  "monitored": [
+    {
+      "id": "google-search-updates",
+      "category": "search",
+      "url": "https://developers.google.com/search/updates/search_docs_updates.rss",
+      "kind": "rss",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-crawling-updates",
+      "category": "crawler",
+      "url": "https://developers.google.com/crawling/docs/changelog/crawling_docs_updates.rss",
+      "kind": "rss",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-ai-optimization",
+      "category": "ai",
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-ai-features",
+      "category": "ai",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-preferred-sources",
+      "category": "ai",
+      "url": "https://developers.google.com/search/docs/appearance/preferred-sources",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-genai-report",
+      "category": "analytics",
+      "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-crawler-list",
+      "category": "crawler",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-user-fetchers",
+      "category": "crawler",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "openai-crawlers",
+      "category": "crawler",
+      "url": "https://developers.openai.com/api/docs/bots",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "anthropic-crawlers",
+      "category": "crawler",
+      "url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "perplexity-crawlers",
+      "category": "crawler",
+      "url": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "bing-ai-grounding-2027",
+      "category": "ai",
+      "url": "https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "bing-ai-performance",
+      "category": "analytics",
+      "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "brave-crawler",
+      "category": "crawler",
+      "url": "https://safe.search.brave.com/help/brave-search-crawler",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "kagi-sources",
+      "category": "search",
+      "url": "https://help.kagi.com/kagi/search-details/search-sources.html",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "chromium-processes",
+      "category": "browser",
+      "url": "https://www.chromium.org/developers/design-documents/multi-process-architecture/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "firefox-gecko",
+      "category": "browser",
+      "url": "https://firefox-source-docs.mozilla.org/overview/gecko.html",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "webkit-processes",
+      "category": "browser",
+      "url": "https://docs.webkit.org/Getting%20Started/Introduction.html",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "chrome-webmcp",
+      "category": "agent",
+      "url": "https://developer.chrome.com/docs/modern-web-guidance/guides/webmcp/webmcp",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "ietf-aipref",
+      "category": "standard",
+      "url": "https://datatracker.ietf.org/group/aipref/documents/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-play-aso",
+      "category": "aso",
+      "url": "https://support.google.com/googleplay/android-developer/answer/4448378",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "apple-app-store-aso",
+      "category": "aso",
+      "url": "https://developer.apple.com/app-store/search/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "baidu-search-docs",
+      "category": "search",
+      "url": "https://ziyuan.baidu.com/doc",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "naver-seo",
+      "category": "search",
+      "url": "https://searchadvisor.naver.com/guide/seo-help",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "yandex-webmaster",
+      "category": "search",
+      "url": "https://yandex.com/support/webmaster/en/yandex-indexing/site-indexing",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "mojeekbot",
+      "category": "crawler",
+      "url": "https://www.mojeek.com/bot.html",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-agent-allow",
+      "category": "crawler",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/allow-google-agent",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-googlebot-bytes",
+      "category": "crawler",
+      "url": "https://developers.google.com/search/blog/2026/03/crawler-blog-post",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-shared-training-control",
+      "category": "ai",
+      "url": "https://developers.google.com/search/blog/2026/10/ai-training-control",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-robots-spec",
+      "category": "crawler",
+      "url": "https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-search-referrer-2026",
+      "category": "analytics",
+      "url": "https://developers.google.com/search/docs/monitor-debug/identify-google-search-traffic",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "playwright-browser-compatibility",
+      "category": "browser",
+      "url": "https://playwright.dev/docs/browsers",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "baidu-ai-traffic",
+      "category": "analytics",
+      "url": "https://ziyuan.baidu.com/aiflow/index",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    }
+  ]
+}

@@ -19,3 +19,10 @@ description: "Review multiple websites with verifiable organic acquisition, retu
 
 ## Artifacts
 `templates/portfolio-weekly.csv`, `templates/portfolio-decision.md`, site-level monthly economics with confirmed/estimated/unknown classes and official policy review.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Multi-site capital allocation with real economics. **Routing:** web-niche-validation selects next opportunity; portfolio allocates.
+**Official source entry points requiring action-time reopening:** https://support.google.com/webmasters/answer/7576553;https://support.google.com/adsense/. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Actual property referrals, completed tasks, publisher net revenue, hosting and support cost by period.
+**Critical FAIL / UNKNOWN:** Don't invent LTV, domain ROI or search traffic from competitor estimates.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

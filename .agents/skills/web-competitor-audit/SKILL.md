@@ -21,3 +21,10 @@ description: "Reverse-engineer competitor websites ethically using current SERPs
 
 ## Artifacts
 `templates/competitor-benchmark.md`, `templates/serp-audit.csv`, `references/market-research.md`. Label estimated traffic data with provider/date and never treat it as first-party.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Measured, ethical competing user journeys. **Routing:** web-niche-validation chooses problem; this benchmarks competitors.
+**Official source entry points requiring action-time reopening:** https://developers.google.com/search/docs/fundamentals/seo-starter-guide. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Legal identical public test fixture and region/device/date, actual output and user complaints verified.
+**Critical FAIL / UNKNOWN:** No proprietary source exfiltration or third-party modeled traffic called actual.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; the source watch's hash changes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

@@ -21,3 +21,10 @@ description: "Translate validated search demand and user pain into a small, secu
 
 ## Outputs
 One concise PRD (`templates/product-prd.md`), test matrix and expected metric funnel (view → start → success → download). Product scope should remain revisable when usage data changes.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Output oracle and bounded product scope. **Routing:** web-product-validation actually executes oracles.
+**Official source entry points requiring action-time reopening:** https://html.spec.whatwg.org/multipage/;https://developer.mozilla.org/en-US/docs/Web/API/File_API. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Acceptance examples with expected formats, error/boundaries, privacy and compute budget.
+**Critical FAIL / UNKNOWN:** A feature checklist without actual testable outputs is no approval.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

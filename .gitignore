@@ -10,3 +10,10 @@ playwright-report/
 *.pem
 *.key
 
+
+.cache/
+foundation-watch.json
+foundation-watch.md
+
+# User-owned action-time source/account evidence (may contain sensitive details)
+private/

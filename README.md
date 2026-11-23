@@ -43,7 +43,7 @@ The loop is adaptive. Codex must investigate the current problem and only invoke
 
 ## Skill library
 
-**21 specialized Codex skills**, stored under [`.agents/skills/`](.agents/skills/), cover:
+**28 specialized Codex skills**, stored under [`.agents/skills/`](.agents/skills/), cover:
 
 | Workstream | Skills | What they produce |
 | --- | --- | --- |
@@ -52,6 +52,14 @@ The loop is adaptive. Codex must investigate the current problem and only invoke
 | Search and AI discovery | `web-technical-seo`, `web-content-and-image-seo`, `web-ai-discovery`, `web-authority-distribution` | Indexability audits, high-value information, crawl policy and earned distribution plans |
 | Monetization and trust | `web-adsense-readiness`, `web-network-monetization`, `web-privacy-consent`, `web-ad-experience` | Publisher eligibility evidence, network comparisons, privacy/consent and safe ad layouts |
 | Reliability and growth | `web-product-validation`, `web-search-analytics`, `web-experiments`, `web-launch-review`, `web-portfolio-growth` | Real tests, conversion funnels, experiments, release decisions and portfolio economics |
+
+### Core search and browser foundation (v2.2 deep upgrade)
+
+Read [the foundational operating system](docs/foundations/README.md), which contains 18 technical/reference chapters, seven dedicated foundation skills (plus the original 21), a 32-link annotated primary-source registry, a fresh-source check utility and offline contract tests. It covers browser/DNS/HTTP/TLS internals, search crawl/index/rank, crawler controls, Google/Bing/AI answer engines, agent browsers, SEO/AEO/GEO and app-store ASO. **It does not expose proprietary ranking weights or guarantee search/AI placement.**
+
+Use the relevant focused skill rather than injecting all foundation chapters into one Codex context. Read chapters 11–18 for Chromium/Firefox/WebKit architecture, DNS/HTTP/TLS, inverted indexes/BM25/PageRank/hybrid retrieval, the global engine atlas, AI grounding/citations/agents, 2026–27 future-effective controls, deep SEO/AEO/GEO and adversarial test gates. Use `node scripts/ir-reference-lab.mjs` for a reproducible educational search engine, **not** proprietary Google ranking. A separate 26-target official-source watcher uses daily GitHub Actions polling only after the proposed workflow reaches the default branch; automated hashes are not policy evidence. The agent must inspect current first-party docs before material decisions.
+
+Run `node scripts/check-foundation-sources.mjs` for registry validation and optionally `node scripts/check-foundation-sources.mjs --live --limit 12` for reachability only; semantic live provider policy recheck is always required.
 
 Full routing is in [`AGENTS.md`](AGENTS.md). The [master curriculum](docs/MASTER_CURRICULUM.md) organizes the knowledge domains, while [`docs/START_HERE.md`](docs/START_HERE.md) covers practical usage.
 
@@ -134,7 +142,7 @@ For each change: cite a current source or test, explain the affected scope, upda
 ## Status and ownership
 
 - **Repository:** `LETSCOOKTECH/web-earnings-master` — intended **private** research and skills workspace.
-- **Baseline:** 21 Codex skills and a dated primary-source registry. These are living references, not a comprehensive proof that every provider requirement has been satisfied.
+- **Baseline:** 28 Codex skills and a dated primary-source registry. These are living references, not a comprehensive proof that every provider requirement has been satisfied.
 - **Scope today:** Research, verification and skill improvement. Site development begins separately when requirements and evidence justify it.
 - **License:** [Proprietary — All rights reserved](LICENSE). Authorized internal use only. External references and third-party components retain their own terms.
 
@@ -147,3 +155,15 @@ For each change: cite a current source or test, explain the affected scope, upda
 Maintained by **LETSCOOKTECH**.
 
 </div>
+
+
+## v2.3 research reliability and real execution
+- **20 foundation chapters:** browser/network, protocol standards, search IR, global search engines, RAG/AI agents, 2026–27 changes, production SEO, adversarial cases, first-party-source verification (19), and real HTTP/browser lab (20).
+- **Original skills:** All 21 original Codex skill bodies individually audited and patched with scoped provider source entry points, evidence criteria, failure gates and routing. Seven complementary skills remain; total 28.
+- **Provider claims:** 48 dated, specific claims supported by inspected first-party documents; one inaccessible/unverified Applebot case. Baidu public documentation was re-opened, but owner-only dashboard data remains unavailable. No blanket claim to have read every source paragraph. `sources/verified_claims.json` is a history of checked claims, NOT automatically current.
+- **Official-source monitoring:** 33 pinned provider pages/feeds; schedule detects changes and can create a review GitHub issue AFTER workflow is on the default branch. The bot never rewrites live policy. Source review requires current official text, effective date, product, locale and evidence.
+- **Executable owned lab:** `npm test` exercises local real HTTP behavior, robots policy subset, response semantics, source/skill contracts, and previous audits. Separate `npm run lab:browsers` needs pinned Playwright and real Chromium, Firefox, WebKit via browser-specific GitHub Action. Tests prove those fixtures only, not any commercial index.
+- **Go/no-go:** See [Section 1 Acceptance](docs/SECTION1_ACCEPTANCE.md). No fake full-completion claim for external provider dashboards we do not have.
+
+### Per-action current-document enforcement (v2.3.1)
+`scripts/require-action-time-sources.mjs` checks claim IDs and dated task-time first-party excerpts before consequential robots, AI, indexing, publisher or privacy operations. `npm test` includes negative tests for stale snippets, unavailable Applebot, future Bing training/grounding and URL mismatch. Example: `node scripts/require-action-time-sources.mjs --file private/source-evidence.json --claim-id G-AI-NOLLM`. This validator enforces evidence **shape and timeliness**, not semantic truth or live search results. An agent must still open current original vendor docs and verify the meaning.

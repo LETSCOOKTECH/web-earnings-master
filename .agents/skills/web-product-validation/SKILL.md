@@ -20,3 +20,10 @@ description: "Validate real tool output correctness, browsers/devices, mobile ed
 
 ## Outputs
 `templates/test-matrix.csv`, `templates/release-evidence.md`, `scripts/audit-static-site.mjs`, real artifact hashes/results and fail/repair tickets.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Real output, compatibility and resilience testing. **Routing:** web-launch-review controls final production release.
+**Official source entry points requiring action-time reopening:** https://playwright.dev/docs/browsers;https://developer.mozilla.org/en-US/docs/Web/Performance. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Real cross-engine browser E2E and file verification, mobile RAM where available, artifact hashes.
+**Critical FAIL / UNKNOWN:** Desktop WebKit headless is not proof of iPhone/mobile Safari or native Android.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

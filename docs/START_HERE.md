@@ -2,6 +2,8 @@
 
 This is the orchestration playbook. Skills are modular; execute the next highest-risk gate first and revisit earlier steps when evidence changes.
 
+**Foundation prerequisite:** For underlying mechanics of browser/HTTP/DNS/TLS, ranking systems, multi-engine AI retrieval, crawler verification, GEO/AEO/SEO and mobile ASO, open [docs/foundations/README.md](foundations/README.md) and the specific dedicated skill. Before implementing fresh behavior inspect official documentation and record checked-at. The new foundation research is not a substitute for owned-site Search Console data or real index/citation outcomes.
+
 **0. Specify the business:** audience/geos, exact user job, alternatives, consent regions, monetization priority, domain and cost envelope. Record baseline in `templates/site-brief.yaml`.
 
 **1. Verify sources:** read official policies and changelogs at execution time, and create/update `templates/claim-ledger.csv`. If external access fails, label unverified and do not assert compliance. See `web-research-freshness`.
@@ -27,3 +29,10 @@ This is the orchestration playbook. Skills are modular; execute the next highest
 **11. Monthly portfolio review:** calculate gross margin and net operating costs per site, remove unproductive work, review policy deltas, update benchmarks, and expand only where actual usage or demand shows a need. No fixed number of sites or URLs.
 
 **Hard stop**: if a provider changes policy, privacy is unresolved, a tool can silently corrupt data, or an ad creates deceptive UX, remediate before growth experiments.
+
+## Deep search and browser research shortcut
+See [deep foundation index](foundations/README.md). For how a browser works use chapters 11–12; for how retrieval/ranking works from first principles use chapter 13 and scripts/ir-reference-lab.mjs; for major worldwide search engines use chapter 14; for AI Search/agent grounding use chapter 15; for current 2026–27 policy updates use chapter 16; for integrated SEO/GEO/AEO runbook use chapter 17; for negative validation cases chapter 18. Run npm test and compare provider documents at the time of change. The source-watch cron is inactive until the draft PR is merged into default.
+
+
+## v2.3 prerequisites for moving from research to deployment
+Before claiming Search/revenue readiness read [Section 1 Acceptance](SECTION1_ACCEPTANCE.md), [dated source review](foundations/19-provider-source-verification.md), and [owned HTTP/browser lab](foundations/20-owned-web-lab-and-robots.md). `npm test` validates local contracts and HTTP cases; the separate browser Action validates Chromium, Firefox and WebKit with uploaded evidence when its actual run is green. Original 21 skills were individually audited and patched; active total 28. Current provider ledger: 48 dated selected claims, one Applebot source still unavailable, and 33 watched official pages/feeds. Product-specific Search Console, Bing and publisher account observations remain EXTERNAL evidence, not CI PASS.

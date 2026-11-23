@@ -20,3 +20,10 @@ description: "Earn legitimate human traffic, editorial backlinks, creator referr
 
 ## Deliverables
 `templates/distribution-plan.md` and `templates/outreach-log.csv`, a linkable verified asset, experiment hypothesis and referral funnel results. Read Google spam policies before outreach.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Earned editorial links and real human acquisition. **Routing:** web-competitor-audit identifies alternative; this earns distribution.
+**Official source entry points requiring action-time reopening:** https://developers.google.com/search/docs/essentials/spam-policies. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Original link-worthy asset, documented outreach, referrals and completed tasks.
+**Critical FAIL / UNKNOWN:** No paid link schemes or asserting rank causality from one link.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; the source watch's hash changes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

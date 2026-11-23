@@ -20,3 +20,10 @@ description: "Design appropriate privacy, cookie, file-processing and ad-consent
 
 ## Output
 `templates/privacy-data-map.csv`, `templates/consent-test-matrix.md`, a site-specific privacy-policy requirements doc and open legal questions. This skill is not legal advice; don't declare compliance without jurisdiction- and deployment-specific review.
+
+## V2.3 production evidence contract (audited 2026-11-23)
+**Owner:** Jurisdiction-specific data processing, consent and privacy. **Routing:** web-security-performance implements enforcement; this owns obligations.
+**Official source entry points requiring action-time reopening:** https://commission.europa.eu/law/law-topic/data-protection_en;https://support.google.com/adsense/answer/13554116. A saved link is not confirmation of the current provider rule.
+**Evidence needed:** Real data map, legal review, accept/reject/revoke and no-consent request tests.
+**Critical FAIL / UNKNOWN:** Cannot self-certify legality or claim local-only without testing third-party scripts.
+**Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.

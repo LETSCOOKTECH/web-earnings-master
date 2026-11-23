@@ -2,6 +2,19 @@
 
 **Purpose:** Help LetsCookTech build and operate legitimate, high-value, monetizable websites across the portfolio. Treat this as a flexible operating guide, not a rigid prompt that overrides evidence, legal policy or the current user request.
 
+## Current technical research routes (v2.2)
+Use docs/foundations/README.md to select one or two modules; do not inject the entire field manual for minor tasks.
+- Chromium/Gecko/WebKit process, renderer, JS, caches, storage, permissions: chapter 11 + web-browser-runtime.
+- DNS/HTTP/TLS/QUIC/CDN correctness and failures: chapter 12 + web-browser-runtime/web-domain-operations.
+- Generic inverted index, BM25, PageRank, semantic/hybrid search, evaluation: chapter 13 + web-search-internals. TOY implementations are not Google's or Bing's algorithm.
+- Actual provider atlas incl Google, Bing, Brave, DuckDuckGo, Kagi, Mojeek, Yandex, Baidu, Naver, Seznam: chapter 14.
+- Generative search RAG, grounding, retrieval, citations and browser agents: chapter 15 + web-ai-retrieval-lab.
+- 2026-2027 change/effective-date ledger: chapter 16; in particular Microsoft future grounding controls and Google Preferred Sources.
+- Complete technical SEO/AEO/GEO/vertical/product outcomes: chapter 17 + web-search-visibility-systems.
+- Negative tests and evidence gates: chapter 18.
+
+**Latest-source mandate:** For every material claim, consult the pinned official watch targets sources/foundation_refresh_targets.json and live first-party body. Run node scripts/watch-official-updates.mjs offline to validate, or --live to produce reachability/hash review queue. New .github/workflows/foundation-source-watch.yml polls selected provider URLs DAILY only after it is merged to default branch; it does not reinterpret provider rules or automatically edit policy. When reports indicate change, REVIEW source and update ledger/evals with actual scope. When a provider page is blocked/429, report UNKNOWN, not fabricated confirmation. The draft PR's schedule is not active.
+
 ## Before changing anything
 1. Identify the job: market research, existing-site audit, feature build, optimization, publisher application, or analytics diagnosis.
 2. Read the directly relevant skill(s) under `.agents/skills/`, followed by `docs/START_HERE.md` and the minimum necessary reference files. Do not inject all skills simultaneously.
@@ -18,6 +31,18 @@
 - Keep search-crawler policy distinct from model-training permission. Do not allow unverified bot user agents through the WAF.
 - Publisher policies, local law and consent requirements outrank monetization experiments. Ads may not interfere with the primary tool workflow.
 
+## Foundation skills (deep mechanisms, invoke only when needed)
+For baseline mechanisms and controlled reverse engineering, consult docs/foundations/README.md and:
+- Browser networking, HTTP/TLS, JS rendering, caches and workers -> web-browser-runtime.
+- Domains, TLD rules, DNS, registrar rights and migrations -> web-domain-operations.
+- Crawl scheduling/index selection/search retrieval/ranking/vertical SERP questions -> web-search-internals.
+- robots.txt, crawler identities, IP verification, WAF, training vs search access -> web-crawler-governance.
+- Google AI Mode/Gemini, ChatGPT, Claude, Perplexity, Copilot and browser-agent retrieval/citation experiments -> web-ai-retrieval-lab.
+- Cross-channel SEO/AEO/GEO strategy -> web-search-visibility-systems and then focused existing skills.
+- Google Play/Apple App Store ranking/listing research -> web-app-store-discovery ONLY for actual app distribution.
+
+**Foundation source gate:** Open actual latest first-party source body before policy/ranking decisions, check docs/foundations/09-source-refresh.md, and classify observed vs hypothetical mechanisms. sources/foundation_sources.json is a dated link/access registry, not perpetual policy verification. Never invent any hidden scoring model, source-provider partner, bot token, or universally effective strategy. Always report observed source URL, inspection date and what the evidence does not establish. Local HTTP link checks cannot validate legal, ranking or publisher rules.
+
 ## Skill router
 - Fresh policy or missing fact → `web-research-freshness`.
 - Which niche and why → `web-niche-validation`, `web-keyword-intent`, `web-competitor-audit`.
@@ -33,3 +58,11 @@
 
 ## Standard evidence artifact
 For decisions use `templates/claim-ledger.csv`, `templates/niche-decision.md`, `templates/keyword-research.csv`, `templates/release-evidence.md`, and an evidence manifest. Every report contains: **question → sources and date → observations → inference/uncertainty → action → verification → rollback**. No unverified DONE/READY/PASSED claim.
+
+
+## Mandatory v2.3 evidence and runtime test gate
+**Before ALL consequential browser, SEO, search crawler, AI retrieval, source-policy, AdSense, security or launch decisions:** Read [verified first-party claim ledger](sources/verified_claims.json), [33 watched official sources](sources/foundation_refresh_targets.json), [source-verification contract](docs/foundations/19-provider-source-verification.md) and affected original skill's V2.3 production evidence contract; **open current primary source in this work session**. A link hash, static registry or previous session does not verify a current rule. Check exact scope, effective date, rollout, conflict and account. Treat closed proprietary ranking internals as UNKNOWN. For change detection, use GitHub Actions official-source watch; scheduled checks create human-review issues, NEVER auto-edit policy files. Scheduled workflow only runs after merge to default branch.
+**Run actual independent tests:** `npm test` including owned HTTP/robots fixtures and claim/21-skill audit; browser CI with pinned Playwright Chromium+Firefox+WebKit; real site and provider accounts separately. CI success only certifies its specific tests, not Search indexing, ranking, citations or publisher approval. Do not merge while failures remain. See docs/foundations/20-owned-web-lab-and-robots.md and docs/SECTION1_ACCEPTANCE.md.
+
+## Mandatory task-time source freshness gate (v2.3.1)
+For ANY consequential change to robots, crawling, AI data-use/grounding, publisher ads, privacy or Google/Bing eligibility, the responsible Codex agent MUST open the exact current official original body and produce a dated `records` artifact using `templates/action-time-source-evidence.example.json` as a shape only. Validate with `node scripts/require-action-time-sources.mjs --file <task-evidence.json> --claim-id <ID>` (repeat --claim-id for every material decision claim). Default max age: 24 hours. Every record must have original source, UTC check time, original passage (<=25 words), applicable surface, effectivity class and test/account evidence. Snippets, unknown Applebot body, stale files and announced-future Bing rules asserted as already active FAIL. The machine gate validates structure/recency and cannot prove a claim is semantically correct; actual source reading, external evidence, conflict resolution and approval remain mandatory. Never use the example JSON as live evidence.

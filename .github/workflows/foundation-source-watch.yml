@@ -1,0 +1,115 @@
+name: Official source freshness signals
+on:
+  schedule:
+    # Only runs automatically from default branch AFTER reviewed merge.
+    - cron: '17 4 * * *'
+  push:
+    branches:
+      - 'research/search-web-foundations-2026-11-23'
+    paths:
+      - 'scripts/watch-official-updates.mjs'
+      - 'sources/foundation_refresh_targets.json'
+      - '.github/workflows/foundation-source-watch.yml'
+  pull_request:
+    paths:
+      - 'scripts/watch-official-updates.mjs'
+      - 'sources/foundation_refresh_targets.json'
+      - '.github/workflows/foundation-source-watch.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate pinned official-source watchlist offline
+        run: node scripts/watch-official-updates.mjs
+      - name: Restore previous official source fingerprints
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/official-source-state.json
+          key: foundation-sources-${{ github.run_id }}
+          restore-keys: |
+            foundation-sources-
+      - name: Fetch current source body and detect changed fingerprints
+        id: fetch
+        continue-on-error: true
+        run: |
+          if [[ "${{ github.event_name }}" == "schedule" || "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            node scripts/watch-official-updates.mjs --live --state .cache/official-source-state.json --out foundation-watch.json --markdown foundation-watch.md
+          else
+            node scripts/watch-official-updates.mjs --live --limit 8 --state .cache/official-source-state.json --out foundation-watch.json --markdown foundation-watch.md
+          fi
+      - name: Save latest successful fingerprints when possible
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/official-source-state.json
+          key: foundation-sources-${{ github.run_id }}
+      - name: Upload dated official-source report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-source-watch-${{ github.run_id }}
+          path: |
+            foundation-watch.json
+            foundation-watch.md
+          if-no-files-found: warn
+      - name: Write evidence and uncertainty to the Actions summary
+        if: always()
+        run: |
+          if test -f foundation-watch.md; then cat foundation-watch.md >> "$GITHUB_STEP_SUMMARY"; fi
+          echo 'A source hash only triggers reviewer action; NO provider policy is automatically updated.' >> "$GITHUB_STEP_SUMMARY"
+          echo '404/429/timeouts mean UNKNOWN, not a vendor policy reversal.' >> "$GITHUB_STEP_SUMMARY"
+  notify:
+    # Only scheduled default-branch runs can file a GitHub issue; PR/push cannot.
+    if: github.event_name == 'schedule'
+    needs: watch
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    timeout-minutes: 5
+    steps:
+      - name: Retrieve watch report from previous job
+        uses: actions/download-artifact@v4
+        with:
+          name: official-source-watch-${{ github.run_id }}
+      - name: Create or update one durable manual review queue issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          if ! test -f foundation-watch.json; then
+            echo 'No watch artifact; do not claim source verified.'
+            exit 0
+          fi
+          count=$(jq '[.results[] | select(.state=="CHANGED_REVIEW_REQUIRED")] | length' foundation-watch.json)
+          if [[ "$count" == "0" ]]; then
+            echo 'No confirmed fingerprint changes; HTTP errors still need operator review in artifact.'
+            exit 0
+          fi
+          title="Official documentation changes — semantic review required"
+          {
+            echo "Detected ${count} changed source fingerprints in a read-only scheduled scan."
+            echo ""
+            echo "These are NOT validated policy changes. An authorized reviewer/agent must open the exact current official source, compare dated guidance, identify effective/rollout dates and affected skill, add regression test and submit a separate reviewed PR. Never auto-deploy robots, AI training/grounding, ads or legal changes."
+            echo ""
+            jq -r '.results[] | select(.state=="CHANGED_REVIEW_REQUIRED") | "- **"+.id+"**: "+.url' foundation-watch.json
+            echo ""
+            echo "Evidence workflow: https://github.com/${GH_REPO}/actions/runs/${GITHUB_RUN_ID}"
+          } > source-change-issue-body.md
+          num=$(gh issue list --state open --limit 100 --json number,title --jq ".[] | select(.title == \"$title\") | .number" | head -1)
+          if [[ -n "$num" ]]; then
+            gh issue comment "$num" --body-file source-change-issue-body.md
+            echo "Updated issue #$num"
+          else
+            gh issue create --title "$title" --body-file source-change-issue-body.md
+            echo 'Created official-source review issue.'
+          fi
