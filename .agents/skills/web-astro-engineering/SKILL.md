@@ -28,3 +28,9 @@ description: "Implement production-oriented Astro websites with search-readable 
 **Evidence needed:** Built HTML metadata and no-JS meaningful purpose; E2E actual tool and honest 404.
 **Critical FAIL / UNKNOWN:** No automatic search rank boost from choosing Astro.
 **Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; the source watch's hash changes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
+
+## Workload-first architecture handoff (V5)
+Astro is a rendering/build option, not the default answer to every cost or performance decision. On new tool requests route first to `web-workload-architecture-router` for actual task execution choice, `web-browser-compute` for local code paths, `web-hosting-vendor-evaluation` for lawful commercial hosting and `web-unit-economics-finops` for dollars/job. Demand browser/codec correctness, small JS payload, shared CDN cache, real fallback and avoid claiming Astro guarantees 1M-user capacity. `docs/architecture/01-workload-placement-decision.md`.
+
+## V6 production and research handoff (2026-11-23)
+Astro is a frontend option not a direct Google ranking guarantee; use web-fullstack-production-executor and web-frontend-experience-engineering for real tool outcome and initial accessible HTML. web-backend-api-engineering owns state and API where truly necessary. docs/v6/02-fullstack-production-blueprint.md.

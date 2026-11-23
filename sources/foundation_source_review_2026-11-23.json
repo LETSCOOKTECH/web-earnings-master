@@ -1,9 +1,9 @@
 {
-  "version": "2026-11-23.v3.1",
+  "version": "2026-11-23.v6",
   "meaning": "Dated source-body access audit; does not certify every policy sentence or auto-update instructions",
-  "targets_reviewed_for_access": 33,
-  "accessed_count": 33,
-  "unverified_count": 0,
+  "targets_reviewed_for_access": 106,
+  "accessed_count": 56,
+  "unverified_count": 50,
   "targets": [
     {
       "id": "google-search-updates",
@@ -334,6 +334,710 @@
       "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
       "change_control": "Task-time re-open required",
       "risk": "No verified site data; no metric meaning inferred"
+    },
+    {
+      "id": "google-sc-generative-ai-control",
+      "url": "https://support.google.com/webmasters/answer/16908024",
+      "reviewed_on": "2026-11-23",
+      "body_access": "HTTP_429_INDEXED_CURRENT_TEXT_ONLY",
+      "scope": "Official documentation body state recorded; only specifically scoped assertions in the claim audit have supporting evidence. Not full provider semantic certification.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open + account/rollout verification required",
+      "risk": "Official Help current indexed text says global rollout Aug 31 but direct current body 429; verify owner dashboard and dated official update"
+    },
+    {
+      "id": "google-generative-ai-control-announcement",
+      "url": "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "CACHED_OFFICIAL_BODY_OLDER_THAN_CURRENT_INDEXED_UPDATE",
+      "scope": "Official documentation body state recorded; only specifically scoped assertions in the claim audit have supporting evidence. Not full provider semantic certification.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open + account/rollout verification required",
+      "risk": "Archived/cached direct page lacked Aug31 update; current official indexed announcement reports global Aug31; retry original and compare"
+    },
+    {
+      "id": "chrome-agentic-browsing-score",
+      "url": "https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Target official body opened; only selected claims from the provider page were semantically checked. No complete product or Google Search ranking certification.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open + account/rollout verification required",
+      "risk": "EXPERIMENTAL Chrome 150+ Agentic Browsing Lighthouse diagnostic; never claim Google Search rank factor"
+    },
+    {
+      "id": "aeo-featured-snippets",
+      "url": "https://developers.google.com/search/docs/appearance/featured-snippets",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "Google selection, not an optimized markup instruction"
+    },
+    {
+      "id": "aeo-snippet-controls",
+      "url": "https://developers.google.com/search/docs/appearance/snippet",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "nosnippet/max-snippet can affect eligibility"
+    },
+    {
+      "id": "google-genai-performance-report",
+      "url": "https://support.google.com/webmasters/answer/16984139",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "worldwide Aug 31 reporting, actual site account not verified"
+    },
+    {
+      "id": "bing-ai-citation-share",
+      "url": "https://blogs.bing.com/search/2026/6/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "Citation Share definitions need property/account validation"
+    },
+    {
+      "id": "bing-ai-topics-beta",
+      "url": "https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "BETA not universal"
+    },
+    {
+      "id": "google-play-ranking",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9958766",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "Play discovery weights not public"
+    },
+    {
+      "id": "google-play-listing-metadata",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9859152",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "30/80/4000 field bounds and policy"
+    },
+    {
+      "id": "google-play-custom-listings",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9867158",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "Keyword targeting eligibility/account scope"
+    },
+    {
+      "id": "google-play-reporting",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9859173",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "July 2026 metric denominator change"
+    },
+    {
+      "id": "google-play-listing-experiments",
+      "url": "https://support.google.com/googleplay/android-developer/answer/12053285",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "Store listing A/B not ranking proof"
+    },
+    {
+      "id": "google-play-vitals-2027",
+      "url": "https://developer.android.com/google/play/vitals",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "future Feb 2027 thresholds are not current enforcement"
+    },
+    {
+      "id": "apple-search-discovery",
+      "url": "https://developer.apple.com/app-store/discoverability/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from official original document were inspected; not exhaustive provider policy or account proof.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "Apple title keyword category plus behavior, undisclosed weights"
+    },
+    {
+      "id": "apple-product-page-metadata",
+      "url": "https://developer.apple.com/app-store/product-page/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from official original document were inspected; not exhaustive provider policy or account proof.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "promotional text does not contribute search ranking"
+    },
+    {
+      "id": "apple-app-store-keyword-bytes",
+      "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from official original document were inspected; not exhaustive provider policy or account proof.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "technical keywords field 100 bytes"
+    },
+    {
+      "id": "apple-searchable-custom-pages",
+      "url": "https://developer.apple.com/help/app-store-connect/create-custom-product-pages/configure-multiple-product-page-versions",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from official original document were inspected; not exhaustive provider policy or account proof.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "up to 70, assigned keyword search visibility"
+    },
+    {
+      "id": "apple-app-store-acquisition",
+      "url": "https://developer.apple.com/help/app-store-connect-analytics/acquisition/acquisition",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "user conversion and source definitions"
+    },
+    {
+      "id": "apple-product-page-optimization",
+      "url": "https://developer.apple.com/help/app-store-connect/create-product-page-optimization-tests/overview-of-product-page-optimization/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "PPO test supports 3 treatments"
+    },
+    {
+      "id": "architecture-workers-pricing",
+      "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Worker paid base/CPU/request meters"
+    },
+    {
+      "id": "architecture-workers-limits",
+      "url": "https://developers.cloudflare.com/workers/platform/limits/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "128MB memory per isolate, CPU and body limits"
+    },
+    {
+      "id": "architecture-pages-limits",
+      "url": "https://developers.cloudflare.com/pages/platform/limits/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "20K files free and 25MiB per asset"
+    },
+    {
+      "id": "architecture-r2-pricing",
+      "url": "https://developers.cloudflare.com/r2/pricing/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Standard GB-month, Class A/B operation and direct egress meters"
+    },
+    {
+      "id": "architecture-r2-direct-upload",
+      "url": "https://developers.cloudflare.com/r2/objects/upload-objects/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Direct object upload with presigned grant"
+    },
+    {
+      "id": "architecture-r2-presigned",
+      "url": "https://developers.cloudflare.com/r2/api/s3/presigned-urls/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed official/provider excerpt was inspected, original body was not fully semantically verified in this turn.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Sign operation/key/expiry for direct upload"
+    },
+    {
+      "id": "architecture-queues-pricing",
+      "url": "https://developers.cloudflare.com/queues/platform/pricing/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Message 64KB operations and retry billing"
+    },
+    {
+      "id": "architecture-queues-limits",
+      "url": "https://developers.cloudflare.com/queues/platform/limits/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed official/provider excerpt was inspected, original body was not fully semantically verified in this turn.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Queue capacity and message constraints"
+    },
+    {
+      "id": "architecture-d1-pricing",
+      "url": "https://developers.cloudflare.com/d1/platform/pricing/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "D1 rows/storage billing"
+    },
+    {
+      "id": "architecture-browser-upscaler-case",
+      "url": "https://web.dev/case-studies/ai-video-upscaler-case-study",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "250K MAU client-side video case, owner claim"
+    },
+    {
+      "id": "architecture-browser-wasm-perf",
+      "url": "https://web.dev/articles/webassembly-performance-patterns-for-web-apps",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed official/provider excerpt was inspected, original body was not fully semantically verified in this turn.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Native/WASM and Web Worker code tradeoffs"
+    },
+    {
+      "id": "architecture-opfs",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Origin-private storage and worker access"
+    },
+    {
+      "id": "architecture-browser-quotas",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Storage quota and eviction rules"
+    },
+    {
+      "id": "architecture-owasp-api4",
+      "url": "https://api-security.owasp.org/editions/2023/en/0xa4-unrestricted-resource-consumption/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed official/provider excerpt was inspected, original body was not fully semantically verified in this turn.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Unrestricted cloud resource costs attack"
+    },
+    {
+      "id": "architecture-aws-lambda-price",
+      "url": "https://aws.amazon.com/lambda/pricing/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body were verified; this is not full policy or cost confirmation for an account.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "Request/GB-seconds serverless model, separate from Workers"
+    },
+    {
+      "id": "architecture-core-web-vitals",
+      "url": "https://developers.google.com/search/docs/appearance/core-web-vitals",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed official/provider excerpt was inspected, original body was not fully semantically verified in this turn.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time first-party original, effective date and account quote recheck required",
+      "risk": "CWV measured field/core criteria"
+    },
+    {
+      "id": "vendor-vercel-hobby",
+      "url": "https://vercel.com/docs/plans/hobby",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party excerpt seen; full current original body NOT verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "Hobby noncommercial terms"
+    },
+    {
+      "id": "vendor-vercel-pricing",
+      "url": "https://vercel.com/pricing",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party excerpt seen; full current original body NOT verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "Pro and tier pricing"
+    },
+    {
+      "id": "vendor-github-pages-commercial",
+      "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body verified for this date, not contractual account eligibility.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "GitHub Pages online business/SaaS restriction"
+    },
+    {
+      "id": "vendor-supabase-pricing",
+      "url": "https://supabase.com/pricing",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body verified for this date, not contractual account eligibility.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "MAU-dependent Auth, storage, egress, compute plans"
+    },
+    {
+      "id": "vendor-supabase-free-pause",
+      "url": "https://supabase.com/kb/faqs/platform/free-postgres-for-side-projects",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party excerpt seen; full current original body NOT verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "Supabase free project pausing"
+    },
+    {
+      "id": "vendor-hetzner-pricing-change",
+      "url": "https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body verified for this date, not contractual account eligibility.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "June 2026 price change and regional/vat"
+    },
+    {
+      "id": "vendor-render-pricing",
+      "url": "https://render.com/pricing",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body verified for this date, not contractual account eligibility.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "Managed compute plan cost"
+    },
+    {
+      "id": "vendor-backblaze-storage",
+      "url": "https://www.backblaze.com/cloud-storage/pricing",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from provider original body verified for this date, not contractual account eligibility.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "B2 storage price and 3x stored free egress"
+    },
+    {
+      "id": "vendor-bunny-cdn",
+      "url": "https://bunny.net/pricing",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party excerpt seen; full current original body NOT verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "Regional CDN unit charge"
+    },
+    {
+      "id": "vendor-cloudfront-pricing",
+      "url": "https://aws.amazon.com/cloudfront/pricing/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party excerpt seen; full current original body NOT verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "CloudFront flat rate and other CDN prices"
+    },
+    {
+      "id": "vendor-vercel-flat-cdn",
+      "url": "https://vercel.com/changelog/flat-rate-cdn-is-now-ga-for-pro-teams",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party excerpt seen; full current original body NOT verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
+      "risk": "New September 2026 flat-rate CDN scope"
+    },
+    {
+      "id": "v6-publisher-2",
+      "url": "https://support.google.com/adsense/answer/12176698",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-3",
+      "url": "https://support.google.com/adsense/answer/7299563",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-4",
+      "url": "https://support.google.com/publisherpolicies/answer/11112688",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-5",
+      "url": "https://support.google.com/adsense/answer/48182",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-6",
+      "url": "https://support.google.com/adsense/answer/1346295",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-7",
+      "url": "https://support.google.com/adsense/answer/16737",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-8",
+      "url": "https://support.google.com/adsense/answer/13554116",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-9",
+      "url": "https://support.google.com/adsense/answer/12171612",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-10",
+      "url": "https://help.raptive.com/hc/en-us/articles/360032840891-Who-is-eligible-for-Raptive",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from directly opened official source body reviewed; not a complete current policy or account/ranking certification.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-11",
+      "url": "https://www.mediavine.com/application-requirements/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-12",
+      "url": "https://help.mediavine.com/why-mediavine-requires-exclusivity",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from directly opened official source body reviewed; not a complete current policy or account/ranking certification.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-13",
+      "url": "https://www.journeymv.com/getting-started-with-journey-by-mediavine/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-14",
+      "url": "https://docs.ezoic.com/docs/ezoicads/getting-started/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-15",
+      "url": "https://www.media.net/legal/inventorypolicies/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-16",
+      "url": "https://freestar.com/publisher-quality-requirements/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-17",
+      "url": "https://help.monetag.com/en/articles/6726292-website-content-main-rules-for-publishers",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-18",
+      "url": "https://adsterra.com/blog/set-up-publishers-dashboard/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-19",
+      "url": "https://snigel.com/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-20",
+      "url": "https://setupad.com/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-21",
+      "url": "https://developers.google.com/publisher-tag/guides/get-started",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-adtech-22",
+      "url": "https://iabtechlab.com/ads-txt/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-security-23",
+      "url": "https://asvs.owasp.org/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-security-24",
+      "url": "https://top10.owasp.org/2025/0x00_2025-Introduction/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-security-25",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-accessibility-26",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-search-27",
+      "url": "https://www.indexnow.org/documentation",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
     }
   ]
 }

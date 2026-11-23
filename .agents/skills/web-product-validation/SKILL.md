@@ -27,3 +27,9 @@ description: "Validate real tool output correctness, browsers/devices, mobile ed
 **Evidence needed:** Real cross-engine browser E2E and file verification, mobile RAM where available, artifact hashes.
 **Critical FAIL / UNKNOWN:** Desktop WebKit headless is not proof of iPhone/mobile Safari or native Android.
 **Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
+
+## Million-user quality is independent from a unit-test PASS (V5)
+For each tool run actual input/output oracle, corrupted/oversized/batch and low-RAM mobile tests, output reopening, optional cloud consent, no-hidden-upload network trace, cancellations, privacy retention, p95 and queue consistency. `web-browser-compute` owns browser implementation; `web-scale-reliability` owns traffic and failure load; `web-unit-economics-finops` checks costs. A theoretical MAU model or Playwright desktop WebKit fixture DOES NOT verify 1M real humans or actual iPhone Safari. `docs/architecture/04-scale-and-product-quality.md`.
+
+## V6 production and research handoff (2026-11-23)
+Before declaring 'full tool' or page ready, use actual output oracle, malformed samples, target phone/browser, privacy network trace, download reopening and server fallback. Forward checked value evidence to web-publisher-policy-eligibility; no UI screenshots as substitution.

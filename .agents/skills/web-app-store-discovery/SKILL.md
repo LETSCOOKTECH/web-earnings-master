@@ -23,3 +23,9 @@ description: "Research Google Play and Apple App Store search, listing metadata,
 
 ## Deep operations extension (v2.2)
 Chapter 14 distinguishes web, local, media, partner and app-store indexes; chapter 17 describes cross-channel distribution constraints. If no actual published store app, mark Play/App Store ASO out of scope. For a real app, separate search impression, listing view, organic install, first-value completion, retention and monetization. Reopen current platform listing/store policy, experiment assets and actual country/device market; no invented store weight, download number or fake review manipulation.
+
+## 2026-11-23 ASO platform routing upgrade
+For **Google Play**, invoke `web-aso-google-play` after confirming there is an Android app and package. Its current metadata bounds, keyword-targeted custom store listings, quality/vitals and July 2026 metric-break are platform-specific.
+For **Apple App Store**, invoke `web-aso-apple-app-store` after confirming an Apple app record. Apple's technical keyword field is 100 UTF-8 **bytes**, and approved keyword-searchable custom product pages and creative PPO tests differ from Play.
+For mixed-platform requests, run both separately and reconcile distinct search ranking factors, source metrics and policies. This router does not invent indexed apps, installs, rankings, store account observations or a one-size-fits-all keyword score.
+Sources and detailed protocols: `docs/discovery/03-google-play-aso.md` and `docs/discovery/04-apple-app-store-aso.md`.

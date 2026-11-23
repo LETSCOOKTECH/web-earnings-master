@@ -1,0 +1,64 @@
+{
+  "workload_id": "ILLUSTRATIVE-1M-MAU-STATIC-AD-TOOLS",
+  "business_model": "commercial_ad_supported",
+  "required_capabilities": [
+    "static_delivery",
+    "commercial_use"
+  ],
+  "candidates": [
+    {
+      "provider": "Vercel",
+      "plan": "Hobby",
+      "commercial_use": "prohibited",
+      "official_pricing_source": "https://vercel.com/pricing",
+      "commercial_terms_source": "https://vercel.com/docs/plans/hobby",
+      "checked_on": "2026-11-23",
+      "supports": [
+        "static_delivery"
+      ],
+      "monthly_fixed_usd": 0,
+      "modeled_variable_usd": 0,
+      "unpriced_cost_categories": [],
+      "real_capacity_load_tested": false
+    },
+    {
+      "provider": "Cloudflare",
+      "plan": "Workers Paid with static assets",
+      "commercial_use": "unknown",
+      "official_pricing_source": "https://developers.cloudflare.com/workers/platform/pricing/",
+      "commercial_terms_source": "https://www.cloudflare.com/terms/",
+      "checked_on": "2026-11-23",
+      "supports": [
+        "static_delivery",
+        "commercial_use"
+      ],
+      "monthly_fixed_usd": 5,
+      "modeled_variable_usd": 0,
+      "unpriced_cost_categories": [
+        "domain",
+        "support",
+        "third-party analytics"
+      ],
+      "real_capacity_load_tested": false
+    },
+    {
+      "provider": "Vercel",
+      "plan": "Pro",
+      "commercial_use": "allowed",
+      "official_pricing_source": "https://vercel.com/pricing",
+      "commercial_terms_source": "https://vercel.com/legal/terms",
+      "checked_on": "2026-11-23",
+      "supports": [
+        "static_delivery",
+        "commercial_use"
+      ],
+      "monthly_fixed_usd": 20,
+      "modeled_variable_usd": 10,
+      "unpriced_cost_categories": [
+        "support",
+        "third-party APIs"
+      ],
+      "real_capacity_load_tested": false
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "target_hosts": [
+    "example.org",
+    "www.example.org"
+  ],
+  "panel_description": "Small manually observed panel; fabricated illustrative fixture, not live search engine results.",
+  "observations": [
+    {
+      "provider": "ChatGPT",
+      "surface": "ChatGPT Search",
+      "prompt_id": "privacy-001",
+      "sample_id": "r1",
+      "checked_at": "2026-11-23T12:00:00Z",
+      "locale": "en-US",
+      "visible_citations": [
+        "https://example.org/research/benchmark"
+      ],
+      "retrieved_background": [],
+      "brand_mentioned": true
+    },
+    {
+      "provider": "ChatGPT",
+      "surface": "ChatGPT Search",
+      "prompt_id": "privacy-002",
+      "sample_id": "r1",
+      "checked_at": "2026-11-23T12:02:00Z",
+      "locale": "en-US",
+      "visible_citations": [
+        "https://competitor.example/page"
+      ],
+      "retrieved_background": [
+        "https://example.org/research/benchmark"
+      ],
+      "brand_mentioned": false
+    },
+    {
+      "provider": "Perplexity",
+      "surface": "Perplexity Answer",
+      "prompt_id": "privacy-001",
+      "sample_id": "r1",
+      "checked_at": "2026-11-23T12:04:00Z",
+      "locale": "en-US",
+      "visible_citations": [],
+      "retrieved_background": [],
+      "brand_mentioned": true
+    }
+  ]
+}

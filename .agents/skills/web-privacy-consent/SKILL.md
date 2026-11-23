@@ -27,3 +27,6 @@ description: "Design appropriate privacy, cookie, file-processing and ad-consent
 **Evidence needed:** Real data map, legal review, accept/reject/revoke and no-consent request tests.
 **Critical FAIL / UNKNOWN:** Cannot self-certify legality or claim local-only without testing third-party scripts.
 **Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
+
+## V6 production and research handoff (2026-11-23)
+Region-specific CMP/provider policy and private user files must be validated, including third-party analytics/ad scripts. web-publisher-policy-eligibility owns ads consent, web-security-assurance-asvs audits data flow. Uploaded report's legal deadlines require independent official verification.

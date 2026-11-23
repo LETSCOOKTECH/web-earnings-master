@@ -1,0 +1,382 @@
+{
+  "schema": "sense-production-skill-gates-v7",
+  "edition": "2026-11-23",
+  "expectSkills": 46,
+  "scope": "instruction contracts only; external property validation is separate",
+  "statuses": [
+    "PENDING",
+    "PASS_LOCAL",
+    "PASS_LIVE",
+    "BLOCKED"
+  ],
+  "skills": [
+    {
+      "id": "web-accessibility-agent-ux",
+      "category": "UX",
+      "deliverable": "Keyboard screen reader and agent-flow evidence",
+      "localGate": "Run accessible form, keyboard, error and reduced-motion fixtures",
+      "externalGate": "Test real users assistive technology mobile and agent task",
+      "blocker": "Primary action unusable or unlabeled"
+    },
+    {
+      "id": "web-ad-experience",
+      "category": "Monetization",
+      "deliverable": "Ad placement map and accidental-click risk record",
+      "localGate": "Check misleading controls CLS ad separation and no ad-only pages",
+      "externalGate": "Review actual ad render and human interactions",
+      "blocker": "Ad can be mistaken for download or primary action"
+    },
+    {
+      "id": "web-adsense-readiness",
+      "category": "Monetization",
+      "deliverable": "Page and site policy readiness with account state",
+      "localGate": "Audit ad placement content restrictions ownership and ads.txt",
+      "externalGate": "Verify real Google publisher site/account state",
+      "blocker": "Unapproved site claimed Ready or invalid traffic"
+    },
+    {
+      "id": "web-aeo-answer-optimization",
+      "category": "Discovery",
+      "deliverable": "Answerable page brief and source-grounded examples",
+      "localGate": "Validate actual answers and snippet eligibility",
+      "externalGate": "Observe actual SERP answer placements by query and locale",
+      "blocker": "Unverifiable answers or fake special-schema claims"
+    },
+    {
+      "id": "web-ai-discovery",
+      "category": "Discovery",
+      "deliverable": "Provider crawler and citation eligibility matrix",
+      "localGate": "Test search bot purpose robots and raw HTML fixture",
+      "externalGate": "Verify actual crawler identities and provider citations",
+      "blocker": "Training crawler confused with search or invented citations"
+    },
+    {
+      "id": "web-ai-retrieval-lab",
+      "category": "Discovery",
+      "deliverable": "Registered prompt evaluation and citation truth set",
+      "localGate": "Run citation URL normalization and sampling fixtures",
+      "externalGate": "Sample provider outputs with timestamp version and prompt",
+      "blocker": "Single prompt treated as universal ranking proof"
+    },
+    {
+      "id": "web-app-store-discovery",
+      "category": "Discovery",
+      "deliverable": "Store-vs-web discovery decision ledger",
+      "localGate": "Check distribution target and listing evidence",
+      "externalGate": "Read actual store console and app result evidence",
+      "blocker": "PWA misrepresented as native approved app"
+    },
+    {
+      "id": "web-aso-apple-app-store",
+      "category": "Discovery",
+      "deliverable": "Apple listing localization and byte-length contract",
+      "localGate": "Validate name subtitle keyword UTF-8 bytes and feature claims",
+      "externalGate": "Test listing in actual App Store Connect by locale",
+      "blocker": "Fake reviews or unsupported app features"
+    },
+    {
+      "id": "web-aso-google-play",
+      "category": "Discovery",
+      "deliverable": "Google Play listing and quality contract",
+      "localGate": "Validate listing lengths image assets privacy and vitals inputs",
+      "externalGate": "Observe real Play Console conversion and vitals",
+      "blocker": "No real Android app or fabricated installs"
+    },
+    {
+      "id": "web-astro-engineering",
+      "category": "Build",
+      "deliverable": "Astro static and interactive output release evidence",
+      "localGate": "Build real HTML and test robots redirects and hydration",
+      "externalGate": "Verify deployed pages across devices browsers and CDN",
+      "blocker": "Client shell only or broken primary tool"
+    },
+    {
+      "id": "web-authority-distribution",
+      "category": "Growth",
+      "deliverable": "Earned editorial distribution and provenance report",
+      "localGate": "Test partner relevance and paid link spam exclusions",
+      "externalGate": "Verify authentic referrals links and completed tasks",
+      "blocker": "Manipulated links fabricated endorsements or click farms"
+    },
+    {
+      "id": "web-backend-api-engineering",
+      "category": "Build",
+      "deliverable": "API schema and security isolation evidence",
+      "localGate": "Test auth BOLA SSRF timeouts input bounds and idempotency",
+      "externalGate": "Test real authenticated staging and rollback",
+      "blocker": "Cross-tenant data leak or unbounded job bill"
+    },
+    {
+      "id": "web-browser-compute",
+      "category": "Build",
+      "deliverable": "Client compute safety and output accuracy report",
+      "localGate": "Run valid corrupt huge-file worker cancellation fixtures",
+      "externalGate": "Test low-memory real browsers and actual file output",
+      "blocker": "Unexpected remote upload or corrupt output"
+    },
+    {
+      "id": "web-browser-runtime",
+      "category": "Build",
+      "deliverable": "DNS HTTP rendering and failure trace",
+      "localGate": "Run owned HTTP redirects robots TLS and DOM fixtures",
+      "externalGate": "Capture real waterfall and server/CDN headers",
+      "blocker": "Network failure misreported as ranking failure"
+    },
+    {
+      "id": "web-competitor-audit",
+      "category": "Research",
+      "deliverable": "Same-input competitor benchmark evidence",
+      "localGate": "Check fixtures source dates screenshots and error taxonomy",
+      "externalGate": "Repeat rival tool tasks with genuine inputs",
+      "blocker": "Unverified weakness or modeled traffic presented as fact"
+    },
+    {
+      "id": "web-content-and-image-seo",
+      "category": "Discovery",
+      "deliverable": "Original content and media rights evidence",
+      "localGate": "Validate intent headings licensing alt and schema truth",
+      "externalGate": "Observe real Search visibility and user task usefulness",
+      "blocker": "Duplicated doorway or invented testimonials"
+    },
+    {
+      "id": "web-conversion-job-platform",
+      "category": "Build",
+      "deliverable": "Remote compute job queue and cost-control contract",
+      "localGate": "Test retries max-size auth cancellation rate and bills",
+      "externalGate": "Perform realistic load test plus vendor budget evidence",
+      "blocker": "Unbounded compute egress or private file leak"
+    },
+    {
+      "id": "web-crawler-governance",
+      "category": "Discovery",
+      "deliverable": "Provider bot access and WAF purpose matrix",
+      "localGate": "Validate RFC robots user agents headers and request parity",
+      "externalGate": "Verify authentic source IP and provider policy live",
+      "blocker": "Verified bots blocked or anonymous bots whitelisted"
+    },
+    {
+      "id": "web-domain-operations",
+      "category": "Operations",
+      "deliverable": "Registrar DNS and migration rollback contract",
+      "localGate": "Test DNS record invariants redirect mapping and expiry",
+      "externalGate": "Validate actual domain authority and HTTPS responses",
+      "blocker": "Expired control or broken canonical redirects"
+    },
+    {
+      "id": "web-experiments",
+      "category": "Growth",
+      "deliverable": "Preregistered hypothesis metric and guardrails",
+      "localGate": "Validate denominator assignment baseline and rollback",
+      "externalGate": "Measure statistically appropriate real user outcomes",
+      "blocker": "Uncontrolled confounders claimed causal"
+    },
+    {
+      "id": "web-frontend-experience-engineering",
+      "category": "Build",
+      "deliverable": "Complete primary page state and UI fidelity evidence",
+      "localGate": "Test empty loading success failure mobile and keyboard paths",
+      "externalGate": "Run real-device interaction performance and accessibility",
+      "blocker": "Broken controls on small screens"
+    },
+    {
+      "id": "web-fullstack-production-executor",
+      "category": "Build",
+      "deliverable": "End-to-end deployable user task and release evidence",
+      "localGate": "Run build E2E API security output and rollback test",
+      "externalGate": "Observe deployed task end to end and resource budgets",
+      "blocker": "Code-only solution with no useful verified output"
+    },
+    {
+      "id": "web-generative-engine-optimization",
+      "category": "Discovery",
+      "deliverable": "Per-provider AI source/citation measurement report",
+      "localGate": "Verify citations against exact claim and source URL",
+      "externalGate": "Sample real AI answers by locale and time",
+      "blocker": "Manufactured citations or unsupported ranking guarantees"
+    },
+    {
+      "id": "web-hosting-vendor-evaluation",
+      "category": "Operations",
+      "deliverable": "Provider commercial eligibility and exit plan",
+      "localGate": "Validate terms quotes limits and failure alternatives",
+      "externalGate": "Confirm current plan and actual deployment invoices",
+      "blocker": "Noncommercial tier used for business without permission"
+    },
+    {
+      "id": "web-keyword-intent",
+      "category": "Research",
+      "deliverable": "Country-language-device intent and page map",
+      "localGate": "Check source types dedupe keyword clusters and click potential",
+      "externalGate": "Compare real SERPs and first-party demand data",
+      "blocker": "Invented volume KD or duplicate intent pages"
+    },
+    {
+      "id": "web-launch-review",
+      "category": "Operations",
+      "deliverable": "Signed release go-no-go manifest",
+      "localGate": "Verify gates with hashes commands and owner blockers",
+      "externalGate": "Inspect deployed site user output and provider status",
+      "blocker": "Live outcome inferred from a passing local test"
+    },
+    {
+      "id": "web-monetization-network-operator",
+      "category": "Monetization",
+      "deliverable": "Network contract comparison and yield ledger",
+      "localGate": "Check eligibility exclusivity ad formats revenue share",
+      "externalGate": "Verify actual network response contract and paid invoices",
+      "blocker": "Incompatible exclusivity or unsafe ad inventory"
+    },
+    {
+      "id": "web-network-monetization",
+      "category": "Monetization",
+      "deliverable": "Alternative-network requirements and financial model",
+      "localGate": "Audit approval data format privacy and provider terms",
+      "externalGate": "Verify real publisher account and net ad revenue",
+      "blocker": "Estimated RPM asserted as observed revenue"
+    },
+    {
+      "id": "web-niche-validation",
+      "category": "Research",
+      "deliverable": "Demand competition advantage and unit-economics GO NO-GO",
+      "localGate": "Validate sourced market estimates task gap and downside",
+      "externalGate": "Observe actual search and user validation evidence",
+      "blocker": "Commodity clone without defensible workflow"
+    },
+    {
+      "id": "web-portfolio-growth",
+      "category": "Operations",
+      "deliverable": "Site-level net economics and stop decisions",
+      "localGate": "Validate revenue-cost denominator and accounting period",
+      "externalGate": "Reconcile provider statements bills and returning users",
+      "blocker": "Revenue estimate called realized profit"
+    },
+    {
+      "id": "web-privacy-consent",
+      "category": "Security",
+      "deliverable": "Data map consent jurisdiction and retention contract",
+      "localGate": "Test pre-consent scripts delete requests and cookies",
+      "externalGate": "Inspect real region-specific CMP and legal review",
+      "blocker": "Unconsented third-party leakage or missing rights"
+    },
+    {
+      "id": "web-product-spec",
+      "category": "Build",
+      "deliverable": "Measurable PRD and output oracle",
+      "localGate": "Check acceptance fixtures error cases and resource ceiling",
+      "externalGate": "Verify user acceptance on actual task",
+      "blocker": "Feature scope without correct output acceptance"
+    },
+    {
+      "id": "web-product-validation",
+      "category": "Build",
+      "deliverable": "Independent correctness and QA release report",
+      "localGate": "Run unit integration fuzz E2E and low-end test fixtures",
+      "externalGate": "Repeat real output and error handling on supported devices",
+      "blocker": "Silent corruption or undisclosed unsupported files"
+    },
+    {
+      "id": "web-publisher-policy-eligibility",
+      "category": "Monetization",
+      "deliverable": "Publisher content and ad eligibility evidence",
+      "localGate": "Run page-value layout disclosure and account-state gates",
+      "externalGate": "Verify current AdSense review and real page policies",
+      "blocker": "Misleading ad controls or falsely approved account"
+    },
+    {
+      "id": "web-release-observability-operator",
+      "category": "Operations",
+      "deliverable": "SLO incident and rollback playbook",
+      "localGate": "Validate alerts error budgets and rollout simulations",
+      "externalGate": "Perform staged release and incident drill",
+      "blocker": "No rollback or monitoring for critical flows"
+    },
+    {
+      "id": "web-research-freshness",
+      "category": "Research",
+      "deliverable": "Dated exact primary-source claim ledger",
+      "localGate": "Enforce original-body source date and claim scope",
+      "externalGate": "Reopen vendor policy at action time",
+      "blocker": "Stale snippet assumed current official policy"
+    },
+    {
+      "id": "web-scale-reliability",
+      "category": "Build",
+      "deliverable": "Concurrency error rate capacity and protection report",
+      "localGate": "Test queue backpressure retry overflow and cost budget",
+      "externalGate": "Load test realistic traffic peaks and recovery",
+      "blocker": "Claims 1M concurrency from theoretical free tier"
+    },
+    {
+      "id": "web-search-analytics",
+      "category": "Growth",
+      "deliverable": "SERP and funnel source-of-truth event contract",
+      "localGate": "Validate privacy-safe event schema denominators and query coverage",
+      "externalGate": "Reconcile GSC Bing server logs and actual sessions",
+      "blocker": "AI citation counted as human ad visit"
+    },
+    {
+      "id": "web-search-forensic-evidence",
+      "category": "Research",
+      "deliverable": "Court document vs leak vs official inference ledger",
+      "localGate": "Validate citation provenance and confidence classes",
+      "externalGate": "Recheck original dated court/official text",
+      "blocker": "Speculative internal weights sold as facts"
+    },
+    {
+      "id": "web-search-internals",
+      "category": "Research",
+      "deliverable": "IR mechanism demonstration and uncertainty report",
+      "localGate": "Run owned index BM25 rank and canonical fixtures",
+      "externalGate": "Compare controlled live SERP without weight claims",
+      "blocker": "Toy retriever equated with Google algorithms"
+    },
+    {
+      "id": "web-search-visibility-systems",
+      "category": "Discovery",
+      "deliverable": "SEO AEO GEO integrated retrieval-to-task map",
+      "localGate": "Verify stage-specific discovery indexing and citation gates",
+      "externalGate": "Measure real organic and AI visits with task outcomes",
+      "blocker": "No citation equated to ranking success"
+    },
+    {
+      "id": "web-security-assurance-asvs",
+      "category": "Security",
+      "deliverable": "Versioned OWASP ASVS security requirement mapping",
+      "localGate": "Test access control SSRF uploads XSS supply chain",
+      "externalGate": "Perform authorized pentest and negative production tests",
+      "blocker": "Any critical auth or private data flaw"
+    },
+    {
+      "id": "web-security-performance",
+      "category": "Security",
+      "deliverable": "Threat model vulnerability and CWV trace",
+      "localGate": "Run auth CSP upload and performance regression fixtures",
+      "externalGate": "Verify production headers logs and field metrics",
+      "blocker": "Security controls bypassed or fabricated vitals"
+    },
+    {
+      "id": "web-technical-seo",
+      "category": "Discovery",
+      "deliverable": "Canonical indexability and crawl evidence report",
+      "localGate": "Test robots noindex sitemap 404 redirect rendered HTML",
+      "externalGate": "Verify real GSC indexed canonical and bot logs",
+      "blocker": "Indexability inferred from source HTML alone"
+    },
+    {
+      "id": "web-unit-economics-finops",
+      "category": "Operations",
+      "deliverable": "Cost per successful job and sensitivity model",
+      "localGate": "Check units bill assumptions and agent-abuse scenarios",
+      "externalGate": "Reconcile actual provider bills and traffic",
+      "blocker": "Zero cost declared with uncounted resource costs"
+    },
+    {
+      "id": "web-workload-architecture-router",
+      "category": "Build",
+      "deliverable": "Workload classification and runtime choice ADR",
+      "localGate": "Validate size latency privacy vendor cost and fallback",
+      "externalGate": "Test candidate workload on target devices and cloud",
+      "blocker": "Framework selected without task or budget evidence"
+    }
+  ]
+}

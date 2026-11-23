@@ -28,3 +28,6 @@ description: "Run evidence-based prelaunch and postlaunch release gates for Astr
 **Evidence needed:** Deployed hash, live HTTP/browser, verified task, owner Search Console and publisher states; rollback.
 **Critical FAIL / UNKNOWN:** Local CI cannot certify real indexing, AdSense approval or revenue.
 **Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
+
+## V6 production and research handoff (2026-11-23)
+Call web-release-observability-operator to verify staging, auth/security, root robots/canonical and WAF, real output, consent/ads and production rollback. Search index/approval cannot be established from GitHub CI. docs/v6/07-release-observability-and-ad-privacy.md.

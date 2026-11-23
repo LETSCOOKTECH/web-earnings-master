@@ -36,3 +36,32 @@ See [deep foundation index](foundations/README.md). For how a browser works use 
 
 ## v2.3 prerequisites for moving from research to deployment
 Before claiming Search/revenue readiness read [Section 1 Acceptance](SECTION1_ACCEPTANCE.md), [dated source review](foundations/19-provider-source-verification.md), and [owned HTTP/browser lab](foundations/20-owned-web-lab-and-robots.md). `npm test` validates local contracts and HTTP cases; the separate browser Action validates Chromium, Firefox and WebKit with uploaded evidence when its actual run is green. Original 21 skills were individually audited and patched; active total 28. Current provider ledger: 48 dated selected claims, one Applebot source still unavailable, and 33 watched official pages/feeds. Product-specific Search Console, Bing and publisher account observations remain EXTERNAL evidence, not CI PASS.
+
+
+## V4 dedicated AEO / GEO / ASO production decision routing (2026-11-23)
+Invoke only the specialist needed, never all SEO manuals at once:
+- **`web-aeo-answer-optimization`** → Google Featured Snippets, PAA, direct factual/procedural answers, answer quality, answer passage validation; index/rich-result eligibility via `web-technical-seo`.
+- **`web-generative-engine-optimization`** → Google AI Mode/Overviews, ChatGPT Search, Perplexity, Claude Search, Bing Copilot citations, prompting panel and real AI referrals; crawler eligibility via `web-ai-discovery`, retrieval theory via `web-ai-retrieval-lab`.
+- **`web-aso-google-play`** → real Android app Google Play keyword/title/description, keyword-targeted custom listings, device vitals, 2026 analytics and native experiments.
+- **`web-aso-apple-app-store`** → iOS/iPadOS store Search; Apple 100 **UTF-8 byte** keywords, 30-char name/subtitle, 70 keyword-searchable custom product pages and native experiments.
+- **`web-app-store-discovery`** routes mixed Play/Apple comparison and refuses store-ranking claims if only a website/PWA exists.
+References: `docs/discovery/01-answer-engine-optimization.md` through `04-apple-app-store-aso.md`; research source evidence: `sources/discovery_provider_claims_2026-11-23.json`. Offline tools `scripts/audit-answer-page.mjs`, `audit-aso-listing.mjs`, `evaluate-ai-citations.mjs` are **bounded QA**, not actual provider rankings/approvals. Reopen primary docs before consequential changes. No fake ratings, click farms, keyword doorway pages or synthetic citations.
+
+## V5 actual web utility architecture, functionality, costs and 1M-user scale
+**Mandatory for any new product build:** Invoke `web-workload-architecture-router` before selecting Astro/React/hosting, then `web-browser-compute` for locally runnable jobs OR `web-conversion-job-platform` for consented remote CPU/GPU/AI. Use `web-hosting-vendor-evaluation` for plan/region/commercial-use and provider portability; `web-unit-economics-finops` for true per-successful-job economics; `web-scale-reliability` for latency, concurrency, queue saturation, load and cost-of-abuse; `web-product-validation` independently checks actual tool outputs. Do not use all six for a trivial explanation—route narrowly.
+**Zero-cost myth:** Local browser compute can avoid *server transformation* cost, but website assets, analytics, storage, user battery, quality, development and support still cost something. 1M MAU is not 1M concurrent cloud transcodes. No claim of readiness without real peak load/low-end device/output and budget evidence.
+**Commercial hosting:** Vercel Hobby officially restricts noncommercial use; GitHub Pages is not a free host for online business/commercial SaaS. Current plan conditions/AdSense business context must be verified before choosing "free" hosting. Supabase Auth MAU charges and Backblaze B2 egress/storage ratio can dominate apparent free savings.
+**Executable gates:** `node scripts/assess-tool-architecture.mjs --file templates/architecture/tool-design-input.example.json`, `node scripts/model-tool-economics.mjs --scenario templates/architecture/scenarios/million-hybrid-file-tools.json`, `node scripts/evaluate-hosting-options.mjs --file templates/architecture/hosting-choice.example.json` and `node scripts/check-architecture-evidence.mjs`. No provider has been deployed/tested for 1M actual humans here. Read `docs/architecture/README.md` and dated official pricing before decisions.
+
+## V6: complete production/research governance — 2026-11-23
+Eight new specialist skills (46 total):
+- `web-search-forensic-evidence`: trace Google ranking exhibits, Q*/NavBoost/RankEmbed/Trawler, source versus patents/leaks and current Search documentation; no guessed ranking weights.
+- `web-fullstack-production-executor`: working tool and complete frontend/backend build, design, CI and deploy evidence.
+- `web-frontend-experience-engineering`: correct user task UI, accessible initial HTML, browser results, quality of every page and ad UX.
+- `web-backend-api-engineering`: secure typed endpoints, databases, queues, auth, storage, cost ceilings and remote processing.
+- `web-security-assurance-asvs`: OWASP ASVS 5.0, Top 10:2025, file upload, SSRF/BOLA, dependency and ads third-party threat model; tests not checklists.
+- `web-publisher-policy-eligibility`: AdSense site review distinct from ad inventory/page review, ads.txt, CMP, invalid traffic and human utility.
+- `web-monetization-network-operator`: dated Raptive, Mediavine/Journey, Ezoic, Media.net, Freestar, Monetag, Adsterra, AdSense contract requirements; exclusivity/quality checks.
+- `web-release-observability-operator`: canary rollback, monitoring, origin/crawl, privacy and ads readiness with first-party evidence.
+Read `docs/v6/README.md`, `sources/v6_claims_2026-11-23.json` (45 priority uploaded claims) and `sources/v6_publisher_network_registry_2026-11-23.json` (15 business models).
+Offline audits: `scripts/audit-publisher-page.mjs`, `scripts/evaluate-publisher-eligibility.mjs`, `scripts/audit-web-security-manifest.mjs`, `scripts/check-v6-evidence.mjs`. Neither research nor local CI establishes search ranking, publisher approval, security certification or real profit. Do not create low-value mass keyword pages or deceptive ad placements.

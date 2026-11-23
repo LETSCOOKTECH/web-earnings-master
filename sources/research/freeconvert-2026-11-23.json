@@ -1,0 +1,307 @@
+{
+  "version": "2026-11-23.v3",
+  "scope": "Public FreeConvert case and current official Google rules, not full competitor security/product execution test",
+  "retrieved_date": "2026-11-23",
+  "records": [
+    {
+      "id": "FC01",
+      "category": "company_history",
+      "claim": "FreeConvert's About page states it launched in 2018 following experience with ImageResizer.com.",
+      "source": "https://www.freeconvert.com/about",
+      "evidence_class": "OWNER_STATEMENT",
+      "method": "DIRECT_BODY",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Do not infer exact traffic-growth curve or causality from company history."
+    },
+    {
+      "id": "FC02",
+      "category": "product_coverage",
+      "claim": "FreeConvert's About page claims over 3000 file conversion and compression tools; its homepage separately says over 1500 file conversions.",
+      "source": "https://www.freeconvert.com/about",
+      "evidence_class": "OWNER_STATEMENT",
+      "method": "DIRECT_BODY",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Different nouns/time/definitions. Do not assume either number equals indexed unique URLs."
+    },
+    {
+      "id": "FC03",
+      "category": "acquisition",
+      "claim": "Public AhrefsTop November 2026 reports estimated 9.4M monthly Google organic visits and 87K ranking keywords.",
+      "source": "https://ahrefstop.com/websites/freeconvert.com",
+      "evidence_class": "THIRD_PARTY_MODEL",
+      "method": "PUBLIC_REPORT",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Estimated organic Google visits, NOT all-channel sessions, not first-party GSC."
+    },
+    {
+      "id": "FC04",
+      "category": "link_profile",
+      "claim": "Public AhrefsTop November 2026 reports DR 77 and approximately 7.4K linking websites.",
+      "source": "https://ahrefstop.com/websites/freeconvert.com",
+      "evidence_class": "THIRD_PARTY_MODEL",
+      "method": "PUBLIC_REPORT",
+      "checked_at_date": "2026-11-23",
+      "caveat": "DR is a proprietary backlink metric, not Google ranking weight; no backlink source quality audit performed."
+    },
+    {
+      "id": "FC05",
+      "category": "serp_video",
+      "claim": "Public AhrefsTop November 2026 reports FreeConvert position #1 in US for video compressor, estimated ~48.8K monthly visits from that keyword.",
+      "source": "https://ahrefstop.com/websites/freeconvert.com",
+      "evidence_class": "THIRD_PARTY_MODEL",
+      "method": "PUBLIC_REPORT",
+      "checked_at_date": "2026-11-23",
+      "caveat": "One observed keyword/country/time snapshot, NOT universal ranking #1."
+    },
+    {
+      "id": "FC06",
+      "category": "serp_gif",
+      "claim": "Public AhrefsTop November 2026 reports FreeConvert US position #1 for gif compressor.",
+      "source": "https://ahrefstop.com/websites/freeconvert.com",
+      "evidence_class": "THIRD_PARTY_MODEL",
+      "method": "PUBLIC_REPORT",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Dated estimates; current live SERP may vary by location/device/queries."
+    },
+    {
+      "id": "FC07",
+      "category": "serp_mp4_mp3",
+      "claim": "Public AhrefsTop November 2026 reports FreeConvert US position #2 for mp4 to mp3.",
+      "source": "https://ahrefstop.com/websites/freeconvert.com",
+      "evidence_class": "THIRD_PARTY_MODEL",
+      "method": "PUBLIC_REPORT",
+      "checked_at_date": "2026-11-23",
+      "caveat": "This itself disproves an assertion that FreeConvert ranks first for every term."
+    },
+    {
+      "id": "FC08",
+      "category": "portfolio_pages",
+      "claim": "Homepage and tool navigation link individual format pairs, compression tools, PDF tools, developer APIs and related services.",
+      "source": "https://www.freeconvert.com/video-compressor",
+      "evidence_class": "OWNER_SITE_OBSERVATION",
+      "method": "DIRECT_BODY",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Having numerous internal links does not alone establish that Google values or indexes them."
+    },
+    {
+      "id": "FC09",
+      "category": "functional_ui",
+      "claim": "Video-compressor page exposes file chooser, Dropbox/Drive/OneDrive/URL inputs, max 1GB notice, codecs, target size and presets.",
+      "source": "https://www.freeconvert.com/video-compressor",
+      "evidence_class": "OWNER_SITE_OBSERVATION",
+      "method": "DIRECT_BODY",
+      "checked_at_date": "2026-11-23",
+      "caveat": "UI/text documented; no actual file conversion success benchmark performed."
+    },
+    {
+      "id": "FC10",
+      "category": "intent_content",
+      "claim": "MP4-to-MP3 page documents procedure, codec options, format explanations and many related conversion paths.",
+      "source": "https://www.freeconvert.com/mp4-to-mp3",
+      "evidence_class": "OWNER_SITE_OBSERVATION",
+      "method": "DIRECT_BODY",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Large page/related links are not proof of separate unique usefulness or causal ranking lift."
+    },
+    {
+      "id": "FC11",
+      "category": "free_to_paid",
+      "claim": "Pricing FAQ advertises 20 free conversion minutes per day and 5 minutes per individual file; upgrades support paid jobs.",
+      "source": "https://www.freeconvert.com/pricing/",
+      "evidence_class": "OWNER_STATEMENT",
+      "method": "DIRECT_BODY",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Live account limits and changes must be rechecked; no plan-income data available."
+    },
+    {
+      "id": "FC12",
+      "category": "api_product",
+      "claim": "Public FreeConvert API v1 docs specify programmatic conversion/merge/optimization and advanced settings.",
+      "source": "https://www.freeconvert.com/api/v1/",
+      "evidence_class": "OWNER_SITE_OBSERVATION",
+      "method": "DIRECT_BODY",
+      "checked_at_date": "2026-11-23",
+      "caveat": "API presence suggests more than display-ad monetization, not actual paid conversion share."
+    },
+    {
+      "id": "FC13",
+      "category": "company_stack",
+      "claim": "About page self-reports Nuxt/Vue frontend, Node/MongoDB backend, AWS/Azure and Playwright plus observability tools.",
+      "source": "https://www.freeconvert.com/about",
+      "evidence_class": "OWNER_STATEMENT",
+      "method": "DIRECT_BODY",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Self-described stack; not independently confirmed from infrastructure audit."
+    },
+    {
+      "id": "FC14",
+      "category": "file_retention",
+      "claim": "Privacy policy says files are stored using AWS S3 in Ireland; MP4-to-MP3 page claims automatic deletion after 8 hours.",
+      "source": "https://www.freeconvert.com/privacy",
+      "evidence_class": "OWNER_STATEMENT",
+      "method": "DIRECT_BODY",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Privacy and retention claims not independently audited; do not imply browser-local processing or verified compliance."
+    },
+    {
+      "id": "FC15",
+      "category": "localization",
+      "claim": "About content and site navigation are available at publicly indexed locale paths such as /ja/about and /de/about.",
+      "source": "https://www.freeconvert.com/ja/about",
+      "evidence_class": "OWNER_SITE_OBSERVATION",
+      "method": "PUBLIC_PAGE",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Localized content exists; hreflang implementation and organic contribution NOT inspected."
+    },
+    {
+      "id": "FC16",
+      "category": "traffic_provider_conflict",
+      "claim": "Semrush/ExplodingTopics shows estimated 64.3M all-channel monthly visits in September 2026, unlike Ahrefs 9.4M Google organic in November.",
+      "source": "https://analytics.explodingtopics.com/website/freeconvert.com",
+      "evidence_class": "THIRD_PARTY_MODEL",
+      "method": "PUBLIC_REPORT",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Different period/metric/model; DO NOT sum, equate or call either actual GSC."
+    },
+    {
+      "id": "FC17",
+      "category": "free_tools_strategy",
+      "claim": "Ahrefs public 2026 free-tool SEO strategy cites four FreeConvert tool URLs with estimated US organic traffic.",
+      "source": "https://ahrefs.com/blog/the-free-tools-seo-strategy/",
+      "evidence_class": "THIRD_PARTY_MODEL",
+      "method": "PUBLISHED_ANALYSIS",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Snapshot estimates may differ from Nov 2026 and do not prove causal strategy."
+    },
+    {
+      "id": "FC18",
+      "category": "ads_presence",
+      "claim": "MP4-to-MP3 page has a CTA inviting an upgrade to avoid queues or ads.",
+      "source": "https://www.freeconvert.com/mp4-to-mp3",
+      "evidence_class": "OWNER_SITE_OBSERVATION",
+      "method": "DIRECT_BODY",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Does not prove the AdSense program, active account status, network mix or ad earnings."
+    },
+    {
+      "id": "FC19",
+      "category": "commercial_content",
+      "claim": "Google official Search guidance says indexing/ranking is never guaranteed even when Search Essentials are met.",
+      "source": "https://developers.google.com/search/docs/fundamentals/how-search-works",
+      "evidence_class": "OFFICIAL_POLICY",
+      "method": "PRIMARY_BODY",
+      "checked_at_date": "2026-11-23",
+      "caveat": "This is provider policy, not a ranking forecast."
+    },
+    {
+      "id": "FC20",
+      "category": "spam_risk",
+      "claim": "Google defines scaled content and doorway abuse; large near-duplicate format pages without useful functionality risk policy violations.",
+      "source": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "evidence_class": "OFFICIAL_POLICY",
+      "method": "PRIMARY_BODY",
+      "checked_at_date": "2026-11-23",
+      "caveat": "The policy does NOT declare FreeConvert in violation; risk applies to our implementation choices."
+    },
+    {
+      "id": "FC21",
+      "category": "adsense_gate",
+      "claim": "Google says AdSense applicants need unique relevant content, clear navigation and a real user experience; site status reviewed by Google.",
+      "source": "https://support.google.com/adsense/answer/7299563",
+      "evidence_class": "OFFICIAL_POLICY",
+      "method": "PRIMARY_BODY",
+      "checked_at_date": "2026-11-23",
+      "caveat": "No guarantee of approval and no fact about FreeConvert's AdSense account."
+    },
+    {
+      "id": "FC22",
+      "category": "ai_search_gate",
+      "claim": "Google says Google AI Mode/Overviews supporting-link eligibility requires indexed pages eligible for a Search snippet and no additional technical requirements.",
+      "source": "https://developers.google.com/search/docs/appearance/ai-features",
+      "evidence_class": "OFFICIAL_POLICY",
+      "method": "PRIMARY_BODY",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Eligibility is not citation appearance or a guaranteed human click."
+    },
+    {
+      "id": "FC23",
+      "category": "gsc_ai_avoid_hacks",
+      "claim": "Google says llms.txt, artificial small chunks, AI-only markup and inauthentic mentions are not necessary Search visibility tactics.",
+      "source": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "evidence_class": "OFFICIAL_POLICY",
+      "method": "PRIMARY_BODY",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Only Google's stated Search surface, not all independent LLM products."
+    },
+    {
+      "id": "FC24",
+      "category": "ahrefs_api_limit",
+      "claim": "Connected Ahrefs Site Explorer metrics requests for FreeConvert and peers returned Insufficient plan.",
+      "source": "https://docs.ahrefs.com/docs/api/reference/introduction",
+      "evidence_class": "TOOL_ACCESS_RESULT",
+      "method": "LIVE_TOOL_ERROR",
+      "checked_at_date": "2026-11-23",
+      "caveat": "Do not claim we retrieved fresh authenticated organic keyword exports, link index or referring domain lists."
+    }
+  ],
+  "hypotheses": [
+    {
+      "h": "H01",
+      "mechanism": "Task-specific high-intent page coverage increases search entry points",
+      "needed": "Crawl/index inventory, canonical duplication audit, query->URL mapping, actual unique user job",
+      "status": "UNPROVEN",
+      "counter": "Indexed thin doorway pages can be ignored or penalized."
+    },
+    {
+      "h": "H02",
+      "mechanism": "Established backlink graph and brand improve visibility",
+      "needed": "Refdomain quality/history, branded vs nonbranded estimates, temporal evidence",
+      "status": "UNPROVEN",
+      "counter": "High domain DR alone cannot explain each page or guarantee rank."
+    },
+    {
+      "h": "H03",
+      "mechanism": "Deep functional options improve user task success, which helps commercial outcomes",
+      "needed": "Identical sample-file benchmark, failure rate, actual task completion, ad load",
+      "status": "UNPROVEN",
+      "counter": "Complex controls may hurt usability and speed for basic tasks."
+    },
+    {
+      "h": "H04",
+      "mechanism": "Cross-product network and API integrations generate distribution independent of SEO",
+      "needed": "Referral logs, public integrations/case studies, actual acquisition reports",
+      "status": "UNPROVEN",
+      "counter": "API products may contribute revenue without sending search traffic."
+    },
+    {
+      "h": "H05",
+      "mechanism": "Localized pages access more geographies",
+      "needed": "Hreflang, human translation quality, geo-level search traffic and user task fit",
+      "status": "UNPROVEN",
+      "counter": "Machine-translated duplicate localized pages may be low quality."
+    },
+    {
+      "h": "H06",
+      "mechanism": "Browser-local private processing creates viable competitive edge for certain tasks",
+      "needed": "Competitor upload privacy observation, local WASM/browser correctness/cost performance, task willingness",
+      "status": "UNPROVEN",
+      "counter": "Heavy video/PDF conversions may require cloud compute and fail on low-memory phones."
+    },
+    {
+      "h": "H07",
+      "mechanism": "Free-to-paid model funds complex processing while ads monetize less intensive tasks",
+      "needed": "Actual accounts, plans, unit-cost model, provider ad/premium revenue logs",
+      "status": "UNPROVEN",
+      "counter": "We have no access to FreeConvert's revenue mix or margins."
+    }
+  ],
+  "data_access": {
+    "ahrefs_connected_api": "INSUFFICIENT_PLAN",
+    "first_party_competitor_gsc": "UNAVAILABLE",
+    "owner_revenue": "UNAVAILABLE",
+    "live_file_conversion_benchmark": "NOT_RUN",
+    "live_robot_and_sitemap_check": "NOT_VERIFIED",
+    "cross_region_serp_reproduction": "NOT_RUN"
+  },
+  "next": "Form hypotheses into controlled competitive experiments, not SEO myths"
+}

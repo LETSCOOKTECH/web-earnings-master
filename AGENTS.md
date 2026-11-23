@@ -66,3 +66,36 @@ For decisions use `templates/claim-ledger.csv`, `templates/niche-decision.md`, `
 
 ## Mandatory task-time source freshness gate (v2.3.1)
 For ANY consequential change to robots, crawling, AI data-use/grounding, publisher ads, privacy or Google/Bing eligibility, the responsible Codex agent MUST open the exact current official original body and produce a dated `records` artifact using `templates/action-time-source-evidence.example.json` as a shape only. Validate with `node scripts/require-action-time-sources.mjs --file <task-evidence.json> --claim-id <ID>` (repeat --claim-id for every material decision claim). Default max age: 24 hours. Every record must have original source, UTC check time, original passage (<=25 words), applicable surface, effectivity class and test/account evidence. Snippets, unknown Applebot body, stale files and announced-future Bing rules asserted as already active FAIL. The machine gate validates structure/recency and cannot prove a claim is semantically correct; actual source reading, external evidence, conflict resolution and approval remain mandatory. Never use the example JSON as live evidence.
+
+## V4 dedicated AEO / GEO / ASO production decision routing (2026-11-23)
+Invoke only the specialist needed, never all SEO manuals at once:
+- **`web-aeo-answer-optimization`** → Google Featured Snippets, PAA, direct factual/procedural answers, answer quality, answer passage validation; index/rich-result eligibility via `web-technical-seo`.
+- **`web-generative-engine-optimization`** → Google AI Mode/Overviews, ChatGPT Search, Perplexity, Claude Search, Bing Copilot citations, prompting panel and real AI referrals; crawler eligibility via `web-ai-discovery`, retrieval theory via `web-ai-retrieval-lab`.
+- **`web-aso-google-play`** → real Android app Google Play keyword/title/description, keyword-targeted custom listings, device vitals, 2026 analytics and native experiments.
+- **`web-aso-apple-app-store`** → iOS/iPadOS store Search; Apple 100 **UTF-8 byte** keywords, 30-char name/subtitle, 70 keyword-searchable custom product pages and native experiments.
+- **`web-app-store-discovery`** routes mixed Play/Apple comparison and refuses store-ranking claims if only a website/PWA exists.
+References: `docs/discovery/01-answer-engine-optimization.md` through `04-apple-app-store-aso.md`; research source evidence: `sources/discovery_provider_claims_2026-11-23.json`. Offline tools `scripts/audit-answer-page.mjs`, `audit-aso-listing.mjs`, `evaluate-ai-citations.mjs` are **bounded QA**, not actual provider rankings/approvals. Reopen primary docs before consequential changes. No fake ratings, click farms, keyword doorway pages or synthetic citations.
+
+GEO provider coverage update: consult `docs/discovery/05-geo-provider-surface-atlas.md` / `sources/geo_provider_surface_atlas_2026-11-23.json` before asserting any assistant's crawler or ranking model. Some models have no verified public retrieval rule; mark UNKNOWN.
+
+## V5 actual web utility architecture, functionality, costs and 1M-user scale
+**Mandatory for any new product build:** Invoke `web-workload-architecture-router` before selecting Astro/React/hosting, then `web-browser-compute` for locally runnable jobs OR `web-conversion-job-platform` for consented remote CPU/GPU/AI. Use `web-hosting-vendor-evaluation` for plan/region/commercial-use and provider portability; `web-unit-economics-finops` for true per-successful-job economics; `web-scale-reliability` for latency, concurrency, queue saturation, load and cost-of-abuse; `web-product-validation` independently checks actual tool outputs. Do not use all six for a trivial explanation—route narrowly.
+**Zero-cost myth:** Local browser compute can avoid *server transformation* cost, but website assets, analytics, storage, user battery, quality, development and support still cost something. 1M MAU is not 1M concurrent cloud transcodes. No claim of readiness without real peak load/low-end device/output and budget evidence.
+**Commercial hosting:** Vercel Hobby officially restricts noncommercial use; GitHub Pages is not a free host for online business/commercial SaaS. Current plan conditions/AdSense business context must be verified before choosing "free" hosting. Supabase Auth MAU charges and Backblaze B2 egress/storage ratio can dominate apparent free savings.
+**Executable gates:** `node scripts/assess-tool-architecture.mjs --file templates/architecture/tool-design-input.example.json`, `node scripts/model-tool-economics.mjs --scenario templates/architecture/scenarios/million-hybrid-file-tools.json`, `node scripts/evaluate-hosting-options.mjs --file templates/architecture/hosting-choice.example.json` and `node scripts/check-architecture-evidence.mjs`. No provider has been deployed/tested for 1M actual humans here. Read `docs/architecture/README.md` and dated official pricing before decisions.
+
+## V6: complete production/research governance — 2026-11-23
+Eight new specialist skills (46 total):
+- `web-search-forensic-evidence`: trace Google ranking exhibits, Q*/NavBoost/RankEmbed/Trawler, source versus patents/leaks and current Search documentation; no guessed ranking weights.
+- `web-fullstack-production-executor`: working tool and complete frontend/backend build, design, CI and deploy evidence.
+- `web-frontend-experience-engineering`: correct user task UI, accessible initial HTML, browser results, quality of every page and ad UX.
+- `web-backend-api-engineering`: secure typed endpoints, databases, queues, auth, storage, cost ceilings and remote processing.
+- `web-security-assurance-asvs`: OWASP ASVS 5.0, Top 10:2025, file upload, SSRF/BOLA, dependency and ads third-party threat model; tests not checklists.
+- `web-publisher-policy-eligibility`: AdSense site review distinct from ad inventory/page review, ads.txt, CMP, invalid traffic and human utility.
+- `web-monetization-network-operator`: dated Raptive, Mediavine/Journey, Ezoic, Media.net, Freestar, Monetag, Adsterra, AdSense contract requirements; exclusivity/quality checks.
+- `web-release-observability-operator`: canary rollback, monitoring, origin/crawl, privacy and ads readiness with first-party evidence.
+Read `docs/v6/README.md`, `sources/v6_claims_2026-11-23.json` (45 priority uploaded claims) and `sources/v6_publisher_network_registry_2026-11-23.json` (15 business models).
+Offline audits: `scripts/audit-publisher-page.mjs`, `scripts/evaluate-publisher-eligibility.mjs`, `scripts/audit-web-security-manifest.mjs`, `scripts/check-v6-evidence.mjs`. Neither research nor local CI establishes search ranking, publisher approval, security certification or real profit. Do not create low-value mass keyword pages or deceptive ad placements.
+
+## V7 per-skill production acceptance (mandatory for all 46 active skills)
+Read `docs/production-v7/README.md` and the relevant row in `sources/production_skills_v7.json` before declaring any skill output production ready. Run `npm run audit:production`; record task-specific local proof versus owned-site external proof separately. Unknown provider/account results remain PENDING or BLOCKED, never PASS. A green repository CI approves these instruction contracts only, never a publisher account or live Google rank. Do not deploy irreversible changes without authorization and human signoff.
