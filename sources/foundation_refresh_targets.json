@@ -643,14 +643,6 @@
       "source_owner": "official_provider"
     },
     {
-      "id": "v6-court-1",
-      "category": "court",
-      "url": "https://www.justice.gov/atr/media/1398866/dl?inline=",
-      "kind": "pdf",
-      "semantic_review_required": true,
-      "source_owner": "official_provider"
-    },
-    {
       "id": "v6-publisher-2",
       "category": "publisher",
       "url": "https://support.google.com/adsense/answer/12176698",

@@ -41,3 +41,7 @@ description: "Compare Google AdSense, Journey/Mediavine, Raptive, Ezoic, Media.n
 - `sources/v6_claims_2026-11-23.json` (first-party evidence claims and disputed user-report assertions).
 - `scripts/check-v6-evidence.mjs` and related executable contracts.
 - `AGENTS.md` and existing root skill-routing contracts for adjacent subsystems.
+
+## Official primary-source starting points (re-open before action)
+- https://help.raptive.com/hc/en-us/articles/360032840891-Who-is-eligible-for-Raptive
+- https://www.mediavine.com/application-requirements/

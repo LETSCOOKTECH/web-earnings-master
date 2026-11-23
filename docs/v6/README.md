@@ -34,3 +34,9 @@ Fixtures are **illustrative** and explicitly say no site account or live deploye
 
 ## Production outcome criteria
 Actual user job succeeds on target devices with defined fidelity/latency/privacy; site/index and AI citation measured by authorized sources; AdSense or alternative approval observed in owner account; mobile ad UX and policy checked; real valid human visits and sustainable net revenue with tracked costs. Anything missing is `UNKNOWN_EXTERNAL` or `NOT_RUN`.
+
+## Source entry points
+- https://developers.google.com/search/docs/essentials/spam-policies
+- https://support.google.com/adsense/answer/12176698
+- https://asvs.owasp.org/
+- https://iabtechlab.com/ads-txt/

@@ -65,8 +65,8 @@ test('Google Search Console AI inclusion control worldwide August 31 and separat
 test('new global AI inclusion control is watched with explicit access and freshness caveats',()=>{
  const watch=read('sources/foundation_refresh_targets.json');
  const review=read('sources/foundation_source_review_2026-11-23.json');
- assert.equal(watch.monitored.length,107);
- assert.equal(review.targets.length,107);
+ assert.equal(watch.monitored.length,106);
+ assert.equal(review.targets.length,106);
  assert.equal(review.unverified_count,50);
  assert.ok(watch.monitored.some(x=>x.id==='google-sc-generative-ai-control'));
  assert.ok(watch.monitored.some(x=>x.id==='chrome-agentic-browsing-score'));

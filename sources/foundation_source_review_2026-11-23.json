@@ -1,8 +1,8 @@
 {
   "version": "2026-11-23.v6",
   "meaning": "Dated source-body access audit; does not certify every policy sentence or auto-update instructions",
-  "targets_reviewed_for_access": 107,
-  "accessed_count": 57,
+  "targets_reviewed_for_access": 106,
+  "accessed_count": 56,
   "unverified_count": 50,
   "targets": [
     {
@@ -806,15 +806,6 @@
       "risk": "New September 2026 flat-rate CDN scope"
     },
     {
-      "id": "v6-court-1",
-      "url": "https://www.justice.gov/atr/media/1398866/dl?inline=",
-      "reviewed_on": "2026-11-23",
-      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
-      "scope": "Selected first-party/court original sections opened; not the full policy or ranking details.",
-      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
-      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
-    },
-    {
       "id": "v6-publisher-2",
       "url": "https://support.google.com/adsense/answer/12176698",
       "reviewed_on": "2026-11-23",
@@ -891,7 +882,7 @@
       "url": "https://help.raptive.com/hc/en-us/articles/360032840891-Who-is-eligible-for-Raptive",
       "reviewed_on": "2026-11-23",
       "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
-      "scope": "Selected first-party/court original sections opened; not the full policy or ranking details.",
+      "scope": "only selected claims from directly opened official source body reviewed; not a complete current policy or account/ranking certification.",
       "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
       "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
     },
@@ -909,7 +900,7 @@
       "url": "https://help.mediavine.com/why-mediavine-requires-exclusivity",
       "reviewed_on": "2026-11-23",
       "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
-      "scope": "Selected first-party/court original sections opened; not the full policy or ranking details.",
+      "scope": "only selected claims from directly opened official source body reviewed; not a complete current policy or account/ranking certification.",
       "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
       "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
     },

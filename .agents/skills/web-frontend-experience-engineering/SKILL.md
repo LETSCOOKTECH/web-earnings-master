@@ -41,3 +41,7 @@ description: "Implement fast accessible responsive frontend and individual high-
 - `sources/v6_claims_2026-11-23.json` (first-party evidence claims and disputed user-report assertions).
 - `scripts/check-v6-evidence.mjs` and related executable contracts.
 - `AGENTS.md` and existing root skill-routing contracts for adjacent subsystems.
+
+## Official primary-source starting points (re-open before action)
+- https://developers.google.com/search/docs/appearance/ai-features
+- https://www.w3.org/TR/WCAG22/

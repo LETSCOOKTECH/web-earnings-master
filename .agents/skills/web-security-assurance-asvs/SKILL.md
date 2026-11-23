@@ -42,3 +42,7 @@ description: "Apply OWASP ASVS 5.0 and Top 10:2025 to frontend, backend, API, up
 - `sources/v6_claims_2026-11-23.json` (first-party evidence claims and disputed user-report assertions).
 - `scripts/check-v6-evidence.mjs` and related executable contracts.
 - `AGENTS.md` and existing root skill-routing contracts for adjacent subsystems.
+
+## Official primary-source starting points (re-open before action)
+- https://asvs.owasp.org/
+- https://top10.owasp.org/2025/0x00_2025-Introduction/

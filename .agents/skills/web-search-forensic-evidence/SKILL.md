@@ -39,3 +39,7 @@ description: "Forensically classify Google/search algorithm claims, DOJ records,
 - `sources/v6_claims_2026-11-23.json` (first-party evidence claims and disputed user-report assertions).
 - `scripts/check-v6-evidence.mjs` and related executable contracts.
 - `AGENTS.md` and existing root skill-routing contracts for adjacent subsystems.
+
+## Official primary-source starting points (re-open before action)
+- https://www.justice.gov/atr/media/1398866/dl?inline=
+- https://developers.google.com/search/docs/essentials/spam-policies

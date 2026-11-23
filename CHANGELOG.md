@@ -1,7 +1,7 @@
 # Changelog
 
 ## V6 — Forensic search, fullstack, publisher, OWASP, release skills (Nov 23 2026; research PR)
-- Added 8 specialized skills, 7 manuals and index, 45 upload-report priority audits, 15 monetization providers/models, 3 offline validators, 31 new regression tests and 107 official-source watch targets.
+- Added 8 specialized skills, 7 manuals and index, 45 upload-report priority audits, 15 monetization providers/models, 3 offline validators, 31 new regression tests and 106 official-source watch targets.
 - Separated court-disclosed signals from speculative ranking weights and Site/URL AdSense policy from network admission and real revenue; new security controls based on OWASP ASVS 5.0.
 - Live search/indexing, publisher account, real converter output, external security review and revenue remain UNKNOWN, not certified.
 

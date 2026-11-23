@@ -41,3 +41,7 @@ description: "Evaluate AdSense site approval, Google Publisher Policies and rest
 - `sources/v6_claims_2026-11-23.json` (first-party evidence claims and disputed user-report assertions).
 - `scripts/check-v6-evidence.mjs` and related executable contracts.
 - `AGENTS.md` and existing root skill-routing contracts for adjacent subsystems.
+
+## Official primary-source starting points (re-open before action)
+- https://support.google.com/adsense/answer/48182
+- https://support.google.com/publisherpolicies/answer/11112688
