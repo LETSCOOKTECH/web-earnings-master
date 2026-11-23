@@ -1,6 +1,6 @@
 {
   "name": "web-earnings-master",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "private": true,
   "type": "module",
   "engines": {
@@ -21,7 +21,8 @@
     "watch:sources": "node scripts/watch-official-updates.mjs",
     "audit:research": "node scripts/check-research-evidence.mjs",
     "lab:owned": "node --test tests/owned-web-lab.test.mjs",
-    "lab:browsers": "node --test tests/browser-e2e.mjs"
+    "lab:browsers": "node --test tests/browser-e2e.mjs",
+    "gate:action-sources": "node scripts/require-action-time-sources.mjs"
   },
   "description": "Private evidence-first Codex skills for SEO, AI discovery, Astro, AdSense and website revenue"
 }

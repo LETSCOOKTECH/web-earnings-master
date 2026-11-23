@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.1 — 2026-11-23 (per-action source evidence gate)
+- Added executable scripts/require-action-time-sources.mjs and seven negative/positive tests to reject stale, unverifiable, snippet-only and future-effective documentation when preparing consequential crawler/AI/ads/security changes.
+- Source evidence requires official URL, fresh UTC observation, bounded directly checked text, exact scope/section, effectivity, reviewer and real test/account result. Code validation checks structure/time, never semantic truth.
+- Reopened Baidu public official portal and AI traffic entry, revising source ledger to 48 bounded first-party claims and one Applebot original-page 429 UNKNOWN; 33 official-source URLs watched.
+
+
 ## 2.3.0 — 2026-11-23 (same draft foundation PR branch)
 - Performed full individual text audit of all 21 original SKILL.md files and patched each with scoped current-source and production-evidence contracts. Retained seven new foundation skills.
 - Created 48 selected first-party provider claim records + 1 explicitly unverified (Applebot), with date, source, scope and temporal mode. Expanded official-source watchlist from 26 to 33.

@@ -44,3 +44,6 @@ INTERNAL V2.3 FOUNDATION: can be marked PASS after S1–S6 proofs including gree
 
 ## What to move to next
 Once internal S1–S6 green, shift to country-specific demand analysis, competitor benchmark and actual website choice. During that work activate S7–S8 with real domain/account access and apply all current-source mandates rather than restarting the foundation research.
+
+## S9 added: time-limited action-specific evidence gate
+Run `node scripts/require-action-time-sources.mjs --file private/current-source-evidence.json --claim-id G-AI-NOLLM` for a material Google search/AI claim; for multiple provider controls repeat `--claim-id`. `npm test` exercises seven negative/positive cases including future-effective Bing rules and unavailable Applebot. For releases, a passing artifact plus actual opened original-source body, resolved conflicts and authorized site evidence are required; a structural checker alone cannot certify policy correctness. Example template is deliberately stale and NOT valid real proof.
