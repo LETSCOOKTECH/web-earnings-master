@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-23.v3.1",
+  "version": "2026-11-23.v3.2",
   "intent": "Automated change *signals* only. Do not update policy semantics or provider eligibility without human/agent reading official source.",
   "monitored": [
     {
@@ -262,6 +262,30 @@
       "id": "baidu-ai-traffic",
       "category": "analytics",
       "url": "https://ziyuan.baidu.com/aiflow/index",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-sc-generative-ai-control",
+      "category": "ai",
+      "url": "https://support.google.com/webmasters/answer/16908024",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-generative-ai-control-announcement",
+      "category": "ai",
+      "url": "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "chrome-agentic-browsing-score",
+      "category": "browser",
+      "url": "https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring",
       "kind": "html",
       "semantic_review_required": true,
       "source_owner": "official_provider"

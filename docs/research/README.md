@@ -9,3 +9,5 @@
 Datasets: `sources/research/freeconvert-2026-11-23.json`, `sources/research/website-growth-research-atlas.json`, `sources/research/freeconvert-upload-priority-claim-audit-2026-11-23.json`.
 
 Run `node --test tests/url-architecture-reference-lab.test.mjs tests/freeconvert-upload-claim-audit.test.mjs` and `npm test` in Node >=22. Successful local tests do not certify Google Search results or private competitor financials. Inspect official documentation live at task time.
+
+**Nov 23 official source correction:** Google Search generative AI Search Console control worldwide as of Aug 31, 2026; initial subset wording was outdated. Two direct-page source statuses (HTTP429 and stale cache) remain UNCERTAIN until fresh full-body inspection. The 36-target watchlist is only a change detector, not policy interpretation. See Chapter 04 and the web-ai-discovery skill.

@@ -1,9 +1,9 @@
 {
-  "version": "2026-11-23.v3.1",
+  "version": "2026-11-23.v3.2",
   "meaning": "Dated source-body access audit; does not certify every policy sentence or auto-update instructions",
-  "targets_reviewed_for_access": 33,
-  "accessed_count": 33,
-  "unverified_count": 0,
+  "targets_reviewed_for_access": 36,
+  "accessed_count": 34,
+  "unverified_count": 2,
   "targets": [
     {
       "id": "google-search-updates",
@@ -334,6 +334,36 @@
       "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
       "change_control": "Task-time re-open required",
       "risk": "No verified site data; no metric meaning inferred"
+    },
+    {
+      "id": "google-sc-generative-ai-control",
+      "url": "https://support.google.com/webmasters/answer/16908024",
+      "reviewed_on": "2026-11-23",
+      "body_access": "HTTP_429_INDEXED_CURRENT_TEXT_ONLY",
+      "scope": "Official documentation body state recorded; only specifically scoped assertions in the claim audit have supporting evidence. Not full provider semantic certification.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open + account/rollout verification required",
+      "risk": "Official Help current indexed text says global rollout Aug 31 but direct current body 429; verify owner dashboard and dated official update"
+    },
+    {
+      "id": "google-generative-ai-control-announcement",
+      "url": "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "CACHED_OFFICIAL_BODY_OLDER_THAN_CURRENT_INDEXED_UPDATE",
+      "scope": "Official documentation body state recorded; only specifically scoped assertions in the claim audit have supporting evidence. Not full provider semantic certification.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open + account/rollout verification required",
+      "risk": "Archived/cached direct page lacked Aug31 update; current official indexed announcement reports global Aug31; retry original and compare"
+    },
+    {
+      "id": "chrome-agentic-browsing-score",
+      "url": "https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "Official documentation body state recorded; only specifically scoped assertions in the claim audit have supporting evidence. Not full provider semantic certification.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Task-time re-open + account/rollout verification required",
+      "risk": "EXPERIMENTAL Chrome 150+ Agentic Browsing Lighthouse diagnostic; never claim Google Search rank factor"
     }
   ]
 }

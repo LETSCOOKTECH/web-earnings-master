@@ -55,9 +55,20 @@ test('audit document reports uncertainty and independent link graph rather than 
  assert.match(s,/FULL 84KB REPORT FACT-CHECK: NOT COMPLETED/);
 });
 
-test('Google Search Console AI inclusion control is documented as default-included, partial rollout and separate from ranking',()=>{
+test('Google Search Console AI inclusion control worldwide August 31 and separate from ranking',()=>{
  const s=fs.readFileSync(path.join(root,'.agents/skills/web-ai-discovery/SKILL.md'),'utf8');
- assert.match(s,/subset/);assert.match(s,/inclusion the default/);assert.match(s,/UNKNOWN_PROPERTY_CONTROL/);
+ assert.match(s,/worldwide as of August 31, 2026/);assert.match(s,/inclusion default/);assert.match(s,/UNKNOWN_PROPERTY_CONTROL/);
  const d=fs.readFileSync(path.join(root,'docs/research/04-user-teardown-google-ai-url-causality-audit-2026-11-23.md'),'utf8');
- assert.match(d,/Search generative AI inclusion control/);assert.match(d,/answer\/16908024/);
+ assert.match(d,/Search generative AI inclusion control/);assert.match(d,/August 31, 2026/);assert.match(d,/answer\/16908024/);
+});
+
+test('new global AI inclusion control is watched with explicit access and freshness caveats',()=>{
+ const watch=read('sources/foundation_refresh_targets.json');
+ const review=read('sources/foundation_source_review_2026-11-23.json');
+ assert.equal(watch.monitored.length,36);
+ assert.equal(review.targets.length,36);
+ assert.equal(review.unverified_count,2);
+ assert.ok(watch.monitored.some(x=>x.id==='google-sc-generative-ai-control'));
+ assert.ok(watch.monitored.some(x=>x.id==='chrome-agentic-browsing-score'));
+ assert.equal(review.targets.find(x=>x.id==='google-generative-ai-control-announcement').body_access,'CACHED_OFFICIAL_BODY_OLDER_THAN_CURRENT_INDEXED_UPDATE');
 });

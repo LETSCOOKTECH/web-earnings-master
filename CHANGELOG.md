@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.2 — 2026-11-23 (research branch only; corrected current Google Search AI rollout)
+- Action-time official cross-check identified a stale Google Search Console Help cache describing a subset pilot, while the newer official announcement and indexed current Help page confirm **worldwide rollout on August 31, 2026** for Search generative AI inclusion control. Marked direct Help HTTP 429 and cached announcement uncertainty explicitly. Updated AI discovery skill, research dossier and tests. Property-specific settings still require owner authorization; inclusion is not a rank boost.
+- Expanded first-party documentation freshness monitor to 36 targets: Google Search Console AI control Help, dated Google announcement, experimental Chrome Lighthouse agentic scoring. Two added source pages have **incomplete latest direct-body evidence**; watchlist does not claim they are fully semantically verified. Added vetted `blog.google` host to read-only source allowlist.
+- Added 32 user-report priority claim assessments, six local URL-path-versus-link-graph regression tests and eight uploader audit tests; updated three existing skills without inventing proprietary ranking weights. Uploaded report is 84,607 chars; whole report not certified.
+
+
+
 ## v3.1 uploaded FreeConvert fact-check — 2026-11-23 (research branch only)
 - Reopened current official Google Search URL structure, SEO guide, links, AI Mode/Overviews, generative AI guidance, ranking systems, spam policies, structured data and Chrome Lighthouse experimental agentic documentation.
 - Reviewed 32 selected high-impact causal/technical claims from the user-provided 85KB FreeConvert report; recorded explicit status, original section and external verification gaps. Full report not certified.
