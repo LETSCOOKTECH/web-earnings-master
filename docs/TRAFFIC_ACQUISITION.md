@@ -29,3 +29,6 @@ Add saved presets/recurring workflows only when users naturally repeat a job. Ma
 
 ## The financial constraint
 Income = monetizable pageviews / 1000 × actual page RPM, adjusted for provider terms, consent, traffic quality and costs. AdSense qualification is not traffic; impressions are not visits; SEO CPC is not publisher RPM.
+
+## Comprehensive new acquisition router
+The specialized `web-traffic-hunter` skill now owns end-to-end opportunity discovery, acquisition channel mapping, permission checks, performance gating, source-native creative playbooks, referral funnel economics and verified pilot priority. For the complete 25+ channel atlas and pre-registered experiments see `docs/traffic-hunter/README.md`. The rule remains: real human tasks and lawful traffic, never bought fake engagement or guaranteed positions.

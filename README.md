@@ -185,3 +185,6 @@ Six additional specialist skills guide execution placement, production-grade cli
 
 ## V6 source-governed fullstack, security and publisher eligibility
 Eight specialized skills join the 38 previously built (46 total). Deep manuals: `docs/v6/README.md`; 45 priority source claims and 15 monetization models accompany runnable but bounded page, network and security checks. No real deployed site, Google ranking, AdSense approval or 1M-user production benchmark has been certified.
+
+## V8 — Traffic Hunter (47th active Codex skill)
+`web-traffic-hunter` adds a comprehensive channel opportunity and ethical user-acquisition system: organic search, AI, video, social, Pinterest, forums, developer ecosystems, Product Hunt/HN, credible partnerships, newsletters, referrals and bounded paid pilots. Includes source-checked policies, a candidate/experiment ledger, output-focused attribution and unit economics, a local manifest evaluator, and an adversarial regression suite. Read [the operating manual](docs/traffic-hunter/README.md), [skill](.agents/skills/web-traffic-hunter/SKILL.md), and [acceptance report](docs/traffic-hunter/ACCEPTANCE.md). No platform posts, paid campaigns, traffic, Google rankings, citations, or ad revenue are asserted by this library release. This is distinct from historical V6's 46-skill baseline.

@@ -1,0 +1,257 @@
+{
+  "schema": "traffic-hunter-primary-sources-v1",
+  "review_date": "2026-11-23",
+  "limits": "Reference registry; reopen original body at the time of real platform action. Checked labels are scoped, not exhaustive.",
+  "records": [
+    {
+      "id": "google_search_people",
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "scope": "search_policy",
+      "verification": "search_confirmed",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "search_excerpt_only_reopen_required",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "google_search_spam",
+      "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "scope": "search_policy",
+      "verification": "search_confirmed",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "search_excerpt_only_reopen_required",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "google_discover",
+      "url": "https://developers.google.com/search/docs/appearance/google-discover",
+      "scope": "discovery",
+      "verification": "opened_primary_page",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "original_page_opened_selected_scope_only",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "google_ai",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "scope": "ai_discovery",
+      "verification": "search_confirmed",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "search_excerpt_only_reopen_required",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "google_adsense_ivt",
+      "url": "https://support.google.com/adsense/answer/16737",
+      "scope": "adsense_traffic",
+      "verification": "search_confirmed",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "search_excerpt_only_reopen_required",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "google_adsense_paid",
+      "url": "https://support.google.com/adsense/answer/1348722",
+      "scope": "adsense_traffic",
+      "verification": "opened_primary_page",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "original_page_opened_selected_scope_only",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "google_adsense_ban",
+      "url": "https://support.google.com/adsense/answer/81904",
+      "scope": "adsense_traffic",
+      "verification": "search_confirmed",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "search_excerpt_only_reopen_required",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "reddit_spam",
+      "url": "https://support.reddithelp.com/hc/en-us/articles/360043504051-Spam",
+      "scope": "community_rules",
+      "verification": "opened_primary_page",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "original_page_opened_selected_scope_only",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "hackernews",
+      "url": "https://news.ycombinator.com/newsguidelines.html",
+      "scope": "community_rules",
+      "verification": "opened_primary_page",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "original_page_opened_selected_scope_only",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "hackernews_show",
+      "url": "https://news.ycombinator.com/showhn.html",
+      "scope": "community_rules",
+      "verification": "search_confirmed",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "search_excerpt_only_reopen_required",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "producthunt",
+      "url": "https://help.producthunt.com/en/articles/17734384-5-how-to-promote-your-launch-and-what-to-avoid",
+      "scope": "launch_rules",
+      "verification": "opened_primary_page",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "original_page_opened_selected_scope_only",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "producthunt_post",
+      "url": "https://help.producthunt.com/en/articles/479557-how-to-post-a-product",
+      "scope": "launch_rules",
+      "verification": "search_confirmed",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "search_excerpt_only_reopen_required",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "stackoverflow",
+      "url": "https://stackoverflow.com/help/promotion",
+      "scope": "qa_rules",
+      "verification": "opened_primary_page",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "original_page_opened_selected_scope_only",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "linkedin",
+      "url": "https://www.linkedin.com/legal/user-agreement",
+      "scope": "social_rules",
+      "verification": "opened_primary_page",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "original_page_opened_selected_scope_only",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "pinterest_policy",
+      "url": "https://policy.pinterest.com/en-gb/community-guidelines",
+      "scope": "visual_rules",
+      "verification": "search_confirmed",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "search_excerpt_only_reopen_required",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "pinterest_metrics",
+      "url": "https://help.pinterest.com/en/business/article/pin-stats",
+      "scope": "visual_measurement",
+      "verification": "opened_primary_page",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "original_page_opened_selected_scope_only",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "youtube_rec",
+      "url": "https://support.google.com/youtube/answer/16559650",
+      "scope": "video_recommendations",
+      "verification": "opened_primary_page",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "original_page_opened_selected_scope_only",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "youtube_analytics",
+      "url": "https://support.google.com/youtube/answer/12220281",
+      "scope": "video_attribution",
+      "verification": "search_confirmed",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "search_excerpt_only_reopen_required",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "ga4_sources",
+      "url": "https://support.google.com/analytics/answer/15567068",
+      "scope": "measurement",
+      "verification": "opened_primary_page",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "original_page_opened_selected_scope_only",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "ga4_direct",
+      "url": "https://support.google.com/analytics/answer/15258820",
+      "scope": "measurement",
+      "verification": "search_confirmed",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "search_excerpt_only_reopen_required",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "ga4_campaign",
+      "url": "https://support.google.com/analytics/answer/11242870",
+      "scope": "measurement",
+      "verification": "search_confirmed",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "search_excerpt_only_reopen_required",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "ftc_email",
+      "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+      "scope": "email_regulation_us",
+      "verification": "opened_primary_page",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "original_page_opened_selected_scope_only",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "ftc_endorsements",
+      "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+      "scope": "disclosures_us",
+      "verification": "search_confirmed",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "search_excerpt_only_reopen_required",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "google_images",
+      "url": "https://developers.google.com/search/docs/appearance/google-images",
+      "scope": "visual_discovery",
+      "verification": "search_confirmed",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "search_excerpt_only_reopen_required",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    },
+    {
+      "id": "github_readme",
+      "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository",
+      "scope": "code_discovery",
+      "verification": "search_confirmed",
+      "review_date": "2026-11-23",
+      "authority": "provider-first-party",
+      "semantic_status": "search_excerpt_only_reopen_required",
+      "note": "Not a guarantee of platform reach, account eligibility, approval or observed traffic."
+    }
+  ]
+}

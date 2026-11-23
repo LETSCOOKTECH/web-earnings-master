@@ -1,0 +1,117 @@
+{
+  "schema": "traffic-hunter-v1",
+  "demo": true,
+  "site": {
+    "name": "Example Privacy Image Tool",
+    "url": "https://tools.example.org/compress",
+    "user_job": "Compress an image for a documented 50 KB upload limit",
+    "geo": "IN",
+    "language": "en",
+    "stage": "prototype",
+    "verified_working": false,
+    "task_fixture": "UNTESTED"
+  },
+  "constraints": {
+    "ads_monetized": true,
+    "consent_recheck_required": true,
+    "weekly_hours": 4,
+    "budget_currency": "INR",
+    "paid_budget_limit": 0,
+    "owner_authorized": false,
+    "remote_posting_allowed": false
+  },
+  "candidates": [
+    {
+      "id": "search_exact_size",
+      "family": "organic_search",
+      "channel": "Google task search",
+      "audience": "Applicants needing exact size",
+      "value_asset": "Tested 50 KB preset and real sample output",
+      "landing_url": "https://tools.example.org/compress",
+      "source_url": "https://developers.google.com/search/docs/essentials",
+      "source_type": "P2",
+      "policy": {
+        "url": "https://developers.google.com/search/docs/essentials",
+        "status": "needs_review",
+        "reviewed_at": null,
+        "original_body_opened": false
+      },
+      "score": {
+        "audienceFit": 5,
+        "assetValue": 5,
+        "permission": 5,
+        "speed": 3,
+        "measurability": 5,
+        "compounding": 5
+      },
+      "planned_cost": 0,
+      "approval": false,
+      "risk_flags": [],
+      "method": "Document task and build a truthful search-intent page",
+      "publication_mode": "manual",
+      "observed": null
+    },
+    {
+      "id": "yt_true_demo",
+      "family": "video",
+      "channel": "YouTube tutorial",
+      "audience": "Applicants searching how to resize photos",
+      "value_asset": "Real before-after screen capture with proven download",
+      "landing_url": "https://tools.example.org/compress",
+      "source_url": "https://support.google.com/youtube/answer/16559650",
+      "source_type": "P2",
+      "policy": {
+        "url": "https://support.google.com/youtube/answer/16559650",
+        "status": "needs_review",
+        "reviewed_at": null,
+        "original_body_opened": false
+      },
+      "score": {
+        "audienceFit": 4,
+        "assetValue": 5,
+        "permission": 4,
+        "speed": 4,
+        "measurability": 4,
+        "compounding": 3
+      },
+      "planned_cost": 0,
+      "approval": false,
+      "risk_flags": [],
+      "method": "Demonstrate authentic output; avoid views-only measures",
+      "publication_mode": "manual",
+      "observed": null
+    },
+    {
+      "id": "education_docs",
+      "family": "institutional",
+      "channel": "Relevant academic help guide",
+      "audience": "Students with verified submission file limit",
+      "value_asset": "Verifiable no-upload instructions and tested tool",
+      "landing_url": "https://tools.example.org/compress",
+      "source_url": "https://support.google.com/adsense/answer/1348722",
+      "source_type": "P4",
+      "policy": {
+        "url": "https://support.google.com/adsense/answer/1348722",
+        "status": "needs_review",
+        "reviewed_at": null,
+        "original_body_opened": false
+      },
+      "score": {
+        "audienceFit": 4,
+        "assetValue": 5,
+        "permission": 2,
+        "speed": 2,
+        "measurability": 3,
+        "compounding": 4
+      },
+      "planned_cost": 0,
+      "approval": false,
+      "risk_flags": [],
+      "method": "Verify actual institute requirement; invite editor review",
+      "publication_mode": "manual",
+      "observed": null
+    }
+  ],
+  "global_risk_flags": [],
+  "scope_note": "Synthetic demonstration only. No claims of real user data, advertiser revenue or approved posting."
+}
