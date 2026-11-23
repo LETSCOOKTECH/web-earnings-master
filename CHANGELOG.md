@@ -1,5 +1,15 @@
 # Changelog
 
+## v3 research intake — 2026-11-23 (separate research branch; no production skill rewrite)
+- FreeConvert observed product/acquisition/SEO footprint and named competitive comparisons from published official first-party pages and clearly labeled public Ahrefs/Semrush modeled estimates.
+- Explicit data access failure: connected premium Ahrefs Site Explorer reports Insufficient plan, so no raw traffic/keyword/refdomain exports claimed.
+- 24 scoped public/provider observations and 7 UNPROVEN causal hypotheses in sources/research/freeconvert-2026-11-23.json.
+- 84 open research questions across 12 dimensions in sources/research/website-growth-research-atlas.json with existing skill ownership and actual evidence acceptance rules.
+- Manual, adversarial, independently verified research → skill-upgrade protocol; first pass does not claim 100% SEO or AdSense outcomes.
+- Added structural tests for research provenance and non-fabrication.
+
+
+
 ## 2.3.1 — 2026-11-23 (per-action source evidence gate)
 - Added executable scripts/require-action-time-sources.mjs and seven negative/positive tests to reject stale, unverifiable, snippet-only and future-effective documentation when preparing consequential crawler/AI/ads/security changes.
 - Source evidence requires official URL, fresh UTC observation, bounded directly checked text, exact scope/section, effectivity, reviewer and real test/account result. Code validation checks structure/time, never semantic truth.
