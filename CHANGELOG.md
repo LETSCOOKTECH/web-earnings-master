@@ -1,5 +1,14 @@
 # Changelog
 
+## v3.1 uploaded FreeConvert fact-check — 2026-11-23 (research branch only)
+- Reopened current official Google Search URL structure, SEO guide, links, AI Mode/Overviews, generative AI guidance, ranking systems, spam policies, structured data and Chrome Lighthouse experimental agentic documentation.
+- Reviewed 32 selected high-impact causal/technical claims from the user-provided 85KB FreeConvert report; recorded explicit status, original section and external verification gaps. Full report not certified.
+- Corrected shallow URL depth = Google PageRank/rank hack; added runnable link-graph distance versus pathname segment diagnostic and six tests.
+- Upgraded three existing skills: web-technical-seo, web-ai-discovery and web-competitor-audit with falsifiable scope rules, no unsupported ranking/AI citations and current official source links.
+- Distinguished optional Chrome experimental Agentic Browsing from actual Google AI Mode eligibility; identified sources unavailable without competitor private GSC/AdSense.
+
+
+
 ## v3 research intake — 2026-11-23 (separate research branch; no production skill rewrite)
 - FreeConvert observed product/acquisition/SEO footprint and named competitive comparisons from published official first-party pages and clearly labeled public Ahrefs/Semrush modeled estimates.
 - Explicit data access failure: connected premium Ahrefs Site Explorer reports Insufficient plan, so no raw traffic/keyword/refdomain exports claimed.
