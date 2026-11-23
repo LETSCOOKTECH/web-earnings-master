@@ -1,0 +1,16 @@
+{
+  "max_browser_actions": 30,
+  "max_sources": 12,
+  "max_llm_tokens": 12000,
+  "max_research_minutes": 8,
+  "max_paid_api_units": 0,
+  "max_cash_usd": 0,
+  "spent": {
+    "browser_actions": 0,
+    "sources": 0,
+    "llm_tokens": 0,
+    "research_minutes": 0,
+    "paid_api_units": 0,
+    "cash_usd": 0
+  }
+}
