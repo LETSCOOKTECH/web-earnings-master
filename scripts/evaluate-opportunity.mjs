@@ -88,6 +88,7 @@ export function validatePlan(plan,now=Date.now()){
   }
  }
  if(!Array.isArray(plan.risk_flags))errs.push('Risk flags array required');
+ else for(const flag of plan.risk_flags)if(!HIGH_RISK.has(flag))errs.push('Unclassified risk flag '+flag);
  if(typeof plan.license_approved!=='boolean'||typeof plan.owner_authorized!=='boolean')errs.push('Permission flags required');
  if(!Array.isArray(plan.tests))errs.push('Test array required');
  if(!plan.decision||!DECISIONS.has(plan.decision.requested))errs.push('Requested decision required');
@@ -132,9 +133,10 @@ export function assessOpportunity(plan,{now=Date.now()}={}){
  let decision='TEST_FIRST';
  if(plan.stage==='triage'&&validEvidence.length===0)decision='INSUFFICIENT_EVIDENCE';
  if(plan.decision.requested==='REJECT'||plan.decision.requested==='PIVOT')decision=plan.decision.requested;
- if(plan.decision.requested==='GO_FOR_MVP'&&gaps.length===0&&plan.decision.human_reviewer_approved===true)decision='GO_FOR_MVP';
- if(plan.decision.requested==='GO_FOR_MVP'&&decision!=='GO_FOR_MVP')decision='TEST_FIRST';
- return {valid:true,decision,errors:[],gaps,gates,build_authorized:decision==='GO_FOR_MVP',human_review_required:true,source_count_not_proof:true,
+ let candidate_for_human_review=false;
+ if(plan.decision.requested==='GO_FOR_MVP'&&gaps.length===0&&plan.decision.human_reviewer_approved===true){candidate_for_human_review=true;decision='READY_FOR_HUMAN_GO_REVIEW';}
+ if(plan.decision.requested==='GO_FOR_MVP'&&!candidate_for_human_review)decision='TEST_FIRST';
+ return {valid:true,decision,errors:[],gaps,gates,build_authorized:false,candidate_for_human_review,human_review_required:true,source_count_not_proof:true,
   rationale:'Offline validation is structural only; no verified external page, account or human identity is supplied by the evaluator.'};
 }
 export function safeSourceSnapshot(snapshot){
@@ -149,6 +151,6 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
   const plan=JSON.parse(fs.readFileSync(fname,'utf8'));
   const r=assessOpportunity(plan,{now:plan?.simulation_now?Date.parse(plan.simulation_now):Date.now()});
   console.log(JSON.stringify(r,null,2));
-  if(!r.valid||(process.argv.includes('--require-go')&&r.decision!=='GO_FOR_MVP'))process.exitCode=1;
+  if(!r.valid||(process.argv.includes('--require-go')&&r.build_authorized!==true))process.exitCode=1;
  }catch(e){console.error(e.message);process.exitCode=1;}
 }
