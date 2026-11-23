@@ -208,7 +208,7 @@ test('valid provider comparison still only recommends a plan when load proof and
  const r=evaluateHostingOptions(x);
  assert.equal(r.lowest_validated_plan_only,'Vercel / Pro');
  assert.equal(r.candidates[0].status,'CANDIDATE_VALIDATED_IN_SCOPE');
- assert.match(r.disclaimer,/provider/);
+ assert.match(r.disclaimer,/[Pp]rovider/);
 });
 test('hosting options CLI runs and returns modeled unknowns',()=>{
  const r=spawnSync(process.execPath,['scripts/evaluate-hosting-options.mjs','--file','templates/architecture/hosting-choice.example.json'],{cwd:root,encoding:'utf8'});

@@ -21,3 +21,6 @@ Track actual provider usage (not speculative token heuristics) and actual task c
 
 ## 4. Revenue viability
 Cost per successful human task compared to attributable paid or ad revenue. A pageview may have zero ad fill, low CPM, visitor opt-outs or ads not loaded. Do not count bot visits or model source citations as ad impressions. For high-cost tools, hard quotas or paid plan may be necessary. You cannot guarantee business margin from generic traffic-volume estimates.
+
+## Pricing source boundary
+An edge request function's request/CPU model is different from the GB-second compute meter listed at https://aws.amazon.com/lambda/pricing/ , and neither alone supplies an AI model's actual provider input/output token price. Obtain the current AI provider's official account-specific model price before choosing the cheapest inference path; until then AI inference cost remains UNKNOWN. This is a documented comparison boundary, not an asserted universal AI price.
