@@ -360,7 +360,7 @@
       "url": "https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring",
       "reviewed_on": "2026-11-23",
       "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
-      "scope": "Official documentation body state recorded; only specifically scoped assertions in the claim audit have supporting evidence. Not full provider semantic certification.",
+      "scope": "Target official body opened; only selected claims from the provider page were semantically checked. No complete product or Google Search ranking certification.",
       "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
       "change_control": "Task-time re-open + account/rollout verification required",
       "risk": "EXPERIMENTAL Chrome 150+ Agentic Browsing Lighthouse diagnostic; never claim Google Search rank factor"
