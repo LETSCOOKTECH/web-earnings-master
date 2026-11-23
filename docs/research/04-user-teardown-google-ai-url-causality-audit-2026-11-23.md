@@ -42,6 +42,10 @@ The public /mp4-to-mp3 page, retrieved during this review, contains a direct rea
 - "Browser-only has $0 cost and 99.9% gross margin" incorrectly omits build, CDN/assets, third-party, privacy, support, failures and end-user hardware costs; technical feasibility differs by file format, RAM and browser.
 - "Ad Manager/Prebid tags indicate FreeConvert's AdSense income" is invalid; company accounts, contract and net payout unknown.
 
+
+### Material provider nuance: 2026 Search Console Search generative AI inclusion control
+Google's current AI optimization guide says a property must be **included in Search generative AI features** in addition to ordinary technical/index/snippet eligibility. Official Search Console Help says an inclusion/exclusion/inheritance setting is being rolled out **to a subset of owners** and is **Include by default** (or inherits from parent for child URL-prefix properties). Exclusion removes this property from applicable Google generative AI supporting links/grounding, not general Search rankings; it is separate from AI model-training control. Confirm current owner-visible setting only with authorized Search Console access. If no such control is surfaced to a property yet, record `UNKNOWN_PROPERTY_CONTROL`, not "AI Mode disabled" or "special SEO rank toggle". Sources: https://support.google.com/webmasters/answer/16908024 ; https://developers.google.com/search/docs/fundamentals/ai-optimization-guide .
+
 ## 32-claim explicit assessment
 Verdicts are **claim-scoped**: REFUTED_AS_CAUSAL = claimed causal/guaranteed mechanism unsupported or contradicted by official docs; DOCUMENTED_WITH_LIMITS = true as public guidance but not rank-guaranteeing; PUBLIC_OBSERVED = visible public site but not independently exercised workflow; UNVERIFIED_EXTERNAL = not supported by owner/provider access; HYPOTHESIS = could be true but requires experiment.
 

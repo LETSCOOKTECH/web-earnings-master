@@ -54,3 +54,10 @@ test('audit document reports uncertainty and independent link graph rather than 
  assert.match(s,/url-architecture-reference-lab.mjs/);
  assert.match(s,/FULL 84KB REPORT FACT-CHECK: NOT COMPLETED/);
 });
+
+test('Google Search Console AI inclusion control is documented as default-included, partial rollout and separate from ranking',()=>{
+ const s=fs.readFileSync(path.join(root,'.agents/skills/web-ai-discovery/SKILL.md'),'utf8');
+ assert.match(s,/subset/);assert.match(s,/inclusion the default/);assert.match(s,/UNKNOWN_PROPERTY_CONTROL/);
+ const d=fs.readFileSync(path.join(root,'docs/research/04-user-teardown-google-ai-url-causality-audit-2026-11-23.md'),'utf8');
+ assert.match(d,/Search generative AI inclusion control/);assert.match(d,/answer\/16908024/);
+});
