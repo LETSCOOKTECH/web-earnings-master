@@ -7,7 +7,7 @@ const exists=p=>fs.existsSync(path.join(root,p));
 const errors=[];
 const newSkills=['web-search-forensic-evidence','web-fullstack-production-executor','web-frontend-experience-engineering','web-backend-api-engineering','web-security-assurance-asvs','web-publisher-policy-eligibility','web-monetization-network-operator','web-release-observability-operator'];
 const dirs=fs.readdirSync(path.join(root,'.agents/skills'),{withFileTypes:true}).filter(x=>x.isDirectory());
-if(dirs.length!==46)errors.push('Expected 46 skills with V6 eight added, got '+dirs.length);
+if(dirs.length!==47)errors.push('Expected 47 skills (46 through V6 plus Traffic Hunter), got '+dirs.length);
 for(const name of newSkills){
  const p='.agents/skills/'+name+'/SKILL.md';
  if(!exists(p))errors.push('Missing '+p);
@@ -50,4 +50,4 @@ for(const src of registry.rows.filter(x=>!['NO_SINGLE_PROVIDER','BUSINESS_MODEL_
 for(const p of ['scripts/audit-publisher-page.mjs','scripts/evaluate-publisher-eligibility.mjs','scripts/audit-web-security-manifest.mjs','tests/v6-production.test.mjs',
  'templates/v6/page-example.json','templates/v6/publisher-site-example.json','templates/v6/security-example.json'])if(!exists(p))errors.push('Missing executable contract '+p);
 if(errors.length){console.error('FAIL V6 evidence contracts:\n'+errors.join('\n'));process.exitCode=1;}
-else console.log('PASS V6 contracts: 46 total skills, 8 new specialist contracts, 8 manuals, 45 forensic claims, 15 provider models, '+watch.monitored.length+' watched official sources ('+access.unverified_count+' partial); NOT a ranking, publisher approval, 1M-user capacity or penetration-test certification.');
+else console.log('PASS V6 contracts: 47 total skills, 8 new specialist contracts, 8 manuals, 45 forensic claims, 15 provider models, '+watch.monitored.length+' watched official sources ('+access.unverified_count+' partial); NOT a ranking, publisher approval, 1M-user capacity or penetration-test certification.');

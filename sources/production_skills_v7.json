@@ -1,7 +1,7 @@
 {
   "schema": "sense-production-skill-gates-v7",
-  "edition": "2026-11-23",
-  "expectSkills": 46,
+  "edition": "2026-11-23-v8",
+  "expectSkills": 47,
   "scope": "instruction contracts only; external property validation is separate",
   "statuses": [
     "PENDING",
@@ -361,6 +361,14 @@
       "localGate": "Test robots noindex sitemap 404 redirect rendered HTML",
       "externalGate": "Verify real GSC indexed canonical and bot logs",
       "blocker": "Indexability inferred from source HTML alone"
+    },
+    {
+      "id": "web-traffic-hunter",
+      "category": "Growth",
+      "deliverable": "Evidence-sourced qualified acquisition channel shortlist and owner-approved pilot manifest",
+      "localGate": "Validate full traffic-hunter source and channel contracts with 40 negative and positive Node tests",
+      "externalGate": "Observe real permitted publication, qualified landing sessions, validated tool tasks, publisher alerts and reconciled spend",
+      "blocker": "Any invalid paid traffic, fake engagement, platform disallowed promotion, unverified product or publisher harm"
     },
     {
       "id": "web-unit-economics-finops",

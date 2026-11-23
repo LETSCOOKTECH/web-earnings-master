@@ -1,0 +1,41 @@
+{
+  "schema": "traffic-experiment-v1",
+  "synthetic": true,
+  "id": "demo_video_test",
+  "channel_id": "yt_true_demo",
+  "product_url": "https://tools.example.org/compress",
+  "hypothesis": "A real before/after tutorial might bring qualified applicants to complete a validated image export.",
+  "counterhypothesis": "Viewers learn the technique but do not need the external tool.",
+  "audience": {
+    "geo": "IN",
+    "language": "en",
+    "job": "50 KB application photo"
+  },
+  "owner_authorized": false,
+  "approved_cost_cap": 0,
+  "source_policy": {
+    "url": "https://support.google.com/youtube/answer/16559650",
+    "reviewed_at": null,
+    "status": "needs_review"
+  },
+  "utm": {
+    "source": "youtube",
+    "medium": "organic_video",
+    "campaign": "photo_50kb_demo"
+  },
+  "baseline": {
+    "qualified_sessions": null,
+    "task_starts": null,
+    "validated_completions": null
+  },
+  "outcome": {
+    "qualified_sessions": null,
+    "task_starts": null,
+    "validated_completions": null,
+    "attributed_revenue": null,
+    "campaign_spend": null
+  },
+  "success_rule": "Evidence of legitimate first-party task completions, not number of views.",
+  "stop_rule": "Stop if user output fails, source quality suspicious, or platform policy unclear.",
+  "notes": "No external publication or traffic is claimed."
+}

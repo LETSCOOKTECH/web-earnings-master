@@ -65,3 +65,6 @@ Eight new specialist skills (46 total):
 - `web-release-observability-operator`: canary rollback, monitoring, origin/crawl, privacy and ads readiness with first-party evidence.
 Read `docs/v6/README.md`, `sources/v6_claims_2026-11-23.json` (45 priority uploaded claims) and `sources/v6_publisher_network_registry_2026-11-23.json` (15 business models).
 Offline audits: `scripts/audit-publisher-page.mjs`, `scripts/evaluate-publisher-eligibility.mjs`, `scripts/audit-web-security-manifest.mjs`, `scripts/check-v6-evidence.mjs`. Neither research nor local CI establishes search ranking, publisher approval, security certification or real profit. Do not create low-value mass keyword pages or deceptive ad placements.
+
+## V8 — Find actual people, not vanity traffic
+Use `web-traffic-hunter` before deciding where to distribute a tested web utility. Hunt real public task signals, compare audience/channel fit and ethical rules, prepare 2–3 bounded evidence-scored pilot briefs, and attribute actual human task completions after authorized publication. See `docs/traffic-hunter/README.md`, `templates/traffic-hunter/` and `npm run audit:traffic`. No bot clicks, artificial impressions, link spam, unapproved automated posts, or imagined traffic numbers.
