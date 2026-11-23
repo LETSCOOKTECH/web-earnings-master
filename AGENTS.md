@@ -2,6 +2,19 @@
 
 **Purpose:** Help LetsCookTech build and operate legitimate, high-value, monetizable websites across the portfolio. Treat this as a flexible operating guide, not a rigid prompt that overrides evidence, legal policy or the current user request.
 
+## Current technical research routes (v2.2)
+Use docs/foundations/README.md to select one or two modules; do not inject the entire field manual for minor tasks.
+- Chromium/Gecko/WebKit process, renderer, JS, caches, storage, permissions: chapter 11 + web-browser-runtime.
+- DNS/HTTP/TLS/QUIC/CDN correctness and failures: chapter 12 + web-browser-runtime/web-domain-operations.
+- Generic inverted index, BM25, PageRank, semantic/hybrid search, evaluation: chapter 13 + web-search-internals. TOY implementations are not Google's or Bing's algorithm.
+- Actual provider atlas incl Google, Bing, Brave, DuckDuckGo, Kagi, Mojeek, Yandex, Baidu, Naver, Seznam: chapter 14.
+- Generative search RAG, grounding, retrieval, citations and browser agents: chapter 15 + web-ai-retrieval-lab.
+- 2026-2027 change/effective-date ledger: chapter 16; in particular Microsoft future grounding controls and Google Preferred Sources.
+- Complete technical SEO/AEO/GEO/vertical/product outcomes: chapter 17 + web-search-visibility-systems.
+- Negative tests and evidence gates: chapter 18.
+
+**Latest-source mandate:** For every material claim, consult the pinned official watch targets sources/foundation_refresh_targets.json and live first-party body. Run node scripts/watch-official-updates.mjs offline to validate, or --live to produce reachability/hash review queue. New .github/workflows/foundation-source-watch.yml polls selected provider URLs DAILY only after it is merged to default branch; it does not reinterpret provider rules or automatically edit policy. When reports indicate change, REVIEW source and update ledger/evals with actual scope. When a provider page is blocked/429, report UNKNOWN, not fabricated confirmation. The draft PR's schedule is not active.
+
 ## Before changing anything
 1. Identify the job: market research, existing-site audit, feature build, optimization, publisher application, or analytics diagnosis.
 2. Read the directly relevant skill(s) under `.agents/skills/`, followed by `docs/START_HERE.md` and the minimum necessary reference files. Do not inject all skills simultaneously.

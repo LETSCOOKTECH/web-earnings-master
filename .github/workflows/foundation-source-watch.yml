@@ -1,0 +1,48 @@
+name: Official source freshness signals
+on:
+  schedule:
+    # Scheduled workflows run from DEFAULT branch only after a reviewed merge.
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Restore previous reviewed-source hashes (best effort)
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/official-source-state.json
+          key: foundation-sources-${{ github.run_id }}
+          restore-keys: |
+            foundation-sources-
+      - name: Fetch current official source texts and changes (signal only)
+        continue-on-error: true
+        run: |
+          node scripts/watch-official-updates.mjs --live --state .cache/official-source-state.json --out foundation-watch.json --markdown foundation-watch.md
+      - name: Save current source fingerprints (best effort)
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/official-source-state.json
+          key: foundation-sources-${{ github.run_id }}
+      - name: Upload source evidence for manual policy review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-source-watch-${{ github.run_id }}
+          path: |
+            foundation-watch.json
+            foundation-watch.md
+          if-no-files-found: warn
+      - name: Summarize source review queue
+        if: always()
+        run: |
+          if test -f foundation-watch.md; then cat foundation-watch.md >> "$GITHUB_STEP_SUMMARY"; fi
+          echo "Automated link/hash checks never approve changes to SEO, robots, AI, ads, or legal policies." >> "$GITHUB_STEP_SUMMARY"

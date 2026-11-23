@@ -21,3 +21,6 @@ description: "Explain and investigate search discovery, crawl scheduling, render
 **Output:** stage diagnosis, evidence ledger, SERP snapshot, affected URLs/queries, prioritized experiment and stop conditions.
 
 **Hard failures:** promising #1 with HTML checks; pretending DA/DR are Google rank signals; equating sitemap with indexing; citing unknown private ranker internals as fact; claim every web engine has a separate index.
+
+## Deep operations extension (v2.2)
+Read chapters 13 (inverted indexes/BM25/PageRank/hybrid/re-ranking as REFERENCE algorithms), 14 (global provider atlas), 17 (full SEO) and 18 (adversarial suite). For each claim distinguish a published provider mechanism, open-source educational implementation, local experiment, dated external SERP observation and proprietary UNKNOWN. Run node scripts/ir-reference-lab.mjs only to teach retrieval, NEVER to predict Google rank or infer a secret scoring formula. Compare Google, Bing, Brave, DuckDuckGo, Kagi, Yandex, Naver, Baidu, Seznam, Mojeek and provider-dependent AI surfaces only with current original source. The actual outcome funnel remains index -> impression -> click -> verified task -> legitimate revenue.

@@ -29,3 +29,6 @@ This is the orchestration playbook. Skills are modular; execute the next highest
 **11. Monthly portfolio review:** calculate gross margin and net operating costs per site, remove unproductive work, review policy deltas, update benchmarks, and expand only where actual usage or demand shows a need. No fixed number of sites or URLs.
 
 **Hard stop**: if a provider changes policy, privacy is unresolved, a tool can silently corrupt data, or an ad creates deceptive UX, remediate before growth experiments.
+
+## Deep search and browser research shortcut
+See [deep foundation index](foundations/README.md). For how a browser works use chapters 11–12; for how retrieval/ranking works from first principles use chapter 13 and scripts/ir-reference-lab.mjs; for major worldwide search engines use chapter 14; for AI Search/agent grounding use chapter 15; for current 2026–27 policy updates use chapter 16; for integrated SEO/GEO/AEO runbook use chapter 17; for negative validation cases chapter 18. Run npm test and compare provider documents at the time of change. The source-watch cron is inactive until the draft PR is merged into default.

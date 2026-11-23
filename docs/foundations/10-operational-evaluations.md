@@ -46,3 +46,6 @@ Google crawler verification: https://developers.google.com/crawling/docs/crawler
 Robots standard: https://www.rfc-editor.org/rfc/rfc9309.html
 Google AI guidance: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
 OpenAI distinct bot controls: https://developers.openai.com/api/docs/bots
+
+## Expanded technical suite
+The original E01–E24 are conceptual test specifications. Chapter 18 enumerates additional B01–B20, S01–S20, C01–C18, R01–R14, A01–A18, P01–P11 and F01–F12 failure scenarios. These are **not all implemented as executable tests**. The toy lab provides deterministic BM25, postings, RRF and PageRank exercises; GitHub CI can verify math/code invariants, not the private search-engine architecture. When an agent claims a provider ranker mechanism, require corresponding official doc or mark UNKNOWN.

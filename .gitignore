@@ -10,3 +10,7 @@ playwright-report/
 *.pem
 *.key
 
+
+.cache/
+foundation-watch.json
+foundation-watch.md

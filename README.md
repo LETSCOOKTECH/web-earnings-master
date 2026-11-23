@@ -53,11 +53,13 @@ The loop is adaptive. Codex must investigate the current problem and only invoke
 | Monetization and trust | `web-adsense-readiness`, `web-network-monetization`, `web-privacy-consent`, `web-ad-experience` | Publisher eligibility evidence, network comparisons, privacy/consent and safe ad layouts |
 | Reliability and growth | `web-product-validation`, `web-search-analytics`, `web-experiments`, `web-launch-review`, `web-portfolio-growth` | Real tests, conversion funnels, experiments, release decisions and portfolio economics |
 
-### Core search and browser foundation (new)
+### Core search and browser foundation (v2.2 deep upgrade)
 
-Read [the foundational operating system](docs/foundations/README.md), which contains 10 technical/reference chapters, seven dedicated skills, a 32-link annotated primary-source registry, a fresh-source check utility and offline contract tests. It covers browser/DNS/HTTP/TLS internals, search crawl/index/rank, crawler controls, Google/Bing/AI answer engines, agent browsers, SEO/AEO/GEO and app-store ASO. **It does not expose proprietary ranking weights or guarantee search/AI placement.**
+Read [the foundational operating system](docs/foundations/README.md), which contains 18 technical/reference chapters, seven dedicated foundation skills (plus the original 21), a 32-link annotated primary-source registry, a fresh-source check utility and offline contract tests. It covers browser/DNS/HTTP/TLS internals, search crawl/index/rank, crawler controls, Google/Bing/AI answer engines, agent browsers, SEO/AEO/GEO and app-store ASO. **It does not expose proprietary ranking weights or guarantee search/AI placement.**
 
-Use the relevant focused skill rather than injecting all foundation chapters into one Codex context. Run `node scripts/check-foundation-sources.mjs` for registry validation and optionally `node scripts/check-foundation-sources.mjs --live --limit 12` for reachability only; semantic live provider policy recheck is always required.
+Use the relevant focused skill rather than injecting all foundation chapters into one Codex context. Read chapters 11–18 for Chromium/Firefox/WebKit architecture, DNS/HTTP/TLS, inverted indexes/BM25/PageRank/hybrid retrieval, the global engine atlas, AI grounding/citations/agents, 2026–27 future-effective controls, deep SEO/AEO/GEO and adversarial test gates. Use `node scripts/ir-reference-lab.mjs` for a reproducible educational search engine, **not** proprietary Google ranking. A separate 26-target official-source watcher uses daily GitHub Actions polling only after the proposed workflow reaches the default branch; automated hashes are not policy evidence. The agent must inspect current first-party docs before material decisions.
+
+Run `node scripts/check-foundation-sources.mjs` for registry validation and optionally `node scripts/check-foundation-sources.mjs --live --limit 12` for reachability only; semantic live provider policy recheck is always required.
 
 Full routing is in [`AGENTS.md`](AGENTS.md). The [master curriculum](docs/MASTER_CURRICULUM.md) organizes the knowledge domains, while [`docs/START_HERE.md`](docs/START_HERE.md) covers practical usage.
 

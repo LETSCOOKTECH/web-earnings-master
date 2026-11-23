@@ -22,3 +22,6 @@ description: "Audit and improve crawlability, indexability, rendered HTML, canon
 
 ## Commands and artifacts
 `node scripts/audit-static-site.mjs --dist ./dist --origin https://yourdomain`, then live tests after deployment, Search Console URL Inspection and source registry. `references/search-technical.md` details each layer.
+
+## Expanded technical operations (v2.2)
+Read chapters 11–14 and 17–18 for browser protocol, search indexing and SERP tests. Diagnose by first failed observable gate (DNS/TLS/HTTP/robots/WAF -> HTML/render -> canonical/index -> retrieval/position -> SERP click opportunity -> task completion). Current Google documentation, not static checklist, governs eligible rich-result types and 2026 deprecations. Validate important browser DOM and no-JS/initial HTML separately, and treat search console property observations as external to local audit. For new crawler families and Microsoft 2027 preferences, do NOT blindly rewrite production robots.

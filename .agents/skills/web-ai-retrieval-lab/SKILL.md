@@ -23,3 +23,6 @@ description: "Analyze real AI search, RAG, grounding, citation selection limits,
 **Outputs:** product/crawler matrix, AI response citation log, tested prompt battery, agent task report, policy risk and next decision.
 
 **Ban:** imaginary citation score, prompt injection to make AI cite the site, unsafe bypass, counting AI mention as paid traffic, unverified partner crawler names.
+
+## Deep operations extension (v2.2)
+Read chapter 15 for six retrieval modes, chapter 16 for actual 2026/2027 provider changes, chapter 14 for partner/independent index relationships and chapter 18 for controlled citation/agent tests. For Google generative Search verify indexing+snippet eligibility+current Search generative inclusion control; preferred-source highlighting is USER preference and not a general magic ranking factor. For Bing note future training vs grounding separation; for OpenAI/Claude/Perplexity inspect distinct crawler/user/training families. Browser WebMCP is early preview; fallback semantic HTML must work. AI citation, real human referral, task completion and ad income never share a denominator. Keep self-sampled prompts as observational only; no stable citation share claims.

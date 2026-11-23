@@ -42,3 +42,6 @@ https://developers.openai.com/api/docs/bots
 https://docs.perplexity.ai/docs/resources/perplexity-crawlers
 https://www.rfc-editor.org/rfc/rfc9309.html
 Also follow docs/RESEARCH_PROTOCOL.md for cross-portfolio rules.
+
+## Daily source watcher pipeline (v2.2)
+Sources/foundation_refresh_targets.json pins 26 official provider pages/RSS feeds. Run scripts/watch-official-updates.mjs offline for config validation, optional --live --limit N for direct original-source retrieval. GitHub Actions foundation-source-watch.yml is scheduled daily only when on the default branch (not active while PR remains draft). Workflow stores cacheable prior hashes, emits dated JSON/Markdown artifacts and GITHUB_STEP_SUMMARY. Cache eviction may create BASELINE status; blocked provider pages are UNKNOWN_NETWORK. The script does NOT auto-author SEO/robots/WAF/AI preference changes. Codex must inspect changed original body, applicable region/account, effective date, contradiction and new regression fixture before updating skill guidance. Manual review always outranks hash checks. Never claim all 26 were checked by this conversation; CI's scheduled workflow and live provider tests are distinct evidence.

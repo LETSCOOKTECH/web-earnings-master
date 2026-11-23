@@ -22,3 +22,6 @@ description: "Research and audit domain registration, TLD eligibility, DNS deleg
 **Deliver:** dated domain decision sheet with vendor prices and evidence, DNS architecture diagram, risk register, launch/migration test list. Prove current quotes instead of copying historical estimates.
 
 **Do not:** claim expired domains automatically transfer authority; use deceptive brand lookalikes, use domain age as guaranteed rank, reveal registrar secrets.
+
+## Deep operations extension (v2.2)
+Chapter 12 covers DNS delegation and cache, A/AAAA, DNSSEC, QUIC/TLS and edge/host mismatch. Chapter 11 covers origin/site and cookie isolation. Always reproduce authoritative delegation and certificate behavior for current candidate before claiming site health. For site moves explicitly test resolver TTL, both IP families, real 301/308 URL map, canonical, GSC and rollback. Public TLD examples and prices never substitute registrar availability, legal checks or actual invoice quote.

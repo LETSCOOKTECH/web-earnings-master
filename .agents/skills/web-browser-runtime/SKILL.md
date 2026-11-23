@@ -26,3 +26,6 @@ description: "Diagnose browser, HTTP, DNS, TLS, HTML rendering, caching, workers
 **Red flags:** user-agent spoofing treated as verified crawler, 200 soft-404 called healthy, one Lighthouse score equated with ranking, cache clearing as generic fix, uploading private HAR/cookies.
 
 **Acceptance:** One false-positive diagnostic and one negative case tested. Every proprietary browser/vendor internal not established by evidence remains UNKNOWN.
+
+## Deep operations extension (v2.2)
+Read foundation chapters 11 (Chromium/Blink vs Firefox/Gecko/Necko vs Safari/WebKit) and 12 (DNS/TLS/QUIC/HTTP/cache) whenever a request reaches beyond generic web vocabulary. Create stage-by-stage timeline of navigation, process selection, fetch, HTML parser, CSS/JS scheduling, layout/paint/compositor, storage, service-worker and user interaction. Separate origin/site, DOM/source, security/browser compatibility, synthetic vs field CWV, BFCache and low-end memory. Test source HTML, rendered DOM, network, JS-disabled and final task. Re-open current browser release documentation; older Chromium design documents are explanatory and may not match current version. Do not claim browser compatibility or production trace unless run.

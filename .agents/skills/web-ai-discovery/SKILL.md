@@ -23,3 +23,6 @@ description: "Verify Google AI Mode/Overviews, ChatGPT Search, Bing/Copilot, Per
 
 ## Outputs
 `references/ai-crawlers.md`, `templates/ai-engine-matrix.csv`, `templates/ai-citations.csv` with evidence. Recheck official sources in registry when provider behavior changes.
+
+## Advanced AI Search research mapping (v2.2)
+Read chapters 14, 15, 16 and 18. Country/product/version-specific source grounding is often partially undisclosed; split Google AI Mode/Overviews vs Gemini app, ChatGPT Search vs OpenAI API web_search, Claude Search vs Claude user fetch, Perplexity search vs Perplexity-User, and Bing AI Performance vs future Microsoft AI preferences. Kagi/Brave/DuckDuckGo may blend different sources or operate own indexes. Google preferred-source feature depends on user selection, not a universal rank or citation boost. Strong output is dated trace + citation validity + click/session/task outcome, NEVER fabricated source selection weights.

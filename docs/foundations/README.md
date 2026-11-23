@@ -33,3 +33,23 @@ Use the few relevant skills, not all of them in every prompt. Register claims wi
 
 ## Provenance and limits
 This version is a first foundation expansion from the project continuity handoff dated 2026-11-23. It is not a line-by-line reconstruction of Google/Bing/AI vendor internals. Each substantive provider assertion cites first-party URLs in the associated document; the verification inventory is in sources/foundation_sources.json. Link existence, live policy semantics, account rollout and production results are different evidence categories. Changes enter a branch and require validation and review before main.
+
+## Advanced technical modules 11–18 (v2.2, 2026-11-23)
+11. [Browser engine internals and process architecture](11-browser-engine-deep-dive.md): Chromium/Blink/V8 vs Firefox/Gecko/Necko/SpiderMonkey vs Safari/WebKit/WebCore/JavaScriptCore; navigation, BFCache, rendering, security and agent use.
+12. [Transport and network internals](12-network-protocols-internals.md): DNS delegation, TLS, HTTP1/2/3, QUIC, caches, CDN, origin, correct response and failures.
+13. [IR and ranking engineering lab](13-information-retrieval-ranking-lab.md): inverted indexes, BM25, lexical vs vector, fusion, PageRank, multi-stage ranking and NDCG. Educational reference methods, NOT proprietary Search internals.
+14. [Global engine/provider atlas](14-search-engine-provider-atlas.md): Google, Bing, DuckDuckGo, Brave, Kagi, Mojeek, Yandex, Baidu, Naver, Seznam, Apple, relevant partner and AI engines. Explicit UNKNOWN for unverified current partnerships.
+15. [AI retrieval and agent internals](15-generative-retrieval-agent-internals.md): grounding, source selection, RAG, tools, citation errors, browser operation, WebMCP and attribution.
+16. [Modern changes and future controls](16-modern-search-changes-2026-2027.md): dated provider changes, Microsoft 2027 training/grounding effective dates, Google AI/Preferred Sources and IETF draft status.
+17. [Production SEO/AEO/GEO operations](17-operational-seo-and-distribution.md): intent, crawl/index, content/media/structured data, international, ranking, attribution, safe growth.
+18. [Adversarial test and evidence matrix](18-complete-engineering-evaluation-matrix.md): >100 specified failure cases; **specified cases are NOT all executed**.
+
+### Run the reproducible reference lab
+- node scripts/ir-reference-lab.mjs : lexical scoring/term postings/RRF/PageRank toy demonstration, NEVER Google/Bing score.
+- node scripts/watch-official-updates.mjs : validates source watch manifest OFFLINE.
+- node scripts/watch-official-updates.mjs --live --limit 8 : accesses pinned official pages, reports changed hashes, HTTP errors/unknowns; do not infer semantic policy.
+- npm test : local tests, not live Google index evidence.
+- A separate daily GitHub Actions source-watcher workflow becomes operational only when it is present on the default branch. On this draft PR it is not scheduled; launch approval is a separate action.
+
+### Evidence labels and uncertainty
+Provider-doc-excerpt / original-body-inspected / scholarly reference / locally reproduced / first-party production observed / inferred / unknown. An IETF Internet-Draft is not an Internet Standard. A future effective date is not current compliance. A link health check is not a policy change. Open the actual updated provider text at task time.

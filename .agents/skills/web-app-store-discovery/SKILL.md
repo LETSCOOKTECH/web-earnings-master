@@ -20,3 +20,6 @@ description: "Research Google Play and Apple App Store search, listing metadata,
 6. If using third-party estimates, label modeled. If Play Console/App Store Connect not connected, do not invent download or revenue data.
 
 **Output:** dated store-search audit, exact listing optimization and quality gaps, acquisition/retention funnel and safe experiment, or explicit ASO scope exclusion for web-only product.
+
+## Deep operations extension (v2.2)
+Chapter 14 distinguishes web, local, media, partner and app-store indexes; chapter 17 describes cross-channel distribution constraints. If no actual published store app, mark Play/App Store ASO out of scope. For a real app, separate search impression, listing view, organic install, first-value completion, retention and monetization. Reopen current platform listing/store policy, experiment assets and actual country/device market; no invented store weight, download number or fake review manipulation.

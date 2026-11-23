@@ -21,3 +21,6 @@ description: "Integrate traditional SEO with answer-engine and generative-engine
 **Output:** intent/SERP map, site-page architecture, technical and AI eligibility evidence, competitor-job comparison, metrics funnel and measured experiments.
 
 **Anti-myth:** no mandatory llms.txt, no generic .com ranking boost, no fixed word counts or article thresholds, no guaranteed #1, no numeric E-E-A-T score. Current Google source has explicit AI SEO guidance; reopen before recommending changes.
+
+## Deep operations extension (v2.2)
+Use chapter 17 as the full technical+editorial+UX+distribution release contract and chapter 18 as negative evidence matrix. Read chapter 14 before assuming a partner search engine uses Google or Bing ranking; chapter 13 provides reference IR, not current proprietary formula. Before proposing niche traffic forecast measure SERP click opportunity by geo and human job completion, not volume alone. Check current Google changelog for deprecated markup and newly reported AI/multimodal search features. Specific provider preference systems and llms.txt cannot be universalized. Every recommendation must name measurable outcome, counterhypothesis and rollback.

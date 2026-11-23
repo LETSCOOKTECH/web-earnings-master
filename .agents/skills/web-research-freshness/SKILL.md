@@ -20,3 +20,6 @@ description: "Reverify official search, AI crawler, privacy, advertising, ad net
 
 ## Expected output
 Policy change record: old assertion → current rule → supporting official source → application to this website → change required → owner and review date. Separate unverified claims. See `docs/RESEARCH_PROTOCOL.md`.
+
+## Freshness watcher and source-semantics gate (v2.2)
+Before material provider/policy claims read docs/foundations/16-modern-search-changes-2026-2027.md and docs/foundations/09-source-refresh.md. A new read-only watchlist (sources/foundation_refresh_targets.json) and script (scripts/watch-official-updates.mjs) can fetch official current pages/RSS, emit review-needed content-hash signals and date-stamped artifacts; it DOES NOT verify semantic changes. Run offline validation without network; optional --live with explicit target limits. The GitHub Actions scheduled watcher only starts automatically AFTER workflow exists on default branch (the draft PR alone does not activate its schedule); manual operator review required. For live provider docs use actual body and effective date, not an HTTP 200 or search excerpt. Microsoft future controls, WebMCP preview, new crawler names and IETF drafts require special temporal labels. Maintain unknowns; never silently alter live robots, advertiser policies or analytics schemas.
