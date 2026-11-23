@@ -1,5 +1,12 @@
 # Changelog
 
+## V4.1 GEO regional/provider atlas — 2026-11-23 (draft research branch)
+- Extended generative-search skill with 21 provider/surface decision entries and a 5th deep manual; distinguishes Google AI Mode from Gemini, ChatGPT Search from API web search, Kagi Assistant, Brave AI Answers, DuckDuckGo Search Assist from Duck.ai, Baidu AI, and 8 unknown-sourced products.
+- Evidence classes are source body, official indexed excerpt, contrast-only, or UNKNOWN; no reverse-engineered hidden ranking weights or unsupported crawler claims.
+- Added two regression tests for differentiated retrieval routes, source state and count.
+
+
+
 ## V4 AEO/GEO/ASO operator skills — research branch (2026-11-23)
 - Added 4 purpose-separated Codex skills, 4 deep operational manuals, 3 offline evidence validators, 4 illustrative fixtures and 20 new discovery regression tests.
 - AEO: Google Featured Snippet/answer-selection distinction, task vs answer, true original evidence and snippet/FAQ deprecation gates.

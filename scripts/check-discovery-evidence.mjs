@@ -12,7 +12,7 @@ for(const name of skills){
   if(!body.includes('**Trigger:**')||!body.includes('## End-to-end workflow')||!body.includes('## Hard FAIL / UNKNOWN gates')||!body.includes('## Output contract')||!body.includes('https://'))errors.push('Incomplete execution contract '+name);
  }
 }
-const reports=['01-answer-engine-optimization.md','02-generative-engine-optimization.md','03-google-play-aso.md','04-apple-app-store-aso.md'];
+const reports=['01-answer-engine-optimization.md','02-generative-engine-optimization.md','03-google-play-aso.md','04-apple-app-store-aso.md','05-geo-provider-surface-atlas.md'];
 for(const file of reports)if(!exists('docs/discovery/'+file)||fs.readFileSync(path.join(root,'docs/discovery',file),'utf8').length<5500)errors.push('Missing/inadequate manual '+file);
 const records=read('sources/discovery_provider_claims_2026-11-23.json');
 if(records.claim_count!==32||records.claims.length!==32||records.full_body_count+records.excerpt_count!==32)errors.push('Provider evidence cardinality error');
@@ -32,6 +32,9 @@ if(reviewed.targets_reviewed_for_access!==reviewed.targets.length||reviewed.acce
 for(const r of records.claims){
  if(!watch.monitored.some(w=>w.url===r.source)&&!read('sources/official_sources.json').sources.some(w=>w.url===r.source))errors.push('Discovery source not registered '+r.id);
 }
+const atlas=read('sources/geo_provider_surface_atlas_2026-11-23.json');
+if(atlas.surface_count!==21||atlas.rows.length!==21||atlas.provider_source_unknown!==8)errors.push('GEO surface atlas cardinality/provenance mismatch');
+for(const x of atlas.rows){if(x.source_status==='UNKNOWN_PROVIDER_SOURCE' && x.source!==null)errors.push('UNKNOWN provider has invented source '+x.id); if(x.source!==null && !x.source.startsWith('https://'))errors.push('Invalid GEO provider source '+x.id); if(!x.measurement||!x.scope)errors.push('Missing GEO surface measurement/scope '+x.id);}
 const critical=['scripts/audit-aso-listing.mjs','scripts/audit-answer-page.mjs','scripts/evaluate-ai-citations.mjs','tests/discovery-skills.test.mjs'];
 for(const p of critical)if(!exists(p))errors.push('Missing executable / tests '+p);
 if(errors.length){console.error('FAIL discovery evidence:\n'+errors.join('\n'));process.exitCode=1;}

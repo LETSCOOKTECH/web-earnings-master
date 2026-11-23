@@ -55,3 +55,6 @@ description: "Operate evidence-driven GEO for Google AI Mode, ChatGPT Search, Cl
 - `docs/foundations/15-generative-retrieval-agent-internals.md`
 
 **Evidence state:** Source cited → exact provider scope/time verified → mechanism/implementation tested → independently reviewed → (only with owner credentials) live account result. Scorecards without this sequence are planning signals, not completed discovery results.
+
+## Multi-engine and regional coverage gate
+Read `sources/geo_provider_surface_atlas_2026-11-23.json` and `docs/discovery/05-geo-provider-surface-atlas.md` for 21 separate consumer/model/search surfaces. Brave AI Answers, Kagi Assistant, DuckDuckGo Search Assist, Duck.ai and Baidu AI Search have source-specific mechanisms distinct from Google/ChatGPT. Eight other provider surfaces are explicitly `UNKNOWN_PROVIDER_SOURCE` as of this baseline: source-first investigation is needed before asserting crawl/index/citation rules. Never substitute chatbot model name for its search product, nor imply a single AI ranking algorithm. Provider evidence statuses mean original body, indexed excerpt, product contrast or unknown—not guaranteed ranking. Add new provider only with current first-party body and a falsifiable citation/referral plan.

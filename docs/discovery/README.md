@@ -37,3 +37,5 @@ For each consequential change: verify today's provider original in the actual ju
 - Chrome WebMCP/Agentic Browsing is experimental and optional, not a Google Search ranking score.
 
 Release status remains DRAFT until the PR passes CI and reviewed current sources. No audited source guarantees AdSense, app approval, rank #1, AI citation or revenue.
+
+- [05 — Multi-provider AI/search source atlas](05-geo-provider-surface-atlas.md): 21 distinct engine surfaces with exact source confidence; eight retrieval sources are currently explicitly UNKNOWN. Dataset: `sources/geo_provider_surface_atlas_2026-11-23.json`.

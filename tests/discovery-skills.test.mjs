@@ -25,7 +25,7 @@ test('4 new specialized Codex skills have meaningful instructions and official s
 test('28 existing plus four new skill manifests and 4 deep discovery manuals exist',()=>{
  const names=fs.readdirSync(path.join(root,'.agents/skills'),{withFileTypes:true}).filter(e=>e.isDirectory());
  assert.equal(names.length,32);
- for(const f of ['01-answer-engine-optimization.md','02-generative-engine-optimization.md','03-google-play-aso.md','04-apple-app-store-aso.md']){
+ for(const f of ['01-answer-engine-optimization.md','02-generative-engine-optimization.md','03-google-play-aso.md','04-apple-app-store-aso.md','05-geo-provider-surface-atlas.md']){
   const s=fs.readFileSync(path.join(root,'docs/discovery',f),'utf8');
   assert.ok(s.length>5500);
  }
@@ -153,4 +153,23 @@ test('integrated discovery evidence contract script passes and never claims live
  const r=spawnSync(process.execPath,['scripts/check-discovery-evidence.mjs'],{cwd:root,encoding:'utf8'});
  assert.equal(r.status,0,r.stdout+'\n'+r.stderr);
  assert.match(r.stdout,/NO live ranking approval claims/);
+});
+
+test('21 distinct GEO engine surfaces preserve unknown provider retrieval sources',()=>{
+ const a=read('sources/geo_provider_surface_atlas_2026-11-23.json');
+ assert.equal(a.surface_count,21);assert.equal(a.rows.length,21);assert.equal(a.provider_source_unknown,8);
+ assert.equal(new Set(a.rows.map(x=>x.id)).size,21);
+ for(const p of a.rows){
+  assert.ok(p.measurement&&p.owner_controls&&p.scope);
+  if(p.source_status==='UNKNOWN_PROVIDER_SOURCE')assert.equal(p.source,null);
+  else assert.ok(p.source.startsWith('https://'));
+ }
+});
+test('GEO engine atlas distinguishes Search from Gemini/ChatGPT API and Kagi/Duck.ai modes',()=>{
+ const a=read('sources/geo_provider_surface_atlas_2026-11-23.json').rows;
+ assert.notEqual(a.find(x=>x.id==='GOOGLE-AIM').retrieval_route,a.find(x=>x.id==='GOOGLE-GEMINI').retrieval_route);
+ assert.notEqual(a.find(x=>x.id==='OPENAI-CHATGPT-SEARCH').retrieval_route,a.find(x=>x.id==='OPENAI-API-WEBSEARCH').retrieval_route);
+ assert.ok(a.some(x=>x.id==='KAGI-ASSISTANT'));
+ assert.ok(a.some(x=>x.id==='DUCK-AI-CHAT'));
+ assert.ok(a.some(x=>x.id==='BAIDU-AI'));
 });

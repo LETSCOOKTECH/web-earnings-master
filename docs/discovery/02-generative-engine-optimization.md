@@ -60,3 +60,6 @@ Experiment candidate: Publish primary benchmark showing AVIF->JPG color preserva
 
 ## 7. Source-monitoring and owner-limited gates
 Research source baseline: `sources/discovery_provider_claims_2026-11-23.json`. Monitor provider official docs via `sources/foundation_refresh_targets.json`, but a hash difference is a review signal only. Actual GSC, Bing Webmaster, LLM analytics, and site server logs require authorized credentials. If absent mark `UNKNOWN_EXTERNAL`. Only reviewer-approved tests/skills changes are production truth.
+
+## 8. Regional/alternative AI engines and provider source confidence
+The structured `sources/geo_provider_surface_atlas_2026-11-23.json` tracks 21 different AI answer/search surfaces, including Brave Answer with AI (independent Brave Search index), Kagi Assistant (optional Kagi Search grounding), DuckDuckGo Search Assist (aggregated sources), Duck.ai chat (distinct), and Baidu AI Search (site-owner AI traffic portal). **Eight other model/assistant products remain UNKNOWN** until first-party retrieval docs and actual behavior are verified. Read `docs/discovery/05-geo-provider-surface-atlas.md` before asserting universal GEO controls. A model name or marketing source list does not disclose search index or ranking weight.

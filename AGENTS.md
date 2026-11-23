@@ -75,3 +75,5 @@ Invoke only the specialist needed, never all SEO manuals at once:
 - **`web-aso-apple-app-store`** → iOS/iPadOS store Search; Apple 100 **UTF-8 byte** keywords, 30-char name/subtitle, 70 keyword-searchable custom product pages and native experiments.
 - **`web-app-store-discovery`** routes mixed Play/Apple comparison and refuses store-ranking claims if only a website/PWA exists.
 References: `docs/discovery/01-answer-engine-optimization.md` through `04-apple-app-store-aso.md`; research source evidence: `sources/discovery_provider_claims_2026-11-23.json`. Offline tools `scripts/audit-answer-page.mjs`, `audit-aso-listing.mjs`, `evaluate-ai-citations.mjs` are **bounded QA**, not actual provider rankings/approvals. Reopen primary docs before consequential changes. No fake ratings, click farms, keyword doorway pages or synthetic citations.
+
+GEO provider coverage update: consult `docs/discovery/05-geo-provider-surface-atlas.md` / `sources/geo_provider_surface_atlas_2026-11-23.json` before asserting any assistant's crawler or ranking model. Some models have no verified public retrieval rule; mark UNKNOWN.
