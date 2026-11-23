@@ -13,7 +13,7 @@ export function validateRegistry(reg, skillNames){
  for(const name of actual)if(!set.has(name))errors.push('Missing contract: '+name);
  for(const name of set)if(!actual.has(name))errors.push('Orphan contract: '+name);
  for(const r of reg.skills){
-  for(const key of required)if(typeof r[key]!=='string'||r[key].trim().length<12)errors.push(r.id+': invalid '+key);
+  for(const key of required)if(typeof r[key]!=='string'||r[key].trim().length<(key==='id'||key==='category'?2:12))errors.push(r.id+': invalid '+key);
   if(/guarantee|100% rankings|#1 lock/i.test(r.deliverable||''))errors.push(r.id+': ungrounded guarantee');
  }
  return errors;
