@@ -30,3 +30,6 @@ description: "Validate real tool output correctness, browsers/devices, mobile ed
 
 ## Million-user quality is independent from a unit-test PASS (V5)
 For each tool run actual input/output oracle, corrupted/oversized/batch and low-RAM mobile tests, output reopening, optional cloud consent, no-hidden-upload network trace, cancellations, privacy retention, p95 and queue consistency. `web-browser-compute` owns browser implementation; `web-scale-reliability` owns traffic and failure load; `web-unit-economics-finops` checks costs. A theoretical MAU model or Playwright desktop WebKit fixture DOES NOT verify 1M real humans or actual iPhone Safari. `docs/architecture/04-scale-and-product-quality.md`.
+
+## V6 production and research handoff (2026-11-23)
+Before declaring 'full tool' or page ready, use actual output oracle, malformed samples, target phone/browser, privacy network trace, download reopening and server fallback. Forward checked value evidence to web-publisher-policy-eligibility; no UI screenshots as substitution.

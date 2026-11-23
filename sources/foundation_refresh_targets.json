@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-23.v5.1",
+  "version": "2026-11-23.v6",
   "intent": "Automated change *signals* only. Do not update policy semantics or provider eligibility without human/agent reading official source.",
   "monitored": [
     {
@@ -638,6 +638,214 @@
       "id": "vendor-vercel-flat-cdn",
       "category": "vendor",
       "url": "https://vercel.com/changelog/flat-rate-cdn-is-now-ga-for-pro-teams",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-2",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/12176698",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-3",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/7299563",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-4",
+      "category": "publisher",
+      "url": "https://support.google.com/publisherpolicies/answer/11112688",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-5",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/48182",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-6",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/1346295",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-7",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/16737",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-8",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/13554116",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-9",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/12171612",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-10",
+      "category": "publisher",
+      "url": "https://help.raptive.com/hc/en-us/articles/360032840891-Who-is-eligible-for-Raptive",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-11",
+      "category": "publisher",
+      "url": "https://www.mediavine.com/application-requirements/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-12",
+      "category": "publisher",
+      "url": "https://help.mediavine.com/why-mediavine-requires-exclusivity",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-13",
+      "category": "publisher",
+      "url": "https://www.journeymv.com/getting-started-with-journey-by-mediavine/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-14",
+      "category": "publisher",
+      "url": "https://docs.ezoic.com/docs/ezoicads/getting-started/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-15",
+      "category": "publisher",
+      "url": "https://www.media.net/legal/inventorypolicies/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-16",
+      "category": "publisher",
+      "url": "https://freestar.com/publisher-quality-requirements/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-17",
+      "category": "publisher",
+      "url": "https://help.monetag.com/en/articles/6726292-website-content-main-rules-for-publishers",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-18",
+      "category": "publisher",
+      "url": "https://adsterra.com/blog/set-up-publishers-dashboard/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-19",
+      "category": "publisher",
+      "url": "https://snigel.com/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-20",
+      "category": "publisher",
+      "url": "https://setupad.com/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-21",
+      "category": "publisher",
+      "url": "https://developers.google.com/publisher-tag/guides/get-started",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-adtech-22",
+      "category": "adtech",
+      "url": "https://iabtechlab.com/ads-txt/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-security-23",
+      "category": "security",
+      "url": "https://asvs.owasp.org/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-security-24",
+      "category": "security",
+      "url": "https://top10.owasp.org/2025/0x00_2025-Introduction/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-security-25",
+      "category": "security",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-accessibility-26",
+      "category": "accessibility",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-search-27",
+      "category": "search",
+      "url": "https://www.indexnow.org/documentation",
       "kind": "html",
       "semantic_review_required": true,
       "source_owner": "official_provider"

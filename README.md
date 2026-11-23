@@ -182,3 +182,6 @@ The discovery build introduces four **non-overlapping specialist skills**: `web-
 
 ## V5 architecture and million-user economics — buildable research, not hypothetical free hosting
 Six additional specialist skills guide execution placement, production-grade client-side code, bounded cloud jobs, cost modeling, 1M-MAU load testing and commercial host eligibility. See `docs/architecture/README.md`, `sources/architecture_rate_card_2026-11-23.json` and `scripts/model-tool-economics.mjs`. The scripts model **distinct visits, jobs, remote jobs and peak load** instead of calling 1M users 1M simultaneous jobs. They use dated first-party Cloudflare list prices and explicitly hypothetical external CPU/token rates; provider invoice, AdSense earnings, real browser correctness and actual 1M throughput remain unverified.
+
+## V6 source-governed fullstack, security and publisher eligibility
+Eight specialized skills join the 38 previously built (46 total). Deep manuals: `docs/v6/README.md`; 45 priority source claims and 15 monetization models accompany runnable but bounded page, network and security checks. No real deployed site, Google ranking, AdSense approval or 1M-user production benchmark has been certified.

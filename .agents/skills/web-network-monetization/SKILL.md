@@ -31,3 +31,6 @@ description: "Compare Monetag, Google AdSense, Journey/Mediavine, Raptive, Ezoic
 
 ## Ad revenue versus remote compute spend (V5)
 Do not compare estimated Ahrefs CPC or random eRPM against speculative API costs and conclude positive economics. Use authorized publisher net revenue and actual successful human tasks plus infrastructure/third-party bills. `web-unit-economics-finops` computes the break-even and `web-workload-architecture-router` can move supported operations local, apply quotas or disable an expensive free-tier workflow. Robots/SEO crawlers and automated AI agents aren't monetizable ad clicks. `docs/architecture/03-million-user-economics.md`.
+
+## V6 production and research handoff (2026-11-23)
+Route network fit and exclusive contract terms to web-monetization-network-operator; Raptive long-form/geo/age requirements and Mediavine revenue minimum do not ensure acceptance. Journey requirements changed 2026-11-18 and must be rechecked at action time. See docs/v6/04-publisher-networks-and-policy-engine.md.

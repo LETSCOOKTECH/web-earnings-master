@@ -30,3 +30,6 @@ description: "Secure low-cost Astro and browser-file processing while optimizing
 
 ## Denial-of-wallet and file resource boundaries (V5)
 Treat unrestricted CPU/GPU/API/queue jobs and URL-fetch SSRF as financial and security incidents. Require per-tenant weighted CPU credits, max bytes/pages/frames, remote call budgets, post-upload signature checks, sandbox egress restrictions, cost alerts AND hard admission stops; fallback may be unavailable rather than infinitely billed. A 128MB Cloudflare Worker is not a general 2GB transcode sandbox. Delegate heavy jobs to `web-conversion-job-platform` and load to `web-scale-reliability`. Primary: https://api-security.owasp.org/editions/2023/en/0xa4-unrestricted-resource-consumption/ and `docs/architecture/04-scale-and-product-quality.md`.
+
+## V6 production and research handoff (2026-11-23)
+Route ASVS 5 and Top 10:2025 threat model to web-security-assurance-asvs. Security issues include BOLA, SSRF, untrusted SVG/PDF/ZIP, data leaks to third-party ad scripts, supply chain and unbounded billable compute. A header-only score is not a full security audit.

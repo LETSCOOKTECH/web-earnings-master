@@ -25,7 +25,7 @@ test('source error is UNKNOWN, not fabricated semantic verification',()=>{
   assert.equal(c.mode,'UNVERIFIED');assert.notEqual(c.evidence,'FIRST_PARTY_BODY_OPENED');
  }
  const review=read('sources/foundation_source_review_2026-11-23.json');
- assert.equal(review.unverified_count,26);
+ assert.equal(review.unverified_count,50);
  assert.equal(review.targets.find(x=>x.id==='google-sc-generative-ai-control').body_access,'HTTP_429_INDEXED_CURRENT_TEXT_ONLY');
  assert.equal(review.targets.find(x=>x.id==='google-generative-ai-control-announcement').body_access,'CACHED_OFFICIAL_BODY_OLDER_THAN_CURRENT_INDEXED_UPDATE');
  assert.equal(review.targets.find(x=>x.id==='baidu-search-docs').body_access,'OFFICIAL_ORIGINAL_BODY_OPENED');

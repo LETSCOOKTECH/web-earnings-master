@@ -1,9 +1,9 @@
 {
-  "version": "2026-11-23.v5.1",
+  "version": "2026-11-23.v6",
   "meaning": "Dated source-body access audit; does not certify every policy sentence or auto-update instructions",
-  "targets_reviewed_for_access": 80,
-  "accessed_count": 54,
-  "unverified_count": 26,
+  "targets_reviewed_for_access": 106,
+  "accessed_count": 56,
+  "unverified_count": 50,
   "targets": [
     {
       "id": "google-search-updates",
@@ -804,6 +804,240 @@
       "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
       "change_control": "Recheck commercial-use terms, region, plan effective date before purchase or deployment",
       "risk": "New September 2026 flat-rate CDN scope"
+    },
+    {
+      "id": "v6-publisher-2",
+      "url": "https://support.google.com/adsense/answer/12176698",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-3",
+      "url": "https://support.google.com/adsense/answer/7299563",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-4",
+      "url": "https://support.google.com/publisherpolicies/answer/11112688",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-5",
+      "url": "https://support.google.com/adsense/answer/48182",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-6",
+      "url": "https://support.google.com/adsense/answer/1346295",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-7",
+      "url": "https://support.google.com/adsense/answer/16737",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-8",
+      "url": "https://support.google.com/adsense/answer/13554116",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-9",
+      "url": "https://support.google.com/adsense/answer/12171612",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-10",
+      "url": "https://help.raptive.com/hc/en-us/articles/360032840891-Who-is-eligible-for-Raptive",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from directly opened official source body reviewed; not a complete current policy or account/ranking certification.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-11",
+      "url": "https://www.mediavine.com/application-requirements/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-12",
+      "url": "https://help.mediavine.com/why-mediavine-requires-exclusivity",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from directly opened official source body reviewed; not a complete current policy or account/ranking certification.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-13",
+      "url": "https://www.journeymv.com/getting-started-with-journey-by-mediavine/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-14",
+      "url": "https://docs.ezoic.com/docs/ezoicads/getting-started/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-15",
+      "url": "https://www.media.net/legal/inventorypolicies/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-16",
+      "url": "https://freestar.com/publisher-quality-requirements/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-17",
+      "url": "https://help.monetag.com/en/articles/6726292-website-content-main-rules-for-publishers",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-18",
+      "url": "https://adsterra.com/blog/set-up-publishers-dashboard/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-19",
+      "url": "https://snigel.com/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-20",
+      "url": "https://setupad.com/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-publisher-21",
+      "url": "https://developers.google.com/publisher-tag/guides/get-started",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-adtech-22",
+      "url": "https://iabtechlab.com/ads-txt/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-security-23",
+      "url": "https://asvs.owasp.org/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-security-24",
+      "url": "https://top10.owasp.org/2025/0x00_2025-Introduction/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-security-25",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-accessibility-26",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
+    },
+    {
+      "id": "v6-search-27",
+      "url": "https://www.indexnow.org/documentation",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Official search excerpt or partial body only; full original current provider rule not verified.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Recheck original first-party source at action time and inspect effective region/account/contract."
     }
   ]
 }

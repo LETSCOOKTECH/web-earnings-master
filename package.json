@@ -1,6 +1,6 @@
 {
   "name": "web-earnings-master",
-  "version": "3.2.0-draft.1",
+  "version": "3.3.0-draft.1",
   "private": true,
   "type": "module",
   "engines": {
@@ -10,7 +10,7 @@
     "lint:skills": "node scripts/validate-skills.mjs",
     "audit:sources": "node scripts/check-sources.mjs",
     "audit:fixture": "node scripts/audit-static-site.mjs --dist tests/fixtures/site --origin https://fixture.example",
-    "test": "node --test tests/*.test.mjs && npm run lint:skills && npm run audit:sources && npm run audit:fixture && npm run audit:evidence && npm run audit:adstxt && npm run audit:intents && npm run audit:robots && npm run audit:discovery && npm run audit:architecture",
+    "test": "node --test tests/*.test.mjs && npm run lint:skills && npm run audit:sources && npm run audit:fixture && npm run audit:evidence && npm run audit:adstxt && npm run audit:intents && npm run audit:robots && npm run audit:discovery && npm run audit:architecture && npm run audit:v6",
     "audit:evidence": "node scripts/check-evidence.mjs --file templates/evidence-manifest.example.json",
     "audit:adstxt": "node scripts/audit-ads-txt.mjs --file tests/fixtures/ads.txt --seller google.com",
     "audit:intents": "node scripts/audit-page-intents.mjs --file templates/page-intents.example.json",
@@ -35,7 +35,12 @@
     "model:ai": "node scripts/model-tool-economics.mjs --scenario templates/architecture/scenarios/million-ai-token-tool.json",
     "audit:hosting": "node scripts/evaluate-hosting-options.mjs --file templates/architecture/hosting-choice.example.json",
     "audit:tool-architecture": "node scripts/assess-tool-architecture.mjs --file templates/architecture/tool-design-input.example.json",
-    "test:architecture": "node --test tests/architecture-economics.test.mjs"
+    "test:architecture": "node --test tests/architecture-economics.test.mjs",
+    "audit:v6": "node scripts/check-v6-evidence.mjs",
+    "test:v6": "node --test tests/v6-production.test.mjs",
+    "audit:publisher-page": "node scripts/audit-publisher-page.mjs --file templates/v6/page-example.json",
+    "audit:publisher-networks": "node scripts/evaluate-publisher-eligibility.mjs --file templates/v6/publisher-site-example.json",
+    "audit:web-security": "node scripts/audit-web-security-manifest.mjs --file templates/v6/security-example.json"
   },
   "description": "Evidence-first Codex skill engine for SEO/AEO/GEO/ASO, safe utility execution, million-user capacity and publisher-margin planning"
 }
