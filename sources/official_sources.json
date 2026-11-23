@@ -1,5 +1,5 @@
 {
-  "registry_version": "2026-11-23.v5.1",
+  "registry_version": "2026-11-23.v6",
   "checked_on": "2026-11-22",
   "notes": "Sources are link registry, not certification of current terms. Most URL locations were confirmed via public search on 2026-11-22; exact source text and relevance MUST be re-opened at execution time. Legacy entries may include unverified old paths. Mark such entries unverified until checked live.",
   "sources": [
@@ -1362,6 +1362,166 @@
       "review_every_days": 30,
       "authority": "first-party documentation",
       "verification": "Indexed provider excerpt only"
+    },
+    {
+      "id": "v6-court-1",
+      "category": "court",
+      "url": "https://www.justice.gov/atr/media/1398866/dl?inline=",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Selected original sections directly opened"
+    },
+    {
+      "id": "v6-publisher-2",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/12176698",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Indexed first-party search excerpt, full-body current review outstanding"
+    },
+    {
+      "id": "v6-publisher-7",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/16737",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Indexed first-party search excerpt, full-body current review outstanding"
+    },
+    {
+      "id": "v6-publisher-11",
+      "category": "publisher",
+      "url": "https://www.mediavine.com/application-requirements/",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Indexed first-party search excerpt, full-body current review outstanding"
+    },
+    {
+      "id": "v6-publisher-12",
+      "category": "publisher",
+      "url": "https://help.mediavine.com/why-mediavine-requires-exclusivity",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Selected original sections directly opened"
+    },
+    {
+      "id": "v6-publisher-14",
+      "category": "publisher",
+      "url": "https://docs.ezoic.com/docs/ezoicads/getting-started/",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Indexed first-party search excerpt, full-body current review outstanding"
+    },
+    {
+      "id": "v6-publisher-16",
+      "category": "publisher",
+      "url": "https://freestar.com/publisher-quality-requirements/",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Indexed first-party search excerpt, full-body current review outstanding"
+    },
+    {
+      "id": "v6-publisher-18",
+      "category": "publisher",
+      "url": "https://adsterra.com/blog/set-up-publishers-dashboard/",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Indexed first-party search excerpt, full-body current review outstanding"
+    },
+    {
+      "id": "v6-publisher-19",
+      "category": "publisher",
+      "url": "https://snigel.com/",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Indexed first-party search excerpt, full-body current review outstanding"
+    },
+    {
+      "id": "v6-publisher-20",
+      "category": "publisher",
+      "url": "https://setupad.com/",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Indexed first-party search excerpt, full-body current review outstanding"
+    },
+    {
+      "id": "v6-publisher-21",
+      "category": "publisher",
+      "url": "https://developers.google.com/publisher-tag/guides/get-started",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Indexed first-party search excerpt, full-body current review outstanding"
+    },
+    {
+      "id": "v6-adtech-22",
+      "category": "adtech",
+      "url": "https://iabtechlab.com/ads-txt/",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Indexed first-party search excerpt, full-body current review outstanding"
+    },
+    {
+      "id": "v6-security-23",
+      "category": "security",
+      "url": "https://asvs.owasp.org/",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Indexed first-party search excerpt, full-body current review outstanding"
+    },
+    {
+      "id": "v6-security-24",
+      "category": "security",
+      "url": "https://top10.owasp.org/2025/0x00_2025-Introduction/",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Indexed first-party search excerpt, full-body current review outstanding"
+    },
+    {
+      "id": "v6-security-25",
+      "category": "security",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Indexed first-party search excerpt, full-body current review outstanding"
+    },
+    {
+      "id": "v6-accessibility-26",
+      "category": "accessibility",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "purpose": "2026-11-23 V6 policy/security/source governance",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party provider or court exhibit",
+      "verification": "Indexed first-party search excerpt, full-body current review outstanding"
     }
   ]
 }

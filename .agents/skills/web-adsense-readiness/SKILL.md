@@ -28,3 +28,6 @@ description: "Check Google AdSense eligibility, account and site review, origina
 **Evidence needed:** Actual AdSense status, verified ownership, current policy, site usefulness, ads.txt.
 **Critical FAIL / UNKNOWN:** No approval claims from a static test or minimum articles/visits myth.
 **Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; the source watch's hash changes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
+
+## V6 production and research handoff (2026-11-23)
+Check site/account admission separately from page-by-page content and ad placement. Invoke web-publisher-policy-eligibility; no fixed word or article count gives approval. Confirm true tool output, site navigation and Publisher Policy for low/no publisher content. Ref docs/v6/03-page-quality-seo-publisher-gates.md.

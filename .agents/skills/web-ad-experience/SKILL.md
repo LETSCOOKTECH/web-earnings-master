@@ -27,3 +27,6 @@ description: "Implement restrained, policy-aware ad layouts and measurable user 
 **Evidence needed:** Live approved ad layout, CLS, mobile interaction, consent and task completion.
 **Critical FAIL / UNKNOWN:** No fake download/accidental-click layout and no live ad clicks during tests.
 **Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; the source watch's hash changes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
+
+## V6 production and research handoff (2026-11-23)
+Verify actual ad interaction against primary download, submit and file-picker controls. Prevent deceptive lookalikes, accidental clicks and CLS; verify consent and network script behavior. Delegate site/page policy to web-publisher-policy-eligibility and contract to web-monetization-network-operator.

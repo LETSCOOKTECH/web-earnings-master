@@ -1,0 +1,17 @@
+{
+  "name": "ILLUSTRATIVE utility tools website, no provider approval",
+  "site_type": "utility_tools",
+  "monthly_pageviews": 35000,
+  "annual_ad_revenue_usd": 0,
+  "domain_age_months": 3,
+  "tier1_geography_share": 0.2,
+  "organic_traffic_share": 0.48,
+  "majority_long_form_content": false,
+  "google_analytics_validated": false,
+  "live_content_tested": false,
+  "invalid_traffic_reviewed": false,
+  "consent_policy_reviewed": false,
+  "screens_without_publisher_content": false,
+  "exclusive_programmatic_network": null,
+  "actual_provider_accounts": {}
+}

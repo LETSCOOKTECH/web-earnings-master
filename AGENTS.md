@@ -83,3 +83,16 @@ GEO provider coverage update: consult `docs/discovery/05-geo-provider-surface-at
 **Zero-cost myth:** Local browser compute can avoid *server transformation* cost, but website assets, analytics, storage, user battery, quality, development and support still cost something. 1M MAU is not 1M concurrent cloud transcodes. No claim of readiness without real peak load/low-end device/output and budget evidence.
 **Commercial hosting:** Vercel Hobby officially restricts noncommercial use; GitHub Pages is not a free host for online business/commercial SaaS. Current plan conditions/AdSense business context must be verified before choosing "free" hosting. Supabase Auth MAU charges and Backblaze B2 egress/storage ratio can dominate apparent free savings.
 **Executable gates:** `node scripts/assess-tool-architecture.mjs --file templates/architecture/tool-design-input.example.json`, `node scripts/model-tool-economics.mjs --scenario templates/architecture/scenarios/million-hybrid-file-tools.json`, `node scripts/evaluate-hosting-options.mjs --file templates/architecture/hosting-choice.example.json` and `node scripts/check-architecture-evidence.mjs`. No provider has been deployed/tested for 1M actual humans here. Read `docs/architecture/README.md` and dated official pricing before decisions.
+
+## V6: complete production/research governance — 2026-11-23
+Eight new specialist skills (46 total):
+- `web-search-forensic-evidence`: trace Google ranking exhibits, Q*/NavBoost/RankEmbed/Trawler, source versus patents/leaks and current Search documentation; no guessed ranking weights.
+- `web-fullstack-production-executor`: working tool and complete frontend/backend build, design, CI and deploy evidence.
+- `web-frontend-experience-engineering`: correct user task UI, accessible initial HTML, browser results, quality of every page and ad UX.
+- `web-backend-api-engineering`: secure typed endpoints, databases, queues, auth, storage, cost ceilings and remote processing.
+- `web-security-assurance-asvs`: OWASP ASVS 5.0, Top 10:2025, file upload, SSRF/BOLA, dependency and ads third-party threat model; tests not checklists.
+- `web-publisher-policy-eligibility`: AdSense site review distinct from ad inventory/page review, ads.txt, CMP, invalid traffic and human utility.
+- `web-monetization-network-operator`: dated Raptive, Mediavine/Journey, Ezoic, Media.net, Freestar, Monetag, Adsterra, AdSense contract requirements; exclusivity/quality checks.
+- `web-release-observability-operator`: canary rollback, monitoring, origin/crawl, privacy and ads readiness with first-party evidence.
+Read `docs/v6/README.md`, `sources/v6_claims_2026-11-23.json` (45 priority uploaded claims) and `sources/v6_publisher_network_registry_2026-11-23.json` (15 business models).
+Offline audits: `scripts/audit-publisher-page.mjs`, `scripts/evaluate-publisher-eligibility.mjs`, `scripts/audit-web-security-manifest.mjs`, `scripts/check-v6-evidence.mjs`. Neither research nor local CI establishes search ranking, publisher approval, security certification or real profit. Do not create low-value mass keyword pages or deceptive ad placements.
