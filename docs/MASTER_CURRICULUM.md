@@ -47,3 +47,13 @@ Each major system is now paired with a deep source-specific chapter: three brows
 
 ## v2.3 skill/evidence closure records
 The original 21 skill bodies have been read and reviewed individually (see docs/audits/ORIGINAL_21_SKILLS_AUDIT_2026-11-23.md) and each contains a V2.3 production-evidence contract. Two additional foundation chapters cover first-party source semantics (19) and real owned HTTP/cross-browser laboratory (20). sources/verified_claims.json contains 48 dated provider assertions, plus 1 explicitly unverified Applebot source; 33 official URLs are watched for potential changes. No internal lab proves proprietary ranking algorithm weights, real Google/Bing indexation, AI source selection in external accounts or AdSense approval.
+
+
+## V4 dedicated AEO / GEO / ASO production decision routing (2026-11-23)
+Invoke only the specialist needed, never all SEO manuals at once:
+- **`web-aeo-answer-optimization`** → Google Featured Snippets, PAA, direct factual/procedural answers, answer quality, answer passage validation; index/rich-result eligibility via `web-technical-seo`.
+- **`web-generative-engine-optimization`** → Google AI Mode/Overviews, ChatGPT Search, Perplexity, Claude Search, Bing Copilot citations, prompting panel and real AI referrals; crawler eligibility via `web-ai-discovery`, retrieval theory via `web-ai-retrieval-lab`.
+- **`web-aso-google-play`** → real Android app Google Play keyword/title/description, keyword-targeted custom listings, device vitals, 2026 analytics and native experiments.
+- **`web-aso-apple-app-store`** → iOS/iPadOS store Search; Apple 100 **UTF-8 byte** keywords, 30-char name/subtitle, 70 keyword-searchable custom product pages and native experiments.
+- **`web-app-store-discovery`** routes mixed Play/Apple comparison and refuses store-ranking claims if only a website/PWA exists.
+References: `docs/discovery/01-answer-engine-optimization.md` through `04-apple-app-store-aso.md`; research source evidence: `sources/discovery_provider_claims_2026-11-23.json`. Offline tools `scripts/audit-answer-page.mjs`, `audit-aso-listing.mjs`, `evaluate-ai-citations.mjs` are **bounded QA**, not actual provider rankings/approvals. Reopen primary docs before consequential changes. No fake ratings, click farms, keyword doorway pages or synthetic citations.

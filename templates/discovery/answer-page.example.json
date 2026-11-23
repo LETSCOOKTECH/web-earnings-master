@@ -1,0 +1,25 @@
+{
+  "url": "https://example.org/tools/image-resizer",
+  "user_job": "Resize a JPEG photograph to 800 pixels wide on device",
+  "title": "Resize JPEG Images — Local Tool",
+  "h1": "Resize a JPEG Image",
+  "answer": {
+    "text": "Choose a JPEG, enter the output width, preview the dimensions, and download the result. The tool processes supported images locally."
+  },
+  "claims": [
+    {
+      "text": "JPEG input is supported",
+      "source_url": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API",
+      "evidence_checked_at": "2026-11-23",
+      "support_status": "supported"
+    }
+  ],
+  "http_status": 200,
+  "canonical_matches": true,
+  "robots_allowed": true,
+  "snippet_directive": "allowed",
+  "index_state": "unknown_external",
+  "task_required": true,
+  "task_output_tested": true,
+  "structured_data_claimed": false
+}

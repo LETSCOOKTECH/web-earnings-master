@@ -1,9 +1,9 @@
 {
-  "version": "2026-11-23.v3.2",
+  "version": "2026-11-23.v4",
   "meaning": "Dated source-body access audit; does not certify every policy sentence or auto-update instructions",
-  "targets_reviewed_for_access": 36,
-  "accessed_count": 34,
-  "unverified_count": 2,
+  "targets_reviewed_for_access": 53,
+  "accessed_count": 38,
+  "unverified_count": 15,
   "targets": [
     {
       "id": "google-search-updates",
@@ -364,6 +364,176 @@
       "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
       "change_control": "Task-time re-open + account/rollout verification required",
       "risk": "EXPERIMENTAL Chrome 150+ Agentic Browsing Lighthouse diagnostic; never claim Google Search rank factor"
+    },
+    {
+      "id": "aeo-featured-snippets",
+      "url": "https://developers.google.com/search/docs/appearance/featured-snippets",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "Google selection, not an optimized markup instruction"
+    },
+    {
+      "id": "aeo-snippet-controls",
+      "url": "https://developers.google.com/search/docs/appearance/snippet",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "nosnippet/max-snippet can affect eligibility"
+    },
+    {
+      "id": "google-genai-performance-report",
+      "url": "https://support.google.com/webmasters/answer/16984139",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "worldwide Aug 31 reporting, actual site account not verified"
+    },
+    {
+      "id": "bing-ai-citation-share",
+      "url": "https://blogs.bing.com/search/2026/6/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "Citation Share definitions need property/account validation"
+    },
+    {
+      "id": "bing-ai-topics-beta",
+      "url": "https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "BETA not universal"
+    },
+    {
+      "id": "google-play-ranking",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9958766",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "Play discovery weights not public"
+    },
+    {
+      "id": "google-play-listing-metadata",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9859152",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "30/80/4000 field bounds and policy"
+    },
+    {
+      "id": "google-play-custom-listings",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9867158",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "Keyword targeting eligibility/account scope"
+    },
+    {
+      "id": "google-play-reporting",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9859173",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "July 2026 metric denominator change"
+    },
+    {
+      "id": "google-play-listing-experiments",
+      "url": "https://support.google.com/googleplay/android-developer/answer/12053285",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "Store listing A/B not ranking proof"
+    },
+    {
+      "id": "google-play-vitals-2027",
+      "url": "https://developer.android.com/google/play/vitals",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "future Feb 2027 thresholds are not current enforcement"
+    },
+    {
+      "id": "apple-search-discovery",
+      "url": "https://developer.apple.com/app-store/discoverability/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from official original document were inspected; not exhaustive provider policy or account proof.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "Apple title keyword category plus behavior, undisclosed weights"
+    },
+    {
+      "id": "apple-product-page-metadata",
+      "url": "https://developer.apple.com/app-store/product-page/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from official original document were inspected; not exhaustive provider policy or account proof.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "promotional text does not contribute search ranking"
+    },
+    {
+      "id": "apple-app-store-keyword-bytes",
+      "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from official original document were inspected; not exhaustive provider policy or account proof.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "technical keywords field 100 bytes"
+    },
+    {
+      "id": "apple-searchable-custom-pages",
+      "url": "https://developer.apple.com/help/app-store-connect/create-custom-product-pages/configure-multiple-product-page-versions",
+      "reviewed_on": "2026-11-23",
+      "body_access": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "scope": "only selected claims from official original document were inspected; not exhaustive provider policy or account proof.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "up to 70, assigned keyword search visibility"
+    },
+    {
+      "id": "apple-app-store-acquisition",
+      "url": "https://developer.apple.com/help/app-store-connect-analytics/acquisition/acquisition",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "user conversion and source definitions"
+    },
+    {
+      "id": "apple-product-page-optimization",
+      "url": "https://developer.apple.com/help/app-store-connect/create-product-page-optimization-tests/overview-of-product-page-optimization/",
+      "reviewed_on": "2026-11-23",
+      "body_access": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "scope": "Indexed first-party search excerpt only; full original body not confirmed, do not claim full semantic review.",
+      "latest_status": "DATE_LIMITED_NOT_PERSISTENT",
+      "change_control": "Reopen original source and check account, locale, effective date before action",
+      "risk": "PPO test supports 3 treatments"
     }
   ]
 }
