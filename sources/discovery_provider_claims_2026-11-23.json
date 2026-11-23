@@ -31,7 +31,7 @@
     {
       "id": "A03",
       "domain": "AEO",
-      "claim": "Google removed FAQ rich results in 2026.",
+      "claim": "Google Search retired FAQ rich-result appearance in 2026; FAQ markup does not guarantee a Google featured answer.",
       "source": "https://developers.google.com/search/updates",
       "evidence": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
       "mode": "CURRENT",
