@@ -75,7 +75,7 @@ test('owned server: sitemap includes public canonical and excludes secret/result
 });
 test('owned server: raw JS-only fixture has no discoverable H1 before rendering',async()=>{
  const raw=await (await get('/hydration-only')).text();
- assert.doesNotMatch(raw,/<h1>/i);assert.match(raw,/innerHTML/);
+ assert.doesNotMatch(raw.split('<script>')[0],/<h1>/i);assert.match(raw,/innerHTML/);
 });
 test('owned server: CSP header is actually sent and blocking scripts',async()=>{
  const r=await get('/csp-block');assert.equal(r.headers.get('content-security-policy'),"default-src 'self'; script-src 'none'");

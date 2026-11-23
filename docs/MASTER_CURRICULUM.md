@@ -43,3 +43,7 @@ Use [foundation index](foundations/README.md) for full mechanics and tested unce
 
 ## Advanced browser/search research details
 Each major system is now paired with a deep source-specific chapter: three browser engine lineages (11), network protocols (12), first-principles search IR algorithms (13), cross-engine index and partnership differences (14), AI retrieval/citations/agents (15), official updates and future-effective controls (16), full production technical/search operations (17), adversarial evaluation coverage (18). Distinguish source-based published mechanism, open-source algorithm, local toy demonstration, external search observation and live site owner evidence; they are NOT equivalent. 26 watched official URLs and two Google changelog feeds provide automated reachability/hash signals after workflow merge, never automatic policy approval.
+
+
+## v2.3 skill/evidence closure records
+The original 21 skill bodies have been read and reviewed individually (see docs/audits/ORIGINAL_21_SKILLS_AUDIT_2026-11-23.md) and each contains a V2.3 production-evidence contract. Two additional foundation chapters cover first-party source semantics (19) and real owned HTTP/cross-browser laboratory (20). sources/verified_claims.json contains 46 dated provider assertions, plus 2 explicitly unverified; 32 official URLs are watched for potential changes. No internal lab proves proprietary ranking algorithm weights, real Google/Bing indexation, AI source selection in external accounts or AdSense approval.

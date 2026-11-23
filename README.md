@@ -155,3 +155,12 @@ For each change: cite a current source or test, explain the affected scope, upda
 Maintained by **LETSCOOKTECH**.
 
 </div>
+
+
+## v2.3 research reliability and real execution
+- **20 foundation chapters:** browser/network, protocol standards, search IR, global search engines, RAG/AI agents, 2026–27 changes, production SEO, adversarial cases, first-party-source verification (19), and real HTTP/browser lab (20).
+- **Original skills:** All 21 original Codex skill bodies individually audited and patched with scoped provider source entry points, evidence criteria, failure gates and routing. Seven complementary skills remain; total 28.
+- **Provider claims:** 46 dated, specific claims supported by inspected first-party documents; two cases explicitly inaccessible/unverified (Baidu/Applebot). No blanket claim to have read every source paragraph. `sources/verified_claims.json` is a history of checked claims, NOT automatically current.
+- **Official-source monitoring:** 32 pinned provider pages/feeds; schedule detects changes and can create a review GitHub issue AFTER workflow is on the default branch. The bot never rewrites live policy. Source review requires current official text, effective date, product, locale and evidence.
+- **Executable owned lab:** `npm test` exercises local real HTTP behavior, robots policy subset, response semantics, source/skill contracts, and previous audits. Separate `npm run lab:browsers` needs pinned Playwright and real Chromium, Firefox, WebKit via browser-specific GitHub Action. Tests prove those fixtures only, not any commercial index.
+- **Go/no-go:** See [Section 1 Acceptance](docs/SECTION1_ACCEPTANCE.md). No fake full-completion claim for external provider dashboards we do not have.

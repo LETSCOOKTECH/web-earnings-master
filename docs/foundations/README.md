@@ -53,3 +53,11 @@ This version is a first foundation expansion from the project continuity handoff
 
 ### Evidence labels and uncertainty
 Provider-doc-excerpt / original-body-inspected / scholarly reference / locally reproduced / first-party production observed / inferred / unknown. An IETF Internet-Draft is not an Internet Standard. A future effective date is not current compliance. A link health check is not a policy change. Open the actual updated provider text at task time.
+
+
+## Release v2.3 — verification and owned executable behavior
+19. [First-party source and change governance](19-provider-source-verification.md): claim evidence E0–E5, 46 dated first-party selected claims, two explicitly unverified, 32 monitored current documents, per-action mandatory live source reading, semantic review, correction and effective dates. The monitor creates a review queue only when the Actions workflow is running from default branch; a fingerprint is NOT a policy.
+20. [Actual owned HTTP and browser lab](20-owned-web-lab-and-robots.md): real Node server cases for redirects, 404/soft404, canonical vs noindex, robots, ETag, private 401, JavaScript hydration, CSP, and testable cross-browser Chromium, Firefox and WebKit.
+[Section 1 evaluation and outstanding external limits](../SECTION1_ACCEPTANCE.md) and [21 original skill audit](../audits/ORIGINAL_21_SKILLS_AUDIT_2026-11-23.md).
+
+**Run:** `npm test` (local HTTP/robots and skill/source checks), `npm run audit:research` (contracts), `npm run lab:browsers` (needs pinned Playwright; CI separate), `node scripts/watch-official-updates.mjs --live --limit 8` (source fetch/changed hash only).

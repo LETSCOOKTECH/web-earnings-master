@@ -1,5 +1,5 @@
 # 19 — First-party source verification, live-recheck contract and change-response protocol
-Date: 2026-11-23. This is an ENGINEERING CONTROL document, not a "we verified every sentence in the whole web" claim. Primary input: sources/verified_claims.json (46 discrete selected factual claims supported by opened official pages, plus 2 explicitly unverified), and sources/foundation_refresh_targets.json (26 priority URLs). The original 32 reference links and 92 general links remain navigation catalogs, NOT 100% semantically audited knowledge.
+Date: 2026-11-23. This is an ENGINEERING CONTROL document, not a "we verified every sentence in the whole web" claim. Primary input: sources/verified_claims.json (46 discrete selected factual claims supported by opened official pages, plus 2 explicitly unverified), and sources/foundation_refresh_targets.json (32 priority URLs). The original 32 reference links and 92 general links remain navigation catalogs, NOT 100% semantically audited knowledge.
 
 ## Canonical evidence levels
 E0 NO SOURCE: pure hypothesis or claim awaiting authoritative documentation.
@@ -64,3 +64,5 @@ Provider, product/surface, claim IDs, sources (old and new), exact effective dat
 
 ## Explicit unsupported claims
 "Search ranking is complete/guaranteed", "all 26 URLs were semantically read word-for-word", "all ~92 general sources fresh", "Google's exact model weights known", "all AI engines use the same crawler", "an unverified 429 means blocked by provider", "source-watch automatically rewrites our skills", "GitHub cron is active while PR is draft", "local Playwright proves Google indexed us" are NEVER allowed.
+
+**Identity control invariant:** USER-AGENT alone is insufficient to authenticate a crawler or hosted browser agent; follow current verified IP list or experimental HTTP signatures for the exact provider and purpose.

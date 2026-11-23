@@ -1,5 +1,5 @@
 # 20 — Owned HTTP/robots and real browser engine regression laboratory
-Date 2026-11-23. Lab code: scripts/owned-web-lab.mjs, scripts/robots-evaluator.mjs, tests/owned-web-lab.test.mjs, tests/browser-e2e.test.mjs. All network fixtures bind to 127.0.0.1 with OS-selected port: no third-party scraping, no live Search manipulation.
+Date 2026-11-23. Lab code: scripts/owned-web-lab.mjs, scripts/robots-evaluator.mjs, tests/owned-web-lab.test.mjs, tests/browser-e2e.mjs. All network fixtures bind to 127.0.0.1 with OS-selected port: no third-party scraping, no live Search manipulation.
 
 ## Why this matters
 A guide that merely says "check 404, robots, SPA and accessibility" can appear authoritative while misdiagnosing a broken real deployment. This lab sends actual HTTP requests to a controlled server and, when browser dependencies are installed, runs Chromium/Blink, Firefox/Gecko and WebKit browser builds. It proves behavior ONLY of this fixture and browser build. Do not call them Googlebot, mobile Safari or Bingbot.
@@ -44,7 +44,7 @@ node scripts/owned-web-lab.mjs (library exports only; use Node test)
 node --test tests/owned-web-lab.test.mjs
 npm install --no-save --ignore-scripts playwright@1.65.1
 npx playwright install --with-deps chromium firefox webkit
-node --test tests/browser-e2e.test.mjs
+node --test tests/browser-e2e.mjs
 
 ## How to build a genuine browser/search field experiment later
 For an actual site property, confirm user ownership. Snapshot DNS/TLS/CDN headers and actual robots, render in all 3 engines, check Search Console and Bing Webmaster properties, submit representative URLs, and monitor status and bot server logs. Distinguish indexed/crawled/discovered from rank and actual task conversion. The lab can flag site issues; no local or hosted test forces inclusion in a commercial search index.

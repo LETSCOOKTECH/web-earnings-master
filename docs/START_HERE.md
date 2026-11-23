@@ -32,3 +32,7 @@ This is the orchestration playbook. Skills are modular; execute the next highest
 
 ## Deep search and browser research shortcut
 See [deep foundation index](foundations/README.md). For how a browser works use chapters 11–12; for how retrieval/ranking works from first principles use chapter 13 and scripts/ir-reference-lab.mjs; for major worldwide search engines use chapter 14; for AI Search/agent grounding use chapter 15; for current 2026–27 policy updates use chapter 16; for integrated SEO/GEO/AEO runbook use chapter 17; for negative validation cases chapter 18. Run npm test and compare provider documents at the time of change. The source-watch cron is inactive until the draft PR is merged into default.
+
+
+## v2.3 prerequisites for moving from research to deployment
+Before claiming Search/revenue readiness read [Section 1 Acceptance](SECTION1_ACCEPTANCE.md), [dated source review](foundations/19-provider-source-verification.md), and [owned HTTP/browser lab](foundations/20-owned-web-lab-and-robots.md). `npm test` validates local contracts and HTTP cases; the separate browser Action validates Chromium, Firefox and WebKit with uploaded evidence when its actual run is green. Original 21 skills were individually audited and patched; active total 28. Product-specific Search Console, Bing and publisher account observations remain EXTERNAL evidence, not CI PASS.

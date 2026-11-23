@@ -1,10 +1,13 @@
 name: Real browser engine integration laboratory
 on:
+  push:
+    branches:
+      - 'research/search-web-foundations-2026-11-23'
   pull_request:
     paths:
       - 'scripts/owned-web-lab.mjs'
       - 'scripts/robots-evaluator.mjs'
-      - 'tests/browser-e2e.test.mjs'
+      - 'tests/browser-e2e.mjs'
       - 'tests/owned-web-lab.test.mjs'
       - '.github/workflows/browser-engine-e2e.yml'
       - 'package.json'
@@ -25,7 +28,7 @@ jobs:
           npm install --no-save --ignore-scripts playwright@1.65.1
           npx playwright install --with-deps chromium firefox webkit
       - name: Run local owned-server browser tests (all three engines)
-        run: node --test tests/browser-e2e.test.mjs
+        run: node --test tests/browser-e2e.mjs
       - name: Upload versioned evidence
         uses: actions/upload-artifact@v4
         if: always()

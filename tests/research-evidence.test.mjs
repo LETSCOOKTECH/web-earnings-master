@@ -32,5 +32,5 @@ test('user agent sniffing and private routes are denied as sufficient identity/s
  const ai=fs.readFileSync(path.join(root,'docs/foundations/19-provider-source-verification.md'),'utf8');
  assert.match(ai,/IP/);assert.match(ai,/USER-AGENT alone is insufficient/);
  const lab=fs.readFileSync(path.join(root,'docs/foundations/20-owned-web-lab-and-robots.md'),'utf8');
- assert.match(lab,/401/);assert.match(lab,/not Googlebot/);
+ assert.match(lab,/401/);assert.match(lab,/NEVER bot verification/);
 });
