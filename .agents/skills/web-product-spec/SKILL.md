@@ -28,3 +28,6 @@ One concise PRD (`templates/product-prd.md`), test matrix and expected metric fu
 **Evidence needed:** Acceptance examples with expected formats, error/boundaries, privacy and compute budget.
 **Critical FAIL / UNKNOWN:** A feature checklist without actual testable outputs is no approval.
 **Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
+
+## Costed and executable PRD gate (V5)
+Before freezing a feature spec, run `web-workload-architecture-router`; require average/p95 file bytes, CPU-seconds, browser RAM, output oracle, target device and cloud/consent route. Hand pricing to `web-unit-economics-finops` and capacity to `web-scale-reliability`. Reject "unlimited free conversion" with unbounded billable cloud CPU, or any format supported only as a marketing button. Each claimed feature must have a rights-cleared success/failure fixture and user recovery. `docs/architecture/02-client-and-media-pipelines.md`.

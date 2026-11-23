@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-23.v3.1",
+  "version": "2026-11-23.v6",
   "intent": "Automated change *signals* only. Do not update policy semantics or provider eligibility without human/agent reading official source.",
   "monitored": [
     {
@@ -262,6 +262,590 @@
       "id": "baidu-ai-traffic",
       "category": "analytics",
       "url": "https://ziyuan.baidu.com/aiflow/index",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-sc-generative-ai-control",
+      "category": "ai",
+      "url": "https://support.google.com/webmasters/answer/16908024",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-generative-ai-control-announcement",
+      "category": "ai",
+      "url": "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "chrome-agentic-browsing-score",
+      "category": "browser",
+      "url": "https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "aeo-featured-snippets",
+      "category": "answer",
+      "url": "https://developers.google.com/search/docs/appearance/featured-snippets",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "aeo-snippet-controls",
+      "category": "answer",
+      "url": "https://developers.google.com/search/docs/appearance/snippet",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-genai-performance-report",
+      "category": "ai",
+      "url": "https://support.google.com/webmasters/answer/16984139",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "bing-ai-citation-share",
+      "category": "ai",
+      "url": "https://blogs.bing.com/search/2026/6/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "bing-ai-topics-beta",
+      "category": "ai",
+      "url": "https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-play-ranking",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9958766",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-play-listing-metadata",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9859152",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-play-custom-listings",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9867158",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-play-reporting",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9859173",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-play-listing-experiments",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/12053285",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-play-vitals-2027",
+      "category": "appstore",
+      "url": "https://developer.android.com/google/play/vitals",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "apple-search-discovery",
+      "category": "appstore",
+      "url": "https://developer.apple.com/app-store/discoverability/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "apple-product-page-metadata",
+      "category": "appstore",
+      "url": "https://developer.apple.com/app-store/product-page/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "apple-app-store-keyword-bytes",
+      "category": "appstore",
+      "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "apple-searchable-custom-pages",
+      "category": "appstore",
+      "url": "https://developer.apple.com/help/app-store-connect/create-custom-product-pages/configure-multiple-product-page-versions",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "apple-app-store-acquisition",
+      "category": "appstore",
+      "url": "https://developer.apple.com/help/app-store-connect-analytics/acquisition/acquisition",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "apple-product-page-optimization",
+      "category": "appstore",
+      "url": "https://developer.apple.com/help/app-store-connect/create-product-page-optimization-tests/overview-of-product-page-optimization/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-workers-pricing",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-workers-limits",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/workers/platform/limits/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-pages-limits",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/pages/platform/limits/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-r2-pricing",
+      "category": "storage",
+      "url": "https://developers.cloudflare.com/r2/pricing/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-r2-direct-upload",
+      "category": "storage",
+      "url": "https://developers.cloudflare.com/r2/objects/upload-objects/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-r2-presigned",
+      "category": "security",
+      "url": "https://developers.cloudflare.com/r2/api/s3/presigned-urls/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-queues-pricing",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/queues/platform/pricing/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-queues-limits",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/queues/platform/limits/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-d1-pricing",
+      "category": "infrastructure",
+      "url": "https://developers.cloudflare.com/d1/platform/pricing/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-browser-upscaler-case",
+      "category": "browser",
+      "url": "https://web.dev/case-studies/ai-video-upscaler-case-study",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-browser-wasm-perf",
+      "category": "browser",
+      "url": "https://web.dev/articles/webassembly-performance-patterns-for-web-apps",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-opfs",
+      "category": "browser",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-browser-quotas",
+      "category": "browser",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-owasp-api4",
+      "category": "security",
+      "url": "https://api-security.owasp.org/editions/2023/en/0xa4-unrestricted-resource-consumption/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-aws-lambda-price",
+      "category": "infrastructure",
+      "url": "https://aws.amazon.com/lambda/pricing/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "architecture-core-web-vitals",
+      "category": "performance",
+      "url": "https://developers.google.com/search/docs/appearance/core-web-vitals",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-vercel-hobby",
+      "category": "vendor",
+      "url": "https://vercel.com/docs/plans/hobby",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-vercel-pricing",
+      "category": "vendor",
+      "url": "https://vercel.com/pricing",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-github-pages-commercial",
+      "category": "vendor",
+      "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-supabase-pricing",
+      "category": "vendor",
+      "url": "https://supabase.com/pricing",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-supabase-free-pause",
+      "category": "vendor",
+      "url": "https://supabase.com/kb/faqs/platform/free-postgres-for-side-projects",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-hetzner-pricing-change",
+      "category": "vendor",
+      "url": "https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-render-pricing",
+      "category": "vendor",
+      "url": "https://render.com/pricing",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-backblaze-storage",
+      "category": "vendor",
+      "url": "https://www.backblaze.com/cloud-storage/pricing",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-bunny-cdn",
+      "category": "vendor",
+      "url": "https://bunny.net/pricing",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-cloudfront-pricing",
+      "category": "vendor",
+      "url": "https://aws.amazon.com/cloudfront/pricing/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "vendor-vercel-flat-cdn",
+      "category": "vendor",
+      "url": "https://vercel.com/changelog/flat-rate-cdn-is-now-ga-for-pro-teams",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-2",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/12176698",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-3",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/7299563",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-4",
+      "category": "publisher",
+      "url": "https://support.google.com/publisherpolicies/answer/11112688",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-5",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/48182",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-6",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/1346295",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-7",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/16737",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-8",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/13554116",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-9",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/12171612",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-10",
+      "category": "publisher",
+      "url": "https://help.raptive.com/hc/en-us/articles/360032840891-Who-is-eligible-for-Raptive",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-11",
+      "category": "publisher",
+      "url": "https://www.mediavine.com/application-requirements/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-12",
+      "category": "publisher",
+      "url": "https://help.mediavine.com/why-mediavine-requires-exclusivity",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-13",
+      "category": "publisher",
+      "url": "https://www.journeymv.com/getting-started-with-journey-by-mediavine/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-14",
+      "category": "publisher",
+      "url": "https://docs.ezoic.com/docs/ezoicads/getting-started/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-15",
+      "category": "publisher",
+      "url": "https://www.media.net/legal/inventorypolicies/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-16",
+      "category": "publisher",
+      "url": "https://freestar.com/publisher-quality-requirements/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-17",
+      "category": "publisher",
+      "url": "https://help.monetag.com/en/articles/6726292-website-content-main-rules-for-publishers",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-18",
+      "category": "publisher",
+      "url": "https://adsterra.com/blog/set-up-publishers-dashboard/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-19",
+      "category": "publisher",
+      "url": "https://snigel.com/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-20",
+      "category": "publisher",
+      "url": "https://setupad.com/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-publisher-21",
+      "category": "publisher",
+      "url": "https://developers.google.com/publisher-tag/guides/get-started",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-adtech-22",
+      "category": "adtech",
+      "url": "https://iabtechlab.com/ads-txt/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-security-23",
+      "category": "security",
+      "url": "https://asvs.owasp.org/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-security-24",
+      "category": "security",
+      "url": "https://top10.owasp.org/2025/0x00_2025-Introduction/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-security-25",
+      "category": "security",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-accessibility-26",
+      "category": "accessibility",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "v6-search-27",
+      "category": "search",
+      "url": "https://www.indexnow.org/documentation",
       "kind": "html",
       "semantic_review_required": true,
       "source_owner": "official_provider"

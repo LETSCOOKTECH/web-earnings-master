@@ -1,6 +1,6 @@
 {
   "name": "web-earnings-master",
-  "version": "2.3.1",
+  "version": "3.3.0-draft.1",
   "private": true,
   "type": "module",
   "engines": {
@@ -10,7 +10,7 @@
     "lint:skills": "node scripts/validate-skills.mjs",
     "audit:sources": "node scripts/check-sources.mjs",
     "audit:fixture": "node scripts/audit-static-site.mjs --dist tests/fixtures/site --origin https://fixture.example",
-    "test": "node --test tests/*.test.mjs && npm run lint:skills && npm run audit:sources && npm run audit:fixture && npm run audit:evidence && npm run audit:adstxt && npm run audit:intents && npm run audit:robots",
+    "test": "node --test tests/*.test.mjs && npm run lint:skills && npm run audit:sources && npm run audit:fixture && npm run audit:evidence && npm run audit:adstxt && npm run audit:intents && npm run audit:robots && npm run audit:discovery && npm run audit:architecture && npm run audit:v6",
     "audit:evidence": "node scripts/check-evidence.mjs --file templates/evidence-manifest.example.json",
     "audit:adstxt": "node scripts/audit-ads-txt.mjs --file tests/fixtures/ads.txt --seller google.com",
     "audit:intents": "node scripts/audit-page-intents.mjs --file templates/page-intents.example.json",
@@ -22,7 +22,25 @@
     "audit:research": "node scripts/check-research-evidence.mjs",
     "lab:owned": "node --test tests/owned-web-lab.test.mjs",
     "lab:browsers": "node --test tests/browser-e2e.mjs",
-    "gate:action-sources": "node scripts/require-action-time-sources.mjs"
+    "gate:action-sources": "node scripts/require-action-time-sources.mjs",
+    "audit:aeo": "node scripts/audit-answer-page.mjs --file templates/discovery/answer-page.example.json",
+    "audit:aso:play": "node scripts/audit-aso-listing.mjs --file templates/discovery/google-play.example.json",
+    "audit:aso:apple": "node scripts/audit-aso-listing.mjs --file templates/discovery/apple-app-store.example.json",
+    "eval:geo": "node scripts/evaluate-ai-citations.mjs --file templates/discovery/ai-citation-batch.example.json",
+    "test:discovery": "node --test tests/discovery-skills.test.mjs",
+    "audit:discovery": "node scripts/check-discovery-evidence.mjs",
+    "audit:architecture": "node scripts/check-architecture-evidence.mjs",
+    "model:local": "node scripts/model-tool-economics.mjs --scenario templates/architecture/scenarios/million-browser-local.json",
+    "model:hybrid": "node scripts/model-tool-economics.mjs --scenario templates/architecture/scenarios/million-hybrid-file-tools.json",
+    "model:ai": "node scripts/model-tool-economics.mjs --scenario templates/architecture/scenarios/million-ai-token-tool.json",
+    "audit:hosting": "node scripts/evaluate-hosting-options.mjs --file templates/architecture/hosting-choice.example.json",
+    "audit:tool-architecture": "node scripts/assess-tool-architecture.mjs --file templates/architecture/tool-design-input.example.json",
+    "test:architecture": "node --test tests/architecture-economics.test.mjs",
+    "audit:v6": "node scripts/check-v6-evidence.mjs",
+    "test:v6": "node --test tests/v6-production.test.mjs",
+    "audit:publisher-page": "node scripts/audit-publisher-page.mjs --file templates/v6/page-example.json",
+    "audit:publisher-networks": "node scripts/evaluate-publisher-eligibility.mjs --file templates/v6/publisher-site-example.json",
+    "audit:web-security": "node scripts/audit-web-security-manifest.mjs --file templates/v6/security-example.json"
   },
-  "description": "Private evidence-first Codex skills for SEO, AI discovery, Astro, AdSense and website revenue"
+  "description": "Evidence-first Codex skill engine for SEO/AEO/GEO/ASO, safe utility execution, million-user capacity and publisher-margin planning"
 }

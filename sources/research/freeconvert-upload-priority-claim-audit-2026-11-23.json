@@ -1,0 +1,441 @@
+{
+  "version": "v3.1-priority-claims-2026-11-23",
+  "source_upload": "Pasted text(4).txt",
+  "source_chars": 84607,
+  "scope": "32 high-impact claims selected for first-party audit; DOES NOT CERTIFY ALL sentences, quantitative models, vendor source links, code CVEs or security disclosures in uploaded report.",
+  "sources_rechecked_at": "2026-11-23",
+  "counts": {
+    "REFUTED_AS_CAUSAL": 12,
+    "DOCUMENTED_WITH_LIMITS": 6,
+    "UNVERIFIED_EXTERNAL": 10,
+    "HYPOTHESIS": 2,
+    "PUBLIC_OBSERVED": 2
+  },
+  "records": [
+    {
+      "id": "U01",
+      "source_section": "URL Taxonomy Architecture",
+      "user_report_claim": "Root-depth /mp4-to-mp3 directly amplifies rankings or PageRank relative to /tools/audio/mp4-to-mp3",
+      "verdict": "REFUTED_AS_CAUSAL",
+      "technical_reassessment": "No official Google support for a direct ranking boost from fewer URL path segments. Google says URL path keywords alone hardly affect ranking and directories can help group large sites.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+        "https://developers.google.com/search/docs/crawling-indexing/url-structure"
+      ],
+      "missing_verification": "Build equivalent usable URL/graph fixture varying URL path and internal click distance independently; search outcome still unknown.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U02",
+      "source_section": "URL Taxonomy Architecture",
+      "user_report_claim": "Descriptive clean URL slugs help users and crawlers interpret destination",
+      "verdict": "DOCUMENTED_WITH_LIMITS",
+      "technical_reassessment": "Descriptive human-readable URLs recommended for UX and breadcrumb display, not guaranteed extra rank.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+        "https://developers.google.com/search/docs/crawling-indexing/url-structure"
+      ],
+      "missing_verification": "Choose human-clear canonical slugs; do not use keyword repetitions.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U03",
+      "source_section": "Bidirectional Internal Link Meshes",
+      "user_report_claim": "Contextual internal anchor links help discovery and understanding",
+      "verdict": "DOCUMENTED_WITH_LIMITS",
+      "technical_reassessment": "Google explicitly uses links for finding pages/relevancy and recommends descriptive contextual internal links. No fixed page-count or link-quota advantage.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/crawling-indexing/links-crawlable"
+      ],
+      "missing_verification": "Verify real <a href> to each valuable task, click distance and no orphan important pages.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U04",
+      "source_section": "Bidirectional Internal Link Meshes",
+      "user_report_claim": "Every FreeConvert important tool is within two clicks",
+      "verdict": "UNVERIFIED_EXTERNAL",
+      "technical_reassessment": "Example nav shows many links but no complete live site graph or shortest-path traversal was executed.",
+      "official_or_public_sources": [
+        "https://www.freeconvert.com/mp4-to-mp3",
+        "https://developers.google.com/search/docs/crawling-indexing/links-crawlable"
+      ],
+      "missing_verification": "Authorized sample crawl and BFS from homepage over canonical pages with redirects resolved.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U05",
+      "source_section": "Cross-Domain Equity",
+      "user_report_claim": "Links to sister sites automatically guarantee ranking-equity transfer",
+      "verdict": "HYPOTHESIS",
+      "technical_reassessment": "Offsite links can carry signals, but precise PageRank impact, thematic fit and link-spam intent are unknown.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/appearance/ranking-systems-guide",
+        "https://developers.google.com/search/docs/essentials/spam-policies"
+      ],
+      "missing_verification": "Measure genuine human referrals, editorial relevance, source context and alternate cause.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U06",
+      "source_section": "Aged Exact-Match Domain",
+      "user_report_claim": "Domain age and exact-match text directly cause FreeConvert's #1 positions",
+      "verdict": "REFUTED_AS_CAUSAL",
+      "technical_reassessment": "Google's exact-match domain system limits undue credit; an aged domain alone or keyword-rich name is not a proven ranking formula.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/appearance/ranking-systems-guide",
+        "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      ],
+      "missing_verification": "Analyze dated link/brand/history separately; no age-as-rank multiplier.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U07",
+      "source_section": "Programmatic Doing Intent",
+      "user_report_claim": "Distinct functional file-pair tools can be useful indexable destinations",
+      "verdict": "DOCUMENTED_WITH_LIMITS",
+      "technical_reassessment": "Google policies allow useful distinct pages but warn against scaled/doorway pages designed to game rankings. A working button alone doesn't certify all thousands of routes.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/essentials/spam-policies",
+        "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+      ],
+      "missing_verification": "Record distinct input/output behavior, error handling, useful differences per URL, canonical and real user task tests.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U08",
+      "source_section": "Programmatic Doing Intent",
+      "user_report_claim": "Bulk URL creation is harmless whenever pages say different file formats",
+      "verdict": "REFUTED_AS_CAUSAL",
+      "technical_reassessment": "Google prohibits scaled content that primarily manipulates ranking and doorway variants that funnel users without distinct value.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/essentials/spam-policies",
+        "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+      ],
+      "missing_verification": "Block programmatic publication absent a distinct validated user job and actual output oracle.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U09",
+      "source_section": "Sitemap Architecture",
+      "user_report_claim": "FreeConvert likely exposes an inferred 45k–90k potential indexable-URL footprint based on page counts multiplied by locale variants",
+      "verdict": "UNVERIFIED_EXTERNAL",
+      "technical_reassessment": "This is explicitly an inference in the uploaded report, not measured sitemap or Google indexing data. Exact sitemap and owner GSC unavailable.",
+      "official_or_public_sources": [
+        "https://www.freeconvert.com/about",
+        "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+      ],
+      "missing_verification": "Read actual sitemap index/individual files and unique canonical URLs; only site owner GSC can support indexed subset.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U10",
+      "source_section": "Sitemap Architecture",
+      "user_report_claim": "Sitemap has 50,000 URL and 50 MB uncompressed limit per file",
+      "verdict": "DOCUMENTED_WITH_LIMITS",
+      "technical_reassessment": "This applies to individual sitemap files, not a proof FreeConvert uses any particular partitioning.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+      ],
+      "missing_verification": "Count locally generated canonical sitemap URLs and check file bytes before publish.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U11",
+      "source_section": "URL Taxonomy / Routes",
+      "user_report_claim": "/mp4-to-mp3 currently displays a real MP4-to-MP3 user journey and relevant links",
+      "verdict": "PUBLIC_OBSERVED",
+      "technical_reassessment": "Its public page exposes task title, input chooser, optional settings and extensive format links; no conversion result was tested.",
+      "official_or_public_sources": [
+        "https://www.freeconvert.com/mp4-to-mp3"
+      ],
+      "missing_verification": "Run legally permitted sample conversion and decode output before claiming successful functionality.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U12",
+      "source_section": "URL Slug Inconsistency",
+      "user_report_claim": "Prefix/noun route variations always count as separate optimized SEO wins",
+      "verdict": "HYPOTHESIS",
+      "technical_reassessment": "Without comparing content and Google-selected canonicals, such URLs can be duplicate or near duplicate.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+      ],
+      "missing_verification": "Record all variants, redirects, canonical, main body/action similarity and actual Google-selected canonical.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U13",
+      "source_section": "Google AI Mode & Crawler",
+      "user_report_claim": "Google AI Mode uses separate special URL depth ranking signals",
+      "verdict": "REFUTED_AS_CAUSAL",
+      "technical_reassessment": "Google says its AI search experiences use core Search ranking/quality systems and require ordinary indexed/snippet eligibility; no special URL depth optimization.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/appearance/ai-features",
+        "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+      ],
+      "missing_verification": "Validate Google Search index/snippet first, separate AI citation from query rank.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U14",
+      "source_section": "Google AI Mode & Crawler",
+      "user_report_claim": "AI Mode may generate related searches and retrieve relevant Search pages",
+      "verdict": "DOCUMENTED_WITH_LIMITS",
+      "technical_reassessment": "Google explicitly documents query fan-out and Search index RAG. It does not publish exact fan-out query list or final citation weights.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/appearance/ai-features",
+        "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+      ],
+      "missing_verification": "Build useful task/evidence page and measure reported AI appearances, citations and human referrals distinctly.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U15",
+      "source_section": "Google AI Mode & Crawler",
+      "user_report_claim": "One landing page for every possible AI fan-out query ensures citations",
+      "verdict": "REFUTED_AS_CAUSAL",
+      "technical_reassessment": "Google warns such page proliferation to influence AI answers can violate scaled-content policy; strong semantic systems handle synonyms.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "https://developers.google.com/search/docs/essentials/spam-policies"
+      ],
+      "missing_verification": "Group intent by real job, not AI prompt permutations; require unique outcome per indexed page.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U16",
+      "source_section": "Google AI Visibility",
+      "user_report_claim": "Google AI links are eligible only with special WebApplication structured data",
+      "verdict": "REFUTED_AS_CAUSAL",
+      "technical_reassessment": "Google says no special schema markup is needed for AI Mode/Overviews; normal Search index plus snippet eligibility.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/appearance/ai-features",
+        "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+      ],
+      "missing_verification": "Use schema only for truthful, supported rich-result uses, not as citation hack.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U17",
+      "source_section": "Structured Data",
+      "user_report_claim": "WebApplication/SoftwareApplication markup can provide eligible rich-result information",
+      "verdict": "DOCUMENTED_WITH_LIMITS",
+      "technical_reassessment": "Google supports SoftwareApplication and WebApplication as rich-result types with required fields and no guarantee of display; not a ranking formula.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/appearance/structured-data/software-app"
+      ],
+      "missing_verification": "Use only real relevant page/app info; do not invent ratings or prices; validate Google Rich Results Test.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U18",
+      "source_section": "Structured Data",
+      "user_report_claim": "FreeConvert lacks JSON-LD sitewide and thus loses AI citations",
+      "verdict": "UNVERIFIED_EXTERNAL",
+      "technical_reassessment": "Uploaded report only observed one extraction and explicitly did not parse all page <head> markup. Even absent JSON-LD would not establish lost citations.",
+      "official_or_public_sources": [
+        "https://www.freeconvert.com/mp4-to-mp3",
+        "https://developers.google.com/search/docs/appearance/structured-data/software-app",
+        "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+      ],
+      "missing_verification": "Inspect raw and rendered script[type=application/ld+json] across sampled pages; no causal attribution.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U19",
+      "source_section": "llms.txt",
+      "user_report_claim": "Publishing llms.txt produces a Google AI Mode visibility lift",
+      "verdict": "REFUTED_AS_CAUSAL",
+      "technical_reassessment": "Google Search says it ignores llms.txt and AI-only special files; other browser-agent tooling may separately inspect files.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+      ],
+      "missing_verification": "No Google Search ranking/AI bonus from llms.txt; only create for a documented non-Google consumer.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U20",
+      "source_section": "Lighthouse Agentic",
+      "user_report_claim": "Chrome Lighthouse agentic browsing audit is a normal Google Search ranking signal",
+      "verdict": "REFUTED_AS_CAUSAL",
+      "technical_reassessment": "Official Chrome says agentic category is experimental, needs Chrome 150+; it produces pass ratios not a rank score, and is not Google Search ranking.",
+      "official_or_public_sources": [
+        "https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring"
+      ],
+      "missing_verification": "Run as experimental agent UI interoperability diagnostic, not SEO growth KPI.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U21",
+      "source_section": "WebMCP",
+      "user_report_claim": "WebMCP is a universally supported mandatory browser/Google indexing requirement",
+      "verdict": "REFUTED_AS_CAUSAL",
+      "technical_reassessment": "Chrome documentation describes origin trial/early preview; Google Search says no extra AI Mode technical requirements.",
+      "official_or_public_sources": [
+        "https://developer.chrome.com/docs/ai/webmcp",
+        "https://developers.google.com/search/docs/appearance/ai-features"
+      ],
+      "missing_verification": "Progressively enhance agent workflow for supported browsers, preserve normal accessible form flow.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U22",
+      "source_section": "Behavioral Signals",
+      "user_report_claim": "FreeConvert's modeled bounce rate and NavBoost leak prove Google uses its exact dwell time to rank it first",
+      "verdict": "UNVERIFIED_EXTERNAL",
+      "technical_reassessment": "Schema field names, third-party aggregate bounce metrics and proprietary Google feature use/weights are distinct evidence classes. No causal proof.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/appearance/ranking-systems-guide"
+      ],
+      "missing_verification": "Do not encode NavBoost, Craps, ChromeInTotal numerical heuristics; optimize actual user task outcome.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U23",
+      "source_section": "Core Web Vitals",
+      "user_report_claim": "Astro 71% benchmark versus Nuxt 29% automatically proves faster FreeConvert alternative and higher Google rank",
+      "verdict": "REFUTED_AS_CAUSAL",
+      "technical_reassessment": "Framework-level population correlations are confounded; FreeConvert origin-level CrUX not inspected, and Google says passing CWV does not guarantee rankings.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/appearance/page-experience"
+      ],
+      "missing_verification": "Measure own real p75 CWV and same-device per-task performance, not framework market averages.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U24",
+      "source_section": "Sitemap & i18n",
+      "user_report_claim": "FreeConvert has 15 locale options and sample translated routes, with substantial localized footprint inferred",
+      "verdict": "UNVERIFIED_EXTERNAL",
+      "technical_reassessment": "Visible language variants exist, but accurate translations, reciprocal hreflang, canonicalization and Google-selected indexed locale coverage were not verified.",
+      "official_or_public_sources": [
+        "https://www.freeconvert.com/about",
+        "https://developers.google.com/search/docs/specialty/international/localized-versions"
+      ],
+      "missing_verification": "Crawl representative locales, translation QA, reciprocal hreflang, canonical; inspect owned property where possible.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U25",
+      "source_section": "Ad Revenue",
+      "user_report_claim": "Fathom estimated $292k/mo or scaled $442k/mo is FreeConvert's actual audited AdSense income",
+      "verdict": "UNVERIFIED_EXTERNAL",
+      "technical_reassessment": "Models assume page RPM, all-channel visit estimates and pages/session, not publisher statements. Ad Manager/Prebid ad-tech presence does not equal verified AdSense revenue.",
+      "official_or_public_sources": [],
+      "missing_verification": "Do not state company profit/AdSense; label modeling scenario with sensitivity and all missing cost data.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U26",
+      "source_section": "File Processing Costs",
+      "user_report_claim": "Astro plus static CDN and client-local conversion yields a modeled 99.9% gross margin even at massive conversion volumes",
+      "verdict": "REFUTED_AS_CAUSAL",
+      "technical_reassessment": "Avoiding server transcoding is real possible cost savings, but the supplied illustrative model omits multiple costs, error/retry distributions, distribution, human support, security, vendor and on-device resource economics.",
+      "official_or_public_sources": [],
+      "missing_verification": "Use net unit-cost ledger: conversions per device, effective byte processing, hosting/ops costs, SLA, error support and ad revenue.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U27",
+      "source_section": "Browser-Local Privacy",
+      "user_report_claim": "Client-side conversion automatically guarantees no user-file bytes are sent to any network",
+      "verdict": "UNVERIFIED_EXTERNAL",
+      "technical_reassessment": "A claim about network behavior needs actual instrumentation; analytics, uploads, crash logs or remote fallback may still transmit content.",
+      "official_or_public_sources": [],
+      "missing_verification": "Offline with network interception, verify no content requests, worker isolation, third-party scripts, output correctness and explicit fallback status.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U28",
+      "source_section": "AI Tool Clicks",
+      "user_report_claim": "AI Mode necessarily sends traffic to online converters because AI cannot process files",
+      "verdict": "REFUTED_AS_CAUSAL",
+      "technical_reassessment": "Some agents can execute code, call external conversion APIs, or process user content without clicking a public webpage; referral is a measured outcome not a necessity.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/appearance/ai-features"
+      ],
+      "missing_verification": "Measure explicit source citations, referrals and completed jobs; do not treat AI-mode page eligibility as guaranteed human sessions.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U29",
+      "source_section": "Sister Product Portfolio",
+      "user_report_claim": "FreeConvert's public navigation links to other specialized utility sites",
+      "verdict": "PUBLIC_OBSERVED",
+      "technical_reassessment": "Visible navigation includes ImageResizer, PhotoJoiner and several other task links, but external traffic/ranking transfer unknown.",
+      "official_or_public_sources": [
+        "https://www.freeconvert.com/about",
+        "https://www.freeconvert.com/mp4-to-mp3"
+      ],
+      "missing_verification": "Record contextual actual links/traffic source, not an automatic PageRank equity claim.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U30",
+      "source_section": "Ads & UX",
+      "user_report_claim": "A one-page heavy ad/tracker scan and population-wide Nuxt/Core-Web-Vitals statistics prove FreeConvert's origin-level Core Web Vitals or ranking disadvantage",
+      "verdict": "UNVERIFIED_EXTERNAL",
+      "technical_reassessment": "A single third-party network trace and framework aggregates cannot establish site-level p75 field CWV or attributable Search ranking impact without actual URL/origin CrUX and controlled tests.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/appearance/page-experience"
+      ],
+      "missing_verification": "Measure controlled consent/account-specific scripts, p75 INP, CLS, user task completion and real ad eligibility.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U31",
+      "source_section": "AI Visibility",
+      "user_report_claim": "A third-party AI-readiness score proves bots are allowed and actual citations occurred",
+      "verdict": "UNVERIFIED_EXTERNAL",
+      "technical_reassessment": "Numerical vendor readiness scores do not establish live crawler access, citation sources, indexing or causal impact.",
+      "official_or_public_sources": [
+        "https://developers.google.com/search/docs/appearance/ai-features"
+      ],
+      "missing_verification": "Observe current provider-specific verified bot logs, external citations and owned referral sessions.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    },
+    {
+      "id": "U32",
+      "source_section": "AdSense/Revenue",
+      "user_report_claim": "FreeConvert's ad-tech identifiers reveal verified AdSense approval and its take-home revenue",
+      "verdict": "UNVERIFIED_EXTERNAL",
+      "technical_reassessment": "GAM/Prebid/network calls demonstrate advertising technology presence, not connected publisher account details, contract, payout, policy center or profit.",
+      "official_or_public_sources": [],
+      "missing_verification": "Treat observed tags as ad-stack evidence only; never assert publisher status or earnings without owner records.",
+      "reviewed_on": "2026-11-23",
+      "note": "Verdict applies only to the specified causal or technical assertion, not every aspect of the 85KB uploaded report."
+    }
+  ]
+}

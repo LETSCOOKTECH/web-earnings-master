@@ -1,0 +1,190 @@
+{
+  "version": "2026-11-23.v5",
+  "checked_on": "2026-11-23",
+  "count": 18,
+  "full_body": 13,
+  "partial_excerpt": 5,
+  "claim_status": "Scoped external provider docs and selected bounded case study evidence, NOT live user billing, verified performance or universal best hosting",
+  "claims": [
+    {
+      "id": "ARCH-01",
+      "category": "PRICING",
+      "claim": "Cloudflare Workers paid account base is $5 per month, inclusive of 10 million requests and 30 million CPU-ms with different excess meters.",
+      "source": "https://developers.cloudflare.com/workers/platform/pricing/",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-23",
+      "caveat": "Does not include other Cloudflare services or negotiated account contracts.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-02",
+      "category": "PRICING",
+      "claim": "Cloudflare Workers Paid incremental requests $0.30 per million and CPU $0.02 per million CPU-milliseconds in Standard usage model.",
+      "source": "https://developers.cloudflare.com/workers/platform/pricing/",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-23",
+      "caveat": "2026 Standard Workers model only, not heavy transcode container compute.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-03",
+      "category": "LIMIT",
+      "claim": "Workers have 128 MB memory per isolate including JS heap and Wasm; Worker can handle concurrent invocations.",
+      "source": "https://developers.cloudflare.com/workers/platform/limits/",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-23",
+      "caveat": "Not '128MB per user' and not max size of a user's browser file.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-04",
+      "category": "LIMIT",
+      "claim": "Cloudflare Pages free plan states 20,000 assets and 25 MiB per static asset file.",
+      "source": "https://developers.cloudflare.com/pages/platform/limits/",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-23",
+      "caveat": "Limits apply to Pages project/free plan, not every hosting/CDN platform.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-05",
+      "category": "PRICING",
+      "claim": "R2 Standard list price is $0.015 per GB-month, $4.50 per million Class A, $0.36 per million Class B, zero direct R2 egress.",
+      "source": "https://developers.cloudflare.com/r2/pricing/",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-23",
+      "caveat": "No CDN/on-the-fly compute/inbound transfer/support cost implication.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-06",
+      "category": "PRICING",
+      "claim": "R2 Standard free tier 10GB-month, 1M Class A, 10M Class B monthly, and provider rounds billable units.",
+      "source": "https://developers.cloudflare.com/r2/pricing/",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-23",
+      "caveat": "Rate model approximates daily averaged usage and unit rounding; not exact invoice.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-07",
+      "category": "ARCHITECTURE",
+      "claim": "R2 upload guidance supports scoped browser presigned direct PUT to object store without proxying through Worker.",
+      "source": "https://developers.cloudflare.com/r2/objects/upload-objects/",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-23",
+      "caveat": "Must restrict object/key, TTL and read permission; direct upload itself does not ensure malware scanning.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-08",
+      "category": "PRICING",
+      "claim": "Queues Paid include 1M standard operations monthly, +$0.40 per 1M; messages are metered by 64KB chunks and normal process uses write/read/delete.",
+      "source": "https://developers.cloudflare.com/queues/platform/pricing/",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-23",
+      "caveat": "Retries and dead-letter queue change operation count and costs.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-09",
+      "category": "PRICING",
+      "claim": "D1 Paid bills row reads/writes and storage, not simply SQL query count; included 25B reads, 50M writes, 5GB storage.",
+      "source": "https://developers.cloudflare.com/d1/platform/pricing/",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-23",
+      "caveat": "Indexed vs table-scan row counts differ; local pricing/contract can change.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-10",
+      "category": "CASE_STUDY_OWNER_CLAIM",
+      "claim": "Public web.dev March 2026 case study reports browser WebGPU+WebCodecs app with 250K MAU and no server-side video processing cost.",
+      "source": "https://web.dev/case-studies/ai-video-upscaler-case-study",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-23",
+      "caveat": "Owner self-reported MAU and scope; DOES NOT prove free total hosting, every user device or our tool.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-11",
+      "category": "WEB_STANDARD",
+      "claim": "OPFS exists as an origin-private file system; worker use and temporary persistent storage are subject to browser conditions.",
+      "source": "https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-23",
+      "caveat": "Private to origin is not a guarantee of encryption, backups, no eviction or permanent persistence.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-12",
+      "category": "WEB_STANDARD",
+      "claim": "Browser storage quotas and eviction can raise QuotaExceededError and invalidate an OPFS-based design.",
+      "source": "https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-23",
+      "caveat": "Quota/persistence depends on browser/device and storage conditions.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-13",
+      "category": "SECURITY",
+      "claim": "OWASP identifies unrestricted API resource consumption as a security and cloud bill amplification risk.",
+      "source": "https://api-security.owasp.org/editions/2023/en/0xa4-unrestricted-resource-consumption/",
+      "evidence": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "checked_on": "2026-11-23",
+      "caveat": "Direct original page retrieval returned error; indexed source summary inspected; recheck at task time.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-14",
+      "category": "PRICING",
+      "claim": "AWS Lambda bills per request and memory-duration in GB-seconds; not equivalent to Workers request/CPU meters.",
+      "source": "https://aws.amazon.com/lambda/pricing/",
+      "evidence": "OFFICIAL_ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-23",
+      "caveat": "Region and tier/cold starts/architecture impact price; no live quote or comparison performed.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-15",
+      "category": "SEARCH",
+      "claim": "Google Core Web Vitals assess LCP, INP and CLS in field measurements, not whether the app handles a million conversions.",
+      "source": "https://developers.google.com/search/docs/appearance/core-web-vitals",
+      "evidence": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "checked_on": "2026-11-23",
+      "caveat": "Field p75 CWV performance is separate from job correctness, capacity or ad approval.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-16",
+      "category": "WEB_STANDARD",
+      "claim": "WebAssembly performance patterns encourage off-main-thread Web Workers and careful measured setup/reuse tradeoffs.",
+      "source": "https://web.dev/articles/webassembly-performance-patterns-for-web-apps",
+      "evidence": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "checked_on": "2026-11-23",
+      "caveat": "No guarantee all codecs performant in WASM or available on low-RAM phones.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-17",
+      "category": "LIMIT",
+      "claim": "Cloudflare Queues have platform limits and deployment distinctions; no arbitrary infinite backlog promise.",
+      "source": "https://developers.cloudflare.com/queues/platform/limits/",
+      "evidence": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "checked_on": "2026-11-23",
+      "caveat": "Need exact queue configuration, retry, retention, worker concurrency and billing checked.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    },
+    {
+      "id": "ARCH-18",
+      "category": "SECURITY",
+      "claim": "R2 presigned URLs grant temporary access for defined operations; the URL itself is a bearer capability.",
+      "source": "https://developers.cloudflare.com/r2/api/s3/presigned-urls/",
+      "evidence": "INDEXED_FIRST_PARTY_EXCERPT_ONLY",
+      "checked_on": "2026-11-23",
+      "caveat": "S3 API compatibility and current signature rules need original inspection.",
+      "scope": "Specific vendor product/account, time and plan; does not infer actual costs, task success, or a 1M MAU load test."
+    }
+  ]
+}

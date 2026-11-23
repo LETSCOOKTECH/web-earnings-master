@@ -1,5 +1,64 @@
 # Changelog
 
+## V6 — Forensic search, fullstack, publisher, OWASP, release skills (Nov 23 2026; research PR)
+- Added 8 specialized skills, 7 manuals and index, 45 upload-report priority audits, 15 monetization providers/models, 3 offline validators, 31 new regression tests and 106 official-source watch targets.
+- Separated court-disclosed signals from speculative ranking weights and Site/URL AdSense policy from network admission and real revenue; new security controls based on OWASP ASVS 5.0.
+- Live search/indexing, publisher account, real converter output, external security review and revenue remain UNKNOWN, not certified.
+
+
+
+## V5: real tool architecture / cost-to-serve / 1M MAU quality, 2026-11-23 (draft research branch)
+- Added six purpose-separated specialist Codex skills covering workload topology, browser native/WASM compute, consented cloud job pipeline, per-success FinOps economics, peak load reliability, and commercial hosting/vendor selection. Library 38 total on V5 branch.
+- Added six detailed architecture research manuals, dated Cloudflare Workers/R2/Queues/D1 source card, four distinct 1M MAU scenario fixtures and two additional architecture/vendor QA tools.
+- Added executable cost model for separate CPU/worker requests, file-ops, queue/retries, DB rows, AI tokens, direct/static egress and external CPU; unknown charges kept null rather than zero. Cloud-heavy example intentionally breaches declared budget.
+- Confirmed official Vercel Hobby noncommercial, GitHub Pages business/SaaS hosting restriction, Supabase Auth 1M MAU charges and Backblaze B2 3x stored-data egress; source/access statuses recorded.
+- Added security/quality gate routing from existing Astro, spec, validator, portfolio, monetization and security skills. No actual site deployed, 1M load run, codec oracle certified, or hosting bill observed.
+
+
+
+## V4.1 GEO regional/provider atlas — 2026-11-23 (draft research branch)
+- Extended generative-search skill with 21 provider/surface decision entries and a 5th deep manual; distinguishes Google AI Mode from Gemini, ChatGPT Search from API web search, Kagi Assistant, Brave AI Answers, DuckDuckGo Search Assist from Duck.ai, Baidu AI, and 8 unknown-sourced products.
+- Evidence classes are source body, official indexed excerpt, contrast-only, or UNKNOWN; no reverse-engineered hidden ranking weights or unsupported crawler claims.
+- Added two regression tests for differentiated retrieval routes, source state and count.
+
+
+
+## V4 AEO/GEO/ASO operator skills — research branch (2026-11-23)
+- Added 4 purpose-separated Codex skills, 4 deep operational manuals, 3 offline evidence validators, 4 illustrative fixtures and 20 new discovery regression tests.
+- AEO: Google Featured Snippet/answer-selection distinction, task vs answer, true original evidence and snippet/FAQ deprecation gates.
+- GEO: Google AI Mode/Gemini/ChatGPT Search/Claude/Perplexity/Bing/Copilot source/crawler/referral matrix; independent visible citations vs prompt samples vs real clicks.
+- Play ASO: current 30/80/4000 metadata bounds, keyword-targeted custom listings, July 2026 measurement definition changes and February 2027 FUTURE device memory thresholds.
+- Apple ASO: byte-accurate 100-byte keyword field (distinct from 30-character name/subtitle), <=70 searchable CPP keyword assignments and PPO experiment gates.
+- Added 32 explicit scoped official evidence claims and expanded source-monitoring target list with full-body versus excerpt evidence status. Preserved 21 original audited skills and 7 foundation skills (32 skills in draft total).
+- Existing routing and CI validation updated; actual provider ranking/approval and first-party owner metrics still unknown until connected property.
+
+
+## v3.2 — 2026-11-23 (research branch only; corrected current Google Search AI rollout)
+- Action-time official cross-check identified a stale Google Search Console Help cache describing a subset pilot, while the newer official announcement and indexed current Help page confirm **worldwide rollout on August 31, 2026** for Search generative AI inclusion control. Marked direct Help HTTP 429 and cached announcement uncertainty explicitly. Updated AI discovery skill, research dossier and tests. Property-specific settings still require owner authorization; inclusion is not a rank boost.
+- Expanded first-party documentation freshness monitor to 36 targets: Google Search Console AI control Help, dated Google announcement, experimental Chrome Lighthouse agentic scoring. Two added source pages have **incomplete latest direct-body evidence**; watchlist does not claim they are fully semantically verified. Added vetted `blog.google` host to read-only source allowlist.
+- Added 32 user-report priority claim assessments, six local URL-path-versus-link-graph regression tests and eight uploader audit tests; updated three existing skills without inventing proprietary ranking weights. Uploaded report is 84,607 chars; whole report not certified.
+
+
+
+## v3.1 uploaded FreeConvert fact-check — 2026-11-23 (research branch only)
+- Reopened current official Google Search URL structure, SEO guide, links, AI Mode/Overviews, generative AI guidance, ranking systems, spam policies, structured data and Chrome Lighthouse experimental agentic documentation.
+- Reviewed 32 selected high-impact causal/technical claims from the user-provided 85KB FreeConvert report; recorded explicit status, original section and external verification gaps. Full report not certified.
+- Corrected shallow URL depth = Google PageRank/rank hack; added runnable link-graph distance versus pathname segment diagnostic and six tests.
+- Upgraded three existing skills: web-technical-seo, web-ai-discovery and web-competitor-audit with falsifiable scope rules, no unsupported ranking/AI citations and current official source links.
+- Distinguished optional Chrome experimental Agentic Browsing from actual Google AI Mode eligibility; identified sources unavailable without competitor private GSC/AdSense.
+
+
+
+## v3 research intake — 2026-11-23 (separate research branch; no production skill rewrite)
+- FreeConvert observed product/acquisition/SEO footprint and named competitive comparisons from published official first-party pages and clearly labeled public Ahrefs/Semrush modeled estimates.
+- Explicit data access failure: connected premium Ahrefs Site Explorer reports Insufficient plan, so no raw traffic/keyword/refdomain exports claimed.
+- 24 scoped public/provider observations and 7 UNPROVEN causal hypotheses in sources/research/freeconvert-2026-11-23.json.
+- 84 open research questions across 12 dimensions in sources/research/website-growth-research-atlas.json with existing skill ownership and actual evidence acceptance rules.
+- Manual, adversarial, independently verified research → skill-upgrade protocol; first pass does not claim 100% SEO or AdSense outcomes.
+- Added structural tests for research provenance and non-fabrication.
+
+
+
 ## 2.3.1 — 2026-11-23 (per-action source evidence gate)
 - Added executable scripts/require-action-time-sources.mjs and seven negative/positive tests to reject stale, unverifiable, snippet-only and future-effective documentation when preparing consequential crawler/AI/ads/security changes.
 - Source evidence requires official URL, fresh UTC observation, bounded directly checked text, exact scope/section, effectivity, reviewer and real test/account result. Code validation checks structure/time, never semantic truth.

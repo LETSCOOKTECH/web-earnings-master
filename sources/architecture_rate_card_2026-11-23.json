@@ -1,0 +1,44 @@
+{
+  "version": "2026-11-23.v1",
+  "currency": "USD",
+  "scope": "ILLUSTRATIVE Cloudflare Workers PAID, R2 Standard, Queues and D1 global list prices from dated first-party docs; taxes, contract, plans, region and extras excluded",
+  "checked_on": "2026-11-23",
+  "source_urls": {
+    "workers": "https://developers.cloudflare.com/workers/platform/pricing/",
+    "r2": "https://developers.cloudflare.com/r2/pricing/",
+    "queues": "https://developers.cloudflare.com/queues/platform/pricing/",
+    "d1": "https://developers.cloudflare.com/d1/platform/pricing/",
+    "limits": "https://developers.cloudflare.com/workers/platform/limits/"
+  },
+  "workers_paid": {
+    "base_usd_per_month": 5,
+    "request_included": 10000000,
+    "request_usd_per_million": 0.3,
+    "cpu_ms_included": 30000000,
+    "cpu_usd_per_million_ms": 0.02
+  },
+  "r2_standard": {
+    "included_storage_gb_month": 10,
+    "storage_usd_per_gb_month": 0.015,
+    "free_class_a_ops": 1000000,
+    "class_a_usd_per_million_ops": 4.5,
+    "free_class_b_ops": 10000000,
+    "class_b_usd_per_million_ops": 0.36,
+    "egress_usd_per_gb": 0,
+    "billing_rounding_note": "Official provider rounds usage up to next billing unit; estimator gives continuous approximation. Real invoice may be higher due to billing increments and daily sampling."
+  },
+  "queues_paid": {
+    "free_operations": 1000000,
+    "usd_per_million_operations": 0.4,
+    "operation_chunk_bytes": 64000
+  },
+  "d1_paid": {
+    "included_rows_read": 25000000000,
+    "rows_read_usd_per_million": 0.001,
+    "included_rows_written": 50000000,
+    "rows_written_usd_per_million": 1,
+    "included_storage_gb_month": 5,
+    "storage_usd_per_gb_month": 0.75
+  },
+  "unpriced_external": "Do not assume zero for CPU containers, GPUs, AI tokens, paid CDN outside provider free static assets, outbound third-party data, support, developer time, taxes or enterprise contracts. Scenarios must explicitly provide numbers, or estimator emits UNKNOWN."
+}
