@@ -1,0 +1,300 @@
+{
+  "version": "foundation-2026-11-23",
+  "source_policy": "This registry tracks discovery/access, not continuing policy validity. Open exact body before each material action.",
+  "status_definitions": {
+    "opened": "Official document body reachable; claim-specific excerpt may need fresh read",
+    "excerpt_checked": "Original provider text for stated claim inspected during 2026-11-23 research",
+    "restricted": "JS-only or inaccessible for detailed claim",
+    "unverified": "Historical/known pointer; not read in current research"
+  },
+  "entries": [
+    {
+      "id": "mdn-browser",
+      "category": "browser",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/How_browsers_work",
+      "status": "opened",
+      "scope": "Browser rendering reference; engine behavior varies",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "rfc-http",
+      "category": "protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110",
+      "status": "opened",
+      "scope": "HTTP semantics; canonical specification",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "rfc-cache",
+      "category": "protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc9111",
+      "status": "opened",
+      "scope": "HTTP caching semantics",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "rfc-dns",
+      "category": "protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc1034",
+      "status": "opened",
+      "scope": "DNS concepts and delegation",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "rfc-robots",
+      "category": "protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc9309.html",
+      "status": "opened",
+      "scope": "Robots Exclusion Protocol normative spec",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "iana-tlds",
+      "category": "domains",
+      "url": "https://www.iana.org/domains/root/db",
+      "status": "opened",
+      "scope": "Delegated TLD root data",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "icann-registration",
+      "category": "domains",
+      "url": "https://www.icann.org/resources/pages/domain-name-registration-process-2023-11-02-en.html",
+      "status": "opened",
+      "scope": "Domain registrations and registrar role",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "google-search-works",
+      "category": "search",
+      "url": "https://developers.google.com/search/docs/fundamentals/how-search-works",
+      "status": "opened",
+      "scope": "Google crawling indexing serving distinct",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "google-ranking",
+      "category": "search",
+      "url": "https://developers.google.com/search/docs/appearance/ranking-systems-guide",
+      "status": "opened",
+      "scope": "Documented ranking systems not weight formula",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "google-canonical",
+      "category": "search",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+      "status": "opened",
+      "scope": "Canonical choice is signal-based",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "google-js",
+      "category": "search",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
+      "status": "opened",
+      "scope": "JS rendering caveats",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "google-spam",
+      "category": "search",
+      "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "status": "opened",
+      "scope": "Spam/content policies",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "google-country",
+      "category": "domains",
+      "url": "https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites",
+      "status": "opened",
+      "scope": "Regional site management",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "google-ai-features",
+      "category": "ai-search",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "status": "excerpt_checked",
+      "scope": "Query fan-out and AI Mode/Overview source behavior",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "google-ai-optimization",
+      "category": "ai-search",
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "status": "excerpt_checked",
+      "scope": "No required llms.txt/chunking for Google AI Search",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "google-ai-control",
+      "category": "ai-search",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/control-what-you-share",
+      "status": "excerpt_checked",
+      "scope": "Search generative inclusion control",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "google-genai-report",
+      "category": "analytics",
+      "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+      "status": "excerpt_checked",
+      "scope": "Aug 31 2026 worldwide roll-out per official update",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "google-search-api-nov",
+      "category": "analytics",
+      "url": "https://developers.google.com/search/blog/2026/11/search-analytics-api-update",
+      "status": "excerpt_checked",
+      "scope": "Nov 16 2026 expanded API filtering/reporting",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "google-common-bots",
+      "category": "crawlers",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+      "status": "opened",
+      "scope": "Google common bots and purpose tokens",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "google-verify",
+      "category": "crawlers",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/verify-google-requests",
+      "status": "opened",
+      "scope": "Verify authentic Google traffic",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "openai-bots",
+      "category": "crawlers",
+      "url": "https://developers.openai.com/api/docs/bots",
+      "status": "excerpt_checked",
+      "scope": "OAI-SearchBot GPTBot ChatGPT-User OAI-AdsBot purpose",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "anthropic-bots",
+      "category": "crawlers",
+      "url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "status": "excerpt_checked",
+      "scope": "ClaudeBot Claude-SearchBot Claude-User",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "perplexity-bots",
+      "category": "crawlers",
+      "url": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
+      "status": "excerpt_checked",
+      "scope": "Searchbot and user fetch; current IP source",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "bing-ai-report",
+      "category": "ai-search",
+      "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+      "status": "excerpt_checked",
+      "scope": "Feb 2026 AI citations preview metrics",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "chrome-webmcp",
+      "category": "agent",
+      "url": "https://developer.chrome.com/docs/ai/webmcp",
+      "status": "excerpt_checked",
+      "scope": "Proposed web standard, last updated Oct 7 2026",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "indexnow",
+      "category": "search",
+      "url": "https://www.indexnow.org/documentation",
+      "status": "opened",
+      "scope": "IndexNow update notification, not guarantee",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "duckduckgo-sources",
+      "category": "search",
+      "url": "https://duckduckgo.com/duckduckgo-help-pages/results/sources",
+      "status": "opened",
+      "scope": "Search provider partners and sources",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "google-play-aso",
+      "category": "aso",
+      "url": "https://support.google.com/googleplay/android-developer/answer/4448378",
+      "status": "opened",
+      "scope": "Play search discovery guidance",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "apple-aso",
+      "category": "aso",
+      "url": "https://developer.apple.com/app-store/search/",
+      "status": "opened",
+      "scope": "Apple App Store search discovery",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "bing-webmaster-guidelines",
+      "category": "search",
+      "url": "https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a",
+      "status": "restricted",
+      "scope": "JS-only during inspection, detailed text NOT verified",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "applebot",
+      "category": "crawlers",
+      "url": "https://support.apple.com/en-ie/119829",
+      "status": "unverified",
+      "scope": "Apple policy not successfully opened in this session",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    },
+    {
+      "id": "public-suffix",
+      "category": "domains",
+      "url": "https://publicsuffix.org/list/",
+      "status": "unverified",
+      "scope": "Live content not opened in this session",
+      "observed_on": "2026-11-23",
+      "semantic_review_required": true
+    }
+  ]
+}

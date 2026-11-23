@@ -2,6 +2,8 @@
 
 This is the orchestration playbook. Skills are modular; execute the next highest-risk gate first and revisit earlier steps when evidence changes.
 
+**Foundation prerequisite:** For underlying mechanics of browser/HTTP/DNS/TLS, ranking systems, multi-engine AI retrieval, crawler verification, GEO/AEO/SEO and mobile ASO, open [docs/foundations/README.md](foundations/README.md) and the specific dedicated skill. Before implementing fresh behavior inspect official documentation and record checked-at. The new foundation research is not a substitute for owned-site Search Console data or real index/citation outcomes.
+
 **0. Specify the business:** audience/geos, exact user job, alternatives, consent regions, monetization priority, domain and cost envelope. Record baseline in `templates/site-brief.yaml`.
 
 **1. Verify sources:** read official policies and changelogs at execution time, and create/update `templates/claim-ledger.csv`. If external access fails, label unverified and do not assert compliance. See `web-research-freshness`.

@@ -43,7 +43,7 @@ The loop is adaptive. Codex must investigate the current problem and only invoke
 
 ## Skill library
 
-**21 specialized Codex skills**, stored under [`.agents/skills/`](.agents/skills/), cover:
+**28 specialized Codex skills**, stored under [`.agents/skills/`](.agents/skills/), cover:
 
 | Workstream | Skills | What they produce |
 | --- | --- | --- |
@@ -52,6 +52,12 @@ The loop is adaptive. Codex must investigate the current problem and only invoke
 | Search and AI discovery | `web-technical-seo`, `web-content-and-image-seo`, `web-ai-discovery`, `web-authority-distribution` | Indexability audits, high-value information, crawl policy and earned distribution plans |
 | Monetization and trust | `web-adsense-readiness`, `web-network-monetization`, `web-privacy-consent`, `web-ad-experience` | Publisher eligibility evidence, network comparisons, privacy/consent and safe ad layouts |
 | Reliability and growth | `web-product-validation`, `web-search-analytics`, `web-experiments`, `web-launch-review`, `web-portfolio-growth` | Real tests, conversion funnels, experiments, release decisions and portfolio economics |
+
+### Core search and browser foundation (new)
+
+Read [the foundational operating system](docs/foundations/README.md), which contains 10 technical/reference chapters, seven dedicated skills, a 32-link annotated primary-source registry, a fresh-source check utility and offline contract tests. It covers browser/DNS/HTTP/TLS internals, search crawl/index/rank, crawler controls, Google/Bing/AI answer engines, agent browsers, SEO/AEO/GEO and app-store ASO. **It does not expose proprietary ranking weights or guarantee search/AI placement.**
+
+Use the relevant focused skill rather than injecting all foundation chapters into one Codex context. Run `node scripts/check-foundation-sources.mjs` for registry validation and optionally `node scripts/check-foundation-sources.mjs --live --limit 12` for reachability only; semantic live provider policy recheck is always required.
 
 Full routing is in [`AGENTS.md`](AGENTS.md). The [master curriculum](docs/MASTER_CURRICULUM.md) organizes the knowledge domains, while [`docs/START_HERE.md`](docs/START_HERE.md) covers practical usage.
 
@@ -134,7 +140,7 @@ For each change: cite a current source or test, explain the affected scope, upda
 ## Status and ownership
 
 - **Repository:** `LETSCOOKTECH/web-earnings-master` — intended **private** research and skills workspace.
-- **Baseline:** 21 Codex skills and a dated primary-source registry. These are living references, not a comprehensive proof that every provider requirement has been satisfied.
+- **Baseline:** 28 Codex skills and a dated primary-source registry. These are living references, not a comprehensive proof that every provider requirement has been satisfied.
 - **Scope today:** Research, verification and skill improvement. Site development begins separately when requirements and evidence justify it.
 - **License:** [Proprietary — All rights reserved](LICENSE). Authorized internal use only. External references and third-party components retain their own terms.
 

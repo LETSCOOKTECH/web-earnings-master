@@ -1,0 +1,28 @@
+---
+name: web-browser-runtime
+description: "Diagnose browser, HTTP, DNS, TLS, HTML rendering, caching, workers, performance and protocol failures with reproducible network and DOM evidence."
+---
+
+# web-browser-runtime
+
+**Trigger:** The user asks how the browser or web server works, why a page fails to load or render, to trace HTTP/TLS/network, compare SSR/SSG/CSR, or investigate client runtime/performance.
+
+**Read:** docs/foundations/01-browser-http-runtime.md, 02-domain-dns-tlds.md when DNS involved, docs/foundations/09-source-refresh.md for changing standards, relevant originals.
+
+**Input contract:** Authorized host or local build, expected behavior, device/browser/region, network logs or access. Do not pretend these are known if absent.
+
+**Mechanism:** URL/hostname -> resolver/cache -> IP/route -> TCP/TLS or QUIC -> HTTP -> CDN/origin -> HTML/CSS/JS -> DOM/layout/paint -> interactive tool output. Name the first failing stage before prescribing a repair; distinguish page load from completed human task.
+
+**Procedure:**
+1. Parse URL and establish HTTPS, origin and scheme. Check DNS, TLS certificate and IPv4/IPv6/redirect behavior.
+2. Capture actual status, headers, body bytes and relevant cache/WAF behavior using allowed tools or authorized curl/dig.
+3. Compare raw HTML, JS-disabled page, rendered DOM, accessibility tree and working browser task.
+4. Inspect request waterfalls, main-thread work, worker and WASM support, caching/CSP/storage, security and mobile performance. CWV field ≠ synthetic Lighthouse.
+5. Create a root-cause hypothesis and one counterexample; reproduce on low-end/client failure fixtures where possible.
+6. Deliver exact measured evidence, repair, regression and rollback. Without a live host mark production status UNKNOWN.
+
+**Output:** protocol trace table, error stage, reproducibility commands/artifacts, security/privacy risks, implementation and verification plan.
+
+**Red flags:** user-agent spoofing treated as verified crawler, 200 soft-404 called healthy, one Lighthouse score equated with ranking, cache clearing as generic fix, uploading private HAR/cookies.
+
+**Acceptance:** One false-positive diagnostic and one negative case tested. Every proprietary browser/vendor internal not established by evidence remains UNKNOWN.

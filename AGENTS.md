@@ -18,6 +18,18 @@
 - Keep search-crawler policy distinct from model-training permission. Do not allow unverified bot user agents through the WAF.
 - Publisher policies, local law and consent requirements outrank monetization experiments. Ads may not interfere with the primary tool workflow.
 
+## Foundation skills (deep mechanisms, invoke only when needed)
+For baseline mechanisms and controlled reverse engineering, consult docs/foundations/README.md and:
+- Browser networking, HTTP/TLS, JS rendering, caches and workers -> web-browser-runtime.
+- Domains, TLD rules, DNS, registrar rights and migrations -> web-domain-operations.
+- Crawl scheduling/index selection/search retrieval/ranking/vertical SERP questions -> web-search-internals.
+- robots.txt, crawler identities, IP verification, WAF, training vs search access -> web-crawler-governance.
+- Google AI Mode/Gemini, ChatGPT, Claude, Perplexity, Copilot and browser-agent retrieval/citation experiments -> web-ai-retrieval-lab.
+- Cross-channel SEO/AEO/GEO strategy -> web-search-visibility-systems and then focused existing skills.
+- Google Play/Apple App Store ranking/listing research -> web-app-store-discovery ONLY for actual app distribution.
+
+**Foundation source gate:** Open actual latest first-party source body before policy/ranking decisions, check docs/foundations/09-source-refresh.md, and classify observed vs hypothetical mechanisms. sources/foundation_sources.json is a dated link/access registry, not perpetual policy verification. Never invent any hidden scoring model, source-provider partner, bot token, or universally effective strategy. Always report observed source URL, inspection date and what the evidence does not establish. Local HTTP link checks cannot validate legal, ranking or publisher rules.
+
 ## Skill router
 - Fresh policy or missing fact → `web-research-freshness`.
 - Which niche and why → `web-niche-validation`, `web-keyword-intent`, `web-competitor-audit`.

@@ -37,3 +37,6 @@ Purpose: nothing essential gets silently ignored. This map is a **research cover
 
 ## Where the actual instructions live
 Consult individual `.agents/skills/*/SKILL.md` for the workflow, `references/` for deeper checks, `templates/` for evidence collection, `scripts/` for reproducible checks, `learning/` for video/course resources, and `sources/` for authoritative links. Always reverify time-sensitive rules.
+
+## New technical foundations (2026-11-23)
+Use [foundation index](foundations/README.md) for full mechanics and tested uncertainty around networking, registries, HTTP/TLS/browser rendering, Google/Bing and partner search indexes, crawler permission, AI RAG/citations/agents, SEO/AEO/GEO and mobile app-store ASO. The accompanying seven new skills sit alongside—not in place of—the original 21 workflow skills. Review sources/foundation_sources.json at task time, run optional link health checks, and verify actual source text and owned-site results separately. This is NOT proof of hidden ranking weights or production adoption.
