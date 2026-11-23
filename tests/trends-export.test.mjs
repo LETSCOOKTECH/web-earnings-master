@@ -16,7 +16,7 @@ test('CSV metadata needs same-context timeframe',()=>{const r=validateTrendsExpo
 test('CSV metadata needs explicit term or topic',()=>{const r=validateTrendsExport(sample,{...meta,term_or_topic:'unknown'});assert.equal(r.valid,false);});
 test('CSV rejects values greater than 100',()=>{const r=validateTrendsExport(sample.replace('50','120'),meta);assert.equal(r.valid,false);});
 test('CSV supports <1 but does not count absolute searches',()=>{
- const r=validateTrendsExport(sample.replace('10','<1'),meta);assert.equal(r.valid,true);assert.equal(r.metrics.below_one,1);
+ const r=validateTrendsExport(sample.replace(',10\n',',<1\n'),meta);assert.equal(r.valid,true);assert.equal(r.metrics.below_one,1);
 });
 test('CSV cannot claim a random non-Trends URL',()=>{const r=validateTrendsExport(sample,{...meta,source_url:'https://semrush.com/'});assert.equal(r.valid,false);});
 test('CSV rejects empty chart',()=>{assert.equal(validateTrendsExport('hello,world',meta).valid,false);});
