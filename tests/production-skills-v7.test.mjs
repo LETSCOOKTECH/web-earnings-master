@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { checkRepo,validateRegistry,validateReceipt } from '../scripts/check-production-skills-v7.mjs';
+const {reg,errors}=checkRepo();
+test('exact 46 skill coverage with no orphan contracts',()=>{assert.deepEqual(errors,[]);assert.equal(reg.skills.length,46);});
+test('all contracts name a distinct deliverable local proof live proof and blocker',()=>{for(const x of reg.skills)for(const p of ['deliverable','localGate','externalGate','blocker'])assert.ok(x[p]?.length>12,x.id+' '+p);});
+test('a missing skill is rejected',()=>{const r=structuredClone(reg);r.skills.pop();assert.ok(validateRegistry(r,reg.skills.map(x=>x.id)).length>0);});
+test('an extra fake skill is rejected',()=>{assert.ok(validateRegistry(reg,[...reg.skills.map(x=>x.id),'fake-skill']).length>0);});
+test('missing live evidence never passes',()=>{assert.ok(validateReceipt({skill:reg.skills[0].id,status:'PASS_LIVE'},reg).length>=6);});
+test('unreviewed external URL is rejected even when command ran',()=>{const r={skill:reg.skills[0].id,status:'PASS_LIVE',command:'npm test',artifact:'logs/build.txt',executed_at:new Date().toISOString(),property_url:'https://example.test/',evidence_url:'https://example.com/report',reviewer:'Operator',authorized:true,observed_at:new Date().toISOString(),primary_source_url:'https://example.test',source_reviewed_at:new Date().toISOString()};assert.ok(validateReceipt(r,reg).some(x=>x.includes('HTTPS')));});
+test('old source passage cannot approve consequential change',()=>{const at=new Date().toISOString();const r={skill:reg.skills[0].id,status:'PASS_LIVE',command:'npm test',artifact:'logs/build.txt',executed_at:at,property_url:'https://real.test/',evidence_url:'https://proof.test/a',reviewer:'Operator',authorized:true,observed_at:at,primary_source_url:'https://vendor.test/docs',source_reviewed_at:'2020-01-01T00:00:00Z'};assert.ok(validateReceipt(r,reg).some(x=>x.includes('stale')));});
+test('local fixture evidence never marks any external result verified',()=>{const r={skill:reg.skills[0].id,status:'PASS_LOCAL',command:'npm test',artifact:'artifacts/test.log',executed_at:new Date().toISOString()};assert.deepEqual(validateReceipt(r,reg),[]);assert.equal(r.status,'PASS_LOCAL');});
+test('fake ranking or provider endorsement guarantee rejected',()=>{const r={skill:reg.skills[0].id,status:'PENDING',claims:['guaranteed #1']};assert.ok(validateReceipt(r,reg).length>0);});

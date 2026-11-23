@@ -96,3 +96,6 @@ Eight new specialist skills (46 total):
 - `web-release-observability-operator`: canary rollback, monitoring, origin/crawl, privacy and ads readiness with first-party evidence.
 Read `docs/v6/README.md`, `sources/v6_claims_2026-11-23.json` (45 priority uploaded claims) and `sources/v6_publisher_network_registry_2026-11-23.json` (15 business models).
 Offline audits: `scripts/audit-publisher-page.mjs`, `scripts/evaluate-publisher-eligibility.mjs`, `scripts/audit-web-security-manifest.mjs`, `scripts/check-v6-evidence.mjs`. Neither research nor local CI establishes search ranking, publisher approval, security certification or real profit. Do not create low-value mass keyword pages or deceptive ad placements.
+
+## V7 per-skill production acceptance (mandatory for all 46 active skills)
+Read `docs/production-v7/README.md` and the relevant row in `sources/production_skills_v7.json` before declaring any skill output production ready. Run `npm run audit:production`; record task-specific local proof versus owned-site external proof separately. Unknown provider/account results remain PENDING or BLOCKED, never PASS. A green repository CI approves these instruction contracts only, never a publisher account or live Google rank. Do not deploy irreversible changes without authorization and human signoff.
