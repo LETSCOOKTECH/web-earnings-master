@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-23.v3.2",
+  "version": "2026-11-23.v4",
   "intent": "Automated change *signals* only. Do not update policy semantics or provider eligibility without human/agent reading official source.",
   "monitored": [
     {
@@ -286,6 +286,142 @@
       "id": "chrome-agentic-browsing-score",
       "category": "browser",
       "url": "https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "aeo-featured-snippets",
+      "category": "answer",
+      "url": "https://developers.google.com/search/docs/appearance/featured-snippets",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "aeo-snippet-controls",
+      "category": "answer",
+      "url": "https://developers.google.com/search/docs/appearance/snippet",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-genai-performance-report",
+      "category": "ai",
+      "url": "https://support.google.com/webmasters/answer/16984139",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "bing-ai-citation-share",
+      "category": "ai",
+      "url": "https://blogs.bing.com/search/2026/6/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "bing-ai-topics-beta",
+      "category": "ai",
+      "url": "https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-play-ranking",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9958766",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-play-listing-metadata",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9859152",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-play-custom-listings",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9867158",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-play-reporting",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9859173",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-play-listing-experiments",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/12053285",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-play-vitals-2027",
+      "category": "appstore",
+      "url": "https://developer.android.com/google/play/vitals",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "apple-search-discovery",
+      "category": "appstore",
+      "url": "https://developer.apple.com/app-store/discoverability/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "apple-product-page-metadata",
+      "category": "appstore",
+      "url": "https://developer.apple.com/app-store/product-page/",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "apple-app-store-keyword-bytes",
+      "category": "appstore",
+      "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "apple-searchable-custom-pages",
+      "category": "appstore",
+      "url": "https://developer.apple.com/help/app-store-connect/create-custom-product-pages/configure-multiple-product-page-versions",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "apple-app-store-acquisition",
+      "category": "appstore",
+      "url": "https://developer.apple.com/help/app-store-connect-analytics/acquisition/acquisition",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "apple-product-page-optimization",
+      "category": "appstore",
+      "url": "https://developer.apple.com/help/app-store-connect/create-product-page-optimization-tests/overview-of-product-page-optimization/",
       "kind": "html",
       "semantic_review_required": true,
       "source_owner": "official_provider"

@@ -24,3 +24,9 @@ description: "Integrate traditional SEO with answer-engine and generative-engine
 
 ## Deep operations extension (v2.2)
 Use chapter 17 as the full technical+editorial+UX+distribution release contract and chapter 18 as negative evidence matrix. Read chapter 14 before assuming a partner search engine uses Google or Bing ranking; chapter 13 provides reference IR, not current proprietary formula. Before proposing niche traffic forecast measure SERP click opportunity by geo and human job completion, not volume alone. Check current Google changelog for deprecated markup and newly reported AI/multimodal search features. Specific provider preference systems and llms.txt cannot be universalized. Every recommendation must name measurable outcome, counterhypothesis and rollback.
+
+## 2026-11-23 answer/LLM/store specialized routing
+- Featured snippets, People Also Ask, accurate concise answers, and voice-intent questions: `web-aeo-answer-optimization`.
+- Google AI Mode/Overviews, ChatGPT/Claude/Perplexity/Bing generative citations and observed referrals: `web-generative-engine-optimization` (eligibility through `web-ai-discovery`).
+- Google Play app-specific discovery: `web-aso-google-play`; Apple: `web-aso-apple-app-store`. Websites/SEO should not be counted as app-store ASO.
+Maintain provider/date/account-scoped proof; no cross-channel composite "ranking score". Details in `docs/discovery/`.

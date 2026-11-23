@@ -36,3 +36,13 @@ See [deep foundation index](foundations/README.md). For how a browser works use 
 
 ## v2.3 prerequisites for moving from research to deployment
 Before claiming Search/revenue readiness read [Section 1 Acceptance](SECTION1_ACCEPTANCE.md), [dated source review](foundations/19-provider-source-verification.md), and [owned HTTP/browser lab](foundations/20-owned-web-lab-and-robots.md). `npm test` validates local contracts and HTTP cases; the separate browser Action validates Chromium, Firefox and WebKit with uploaded evidence when its actual run is green. Original 21 skills were individually audited and patched; active total 28. Current provider ledger: 48 dated selected claims, one Applebot source still unavailable, and 33 watched official pages/feeds. Product-specific Search Console, Bing and publisher account observations remain EXTERNAL evidence, not CI PASS.
+
+
+## V4 dedicated AEO / GEO / ASO production decision routing (2026-11-23)
+Invoke only the specialist needed, never all SEO manuals at once:
+- **`web-aeo-answer-optimization`** → Google Featured Snippets, PAA, direct factual/procedural answers, answer quality, answer passage validation; index/rich-result eligibility via `web-technical-seo`.
+- **`web-generative-engine-optimization`** → Google AI Mode/Overviews, ChatGPT Search, Perplexity, Claude Search, Bing Copilot citations, prompting panel and real AI referrals; crawler eligibility via `web-ai-discovery`, retrieval theory via `web-ai-retrieval-lab`.
+- **`web-aso-google-play`** → real Android app Google Play keyword/title/description, keyword-targeted custom listings, device vitals, 2026 analytics and native experiments.
+- **`web-aso-apple-app-store`** → iOS/iPadOS store Search; Apple 100 **UTF-8 byte** keywords, 30-char name/subtitle, 70 keyword-searchable custom product pages and native experiments.
+- **`web-app-store-discovery`** routes mixed Play/Apple comparison and refuses store-ranking claims if only a website/PWA exists.
+References: `docs/discovery/01-answer-engine-optimization.md` through `04-apple-app-store-aso.md`; research source evidence: `sources/discovery_provider_claims_2026-11-23.json`. Offline tools `scripts/audit-answer-page.mjs`, `audit-aso-listing.mjs`, `evaluate-ai-citations.mjs` are **bounded QA**, not actual provider rankings/approvals. Reopen primary docs before consequential changes. No fake ratings, click farms, keyword doorway pages or synthetic citations.

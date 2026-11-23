@@ -1,5 +1,5 @@
 {
-  "registry_version": "2.0",
+  "registry_version": "2026-11-23.v4",
   "checked_on": "2026-11-22",
   "notes": "Sources are link registry, not certification of current terms. Most URL locations were confirmed via public search on 2026-11-22; exact source text and relevance MUST be re-opened at execution time. Legacy entries may include unverified old paths. Mark such entries unverified until checked live.",
   "sources": [
@@ -922,6 +922,186 @@
       "review_every_days": 60,
       "authority": "official first-party documentation",
       "verification": "URL found in official search results or provider documentation; re-open content to establish applicability"
+    },
+    {
+      "id": "discovery-aeo-featured-snippets",
+      "category": "answer",
+      "url": "https://developers.google.com/search/docs/appearance/featured-snippets",
+      "purpose": "Google selection, not an optimized markup instruction",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt observed; full original body not verified"
+    },
+    {
+      "id": "discovery-aeo-snippet-controls",
+      "category": "answer",
+      "url": "https://developers.google.com/search/docs/appearance/snippet",
+      "purpose": "nosnippet/max-snippet can affect eligibility",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt observed; full original body not verified"
+    },
+    {
+      "id": "discovery-google-play-ranking",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9958766",
+      "purpose": "Play discovery weights not public",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt observed; full original body not verified"
+    },
+    {
+      "id": "discovery-google-play-listing-metadata",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9859152",
+      "purpose": "30/80/4000 field bounds and policy",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt observed; full original body not verified"
+    },
+    {
+      "id": "discovery-google-play-custom-listings",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9867158",
+      "purpose": "Keyword targeting eligibility/account scope",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt observed; full original body not verified"
+    },
+    {
+      "id": "discovery-google-play-reporting",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9859173",
+      "purpose": "July 2026 metric denominator change",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt observed; full original body not verified"
+    },
+    {
+      "id": "discovery-google-play-listing-experiments",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/12053285",
+      "purpose": "Store listing A/B not ranking proof",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt observed; full original body not verified"
+    },
+    {
+      "id": "discovery-google-play-vitals-2027",
+      "category": "appstore",
+      "url": "https://developer.android.com/google/play/vitals",
+      "purpose": "future Feb 2027 thresholds are not current enforcement",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt observed; full original body not verified"
+    },
+    {
+      "id": "discovery-apple-search-discovery",
+      "category": "appstore",
+      "url": "https://developer.apple.com/app-store/discoverability/",
+      "purpose": "Apple title keyword category plus behavior, undisclosed weights",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body opened only for selected claim"
+    },
+    {
+      "id": "discovery-apple-product-page-metadata",
+      "category": "appstore",
+      "url": "https://developer.apple.com/app-store/product-page/",
+      "purpose": "promotional text does not contribute search ranking",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body opened only for selected claim"
+    },
+    {
+      "id": "discovery-apple-app-store-keyword-bytes",
+      "category": "appstore",
+      "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information",
+      "purpose": "technical keywords field 100 bytes",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body opened only for selected claim"
+    },
+    {
+      "id": "discovery-apple-searchable-custom-pages",
+      "category": "appstore",
+      "url": "https://developer.apple.com/help/app-store-connect/create-custom-product-pages/configure-multiple-product-page-versions",
+      "purpose": "up to 70, assigned keyword search visibility",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Original body opened only for selected claim"
+    },
+    {
+      "id": "discovery-apple-app-store-acquisition",
+      "category": "appstore",
+      "url": "https://developer.apple.com/help/app-store-connect-analytics/acquisition/acquisition",
+      "purpose": "user conversion and source definitions",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt observed; full original body not verified"
+    },
+    {
+      "id": "discovery-apple-product-page-optimization",
+      "category": "appstore",
+      "url": "https://developer.apple.com/help/app-store-connect/create-product-page-optimization-tests/overview-of-product-page-optimization/",
+      "purpose": "PPO test supports 3 treatments",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed provider excerpt observed; full original body not verified"
+    },
+    {
+      "id": "google-ranking-systems-v4",
+      "category": "search",
+      "url": "https://developers.google.com/search/docs/appearance/ranking-systems-guide",
+      "purpose": "Multi-system search ranking (no exposed factor weights)",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed official provider excerpt only; original full body recheck required at action time"
+    },
+    {
+      "id": "google-play-listing-policy-v4",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/13393723",
+      "purpose": "Play misleading keyword and app-store metadata policy",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed official provider excerpt only; original full body recheck required at action time"
+    },
+    {
+      "id": "google-play-vitals-metrics-v4",
+      "category": "appstore",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9844486",
+      "purpose": "Play core quality and discoverability metric policy",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed official provider excerpt only; original full body recheck required at action time"
+    },
+    {
+      "id": "apple-app-review-v4",
+      "category": "appstore",
+      "url": "https://developer.apple.com/app-store/review/guidelines/",
+      "purpose": "Apple app review, listing, trademark and user trust policy",
+      "reviewed_at": "2026-11-23",
+      "review_every_days": 30,
+      "authority": "first-party documentation",
+      "verification": "Indexed official provider excerpt only; original full body recheck required at action time"
     }
   ]
 }

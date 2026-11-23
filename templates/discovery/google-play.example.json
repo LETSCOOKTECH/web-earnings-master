@@ -1,0 +1,33 @@
+{
+  "platform": "google-play",
+  "app_id": "com.example.privatetools",
+  "locale": "en-US",
+  "title": "Private Image Tools",
+  "short_description": "Resize and compress images privately, without uploading files.",
+  "full_description": "Resize and compress photos in your browser-compatible Android app. Choose a target resolution or file size, review the result, and save. Processing stays on your device for supported formats. Unsupported formats are clearly identified.",
+  "verified_features": [
+    "local image resize",
+    "local image compression"
+  ],
+  "promised_features": [
+    "local image resize",
+    "local image compression"
+  ],
+  "screenshots": [
+    {
+      "locale": "en-US",
+      "device": "phone",
+      "verified_against_build": true
+    }
+  ],
+  "source_checked_at": "2026-11-23",
+  "custom_listings": [
+    {
+      "targeting": "keyword",
+      "keywords": [
+        "resize image",
+        "compress photo"
+      ]
+    }
+  ]
+}

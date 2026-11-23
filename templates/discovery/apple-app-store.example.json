@@ -1,0 +1,40 @@
+{
+  "platform": "apple-app-store",
+  "app_id": "com.example.privatetools.ios",
+  "locale": "en-US",
+  "name": "Private Image Tools",
+  "subtitle": "Resize Photos Offline",
+  "description": "Edit and compress supported photos on your device with a straightforward workflow. Preview the result before saving.",
+  "promotional_text": "New local file-size presets.",
+  "keywords": "resize,photo compressor,offline,image shrink,quality,private,format",
+  "verified_features": [
+    "local image resize",
+    "local image compression"
+  ],
+  "promised_features": [
+    "local image resize"
+  ],
+  "screenshots": [
+    {
+      "locale": "en-US",
+      "device": "iPhone",
+      "verified_against_build": true
+    }
+  ],
+  "source_checked_at": "2026-11-23",
+  "custom_product_pages": [
+    {
+      "id": "privacy",
+      "keywords": [
+        "offline",
+        "private"
+      ]
+    },
+    {
+      "id": "resize",
+      "keywords": [
+        "resize"
+      ]
+    }
+  ]
+}

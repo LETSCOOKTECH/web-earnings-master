@@ -1,5 +1,22 @@
 # Changelog
 
+## V4.1 GEO regional/provider atlas — 2026-11-23 (draft research branch)
+- Extended generative-search skill with 21 provider/surface decision entries and a 5th deep manual; distinguishes Google AI Mode from Gemini, ChatGPT Search from API web search, Kagi Assistant, Brave AI Answers, DuckDuckGo Search Assist from Duck.ai, Baidu AI, and 8 unknown-sourced products.
+- Evidence classes are source body, official indexed excerpt, contrast-only, or UNKNOWN; no reverse-engineered hidden ranking weights or unsupported crawler claims.
+- Added two regression tests for differentiated retrieval routes, source state and count.
+
+
+
+## V4 AEO/GEO/ASO operator skills — research branch (2026-11-23)
+- Added 4 purpose-separated Codex skills, 4 deep operational manuals, 3 offline evidence validators, 4 illustrative fixtures and 20 new discovery regression tests.
+- AEO: Google Featured Snippet/answer-selection distinction, task vs answer, true original evidence and snippet/FAQ deprecation gates.
+- GEO: Google AI Mode/Gemini/ChatGPT Search/Claude/Perplexity/Bing/Copilot source/crawler/referral matrix; independent visible citations vs prompt samples vs real clicks.
+- Play ASO: current 30/80/4000 metadata bounds, keyword-targeted custom listings, July 2026 measurement definition changes and February 2027 FUTURE device memory thresholds.
+- Apple ASO: byte-accurate 100-byte keyword field (distinct from 30-character name/subtitle), <=70 searchable CPP keyword assignments and PPO experiment gates.
+- Added 32 explicit scoped official evidence claims and expanded source-monitoring target list with full-body versus excerpt evidence status. Preserved 21 original audited skills and 7 foundation skills (32 skills in draft total).
+- Existing routing and CI validation updated; actual provider ranking/approval and first-party owner metrics still unknown until connected property.
+
+
 ## v3.2 — 2026-11-23 (research branch only; corrected current Google Search AI rollout)
 - Action-time official cross-check identified a stale Google Search Console Help cache describing a subset pilot, while the newer official announcement and indexed current Help page confirm **worldwide rollout on August 31, 2026** for Search generative AI inclusion control. Marked direct Help HTTP 429 and cached announcement uncertainty explicitly. Updated AI discovery skill, research dossier and tests. Property-specific settings still require owner authorization; inclusion is not a rank boost.
 - Expanded first-party documentation freshness monitor to 36 targets: Google Search Console AI control Help, dated Google announcement, experimental Chrome Lighthouse agentic scoring. Two added source pages have **incomplete latest direct-body evidence**; watchlist does not claim they are fully semantically verified. Added vetted `blog.google` host to read-only source allowlist.
