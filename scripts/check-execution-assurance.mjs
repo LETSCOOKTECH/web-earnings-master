@@ -45,12 +45,14 @@ export function assessExecution(run,registry,{now=Date.now()}={}){
  if(!isObject(run.review)||!nonempty(run.review.reviewer)||!nonempty(run.review.critical_failure_test)||!nonempty(run.review.alternative_hypothesis))errors.push('Missing adversarial reviewer and falsification');
  else if(run.review.same_actor===true&&!nonempty(run.review.self_review_disclosure))warnings.push('Self-review must be explicitly disclosed');
  if(!Array.isArray(run.gates)||run.gates.length===0)errors.push('No acceptance gates');
- else for(const g of run.gates){
+ else {const gateIds=new Set();for(const g of run.gates){
+  if(!isObject(g)){errors.push('Malformed acceptance gate');continue}
   if(!nonempty(g.id)||!STATES.includes(g.status)||typeof g.required!=='boolean')errors.push('Malformed acceptance gate');
-  if(g.status.startsWith('PASS')&&(!nonempty(g.artifact)||!nonempty(g.reviewer)))errors.push('Passing gate lacks artifact and reviewer: '+g.id);
+  if(nonempty(g.id)){if(gateIds.has(g.id))errors.push('Duplicate acceptance gate: '+g.id);gateIds.add(g.id)}
+  if(typeof g.status==='string'&&g.status.startsWith('PASS')&&(!nonempty(g.artifact)||!nonempty(g.reviewer)))errors.push('Passing gate lacks artifact and reviewer: '+g.id);
   if(g.required&&['FAIL','BLOCKED','UNKNOWN'].includes(g.status))blockers.push('Mandatory gate unresolved: '+g.id);
   if(g.status==='NOT_APPLICABLE'&&(!nonempty(g.reason)||!nonempty(g.reviewer)))errors.push('Not-applicable gate needs reason and reviewer: '+g.id);
- }
+ }}
  if(run.external_action_requested===true&&run.explicit_user_authorization!==true)blockers.push('External action not authorized');
  if(run.stage==='DISCOVERY'||run.stage==='VALIDATION'){
   if(supports.size===0)blockers.push('No independent supporting observation');
