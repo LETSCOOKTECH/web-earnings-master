@@ -1,5 +1,8 @@
 # Practical runbook — from blank domain to measured business
 
+## V17 AI Search positive recommendation campaign
+For "rank #1", be the top tool suggested by ChatGPT, Google AI Overview/AI Mode short summaries, Perplexity or Copilot, use docs/recommendations/README.md and the web-dominant-recommendar Codex skill. First prove actual product task advantage, then check provider-specific eligibility, then preregister human-question provider/locale/repeat observations and separate citation from positive advice/explicit-first order. The goal is legitimate user success and measured evidence, not invented rankings, fake reviews or prompt injection.
+
 ## V13 source-first agent operator
 Website/SEO work: docs/seo-master/14-agent-orchestration-v13.md is first entry; select only topic-specific V13 professional modules. Original documents must be opened from sources/seo_v13_primary_atlas.json at action time and interpreted with effective date and actual country/account scope, not assumed from snippets. Use local research provenance and coverage checks, real shipped-tool tests and owner-account gates. Source HTML fingerprints are not current semantic policy verification. Follow provider permissions and no-paid-credit defaults.
 
