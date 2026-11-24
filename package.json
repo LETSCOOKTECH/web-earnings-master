@@ -56,7 +56,8 @@
     "audit:ai-surfaces": "node scripts/check-ai-surface-v14.mjs",
     "audit:ai-eligibility": "node scripts/audit-ai-eligibility-v14.mjs --html examples/seo-csv-lab/site/index.html --robots examples/seo-csv-lab/site/robots.txt --path /",
     "audit:ai-observations": "node scripts/evaluate-ai-visibility-v14.mjs --file templates/ai-visibility-v14.SYNTHETIC.json",
-    "audit:ai-controls": "node scripts/audit-ai-controls-v15.mjs --html examples/seo-csv-lab/site/index.html --robots examples/seo-csv-lab/site/robots.txt --route /"
+    "audit:ai-controls": "node scripts/audit-ai-controls-v15.mjs --html examples/seo-csv-lab/site/index.html --robots examples/seo-csv-lab/site/robots.txt --route /",
+    "audit:independent-readiness": "node --test tests/independent-global-readiness-v16.test.mjs"
   },
   "description": "Evidence-first Codex skill engine for SEO/AEO/GEO/ASO, safe utility execution, million-user capacity and publisher-margin planning"
 }
