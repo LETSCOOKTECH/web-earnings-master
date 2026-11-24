@@ -57,7 +57,8 @@ for(const [name,engine] of [['Chromium',chromium],['Firefox',firefox],['WebKit',
    brokenPage.on('pageerror',e=>failures.push(e.message));
    await brokenPage.goto(broken.origin+'/');
    await brokenPage.getByRole('textbox',{name:'Or paste CSV text'}).fill('id\n1\n1\n');
-   await brokenPage.getByRole('button',{name:'Remove duplicate rows'}).click();
+   await brokenPage.locator('#csv-form').evaluate(form=>form.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true})));
+   // Synthetic submit avoids unhandled default navigation when JS is intentionally broken.
    assert.ok(failures.some(x=>x.includes('Intentional broken shipped UI')));
    assert.equal(await brokenPage.getByRole('link',{name:'Download cleaned CSV'}).count(),0);
    entry.checks.push('MUTATED_BROKEN_SCRIPT_NEGATIVE_CONTROL');
