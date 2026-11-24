@@ -11,7 +11,7 @@
 
 **Skill entry:** .agents/skills/web-dominant-recommendar/SKILL.md
 
-**Provider source atlas:** sources/dominant_recommendar_v17_sources.json; 17 provider-product surfaces, 17 original first-party docs reviewed at research time and 8 surface-specific unverified search/recommendation mechanics. A checked link documents a limited vendor claim, not private model behavior.
+**Provider source atlas:** sources/dominant_recommendar_v17_sources.json; 18 provider-product surfaces, 17 original first-party docs reviewed at research time and 8 surface-specific unverified search/recommendation mechanics. A checked link documents a limited vendor claim, not private model behavior.
 
 **Audits:** npm run audit:recommendar-sources and npm run audit:recommendar-panel. The sample template is 100% SYNTHETIC; it does not prove real citations. See [sample data](../../templates/dominant-recommendar/SYNTHETIC-panel.json) and [operator experiment guide](../../templates/dominant-recommendar/OPERATOR_WORK_ORDER.md).
 
