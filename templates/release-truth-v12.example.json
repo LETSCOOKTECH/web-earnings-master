@@ -1,0 +1,65 @@
+{
+  "schema": "sense-release-truth-v12",
+  "project": {
+    "job": "Validate a functional CSV duplicate remover website",
+    "release_commit": "218ed27b8142128e786d4ecedc8629dac66f6d56"
+  },
+  "gates": [
+    {
+      "id": "task_output",
+      "status": "UNKNOWN",
+      "reason": "No independently validated artifact supplied for this demonstration"
+    },
+    {
+      "id": "html_search",
+      "status": "UNKNOWN",
+      "reason": "No independently validated artifact supplied for this demonstration"
+    },
+    {
+      "id": "crawler_rules",
+      "status": "UNKNOWN",
+      "reason": "No independently validated artifact supplied for this demonstration"
+    },
+    {
+      "id": "privacy_security",
+      "status": "UNKNOWN",
+      "reason": "No independently validated artifact supplied for this demonstration"
+    },
+    {
+      "id": "browser_output",
+      "status": "UNKNOWN",
+      "reason": "No independently validated artifact supplied for this demonstration"
+    },
+    {
+      "id": "accessibility_mobile",
+      "status": "UNKNOWN",
+      "reason": "No independently validated artifact supplied for this demonstration"
+    },
+    {
+      "id": "deployed_http",
+      "status": "UNKNOWN",
+      "reason": "No independently validated artifact supplied for this demonstration"
+    },
+    {
+      "id": "owner_search_console",
+      "status": "UNKNOWN",
+      "reason": "No independently validated artifact supplied for this demonstration"
+    },
+    {
+      "id": "publisher_approval",
+      "status": "UNKNOWN",
+      "reason": "No independently validated artifact supplied for this demonstration"
+    },
+    {
+      "id": "real_human_tasks",
+      "status": "UNKNOWN",
+      "reason": "No independently validated artifact supplied for this demonstration"
+    },
+    {
+      "id": "revenue_reconciled",
+      "status": "UNKNOWN",
+      "reason": "No independently validated artifact supplied for this demonstration"
+    }
+  ],
+  "notes": "Demonstration: all external claims remain UNKNOWN, no production/SEO ranking/ad outcome is asserted."
+}

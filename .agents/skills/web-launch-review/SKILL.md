@@ -31,3 +31,6 @@ description: "Run evidence-based prelaunch and postlaunch release gates for Astr
 
 ## V6 production and research handoff (2026-11-23)
 Call web-release-observability-operator to verify staging, auth/security, root robots/canonical and WAF, real output, consent/ads and production rollback. Search index/approval cannot be established from GitHub CI. docs/v6/07-release-observability-and-ad-privacy.md.
+
+## V12 no accidental full release from local PASS
+Local gate (npm test, npm run audit:seo-example, Playwright owned-server E2E on actual shipped CSV and injected crash cases), staged HTTPS gate, Google/Bing indexed-state gate, publisher account gate and legitimate human/revenue gate are independent. scripts/release-truth-gate.mjs explicitly never certifies external results from self-declared manifest booleans. A PASS_LOCAL or LOCAL_REAL_BROWSER_PASS allows human staging review only, not production ranking/AdSense status. See docs/seo-master/05-independent-observatory-v12.md.

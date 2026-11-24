@@ -74,3 +74,6 @@ Invoke `web-opportunity-intelligence` to check user-job authenticity, localized 
 
 ## V11 — One real website, not 1,000 SEO keyword pages
 For website engineering and technical/keyword SEO start with `docs/seo-master/README.md`. Map real user needs to distinct correct-output pages, use exact dated licensed source measurements, compare actual SERP, then build/test actual user tasks. Distinguish Search spam policies, Ads keyword estimates and AdSense publisher requirements; don't infer revenue from advertiser CPC. Static metadata checks are not functional/download/index/browser approval. Human and owner-account verification are separate final gates.
+
+## V12 independent observatory
+For SEO or full website builds start with docs/seo-master/07-agent-execution-v12.md, then verify the ten distinct local criteria in docs/seo-master/05-independent-observatory-v12.md. Real functional CSV lab: examples/seo-csv-lab/README.md. Run npm test and GitHub Playwright browser suite, check per-crawler robots policy and the release truth firewall. A self-attested JSON PASS cannot prove Google indexing, valid traffic or AdSense approval.

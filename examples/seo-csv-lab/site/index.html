@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Remove Duplicate CSV Rows in Your Browser | Sense Lab</title>
+<meta name="description" content="Remove exact duplicate CSV records in your browser with a tested download. Supports quoted CSV fields, offline processing and clear spreadsheet formula safety.">
+<link rel="canonical" href="https://csv-lab.example.org/">
+<link rel="stylesheet" href="/assets/style.css"></head>
+<body><header><nav aria-label="Main"><a href="/">Sense CSV Lab</a><a href="#how">How it works</a><a href="#limits">Limits</a></nav></header>
+<main><h1>Remove Duplicate CSV Rows in Your Browser</h1><p>Paste CSV text or select a CSV file to remove identical records. Your files are processed locally in your browser; this demonstration does not provide an upload endpoint.</p>
+<section aria-labelledby="tool-title" class="panel"><h2 id="tool-title">Clean a CSV file</h2>
+<form id="csv-form">
+<label for="csv-file">Choose a CSV file (2 MB maximum)</label><input type="file" id="csv-file" accept=".csv,text/csv,text/plain">
+<label for="csv-paste">Or paste CSV text</label><textarea id="csv-paste" rows="6" placeholder="id,name&#10;1,Asha&#10;1,Asha" aria-describedby="csv-help"></textarea>
+<p id="csv-help">Comma-separated UTF-8. Up to 5,000 rows and 200 columns. Quoted commas and multiline fields are supported.</p>
+<div class="checks">
+<label><input type="checkbox" id="header" checked>First row contains column headers</label>
+<label><input type="checkbox" id="case" checked>Preserve uppercase and lowercase distinctions</label>
+<label><input type="checkbox" id="spreadsheet" checked>Escape spreadsheet formulas (may modify text)</label>
+</div>
+<button type="submit">Remove duplicate rows</button>
+<p role="status" id="status" aria-live="polite">No file processed.</p>
+<a id="download" class="download" hidden download="cleaned.csv">Download cleaned CSV</a>
+</form></section>
+<section id="how"><h2>How duplicates are detected</h2><p>Records are compared cell by cell, with the first row optionally treated as headers. Commas inside quoted fields and escaped quotes are parsed before comparison. The tool does not remove partially similar records, and mismatched column counts cause an error.</p></section>
+<section id="limits"><h2>Data integrity and safety</h2><p>Only UTF-8 comma-separated values are supported, not XLSX or arbitrary legacy encodings. Blank single-column records are preserved. The spreadsheet-safety option escapes formula-like values beginning with dangerous operators, so turn it off only if you need unchanged raw data and understand spreadsheet injection risk. Signed numbers and scientific notation are preserved.</p><p>This demonstration contains no advertisements, analytics, form submissions or server-side file storage. It does not establish ranking, indexing, traffic or AdSense approval.</p></section>
+</main><footer>Sense Lab — independently testable local example</footer>
+<script type="module" src="/assets/tool.mjs"></script></body></html>
