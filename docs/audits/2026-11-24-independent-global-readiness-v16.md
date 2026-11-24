@@ -20,7 +20,7 @@ GitHub Actions PR CI uses clean runner checkouts. Local development on the autho
 6. The Anthropic 2026 training-preference rollout vs future Google training support was not clearly documented.
 7. The README still introduced 28 skills although the active inventory had 48.
 
-These are real validation failures. Follow-up repairs and expanded **11 holdout tests** cover both Google-specific and otherbot-only header controls. CI on the repaired branch was observed passing **533/533 Node tests** before writing this report. An independent browser workflow was re-triggered for this PR by modifying `package.json`; the recorded run completed **6/6 browser tests** in Chromium, Firefox and WebKit with actual CSV output-byte assertions. Recheck exact-head status after any subsequent changes.
+These are real validation failures. Follow-up repairs and an expanded holdout suite cover Google-specific and otherbot-only header controls, document/source integrity and agent routing. The repaired branch was observed passing **533/533 Node tests** before subsequent routing-test additions; the exact final merge HEAD must pass CI again. An independent browser workflow was re-triggered for this PR by modifying `package.json`; the recorded run completed **6/6 browser tests** in Chromium, Firefox and WebKit with actual CSV output-byte assertions. Recheck exact-head status after any subsequent changes.
 
 ### Remediation performed on the audit branch
 
