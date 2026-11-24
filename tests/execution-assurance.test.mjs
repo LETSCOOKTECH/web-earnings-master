@@ -28,3 +28,6 @@ test('self review without disclosure is blocked',()=>{const p=base();p.review.sa
 test('self-review with explicit disclosure is not misrepresented',()=>{const p=base();p.review.same_actor=true;p.review.self_review_disclosure='No independent verifier available';assert.equal(check(p).decision,'ELIGIBLE_FOR_REVIEW')});
 test('production claim requires external property and first-party evidence',()=>{const p=base();p.stage='RELEASE';p.decision_requested='PRODUCTION_READY';assert.equal(check(p).decision,'BLOCKED')});
 test('ranking guarantees block',()=>{const p=base();p.claims=['GUARANTEED_RANKING'];assert.equal(check(p).decision,'BLOCKED')});
+test('null gate fails closed without throwing',()=>{const p=base();p.gates=[null];const x=check(p);assert.equal(x.decision,'REJECT');assert.ok(x.errors.includes('Malformed acceptance gate'));});
+test('unknown status fails closed without type error',()=>{const p=base();p.gates[0].status=null;assert.equal(check(p).decision,'REJECT');});
+test('duplicate gate IDs rejected',()=>{const p=base();p.gates.push({...p.gates[0]});assert.equal(check(p).decision,'REJECT');});
