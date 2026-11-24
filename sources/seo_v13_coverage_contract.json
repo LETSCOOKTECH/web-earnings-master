@@ -292,6 +292,16 @@
       "critical_failure": "Keyword CPC treated as actual ad RPM",
       "phase": "MEASURE",
       "external_outcome_not_certified": true
+    },
+    {
+      "id": "authority-distribution",
+      "owner_skill": "web-authority-distribution",
+      "guide": "docs/seo-master/15-earned-authority-distribution-v13.md",
+      "official_source_id": "google-spam",
+      "acceptance_evidence": "Original link-worthy benchmark/tool asset, permitted contextual human outreach and actual referral-to-task completion evidence",
+      "critical_failure": "Paid link manipulation, automated spam, fake customer mentions or asserted causality from one backlink",
+      "phase": "MEASURE",
+      "external_outcome_not_certified": true
     }
   ]
 }

@@ -43,3 +43,6 @@ Run the existing repository CI and the actual project's build/output/browser/int
 - Structural self-reported business claims stay unverified: scripts/release-truth-gate.mjs
 - Source body review record: sources/seo_v12_first_party_sources.json
 Do not deploy synthetic example.org canonicals, or claim live user/account outcomes from the local test laboratory.
+
+## V13 earned authority and real distribution
+See [ethical authority building, original linkable assets and qualified referrals](15-earned-authority-distribution-v13.md). A correct tool needs actual people to discover it; no link scheme or guaranteed rank boost is permitted.

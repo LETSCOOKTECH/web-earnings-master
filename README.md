@@ -202,3 +202,5 @@ Source-backed [SEO Master execution protocol](docs/seo-master/README.md), [keywo
 
 ## V12 — Independent Observability and real shipped-tool testing
 V12 repairs crawler-specific Googlebot/Bingbot robots precedence, adds real JS/CSS asset presence checks and placeholder production-domain rejection, builds an actual browser-only CSV duplicate remover, and runs real shipped download-byte E2E in Chromium/Firefox/WebKit in GitHub CI. scripts/release-truth-gate.mjs provides a fail-closed plan/evidence firewall: fake Google indexed, publisher approval and revenue flags never certify production. See docs/seo-master/05-independent-observatory-v12.md and examples/seo-csv-lab/README.md. Ten controlled local criteria are not a universal 10/10 SEO ranking or real-business guarantee; real HTTPS, mobile hardware, first-party Search Console/AdSense and actual traffic remain separate.
+
+V13 includes [legitimate authority and distribution research](docs/seo-master/15-earned-authority-distribution-v13.md), with real original assets, ethical editorial referrals and outcome-based measurement, not paid link manipulation.

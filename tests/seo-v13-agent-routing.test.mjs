@@ -53,3 +53,9 @@ test('V13 master README links directly to professional modules',()=>{
  const s=read('docs/seo-master/README.md');
  for(const id of ['08-live-source-verification-v13','09-keyword-and-serp-mastery-v13','10-technical-seo-developer-v13','11-end-to-end-web-development-v13','12-adsense-publisher-policy-v13','13-ai-search-analytics-experiments-v13','14-agent-orchestration-v13'])assert.ok(s.includes(id),id);
 });
+
+test('V13 authority specialist requires ethically earned editorial referrals',()=>{
+ const a=read('.agents/skills/web-authority-distribution/SKILL.md');
+ assert.match(a,/V13/);assert.match(a,/link spam/);
+ assert.ok(read('docs/seo-master/15-earned-authority-distribution-v13.md').length>2000);
+});

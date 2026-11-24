@@ -70,3 +70,9 @@ test('On-disk offline coverage checker returns scope-only not Google certificati
  const x=spawnSync(process.execPath,['scripts/check-seo-coverage-v13.mjs'],{cwd:root,encoding:'utf8'});
  assert.equal(x.status,0,x.stderr);assert.match(x.stdout,/PASS_COVERAGE_METADATA_ONLY/);
 });
+
+test('Earned authority/distribution is a required domain rather than optional vanity SEO',()=>{
+ const o=contract.domains.find(x=>x.id==='authority-distribution');
+ assert.ok(o);assert.equal(o.owner_skill,'web-authority-distribution');
+ assert.ok(REQUIRED.has('authority-distribution'));
+});

@@ -5,7 +5,7 @@ import {fileURLToPath} from 'node:url';
 import {validateAtlas,AREAS} from './seo-source-capture-v13.mjs';
 
 const PHASES=new Set(['RESEARCH','BUILD','LAUNCH','MEASURE']);
-export const REQUIRED=new Set(['user-need','query-provenance','serp-intent','spam-policy','dns-tls-http','robots-crawler','index-directives','canonical-duplicates','sitemap','js-rendering','backend-security','file-output','publisher-page','owner-indexing','release-reliability','revenue-evidence']);
+export const REQUIRED=new Set(['authority-distribution','user-need','query-provenance','serp-intent','spam-policy','dns-tls-http','robots-crawler','index-directives','canonical-duplicates','sitemap','js-rendering','backend-security','file-output','publisher-page','owner-indexing','release-reliability','revenue-evidence']);
 export function checkCoverage(contract,atlas,{root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),exists=fs.existsSync}={}){
  const errors=[],domains=contract?.domains;
  if(contract?.schema!=='sense-seo-v13-coverage-contract'||!Array.isArray(domains)||domains.length<28)
