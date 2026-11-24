@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 export function auditAnswerPage(page){
- const errors=[],warnings=[],unknown=[];
+ const errors=[],warnings=[],unknown=['Original source facts, HTTP response, Search Console indexing and citation selection are not independently fetched by this offline manifest checker; declared values remain unverified until corroborated externally'];
  if(!page||typeof page!=='object')return {status:'FAIL',errors:['Manifest object required'],warnings,unknown};
  if(!page.url || !/^https:\/\//.test(page.url))errors.push('Canonical https URL required');
  else {try{new URL(page.url);}catch{errors.push('Invalid URL')}}
@@ -28,7 +28,7 @@ export function auditAnswerPage(page){
  if(page.task_required===true && page.task_output_tested!==true)errors.push('Functional task needs actual correct-output test');
  if(page.structured_data_claimed && page.structured_data_matches_visible!==true)errors.push('Structured-data assertions must match visible page truth');
  if(page.faq_schema_claimed===true)warnings.push('Do not use retired Google FAQ rich-result expectations as AEO evidence');
- return {status:errors.length?'FAIL':unknown.length?'UNKNOWN_LIVE':'PASS_SCOPE',errors,warnings,unknown,
+ return {status:errors.length?'FAIL':unknown.length?'UNKNOWN_LIVE':'UNKNOWN_LIVE',errors,warnings,unknown,
  disclaimer:'Cannot select featured snippets, AI citations or rank. Not a Search Console property query.'};
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){

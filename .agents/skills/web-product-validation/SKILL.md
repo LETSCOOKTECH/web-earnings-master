@@ -33,3 +33,6 @@ For each tool run actual input/output oracle, corrupted/oversized/batch and low-
 
 ## V6 production and research handoff (2026-11-23)
 Before declaring 'full tool' or page ready, use actual output oracle, malformed samples, target phone/browser, privacy network trace, download reopening and server fallback. Forward checked value evidence to web-publisher-policy-eligibility; no UI screenshots as substitution.
+
+## V11 — Real user task beats metadata PASS
+A sandbox site passed static SEO with intentionally broken JS in prior independent review. Verify the actual **shipped executable source** and independently inspect output file bytes, corruption/size/permissions, browser form/download, mobile/a11y and privacy before release. Mutation tests must break the shipped tool and fail its actual oracle; HTML-only passing tests never make it a functioning product. See `docs/seo-master/04-evidence-and-sandbox.md`. A real browser blocked by administrator policy is NOT_RUN/UNKNOWN, not a PASS.

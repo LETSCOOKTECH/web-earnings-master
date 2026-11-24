@@ -46,3 +46,6 @@ description: "Engineer production web utilities end to end with traceable user j
 ## Official primary-source starting points (re-open before action)
 - https://www.w3.org/TR/WCAG22/
 - https://asvs.owasp.org/
+
+## V11 — End-to-end SEO-aware developer guard
+Use `docs/seo-master/README.md` as orchestration and `docs/seo-master/02-technical-fullstack.md` for workload-first full-stack contracts. Real output and correct user-job fixture precede page count/SEO copy. Every public canonical page requires valuable initial HTML and a functional action; no framework is a ranking factor. Build only needed frontend/backend/DB/queue with security, accessibility, performance, cost, deployment/rollback and task telemetry. Local static audit must be followed by actual interactive browser output/download tests, real low-memory mobile where relevant, security/consent and deployed HTTPS, before any production READY claim. Account-verified indexing, ad approval and revenue remain UNKNOWN unless actually inspected.

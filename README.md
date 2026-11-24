@@ -194,3 +194,6 @@ New browser-first market research and idea-validation system: documented Google 
 
 ## V10 — Fail-closed Computer Use permission check
 Added `scripts/check-computer-use-permission.mjs`, a conservative action-specific gate for actual advertised tool capability, original provider permissions, user/account scope, destination and credits. Its example is deliberately HOLD; it neither launches a browser nor claims live vendor approval. See `docs/opportunity/08-computer-use-permission.md`.
+
+## V11 — SEO + fullstack mastery operating guide
+Source-backed [SEO Master execution protocol](docs/seo-master/README.md), [keyword intelligence](docs/seo-master/01-keyword-intelligence.md), [technical website engineering](docs/seo-master/02-technical-fullstack.md), [Google Search/Ads/AdSense separation](docs/seo-master/03-policy-separation.md), [negative and production acceptance](docs/seo-master/04-evidence-and-sandbox.md), and [31 first-party source leads](sources/seo_v11_source_map.json). Includes root homepage validator repair, AEO self-report uncertainty guard, noindex/sitemap blocker tightening and regression tests. Independent sandbox laboratory exists as a companion user artifact, not a deployed website. This repository still has 48 skills; no ranking or publisher account evidence implied.

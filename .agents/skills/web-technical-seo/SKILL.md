@@ -44,3 +44,6 @@ Read chapters 11–14 and 17–18 for browser protocol, search indexing and SERP
 
 ## V6 production and research handoff (2026-11-23)
 Use web-search-forensic-evidence before treating NavBoost/Q*/Trawler/leaked API or patents as controlled ranking weights. Crawl/render/index and Search Console are observable; Google AI Mode indexed+snippet gate and no llms.txt requirement are documented. docs/v6/01-search-rank-forensics.md.
+
+## V11 — Evidence-first technical SEO master gate
+Read `docs/seo-master/02-technical-fullstack.md` and `docs/seo-master/04-evidence-and-sandbox.md`. Gate *actual* public HTTP/TLS/redirect/404, initial versus rendered HTML, canonical selection, robots crawl versus noindex index-control, real internal link graph, sitemap current canonical URLs, supported visible structured data, mobile and WCAG, and **field** CWV (LCP <=2.5s, INP <=200ms, CLS <=0.1 at p75). Distinguish metadata/static fixtures from external Google URL Inspection/index state. Never infer traffic/rank from a local pass. Audit the real project's route manifest (not assumed example converter URLs); check ad experience separately. Deliberately mutate robots/canonical/noindex/sitemap/H1/links to verify regression detection. **Security/functional output and hosted Googlebot tests remain independent.**

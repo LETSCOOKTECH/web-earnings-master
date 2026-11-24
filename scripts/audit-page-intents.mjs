@@ -5,7 +5,7 @@ if(!file){console.error('Usage: node scripts/audit-page-intents.mjs --file page-
 const d=JSON.parse(fs.readFileSync(file,'utf8'));const pages=d.pages??[];let errs=[];
 if(!pages.length)errs.push('No pages');const slugs=new Set(),jobs=new Set();
 for(const p of pages){
- if(!/^\/[a-z0-9/_-]*\/$/.test(p.path??''))errs.push('Invalid canonical path '+p.path);
+ if(!/^\/(?:[a-z0-9_-]+\/)*$/.test(p.path??''))errs.push('Invalid canonical path '+p.path);
  if(slugs.has(p.path))errs.push('Duplicate URL '+p.path);slugs.add(p.path);
  if(!p.user_job||p.user_job.length<15)errs.push('Missing distinct user job at '+p.path);
  const key=(p.user_job??'').toLowerCase().trim();if(jobs.has(key))errs.push('Duplicate user job '+p.user_job);jobs.add(key);
