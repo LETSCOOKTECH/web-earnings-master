@@ -398,81 +398,81 @@
       "id": "web-master-orchestrator",
       "category": "Operations",
       "deliverable": "Bounded routed execution DAG and decision receipt",
-      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
-      "externalGate": "Check authorized original sources and independently repeat real user workflow",
-      "blocker": "No original or independent proof of the consequential outcome"
+      "localGate": "Reproduce deterministic work-package routing, dependency ordering, budget exhaustion, unauthorized-action refusal and unresolved mandatory gate",
+      "externalGate": "Inspect an independently reviewed end-to-end task with recorded actual resource consumption and separate human authorization",
+      "blocker": "Task claimed complete despite missing evidence, unbounded spend or incorrect cross-skill handoff"
     },
     {
       "id": "web-market-intelligence-engine",
       "category": "Research",
       "deliverable": "Versioned independent market observation dataset",
-      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
-      "externalGate": "Check authorized original sources and independently repeat real user workflow",
-      "blocker": "No original or independent proof of the consequential outcome"
+      "localGate": "Check independent-origin deduplication, geographic/period metric compatibility, rights, source lineage and contradiction ledger",
+      "externalGate": "Open authorized live Trends/keyword source and original human-demand or equivalent primary market records; compare exported actual data",
+      "blocker": "Syndicated comments counted repeatedly or estimates presented as owner-observed demand"
     },
     {
       "id": "web-competitive-gap-lab",
       "category": "Research",
       "deliverable": "Same-input competitor output benchmark",
-      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
-      "externalGate": "Check authorized original sources and independently repeat real user workflow",
-      "blocker": "No original or independent proof of the consequential outcome"
+      "localGate": "Compare identical deterministic input fixtures and actual output oracles, browser state, plan constraints and falsifying competitor cases",
+      "externalGate": "Repeat legal live competitor tasks with preserved results, timing and valid product/version context",
+      "blocker": "Screenshot-derived weakness or nonreproduced output benchmark used as investment proof"
     },
     {
       "id": "web-production-factory",
       "category": "Build",
       "deliverable": "Working utility vertical slice and release dossier",
-      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
-      "externalGate": "Check authorized original sources and independently repeat real user workflow",
-      "blocker": "No original or independent proof of the consequential outcome"
+      "localGate": "Exercise working conversion/original output, malformed inputs, privacy isolation, mobile/accessibility, resource limits and rollback",
+      "externalGate": "Inspect real staging build and representative device/browser task success plus authorized deployment rollback procedure",
+      "blocker": "Mock-only functionality, corrupt outputs, secret leakage or noncommercial hosting assumption"
     },
     {
       "id": "web-search-performance-lab",
       "category": "Discovery",
       "deliverable": "Real search and AI discovery experiment evidence",
-      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
-      "externalGate": "Check authorized original sources and independently repeat real user workflow",
-      "blocker": "No original or independent proof of the consequential outcome"
+      "localGate": "Distinguish fetched, indexed, ranked, AI-cited, referred and completed states using owned lab fixtures and source timestamps",
+      "externalGate": "Observe authenticated owned GSC/Bing/analytics/server logs or dated real provider outputs with query/geo/device scope",
+      "blocker": "Crawler allowed mistaken for live search placement or synthetic citation treated as referral"
     },
     {
       "id": "web-retention-intelligence",
       "category": "Growth",
       "deliverable": "Consent-respecting task completion and cohort diagnostics",
-      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
-      "externalGate": "Check authorized original sources and independently repeat real user workflow",
-      "blocker": "No original or independent proof of the consequential outcome"
+      "localGate": "Validate event-level deduplication, consent, correct-completion denominator, cohort definition and one-off job cases",
+      "externalGate": "Verify privacy-compliant first-party user task events and reproducible cohort calculations over a defined period",
+      "blocker": "Synthetic retention numbers, biased denominator or collection of private tool inputs"
     },
     {
       "id": "web-revenue-optimization",
       "category": "Monetization",
       "deliverable": "Reconciled net revenue and task costs",
-      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
-      "externalGate": "Check authorized original sources and independently repeat real user workflow",
-      "blocker": "No original or independent proof of the consequential outcome"
+      "localGate": "Verify revenue versus advertiser CPC, paid invoice joins, per-successful-task expense and downside sensitivities",
+      "externalGate": "Reconcile actual permitted publisher payouts, invalid-traffic deductions and current provider invoices by period",
+      "blocker": "Estimated visits or earnings presented as recognized revenue, invalid-traffic risk ignored"
     },
     {
       "id": "web-continuous-learning",
       "category": "Operations",
       "deliverable": "Versioned experiments and reviewed corrections",
-      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
-      "externalGate": "Check authorized original sources and independently repeat real user workflow",
-      "blocker": "No original or independent proof of the consequential outcome"
+      "localGate": "Test append-only experiment lineage, preregistered hypothesis, adverse outcomes, provenance, rollback and regression trace",
+      "externalGate": "Reproduce impact of reviewed playbook change on authorized real job or report UNKNOWN where outcome unobtainable",
+      "blocker": "Self-reinforcing unsupported source hashes, post-hoc causal certainty or erased failed results"
     },
     {
       "id": "web-independent-verification",
       "category": "Research",
       "deliverable": "Independent original evidence and reproduction dossier",
-      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
-      "externalGate": "Check authorized original sources and independently repeat real user workflow",
-      "blocker": "No original or independent proof of the consequential outcome"
+      "localGate": "Test contradictory primary-source dates, blocked originals, nonindependent reposts, unverifiable author and fake developer reproduction",
+      "externalGate": "Independently open actual original provider/developer/human sources and rerun test with reviewer identity and limitations",
+      "blocker": "Fabricated evidence, copied synthesis treated as independent, same-actor review concealed"
     },
     {
       "id": "web-agent-adversarial-benchmark",
       "category": "Security",
       "deliverable": "Agent adversarial failure and regression scorecard",
-      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
-      "externalGate": "Check authorized original sources and independently repeat real user workflow",
-      "blocker": "No original or independent proof of the consequential outcome"
+      "localGate": "Execute versioned attack scenarios: fake source, permission violation, cost runaway, false GO, no output oracle and injection",
+      "externalGate": "Run a blinded or independently judged sample of real authorized tasks with measured false-approval and false-refusal rates",
+      "blocker": "Synthetic score asserted to prove real-world agent quality or test environment compromised"
     }
   ]
 }
