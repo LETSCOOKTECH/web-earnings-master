@@ -43,3 +43,5 @@ test('broader engine atlas contains actual independent and partner engines',()=>
  for(const term of ['Brave','Kagi','Mojeek','Yandex','Naver','Seznam','Baidu','DuckDuckGo','UNKNOWN'])
   assert.ok(doc.includes(term),'missing engine '+term);
 });
+
+test('November provider audit preserves scope and future AFS distinction',()=>{const j=JSON.parse(fs.readFileSync(path.join(root,'sources/verified_claims.json'),'utf8'));const by=new Map(j.claims.map(c=>[c.id,c]));assert.equal(by.get('ADS-AFS-2027').mode,'FUTURE');assert.match(by.get('ADS-AFS-2027').scope,/not ordinary/);assert.match(by.get('G-APIS-FETCHER').claim,/semicolon/);assert.match(by.get('G-BACK-FAQ').claim,/external app/);assert.match(by.get('ADS-GPC-LA-VT').scope,/Louisiana|state provisions/);const w=JSON.parse(fs.readFileSync(path.join(root,'sources/foundation_refresh_targets.json'),'utf8'));for(const id of ['google-special-crawlers','google-spam-policy','adsense-policy-changelog','adsense-gpc-la-vt'])assert.ok(w.monitored.some(x=>x.id===id&&x.semantic_review_required));});

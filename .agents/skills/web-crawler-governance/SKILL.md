@@ -26,3 +26,7 @@ description: "Audit crawler purpose, robots.txt RFC 9309, noindex and canonical 
 
 ## Deep operations extension (v2.2)
 Read chapters 14–16 and 18. Brave's official crawler page states it has no differentiated HTTP user agent: do not invent Bravebot WAF exceptions. Google now lists Google-Agent and user-triggered fetcher families separately; check the up-to-date official crawler list, scope and IP data before deployment. Microsoft AI Training/AI Grounding preferences announced October 2026 are FUTURE-EFFECTIVE February 2027; verify their exact page/robots syntax and transition dates before a later action. IETF AIPREF drafts are not universal active standards. Robots is not confidentiality; test bot-specific groups and real authentication separately. Always use signed-off full path matrix and verified bot IP, not UA spoof.
+
+## November 23 2026 official identity correction
+https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers
+APIs-Google is a user-triggered webhook fetcher; the documented header starts `APIs-Google;`. It ignores robots.txt and uses user-triggered fetcher IP ranges. Authenticate webhook requests with the product's own mechanism, not UA or IP alone. Google documented six additional existing special clients and six existing user fetchers; this is documentation of existing behavior, not a new organic ranking signal. See https://developers.google.com/crawling/docs/crawlers-fetchers/google-special-case-crawlers and https://developers.google.com/crawling/docs/changelog.

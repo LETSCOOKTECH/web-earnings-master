@@ -1,7 +1,7 @@
 {
-  "version": "2026-11-23.v3.1",
+  "version": "2026-11-24.v3.2",
   "claim_contract": "Current primary-source body inspection is a dated baseline, NOT permanent verification. For every consequential action re-open source and current changelog at task time; unknowns block unsupported deploy changes.",
-  "claim_count": 48,
+  "claim_count": 53,
   "claims": [
     {
       "id": "G-AI-INDEX",
@@ -636,6 +636,71 @@
       "reviewed_on": "2026-11-23",
       "recheck": "Inspect official page and account guidance before claiming metrics",
       "not_proof": "Public page link is not evidence of any site's AI impressions, referrals, citations or revenue."
+    },
+    {
+      "id": "G-APIS-FETCHER",
+      "source": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers",
+      "topic": "Google crawler identity",
+      "claim": "APIs-Google is a user-triggered webhook fetcher, not a special-case crawler; documented UA includes a semicolon after APIs-Google. Robots rules are ignored.",
+      "scope": "Google Cloud/Workspace configured webhook deliveries; UA alone is not authentication.",
+      "mode": "CURRENT",
+      "section": "APIs-Google",
+      "evidence": "FIRST_PARTY_BODY_OPENED",
+      "reviewed_on": "2026-11-24",
+      "recheck": "Reopen original and changelog before action; verify effective date, scope and rollout.",
+      "not_proof": "Not proof of site compliance, traffic, ranking or observed provider behavior."
+    },
+    {
+      "id": "G-SPECIAL-20261123",
+      "source": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-special-case-crawlers",
+      "topic": "Google special crawlers",
+      "claim": "Six existing clients newly documented November 23 ignore robots rules: Google-analytics-postbacks, Google-Calendar-Importer, GoogleDocs, Google-Edu, pageburst, PlayStore-Google.",
+      "scope": "Special-case clients, not new Search indexers.",
+      "mode": "CURRENT",
+      "section": "Individual client entries",
+      "evidence": "FIRST_PARTY_BODY_OPENED",
+      "reviewed_on": "2026-11-24",
+      "recheck": "Reopen original and changelog before action; verify effective date, scope and rollout.",
+      "not_proof": "Not proof of site compliance, traffic, ranking or observed provider behavior."
+    },
+    {
+      "id": "G-BACK-FAQ",
+      "source": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "topic": "Google Search spam",
+      "claim": "Back-button hijacking policy covers browser navigation even from non-Search referrals and Discover; third-party ad code is not itself prohibited; external app navigation is outside this policy.",
+      "scope": "Browser behavior, not blanket approval of ad networks or apps.",
+      "mode": "CURRENT",
+      "section": "Back button hijacking FAQ",
+      "evidence": "FIRST_PARTY_BODY_OPENED",
+      "reviewed_on": "2026-11-24",
+      "recheck": "Reopen original and changelog before action; verify effective date, scope and rollout.",
+      "not_proof": "Not proof of site compliance, traffic, ranking or observed provider behavior."
+    },
+    {
+      "id": "ADS-GPC-LA-VT",
+      "source": "https://support.google.com/adsense/answer/18818765?hl=en",
+      "topic": "AdSense privacy",
+      "claim": "Google announced direct GPC-triggered RDP for Louisiana and Vermont user ad requests starting on or after November 17 2026.",
+      "scope": "Provider processing only; state provisions start on or after January 1 2027; not proof of legal compliance or account behavior.",
+      "mode": "CURRENT",
+      "section": "November 16 2026 announcement",
+      "evidence": "FIRST_PARTY_BODY_OPENED",
+      "reviewed_on": "2026-11-24",
+      "recheck": "Reopen original and changelog before action; verify effective date, scope and rollout.",
+      "not_proof": "Not proof of site compliance, traffic, ranking or observed provider behavior."
+    },
+    {
+      "id": "ADS-AFS-2027",
+      "source": "https://support.google.com/adsense/answer/9336650?hl=en",
+      "topic": "AdSense for Search",
+      "claim": "Unified AFS and Search ads policy set scheduled for January 17 2027; applies to web AFS including activated Programmable Search Engine and CSA.",
+      "scope": "Future policy; current separate policies remain applicable until effective; not ordinary AdSense for Content.",
+      "mode": "FUTURE",
+      "section": "Updates to the AdSense for Search policies",
+      "evidence": "FIRST_PARTY_BODY_OPENED",
+      "reviewed_on": "2026-11-24",
+      "recheck": "Reopen original and changelog before action; verify effective date, scope and rollout.",
+      "not_proof": "Not proof of site compliance, traffic, ranking or observed provider behavior."
     }
   ]
 }

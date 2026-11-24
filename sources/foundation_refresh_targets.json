@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-23.v3.1",
+  "version": "2026-11-24.v3.2",
   "intent": "Automated change *signals* only. Do not update policy semantics or provider eligibility without human/agent reading official source.",
   "monitored": [
     {
@@ -262,6 +262,38 @@
       "id": "baidu-ai-traffic",
       "category": "analytics",
       "url": "https://ziyuan.baidu.com/aiflow/index",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-special-crawlers",
+      "category": "crawler",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-special-case-crawlers",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "google-spam-policy",
+      "category": "search",
+      "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "adsense-policy-changelog",
+      "category": "publisher",
+      "url": "https://support.google.com/adsense/answer/9336650?hl=en",
+      "kind": "html",
+      "semantic_review_required": true,
+      "source_owner": "official_provider"
+    },
+    {
+      "id": "adsense-gpc-la-vt",
+      "category": "privacy",
+      "url": "https://support.google.com/adsense/answer/18818765?hl=en",
       "kind": "html",
       "semantic_review_required": true,
       "source_owner": "official_provider"

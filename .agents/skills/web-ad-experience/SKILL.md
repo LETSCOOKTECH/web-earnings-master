@@ -27,3 +27,11 @@ description: "Implement restrained, policy-aware ad layouts and measurable user 
 **Evidence needed:** Live approved ad layout, CLS, mobile interaction, consent and task completion.
 **Critical FAIL / UNKNOWN:** No fake download/accidental-click layout and no live ad clicks during tests.
 **Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; the source watch's hash changes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
+
+## November 23 2026 Search spam clarification
+https://developers.google.com/search/docs/essentials/spam-policies
+Back-button hijacking applies to browser navigation even from non-Search referrals and Discover. Third-party advertising code is not prohibited merely for being third-party; test actual behavior. External app navigation is outside this specific policy. Test browser Back with ads enabled, including social referrals, and reject history traps; this is not a blanket app or ad policy exemption.
+
+## Future AFS policy transition — January 17 2027
+https://support.google.com/adsense/answer/9336650?hl=en
+Unified AFS policies are announced, not yet effective. Reopen current separate policies https://support.google.com/adsense/answer/1354757 and https://support.google.com/adsense/answer/7003954 until transition. For future AFS review test genuine user search intent, nonempty meaningful results, one request per action, ad-to-organic ratio, and no mixing/backfill in AFS slots. Provider-approved feature exceptions and written repeat-ad approval must be checked. Other non-AFS slots may use other permitted demand subject to the concurrent Google Ads text-demand restriction. Do not generalize AFS rules to ordinary content ads.

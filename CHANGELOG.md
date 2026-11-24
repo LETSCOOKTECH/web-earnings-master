@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-24 — provider semantic audit
+- Added five bounded official claims covering crawler identity correction, Search back-navigation clarification, regional GPC/RDP and future AFS policy consolidation. Added four watch targets and scoped skill updates. No production changes or proprietary ranking claims.
+
 ## 2.3.1 — 2026-11-23 (per-action source evidence gate)
 - Added executable scripts/require-action-time-sources.mjs and seven negative/positive tests to reject stale, unverifiable, snippet-only and future-effective documentation when preparing consequential crawler/AI/ads/security changes.
 - Source evidence requires official URL, fresh UTC observation, bounded directly checked text, exact scope/section, effectivity, reviewer and real test/account result. Code validation checks structure/time, never semantic truth.

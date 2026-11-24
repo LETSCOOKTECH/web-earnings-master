@@ -32,3 +32,7 @@ Read chapters 11–14 and 17–18 for browser protocol, search indexing and SERP
 **Evidence needed:** Owned HTTP lab + actual live URL Inspection, status, canonical/robots and indexed visibility if account connected.
 **Critical FAIL / UNKNOWN:** Do not declare index/AI visibility from static HTML and robots alone.
 **Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
+
+## November 23 2026 Search spam clarification
+https://developers.google.com/search/docs/essentials/spam-policies
+Back-button hijacking applies to browser navigation even from non-Search referrals and Discover. Third-party advertising code is not prohibited merely for being third-party; test actual behavior. External app navigation is outside this specific policy. Test browser Back with ads enabled, including social referrals, and reject history traps; this is not a blanket app or ad policy exemption.

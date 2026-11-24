@@ -28,3 +28,11 @@ description: "Check Google AdSense eligibility, account and site review, origina
 **Evidence needed:** Actual AdSense status, verified ownership, current policy, site usefulness, ads.txt.
 **Critical FAIL / UNKNOWN:** No approval claims from a static test or minimum articles/visits myth.
 **Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; the source watch's hash changes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
+
+## November 2026 privacy update
+https://support.google.com/adsense/answer/18818765?hl=en
+Google announced GPC-triggered RDP for Louisiana and Vermont ad requests starting on or after November 17 2026, ahead of state provisions on or after January 1 2027. Test regional GPC handling, actual ad request behavior and consent separately; do not infer legal compliance or remove publisher obligations.
+
+## Future AFS policy transition — January 17 2027
+https://support.google.com/adsense/answer/9336650?hl=en
+Unified AFS policies are announced, not yet effective. Reopen current separate policies https://support.google.com/adsense/answer/1354757 and https://support.google.com/adsense/answer/7003954 until transition. For future AFS review test genuine user search intent, nonempty meaningful results, one request per action, ad-to-organic ratio, and no mixing/backfill in AFS slots. Provider-approved feature exceptions and written repeat-ad approval must be checked. Other non-AFS slots may use other permitted demand subject to the concurrent Google Ads text-demand restriction. Do not generalize AFS rules to ordinary content ads.

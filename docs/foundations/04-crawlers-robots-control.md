@@ -96,3 +96,7 @@ Google robots: https://developers.google.com/search/docs/crawling-indexing/robot
 OpenAI: https://developers.openai.com/api/docs/bots (opened)
 Anthropic: https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler (opened)
 Perplexity: https://docs.perplexity.ai/docs/resources/perplexity-crawlers (opened)
+
+## November 23 2026 official identity correction
+https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers
+APIs-Google is a user-triggered webhook fetcher; the documented header starts `APIs-Google;`. It ignores robots.txt and uses user-triggered fetcher IP ranges. Authenticate webhook requests with the product's own mechanism, not UA or IP alone. Google documented six additional existing special clients and six existing user fetchers; this is documentation of existing behavior, not a new organic ranking signal. See https://developers.google.com/crawling/docs/crawlers-fetchers/google-special-case-crawlers and https://developers.google.com/crawling/docs/changelog.

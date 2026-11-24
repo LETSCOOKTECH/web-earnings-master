@@ -27,3 +27,7 @@ description: "Design appropriate privacy, cookie, file-processing and ad-consent
 **Evidence needed:** Real data map, legal review, accept/reject/revoke and no-consent request tests.
 **Critical FAIL / UNKNOWN:** Cannot self-certify legality or claim local-only without testing third-party scripts.
 **Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
+
+## November 2026 privacy update
+https://support.google.com/adsense/answer/18818765?hl=en
+Google announced GPC-triggered RDP for Louisiana and Vermont ad requests starting on or after November 17 2026, ahead of state provisions on or after January 1 2027. Test regional GPC handling, actual ad request behavior and consent separately; do not infer legal compliance or remove publisher obligations.
