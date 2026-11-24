@@ -151,7 +151,7 @@ export function evaluateRecommendar(data,{now=Date.now()}={}){
   }
  }
  if(Array.isArray(groups)&&Array.isArray(questions)&&Array.isArray(repeats)){
-  const expected=groups.length*questions.filter(q=>groupMap.has(JSON.stringify([groups[0]?.surface,q.locale]))||groups.some(g=>g.locale===q.locale)).length*repeats.length;
+  const expected=groups.reduce((n,g)=>n+(isObj(g)?questions.filter(q=>isObj(q)&&q.locale===g.locale).length*repeats.length:0),0);
   if(expected>100000)mark(errors,'Panel exceeds 100,000 attempt guard; split into bounded studies');
   for(const g of groups)for(const q of questions.filter(q=>q?.locale===g?.locale&&isObj(g)))for(const rp of repeats){
    if(!keys.has(JSON.stringify([g.surface,g.locale,q.id,rp])))mark(errors,'Missing preregistered attempt '+g.surface+'/'+g.locale+'/'+q.id+'/'+rp);
