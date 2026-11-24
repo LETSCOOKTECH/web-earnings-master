@@ -9,6 +9,9 @@ For AEO/GEO read docs/ai-search/07-2026-11-24-provider-controls-v15.md with the 
 
 # Codex operating guide — Web Earnings Master
 
+## V16 mandatory independent holdout and global-readiness boundary (2026-11-24)
+When evaluating AEO/GEO readiness, consult docs/audits/2026-11-24-independent-global-readiness-v16.md and the updated docs/ai-search/README.md. Run npm run audit:independent-readiness, npm test, and real cross-browser/tool tests. Google robots `none` equals noindex; scope X-Robots-Tag by crawler; validate Perplexity original with current source date and Anthropic's current training preference distinct from Google's future. Require GEO expected surface/locale and repeat IDs and all planned prompt-run cells. Local success never certifies real AI citations, indexing, full international coverage, AdSense or net earnings; default to HOLD without owner/deployment/human evidence.
+
 ## V14 — Answer and generative AI search operations (2026-11-24)
 Read docs/ai-search/README.md and task-specific provider/answer/measurement/agent-execution chapter when working on AEO, GEO, Google AI Mode, ChatGPT Search, Claude, Perplexity, Bing/Copilot or agent-friendly websites. Use exact platform and 19-surface source registry with original-body evidence vs reference leads; do not confuse search and training crawlers. Google GenAI dedicated reports began June 2026, check actual owner property rollout. Run scripts/audit-ai-eligibility-v14.mjs on actual initial HTML/robots, scripts/evaluate-ai-visibility-v14.mjs on preregistered human question panel and scripts/check-ai-surface-v14.mjs. None can certify external indexing/citations; avoid fabricated model mentions, magic llms.txt, artificial content chunking and AI-only schema. Preserve source dates and real accounts/permissions and user-task outcomes.
 
