@@ -4,7 +4,7 @@ import path from 'node:path';
 import process from 'node:process';
 import {evaluateRobots} from './robots-evaluator.mjs';
 
-function args(a){const m={};for(let i=0;i<a.length;i++){if(a[i].startsWith('--'))m[a[i].slice(2)]=a[++i];}return m;}
+function args(a){const m={};for(let i=0;i<a.length;i++){if(!a[i].startsWith('--'))continue;const key=a[i].slice(2);if(a[i+1]&&!a[i+1].startsWith('--'))m[key]=a[++i];else m[key]=true;}return m;}
 const opt=args(process.argv.slice(2));
 if(!opt.dist||!opt.origin){console.error('Usage: node scripts/audit-static-site.mjs --dist dist --origin https://example.com');process.exit(2);}
 let origin;try{origin=new URL(opt.origin)}catch{console.error('Invalid --origin');process.exit(2)}
