@@ -9,7 +9,7 @@
 4. [Agent-friendly browser functionality](04-agent-task-reliability.md).
 5. [Codex action workflow and acceptance gates](05-agent-execution.md).
 
-Primary curated source registry: sources/ai_search_v14_surface_atlas.json with 19 separate product/agent surfaces. A verified original source helps interpret that particular provider's documented policy, but does not prove runtime crawler access, inclusion or citations. Use V13 source review protocol for action-time updates.
+Primary curated source registry: sources/ai_search_v14_surface_atlas.json (19 surfaces in V14; expanded to **20** in the November 24 V16 review). A verified original source helps interpret that particular provider's documented policy, but does not prove runtime crawler access, inclusion or citations. Use V13 source review protocol for action-time updates.
 
 ## Key distinctions
 AEO = accuracy and usability of direct answers; GEO = source quality and observational visibility across AI retrieval systems; bot governance = independent policy controls for search/training/user agents; agent UX = actual end-to-end human-verified task operation. Treat bot fetch, index, retrieval, citation, referral, successful task and earned net revenue as distinct. Never assign an official single AI-rank score.
@@ -30,3 +30,7 @@ Run: npm run audit:ai-surfaces, npm run audit:ai-eligibility, npm run audit:ai-o
 ## V15 independent controls and adversarial validation
 
 Read [November 24 provider-control/evidence playbook](07-2026-11-24-provider-controls-v15.md): Google owner control, Google-Extended and GoogleOther independence; preview directives; and complete preregistered provider/locale observation panels. Run npm run audit:ai-controls, V14 audits, then real browser/owner evidence. All local results remain non-certifying.
+
+## V16 independent sandbox outcome and scope
+
+See [independent production-readiness assessment](../audits/2026-11-24-independent-global-readiness-v16.md). Eleven independently designed adversarial tests caught seven originally missed issues in Google robots headers, Perplexity source-state governance, GEO sample completeness, AIPREF platform semantics and documentation inventory. Repaired code was retested in Node and real browser runners. Run `npm run audit:independent-readiness` plus full `npm test`; this certifies only tested local contracts. The focused source atlas now has 20 surfaces (14 source bodies marked opened, 6 still search-result-only); other worldwide surfaces and real citation/referral outcomes remain unverified.
