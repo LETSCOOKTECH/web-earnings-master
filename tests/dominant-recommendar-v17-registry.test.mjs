@@ -13,7 +13,7 @@ const fail=d=>assert.equal(check(d).status,'FAIL',JSON.stringify(check(d)));
 test('source atlas validates metadata scope, NOT real provider rank',()=>{
  const r=check(fixture());
  assert.equal(r.status,'PROVIDER_METADATA_ONLY');
- assert.equal(r.listed_surfaces,17);
+ assert.equal(r.listed_surfaces,18);
  assert.equal(r.opened_originals,17);
  assert.equal(r.exact_ranking_algorithms_verified,false);
  assert.equal(r.actual_citations_verified,false);
@@ -115,3 +115,11 @@ test('future original-source review date must fail',()=>{const x=fixture();x.sou
 
 test('ADVERSARIAL null official source record is controlled FAIL',()=>{const x=fixture();x.sources[0]=null;fail(x);});
 test('ADVERSARIAL null product record is controlled FAIL',()=>{const x=fixture();x.providers[0]=null;fail(x);});
+
+test('API web search original must remain separate from consumer ChatGPT Search source',()=>{
+ const x=fixture(),api=x.providers.find(p=>p.id==='openai-web-search-api');
+ assert.deepEqual(api.documented_originals,['O03']);
+ assert.equal(api.mode,'API_WEB_SEARCH');
+ assert.notEqual(api.id,x.providers.find(p=>p.id==='openai-chatgpt-search').id);
+ assert.equal(check(x).status,'PROVIDER_METADATA_ONLY');
+});
