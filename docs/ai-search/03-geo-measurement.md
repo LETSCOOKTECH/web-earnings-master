@@ -34,3 +34,7 @@ Official references: https://developers.google.com/search/docs/fundamentals/ai-o
 ## V15 cohort completeness
 
 Preregister study.expected_groups with surface and locale before taking any AI answers. Every observed cohort must contain all prompt_ids with UNAVAILABLE attempts included; expected cohorts missing entirely are a failure. One provider's positive replies cannot conceal another provider's missing trials. This remains an observational consistency check, not actual provider or owner authentication.
+
+## V16 independent holdout correction: balanced repeated panels
+
+Every sample must preregister exact `study.expected_groups` and `study.repeat_ids`, in addition to `study.prompt_ids`. Collect each {surface, locale, prompt_id, repeat_id} attempted cell (including `UNAVAILABLE`) before computing a visible-citation proportion. A missing cohort or selective extra rerun fails the experiment. Observational prompt outputs are NOT authenticated by this file validator; retain permitted original captures and independently verified real-world referrals.

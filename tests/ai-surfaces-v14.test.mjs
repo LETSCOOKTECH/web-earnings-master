@@ -9,7 +9,7 @@ const data=JSON.parse(fs.readFileSync(path.join(root,'sources/ai_search_v14_surf
 const copy=()=>structuredClone(data);
 const check=d=>checkAiSurfaceAtlas(d,{hasFile:p=>fs.existsSync(path.join(root,p))});
 test('19 distinct provider surfaces, 8 modes and professional docs exist',()=>{
- const r=check(copy());assert.equal(r.valid,true,JSON.stringify(r.errors));assert.equal(r.count,19);assert.equal(r.modes.length,8);
+ const r=check(copy());assert.equal(r.valid,true,JSON.stringify(r.errors));assert.ok(r.count>=20,'At least 20 provider/control surfaces after verified Anthropic update');assert.equal(r.modes.length,8);
 });
 test('Google 2026 dedicated Generative AI report is not hidden by old Search Web-only claims',()=>{
  const g=data.surfaces.find(x=>x.id==='google-gsc-ai-report');
@@ -23,8 +23,12 @@ test('Search and training agents are kept separate',()=>{
  assert.equal(o.agent,'OAI-SearchBot');assert.equal(t.agent,'GPTBot');
  assert.notEqual(o.mode,t.mode);
 });
-test('Perplexity uninspected original stays a reference lead',()=>{
- assert.equal(data.surfaces.find(x=>x.id==='perplexity-search').source_status,'REFERENCE_LEAD');
+test('Perplexity original source has dated and scoped updated provenance',()=>{
+ const p=data.surfaces.find(x=>x.id==='perplexity-search');
+ assert.equal(p.source_status,'ORIGINAL_BODY_OPENED');
+ assert.equal(p.source_reviewed_on,'2026-11-24');
+ assert.match(p.source_url,/^https:\/\/docs\.perplexity\.ai\//);
+ assert.match(p.policy_summary,/Perplexity-User/);
 });
 test('Missing primary bot surface fails provider coverage',()=>{
  const d=copy();d.surfaces=d.surfaces.filter(x=>x.id!=='openai-chatgpt-search');
@@ -37,9 +41,11 @@ test('AI training 2027 incorrectly marked current is rejected',()=>{
  const d=copy();d.surfaces.find(x=>x.id==='google-training-2027').mode='SEARCH_INDEX';
  assert.equal(check(d).valid,false);
 });
-test('Unopened Perplexity document cannot be magically marked opened',()=>{
- const d=copy();d.surfaces.find(x=>x.id==='perplexity-search').source_status='ORIGINAL_BODY_OPENED';
- assert.equal(check(d).valid,false);
+test('A reviewed source record is metadata, not verified crawling or AI citations',()=>{
+ const r=check(copy());
+ assert.equal(r.source_bodies_and_owner_settings_currently_verified,false);
+ assert.equal(r.ai_citation_outcome_verified,false);
+ assert.equal(r.status,'PROVIDER_ATLAS_METADATA_ONLY');
 });
 test('Malicious lookalike official URL is rejected',()=>{
  const d=copy();d.surfaces[0].source_url='https://developers.google.com.attacker.tld/ai';

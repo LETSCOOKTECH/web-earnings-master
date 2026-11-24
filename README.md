@@ -43,7 +43,7 @@ The loop is adaptive. Codex must investigate the current problem and only invoke
 
 ## Skill library
 
-**28 specialized Codex skills**, stored under [`.agents/skills/`](.agents/skills/), cover:
+**48 active Codex skills**, stored under [`.agents/skills/`](.agents/skills/), cover:
 
 | Workstream | Skills | What they produce |
 | --- | --- | --- |

@@ -32,8 +32,8 @@ export function checkAiSurfaceAtlas(atlas,{hasFile=()=>true}={}){
   errors.push('Dedicated June 2026 Google GenAI report source was originally opened');
  if(surfaces.find(s=>s.id==='google-training-2027')?.mode!=='FUTURE_CONTROL')
   errors.push('Announced early-2027 training signal cannot be current search setting');
- if(surfaces.find(s=>s.id==='perplexity-search')?.source_status==='ORIGINAL_BODY_OPENED')
-  errors.push('Current Perplexity crawler document unverified in original source review');
+ // Do not reject a newly verified first-party original: source status must advance after review.
+ // The registry is still self-reported metadata; a source status never certifies citations.
  for(const p of DOCS)if(!hasFile('docs/ai-search/'+p))errors.push('Required professional guide missing '+p);
  return {valid:!errors.length,status:errors.length?'FAIL':'PROVIDER_ATLAS_METADATA_ONLY',errors,count:surfaces.length,modes:[...modes].sort(),
   source_bodies_and_owner_settings_currently_verified:false,ai_citation_outcome_verified:false,

@@ -38,3 +38,7 @@ Sources: https://developers.google.com/search/blog/2026/06/gen-ai-performance-re
 ## V15 complete provider cohorts
 
 Before observation register study.expected_groups as explicit surface/locale pairs, alongside the fixed human prompt panel. Every intended provider needs all question attempts, including UNAVAILABLE. The updated evaluator rejects omitted cohorts and partial provider trials; provider UI and actual answers remain unverified by any manifest alone.
+
+## V16 repeat-cohort completeness gate
+
+Preregister `study.repeat_ids` alongside `study.prompt_ids` and `study.expected_groups`. Every expected provider/locale must attempt every prompt for every repeat ID; `UNAVAILABLE` is a real attempted cell, not permission to drop an unfavorable case. Reject selective positive reruns, duplicate IDs, unregistered repeats and missing entire cohorts. The synthetic CSV/JSON is an illustrative fixture, not evidence of LLM answers.

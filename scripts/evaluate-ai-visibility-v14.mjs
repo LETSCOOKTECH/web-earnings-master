@@ -17,6 +17,10 @@ export function evaluateAiVisibilityV14(data,{now=Date.now()}={}){
  if(!Array.isArray(hosts)||!hosts.length||hosts.some(h=>!validHost(h))||!unique(hosts))errors.push('Actual distinct public target hostnames required');
  if(!study||!validDate(study.preregistered_at)||!Array.isArray(study.prompt_ids)||!study.prompt_ids.length||!unique(study.prompt_ids))
   errors.push('Fixed dated pre-registered prompt panel required');
+ if(!Array.isArray(study?.expected_groups)||!study.expected_groups.length)
+  errors.push('Expected surface/locale cohorts must be preregistered, not inferred after results');
+ if(!Array.isArray(study?.repeat_ids)||!study.repeat_ids.length||study.repeat_ids.some(x=>typeof x!=='string'||x.length<1)||!unique(study.repeat_ids))
+  errors.push('Expected repeat IDs must be unique and preregistered for each prompt and cohort');
  if(study?.panel_method!=='HUMAN_TASK_SAMPLED'&&study?.panel_method!=='DOCUMENTED_USER_QUESTIONS')
   errors.push('Panel sampling must come from real user questions/tasks');
  const rows=new Set(),groups=new Map(),observedPromptIds=new Set(),seenGroupPrompts=new Set();
@@ -24,7 +28,8 @@ export function evaluateAiVisibilityV14(data,{now=Date.now()}={}){
   const loc=i+1;
   if(!fields.includes(r.surface))errors.push('Unknown/incomparable AI product '+loc);
   if(!study?.prompt_ids?.includes(r.prompt_id))errors.push('Prompt run not registered in fixed panel '+loc);
-  observedPromptIds.add(r.prompt_id);seenGroupPrompts.add(JSON.stringify([r.surface,r.locale,r.prompt_id]));
+  observedPromptIds.add(r.prompt_id);seenGroupPrompts.add(JSON.stringify([r.surface,r.locale,r.prompt_id,r.repeat_id]));
+  if(typeof r.repeat_id!=='string'||!study?.repeat_ids?.includes(r.repeat_id))errors.push('Unregistered/missing repeat_id '+loc);
   if(typeof r.locale!=='string'||r.locale.length<2||!validDate(r.observed_at))errors.push('Provider locale/observation date missing '+loc);
   if(r.status!=='OBSERVED'&&r.status!=='UNAVAILABLE')errors.push('Observed or unavailable state required '+loc);
   const key=[r.surface,r.locale,r.prompt_id,r.repeat_id??''].join('|');
@@ -59,9 +64,9 @@ export function evaluateAiVisibilityV14(data,{now=Date.now()}={}){
    warnings.push('Same URL in visible and background arrays; verify capture semantics '+loc);
  }
  for(const prompt of study?.prompt_ids||[])if(!observedPromptIds.has(prompt))errors.push('Pre-registered prompt missing from panel '+prompt);
- for(const g of groups.values())for(const prompt of study?.prompt_ids||[]){
-  if(!seenGroupPrompts.has(JSON.stringify([g.surface,g.locale,prompt])))
-   errors.push('Missing pre-registered prompt '+prompt+' for provider group '+g.surface+' / '+g.locale);
+ for(const g of groups.values())for(const prompt of study?.prompt_ids||[])for(const repeat of study?.repeat_ids||[]){
+  if(!seenGroupPrompts.has(JSON.stringify([g.surface,g.locale,prompt,repeat])))
+   errors.push('Missing pre-registered prompt '+prompt+' repeat '+repeat+' for provider group '+g.surface+' / '+g.locale);
  }
  if(Array.isArray(study?.expected_groups)){
   const expectedKeys=new Set();
@@ -75,7 +80,7 @@ export function evaluateAiVisibilityV14(data,{now=Date.now()}={}){
   }
   for(const g of groups.values())if(!expectedKeys.has(JSON.stringify([g.surface,g.locale])))
    errors.push('Observed provider group was not pre-registered '+g.surface+' / '+g.locale);
- }else warnings.push('Missing pre-registered expected provider/locale groups: entire absent cohorts cannot be detected');
+ }else errors.push('Missing preregistered expected provider/locale groups: cannot certify complete denominator');
  if(data?.owner_reports!==undefined){
   if(!Array.isArray(data.owner_reports))errors.push('Owner report metrics must be an array');
   else for(const report of data.owner_reports){

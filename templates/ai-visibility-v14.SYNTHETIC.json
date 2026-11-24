@@ -16,6 +16,9 @@
         "surface": "openai-chatgpt-search",
         "locale": "en-US"
       }
+    ],
+    "repeat_ids": [
+      "1"
     ]
   },
   "observations": [
