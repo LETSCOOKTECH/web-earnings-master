@@ -39,3 +39,6 @@
 
 ## Delegation boundaries
 Use existing `web-niche-validation` for market structuring, `web-competitor-audit` for same-input teardown, `web-traffic-hunter` for acquisition pilots, `web-technical-seo` and `web-generative-engine-optimization` for search eligibility, `web-unit-economics-finops` for actual cost, and `web-product-spec` only *after* decision gate. Research should not recursively invoke every skill; pick the next consequential check.
+
+## V10 — Required computer-use permission check
+Before third-party interactive GUI or paid API work read `docs/opportunity/08-computer-use-permission.md`, inspect the actual host tools and provider rules, and use the action-specific `scripts/check-computer-use-permission.mjs` preflight. It does not perform browser actions and its synthetic default HOLD is expected.

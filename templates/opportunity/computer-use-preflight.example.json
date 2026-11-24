@@ -1,0 +1,39 @@
+{
+  "runtime": {
+    "mode": "NONE",
+    "tool": null
+  },
+  "request": {
+    "action": "click",
+    "url": "https://trends.google.com/trends/explore",
+    "allowed_origins": [
+      "https://trends.google.com"
+    ],
+    "owned_site": false
+  },
+  "policy": {
+    "original_url": "https://policies.google.com/terms",
+    "scope": "Visible research UI",
+    "original_opened": false,
+    "checked_at": null,
+    "automation_status": "UNKNOWN",
+    "allowed_actions": []
+  },
+  "user": {
+    "authorized": false,
+    "account_access_authorized": false,
+    "scope": "No account access granted",
+    "allowed_actions": [],
+    "approved_paid_api": false
+  },
+  "budget": {
+    "max_actions": 30,
+    "used_actions": 0,
+    "max_paid_units": 0,
+    "used_paid_units": 0,
+    "max_cash_usd": 0,
+    "used_cash_usd": 0
+  },
+  "challenge_detected": false,
+  "private_data_risk": false
+}
