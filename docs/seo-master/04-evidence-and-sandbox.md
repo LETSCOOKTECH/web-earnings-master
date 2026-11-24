@@ -22,3 +22,5 @@ Never assume any one state implies another. Stop production-ready language until
 
 ## Agent output checklist
 Actual sources and dates; user-job and keyword/page map; output fixtures and checks; deployment architecture and cost; HTTP/HTML/real browser evidence; security/privacy/consent; source rights; publisher approval; measured GSC; business funnel; unknowns, rollback and cheapest corrective action. Do not inject all 48 skills into every tiny task.
+## Dynamic live HTTP route guard
+`scripts/audit-live-site.mjs` now requires explicit `--routes-file`, `--origin` and `--authorized-origin` and rejects synthetic manifests by default; it cannot infer project pages from the name of an example converter. Use actual approved site routes, current real canonical and sitemap. The output is `PASS_HTTP_ONLY` or `FAIL_HTTP`, never Google indexed or publisher-approved. Use separate working-browser, GSC and monetization evidence before release.
