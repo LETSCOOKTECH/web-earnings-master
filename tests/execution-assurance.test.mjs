@@ -12,7 +12,7 @@ test('unregistered skill rejects',()=>{const p=base();p.selected_skills=['fake']
 test('duplicated selected skill rejects',()=>{const p=base();p.selected_skills.push(p.selected_skills[0]);assert.equal(check(p).decision,'REJECT')});
 test('budget hard stop',()=>{const p=base();p.budget.spent_cash_usd=1;assert.equal(check(p).decision,'BLOCKED')});
 test('invalid token budget rejects',()=>{const p=base();p.budget.max_tokens=Infinity;assert.equal(check(p).decision,'REJECT')});
-test('same Reddit thread cannot become three independent demand origins',()=>{const p=base();p.evidence=[ev('a','HUMAN','same-thread'),ev('b','HUMAN','same-thread'),ev('c','HUMAN','same-thread')];assert.equal(check(p).independent_origins,1)});
+test('same Reddit thread cannot become three independent demand origins',()=>{const p=base();p.evidence=[ev('a1','HUMAN','same-thread'),ev('b2','HUMAN','same-thread'),ev('c3','HUMAN','same-thread')];assert.equal(check(p).independent_origins,1)});
 test('missing original human evidence blocks GO',()=>{const p=base();p.evidence=p.evidence.filter(e=>e.kind!=='HUMAN');assert.ok(check(p).blockers.some(s=>s.includes('human demand')))});
 test('missing technical prototype blocks GO',()=>{const p=base();p.evidence=p.evidence.filter(e=>e.kind!=='OWNED_TEST');assert.ok(check(p).blockers.some(s=>s.includes('feasibility')))});
 test('snippet-only first party cannot confirm effective rule',()=>{const p=base();p.evidence.push({...ev('provider','FIRST_PARTY','provider'),access:'SEARCH_SNIPPET',provider_rule_effective:true});assert.equal(check(p).decision,'BLOCKED')});
