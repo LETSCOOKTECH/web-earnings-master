@@ -94,6 +94,10 @@ test('Invalid routes rejected, root homepage allowed if meaningful',()=>{
  const x=copy();x.clusters[0].page='//fake/';assert.equal(audit(x).valid,false);
  const y=copy();y.clusters[0].page='/';assert.equal(audit(y).valid,true);
 });
+test('Original evidence URL must match first-party provider when source ID is declared',()=>{
+ const x=copy();x.clusters[0].evidence=[metric('TRENDS_NORMALIZED',{source_url:'https://attacker.example.org/fake-trends-export.csv'})];
+ const r=audit(x);assert.equal(r.valid,false);assert.ok(r.errors.some(x=>x.includes('Evidence hostname differs')));
+});
 test('CLI self-contained example passes without inventing market metrics',()=>{
  const p=spawnSync(process.execPath,['scripts/seo-keyword-provenance-v13.mjs','--file','templates/seo-keyword-research-v13.example.json'],{cwd:root,encoding:'utf8'});
  assert.equal(p.status,0,p.stderr);assert.match(p.stdout,/EXTERNAL_EVIDENCE_UNVERIFIED/);
