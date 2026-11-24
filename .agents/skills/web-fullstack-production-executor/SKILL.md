@@ -55,3 +55,6 @@ Follow docs/seo-master/05-independent-observatory-v12.md then docs/seo-master/07
 
 ## V13 — Web-verified professional production protocol
 V13 docs/seo-master/11-end-to-end-web-development-v13.md and 14-agent-orchestration-v13.md are mandatory on significant builds: actual user job, tool output oracle, minimal browser/API architecture, frontend semantic HTML, backend auth/validation as needed, threat model, mobile and three-browser real output, SEO, deployment/rollback, field telemetry, publisher safeguards. Use 29-domain atlas for failure coverage, official originals for changing vendor requirements, and never upgrade local checks into live Search or revenue.
+
+## V14 — AI agent/answer SEO acceptance at website release
+When public site targets AI discovery, add docs/ai-search/05-agent-execution.md after general V13 guide, run audit:ai-surfaces, audit:ai-eligibility, audit:ai-observations and true browser task/output checks. Ensure initial visible main content and real source proof; route-specific robots Googlebot vs OAI-SearchBot, Google noindex/nosnippet, public HTTPS/WAF and owner generative inclusion setting. Local PASS is not indexing, citations, traffic or AdSense approval.

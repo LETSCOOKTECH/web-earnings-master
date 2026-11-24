@@ -1,0 +1,3 @@
+study_id,prompt_id,query_text,question_origin,provider_surface,locale,device,mode,preregistered_at_utc,expected_user_job,negative_control,consent_or_terms_check
+SYNTHETIC-EXAMPLE,csv-dedupe,How can I remove identical rows from a CSV file?,SYNTHETIC_SAMPLE_NOT_ACTUAL_USER,openai-chatgpt-search,en-US,mobile,consumer_search,2026-11-23T00:00:00Z,Remove exact duplicate CSV rows,false,NOT_RUN_SYNTHETIC
+SYNTHETIC-EXAMPLE,csv-privacy,Can I remove duplicate CSV records without uploading files?,SYNTHETIC_SAMPLE_NOT_ACTUAL_USER,openai-chatgpt-search,en-US,mobile,consumer_search,2026-11-23T00:00:00Z,Privacy-preserving browser-local operation,true,NOT_RUN_SYNTHETIC

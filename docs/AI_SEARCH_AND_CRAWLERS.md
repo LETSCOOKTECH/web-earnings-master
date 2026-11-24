@@ -1,3 +1,6 @@
+# V14 2026 report and crawler corrections
+**Current primary handbook:** [docs/ai-search/README.md](ai-search/README.md). Google dedicated Generative AI performance reports launched June 3 2026 in limited rollout (not merely classic Web); check account availability. Bing AI citation/Topics preview varies. OpenAI OAI-SearchBot/GPTBot/ChatGPT-User and Claude search/training/user bots remain independent. See 19-mode registry. AI search citations do not imply referrals; source URLs may be reference leads only.
+
 # AI search, citations and agent execution — factual control map
 
 The goal is **eligible retrieval + credible evidence + human visits**, not bot flooding or artificial citation manipulation. AI systems select sources independently.

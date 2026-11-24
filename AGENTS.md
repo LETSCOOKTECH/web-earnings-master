@@ -6,6 +6,9 @@ Read docs/seo-master/14-agent-orchestration-v13.md and only the task-relevant pr
 
 **Purpose:** Help LetsCookTech build and operate legitimate, high-value, monetizable websites across the portfolio. Treat this as a flexible operating guide, not a rigid prompt that overrides evidence, legal policy or the current user request.
 
+## V14 — Answer and generative AI search operations (2026-11-24)
+Read docs/ai-search/README.md and task-specific provider/answer/measurement/agent-execution chapter when working on AEO, GEO, Google AI Mode, ChatGPT Search, Claude, Perplexity, Bing/Copilot or agent-friendly websites. Use exact platform and 19-surface source registry with original-body evidence vs reference leads; do not confuse search and training crawlers. Google GenAI dedicated reports began June 2026, check actual owner property rollout. Run scripts/audit-ai-eligibility-v14.mjs on actual initial HTML/robots, scripts/evaluate-ai-visibility-v14.mjs on preregistered human question panel and scripts/check-ai-surface-v14.mjs. None can certify external indexing/citations; avoid fabricated model mentions, magic llms.txt, artificial content chunking and AI-only schema. Preserve source dates and real accounts/permissions and user-task outcomes.
+
 ## Current technical research routes (v2.2)
 Use docs/foundations/README.md to select one or two modules; do not inject the entire field manual for minor tasks.
 - Chromium/Gecko/WebKit process, renderer, JS, caches, storage, permissions: chapter 11 + web-browser-runtime.

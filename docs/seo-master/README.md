@@ -1,3 +1,6 @@
+## V14 AEO / GEO / AI Search integration
+[Current AI Search Master](../ai-search/README.md): platform-specific robots controls, AEO answer quality, GEO experiments, Google 2026 GenAI owner report, Bing AI preview, accessible browser-agent UX, source verification and three offline evidence validators. The AI chapter supplements technical SEO rather than promising universal AI ranks.
+
 # V11 SEO and Fullstack Evidence-first Master Protocol (2026-11-24)
 
 ## V13 master execution (start here)

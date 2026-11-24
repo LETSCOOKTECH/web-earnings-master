@@ -43,3 +43,6 @@ description: "Forensically classify Google/search algorithm claims, DOJ records,
 ## Official primary-source starting points (re-open before action)
 - https://www.justice.gov/atr/media/1398866/dl?inline=
 - https://developers.google.com/search/docs/essentials/spam-policies
+
+## V14 — AI ranking/source-eligibility forensic limits
+Investigate current official Google AI guide, GenAI inclusion controls, dedicated Search Console GenAI report, OpenAI crawler distinctions, Bing preview metrics and Claude/Perplexity origins from sources/ai_search_v14_surface_atlas.json. Reopen originals and effective dates before reporting; search results excerpts are evidence leads not certified rules. Preserve exact conflicting observations; one prompt citation is not a vendor global ranking weight or evidence of crawler route. Use docs/ai-search/03-geo-measurement.md.

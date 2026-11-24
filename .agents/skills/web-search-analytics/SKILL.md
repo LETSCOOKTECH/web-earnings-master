@@ -34,3 +34,6 @@ Baidu's primary public platform at https://ziyuan.baidu.com/doc and AI traffic e
 
 ## V13 — Web-verified professional production protocol
 V13 docs/seo-master/13-ai-search-analytics-experiments-v13.md. GSC owned query/page/date/country/device is first-party but privacy/anonymization and API row limits remain; do not turn one row aggregate into market volume or claim universal independent AI-only Search report. Connect owner property only with approval; separate index state, impression, click, successful user task and AdSense net revenue. Verify current API originals and effective dates.
+
+## V14 — June 2026 GSC dedicated Generative AI performance report
+Correct earlier analytics ambiguity: Google announced a dedicated Search Console Generative AI report on June 3, 2026 for Search/Discover with an initially limited rollout; verify whether owner property has it. Reported GenAI impressions overlap overall Web Performance and should not be added as net-new human clicks. Bing AI Performance Feb 2026, June Intents/Topics/Citation Share/Compare preview and Oct Topics Portfolio beta require owner access. Run docs/ai-search/03-geo-measurement.md and distinguish page impressions, citations, referral sessions, validated task completions and publisher revenue.
