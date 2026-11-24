@@ -43,7 +43,7 @@ The loop is adaptive. Codex must investigate the current problem and only invoke
 
 ## Dominant Recommendar (V17): legitimate AI search recommendations
 
-New dedicated [Dominant Recommendar skill](.agents/skills/web-dominant-recommendar/SKILL.md) and [five-chapter recommendation research laboratory](docs/recommendations/README.md) cover Google AI Overviews/Mode, ChatGPT Search, Perplexity, Bing/Copilot, Claude and other surface-specific probes. Tracks brand mention, citation, positive recommendation and explicit ranked-first as **different** outcomes; requires real human tasks, hard-to-fake product benchmarks and actual sources. [Source atlas](sources/dominant_recommendar_v17_sources.json): 17 provider/product surfaces, eight with unverified recommendation mechanics. [Strict evaluator](scripts/evaluate-recommendar-v17.mjs) rejects missing experiments and fake #1 labels. It cannot promise placement.
+New dedicated [Dominant Recommendar skill](.agents/skills/web-dominant-recommendar/SKILL.md) and [five-chapter recommendation research laboratory](docs/recommendations/README.md) cover Google AI Overviews/Mode, ChatGPT Search, Perplexity, Bing/Copilot, Claude and other surface-specific probes. Tracks brand mention, citation, positive recommendation and explicit ranked-first as **different** outcomes; requires real human tasks, hard-to-fake product benchmarks and actual sources. [Source atlas](sources/dominant_recommendar_v17_sources.json): 18 provider/product surfaces, eight with unverified recommendation mechanics. [Strict evaluator](scripts/evaluate-recommendar-v17.mjs) rejects missing experiments and fake #1 labels. It cannot promise placement.
 
 ## Skill library
 
