@@ -23,15 +23,15 @@ test('V13 synthetic hypothetical intent map is valid but never a verified opport
 });
 test('Missing market locale/device is fatal',()=>{const x=copy();delete x.market.country;assert.equal(audit(x).valid,false)});
 test('Duplicate canonical page for distinct jobs fails',()=>{
- const x=copy();x.clusters.push({...x.clusters[0],id:'x2',job:'Merge multiple CSV files into one output',primary_query:'merge CSV'});
+ const x=copy();x.clusters.push({...x.clusters[0],id:'csv-merge',job:'Merge multiple CSV files into one output',primary_query:'merge CSV'});
  assert.equal(audit(x).valid,false);
 });
 test('Same exact human task scattered across different pages is a doorway risk',()=>{
- const x=copy();x.clusters.push({...x.clusters[0],id:'x2',page:'/tools/duplicate-csv-rows/'});
+ const x=copy();x.clusters.push({...x.clusters[0],id:'csv-merge',page:'/tools/duplicate-csv-rows/'});
  assert.ok(audit(x).errors.some(s=>s.includes('doorway')));
 });
 test('Distinct job and distinct route can share a research bundle',()=>{
- const x=copy();x.clusters.push({...x.clusters[0],id:'x2',page:'/tools/merge-csv/',job:'Merge multiple CSV inputs into a single correctly ordered CSV result',primary_query:'merge CSV files',output_oracle:'tests/csv-merge.test.mjs'});
+ const x=copy();x.clusters.push({...x.clusters[0],id:'csv-merge',page:'/tools/merge-csv/',job:'Merge multiple CSV inputs into a single correctly ordered CSV result',primary_query:'merge CSV files',output_oracle:'tests/csv-merge.test.mjs'});
  assert.equal(audit(x).valid,true);
 });
 test('Missing output oracle for tool page fails',()=>{const x=copy();x.clusters[0].output_oracle='';assert.equal(audit(x).valid,false)});
