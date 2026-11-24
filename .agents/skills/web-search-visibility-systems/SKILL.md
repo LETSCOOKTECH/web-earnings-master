@@ -30,3 +30,6 @@ Use chapter 17 as the full technical+editorial+UX+distribution release contract 
 - Google AI Mode/Overviews, ChatGPT/Claude/Perplexity/Bing generative citations and observed referrals: `web-generative-engine-optimization` (eligibility through `web-ai-discovery`).
 - Google Play app-specific discovery: `web-aso-google-play`; Apple: `web-aso-apple-app-store`. Websites/SEO should not be counted as app-store ASO.
 Maintain provider/date/account-scoped proof; no cross-channel composite "ranking score". Details in `docs/discovery/`.
+
+## V14 — AI Search source-to-traffic observation
+For AI Search route to docs/ai-search/README.md and docs/ai-search/05-agent-execution.md. Define actual provider surface/locale, verify technical access, original answer usefulness, dated source and report availability, sampled visible citations vs background retrieval vs human referrals. Do not claim simultaneous platform domination or inferred revenue. Search Engine performance improvements need actual indexed/owner data and valid task completion, not an SEO theater score.

@@ -1,3 +1,6 @@
+## V14 correction: current Google dedicated Generative AI reports
+June 3, 2026 Google officially announced distinct Search Console Generative AI performance reports for Search and Discover, initially restricted to a subset of verified sites. The July AI Optimization guide directs users to the dedicated report. Do NOT interpret the V13 phrase about not assuming a universal independent report as a denial this product exists. In owned property, check actual feature availability, visibility definitions, Web overlap, country/device/time and effective dates. See [V14 GEO measurement](../ai-search/03-geo-measurement.md), first-party https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports .
+
 # V13 — AI discovery, Search Console, real traffic and controlled experimentation
 
 Owners: web-ai-discovery, web-generative-engine-optimization, web-ai-retrieval-lab, web-search-forensic-evidence, web-search-analytics, web-experiments and web-traffic-hunter. Atlas categories SEARCH_DISCOVERY and KEYWORD_RESEARCH.

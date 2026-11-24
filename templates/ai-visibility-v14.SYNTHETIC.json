@@ -1,0 +1,45 @@
+{
+  "schema": "sense-ai-visibility-sample-v14",
+  "target_hosts": [
+    "sense.exampletools.org"
+  ],
+  "study": {
+    "id": "fixture-ai-visible-source-panel",
+    "preregistered_at": "2026-11-23T00:00:00Z",
+    "panel_method": "DOCUMENTED_USER_QUESTIONS",
+    "prompt_ids": [
+      "csv-removal",
+      "csv-privacy"
+    ]
+  },
+  "observations": [
+    {
+      "surface": "openai-chatgpt-search",
+      "locale": "en-US",
+      "prompt_id": "csv-removal",
+      "repeat_id": "1",
+      "observed_at": "2026-11-24T10:00:00Z",
+      "status": "OBSERVED",
+      "capture_mode": "HUMAN_OBSERVED",
+      "artifact_ref": "fixtures/synthetic-chatgpt-transcript.txt",
+      "visible_citations": [
+        "https://sense.exampletools.org/tools/csv-dedupe/"
+      ],
+      "background_retrieval": [],
+      "brand_mentioned": true
+    },
+    {
+      "surface": "openai-chatgpt-search",
+      "locale": "en-US",
+      "prompt_id": "csv-privacy",
+      "repeat_id": "1",
+      "observed_at": "2026-11-24T10:02:00Z",
+      "status": "UNAVAILABLE",
+      "unavailable_reason": "Synthetic fixture: provider interface intentionally not available",
+      "visible_citations": [],
+      "background_retrieval": [],
+      "brand_mentioned": false
+    }
+  ],
+  "disclaimer": "Synthetic example only. No actual ChatGPT Search response, Google index or real user traffic observed."
+}

@@ -1,3 +1,6 @@
+## V14 specialist handoff
+For answer engines and AI Search use [dedicated AEO/GEO agent protocol](../ai-search/05-agent-execution.md) and [provider modes](../ai-search/01-provider-crawlers-controls.md). The global V13 SEO release gates remain required; local AI eligibility and sampled citations cannot bypass original-source, owner-account and output correctness checks.
+
 # V13 — Agent operating protocol: research, verify from the web, build, release, learn
 
 **Mission:** Maximize real website usefulness, correct output, clean Search eligibility, evidence quality, traffic sustainability, publisher safety and operating margin. This protocol applies to each significant website/tool job. It is not a guaranteed Google ranking formula, a substitute for owner accounts or a reason to consume all sources/skills on minor edits.

@@ -61,3 +61,6 @@ Read `sources/geo_provider_surface_atlas_2026-11-23.json` and `docs/discovery/05
 
 ## V13 — Web-verified professional production protocol
 V13 docs/seo-master/13-ai-search-analytics-experiments-v13.md and 08-live-source-verification-v13.md. Google AI Overviews/Mode apply ordinary Search indexing + snippet eligibility, not special AI markup or mandatory llms.txt; verify provider original current docs. Distinguish OAI-SearchBot, GPTBot, Googlebot and other agents. Measure actual visible citations, real referral sessions, task success and scope; never claim prompt panel source selection is a Google ranking algorithm.
+
+## V14 — Provider-specific GEO measurement and evidence firewall
+Use docs/ai-search/03-geo-measurement.md, 01-provider-crawlers-controls.md and 05-agent-execution.md. Google Search AI Mode and Overviews have indexed+snippet eligibility+property control; ChatGPT OAI-SearchBot not GPTBot; Claude-SearchBot not ClaudeBot; Bing AI Performance owner reporting is distinct. Google June 3 2026 dedicated GenAI report exists but rollout began with a subset of sites; owner must verify feature. Run npm run audit:ai-observations on a fixed legitimate user-question panel; never drop unavailable prompts or count brand mentions/background retrieval as visible citations. Score is sampled observational, NOT global AI citation share, human referrals or money.

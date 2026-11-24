@@ -50,3 +50,6 @@ description: "Optimize real, evidence-backed answer surfaces in traditional sear
 - `docs/research/03-manual-module-upgrade-protocol.md`
 
 **Evidence state:** Source cited → exact provider scope/time verified → mechanism/implementation tested → independently reviewed → (only with owner credentials) live account result. Scorecards without this sequence are planning signals, not completed discovery results.
+
+## V14 — Answer accuracy + citation readiness, not prompt tricks
+Mandatory source and QA: docs/ai-search/02-answer-quality.md and docs/ai-search/05-agent-execution.md. Build direct answers for real human tasks, with original dated claims, counterexamples, correct output fixtures and useful limitations. Audit initial visible main content and actual snippet/indexing directives. No FAQ rich-result resurrection, fabricated citations, microchunk minimums or answer-page keyword swaps. Run npm run audit:ai-eligibility and real tool-output tests. A static result only proves local eligibility; Google/voice/AI source selection requires independent observed platform evidence.
