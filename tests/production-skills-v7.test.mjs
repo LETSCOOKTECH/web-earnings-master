@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { checkRepo,validateRegistry,validateReceipt } from '../scripts/check-production-skills-v7.mjs';
 const {reg,errors}=checkRepo();
-test('exact 48 skill coverage with no orphan contracts',()=>{assert.deepEqual(errors,[]);assert.equal(reg.skills.length,48);});
+test('exact 58 skill coverage with no orphan contracts',()=>{assert.deepEqual(errors,[]);assert.equal(reg.skills.length,58);});
 test('all contracts name a distinct deliverable local proof live proof and blocker',()=>{for(const x of reg.skills)for(const p of ['deliverable','localGate','externalGate','blocker'])assert.ok(x[p]?.length>12,x.id+' '+p);});
 test('a missing skill is rejected',()=>{const r=structuredClone(reg);r.skills.pop();assert.ok(validateRegistry(r,reg.skills.map(x=>x.id)).length>0);});
 test('an extra fake skill is rejected',()=>{assert.ok(validateRegistry(reg,[...reg.skills.map(x=>x.id),'fake-skill']).length>0);});

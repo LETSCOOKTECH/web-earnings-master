@@ -1,0 +1,38 @@
+{
+  "task_id": "sample-only",
+  "objective": "Test sample evidence gate",
+  "acceptance_criterion": "Machine rejects unsupported market go",
+  "stage": "VALIDATION",
+  "selected_skills": [
+    "web-opportunity-intelligence",
+    "web-independent-verification"
+  ],
+  "budget": {
+    "max_sources": 12,
+    "max_actions": 30,
+    "max_tokens": 9000,
+    "max_cash_usd": 0,
+    "spent_sources": 0,
+    "spent_actions": 0,
+    "spent_tokens": 0,
+    "spent_cash_usd": 0
+  },
+  "evidence": [],
+  "review": {
+    "reviewer": "fixture author",
+    "critical_failure_test": "No real evidence",
+    "alternative_hypothesis": "Idea lacks real users",
+    "same_actor": true,
+    "self_review_disclosure": "Synthetic local example, not independent"
+  },
+  "gates": [
+    {
+      "id": "real-user",
+      "required": true,
+      "status": "UNKNOWN"
+    }
+  ],
+  "cheapest_falsification": "Run authorized original user interviews",
+  "human_signoff": false,
+  "decision_requested": "GO_FOR_MVP"
+}

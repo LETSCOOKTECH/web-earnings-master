@@ -1,6 +1,6 @@
 {
   "name": "web-earnings-master",
-  "version": "3.6.0-draft.1",
+  "version": "3.7.0-research.1",
   "private": true,
   "type": "module",
   "engines": {
@@ -44,7 +44,8 @@
     "audit:production": "node scripts/check-production-skills-v7.mjs",
     "audit:traffic": "node scripts/evaluate-traffic-hunter.mjs",
     "audit:opportunity": "node scripts/evaluate-opportunity.mjs",
-    "audit:trends:sample": "node scripts/verify-trends-csv.mjs --csv templates/opportunity/google-trends-SYNTHETIC.csv --meta templates/opportunity/google-trends-SYNTHETIC.meta.json"
+    "audit:trends:sample": "node scripts/verify-trends-csv.mjs --csv templates/opportunity/google-trends-SYNTHETIC.csv --meta templates/opportunity/google-trends-SYNTHETIC.meta.json",
+    "audit:assurance": "node scripts/check-execution-assurance.mjs"
   },
   "description": "Evidence-first Codex skill engine for SEO/AEO/GEO/ASO, safe utility execution, million-user capacity and publisher-margin planning"
 }

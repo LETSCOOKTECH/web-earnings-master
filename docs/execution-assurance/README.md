@@ -25,3 +25,10 @@ Every gate has PASS, FAIL, BLOCKED or UNKNOWN, evidence references and reviewer.
 
 ## Pilot
 Select one utility only after live demand and competitor evidence. Establish baseline, smallest working prototype, test oracle, budget and rollback. Collect actual user task outcomes and traffic before scaling. Record results even if negative. Update skills only when observed evidence warrants change.
+
+
+## Executable assurance and interpretation
+The authoritative scoped contract is `scripts/check-execution-assurance.mjs` and the negative tests in `tests/execution-assurance.test.mjs`. Use the example receipt shape in `templates/execution-assurance/receipt.example.json`, replacing **all synthetic records** with actual artifacts before claiming any outcome. A valid JSON receipt confirms only field shape, consistency and declared budget; it does not fetch original source bodies, prove genuine humans, inspect artifacts, or replace authorization. `ELIGIBLE_FOR_REVIEW` explicitly means a separate reviewer must inspect evidence, **not** autonomous GO or deployment. All external action authorization remains outside the machine's claimed certainty. Avoid mandatory fixed source counts: require independent origins and competing explanations proportionate to decision cost; stop when expected additional information value is lower than cost or access is blocked.
+
+## What is not completed by this library release
+There is no live owned website, Search Console/account evidence, consented user cohort, real competitor output artifact, production security certificate, AdSense authorization, actual publisher payout or independent real-human market study. Those are site-specific future experiments rather than skill count upgrades. Review the actual GitHub CI run after pushing this branch and fix failures before merging.
