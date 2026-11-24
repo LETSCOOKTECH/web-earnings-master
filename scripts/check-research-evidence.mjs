@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 const root=path.resolve(import.meta.dirname,'..');
+const activeSkills=JSON.parse(fs.readFileSync(path.join(root,'sources/production_skills_v7.json'),'utf8')).expectSkills;
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const exists=p=>fs.existsSync(path.join(root,p));
 const errors=[];
@@ -13,7 +14,7 @@ const claim=read('sources/verified_claims.json');
 const knownNames=fs.readdirSync(path.join(root,'.agents/skills'),{withFileTypes:true}).filter(x=>x.isDirectory()&&exists('.agents/skills/'+x.name+'/SKILL.md')).map(x=>x.name);
 if(original.entries.length!==21)errors.push('Original skill list not 21');
 if(new Set(original.entries.map(e=>e.name)).size!==21)errors.push('Original skills duplicate');
-if(knownNames.length!==48)errors.push('Expected 48 skills (21 originals, 7 foundations, 4 discovery, 6 architecture, 8 V6, 1 Traffic Hunter, 1 Opportunity Intelligence), got '+knownNames.length);
+if(knownNames.length!==activeSkills)errors.push('Expected '+activeSkills+' skills (21 originals, 7 foundations, 4 discovery, 6 architecture, 8 V6, 1 Traffic Hunter, 1 Opportunity Intelligence), got '+knownNames.length);
 for(const e of original.entries){
  if(!knownNames.includes(e.name))errors.push('Original skill missing: '+e.name);
  const file='.agents/skills/'+e.name+'/SKILL.md';

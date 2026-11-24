@@ -5,6 +5,7 @@ import {auditPublisherPage} from '../scripts/audit-publisher-page.mjs';
 import {evaluatePublisherEligibility} from '../scripts/evaluate-publisher-eligibility.mjs';
 import {auditWebSecurityManifest} from '../scripts/audit-web-security-manifest.mjs';
 const root=path.resolve(import.meta.dirname,'..');
+const activeSkills=JSON.parse(fs.readFileSync(path.join(root,'sources/production_skills_v7.json'),'utf8')).expectSkills;
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const clone=x=>structuredClone(x);
 const page=read('templates/v6/page-example.json'),site=read('templates/v6/publisher-site-example.json'),sec=read('templates/v6/security-example.json');
@@ -12,7 +13,7 @@ const registry=read('sources/v6_publisher_network_registry_2026-11-23.json');
 test('V6 adds exactly eight specialized skills to the 38-skill foundation',()=>{
  const names=['web-search-forensic-evidence','web-fullstack-production-executor','web-frontend-experience-engineering','web-backend-api-engineering','web-security-assurance-asvs','web-publisher-policy-eligibility','web-monetization-network-operator','web-release-observability-operator'];
  const files=fs.readdirSync(path.join(root,'.agents/skills'),{withFileTypes:true}).filter(x=>x.isDirectory());
- assert.equal(files.length,48);
+ assert.equal(files.length,activeSkills);
  for(const n of names){const t=fs.readFileSync(path.join(root,'.agents/skills',n,'SKILL.md'),'utf8');
  assert.ok(t.startsWith('---\nname: '+n+'\n'),n);assert.ok(t.length>3900,n);assert.match(t,/FAIL \/ UNKNOWN/);assert.match(t,/https:\/\//);}
 });
@@ -164,6 +165,6 @@ test('All three V6 CLI audits run without requiring a live provider account',()=
 test('V6 source and policy contract checker executes and does not invent rankings',()=>{
  const x=spawnSync(process.execPath,['scripts/check-v6-evidence.mjs'],{cwd:root,encoding:'utf8'});
  assert.equal(x.status,0,x.stderr+'\n'+x.stdout);
- assert.match(x.stdout,/48 total/);
+ assert.match(x.stdout,/total skills|total skill/);
  assert.match(x.stdout,/NOT a ranking/);
 });

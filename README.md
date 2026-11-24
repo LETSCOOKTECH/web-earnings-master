@@ -41,15 +41,19 @@ Measure task success, qualified traffic and economics
 
 The loop is adaptive. Codex must investigate the current problem and only invoke applicable skills, rather than following an arbitrary fixed sequence or adding features for their own sake.
 
+## Dominant Recommendar (V17): legitimate AI search recommendations
+
+New dedicated [Dominant Recommendar skill](.agents/skills/web-dominant-recommendar/SKILL.md) and [five-chapter recommendation research laboratory](docs/recommendations/README.md) cover Google AI Overviews/Mode, ChatGPT Search, Perplexity, Bing/Copilot, Claude and other surface-specific probes. Tracks brand mention, citation, positive recommendation and explicit ranked-first as **different** outcomes; requires real human tasks, hard-to-fake product benchmarks and actual sources. [Source atlas](sources/dominant_recommendar_v17_sources.json): 18 provider/product surfaces, eight with unverified recommendation mechanics. [Strict evaluator](scripts/evaluate-recommendar-v17.mjs) rejects missing experiments and fake #1 labels. It cannot promise placement.
+
 ## Skill library
 
-**48 active Codex skills**, stored under [`.agents/skills/`](.agents/skills/), cover:
+**49 active Codex skills**, stored under [`.agents/skills/`](.agents/skills/), cover:
 
 | Workstream | Skills | What they produce |
 | --- | --- | --- |
 | Research and market selection | `web-research-freshness`, `web-niche-validation`, `web-keyword-intent`, `web-competitor-audit` | Dated evidence ledger, query clusters, SERP reviews and documented opportunity decisions |
 | Product and architecture | `web-product-spec`, `web-astro-engineering`, `web-accessibility-agent-ux`, `web-security-performance` | Testable product requirements, static-first architecture, accessible workflows and risk controls |
-| Search and AI discovery | `web-technical-seo`, `web-content-and-image-seo`, `web-ai-discovery`, `web-authority-distribution` | Indexability audits, high-value information, crawl policy and earned distribution plans |
+| Search and AI discovery | `web-technical-seo`, `web-content-and-image-seo`, `web-ai-discovery`, `web-dominant-recommendar`, `web-authority-distribution` | Indexability audits, high-value information, crawl policy and earned distribution plans |
 | Monetization and trust | `web-adsense-readiness`, `web-network-monetization`, `web-privacy-consent`, `web-ad-experience` | Publisher eligibility evidence, network comparisons, privacy/consent and safe ad layouts |
 | Reliability and growth | `web-product-validation`, `web-search-analytics`, `web-experiments`, `web-launch-review`, `web-portfolio-growth` | Real tests, conversion funnels, experiments, release decisions and portfolio economics |
 

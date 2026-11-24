@@ -1,0 +1,416 @@
+{
+  "schema": "sense-recommendar-v17-official-sources",
+  "created_at_utc": "2026-11-24T18:53:46.359Z",
+  "policy": "First-party source original reviewed as of date; not current provider certification, unpublished ranking algorithm or evidence of model citation",
+  "target": "Legitimate web tool recommendation research and measurement; no bought placement or guaranteed rank",
+  "sources": [
+    {
+      "id": "G01",
+      "provider": "Google",
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "Foundational SEO, relevance, distinctive first-hand value and query fan-out are Google AI Search fundamentals; no llms.txt/AI-only schema shortcut.",
+      "limitation": "Not an exposed scoring formula, content citation promise or universal AI ranking rule.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "G02",
+      "provider": "Google",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "Indexed/snippet-eligible Search pages can be considered for AI Overviews and AI Mode; those features may differ, and neither runs for every query.",
+      "limitation": "Eligibility never guarantees citation.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "G03",
+      "provider": "Google",
+      "url": "https://developers.google.com/search/docs/fundamentals/gen-ai-controls",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "Search Console generative control, Googlebot, Google-Extended and GoogleOther act in different scopes.",
+      "limitation": "Owner search control is external and cannot be inferred by robots alone.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "G04",
+      "provider": "Google",
+      "url": "https://developers.google.com/search/docs/appearance/preferred-sources",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "A user-selected, eligible publisher domain may carry Preferred Sources highlighting in AI Overviews and AI Mode.",
+      "limitation": "Not a generic #1 ranking signal; limited eligibility, feature/market and actual user selection.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "G05",
+      "provider": "Google",
+      "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "Dedicated Search Console generative impressions reports rolled out worldwide by Aug 31, 2026.",
+      "limitation": "Property access and measured units needed; not proof of rank or model recommendation.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "G06",
+      "provider": "Google",
+      "url": "https://developers.google.com/search/blog/2026/09/web-multimodal-in-sc",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "Search Console reports multimodal searches in Search and generative reports.",
+      "limitation": "Actual property data and visual-search format needed.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "G07",
+      "provider": "Google",
+      "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "Scaled AI content without value can violate spam policies; editorial fact checks matter.",
+      "limitation": "Google Search rules, not blanket ban on AI-assisted writing.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "G08",
+      "provider": "Google",
+      "url": "https://developers.google.com/search/docs/ranking/principles-for-ranking-results",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "Google emphasizes relevance and useful sourcing without guaranteed preferential rankings.",
+      "limitation": "No reverse-engineered scoring weights.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "O01",
+      "provider": "OpenAI",
+      "url": "https://developers.openai.com/api/docs/bots",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "OAI-SearchBot is distinct from GPTBot training and ChatGPT-User fetch; respective robots and IPs matter.",
+      "limitation": "Crawl access alone not placement or an endorsement.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "O02",
+      "provider": "OpenAI",
+      "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "OpenAI states placement is not guaranteed and recommends allowing OAI-SearchBot and published IPs.",
+      "limitation": "Not a published ChatGPT recommendation scoring formula.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "O03",
+      "provider": "OpenAI",
+      "url": "https://developers.openai.com/api/docs/guides/tools-web-search",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "Web search API has visible URL citations and potentially additional consulted sources separate from inline citations.",
+      "limitation": "API output is a different product/surface from consumer ChatGPT Search; never silently equate.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "P01",
+      "provider": "Perplexity",
+      "url": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "PerplexityBot is search crawler; Perplexity-User handles user-directed requests and generally ignores robots.",
+      "limitation": "Search placement/answer order not guaranteed; verify current IP and WAF.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "M01",
+      "provider": "Microsoft",
+      "url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "AI Performance exposes citation references in Copilot, Bing summaries and selected partner integrations.",
+      "limitation": "Publisher-report metric, not model-agnostic #1 rank.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "M02",
+      "provider": "Microsoft",
+      "url": "https://blogs.bing.com/search/2026/6/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare/",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "Bing describes intents/topics/citation share/compare expansion for owner AI reports.",
+      "limitation": "Availability/version/report cohort must be checked in owner's account.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "M03",
+      "provider": "Microsoft",
+      "url": "https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "Topics Portfolio beta clusters grounding topics and opportunity queries for a verified owner's site.",
+      "limitation": "Beta availability and publisher-specific data; no universal answer rank.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "A01",
+      "provider": "Anthropic",
+      "url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "Claude-SearchBot, Claude-User and ClaudeBot have separate purposes; Anthropic began rolling out AIPREF training recognition Oct 30, 2026.",
+      "limitation": "Training preference is not a guaranteed Claude search recommendation boost.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    },
+    {
+      "id": "A02",
+      "provider": "Anthropic",
+      "url": "https://support.claude.com/en/articles/10684626-enable-and-use-web-search",
+      "original_opened": true,
+      "reviewed_at_utc": "2026-11-24T18:53:46.359Z",
+      "source_section": "Direct original provider documentation, linked page",
+      "claim": "Claude web search may retrieve sources for relevant queries; provider modes and connectors vary.",
+      "limitation": "No public deterministic rank #1 criterion.",
+      "owner_or_runtime_evidence_needed": "Live authorized provider output, owner evidence or verified crawler/WAF logs when applicable"
+    }
+  ],
+  "providers": [
+    {
+      "id": "google-ai-overviews",
+      "engine": "Google",
+      "mode": "SEARCH_GENERATIVE",
+      "documented_originals": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05"
+      ],
+      "evidence_level": "FIRST_PARTY_SCOPE_ONLY",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "google-ai-mode",
+      "engine": "Google",
+      "mode": "SEARCH_GENERATIVE",
+      "documented_originals": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05"
+      ],
+      "evidence_level": "FIRST_PARTY_SCOPE_ONLY",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "openai-chatgpt-search",
+      "engine": "OpenAI",
+      "mode": "CONSUMER_CHAT_SEARCH",
+      "documented_originals": [
+        "O01",
+        "O02"
+      ],
+      "evidence_level": "FIRST_PARTY_SCOPE_ONLY",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "perplexity-search",
+      "engine": "Perplexity",
+      "mode": "CONSUMER_CHAT_SEARCH",
+      "documented_originals": [
+        "P01"
+      ],
+      "evidence_level": "FIRST_PARTY_SCOPE_ONLY",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "bing-copilot",
+      "engine": "Microsoft",
+      "mode": "COPILOT",
+      "documented_originals": [
+        "M01",
+        "M02",
+        "M03"
+      ],
+      "evidence_level": "FIRST_PARTY_SCOPE_ONLY",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "bing-ai-summaries",
+      "engine": "Microsoft",
+      "mode": "SEARCH_GENERATIVE",
+      "documented_originals": [
+        "M01",
+        "M02",
+        "M03"
+      ],
+      "evidence_level": "FIRST_PARTY_SCOPE_ONLY",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "claude-web-search",
+      "engine": "Anthropic",
+      "mode": "CONSUMER_CHAT_SEARCH",
+      "documented_originals": [
+        "A01",
+        "A02"
+      ],
+      "evidence_level": "FIRST_PARTY_SCOPE_ONLY",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "google-gemini-app",
+      "engine": "Google",
+      "mode": "NON_SEARCH_GROUNDING",
+      "documented_originals": [
+        "G03"
+      ],
+      "evidence_level": "FIRST_PARTY_SCOPE_ONLY",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "openai-deep-research",
+      "engine": "OpenAI",
+      "mode": "RESEARCH",
+      "documented_originals": [
+        "O03"
+      ],
+      "evidence_level": "FIRST_PARTY_SCOPE_ONLY",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "openai-web-search-api",
+      "engine": "OpenAI",
+      "mode": "API_WEB_SEARCH",
+      "documented_originals": [
+        "O03"
+      ],
+      "evidence_level": "FIRST_PARTY_SCOPE_ONLY",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "brave-ai-answer",
+      "engine": "Brave",
+      "mode": "UNVERIFIED",
+      "documented_originals": [],
+      "evidence_level": "UNVERIFIED_PROVIDER_RECOMMENDATION_MECHANICS",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "duckduckgo-search-assist",
+      "engine": "DuckDuckGo",
+      "mode": "UNVERIFIED",
+      "documented_originals": [],
+      "evidence_level": "UNVERIFIED_PROVIDER_RECOMMENDATION_MECHANICS",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "yandex-alice",
+      "engine": "Yandex",
+      "mode": "UNVERIFIED",
+      "documented_originals": [],
+      "evidence_level": "UNVERIFIED_PROVIDER_RECOMMENDATION_MECHANICS",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "naver-ai",
+      "engine": "Naver",
+      "mode": "UNVERIFIED",
+      "documented_originals": [],
+      "evidence_level": "UNVERIFIED_PROVIDER_RECOMMENDATION_MECHANICS",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "baidu-ernie",
+      "engine": "Baidu",
+      "mode": "UNVERIFIED",
+      "documented_originals": [],
+      "evidence_level": "UNVERIFIED_PROVIDER_RECOMMENDATION_MECHANICS",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "meta-ai",
+      "engine": "Meta",
+      "mode": "UNVERIFIED",
+      "documented_originals": [],
+      "evidence_level": "UNVERIFIED_PROVIDER_RECOMMENDATION_MECHANICS",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "grok-search",
+      "engine": "xAI",
+      "mode": "UNVERIFIED",
+      "documented_originals": [],
+      "evidence_level": "UNVERIFIED_PROVIDER_RECOMMENDATION_MECHANICS",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
+      "id": "you-com",
+      "engine": "You.com",
+      "mode": "UNVERIFIED",
+      "documented_originals": [],
+      "evidence_level": "UNVERIFIED_PROVIDER_RECOMMENDATION_MECHANICS",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    }
+  ],
+  "unresolved": [
+    "Regional and product-specific ranking/recommendation logic is proprietary or not publicly documented for many providers",
+    "Potential third-party content-licensing, partnerships, shopping feeds, business directories, local info and app integrations require their own eligibility contracts",
+    "Crawler permissions, AI citations, recommendation wording, actual clicks, conversion and monetized human sessions are separate phenomena"
+  ]
+}
