@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const isObject=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
@@ -72,7 +73,31 @@ export function assessExecution(run,registry,{now=Date.now()}={}){
  if(run.review?.same_actor===true&&!nonempty(run.review.self_review_disclosure))blockers.push('Self-review cannot be disguised as independent verification');
  return {valid:errors.length===0,decision:errors.length?'REJECT':blockers.length?'BLOCKED':'ELIGIBLE_FOR_REVIEW',errors,warnings,blockers,independent_origins:originGroups.size,independent_supports:supports.size,independent_contradictions:contradicts.size,verified_kinds:[...kinds]};
 }
+export function verifyLocalArtifacts(run,{artifactRoot=ROOT,maxBytes=50*1024*1024}={}){
+ const errors=[];
+ const root=fs.realpathSync(path.resolve(artifactRoot));
+ const candidates=[];
+ for(const e of Array.isArray(run?.evidence)?run.evidence:[])if(e&&e.artifact)candidates.push({id:e.id,artifact:e.artifact,sha256:e.sha256});
+ for(const g of Array.isArray(run?.gates)?run.gates:[])if(g&&g.status?.startsWith?.('PASS')&&g.artifact)candidates.push({id:g.id,artifact:g.artifact,sha256:g.sha256});
+ for(const item of candidates){
+  const id=item.id||'UNKNOWN';
+  const p=item.artifact;
+  if(typeof p!=='string'||p.length<3||path.isAbsolute(p)||p.includes('\\0')){errors.push(id+': invalid relative artifact path');continue}
+  let full=path.resolve(root,p);
+  if(!(full.startsWith(root+path.sep))){errors.push(id+': artifact escapes approved root');continue}
+  let actual;
+  try{actual=fs.realpathSync(full)}catch{errors.push(id+': missing artifact');continue}
+  if(!actual.startsWith(root+path.sep)){errors.push(id+': symlink escapes approved root');continue}
+  let stat;try{stat=fs.statSync(actual)}catch{errors.push(id+': unreadable artifact');continue}
+  if(!stat.isFile()||stat.size===0||stat.size>maxBytes){errors.push(id+': empty, non-file or oversized artifact');continue}
+  if(typeof item.sha256!=='string'||!/^[a-f0-9]{64}$/i.test(item.sha256)){errors.push(id+': SHA-256 required for strict proof');continue}
+  const found=createHash('sha256').update(fs.readFileSync(actual)).digest('hex');
+  if(found!==item.sha256.toLowerCase())errors.push(id+': artifact SHA-256 mismatch');
+ }
+ if(!candidates.length)errors.push('No inspectable local evidence artifacts supplied');
+ return errors;
+}
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  const i=process.argv.indexOf('--file');if(i<0||!process.argv[i+1]){console.error('Usage: node scripts/check-execution-assurance.mjs --file receipt.json');process.exit(2)}
- try{const reg=JSON.parse(fs.readFileSync(path.join(ROOT,'sources/production_skills_v7.json'),'utf8'));const data=JSON.parse(fs.readFileSync(path.resolve(process.argv[i+1]),'utf8'));const result=assessExecution(data,reg);console.log(JSON.stringify(result,null,2));if(!result.valid||result.decision==='BLOCKED')process.exitCode=1}catch(e){console.error('Invalid assurance receipt: '+e.message);process.exitCode=1}
+ try{const reg=JSON.parse(fs.readFileSync(path.join(ROOT,'sources/production_skills_v7.json'),'utf8'));const data=JSON.parse(fs.readFileSync(path.resolve(process.argv[i+1]),'utf8'));const result=assessExecution(data,reg);if(process.argv.includes('--verify-artifacts')){const i=process.argv.indexOf('--artifact-root');const artifactRoot=i>=0?process.argv[i+1]:ROOT;result.artifact_errors=verifyLocalArtifacts(data,{artifactRoot});if(result.artifact_errors.length){result.decision='BLOCKED';result.blockers.push(...result.artifact_errors)}}console.log(JSON.stringify(result,null,2));if(!result.valid||result.decision==='BLOCKED')process.exitCode=1}catch(e){console.error('Invalid assurance receipt: '+e.message);process.exitCode=1}
 }
