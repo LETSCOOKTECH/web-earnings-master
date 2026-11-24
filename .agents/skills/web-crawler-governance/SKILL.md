@@ -29,3 +29,6 @@ Read chapters 14–16 and 18. Brave's official crawler page states it has no dif
 
 ## V14 — Search, training and user-fetch are NOT one bot
 Use docs/ai-search/01-provider-crawlers-controls.md. Test Googlebot, OAI-SearchBot, Bingbot, Claude-SearchBot, PerplexityBot separately by route using scripts/audit-ai-eligibility-v14.mjs. Search crawler can be blocked while a training bot remains allowed; self-declared robots settings cannot prove real provider IP or CDN/WAF access. Google-Extended and future shared 2027 training token are not Google AI Mode citation switches. Require explicit owner approval for crawler rights/training controls.
+
+## V15 — Current Google Search AI controls and complete observation panels
+Read docs/ai-search/07-2026-11-24-provider-controls-v15.md. Explicitly separate Search Console AI inclusion, Googlebot index/snippet, Google-Extended training/non-Search grounding, GoogleOther and future training settings. Reverify Google official originals. Generative AI reporting globally rolled out August 31 2026 per Google, but owner data is not locally verifiable. Preregister all provider+locale surface cohorts and attempted prompts, including UNAVAILABLE. Use npm run audit:ai-controls with V14 and real browser/user tests. Never equate local crawler allowed with actual citations/referrals/revenue.

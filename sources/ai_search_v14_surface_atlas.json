@@ -36,11 +36,11 @@
       "mode": "OWNER_CONTROL",
       "agent": "Googlebot",
       "source_url": "https://developers.google.com/search/docs/fundamentals/gen-ai-controls",
-      "source_status": "SEARCH_RESULT_ONLY",
+      "source_status": "ORIGINAL_BODY_OPENED",
       "source_reviewed_on": "2026-11-24",
       "official_semantics_not_independently_certified": true,
-      "policy_summary": "Separate owner property inclusion/exclusion; not Google-Extended training",
-      "owner_external_evidence_needed": "owner Search Console settings"
+      "policy_summary": "Search Console AI owner exclusion independent from Google-Extended model training/non-Search grounding, GoogleOther and snippet directives",
+      "owner_external_evidence_needed": "authenticated Search Console property setting, never local robots inference"
     },
     {
       "id": "google-gsc-ai-report",
@@ -52,8 +52,8 @@
       "source_status": "ORIGINAL_BODY_OPENED",
       "source_reviewed_on": "2026-11-24",
       "official_semantics_not_independently_certified": true,
-      "policy_summary": "June 3 2026 announcement; initially subset rollout; dedicated impressions by page/country/device/date",
-      "owner_external_evidence_needed": "owner actual report availability"
+      "policy_summary": "June 3 2026 initial limited rollout; worldwide rollout to all websites as of August 31 2026 according to Google",
+      "owner_external_evidence_needed": "authorized owner report and actual impressions; rollout is not traffic proof"
     },
     {
       "id": "google-multimodal-report",
@@ -153,10 +153,10 @@
       "mode": "OWNER_REPORT",
       "agent": "Bingbot",
       "source_url": "https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/",
-      "source_status": "SEARCH_RESULT_ONLY",
+      "source_status": "ORIGINAL_BODY_OPENED",
       "source_reviewed_on": "2026-11-24",
       "official_semantics_not_independently_certified": true,
-      "policy_summary": "October 13 2026 beta topics grouped into thematic clusters",
+      "policy_summary": "October 13 2026 Topics Portfolio beta; approximate metrics and sufficient owner data needed",
       "owner_external_evidence_needed": "owner actual beta access"
     },
     {

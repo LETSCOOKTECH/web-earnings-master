@@ -22,3 +22,7 @@ For each host, route and bot purpose, decide owner's consent and allowed public 
 Original doc and section + retrieval date + exact mode/product + rollout/effective vs announced + country/account scope + observable local test + owner account when necessary. UNKNOWN if source blocked, vendor policy omitted or actual bot identity not verified. Source registry at sources/ai_search_v14_surface_atlas.json records 19 product surfaces without inventing shared retrieval logic.
 
 Key originals: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide ; https://developers.google.com/search/docs/fundamentals/gen-ai-controls ; https://developers.openai.com/api/docs/bots ; https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler ; https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/
+
+## V15 independent Google controls correction
+
+Original Google guidance reviewed November 24, 2026 at https://developers.google.com/search/docs/fundamentals/gen-ai-controls explicitly separates Search Console generative-AI owner control, Google-Extended for model training/certain non-Search grounding, GoogleOther for non-Search crawling, page/text snippet directives and future early-2027 training preference. Google-Extended Disallow does NOT disable Search AI. Follow 07-2026-11-24-provider-controls-v15.md and audit-ai-controls-v15.mjs; local results cannot authenticate property settings.

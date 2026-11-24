@@ -1,0 +1,61 @@
+{
+  "schema": "sense-ai-search-v15-source-evidence",
+  "as_of": "2026-11-24",
+  "evidence_notice": "Original webpage text was opened in this review. It is historical source interpretation, not authenticated owner account/settings or externally verified visibility.",
+  "assertions": [
+    {
+      "id": "GOOGLE-GENAI-INDEPENDENT",
+      "source": "https://developers.google.com/search/docs/fundamentals/gen-ai-controls",
+      "access": "ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-24",
+      "claim": "Search generative AI owner control is separate from Google-Extended training/non-Search grounding and GoogleOther crawling; independent local controls do not prove property state",
+      "scope": "Google Search and separately documented Google generative AI products",
+      "external_verification": "Search Console owner setting and actual deployment"
+    },
+    {
+      "id": "GOOGLE-PREVIEW",
+      "source": "https://developers.google.com/search/docs/fundamentals/gen-ai-controls",
+      "access": "ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-24",
+      "claim": "noindex excludes Search; nosnippet, max-snippet and data-nosnippet constrain previews/grounding with different scopes",
+      "scope": "Google Search generative feature previews and grounding",
+      "external_verification": "Live header and page inspection"
+    },
+    {
+      "id": "GOOGLE-TRAINING-2027",
+      "source": "https://developers.google.com/search/docs/fundamentals/gen-ai-controls",
+      "access": "ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-24",
+      "claim": "Shared __usage_ai-training preference signal is intended for early 2027, not currently guaranteed to be implemented",
+      "scope": "Future training control only",
+      "external_verification": "Reopen effective 2027 provider docs"
+    },
+    {
+      "id": "GOOGLE-AI-OPTIMIZATION",
+      "source": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "access": "ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-24",
+      "claim": "Search AI relies on existing search/ranking systems; no special llms.txt/schema/chunk-size requirement or guaranteed placements",
+      "scope": "Google AI Overviews/AI Mode",
+      "external_verification": "Actual index and Search Console evidence"
+    },
+    {
+      "id": "GOOGLE-GSC-WORLDWIDE",
+      "source": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+      "access": "ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-24",
+      "claim": "After June subset rollout, Google says Generative AI performance insights rolled out to all websites worldwide by August 31 2026",
+      "scope": "Search Console feature rollout; not evidence of any individual site's impressions",
+      "external_verification": "Actual authorized Search Console property/report"
+    },
+    {
+      "id": "BING-TOPIC-BETA",
+      "source": "https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/",
+      "access": "ORIGINAL_BODY_OPENED",
+      "checked_on": "2026-11-24",
+      "claim": "Topics Portfolio beta may require sufficient owner property data and offers approximate opportunity/topic aggregates",
+      "scope": "Bing Webmaster Tools AI Performance beta",
+      "external_verification": "Actual owner beta availability"
+    }
+  ]
+}

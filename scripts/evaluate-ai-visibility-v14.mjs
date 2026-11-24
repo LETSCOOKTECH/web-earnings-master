@@ -19,12 +19,12 @@ export function evaluateAiVisibilityV14(data,{now=Date.now()}={}){
   errors.push('Fixed dated pre-registered prompt panel required');
  if(study?.panel_method!=='HUMAN_TASK_SAMPLED'&&study?.panel_method!=='DOCUMENTED_USER_QUESTIONS')
   errors.push('Panel sampling must come from real user questions/tasks');
- const rows=new Set(),groups=new Map(),observedPromptIds=new Set();
+ const rows=new Set(),groups=new Map(),observedPromptIds=new Set(),seenGroupPrompts=new Set();
  for(const [i,r] of data.observations.entries()){
   const loc=i+1;
   if(!fields.includes(r.surface))errors.push('Unknown/incomparable AI product '+loc);
   if(!study?.prompt_ids?.includes(r.prompt_id))errors.push('Prompt run not registered in fixed panel '+loc);
-  observedPromptIds.add(r.prompt_id);
+  observedPromptIds.add(r.prompt_id);seenGroupPrompts.add(JSON.stringify([r.surface,r.locale,r.prompt_id]));
   if(typeof r.locale!=='string'||r.locale.length<2||!validDate(r.observed_at))errors.push('Provider locale/observation date missing '+loc);
   if(r.status!=='OBSERVED'&&r.status!=='UNAVAILABLE')errors.push('Observed or unavailable state required '+loc);
   const key=[r.surface,r.locale,r.prompt_id,r.repeat_id??''].join('|');
@@ -59,6 +59,23 @@ export function evaluateAiVisibilityV14(data,{now=Date.now()}={}){
    warnings.push('Same URL in visible and background arrays; verify capture semantics '+loc);
  }
  for(const prompt of study?.prompt_ids||[])if(!observedPromptIds.has(prompt))errors.push('Pre-registered prompt missing from panel '+prompt);
+ for(const g of groups.values())for(const prompt of study?.prompt_ids||[]){
+  if(!seenGroupPrompts.has(JSON.stringify([g.surface,g.locale,prompt])))
+   errors.push('Missing pre-registered prompt '+prompt+' for provider group '+g.surface+' / '+g.locale);
+ }
+ if(Array.isArray(study?.expected_groups)){
+  const expectedKeys=new Set();
+  for(const entry of study.expected_groups){
+   const k=JSON.stringify([entry?.surface,entry?.locale]);
+   if(!fields.includes(entry?.surface)||typeof entry?.locale!=='string'||entry.locale.length<2||expectedKeys.has(k))
+    errors.push('Invalid or duplicate expected provider group');
+   expectedKeys.add(k);
+   if(!groups.has([entry?.surface,entry?.locale].join('|')))
+    errors.push('Missing expected provider group '+String(entry?.surface)+' / '+String(entry?.locale));
+  }
+  for(const g of groups.values())if(!expectedKeys.has(JSON.stringify([g.surface,g.locale])))
+   errors.push('Observed provider group was not pre-registered '+g.surface+' / '+g.locale);
+ }else warnings.push('Missing pre-registered expected provider/locale groups: entire absent cohorts cannot be detected');
  if(data?.owner_reports!==undefined){
   if(!Array.isArray(data.owner_reports))errors.push('Owner report metrics must be an array');
   else for(const report of data.owner_reports){

@@ -73,10 +73,10 @@ test('Optional llms.txt does not certify citation, fake guarantees are rejected'
  const r=check({html:html.replace('</main>','<p>llms.txt guarantees Google AI Mode ranking</p></main>')});
  assert.equal(r.status,'FAIL');
 });
-test('Explicit 0 max-snippet flagged as risk rather than fake guaranteed ranking',()=>{
+test('Explicit 0 max-snippet prevents Google Search AI snippet eligibility',()=>{
  const r=check({html:html.replace('</head>','<meta name="robots" content="max-snippet:0"></head>')});
- assert.equal(r.status,'LOCAL_ELIGIBILITY_ONLY');
- assert.ok(r.warnings.some(w=>w.includes('max-snippet:0')));
+ assert.equal(r.status,'FAIL');
+ assert.ok(r.results.google_ai.blockers.some(w=>w.includes('max-snippet:0')));
 });
 test('Custom target crawler set only reports requested product',()=>{
  const r=check({modes:['chatgpt_search']});
