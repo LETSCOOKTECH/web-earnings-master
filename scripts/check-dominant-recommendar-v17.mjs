@@ -14,6 +14,7 @@ export function checkRecommendarRegistry(data){
   return {status:'FAIL',errors:['Missing recommendation source atlas schema'],warnings};
  const ids=new Set();
  for(const x of data.sources){
+  if(!x||typeof x!=='object'||Array.isArray(x)){errors.push('Invalid primary source record');continue;}
   if(!x?.id||ids.has(x.id))errors.push('Duplicate/missing source ID');ids.add(x.id);
   if(!official[x.provider]){errors.push('No official primary-source provider allowlist '+x.provider);continue;}
   let url;try{url=new URL(x.url)}catch{errors.push('Bad source URL '+x.id);continue}
@@ -25,6 +26,7 @@ export function checkRecommendarRegistry(data){
  }
  const seen=new Set();
  for(const p of data.providers){
+  if(!p||typeof p!=='object'||Array.isArray(p)){errors.push('Invalid provider source record');continue;}
   if(!SURFACES.includes(p.id)||seen.has(p.id))errors.push('Invalid/duplicate provider surface '+p.id);
   seen.add(p.id);
   if(p.rank_one_formula_known!==false||p.owner_property_authenticated!==false||p.provider_response_authenticated!==false)

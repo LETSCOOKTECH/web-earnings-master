@@ -54,6 +54,7 @@ export function evaluateRecommendar(data,{now=Date.now()}={}){
  const entityMap=new Map();
  if(str(target.entity_id,3)&&str(target.brand,2))entityMap.set(target.entity_id,target.brand);
  for(const c of Array.isArray(target.competitors)?target.competitors:[]){
+  if(!isObj(c)){mark(errors,'Invalid competitor record: expected object');continue;}
   if(entityMap.has(c.entity_id))mark(errors,'Target and competing entity IDs must be distinct');
   else if(str(c.entity_id,3)&&str(c.brand,2))entityMap.set(c.entity_id,c.brand);
  }
@@ -86,6 +87,7 @@ export function evaluateRecommendar(data,{now=Date.now()}={}){
   });
  }
  for(const [i,r] of (Array.isArray(obs)?obs:[]).entries()){
+  if(!isObj(r)){mark(errors,'Invalid observation row '+(i+1));continue;}
   const n=i+1,gKey=JSON.stringify([r?.surface,r?.locale]),question=questionMap.get(r?.question_id),group=groupMap.get(gKey);
   const repeat=r?.repeat_id,key=JSON.stringify([r?.surface,r?.locale,r?.question_id,repeat]);
   if(keys.has(key))mark(errors,'Duplicate attempt inflates denominator at row '+n);
@@ -151,11 +153,11 @@ export function evaluateRecommendar(data,{now=Date.now()}={}){
  if(Array.isArray(groups)&&Array.isArray(questions)&&Array.isArray(repeats)){
   const expected=groups.length*questions.filter(q=>groupMap.has(JSON.stringify([groups[0]?.surface,q.locale]))||groups.some(g=>g.locale===q.locale)).length*repeats.length;
   if(expected>100000)mark(errors,'Panel exceeds 100,000 attempt guard; split into bounded studies');
-  for(const g of groups)for(const q of questions.filter(q=>q.locale===g.locale))for(const rp of repeats){
+  for(const g of groups)for(const q of questions.filter(q=>q?.locale===g?.locale&&isObj(g)))for(const rp of repeats){
    if(!keys.has(JSON.stringify([g.surface,g.locale,q.id,rp])))mark(errors,'Missing preregistered attempt '+g.surface+'/'+g.locale+'/'+q.id+'/'+rp);
   }
-  for(const q of questions)if(!groups.some(g=>g.locale===q.locale))mark(errors,'No provider cohort for registered question locale '+q.id);
-  for(const g of groups)if(!questions.some(q=>q.locale===g.locale))mark(errors,'No registered questions for provider locale '+g.surface+'/'+g.locale);
+  for(const q of questions)if(!isObj(q)||!groups.some(g=>g?.locale===q.locale))mark(errors,'No provider cohort for registered question locale '+String(q?.id));
+  for(const g of groups)if(!isObj(g)||!questions.some(q=>q?.locale===g.locale))mark(errors,'No registered questions for provider locale '+String(g?.surface)+'/'+String(g?.locale));
  }
  const out=[...counts.values()].map(g=>({...g,
   sampled_unbranded_recommendation_rate:g.unbranded_attempted?+(g.unbranded_recommended/g.unbranded_attempted).toFixed(4):null,
