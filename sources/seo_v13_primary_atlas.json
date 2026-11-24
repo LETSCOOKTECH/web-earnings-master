@@ -493,7 +493,7 @@
       "review_interval_days": 14,
       "requires_original_body_before_action": true,
       "account_observation_required": false,
-      "access_snapshot": "ORIGINAL_BODY_OPENED_PARTIAL",
+      "access_snapshot": "REFERENCE_LEAD_NOT_BODY_VERIFIED",
       "content_meaning_verified_for_this_task": false,
       "source_checked_on": "2026-11-24"
     },
