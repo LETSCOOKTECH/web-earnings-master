@@ -1,0 +1,255 @@
+{
+  "schema": "seo-master-official-refs-v11",
+  "review_date": "2026-11-24",
+  "note": "Dated original provider links. ORIGINAL_BODY_OPENED applies only to selected original pages; indexed search results are not semantic verification, and some support.google.com opened with HTTP429. Reopen exact original policy/account pages at action time. No ranking/AdSense account proof.",
+  "sources": [
+    {
+      "id": "search_essentials",
+      "url": "https://developers.google.com/search/docs/essentials",
+      "domain": "SEO",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "search_technical",
+      "url": "https://developers.google.com/search/docs/essentials/technical",
+      "domain": "SEO",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "spam_keyword",
+      "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "domain": "SPAM",
+      "inspection": "ORIGINAL_BODY_OPENED_SELECTED_SECTIONS",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "seo_starter",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+      "domain": "SEO",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "helpful_content",
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "domain": "CONTENT",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "title",
+      "url": "https://developers.google.com/search/docs/appearance/title-link",
+      "domain": "SEO",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "snippet",
+      "url": "https://developers.google.com/search/docs/appearance/snippet",
+      "domain": "SEO",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "canonical",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+      "domain": "TECHNICAL",
+      "inspection": "ORIGINAL_BODY_OPENED_SELECTED_SECTIONS",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "robots",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/robots/intro",
+      "domain": "TECHNICAL",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "noindex",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/block-indexing",
+      "domain": "TECHNICAL",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "javascript",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
+      "domain": "TECHNICAL",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "sitemaps",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
+      "domain": "TECHNICAL",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "crawlable_links",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable",
+      "domain": "TECHNICAL",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "schema",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+      "domain": "SCHEMA",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "ai_appearance",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "domain": "AI",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "ai_guidance",
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "domain": "AI",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "search_console",
+      "url": "https://developers.google.com/search/docs/monitor-debug/search-console-start",
+      "domain": "OBSERVABILITY",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "google_updates",
+      "url": "https://developers.google.com/search/updates",
+      "domain": "FRESHNESS",
+      "inspection": "ORIGINAL_BODY_OPENED_SELECTED_SECTIONS",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "google_ads_keywords",
+      "url": "https://support.google.com/google-ads/answer/7337243",
+      "domain": "GOOGLE_ADS",
+      "inspection": "SEARCH_RESULT_AND_ORIGINAL_OPEN_BLOCKED",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "google_ads_refine",
+      "url": "https://support.google.com/google-ads/answer/6325025",
+      "domain": "GOOGLE_ADS",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "adsense_ready",
+      "url": "https://support.google.com/adsense/answer/7299563",
+      "domain": "ADSENSE",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "adsense_program",
+      "url": "https://support.google.com/adsense/answer/48182",
+      "domain": "ADSENSE",
+      "inspection": "SEARCH_RESULT_AND_ORIGINAL_OPEN_BLOCKED",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "adsense_placement",
+      "url": "https://support.google.com/adsense/answer/1346295",
+      "domain": "ADSENSE",
+      "inspection": "SEARCH_RESULT_AND_ORIGINAL_OPEN_BLOCKED",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "adsense_invalid",
+      "url": "https://support.google.com/adsense/answer/16737",
+      "domain": "ADSENSE",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "adsense_no_content",
+      "url": "https://support.google.com/publisherpolicies/answer/11112688",
+      "domain": "ADSENSE",
+      "inspection": "SEARCH_RESULT_AND_ORIGINAL_OPEN_BLOCKED",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "adsense_ad_heavy",
+      "url": "https://support.google.com/publisherpolicies/answer/11169917",
+      "domain": "ADSENSE",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "web_vitals",
+      "url": "https://web.dev/articles/vitals",
+      "domain": "PERFORMANCE",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "owasp_asvs",
+      "url": "https://asvs.owasp.org/",
+      "domain": "SECURITY",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "wcag_22",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "domain": "ACCESSIBILITY",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "playwright_browser",
+      "url": "https://playwright.dev/docs/browsers",
+      "domain": "QA",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    },
+    {
+      "id": "astro_docs",
+      "url": "https://docs.astro.build/en/getting-started/",
+      "domain": "ENGINEERING",
+      "inspection": "SEARCH_RESULT_ONLY",
+      "source_authority": "first_party",
+      "action_time_original_review_required": true
+    }
+  ]
+}

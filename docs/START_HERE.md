@@ -71,3 +71,6 @@ Use `web-traffic-hunter` before deciding where to distribute a tested web utilit
 
 ## V9 — Before coding, validate the market
 Invoke `web-opportunity-intelligence` to check user-job authenticity, localized search demand and Trends, licensed Semrush/Ahrefs and Keyword Planner estimates, independent Reddit/forum issues where permitted, actual same-input competitor outputs and operating costs. Produce a decision with sources, contradictory evidence and cheapest pilot under explicit research credit budget. Reference `docs/opportunity/README.md`; no full-site build merely because a dashboard shows volume.
+
+## V11 — One real website, not 1,000 SEO keyword pages
+For website engineering and technical/keyword SEO start with `docs/seo-master/README.md`. Map real user needs to distinct correct-output pages, use exact dated licensed source measurements, compare actual SERP, then build/test actual user tasks. Distinguish Search spam policies, Ads keyword estimates and AdSense publisher requirements; don't infer revenue from advertiser CPC. Static metadata checks are not functional/download/index/browser approval. Human and owner-account verification are separate final gates.

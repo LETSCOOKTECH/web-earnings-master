@@ -1,0 +1,26 @@
+{
+  "schema": "seo-v11-page-brief",
+  "fixture": true,
+  "site_origin": "https://csv-lab.example.org",
+  "pages": [
+    {
+      "path": "/",
+      "primary_user_job": "Navigate to the CSV cleaning utility and understand the project",
+      "query_hypothesis": "CSV Deduplicator",
+      "keyword_evidence_type": "HYPOTHESIS_NOT_MEASURED",
+      "canonical": "https://csv-lab.example.org/",
+      "indexable": true,
+      "output_test_ref": null
+    },
+    {
+      "path": "/tools/csv-deduplicator/",
+      "primary_user_job": "Remove identical CSV rows and download the valid cleaned file",
+      "query_hypothesis": "remove duplicate CSV rows",
+      "keyword_evidence_type": "HYPOTHESIS_NOT_MEASURED",
+      "canonical": "https://csv-lab.example.org/tools/csv-deduplicator/",
+      "indexable": true,
+      "output_test_ref": "lab/tests/csv-core.test.mjs"
+    }
+  ],
+  "notice": "Synthetic keyword examples only; no Google Trends, Keyword Planner, Semrush, GSC or ad approval data observed."
+}

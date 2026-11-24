@@ -32,7 +32,7 @@ for(const f of htmls){
  if(h1!==1)errors.push(`${relative}: expected one h1, got ${h1}`);
  if(canTag.length!==1)errors.push(`${relative}: expected exactly one canonical link`);
  if(canonical!==target)errors.push(`${relative}: expected canonical ${target}, got ${canonical}`);
- if(/<meta\s+[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html))warnings.push(`${relative}: noindex detected, ensure excluded from sitemap`);
+ if(/<meta\s+[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html))errors.push(`${relative}: noindex on a built page in this indexable-page audit; use an explicit noindex-aware project route manifest for intentional exclusions`);
  if(titleMap.has(title))errors.push(`${relative}: duplicate title with ${titleMap.get(title)}`);titleMap.set(title,relative);
  if(canonicalMap.has(canonical))errors.push(`${relative}: duplicate canonical with ${canonicalMap.get(canonical)}`);canonicalMap.set(canonical,relative);
  siteUrls.push(target);
@@ -58,7 +58,7 @@ else{
   const xml=fs.readFileSync(p,'utf8');
   for(const m of xml.matchAll(/<loc>([^<]+)<\/loc>/gi))urlsInMaps.add(m[1]);
  }
- for(const u of siteUrls)if(!urlsInMaps.has(u))warnings.push(`Canonical page omitted from sitemap: ${u}`);
+ for(const u of siteUrls)if(!urlsInMaps.has(u))errors.push(`Canonical page omitted from sitemap: ${u}`);
  for(const u of urlsInMaps)if(!siteUrls.includes(u))warnings.push(`Sitemap URL has no matching built HTML: ${u}`);
 }
 console.log(`Checked ${htmls.length} built HTML pages, robots, sitemap. (STATIC SIGNALS ONLY)`);
