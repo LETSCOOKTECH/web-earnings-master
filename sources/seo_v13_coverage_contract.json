@@ -70,7 +70,7 @@
       "official_source_id": "google-technical",
       "acceptance_evidence": "Actual deployed DNS/TLS, 200/301/404 and cache/headers",
       "critical_failure": "Soft404 or DNS/TLS/host redirect breakage",
-      "phase": "DEPLOY",
+      "phase": "LAUNCH",
       "external_outcome_not_certified": true
     },
     {
