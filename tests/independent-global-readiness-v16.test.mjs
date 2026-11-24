@@ -66,3 +66,18 @@ test('HOLDOUT README current skill count is not misleading to a new agent',()=>{
  const readme=read('README.md');
  assert.doesNotMatch(readme,/\*\*28 specialized Codex skills\*\*/);
 });
+
+test('HOLDOUT X-Robots-Tag scoped to otherbot must NOT restrict Googlebot',()=>{
+ for(const header of ['otherbot: noindex','otherbot: none','X-Robots-Tag: otherbot: noindex, googlebot: index']){
+  const a=auditGoogleAiControlsV15({html:simple,robots:'',xRobotsTag:header});
+  assert.equal(a.status,'LOCAL_ONLY_EXTERNAL_UNKNOWN',header+': '+JSON.stringify(a.blockers));
+  const b=auditAiEligibility({html:simple,robots:'',xRobotsTag:header});
+  assert.equal(b.results.google_ai.blocked,false,header);
+ }
+});
+test('HOLDOUT Googlebot-specific X-Robots-Tag must block index when relevant',()=>{
+ for(const h of ['googlebot: noindex','X-Robots-Tag: otherbot: index, googlebot: none']){
+  assert.equal(auditGoogleAiControlsV15({html:simple,robots:'',xRobotsTag:h}).status,'LOCAL_CONFLICT',h);
+  assert.equal(auditAiEligibility({html:simple,robots:'',xRobotsTag:h}).status,'FAIL',h);
+ }
+});
