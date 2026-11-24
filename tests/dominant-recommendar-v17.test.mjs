@@ -95,3 +95,31 @@ test('ADVERSARIAL null competitor must produce controlled FAIL not TypeError',()
 test('ADVERSARIAL null observation must produce controlled FAIL not TypeError',()=>{const x=fixture();x.observations[0]=null;assert.equal(check(x).status,'FAIL');});
 test('ADVERSARIAL null cohort must produce controlled FAIL not TypeError',()=>{const x=fixture();x.study.expected_groups[0]=null;assert.equal(check(x).status,'FAIL');});
 test('ADVERSARIAL null question must produce controlled FAIL not TypeError',()=>{const x=fixture();x.questions[0]=null;assert.equal(check(x).status,'FAIL');});
+
+test('HOLDOUT API output cannot masquerade as consumer ChatGPT Search output',()=>{
+ const x=fixture();x.observations.find(r=>r.surface==='openai-chatgpt-search'&&r.status==='OBSERVED').capture.method='AUTHORIZED_PROVIDER_API';bad(x);
+});
+test('HOLDOUT OpenAI authorized web search API is its own provider cohort',()=>{
+ const x=fixture();x.study.expected_groups.find(g=>g.surface==='openai-chatgpt-search').surface='openai-web-search-api';
+ for(const r of x.observations.filter(y=>y.surface==='openai-chatgpt-search')){
+  r.surface='openai-web-search-api';
+  if(r.status==='OBSERVED')r.capture.method='AUTHORIZED_PROVIDER_API';
+ }
+ const result=check(x);assert.equal(result.status,'STRUCTURAL_ONLY_EXTERNAL_UNVERIFIED',JSON.stringify(result.errors));
+});
+test('HOLDOUT API output classified as human UI on API surface rejected',()=>{
+ const x=fixture();x.study.expected_groups[1].surface='openai-web-search-api';
+ for(const r of x.observations.filter(y=>y.surface==='openai-chatgpt-search'))r.surface='openai-web-search-api';
+ bad(x);
+});
+test('HOLDOUT target-name injection into supposedly unbranded question rejected',()=>{
+ const x=fixture();x.questions[0].text='Why should I choose NovaTools for browser-local JSONL validation?';bad(x);
+});
+test('HOLDOUT duplicate competitor brand cannot create fake #1 position',()=>{
+ const x=fixture();x.target.competitors[0].brand='NovaTools';bad(x);
+});
+test('HOLDOUT explicitly negative quote cannot be labeled positive',()=>{
+ const x=fixture();x.observations[0].answer.raw_excerpt='NovaTools is not recommended for JSONL processing. AtlasSuite is a strong alternative for advanced teams.';
+ x.observations[0].answer.recommendations[0].evidence_quote='NovaTools is not recommended for JSONL processing.';
+ bad(x);
+});
