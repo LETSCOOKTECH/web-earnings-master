@@ -9,9 +9,9 @@ const contract=JSON.parse(fs.readFileSync(path.join(root,'sources/seo_v13_covera
 const atlas=JSON.parse(fs.readFileSync(path.join(root,'sources/seo_v13_primary_atlas.json'),'utf8'));
 const clone=()=>structuredClone(contract);
 const audit=x=>checkCoverage(x,atlas,{root});
-test('29 scope domains with all seven first-party source categories pass local contract',()=>{
+test('30 scope domains with all seven first-party source categories pass local contract',()=>{
  const o=audit(clone());assert.equal(o.valid,true,JSON.stringify(o.errors));
- assert.ok(o.domains>=28);assert.equal(o.official_source_categories.length,7);assert.equal(o.status,'PASS_COVERAGE_METADATA_ONLY');
+ assert.ok(o.domains>=30);assert.equal(o.official_source_categories.length,7);assert.equal(o.status,'PASS_COVERAGE_METADATA_ONLY');
 });
 test('Every highest-risk required lifecycle contract is represented',()=>{
  assert.ok(REQUIRED.size>=15);
