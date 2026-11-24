@@ -2,7 +2,7 @@
 
 ## V10–V19 — 2026-11-24 (execution assurance research branch; review pending)
 - Added ten focused skill modules, expanding the current 48-skill library to 58, including master routing, market/competitor intelligence, reusable production factory, search lab, retention, revenue, learning, independent verification and adversarial benchmarks.
-- Added cross-skill executable JSON receipt verifier and adversarial negative tests for unbounded budgets, invented human identity, snippet-only provider claims, contradictory evidence, fake approval, unverified external state and non-independent reviewer disclosure.
+- Added executable stage-aware skill router with eight-skill context ceiling and adversarial tests; stage selection is advisory, not autonomous authorization.\n- Added cross-skill executable JSON receipt verifier and adversarial negative tests for unbounded budgets, invented human identity, snippet-only provider claims, contradictory evidence, fake approval, unverified external state and non-independent reviewer disclosure.
 - Added mandatory source/effort/human/developer re-verification routing and clarified that structural validators never certify external authenticity, security, popularity, indexing, citations, approvals or revenue.
 - Targeted repairs to core research, competitor, traffic, engineering and growth skills; CI still determines final local test status. No live websites or deployed code touched.
 

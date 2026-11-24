@@ -32,3 +32,7 @@ The authoritative scoped contract is `scripts/check-execution-assurance.mjs` and
 
 ## What is not completed by this library release
 There is no live owned website, Search Console/account evidence, consented user cohort, real competitor output artifact, production security certificate, AdSense authorization, actual publisher payout or independent real-human market study. Those are site-specific future experiments rather than skill count upgrades. Review the actual GitHub CI run after pushing this branch and fix failures before merging.
+
+
+## Practical routing and minimal work packets
+Run `node scripts/route-execution-skills.mjs DISCOVERY`; optional `--focus=search,publisher` only when context warrants. Stages are DISCOVERY, VALIDATION, BUILD, RELEASE, ACQUISITION and MEASUREMENT. The router validates skill IDs against the canonical 58-skill registry, limits context to eight selected skills and rejects unknown/oversized routes. This is a **starting recommendation** and does not authorize remote actions. Create small work packets: declared task, owner, why selected, input evidence, specific expected output, negative test, budget, stop rule, source access mode and downstream dependencies. Keep an independent reviewer in a separate packet when possible. Exclude irrelevant skills deliberately; do not force every stage on a tiny factual task.
