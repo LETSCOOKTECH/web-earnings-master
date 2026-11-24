@@ -1,0 +1,16 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {ROUTES,routeSkills} from '../scripts/route-execution-skills.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const known=JSON.parse(fs.readFileSync(path.join(root,'sources/production_skills_v7.json'),'utf8')).skills.map(x=>x.id);
+test('each work stage has a scoped route with real registered skills',()=>{for(const stage of Object.keys(ROUTES)){const x=routeSkills(stage,{knownSkills:known});assert.equal(x.valid,true,stage+' '+x.errors.join(','));assert.ok(x.selected_skills.length>=3);assert.ok(x.selected_skills.length<=8);}});
+test('missing stage fails closed',()=>assert.equal(routeSkills('EVERYTHING').valid,false));
+test('unknown focus fails closed',()=>assert.equal(routeSkills('BUILD',{focus:['fake']}).valid,false));
+test('sensitive optional focus routes to real owner',()=>{const x=routeSkills('RELEASE',{focus:['publisher','consent'],knownSkills:known});assert.equal(x.valid,true);assert.ok(x.selected_skills.includes('web-publisher-policy-eligibility'));assert.ok(x.selected_skills.includes('web-privacy-consent'))});
+test('no duplicate skill with repeated focus',()=>{const x=routeSkills('RELEASE',{focus:['publisher','publisher']});assert.equal(new Set(x.selected_skills).size,x.selected_skills.length)});
+test('context budget rejects excessive scope instead of silently truncating',()=>{const x=routeSkills('BUILD',{focus:['publisher','search','accessibility','performance','consent'],knownSkills:known});assert.equal(x.valid,false);assert.ok(x.errors.some(e=>e.includes('context budget')))});
+test('unknown future registration fails correctly',()=>{const x=routeSkills('BUILD',{knownSkills:['web-fullstack-production-executor']});assert.equal(x.valid,false)});
+test('invalid max skill setting rejected',()=>assert.equal(routeSkills('VALIDATION',{maxSkills:100}).valid,false));

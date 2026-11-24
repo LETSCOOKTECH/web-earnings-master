@@ -46,3 +46,8 @@ description: "Engineer production web utilities end to end with traceable user j
 ## Official primary-source starting points (re-open before action)
 - https://www.w3.org/TR/WCAG22/
 - https://asvs.owasp.org/
+
+
+## Execution assurance and adversarial verification (V10–V19)
+**V10 execution addendum:** Before production-ready claims, inspect actual task output, malformed input, failure and abuse boundaries, dependency and security failures, accessibility, low-end device performance, hosting economics and rollback. Document executed commands and real artifact paths; never substitute a code diff for E2E output or a hypothetical million-user simulation for load proof. Require per-property external receipt with human release authorization.
+**Evidence enforcement:** Review `docs/execution-assurance/README.md`; run `node scripts/check-execution-assurance.mjs --file <task-receipt.json>` for consequential work. Local schema validity is not source authenticity, external approval or production readiness.

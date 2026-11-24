@@ -1,5 +1,11 @@
 # Changelog
 
+## V10–V19 — 2026-11-24 (execution assurance research branch; review pending)
+- Added ten focused skill modules, expanding the current 48-skill library to 58, including master routing, market/competitor intelligence, reusable production factory, search lab, retention, revenue, learning, independent verification and adversarial benchmarks.
+- Added executable stage-aware skill router with eight-skill context ceiling and adversarial tests; stage selection is advisory, not autonomous authorization.\n- Added cross-skill executable JSON receipt verifier and adversarial negative tests for unbounded budgets, invented human identity, snippet-only provider claims, contradictory evidence, fake approval, unverified external state and non-independent reviewer disclosure.
+- Added mandatory source/effort/human/developer re-verification routing and clarified that structural validators never certify external authenticity, security, popularity, indexing, citations, approvals or revenue.
+- Targeted repairs to core research, competitor, traffic, engineering and growth skills; CI still determines final local test status. No live websites or deployed code touched.
+
 ## V6 — Forensic search, fullstack, publisher, OWASP, release skills (Nov 23 2026; research PR)
 - Added 8 specialized skills, 7 manuals and index, 45 upload-report priority audits, 15 monetization providers/models, 3 offline validators, 31 new regression tests and 106 official-source watch targets.
 - Separated court-disclosed signals from speculative ranking weights and Site/URL AdSense policy from network admission and real revenue; new security controls based on OWASP ASVS 5.0.

@@ -36,3 +36,8 @@ description: "Reverse-engineer competitor websites ethically using current SERPs
 **Double-counting guard:** Separate modeled all-channel visits, Google organic visits, search volume, backlink count, referring domains, ad impressions, actual owner publisher payments and true profit. Google Analytics-like bounce statistics are not authenticated Google ranker measurements or NavBoost weights.
 **Ranking guard:** Test URL path depth and actual navigation graph distance separately. Use live observed link paths and a controlled graph model; do NOT declare one URL form a Google rank shortcut.
 **Scope of reviewed example:** sources/research/freeconvert-upload-priority-claim-audit-2026-11-23.json includes 32 priority claims from the user's FreeConvert teardown and documented uncertainty. Independently test formats and actual user outcomes before labeling a competitor weakness or proposing a cloned product.
+
+
+## Execution assurance and adversarial verification (V10–V19)
+**V10 competitor reality addendum:** Record a fixture oracle, identical input and target output, browser/locale/plan/time, rival artifact and errors, at least one counterexample and the cheapest reproducible differentiation test. Feature screenshots, review summaries, SEO models and error pages cannot by themselves establish a verified competitor defect. Use `web-competitive-gap-lab` and `web-independent-verification` for consequential investment decisions.
+**Evidence enforcement:** Review `docs/execution-assurance/README.md`; run `node scripts/check-execution-assurance.mjs --file <task-receipt.json>` for consequential work. Local schema validity is not source authenticity, external approval or production readiness.

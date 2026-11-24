@@ -8,15 +8,15 @@ This is the orchestration playbook. Skills are modular; execute the next highest
 
 **1. Verify sources:** read official policies and changelogs at execution time, and create/update `templates/claim-ledger.csv`. If external access fails, label unverified and do not assert compliance. See `web-research-freshness`.
 
-**2. Demand and SERP evidence:** list exact task/search queries, collect 12-month volume and trend, distinguish advertiser competition from SEO difficulty, inspect top 10 organic results (country/device), SERP features, source of traffic and queries with clicks; document whether Google answers the query without a click. Use GSC when existing site has impressions. Reject ideas with no practical acquisition angle.
+**2. Demand and SERP evidence:** list exact task/search queries, collect date-matched permitted keyword estimates and/or relative Trends interest (never invent absolute volumes), distinguish advertiser competition from SEO difficulty, inspect top 10 organic results (country/device), SERP features, source of traffic and queries with clicks; document whether Google answers the query without a click. Use GSC when existing site has impressions. Reject ideas with no practical acquisition angle.
 
 **3. Competitor job tests:** attempt identical tasks on at least 3 relevant tools, including adverse cases and mobile if relevant. Record steps, time, actual outputs, pricing and trust problems. Only claim a gap if reproducible. Test original value of planned product.
 
-**4. Build a working product:** create exact output specs, data handling/privacy requirements, edge cases and release criteria. Use static/server-rendered Astro HTML for public explanations, isolate browser JS processing in components and workers, avoid unnecessary backend. Test real file outputs, low-memory devices, error states and cancellation.
+**4. Build a working product:** create exact output specs, data handling/privacy requirements, edge cases and release criteria. Choose the workload architecture first: useful initial public HTML is essential for indexable explanations, but Astro is optional. Use browser-local/WASM where measured capability allows, and bounded server/queue processing when necessary. Test real file outputs, low-memory devices, error states and cancellation.
 
 **5. Build discoverability into the product:** unique title/H1/intents, canonical, sitemap XML index, robots, noindex where necessary, semantic links, original evidence, accurate schema, original image examples, meaningful FAQ where genuinely helpful, Core Web Vitals and rendering tests. Never create near-duplicate pages solely for keyword variation.
 
-**6. Configure AI/search access:** ensure Googlebot, Bingbot and documented search crawlers are permitted and not challenged at CDN/WAF; differentiate training bots. Check Google generative AI Search Console inclusion controls, Bing AI reporting/preferences, and human/agent ability to use forms. Test real HTTP logs.
+**6. Configure AI/search access:** evaluate whether desired official search bots are permitted and genuinely verified at CDN/WAF; separate indexing, AI retrieval, model training and user-triggered agent access. Do not blindly allow unidentified user agents. Check Google generative AI Search Console inclusion controls, Bing AI reporting/preferences, and human/agent ability to use forms. Test real HTTP logs.
 
 **7. Monetization/publisher safety:** verify 18+/ownership/account, legal content rights, original site value, privacy policy and regional CMP obligations; compare network terms, ad formats, ads.txt and contract restrictions. Preserve an ad-free working tool path, clearly distinguish ads from controls, eliminate popunders and deceptive interactions. Apply for AdSense when ready—no mythical mandatory traffic minimum.
 
@@ -71,3 +71,6 @@ Use `web-traffic-hunter` before deciding where to distribute a tested web utilit
 
 ## V9 — Before coding, validate the market
 Invoke `web-opportunity-intelligence` to check user-job authenticity, localized search demand and Trends, licensed Semrush/Ahrefs and Keyword Planner estimates, independent Reddit/forum issues where permitted, actual same-input competitor outputs and operating costs. Produce a decision with sources, contradictory evidence and cheapest pilot under explicit research credit budget. Reference `docs/opportunity/README.md`; no full-site build merely because a dashboard shows volume.
+
+
+**V10–V19 required assurance route:** For a consequential multi-skill task, first use `node scripts/route-execution-skills.mjs DISCOVERY` (or another scoped stage), inspect `docs/execution-assurance/FIELD_MANUAL.md`, then create a task-specific receipt. Run `node scripts/check-execution-assurance.mjs --file <receipt.json> --verify-artifacts --artifact-root <approved-root>` for real local evidence. Its PASS/ELIGIBLE_FOR_REVIEW outcome is a structured screening result, **not** third-party source authenticity or authorization. All external deployment/publishing/paid actions need explicit human approval.

@@ -46,3 +46,8 @@ description: "Apply OWASP ASVS 5.0 and Top 10:2025 to frontend, backend, API, up
 ## Official primary-source starting points (re-open before action)
 - https://asvs.owasp.org/
 - https://top10.owasp.org/2025/0x00_2025-Introduction/
+
+
+## Execution assurance and adversarial verification (V10–V19)
+**V10 independent security guard:** Map security assertions to actual executable negative tests and versioned official developer/OWASP references, not checklist ticks. Require explicit results for authorization isolation, SSRF/file handling, secrets, dependency integrity, abuse-cost boundaries and rollback where applicable. Treat an unavailable test as UNKNOWN, and never call a local manifest parser a penetration test.
+**Evidence enforcement:** Review `docs/execution-assurance/README.md`; run `node scripts/check-execution-assurance.mjs --file <task-receipt.json>` for consequential work. Local schema validity is not source authenticity, external approval or production readiness.

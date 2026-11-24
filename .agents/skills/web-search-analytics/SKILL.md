@@ -31,3 +31,8 @@ description: "Diagnose first-party Google Search Console, Google Trends, Semrush
 
 ## Baidu AI traffic analysis source confirmation (2026-11-23)
 Baidu's primary public platform at https://ziyuan.baidu.com/doc and AI traffic entry at https://ziyuan.baidu.com/aiflow/index were successfully opened: the interface displays `AI流量分析` and requires a site addition/verification to access full data. Do not claim these AI analytics are Google GenAI GSC counts, Bing citations, ChatGPT referrals or human visits; dashboard definitions remain UNKNOWN without owner account and current help. See claim BAIDU-AI-FLOW-PORTAL in sources/verified_claims.json and reopen the current Chinese-language original at use time.
+
+
+## Execution assurance and adversarial verification (V10–V19)
+**V10 measurement addendum:** Report each funnel surface separately: discovered, crawled, indexed, ranked, AI-cited, clicked, session, correct task completion and paid ad event. Verify first-party scope, timestamp, granularity and query anonymity; compare at least one disconfirming segment. Do not silently attribute missing referrers to ChatGPT, infer revenue from CPC or present provider modeled estimates as account exports.
+**Evidence enforcement:** Review `docs/execution-assurance/README.md`; run `node scripts/check-execution-assurance.mjs --file <task-receipt.json>` for consequential work. Local schema validity is not source authenticity, external approval or production readiness.

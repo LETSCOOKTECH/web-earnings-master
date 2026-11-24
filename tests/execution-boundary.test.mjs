@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createExecutionBoundary} from '../scripts/execution-boundary.mjs';
+const limits={actions:2,tokens:10,cashMicros:0,sources:2};
+const usage={actions:1,tokens:5,cashMicros:0,sources:1};
+const handler={effect:'READ_ONLY',reserve:()=>usage,run:async()=>({value:'ok',usage})};
+test('reserves budget before execution and stops third action',async()=>{const b=createExecutionBoundary({limits,handlers:{read:handler}});await b.execute('read',{});await b.execute('read',{});await assert.rejects(b.execute('read',{}),/Budget exhausted/);assert.equal(b.snapshot().spent.tokens,10)});
+test('agent supplied approval cannot authorize mutation',async()=>{const b=createExecutionBoundary({limits,handlers:{write:{...handler,effect:'WRITE'}}});await assert.rejects(b.execute('write',{approved:true}),/authorization denied/)});
+test('unknown capability denied',async()=>{const b=createExecutionBoundary({limits,handlers:{}});await assert.rejects(b.execute('constructor',{}),/Unknown capability/)});
+test('excess usage halts boundary',async()=>{const b=createExecutionBoundary({limits,handlers:{read:{...handler,run:async()=>({usage:{...usage,tokens:6}})}}});await assert.rejects(b.execute('read',{}),/excessive/);assert.equal(b.snapshot().halted,true)});
+test('failed adapter consumes reservation and halts',async()=>{const b=createExecutionBoundary({limits,handlers:{read:{...handler,run:async()=>{throw Error('network')}}}});await assert.rejects(b.execute('read',{}),/network/);assert.equal(b.snapshot().spent.actions,1);assert.equal(b.snapshot().halted,true)});
+test('paid reservation rejected before handler runs',async()=>{let ran=false;const b=createExecutionBoundary({limits,handlers:{read:{...handler,reserve:()=>({...usage,cashMicros:1}),run:()=>{ran=true}}}});await assert.rejects(b.execute('read',{}),/Budget exhausted/);assert.equal(ran,false)});
+test('concurrent action denied',async()=>{let release;const b=createExecutionBoundary({limits,handlers:{read:{...handler,run:()=>new Promise(r=>{release=r})}}});const first=b.execute('read',{});await assert.rejects(b.execute('read',{}),/busy/);release({usage,value:'ok'});await first});
