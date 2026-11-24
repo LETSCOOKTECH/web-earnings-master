@@ -11,6 +11,11 @@ on:
       - 'tests/owned-web-lab.test.mjs'
       - '.github/workflows/browser-engine-e2e.yml'
       - 'package.json'
+      - 'examples/seo-csv-lab/**'
+      - 'scripts/serve-seo-csv-lab.mjs'
+      - 'scripts/audit-static-site.mjs'
+      - 'scripts/check-robots-policy.mjs'
+      - 'tests/seo-csv-browser-e2e.mjs'
   workflow_dispatch:
 permissions:
   contents: read
@@ -28,11 +33,13 @@ jobs:
           npm install --no-save --ignore-scripts playwright@1.65.1
           npx playwright install --with-deps chromium firefox webkit
       - name: Run local owned-server browser tests (all three engines)
-        run: node --test tests/browser-e2e.mjs
+        run: node --test tests/browser-e2e.mjs tests/seo-csv-browser-e2e.mjs
       - name: Upload versioned evidence
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: browser-engine-results-${{ github.run_id }}
-          path: .tmp/browser-e2e-results.json
+          path: |
+            .tmp/browser-e2e-results.json
+            .tmp/seo-csv-lab-browser-results.json
           if-no-files-found: warn

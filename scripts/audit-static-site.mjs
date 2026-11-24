@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
+import {evaluateRobots} from './robots-evaluator.mjs';
 
 function args(a){const m={};for(let i=0;i<a.length;i++){if(a[i].startsWith('--'))m[a[i].slice(2)]=a[++i];}return m;}
 const opt=args(process.argv.slice(2));
@@ -41,7 +42,13 @@ const robots=path.join(dir,'robots.txt'),index=path.join(dir,'sitemap-index.xml'
 if(!fs.existsSync(robots))errors.push('Missing robots.txt');
 else{
  const r=fs.readFileSync(robots,'utf8');
- if(/User-agent:\s*\*\s*\nDisallow:\s*\//i.test(r))errors.push('Robots blanket block detected');
+ for(const target of siteUrls){
+   const pathname=new URL(target).pathname;
+   for(const bot of ['Googlebot','Bingbot']){
+    const decision=evaluateRobots(r,bot,pathname);
+    if(!decision.allowed)errors.push(`Robots blocks ${bot} from indexable ${pathname}; applicable group: ${decision.selectedAgents.join(',')} matched: ${JSON.stringify(decision.match)}`);
+   }
+  }
  if(!r.includes('Sitemap: '+new URL('/sitemap-index.xml',origin).href))errors.push('Robots Sitemap path missing/mismatch');
 }
 if(!fs.existsSync(index))errors.push('Missing sitemap-index.xml');

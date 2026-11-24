@@ -1,6 +1,6 @@
 {
   "name": "web-earnings-master",
-  "version": "3.8.0-draft.1",
+  "version": "3.9.0-draft.1",
   "private": true,
   "type": "module",
   "engines": {
@@ -10,7 +10,7 @@
     "lint:skills": "node scripts/validate-skills.mjs",
     "audit:sources": "node scripts/check-sources.mjs",
     "audit:fixture": "node scripts/audit-static-site.mjs --dist tests/fixtures/site --origin https://fixture.example",
-    "test": "node --test tests/*.test.mjs && npm run lint:skills && npm run audit:sources && npm run audit:fixture && npm run audit:evidence && npm run audit:adstxt && npm run audit:intents && npm run audit:robots && npm run audit:discovery && npm run audit:architecture && npm run audit:v6 && npm run audit:production && npm run audit:traffic && npm run audit:opportunity && npm run audit:trends:sample && npm run audit:computer-use && npm run audit:keyword-map",
+    "test": "node --test tests/*.test.mjs && npm run lint:skills && npm run audit:sources && npm run audit:fixture && npm run audit:evidence && npm run audit:adstxt && npm run audit:intents && npm run audit:robots && npm run audit:discovery && npm run audit:architecture && npm run audit:v6 && npm run audit:production && npm run audit:traffic && npm run audit:opportunity && npm run audit:trends:sample && npm run audit:computer-use && npm run audit:keyword-map && npm run audit:seo-example && npm run audit:release-truth",
     "audit:evidence": "node scripts/check-evidence.mjs --file templates/evidence-manifest.example.json",
     "audit:adstxt": "node scripts/audit-ads-txt.mjs --file tests/fixtures/ads.txt --seller google.com",
     "audit:intents": "node scripts/audit-page-intents.mjs --file templates/page-intents.example.json",
@@ -46,7 +46,10 @@
     "audit:opportunity": "node scripts/evaluate-opportunity.mjs",
     "audit:trends:sample": "node scripts/verify-trends-csv.mjs --csv templates/opportunity/google-trends-SYNTHETIC.csv --meta templates/opportunity/google-trends-SYNTHETIC.meta.json",
     "audit:computer-use": "node scripts/check-computer-use-permission.mjs",
-    "audit:keyword-map": "node scripts/audit-keyword-map.mjs --file templates/seo-v11-page-map.example.json"
+    "audit:keyword-map": "node scripts/audit-keyword-map.mjs --file templates/seo-v11-page-map.example.json",
+    "audit:seo-example": "node scripts/audit-static-site.mjs --dist examples/seo-csv-lab/site --origin https://csv-lab.example.org",
+    "audit:release-truth": "node scripts/release-truth-gate.mjs --file templates/release-truth-v12.example.json",
+    "lab:seo-browser": "node --test tests/seo-csv-browser-e2e.mjs"
   },
   "description": "Evidence-first Codex skill engine for SEO/AEO/GEO/ASO, safe utility execution, million-user capacity and publisher-margin planning"
 }
