@@ -195,3 +195,6 @@ New browser-first market research and idea-validation system: documented Google 
 
 ## V10–V19 execution assurance research upgrade
 The library now contains **58 active focused skills**: ten new orchestration, market, competitor, production, search measurement, retention, revenue, learning, independent verification and adversarial benchmarking specializations added to the prior 48. Start with [execution assurance](docs/execution-assurance/README.md) and [master orchestrator](.agents/skills/web-master-orchestrator/SKILL.md). A machine-reviewed execution receipt is necessary for consequential decisions but is **not** proof of genuine developer/human sources, live third-party access, revenue or ranking. The research branch adds negative tests, currently requiring CI review prior to merge.
+
+
+The operational reference is [V10–V19 Field Manual](docs/execution-assurance/FIELD_MANUAL.md), including distinct developer, human and first-party evidence controls; run the bounded agent route with `node scripts/route-execution-skills.mjs VALIDATION` and validate a task receipt with `npm run audit:assurance -- --file path/to/receipt.json`. These tests cannot authenticate external information automatically.
