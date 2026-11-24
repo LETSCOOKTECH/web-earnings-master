@@ -1,3 +1,6 @@
+## V15 current AI Search controls and observational evidence (2026-11-24)
+For AEO/GEO read docs/ai-search/07-2026-11-24-provider-controls-v15.md with the task-relevant V14 chapter. Verify current first-party originals. Separate Search Console Search generative AI controls and Googlebot eligibility from Google-Extended training/non-Search grounding, GoogleOther and future 2027 training. Google reports worldwide GenAI reporting rollout as of August 31, 2026; individual property data still requires owner access. Run npm run audit:ai-controls and V14 checks; preregister surface+locale cohorts and reject omitted prompt attempts. Local checks never certify actual ranking, citations, traffic or revenue.
+
 # Codex operating guide — Web Earnings Master
 
 ## V13 MANDATORY — Verify from current web originals before consequential SEO and website actions (2026-11-24)
