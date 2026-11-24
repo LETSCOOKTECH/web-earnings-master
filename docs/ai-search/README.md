@@ -15,7 +15,7 @@ Primary curated source registry: sources/ai_search_v14_surface_atlas.json with 1
 AEO = accuracy and usability of direct answers; GEO = source quality and observational visibility across AI retrieval systems; bot governance = independent policy controls for search/training/user agents; agent UX = actual end-to-end human-verified task operation. Treat bot fetch, index, retrieval, citation, referral, successful task and earned net revenue as distinct. Never assign an official single AI-rank score.
 
 ## Major 2026 verified update
-Google's dedicated Search Console Generative AI performance reports were announced June 3, 2026 for Search and Discover, initially rolled out to a subset of verified sites. Check owner property availability rather than claiming a universal report. Bing introduced its AI Performance preview Feb 10, more visibility insights June 16 and Topics Portfolio beta October 13, 2026. Keep owner report rollout and reported metric definition separate from source-selection weights.
+Google's dedicated Search Console Generative AI performance reports were announced June 3, 2026 for Search and Discover, initially rolled out to a subset of verified sites; Google's updated post states worldwide rollout to all websites as of August 31, 2026. Actual impressions and property reports still need authenticated access. Bing introduced its AI Performance preview Feb 10, more visibility insights June 16 and Topics Portfolio beta October 13, 2026. Keep owner report rollout and reported metric definition separate from source-selection weights.
 
 Google's guide says established SEO foundations apply to AI Overviews/Mode; indexed plus snippet-eligible content and included property are required for eligibility. Search systems decide whether to show links. It explicitly says llms.txt, artificial tiny chunks, AI-only schema and inauthentic mentions do not improve Google AI Search merely by existing. Some other products may use their own documentation formats; prove those separately.
 
@@ -26,3 +26,7 @@ Run: npm run audit:ai-surfaces, npm run audit:ai-eligibility, npm run audit:ai-o
 
 ## V14 reproducible user-question research
 [Research and evaluation work order](06-evaluation-research-playbook.md) and the SYNTHETIC example question panel/blank observation ledger in templates/ai-search-v14-*.csv preserve denominator, provider/locale/date and source provenance. These are not real AI citation measurements.
+
+## V15 independent controls and adversarial validation
+
+Read [November 24 provider-control/evidence playbook](07-2026-11-24-provider-controls-v15.md): Google owner control, Google-Extended and GoogleOther independence; preview directives; and complete preregistered provider/locale observation panels. Run npm run audit:ai-controls, V14 audits, then real browser/owner evidence. All local results remain non-certifying.
