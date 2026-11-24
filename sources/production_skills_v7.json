@@ -1,7 +1,7 @@
 {
   "schema": "sense-production-skill-gates-v7",
-  "edition": "2026-11-24-v9",
-  "expectSkills": 48,
+  "edition": "2026-11-24-v19-research",
+  "expectSkills": 58,
   "scope": "instruction contracts only; external property validation is separate",
   "statuses": [
     "PENDING",
@@ -393,6 +393,86 @@
       "localGate": "Validate size latency privacy vendor cost and fallback",
       "externalGate": "Test candidate workload on target devices and cloud",
       "blocker": "Framework selected without task or budget evidence"
+    },
+    {
+      "id": "web-master-orchestrator",
+      "category": "Operations",
+      "deliverable": "Bounded routed execution DAG and decision receipt",
+      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
+      "externalGate": "Check authorized original sources and independently repeat real user workflow",
+      "blocker": "No original or independent proof of the consequential outcome"
+    },
+    {
+      "id": "web-market-intelligence-engine",
+      "category": "Research",
+      "deliverable": "Versioned independent market observation dataset",
+      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
+      "externalGate": "Check authorized original sources and independently repeat real user workflow",
+      "blocker": "No original or independent proof of the consequential outcome"
+    },
+    {
+      "id": "web-competitive-gap-lab",
+      "category": "Research",
+      "deliverable": "Same-input competitor output benchmark",
+      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
+      "externalGate": "Check authorized original sources and independently repeat real user workflow",
+      "blocker": "No original or independent proof of the consequential outcome"
+    },
+    {
+      "id": "web-production-factory",
+      "category": "Build",
+      "deliverable": "Working utility vertical slice and release dossier",
+      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
+      "externalGate": "Check authorized original sources and independently repeat real user workflow",
+      "blocker": "No original or independent proof of the consequential outcome"
+    },
+    {
+      "id": "web-search-performance-lab",
+      "category": "Discovery",
+      "deliverable": "Real search and AI discovery experiment evidence",
+      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
+      "externalGate": "Check authorized original sources and independently repeat real user workflow",
+      "blocker": "No original or independent proof of the consequential outcome"
+    },
+    {
+      "id": "web-retention-intelligence",
+      "category": "Growth",
+      "deliverable": "Consent-respecting task completion and cohort diagnostics",
+      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
+      "externalGate": "Check authorized original sources and independently repeat real user workflow",
+      "blocker": "No original or independent proof of the consequential outcome"
+    },
+    {
+      "id": "web-revenue-optimization",
+      "category": "Monetization",
+      "deliverable": "Reconciled net revenue and task costs",
+      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
+      "externalGate": "Check authorized original sources and independently repeat real user workflow",
+      "blocker": "No original or independent proof of the consequential outcome"
+    },
+    {
+      "id": "web-continuous-learning",
+      "category": "Operations",
+      "deliverable": "Versioned experiments and reviewed corrections",
+      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
+      "externalGate": "Check authorized original sources and independently repeat real user workflow",
+      "blocker": "No original or independent proof of the consequential outcome"
+    },
+    {
+      "id": "web-independent-verification",
+      "category": "Research",
+      "deliverable": "Independent original evidence and reproduction dossier",
+      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
+      "externalGate": "Check authorized original sources and independently repeat real user workflow",
+      "blocker": "No original or independent proof of the consequential outcome"
+    },
+    {
+      "id": "web-agent-adversarial-benchmark",
+      "category": "Security",
+      "deliverable": "Agent adversarial failure and regression scorecard",
+      "localGate": "Run execution assurance against representative adversarial fixtures and source lineage",
+      "externalGate": "Check authorized original sources and independently repeat real user workflow",
+      "blocker": "No original or independent proof of the consequential outcome"
     }
   ]
 }
