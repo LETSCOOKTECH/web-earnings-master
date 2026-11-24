@@ -9,6 +9,7 @@ const opt=args(process.argv.slice(2));
 if(!opt.dist||!opt.origin){console.error('Usage: node scripts/audit-static-site.mjs --dist dist --origin https://example.com');process.exit(2);}
 let origin;try{origin=new URL(opt.origin)}catch{console.error('Invalid --origin');process.exit(2)}
 if(origin.protocol!=='https:'||origin.pathname!=='/'||origin.search){console.error('HTTPS origin must have / path and no query');process.exit(2)}
+if(opt.production&&/(?:^|\.)example(?:\.|$)|(?:^|\.)test$|localhost|\.invalid$/i.test(origin.hostname)){console.error('PRODUCTION FAIL: placeholder or test origin cannot certify a deployed site');process.exit(2)}
 const dir=path.resolve(opt.dist);if(!fs.existsSync(dir)){console.error(`Missing dist folder: ${dir}`);process.exit(2)}
 const warnings=[],errors=[];
 const titleMap=new Map(),canonicalMap=new Map(),siteUrls=[];
@@ -21,6 +22,23 @@ for(const f of htmls){
  const relative=path.relative(dir,f).replace(/\\/g,'/');
  let slug=relative==='index.html'?'/':'/'+relative.replace(/\/index\.html$/,'/').replace(/\.html$/,'/');
  const html=fs.readFileSync(f,'utf8');
+ // Test referenced local asset PRESENCE; actual JS execution requires E2E.
+ for(const match of html.matchAll(/<(?:script|link)\b[^>]*>/gi)){
+  const element=match[0];
+  const isScript=/^<script\b/i.test(element);
+  const stylesheet=!isScript&&/\brel=["']stylesheet["']/i.test(element);
+  if(!isScript&&!stylesheet)continue;
+  const attrs=new Map([...element.matchAll(/([a-z-]+)\s*=\s*["']([^"']+)["']/gi)].map(m=>[m[1].toLowerCase(),m[2]]));
+  const asset=attrs.get(isScript?'src':'href');
+  if(!asset)continue;
+  let resolved;
+  try{resolved=new URL(asset,new URL(slug,origin));}catch{errors.push(relative+': malformed script/stylesheet asset '+asset);continue}
+  if(resolved.origin!==origin.origin){warnings.push(relative+': third-party script/style needs source, CSP and privacy review '+resolved.href);continue}
+  const candidate=path.resolve(dir,decodeURIComponent(resolved.pathname).replace(/^\//,''));
+  if(!candidate.startsWith(dir+path.sep)||!fs.existsSync(candidate)||!fs.statSync(candidate).isFile())
+   errors.push(relative+': missing or unsafe local script/stylesheet '+asset);
+ }
+
  const title=clean(html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1]??'');
  const h1=[...html.matchAll(/<h1\b[^>]*>/gi)].length;
  const description=tag(html,'description');

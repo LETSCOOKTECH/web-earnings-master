@@ -31,3 +31,11 @@ A separate six-page CSV deduplicator website was generated in a sandbox using an
 
 ## Production gate
 Run the existing repository CI and the actual project's build/output/browser/integration tests. Require live HTTPS and owner-account evidence before claiming production readiness. This handbook is an execution specification and evidence quality standard, not an automatically enforced law for all projects until the project adopts it.
+## V12 — Actual execution and self-verification upgrade
+- Independent ten-gate local observatory: docs/seo-master/05-independent-observatory-v12.md
+- First-party crawler-group semantics and known RFC subset: docs/seo-master/06-robots-crawler-v12.md
+- Mandatory keyword-to-user-job development flow: docs/seo-master/07-agent-execution-v12.md
+- Functional sample: examples/seo-csv-lab/site/index.html and tests/seo-csv-browser-e2e.mjs
+- Structural self-reported business claims stay unverified: scripts/release-truth-gate.mjs
+- Source body review record: sources/seo_v12_first_party_sources.json
+Do not deploy synthetic example.org canonicals, or claim live user/account outcomes from the local test laboratory.

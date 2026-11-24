@@ -1,0 +1,31 @@
+{
+  "schema": "seo-v12-first-party-source-review",
+  "reviewed_at": "2026-11-24",
+  "notes": "Four original pages opened. Source body review in this chat establishes cited rule only, not platform account or deployed site compliance. Action-time source rereading mandatory.",
+  "records": [
+    {
+      "id": "google-robots",
+      "url": "https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec",
+      "access": "ORIGINAL_BODY_OPENED",
+      "support": "Most specific user-agent and group merging, wildcard fallback, longest path, Sitemap non-boundary"
+    },
+    {
+      "id": "rfc9309",
+      "url": "https://www.rfc-editor.org/rfc/rfc9309.html",
+      "access": "ORIGINAL_BODY_OPENED",
+      "support": "Robots protocol group matching, allow tie, rules, caching, percent encoding"
+    },
+    {
+      "id": "google-spam",
+      "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "access": "ORIGINAL_BODY_OPENED",
+      "support": "Search spam and keyword stuffing constraints"
+    },
+    {
+      "id": "google-starter",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+      "access": "ORIGINAL_BODY_OPENED",
+      "support": "SEO starter practices, no guaranteed ranking formula"
+    }
+  ]
+}

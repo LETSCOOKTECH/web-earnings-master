@@ -36,3 +36,6 @@ Before declaring 'full tool' or page ready, use actual output oracle, malformed 
 
 ## V11 — Real user task beats metadata PASS
 A sandbox site passed static SEO with intentionally broken JS in prior independent review. Verify the actual **shipped executable source** and independently inspect output file bytes, corruption/size/permissions, browser form/download, mobile/a11y and privacy before release. Mutation tests must break the shipped tool and fail its actual oracle; HTML-only passing tests never make it a functioning product. See `docs/seo-master/04-evidence-and-sandbox.md`. A real browser blocked by administrator policy is NOT_RUN/UNKNOWN, not a PASS.
+
+## V12 real shipped tool browser acceptance
+Use examples/seo-csv-lab and tests/seo-csv-browser-e2e.mjs as an independently reproduced example. The real shipped CSV module must pass precise actual file download bytes, malformed input, optional formula guard and unchanged signed scientific numeric text, plus browser-local privacy request checks. Run actual Chromium, Firefox and WebKit in CI; include intentionally broken shipped JS test to prove a plausible SEO page cannot pass functional validation. A 390px emulated viewport is not real iPhone/Android or slow device validation. GSC and AdSense account statuses remain UNKNOWN. Use scripts/release-truth-gate.mjs to reject fabricated business verification.
