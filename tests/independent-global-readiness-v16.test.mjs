@@ -81,3 +81,13 @@ test('HOLDOUT Googlebot-specific X-Robots-Tag must block index when relevant',()
   assert.equal(auditAiEligibility({html:simple,robots:'',xRobotsTag:h}).status,'FAIL',h);
  }
 });
+
+test('HOLDOUT production agent entrypoint enforces V16 local-vs-live evidence boundaries',()=>{
+ const a=read('AGENTS.md');
+ assert.ok(a.indexOf('## V13 MANDATORY')>=0&&a.indexOf('## V13 MANDATORY')<500);
+ assert.match(a,/V16 mandatory independent holdout/);
+ assert.match(a,/audit:independent-readiness/);
+ assert.match(read('docs/ai-search/README.md'),/20.*source|20.*surfaces|20.*V16/i);
+ for(const slug of ['web-aeo-answer-optimization','web-generative-engine-optimization','web-ai-discovery','web-search-analytics','web-crawler-governance'])
+  assert.match(read('.agents/skills/'+slug+'/SKILL.md'),/## V16 independent global-production acceptance/);
+});
