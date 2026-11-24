@@ -116,3 +116,8 @@ test('Capturing without email/account credentials remains read-only and cannot c
  const x=await check({id:'gsc-api-query'});
  assert.equal(x.eligible_for_semantic_claim,false);assert.equal(x.manual_review_required,true);
 });
+test('A discovered AI attribution result is not mislabeled an opened original',()=>{
+ const s=atlas.entries.find(x=>x.id==='google-ai-attribution');
+ assert.equal(s.access_snapshot,'REFERENCE_LEAD_NOT_BODY_VERIFIED');
+ assert.equal(s.content_meaning_verified_for_this_task,false);
+});
