@@ -112,3 +112,6 @@ For substantial multi-skill work, **start at** `web-master-orchestrator` and `do
 
 
 **Executable skill selection (V10):** Before an expensive multi-skill task, run `node scripts/route-execution-skills.mjs DISCOVERY` (or VALIDATION, BUILD, RELEASE, ACQUISITION, MEASUREMENT). Use `--focus=publisher,consent` only when relevant. This returns a bounded *starting* skill route, not an authorized plan or proof of work. Abort unknown skills or context-budget overflow; record manual exclusions/changes in the receipt. Avoid loading all 58 skills. Verify original first-party developer documents and independently reproduced relevant claims before consequential release decisions.
+
+
+**Deep evidence field manual:** Read `docs/execution-assurance/FIELD_MANUAL.md` for provider/developer/human source verification, rival output oracles, traffic/retention economics, agent failure recovery and adversarial evaluation. Use only relevant sections; never demand every section for a small task.
