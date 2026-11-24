@@ -195,7 +195,7 @@
       "source_status": "ORIGINAL_BODY_OPENED",
       "source_reviewed_on": "2026-11-24",
       "official_semantics_not_independently_certified": true,
-      "policy_summary": "Training crawler separate from search",
+      "policy_summary": "ClaudeBot training crawler; Anthropic also began recognizing __usage_ai-training preference October 30, 2026, global rollout ongoing; separate from Google future adoption",
       "owner_external_evidence_needed": "owner content/training preference"
     },
     {
@@ -218,11 +218,11 @@
       "mode": "SEARCH_CRAWLER",
       "agent": "PerplexityBot",
       "source_url": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
-      "source_status": "REFERENCE_LEAD",
+      "source_status": "ORIGINAL_BODY_OPENED",
       "source_reviewed_on": "2026-11-24",
       "official_semantics_not_independently_certified": true,
-      "policy_summary": "Check actual current public bot, IP and product docs before claims",
-      "owner_external_evidence_needed": "owner verified access log and visible source citation"
+      "policy_summary": "PerplexityBot automated search; separate Perplexity-User interactive fetch, generally ignores robots, current published IP ranges and WAF verification required",
+      "owner_external_evidence_needed": "Actual CDN/WAF logs and bot identity, independently observed Perplexity citations and site referrals; not inferred from source access"
     },
     {
       "id": "agent-browser-access",
@@ -249,6 +249,19 @@
       "official_semantics_not_independently_certified": true,
       "policy_summary": "2027 intention, NOT implemented current crawler/search requirement",
       "owner_external_evidence_needed": "official effective documentation after rollout"
+    },
+    {
+      "id": "anthropic-aipref-current",
+      "vendor": "Anthropic",
+      "surface": "Anthropic AI training preference rollout",
+      "mode": "TRAINING_CRAWLER",
+      "agent": "__usage_ai-training",
+      "source_url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "source_status": "ORIGINAL_BODY_OPENED",
+      "source_reviewed_on": "2026-11-24",
+      "official_semantics_not_independently_certified": true,
+      "policy_summary": "Anthropic states recognition began October 30, 2026 with progressive global rollout; not identical to Google early-2027 intention",
+      "owner_external_evidence_needed": "Current Anthropic version, signal syntax, actual rollout applicability and owner policy; no automated guarantee"
     }
   ]
 }
