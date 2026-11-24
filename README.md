@@ -43,7 +43,7 @@ The loop is adaptive. Codex must investigate the current problem and only invoke
 
 ## Skill library
 
-**28 specialized Codex skills**, stored under [`.agents/skills/`](.agents/skills/), cover:
+**58 active specialized Codex skills** (48 existing plus 10 V10–V19 execution and verification skills), stored under [`.agents/skills/`](.agents/skills/), cover:
 
 | Workstream | Skills | What they produce |
 | --- | --- | --- |
@@ -55,9 +55,9 @@ The loop is adaptive. Codex must investigate the current problem and only invoke
 
 ### Core search and browser foundation (v2.2 deep upgrade)
 
-Read [the foundational operating system](docs/foundations/README.md), which contains 18 technical/reference chapters, seven dedicated foundation skills (plus the original 21), a 32-link annotated primary-source registry, a fresh-source check utility and offline contract tests. It covers browser/DNS/HTTP/TLS internals, search crawl/index/rank, crawler controls, Google/Bing/AI answer engines, agent browsers, SEO/AEO/GEO and app-store ASO. **It does not expose proprietary ranking weights or guarantee search/AI placement.**
+Read [the foundational operating system](docs/foundations/README.md), which contains 20 technical/reference chapters, seven foundation specialists, first-party source registries, current-source review procedures and executable HTTP/browser contract tests. It covers browser/DNS/HTTP/TLS internals, search crawl/index/rank, crawler controls, Google/Bing/AI answer engines, agent browsers, SEO/AEO/GEO and app-store ASO. **It does not expose proprietary ranking weights or guarantee search/AI placement.**
 
-Use the relevant focused skill rather than injecting all foundation chapters into one Codex context. Read chapters 11–18 for Chromium/Firefox/WebKit architecture, DNS/HTTP/TLS, inverted indexes/BM25/PageRank/hybrid retrieval, the global engine atlas, AI grounding/citations/agents, 2026–27 future-effective controls, deep SEO/AEO/GEO and adversarial test gates. Use `node scripts/ir-reference-lab.mjs` for a reproducible educational search engine, **not** proprietary Google ranking. A separate 26-target official-source watcher uses daily GitHub Actions polling only after the proposed workflow reaches the default branch; automated hashes are not policy evidence. The agent must inspect current first-party docs before material decisions.
+Use the relevant focused skill rather than injecting all foundation chapters into one Codex context. Read chapters 11–18 for Chromium/Firefox/WebKit architecture, DNS/HTTP/TLS, inverted indexes/BM25/PageRank/hybrid retrieval, the global engine atlas, AI grounding/citations/agents, 2026–27 future-effective controls, deep SEO/AEO/GEO and adversarial test gates. Use `node scripts/ir-reference-lab.mjs` for a reproducible educational search engine, **not** proprietary Google ranking. A separately maintained official-source watcher uses daily GitHub Actions polling only after the proposed workflow reaches the default branch; automated hashes are not policy evidence. The agent must inspect current first-party docs before material decisions.
 
 Run `node scripts/check-foundation-sources.mjs` for registry validation and optionally `node scripts/check-foundation-sources.mjs --live --limit 12` for reachability only; semantic live provider policy recheck is always required.
 
@@ -142,7 +142,7 @@ For each change: cite a current source or test, explain the affected scope, upda
 ## Status and ownership
 
 - **Repository:** `LETSCOOKTECH/web-earnings-master` — intended **private** research and skills workspace.
-- **Baseline:** 28 Codex skills and a dated primary-source registry. These are living references, not a comprehensive proof that every provider requirement has been satisfied.
+- **Current scope:** 58 scoped Codex skills and dated first-party registries; external verification remains task-specific. These are living references, not a comprehensive proof that every provider requirement has been satisfied.
 - **Scope today:** Research, verification and skill improvement. Site development begins separately when requirements and evidence justify it.
 - **License:** [Proprietary — All rights reserved](LICENSE). Authorized internal use only. External references and third-party components retain their own terms.
 

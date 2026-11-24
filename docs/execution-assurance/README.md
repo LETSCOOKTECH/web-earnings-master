@@ -39,3 +39,7 @@ Run `node scripts/route-execution-skills.mjs DISCOVERY`; optional `--focus=searc
 
 
 **Detailed operator playbooks:** [FIELD_MANUAL.md](FIELD_MANUAL.md) defines task-time source triangulation (official provider, versioned developer reproduction, original human reports), same-input competitor verification, real funnel economics and security, cheap falsification, controlled acquisition and agent benchmark tests. It is a reference for the 58 skills, not an auto-executed approval pipeline.
+
+
+## Strict artifact integrity gate
+For locally generated evidence files, prefer `node scripts/check-execution-assurance.mjs --file <receipt.json> --verify-artifacts --artifact-root <approved-root>`. Supply `sha256` beside each evidence/gate `artifact`. This checks real non-empty files, rejects path traversal or symlink escape from the declared root, and verifies bytes against the hash. Without `--verify-artifacts`, the core receipt checker only validates declarations and may accept nonexistent artifact paths: never treat that as proven execution. Even with verified bytes, a captured screenshot or source quotation may be falsified or semantically incorrect; inspect originals manually.

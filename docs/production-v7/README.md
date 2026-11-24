@@ -1,6 +1,6 @@
 # Production skill acceptance — v7
 
-This is the canonical **48-skill evidence gate** for the combined V3–V6 research branches. It covers the existing 28 plus 18 specialized additions. Every skill gets a unique artifact, independently verifiable local check, actual external verification requirement, and explicit hard stop. Do not inflate the repository by writing another copy of the same instructions into every skill.
+This is the canonical **58-skill evidence gate registry**, originally introduced in V7 and extended through V19. The 48-skill V9 baseline was expanded with ten focused V10–V19 specialists. Every skill gets a unique artifact, independently verifiable local check, actual external verification requirement, and explicit hard stop. Do not inflate the repository by writing another copy of the same instructions into every skill.
 
 ## Bounded definitions
 - **DOCUMENTED:** SKILL.md and linked manuals supply a repeatable workflow, inputs, negative checks, observable outputs and source boundaries.
@@ -21,7 +21,7 @@ This is the canonical **48-skill evidence gate** for the combined V3–V6 resear
 ## Exact distinctions
 - Crawl allowed != fetched != indexed != ranked != AI cited != human referred != product completed != paid ad view.
 - '1 million users' is not a concurrency/load test.
-- 152 Node tests and three browser-engine fixture tests on the current branch prove those fixtures, not site-level readiness.
+- Node and browser-engine test counts depend on the commit; inspect current GitHub Actions logs for actual executed totals. Passing fixtures do not prove site-level readiness.
 - 5/17/35 standalone V3/V4/V5 Python tests prove those separate packs only. They do not automatically become part of this branch until their files are intentionally integrated and regression tested.
 - Google Search, Bing Copilot, ChatGPT Search, Gemini, Claude and Perplexity have nonidentical controls; proprietary weights remain unknown.
 - Source freshness reviews and publisher account approvals are per-action/per-property, never permanently certified by this document.
@@ -45,3 +45,7 @@ Traffic Hunter is the 47th skill. The same per-skill evidence contract applies; 
 
 ## V9 appendix
 Opportunity Intelligence adds the 48th per-skill contract. Actual browser access, source rights, legitimate independent user reports and market fit are external; local npm tests cannot certify any commercial outcome.
+
+
+## V10–V19 assurance supplement
+The canonical `sources/production_skills_v7.json` registry now requires exactly 58 active skills. Route complex work through `web-master-orchestrator` and `scripts/route-execution-skills.mjs`; use `scripts/check-execution-assurance.mjs` to enforce task receipts, distinct evidence origins, mandatory acceptance gates and bounded budgets. For local artifact verification use `--verify-artifacts --artifact-root <approved-root>`, which requires existing nonempty files, root confinement and correct SHA-256 digests. This still does not authenticate the original provider, developer or human claims inside an artifact; manual independent review remains mandatory. See `docs/execution-assurance/FIELD_MANUAL.md`.
