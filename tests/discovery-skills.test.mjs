@@ -7,6 +7,7 @@ import {auditAsoListing} from '../scripts/audit-aso-listing.mjs';
 import {auditAnswerPage} from '../scripts/audit-answer-page.mjs';
 import {evaluateAiCitations} from '../scripts/evaluate-ai-citations.mjs';
 const root=path.resolve(import.meta.dirname,'..');
+const activeSkills=JSON.parse(fs.readFileSync(path.join(root,'sources/production_skills_v7.json'),'utf8')).expectSkills;
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const play=read('templates/discovery/google-play.example.json');
 const apple=read('templates/discovery/apple-app-store.example.json');
@@ -24,7 +25,7 @@ test('4 new specialized Codex skills have meaningful instructions and official s
 });
 test('28 existing plus four new skill manifests and 4 deep discovery manuals exist',()=>{
  const names=fs.readdirSync(path.join(root,'.agents/skills'),{withFileTypes:true}).filter(e=>e.isDirectory());
- assert.equal(names.length,48);
+ assert.equal(names.length,activeSkills);
  for(const f of ['01-answer-engine-optimization.md','02-generative-engine-optimization.md','03-google-play-aso.md','04-apple-app-store-aso.md','05-geo-provider-surface-atlas.md']){
   const s=fs.readFileSync(path.join(root,'docs/discovery',f),'utf8');
   assert.ok(s.length>5500);
