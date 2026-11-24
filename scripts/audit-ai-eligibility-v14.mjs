@@ -36,7 +36,8 @@ export function auditAiEligibility({html,robots,path:route='/',modes=Object.keys
  const nosnippet=metas.some(x=>/(?:^|[,\s])nosnippet(?:$|[,\s])/.test(x));
  if(noindex)warnings.push('Initial HTML/header noindex: Google Search indexed supporting-link eligibility unavailable');
  if(nosnippet)warnings.push('Initial HTML/header nosnippet: Google AI supporting-link eligibility unavailable');
- if(metas.some(x=>/max-snippet\s*:\s*0(?:[,\s]|$)/.test(x)))warnings.push('max-snippet:0 may restrict displayed Search snippets; verify current official behavior');
+ const maxSnippetZero=metas.some(x=>/max-snippet\s*:\s*0(?:[,\s]|$)/.test(x));
+ if(maxSnippetZero)warnings.push('max-snippet:0 restricts Google Search snippets and direct grounding input; inspect live behavior');
  const results={};
  for(const m of Array.isArray(modes)?modes:[]){
   const mode=SEARCH_MODES[m];if(!mode)continue;
@@ -46,6 +47,7 @@ export function auditAiEligibility({html,robots,path:route='/',modes=Object.keys
   if(m==='google_ai'){
    if(noindex)blockers.push('Google Search page noindex');
    if(nosnippet)blockers.push('Google AI supporting-link snippet excluded');
+   if(maxSnippetZero)blockers.push('Google AI supporting-link snippet max-snippet:0 excluded');
    if(googleControl==='EXCLUDED_SELF_DECLARED')blockers.push('Owner declares generative AI property excluded; independently review setting');
    if(googleControl!=='INCLUDED_SELF_DECLARED')unknown.push('Google AI Search Console property inclusion not independently observed');
    else unknown.push('Google property inclusion only self-declared, not owner-account authenticated');
