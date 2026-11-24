@@ -112,3 +112,6 @@ test('atlas CLI distinctly reports metadata only',()=>{
 });
 
 test('future original-source review date must fail',()=>{const x=fixture();x.sources[0].reviewed_at_utc='2099-01-01T00:00:00Z';fail(x);});
+
+test('ADVERSARIAL null official source record is controlled FAIL',()=>{const x=fixture();x.sources[0]=null;fail(x);});
+test('ADVERSARIAL null product record is controlled FAIL',()=>{const x=fixture();x.providers[0]=null;fail(x);});

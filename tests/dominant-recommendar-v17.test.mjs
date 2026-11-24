@@ -90,3 +90,8 @@ test('CLI returns structural-only and not a ranking certificate',()=>{
  assert.equal(p.status,0,p.stderr);assert.match(p.stdout,/STRUCTURAL_ONLY_EXTERNAL_UNVERIFIED/);
  assert.match(p.stdout,/"global_rank_one_verified": false/);
 });
+
+test('ADVERSARIAL null competitor must produce controlled FAIL not TypeError',()=>{const x=fixture();x.target.competitors[0]=null;assert.equal(check(x).status,'FAIL');});
+test('ADVERSARIAL null observation must produce controlled FAIL not TypeError',()=>{const x=fixture();x.observations[0]=null;assert.equal(check(x).status,'FAIL');});
+test('ADVERSARIAL null cohort must produce controlled FAIL not TypeError',()=>{const x=fixture();x.study.expected_groups[0]=null;assert.equal(check(x).status,'FAIL');});
+test('ADVERSARIAL null question must produce controlled FAIL not TypeError',()=>{const x=fixture();x.questions[0]=null;assert.equal(check(x).status,'FAIL');});
