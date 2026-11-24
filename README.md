@@ -191,3 +191,6 @@ Eight specialized skills join the 38 previously built (46 total). Deep manuals: 
 
 ## V9 Opportunity Intelligence — 48th Codex skill
 New browser-first market research and idea-validation system: documented Google Trends GUI and official alpha access distinction, Semrush/Ahrefs licensed keyword data, Google Ads Keyword Planner, owned GSC/Bing, legal public community review, source independence, first-person pain verification limits, reproducible competitor output, product feasibility and cost. A staged **zero-paid-credits-by-default** research budget prevents expensive agent loops; code validates evidence types, normalized Trends exports and decision gates. Read [skill](.agents/skills/web-opportunity-intelligence/SKILL.md), [full guide](docs/opportunity/README.md) and [acceptance](docs/opportunity/ACCEPTANCE.md). The package has no real credentials or automatic third-party scraping; it cannot invent keyword volumes or certifiably approve a market.
+
+## V10 — Fail-closed Computer Use permission check
+Added `scripts/check-computer-use-permission.mjs`, a conservative action-specific gate for actual advertised tool capability, original provider permissions, user/account scope, destination and credits. Its example is deliberately HOLD; it neither launches a browser nor claims live vendor approval. See `docs/opportunity/08-computer-use-permission.md`.

@@ -28,3 +28,6 @@ LIVE_BROWSER_VERIFIED requires exact successful interactive action, UTC, provide
 
 ## Minimum output
 Top 1–3 opportunities, independent supporting/contradicting evidence, major unknowns, workable product/technical margin, viable channel, the smallest next falsification and resources spent. No recursive expansion into unrelated niches.
+
+## V10 Computer Use permission gate
+Check `docs/opportunity/08-computer-use-permission.md` and `scripts/check-computer-use-permission.mjs` per browser/API action. Default HOLD unless a real supported runtime tool, exact provider terms, authorized account scope, allowed origin and budgets are established. Record actual execution results separately from preflight. Never attempt CAPTCHA or rate-limit evasion.
