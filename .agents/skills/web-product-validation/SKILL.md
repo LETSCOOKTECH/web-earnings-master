@@ -39,3 +39,6 @@ A sandbox site passed static SEO with intentionally broken JS in prior independe
 
 ## V12 real shipped tool browser acceptance
 Use examples/seo-csv-lab and tests/seo-csv-browser-e2e.mjs as an independently reproduced example. The real shipped CSV module must pass precise actual file download bytes, malformed input, optional formula guard and unchanged signed scientific numeric text, plus browser-local privacy request checks. Run actual Chromium, Firefox and WebKit in CI; include intentionally broken shipped JS test to prove a plausible SEO page cannot pass functional validation. A 390px emulated viewport is not real iPhone/Android or slow device validation. GSC and AdSense account statuses remain UNKNOWN. Use scripts/release-truth-gate.mjs to reject fabricated business verification.
+
+## V13 — Web-verified professional production protocol
+V13 docs/seo-master/11-end-to-end-web-development-v13.md. Test shipped tool not mock, real file output decoded/reopened, malformed/oversized input, safety/privacy, browser Chromium/Firefox/WebKit and real device where required, negative broken-script test, accessibility. Current external docs should be reopened before policy claims. Static SEO PASS is not executable UI correctness.

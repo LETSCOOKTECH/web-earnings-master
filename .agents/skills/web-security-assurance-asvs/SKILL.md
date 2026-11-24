@@ -46,3 +46,6 @@ description: "Apply OWASP ASVS 5.0 and Top 10:2025 to frontend, backend, API, up
 ## Official primary-source starting points (re-open before action)
 - https://asvs.owasp.org/
 - https://top10.owasp.org/2025/0x00_2025-Introduction/
+
+## V13 — Web-verified professional production protocol
+V13 docs/seo-master/11-end-to-end-web-development-v13.md and 08-live-source-verification-v13.md. Reopen applicable OWASP ASVS, API/file upload and browser standards, map control to actual deployed code and adversarial fixtures. Protect secrets/privacy, URL imports SSRF, hosted auth and untrusted files; do not substitute manifest PASS for penetration test or correct account authorization.

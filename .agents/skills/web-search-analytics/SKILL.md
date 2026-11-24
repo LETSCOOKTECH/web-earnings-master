@@ -31,3 +31,6 @@ description: "Diagnose first-party Google Search Console, Google Trends, Semrush
 
 ## Baidu AI traffic analysis source confirmation (2026-11-23)
 Baidu's primary public platform at https://ziyuan.baidu.com/doc and AI traffic entry at https://ziyuan.baidu.com/aiflow/index were successfully opened: the interface displays `AI流量分析` and requires a site addition/verification to access full data. Do not claim these AI analytics are Google GenAI GSC counts, Bing citations, ChatGPT referrals or human visits; dashboard definitions remain UNKNOWN without owner account and current help. See claim BAIDU-AI-FLOW-PORTAL in sources/verified_claims.json and reopen the current Chinese-language original at use time.
+
+## V13 — Web-verified professional production protocol
+V13 docs/seo-master/13-ai-search-analytics-experiments-v13.md. GSC owned query/page/date/country/device is first-party but privacy/anonymization and API row limits remain; do not turn one row aggregate into market volume or claim universal independent AI-only Search report. Connect owner property only with approval; separate index state, impression, click, successful user task and AdSense net revenue. Verify current API originals and effective dates.

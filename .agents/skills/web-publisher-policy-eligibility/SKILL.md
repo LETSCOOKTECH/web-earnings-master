@@ -48,3 +48,6 @@ description: "Evaluate AdSense site approval, Google Publisher Policies and rest
 
 ## V11 — AdSense is NOT an SEO keyword policy
 Mandatory `docs/seo-master/03-policy-separation.md`: Google Search governs keyword stuffing/scaled spam; Google Ads Keyword Planner produces advertiser-side estimated volume/competition/CPC; AdSense independently governs original publisher content, page/site eligibility, low/no content, misleading download ad placements, invalid traffic, copyright and consent. There is **no Google AdSense keyword density rule, fixed word-count/article threshold or guaranteed approval from high CPC**. Never enable fake publisher tags or ads on broken/under-construction/ad-only screens; require real owner-site approval and safe ad geometry. Google Help source access may be throttled; reopen original provider policy and account before release.
+
+## V13 — Web-verified professional production protocol
+V13 docs/seo-master/12-adsense-publisher-policy-v13.md required. Independently inspect every ad-enabled page's genuine content, live tool, rights, consent, ad geometry, invalid traffic and current Google originals. Google Help 429 means UNKNOWN, not policy certified. Verify site approval only from authorized owner account. AdSense does not prescribe an SEO keyword-density percentage or guarantee ranking.
