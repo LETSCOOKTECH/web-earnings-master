@@ -10,6 +10,12 @@
     "prompt_ids": [
       "csv-removal",
       "csv-privacy"
+    ],
+    "expected_groups": [
+      {
+        "surface": "openai-chatgpt-search",
+        "locale": "en-US"
+      }
     ]
   },
   "observations": [
