@@ -11,7 +11,7 @@ test('V12 agent routing mandates independent local browser and release evidence'
 test('V12 crawler instructions cite original RFC and official Google interpretation',()=>{
  const s=read('docs/seo-master/06-robots-crawler-v12.md');
  assert.match(s,/rfc9309/);assert.match(s,/developers\.google\.com\/crawling/);
- assert.match(read('.agents/skills/web-technical-seo/SKILL.md'),/Googlebot\/Bingbot/);
+ assert.match(read('.agents/skills/web-technical-seo/SKILL.md'),/Googlebot/);assert.match(read('.agents/skills/web-technical-seo/SKILL.md'),/Bingbot/);
 });
 test('V12 first-party ledger has opened-body status, not site/owner proof',()=>{
  const data=JSON.parse(read('sources/seo_v12_first_party_sources.json'));
