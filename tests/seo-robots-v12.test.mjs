@@ -40,7 +40,7 @@ test('Wildcard disallow overridden by specific Googlebot Allow is permitted for 
  assert.equal(evaluateRobots(r,'Bingbot','/tool').allowed,false);
 });
 test('Rule specificity: allow exception allows intended nested page',()=>{
- const r='User-agent: *\nDisallow: /tools/\nAllow: /tools/csv-deduper/\n'+sitemap;
+ const r='User-agent: *\nDisallow: /tools/\nAllow: /tools/csv-deduper/\nSitemap: https://owned-site.org/sitemap-index.xml\n';
  const c=check(r,'--path','/tools/csv-deduper/');
  assert.equal(c.status,0,c.stdout+c.stderr);
  assert.equal(evaluateRobots(r,'Googlebot','/tools/csv-deduper/').allowed,true);
