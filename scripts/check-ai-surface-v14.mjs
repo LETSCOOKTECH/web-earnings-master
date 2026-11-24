@@ -9,7 +9,7 @@ const STATES=new Set(['ORIGINAL_BODY_OPENED','SEARCH_RESULT_ONLY','REFERENCE_LEA
 const IDS=new Set(['google-ai-overviews','google-ai-mode','google-generative-control','google-gsc-ai-report','google-multimodal-report',
 'openai-chatgpt-search','openai-chatgpt-user','openai-gptbot','bing-ai-performance','bing-ai-intents','bing-ai-topics',
 'claude-search','claude-user','claude-training','claude-cloud-browser','perplexity-search','agent-browser-access','google-training-2027']);
-const DOCS=['README.md','01-provider-crawlers-controls.md','02-answer-quality.md','03-geo-measurement.md','04-agent-task-reliability.md','05-agent-execution.md'];
+const DOCS=['README.md','01-provider-crawlers-controls.md','02-answer-quality.md','03-geo-measurement.md','04-agent-task-reliability.md','05-agent-execution.md','06-evaluation-research-playbook.md'];
 export function checkAiSurfaceAtlas(atlas,{hasFile=()=>true}={}){
  const errors=[],surfaces=atlas?.surfaces;
  if(atlas?.schema!=='sense-ai-search-v14-surface-atlas'||!Array.isArray(surfaces)||surfaces.length<19)

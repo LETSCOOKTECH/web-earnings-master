@@ -23,3 +23,6 @@ Google's guide says established SEO foundations apply to AI Overviews/Mode; inde
 Local source, HTML and robots tests are useful but NOT a live provider proof. Test actual hosted status/WAF/crawler origin, owner GSC and Bing reports, actual model responses in allowed interfaces, true human referrals and independent user task results. Never substitute a local JSON PASS or self-made prompt score.
 
 Run: npm run audit:ai-surfaces, npm run audit:ai-eligibility, npm run audit:ai-observations, npm test and actual relevant browser/owner property checks. Each offline audit must say what it cannot verify.
+
+## V14 reproducible user-question research
+[Research and evaluation work order](06-evaluation-research-playbook.md) and the SYNTHETIC example question panel/blank observation ledger in templates/ai-search-v14-*.csv preserve denominator, provider/locale/date and source provenance. These are not real AI citation measurements.

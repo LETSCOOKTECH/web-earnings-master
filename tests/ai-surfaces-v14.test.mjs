@@ -61,3 +61,10 @@ test('Professional AEO and GEO docs must exist',()=>{
  for(const p of ['README.md','01-provider-crawlers-controls.md','02-answer-quality.md','03-geo-measurement.md','04-agent-task-reliability.md','05-agent-execution.md'])
   assert.ok(fs.readFileSync(path.join(root,'docs/ai-search',p),'utf8').length>1500,p);
 });
+
+test('V14 evaluation research requires preregistered panel, scope and distinct metrics',()=>{
+ const s=fs.readFileSync(path.join(root,'docs/ai-search/06-evaluation-research-playbook.md'),'utf8');
+ assert.match(s,/Attempted prompts/);assert.match(s,/HUMAN_REFERRAL/);assert.match(s,/NET_AD_REVENUE/);
+ const h=fs.readFileSync(path.join(root,'templates/ai-search-v14-observation-ledger.csv'),'utf8');
+ assert.match(h,/visible_owned_citation/);assert.match(h,/unavailable_reason/);
+});

@@ -64,3 +64,6 @@ V13 docs/seo-master/13-ai-search-analytics-experiments-v13.md and 08-live-source
 
 ## V14 — Provider-specific GEO measurement and evidence firewall
 Use docs/ai-search/03-geo-measurement.md, 01-provider-crawlers-controls.md and 05-agent-execution.md. Google Search AI Mode and Overviews have indexed+snippet eligibility+property control; ChatGPT OAI-SearchBot not GPTBot; Claude-SearchBot not ClaudeBot; Bing AI Performance owner reporting is distinct. Google June 3 2026 dedicated GenAI report exists but rollout began with a subset of sites; owner must verify feature. Run npm run audit:ai-observations on a fixed legitimate user-question panel; never drop unavailable prompts or count brand mentions/background retrieval as visible citations. Score is sampled observational, NOT global AI citation share, human referrals or money.
+
+### V14 preregistered research work order
+Before claims of AI citations, fill docs/ai-search/06-evaluation-research-playbook.md and templates/ai-search-v14-question-panel.SYNTHETIC.csv schema with TRUE observed human questions (replace synthetic examples), preserve unavailable attempts and verify owned referrals separately. No forged provider response artifacts or claimed total AI market share from prompt samples.
