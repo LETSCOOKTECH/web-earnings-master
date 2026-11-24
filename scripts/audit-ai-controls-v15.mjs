@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
 import {evaluateRobots} from './robots-evaluator.mjs';
+import {extractGoogleRobotHeaderDirectives} from './google-robots-directives.mjs';
 
 const OWNER=new Set(['UNKNOWN','INCLUDED_SELF_DECLARED','EXCLUDED_SELF_DECLARED']);
 const INTENT=new Set(['INCLUDE_SEARCH_AI','EXCLUDE_SEARCH_AI','AUDIT_ONLY']);
@@ -18,7 +19,7 @@ function robotDirectives(html,header){
   const metas=[...html.matchAll(/<meta\b[^>]*>/gi)]
     .map(m=>m[0]).filter(tag=>['robots','googlebot'].includes(attr(tag,'name').toLowerCase()))
     .map(tag=>attr(tag,'content'));
-  return metas.concat(String(header||'')).join(' , ').toLowerCase();
+  return metas.concat(extractGoogleRobotHeaderDirectives(header)).join(' , ').toLowerCase();
 }
 const token=(s,t)=>new RegExp('(?:^|[,;\\s])'+t+'(?:$|[,;\\s])','i').test(s);
 export function auditGoogleAiControlsV15({html,robots,route='/',xRobotsTag='',ownerSetting='UNKNOWN',intent='INCLUDE_SEARCH_AI'}={}){
