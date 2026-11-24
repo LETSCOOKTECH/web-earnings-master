@@ -1,0 +1,255 @@
+{
+  "schema": "sense-dominant-recommendar-v17",
+  "notice": "SYNTHETIC ONLY. Never claim these are real AI answers or citations. All products are invented examples.",
+  "target": {
+    "entity_id": "nova",
+    "brand": "NovaTools",
+    "hosts": [
+      "novatools.dev"
+    ],
+    "competitors": [
+      {
+        "entity_id": "atlas",
+        "brand": "AtlasSuite"
+      },
+      {
+        "entity_id": "delta",
+        "brand": "DeltaTools"
+      }
+    ]
+  },
+  "study": {
+    "preregistered_at": "2026-11-24T10:00:00Z",
+    "panel_method": "HUMAN_TASK_SAMPLED",
+    "expected_groups": [
+      {
+        "surface": "google-ai-mode",
+        "locale": "en-US",
+        "product_version": "synthetic"
+      },
+      {
+        "surface": "openai-chatgpt-search",
+        "locale": "en-US",
+        "product_version": "synthetic"
+      }
+    ],
+    "repeat_ids": [
+      "r1",
+      "r2"
+    ]
+  },
+  "questions": [
+    {
+      "id": "q-jsonl",
+      "text": "What tool should I use to clean a JSONL file safely?",
+      "intent": "BEST_FOR",
+      "branded": false,
+      "locale": "en-US",
+      "geo": "US",
+      "segment": "solo developers"
+    },
+    {
+      "id": "q-private",
+      "text": "Which private and offline data cleaning utility is useful for a small team?",
+      "intent": "COMPARISON",
+      "branded": false,
+      "locale": "en-US",
+      "geo": "US",
+      "segment": "small teams"
+    }
+  ],
+  "observations": [
+    {
+      "surface": "google-ai-mode",
+      "locale": "en-US",
+      "question_id": "q-jsonl",
+      "repeat_id": "r1",
+      "status": "OBSERVED",
+      "observed_at": "2026-11-24T12:00:00Z",
+      "capture": {
+        "method": "HUMAN_UI_CAPTURE",
+        "artifact": "SYNTHETIC-FIXTURE-NO-REAL-IMAGE",
+        "reviewer": "Fixture operator",
+        "product_version": "illustration-only"
+      },
+      "answer": {
+        "raw_excerpt": "NovaTools is recommended for quick browser-local JSONL checks. AtlasSuite is a strong alternative for advanced teams.",
+        "explicit_ranked": true,
+        "recommendations": [
+          {
+            "entity_id": "nova",
+            "sentiment": "POSITIVE",
+            "rank": 1,
+            "evidence_quote": "NovaTools is recommended for quick browser-local JSONL checks."
+          },
+          {
+            "entity_id": "atlas",
+            "sentiment": "POSITIVE",
+            "rank": 2,
+            "evidence_quote": "AtlasSuite is a strong alternative for advanced teams."
+          }
+        ],
+        "mentions": [
+          "nova",
+          "atlas"
+        ],
+        "visible_citations": [
+          "https://novatools.dev/docs/jsonl"
+        ]
+      }
+    },
+    {
+      "surface": "google-ai-mode",
+      "locale": "en-US",
+      "question_id": "q-jsonl",
+      "repeat_id": "r2",
+      "status": "OBSERVED",
+      "observed_at": "2026-11-24T12:00:00Z",
+      "capture": {
+        "method": "HUMAN_UI_CAPTURE",
+        "artifact": "SYNTHETIC-FIXTURE-NO-REAL-IMAGE",
+        "reviewer": "Fixture operator",
+        "product_version": "illustration-only"
+      },
+      "answer": {
+        "raw_excerpt": "Neither NovaTools nor AtlasSuite is a clear fit for this particular workflow.",
+        "explicit_ranked": false,
+        "recommendations": [],
+        "mentions": [
+          "nova",
+          "atlas"
+        ],
+        "visible_citations": []
+      }
+    },
+    {
+      "surface": "google-ai-mode",
+      "locale": "en-US",
+      "question_id": "q-private",
+      "repeat_id": "r1",
+      "status": "OBSERVED",
+      "observed_at": "2026-11-24T12:00:00Z",
+      "capture": {
+        "method": "HUMAN_UI_CAPTURE",
+        "artifact": "SYNTHETIC-FIXTURE-NO-REAL-IMAGE",
+        "reviewer": "Fixture operator",
+        "product_version": "illustration-only"
+      },
+      "answer": {
+        "raw_excerpt": "Neither NovaTools nor AtlasSuite is a clear fit for this particular workflow.",
+        "explicit_ranked": false,
+        "recommendations": [],
+        "mentions": [
+          "nova",
+          "atlas"
+        ],
+        "visible_citations": []
+      }
+    },
+    {
+      "surface": "google-ai-mode",
+      "locale": "en-US",
+      "question_id": "q-private",
+      "repeat_id": "r2",
+      "status": "UNAVAILABLE",
+      "observed_at": "2026-11-24T12:00:00Z",
+      "unavailable_reason": "Synthetic provider quota exhausted during illustrative repeat"
+    },
+    {
+      "surface": "openai-chatgpt-search",
+      "locale": "en-US",
+      "question_id": "q-jsonl",
+      "repeat_id": "r1",
+      "status": "OBSERVED",
+      "observed_at": "2026-11-24T12:00:00Z",
+      "capture": {
+        "method": "HUMAN_UI_CAPTURE",
+        "artifact": "SYNTHETIC-FIXTURE-NO-REAL-IMAGE",
+        "reviewer": "Fixture operator",
+        "product_version": "illustration-only"
+      },
+      "answer": {
+        "raw_excerpt": "NovaTools is recommended for quick browser-local JSONL checks. AtlasSuite is a strong alternative for advanced teams.",
+        "explicit_ranked": true,
+        "recommendations": [
+          {
+            "entity_id": "nova",
+            "sentiment": "POSITIVE",
+            "rank": 1,
+            "evidence_quote": "NovaTools is recommended for quick browser-local JSONL checks."
+          },
+          {
+            "entity_id": "atlas",
+            "sentiment": "POSITIVE",
+            "rank": 2,
+            "evidence_quote": "AtlasSuite is a strong alternative for advanced teams."
+          }
+        ],
+        "mentions": [
+          "nova",
+          "atlas"
+        ],
+        "visible_citations": [
+          "https://novatools.dev/docs/jsonl"
+        ]
+      }
+    },
+    {
+      "surface": "openai-chatgpt-search",
+      "locale": "en-US",
+      "question_id": "q-jsonl",
+      "repeat_id": "r2",
+      "status": "OBSERVED",
+      "observed_at": "2026-11-24T12:00:00Z",
+      "capture": {
+        "method": "HUMAN_UI_CAPTURE",
+        "artifact": "SYNTHETIC-FIXTURE-NO-REAL-IMAGE",
+        "reviewer": "Fixture operator",
+        "product_version": "illustration-only"
+      },
+      "answer": {
+        "raw_excerpt": "Neither NovaTools nor AtlasSuite is a clear fit for this particular workflow.",
+        "explicit_ranked": false,
+        "recommendations": [],
+        "mentions": [
+          "nova",
+          "atlas"
+        ],
+        "visible_citations": []
+      }
+    },
+    {
+      "surface": "openai-chatgpt-search",
+      "locale": "en-US",
+      "question_id": "q-private",
+      "repeat_id": "r1",
+      "status": "OBSERVED",
+      "observed_at": "2026-11-24T12:00:00Z",
+      "capture": {
+        "method": "HUMAN_UI_CAPTURE",
+        "artifact": "SYNTHETIC-FIXTURE-NO-REAL-IMAGE",
+        "reviewer": "Fixture operator",
+        "product_version": "illustration-only"
+      },
+      "answer": {
+        "raw_excerpt": "Neither NovaTools nor AtlasSuite is a clear fit for this particular workflow.",
+        "explicit_ranked": false,
+        "recommendations": [],
+        "mentions": [
+          "nova",
+          "atlas"
+        ],
+        "visible_citations": []
+      }
+    },
+    {
+      "surface": "openai-chatgpt-search",
+      "locale": "en-US",
+      "question_id": "q-private",
+      "repeat_id": "r2",
+      "status": "UNAVAILABLE",
+      "observed_at": "2026-11-24T12:00:00Z",
+      "unavailable_reason": "Synthetic provider quota exhausted during illustrative repeat"
+    }
+  ]
+}
