@@ -32,7 +32,7 @@ export function auditAiEligibility({html,robots,path:route='/',modes=Object.keys
  if(!main||text(main[1]).length<80)errors.push('Missing useful human-readable main content in initial HTML');
  if(!/<h1\b[^>]*>[\s\S]+?<\/h1>/i.test(html))errors.push('Missing visible primary page heading');
  const metas=[...findMeta(html,'robots'),...findMeta(html,'googlebot'),String(xRobotsTag).toLowerCase()];
- const noindex=metas.some(x=>/(?:^|[,\s])noindex(?:$|[,\s])/.test(x));
+ const noindex=metas.some(x=>/(?:^|[,\s])(?:noindex|none)(?:$|[,\s])/.test(x));
  const nosnippet=metas.some(x=>/(?:^|[,\s])nosnippet(?:$|[,\s])/.test(x));
  if(noindex)warnings.push('Initial HTML/header noindex: Google Search indexed supporting-link eligibility unavailable');
  if(nosnippet)warnings.push('Initial HTML/header nosnippet: Google AI supporting-link eligibility unavailable');
