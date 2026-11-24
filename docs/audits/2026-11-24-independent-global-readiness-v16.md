@@ -20,7 +20,7 @@ GitHub Actions PR CI uses clean runner checkouts. Local development on the autho
 6. The Anthropic 2026 training-preference rollout vs future Google training support was not clearly documented.
 7. The README still introduced 28 skills although the active inventory had 48.
 
-These are real validation failures. Follow-up repairs and expanded **11 holdout tests** cover both Google-specific and otherbot-only header controls. CI on the repaired branch was observed passing **533/533 Node tests** before writing this report. The browser workflow is independently re-triggered on this PR by modifying `package.json`; consult its exact HEAD check before merging.
+These are real validation failures. Follow-up repairs and expanded **11 holdout tests** cover both Google-specific and otherbot-only header controls. CI on the repaired branch was observed passing **533/533 Node tests** before writing this report. An independent browser workflow was re-triggered for this PR by modifying `package.json`; the recorded run completed **6/6 browser tests** in Chromium, Firefox and WebKit with actual CSV output-byte assertions. Recheck exact-head status after any subsequent changes.
 
 ### Remediation performed on the audit branch
 
@@ -36,7 +36,7 @@ These are real validation failures. Follow-up repairs and expanded **11 holdout 
 | Capability | Evidence available | Decision |
 | --- | --- | --- |
 | Codex skills routing & structure | 48 active SKILL.md files, AGENTS.md, registries, CI | **LOCAL PASS** |
-| Current-source research discipline | Dated first-party source ledgers, some current originals reopened; provider-specific and account-dependent controls | **PARTIAL** (not every source or rollout authenticated) |
+| Current-source research discipline | Focused atlas: 20 provider/control surfaces, 14 marked opened-original and 6 search-result-only. Broader atlas: 21 surfaces, 8 explicitly unknown provider sources. | **PARTIAL** (original-status is metadata, not runtime validation) |
 | Google technical SEO and crawler controls | V12/V15/V16 adversarial tests; bounded RFC9309 parser and header checks | **LOCAL PASS**, live indexing UNKNOWN |
 | AEO factuality and answer utility | Checklists, tests for selected answer fixtures; no representative sample of real domain expert review | **PARTIAL** |
 | GEO AI citation evidence | Fixed-panel schema and denominator guards; synthetic sample only | **DATA CONTRACT PASS**, external citations UNKNOWN |
