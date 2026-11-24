@@ -1,5 +1,9 @@
 # Practical runbook — from blank domain to measured business
 
+## V13 source-first agent operator
+Website/SEO work: docs/seo-master/14-agent-orchestration-v13.md is first entry; select only topic-specific V13 professional modules. Original documents must be opened from sources/seo_v13_primary_atlas.json at action time and interpreted with effective date and actual country/account scope, not assumed from snippets. Use local research provenance and coverage checks, real shipped-tool tests and owner-account gates. Source HTML fingerprints are not current semantic policy verification. Follow provider permissions and no-paid-credit defaults.
+
+
 This is the orchestration playbook. Skills are modular; execute the next highest-risk gate first and revisit earlier steps when evidence changes.
 
 **Foundation prerequisite:** For underlying mechanics of browser/HTTP/DNS/TLS, ranking systems, multi-engine AI retrieval, crawler verification, GEO/AEO/SEO and mobile ASO, open [docs/foundations/README.md](foundations/README.md) and the specific dedicated skill. Before implementing fresh behavior inspect official documentation and record checked-at. The new foundation research is not a substitute for owned-site Search Console data or real index/citation outcomes.

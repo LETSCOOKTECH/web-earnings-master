@@ -52,3 +52,6 @@ Use `docs/seo-master/README.md` as orchestration and `docs/seo-master/02-technic
 
 ## V12 production-truth gate
 Follow docs/seo-master/05-independent-observatory-v12.md then docs/seo-master/07-agent-execution-v12.md. Reject a release if tool output is untested, live-site HTTP route manifest is fake, crawler-specific robots blocks an indexable page, required JS asset is missing or actual browser output differs. Use scripts/release-truth-gate.mjs for a scoped manifest review but treat local artifact hashes as byte integrity not proof of source/owner authenticity. Full production requires owner-reviewed HTTPS deploy, runtime security, real mobile and Search Console/publisher evidence when relevant. Ten local test points do not grant ten SEO rank points.
+
+## V13 — Web-verified professional production protocol
+V13 docs/seo-master/11-end-to-end-web-development-v13.md and 14-agent-orchestration-v13.md are mandatory on significant builds: actual user job, tool output oracle, minimal browser/API architecture, frontend semantic HTML, backend auth/validation as needed, threat model, mobile and three-browser real output, SEO, deployment/rollback, field telemetry, publisher safeguards. Use 29-domain atlas for failure coverage, official originals for changing vendor requirements, and never upgrade local checks into live Search or revenue.

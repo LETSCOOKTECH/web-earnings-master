@@ -31,3 +31,6 @@ description: "Check Google AdSense eligibility, account and site review, origina
 
 ## V6 production and research handoff (2026-11-23)
 Check site/account admission separately from page-by-page content and ad placement. Invoke web-publisher-policy-eligibility; no fixed word or article count gives approval. Confirm true tool output, site navigation and Publisher Policy for low/no publisher content. Ref docs/v6/03-page-quality-seo-publisher-gates.md.
+
+## V13 — Web-verified professional production protocol
+V13 docs/seo-master/12-adsense-publisher-policy-v13.md controls site/account review. Explicit original-body verification of Google Publisher/AdSense rules at action time: this research encountered support.google.com 429, so no invented current final policy compliance. Separate Search keyword stuffing, advertiser CPC/competition, publisher value, ad geometry, region consent, invalid traffic, real owner account approval. No fake article/keyword thresholds or AdSense earnings prediction.

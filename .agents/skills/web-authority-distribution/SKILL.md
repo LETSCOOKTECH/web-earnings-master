@@ -27,3 +27,6 @@ description: "Earn legitimate human traffic, editorial backlinks, creator referr
 **Evidence needed:** Original link-worthy asset, documented outreach, referrals and completed tasks.
 **Critical FAIL / UNKNOWN:** No paid link schemes or asserting rank causality from one link.
 **Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; the source watch's hash changes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
+
+## V13 — Web-verified professional authority/distribution
+Use docs/seo-master/15-earned-authority-distribution-v13.md. Build original demonstrable public value first, use current Google Search link spam rules, then ethically earn relevant editor/maintainer/user links with transparent outreach. Record real direct/referral sessions and successful tasks; do not buy followed links, automate comment spam, promise Google rank from a single backlink or confuse AI model mentions with qualified human referrals. Check permissions and source originals; unknown reach stays UNKNOWN.

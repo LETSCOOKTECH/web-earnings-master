@@ -1,0 +1,26 @@
+{
+  "schema": "sense-keyword-research-v13",
+  "market": {
+    "country": "United States",
+    "language": "en",
+    "device": "mobile",
+    "primary_human_job": "Remove repeated exact rows from a CSV file in the browser"
+  },
+  "clusters": [
+    {
+      "id": "csv-dedupe",
+      "job": "Remove exact duplicate rows and download a corrected CSV",
+      "primary_query": "remove duplicate csv rows",
+      "intent": "tool_now",
+      "page": "/tools/csv-deduplicator/",
+      "output_oracle": "tests/fixtures/csv-exact-duplicate.test.mjs",
+      "evidence": [
+        {
+          "kind": "HYPOTHESIS",
+          "notice": "SYNTHETIC EXAMPLE: no Google Trends, Keyword Planner or Search Console data obtained"
+        }
+      ]
+    }
+  ],
+  "notice": "This is a research-plan example. No real search volume, competitor difficulty, keyword rank, ad CPC or AdSense revenue data is claimed."
+}

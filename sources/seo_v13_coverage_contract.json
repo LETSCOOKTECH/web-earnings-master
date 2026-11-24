@@ -1,0 +1,307 @@
+{
+  "schema": "sense-seo-v13-coverage-contract",
+  "edition": "2026-11-24",
+  "notes": "All domains have skill, primary official source lead, clear observable acceptance and blocker. Metadata alone does not certify an execution, current provider policy or production search outcome.",
+  "domains": [
+    {
+      "id": "user-need",
+      "owner_skill": "web-opportunity-intelligence",
+      "guide": "docs/seo-master/09-keyword-and-serp-mastery-v13.md",
+      "official_source_id": "google-helpful",
+      "acceptance_evidence": "Original reported human job plus independently tested substitute",
+      "critical_failure": "User need based only on an LLM assumption",
+      "phase": "RESEARCH",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "query-provenance",
+      "owner_skill": "web-keyword-intent",
+      "guide": "docs/seo-master/09-keyword-and-serp-mastery-v13.md",
+      "official_source_id": "google-keyword-planner",
+      "acceptance_evidence": "Geo/device/date/unit and actual permitted export or honest hypothesis",
+      "critical_failure": "Invented Google volume or CPC-to-RPM conversion",
+      "phase": "RESEARCH",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "serp-intent",
+      "owner_skill": "web-competitor-audit",
+      "guide": "docs/seo-master/09-keyword-and-serp-mastery-v13.md",
+      "official_source_id": "google-starter",
+      "acceptance_evidence": "Actual locale/device organic competitor and direct task outputs",
+      "critical_failure": "Only modeled rankings or generic SERP screenshot",
+      "phase": "RESEARCH",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "spam-policy",
+      "owner_skill": "web-search-forensic-evidence",
+      "guide": "docs/seo-master/09-keyword-and-serp-mastery-v13.md",
+      "official_source_id": "google-spam",
+      "acceptance_evidence": "Current original spam policy and negative doorway/fake-tool test",
+      "critical_failure": "Scaled low-value synonym/city page or fake functionality",
+      "phase": "RESEARCH",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "content-trust",
+      "owner_skill": "web-content-and-image-seo",
+      "guide": "docs/seo-master/09-keyword-and-serp-mastery-v13.md",
+      "official_source_id": "google-helpful",
+      "acceptance_evidence": "Original examples/method and real useful page copy",
+      "critical_failure": "Reworded competitor copy or invented ratings",
+      "phase": "BUILD",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "information-architecture",
+      "owner_skill": "web-technical-seo",
+      "guide": "docs/seo-master/10-technical-seo-developer-v13.md",
+      "official_source_id": "google-links",
+      "acceptance_evidence": "Crawlable native links and orphan/duplicate graph report",
+      "critical_failure": "Orphans/doorways or JS-only primary navigation",
+      "phase": "BUILD",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "dns-tls-http",
+      "owner_skill": "web-domain-operations",
+      "guide": "docs/seo-master/10-technical-seo-developer-v13.md",
+      "official_source_id": "google-technical",
+      "acceptance_evidence": "Actual deployed DNS/TLS, 200/301/404 and cache/headers",
+      "critical_failure": "Soft404 or DNS/TLS/host redirect breakage",
+      "phase": "LAUNCH",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "robots-crawler",
+      "owner_skill": "web-crawler-governance",
+      "guide": "docs/seo-master/10-technical-seo-developer-v13.md",
+      "official_source_id": "google-robots",
+      "acceptance_evidence": "Per-bot route evaluation and actual WAF verification",
+      "critical_failure": "Googlebot blocked on indexable page",
+      "phase": "BUILD",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "index-directives",
+      "owner_skill": "web-technical-seo",
+      "guide": "docs/seo-master/10-technical-seo-developer-v13.md",
+      "official_source_id": "google-noindex",
+      "acceptance_evidence": "Raw+rendered noindex and X-Robots-Tag consistency",
+      "critical_failure": "Unintended noindex or inaccessible directive",
+      "phase": "BUILD",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "canonical-duplicates",
+      "owner_skill": "web-technical-seo",
+      "guide": "docs/seo-master/10-technical-seo-developer-v13.md",
+      "official_source_id": "google-canonical",
+      "acceptance_evidence": "Chosen page family, links/redirect/sitemap and GSC selected canonical",
+      "critical_failure": "Contradictory canonicals or duplicate index intent",
+      "phase": "BUILD",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "sitemap",
+      "owner_skill": "web-technical-seo",
+      "guide": "docs/seo-master/10-technical-seo-developer-v13.md",
+      "official_source_id": "google-sitemaps",
+      "acceptance_evidence": "Canonical indexable URL set, correct XML, real lastmod",
+      "critical_failure": "Excluded URL, missing valuable URL, wrong host",
+      "phase": "BUILD",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "js-rendering",
+      "owner_skill": "web-frontend-experience-engineering",
+      "guide": "docs/seo-master/10-technical-seo-developer-v13.md",
+      "official_source_id": "google-js-seo",
+      "acceptance_evidence": "Initial HTML plus actual browser DOM/missing JS mutant",
+      "critical_failure": "Hydration-only purpose or broken shipped JS",
+      "phase": "BUILD",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "rich-results",
+      "owner_skill": "web-content-and-image-seo",
+      "guide": "docs/seo-master/10-technical-seo-developer-v13.md",
+      "official_source_id": "google-schema-policy",
+      "acceptance_evidence": "Visible true structured data and current eligible type",
+      "critical_failure": "Fake ratings or unsupported feature promise",
+      "phase": "BUILD",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "media-seo",
+      "owner_skill": "web-content-and-image-seo",
+      "guide": "docs/seo-master/10-technical-seo-developer-v13.md",
+      "official_source_id": "google-image-seo",
+      "acceptance_evidence": "Rights, real image/video URLs, alt, original context",
+      "critical_failure": "Unlicensed media or broken assets",
+      "phase": "BUILD",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "international",
+      "owner_skill": "web-technical-seo",
+      "guide": "docs/seo-master/10-technical-seo-developer-v13.md",
+      "official_source_id": "google-localized",
+      "acceptance_evidence": "Real translated human-tested content, hreflang relationship",
+      "critical_failure": "Machine-spun keyword location/language pages",
+      "phase": "BUILD",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "performance-cwv",
+      "owner_skill": "web-security-performance",
+      "guide": "docs/seo-master/10-technical-seo-developer-v13.md",
+      "official_source_id": "web-vitals",
+      "acceptance_evidence": "Field p75 vs lab instrumentation, long task/CLS diagnostics",
+      "critical_failure": "Claiming synthetic Lighthouse equals real traffic",
+      "phase": "BUILD",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "accessibility",
+      "owner_skill": "web-accessibility-agent-ux",
+      "guide": "docs/seo-master/11-end-to-end-web-development-v13.md",
+      "official_source_id": "w3c-wcag22",
+      "acceptance_evidence": "Actual keyboard, screen reader/mobile controls and states",
+      "critical_failure": "Inaccessible primary task or error path",
+      "phase": "BUILD",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "architecture-cost",
+      "owner_skill": "web-workload-architecture-router",
+      "guide": "docs/seo-master/11-end-to-end-web-development-v13.md",
+      "official_source_id": "cloudflare-limits",
+      "acceptance_evidence": "Minimal workload placement with measured CPU/egress/memory budget",
+      "critical_failure": "Fake unlimited free tier or unnecessary backend",
+      "phase": "BUILD",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "backend-security",
+      "owner_skill": "web-backend-api-engineering",
+      "guide": "docs/seo-master/11-end-to-end-web-development-v13.md",
+      "official_source_id": "owasp-api",
+      "acceptance_evidence": "Server/API/DB contracts, auth and validated failure cases",
+      "critical_failure": "Untrusted client ownership or unbounded upload",
+      "phase": "BUILD",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "file-output",
+      "owner_skill": "web-product-validation",
+      "guide": "docs/seo-master/11-end-to-end-web-development-v13.md",
+      "official_source_id": "playwright-browsers",
+      "acceptance_evidence": "Shipped core output independent byte oracle and cross-engine E2E",
+      "critical_failure": "Passing static metadata with broken converter",
+      "phase": "BUILD",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "privacy",
+      "owner_skill": "web-privacy-consent",
+      "guide": "docs/seo-master/12-adsense-publisher-policy-v13.md",
+      "official_source_id": "publisher-policies",
+      "acceptance_evidence": "Real dataflow, consent and retention requirements checked",
+      "critical_failure": "Silent private file upload or consent absence",
+      "phase": "LAUNCH",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "publisher-page",
+      "owner_skill": "web-publisher-policy-eligibility",
+      "guide": "docs/seo-master/12-adsense-publisher-policy-v13.md",
+      "official_source_id": "publisher-no-content",
+      "acceptance_evidence": "Current original content policy, each page ad suitability",
+      "critical_failure": "Ads on non-content screens or misleading download",
+      "phase": "LAUNCH",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "publisher-account",
+      "owner_skill": "web-adsense-readiness",
+      "guide": "docs/seo-master/12-adsense-publisher-policy-v13.md",
+      "official_source_id": "adsense-program",
+      "acceptance_evidence": "Real owner account site approval and precise policy status",
+      "critical_failure": "Claiming approval from ads.txt or fake ID",
+      "phase": "LAUNCH",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "ai-search",
+      "owner_skill": "web-generative-engine-optimization",
+      "guide": "docs/seo-master/13-ai-search-analytics-experiments-v13.md",
+      "official_source_id": "google-ai-features",
+      "acceptance_evidence": "Provider-specific crawlers, citations, genuine referral/intent trial",
+      "critical_failure": "llms.txt or WebMCP promised Google AI rank",
+      "phase": "MEASURE",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "owner-indexing",
+      "owner_skill": "web-search-analytics",
+      "guide": "docs/seo-master/13-ai-search-analytics-experiments-v13.md",
+      "official_source_id": "owner-gsc-overview",
+      "acceptance_evidence": "Authorized owner URL indexing and GSC query/page/date measures",
+      "critical_failure": "Sitemap or local HTTP treated as indexed",
+      "phase": "MEASURE",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "growth-experiments",
+      "owner_skill": "web-experiments",
+      "guide": "docs/seo-master/13-ai-search-analytics-experiments-v13.md",
+      "official_source_id": "gsc-api-query",
+      "acceptance_evidence": "Measured query click and task funnel with confounders",
+      "critical_failure": "Causal claim from noisy ranking screenshot",
+      "phase": "MEASURE",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "release-reliability",
+      "owner_skill": "web-release-observability-operator",
+      "guide": "docs/seo-master/11-end-to-end-web-development-v13.md",
+      "official_source_id": "owasp-asvs",
+      "acceptance_evidence": "Staging rollback, monitoring, backup and security testing",
+      "critical_failure": "Production claim without real deployment",
+      "phase": "LAUNCH",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "finops",
+      "owner_skill": "web-unit-economics-finops",
+      "guide": "docs/seo-master/11-end-to-end-web-development-v13.md",
+      "official_source_id": "cloudflare-limits",
+      "acceptance_evidence": "Net cost per successful task, p95 CPU/egress and abuse bounds",
+      "critical_failure": "1M users claim from synthetic scenario",
+      "phase": "MEASURE",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "revenue-evidence",
+      "owner_skill": "web-monetization-network-operator",
+      "guide": "docs/seo-master/12-adsense-publisher-policy-v13.md",
+      "official_source_id": "adsense-program",
+      "acceptance_evidence": "Authorized real publisher net earnings and traffic integrity",
+      "critical_failure": "Keyword CPC treated as actual ad RPM",
+      "phase": "MEASURE",
+      "external_outcome_not_certified": true
+    },
+    {
+      "id": "authority-distribution",
+      "owner_skill": "web-authority-distribution",
+      "guide": "docs/seo-master/15-earned-authority-distribution-v13.md",
+      "official_source_id": "google-spam",
+      "acceptance_evidence": "Original link-worthy benchmark/tool asset, permitted contextual human outreach and actual referral-to-task completion evidence",
+      "critical_failure": "Paid link manipulation, automated spam, fake customer mentions or asserted causality from one backlink",
+      "phase": "MEASURE",
+      "external_outcome_not_certified": true
+    }
+  ]
+}
