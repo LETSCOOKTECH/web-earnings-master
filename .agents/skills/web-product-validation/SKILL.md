@@ -33,3 +33,8 @@ For each tool run actual input/output oracle, corrupted/oversized/batch and low-
 
 ## V6 production and research handoff (2026-11-23)
 Before declaring 'full tool' or page ready, use actual output oracle, malformed samples, target phone/browser, privacy network trace, download reopening and server fallback. Forward checked value evidence to web-publisher-policy-eligibility; no UI screenshots as substitution.
+
+
+## Execution assurance and adversarial verification (V10–V19)
+**V10 independent oracle addendum:** Require reproducible correct output from real inputs, negative and malformed fixtures, independent reference output or explicit oracle limitations, browser/device variation and privacy failure cases. Distinguish a real execution receipt from synthetically populated JSON. An action that does not complete its core user job cannot pass production even when UI, SEO and security contracts are present.
+**Evidence enforcement:** Review `docs/execution-assurance/README.md`; run `node scripts/check-execution-assurance.mjs --file <task-receipt.json>` for consequential work. Local schema validity is not source authenticity, external approval or production readiness.

@@ -29,3 +29,8 @@ description: "Review multiple websites with verifiable organic acquisition, retu
 
 ## Portfolio economics and constrained growth (V5)
 Prioritize human task completions and gross margin per verified success before scaling templates across websites. `web-unit-economics-finops` models hosting, CPU, AI, storage, support, abuse and net revenue; `web-hosting-vendor-evaluation` rejects disallowed commercial free-tier plans. Scaling an unprofitable heavy converter from 10K to 1M MAU multiplies losses and may hurt Ads quality. Store per-product usage and service costs with source dates and kill criteria. `docs/architecture/03-million-user-economics.md`.
+
+
+## Execution assurance and adversarial verification (V10–V19)
+**V10 learning addendum:** Persist versioned failed hypotheses, reviewer, prior expected metric, actual observed event, confounders and rollback. Do not automatically rewrite a skill because a source hash changed, an algorithm is rumored to change or a single site's visits dropped. Feed verified changes to `web-continuous-learning` and avoid launching clones without first-site working acquisition.
+**Evidence enforcement:** Review `docs/execution-assurance/README.md`; run `node scripts/check-execution-assurance.mjs --file <task-receipt.json>` for consequential work. Local schema validity is not source authenticity, external approval or production readiness.

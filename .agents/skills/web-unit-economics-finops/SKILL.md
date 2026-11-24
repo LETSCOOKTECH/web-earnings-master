@@ -47,3 +47,8 @@ description: "Model and control per-successful-tool-task costs, cloud pricing, s
 - `templates/architecture/scenarios/`
 
 **Required handoff:** ADR with tradeoffs, real file-output fixture evidence, provider limits, measured p50/p95 behavior where available, budget matrix, proof of cost guardrails and rollback. If untested, explicitly say NOT_RUN; if infrastructure/account unavailable, UNKNOWN_EXTERNAL. No fixed universal vendor winner.
+
+
+## Execution assurance and adversarial verification (V10–V19)
+**V10 economics addendum:** Separate measured invoices, dated provider rate cards, and explicitly hypothetical forecasts. Require successful-job denominator, revenue actually paid, egress/CPU/abuse spikes and uncertainty bounds. Challenge the cheapest quoted tier with a high-load and negative-margin case. Block any GO that replaces unknown billable units with zero or gross advertiser CPC with publisher RPM.
+**Evidence enforcement:** Review `docs/execution-assurance/README.md`; run `node scripts/check-execution-assurance.mjs --file <task-receipt.json>` for consequential work. Local schema validity is not source authenticity, external approval or production readiness.

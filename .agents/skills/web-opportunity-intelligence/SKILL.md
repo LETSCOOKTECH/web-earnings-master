@@ -46,3 +46,8 @@ Use `templates/opportunity/idea.example.json` and `sources/opportunity_source_re
 Unlicensed dataset, scraping when disallowed, CAPTCHA bypass, proxy evasion, API credits without permission, leaked account cookies, private user data, falsified screenshots or fake human evidence, unsourced numeric keyword estimates, treating ad CPC as publisher RPM, manipulated rankings/reviews, unsafe tool output or unbounded compute. Mark BLOCKED and use the lowest-cost compliant alternative.
 
 **Operating manual:** `docs/opportunity/README.md` and its specialist chapters. Log what was actually executed and what remained blocked. A source URL alone is not a live-browser capture.
+
+
+## Execution assurance and adversarial verification (V10–V19)
+**V10 hard re-verification addendum:** Before recommending GO, pass a scoped receipt through `scripts/check-execution-assurance.mjs`, and then independently inspect artifacts. Confirm original human pain (a post is not verified identity), licensed Trends/keyword evidence with exact geography/time, one direct competitor reproduction, and smallest output oracle. Actively seek an incumbent solution and failed counterexample. Never infer market demand from URLs or copied complaints. A BLOCKED result means cheaper lawful tests or stop, not extra paid calls.
+**Evidence enforcement:** Review `docs/execution-assurance/README.md`; run `node scripts/check-execution-assurance.mjs --file <task-receipt.json>` for consequential work. Local schema validity is not source authenticity, external approval or production readiness.
