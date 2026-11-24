@@ -67,3 +67,6 @@ Use docs/ai-search/03-geo-measurement.md, 01-provider-crawlers-controls.md and 0
 
 ### V14 preregistered research work order
 Before claims of AI citations, fill docs/ai-search/06-evaluation-research-playbook.md and templates/ai-search-v14-question-panel.SYNTHETIC.csv schema with TRUE observed human questions (replace synthetic examples), preserve unavailable attempts and verify owned referrals separately. No forged provider response artifacts or claimed total AI market share from prompt samples.
+
+## V15 — Google AI policy separation and evidence completeness
+Read docs/ai-search/07-2026-11-24-provider-controls-v15.md and verify original vendor source before an action. Distinguish Google Search Console generative AI owner setting, Googlebot index/snippet eligibility, Google-Extended model-training/non-Search grounding, GoogleOther non-Search crawling and future 2027 preferences. Google says GenAI report rollout reached all websites worldwide August 31 2026; owner account metrics still need authenticated access. For comparisons preregister provider+locale and all real-user prompt IDs, including UNAVAILABLE. Run npm run audit:ai-controls, V14 diagnostics and real-browser/user tests. No rankings, AI citations, human traffic or revenue certified by local scripts.
