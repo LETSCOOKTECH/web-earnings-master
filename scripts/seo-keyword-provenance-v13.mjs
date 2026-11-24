@@ -83,6 +83,14 @@ export function validateKeywordResearch(bundle,atlas,{now=Date.now()}={}){
    if(ev.source_id){
     const a=atlas.entries.find(s=>s.id===ev.source_id);
     if(!a)errors.push('Unknown source id '+ev.source_id);
+    else if(rule.source&&isString(ev.source_url,12)){
+     // A declared official source cannot be swapped to an attacker-controlled host
+     // merely by attaching a plausible ID. These checks are structural only.
+     try{
+      const observed=new URL(ev.source_url),official=new URL(a.url);
+      if(observed.hostname!==official.hostname)errors.push('Evidence hostname differs from declared first-party provider '+c.id+' '+kind);
+     }catch{errors.push('Evidence URL cannot be compared to first-party source '+c.id)}
+    }
     // This registry cannot prove account authorization even when source ID exists.
    }
    unknown.push('External provenance/permissions/metric accuracy require independent inspection '+c.id+' '+kind);
