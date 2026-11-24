@@ -316,6 +316,18 @@
       "provider_response_authenticated": false
     },
     {
+      "id": "openai-web-search-api",
+      "engine": "OpenAI",
+      "mode": "API_WEB_SEARCH",
+      "documented_originals": [
+        "O03"
+      ],
+      "evidence_level": "FIRST_PARTY_SCOPE_ONLY",
+      "rank_one_formula_known": false,
+      "owner_property_authenticated": false,
+      "provider_response_authenticated": false
+    },
+    {
       "id": "brave-ai-answer",
       "engine": "Brave",
       "mode": "UNVERIFIED",
