@@ -33,3 +33,11 @@ Shopping: actual product eligibility, price, inventory, shipping, verified merch
 
 ## Release states
 LOCAL_ELIGIBLE means source/robots/HTML contracts passed. OWNER_VERIFIED means independent authorized live console observations; output link/citation requires captured provider evidence. RECOMMENDED means annotated positive advice in an actual target user question. RANKED_FIRST only applies to explicit ranked comparisons. UNKNOWN where source or external observation unavailable.
+
+## OpenAI API web search is not consumer ChatGPT Search
+
+OpenAI's permitted Responses `web_search` API is a **separate** measurement surface (`openai-web-search-api`), not a proxy for consumer `openai-chatgpt-search`. Source O03 documents user-facing `url_citation` annotations and potentially additional consulted `sources`. Do not substitute background sources for inline visible citations. A successful API search does **not** prove that the consumer ChatGPT product would cite, recommend or rank the product. Log API captures only under the API surface and consumer UI captures only under their consumer surface, with exact product version, locale, date and answer provenance. The V17 evaluator rejects mixing the two.
+
+## Avoid artificial recommendation-study inflation
+
+Treat any human-task panel marked `branded:false` that actually asks for the target product by name as invalid. Entity IDs must not double-count the same brand under separate fake competitors. Never classify obviously negative wording such as "is not recommended" as a positive product endorsement. Automated phrase checks are deliberately limited heuristics, so independent review of raw permitted source captures remains mandatory.
