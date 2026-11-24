@@ -110,3 +110,5 @@ test('atlas CLI distinctly reports metadata only',()=>{
  assert.match(p.stdout,/PROVIDER_METADATA_ONLY/);
  assert.match(p.stdout,/"actual_citations_verified": false/);
 });
+
+test('future original-source review date must fail',()=>{const x=fixture();x.sources[0].reviewed_at_utc='2099-01-01T00:00:00Z';fail(x);});

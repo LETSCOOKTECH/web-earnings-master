@@ -19,7 +19,7 @@ export function checkRecommendarRegistry(data){
   let url;try{url=new URL(x.url)}catch{errors.push('Bad source URL '+x.id);continue}
   if(url.protocol!=='https:'||!official[x.provider].has(url.hostname)||url.username||url.password||url.port)
    errors.push('First-party original URL host invalid '+x.id);
-  if(x.original_opened!==true||!Number.isFinite(Date.parse(x.reviewed_at_utc))||typeof x.claim!=='string'||x.claim.length<40||typeof x.limitation!=='string'||x.limitation.length<30)
+  if(x.original_opened!==true||!Number.isFinite(Date.parse(x.reviewed_at_utc))||Date.parse(x.reviewed_at_utc)>Date.now()+300000||typeof x.claim!=='string'||x.claim.length<40||typeof x.limitation!=='string'||x.limitation.length<30)
    errors.push('Source claim must be dated, directly opened, scoped and limited '+x.id);
   if(/guaranteed rank|guaranteed #1|secret algorithm|100% inclusion/i.test(x.claim||''))errors.push('Source makes fabricated rank promise '+x.id);
  }
