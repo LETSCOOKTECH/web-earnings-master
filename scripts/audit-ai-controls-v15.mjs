@@ -33,7 +33,7 @@ export function auditGoogleAiControlsV15({html,robots,route='/',xRobotsTag='',ow
   const extended=evaluateRobots(robots,'Google-Extended',route);
   const other=evaluateRobots(robots,'GoogleOther',route);
   const directives=robotDirectives(html,xRobotsTag);
-  const noindex=token(directives,'noindex');
+  const noindex=token(directives,'noindex')||token(directives,'none');
   const nosnippet=token(directives,'nosnippet');
   const maxSnippetZero=/(?:^|[,;\s])max-snippet\s*:\s*0(?:$|[,;\s])/i.test(directives);
   const selective=/\bdata-nosnippet\b/i.test(html);
