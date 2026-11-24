@@ -13,7 +13,7 @@ import {fileURLToPath} from 'node:url';
 export const SURFACES = Object.freeze([
  'google-ai-overviews','google-ai-mode','openai-chatgpt-search',
  'perplexity-search','bing-copilot','bing-ai-summaries','claude-web-search',
- 'google-gemini-app','openai-deep-research','brave-ai-answer',
+ 'google-gemini-app','openai-deep-research','openai-web-search-api','brave-ai-answer',
  'duckduckgo-search-assist','yandex-alice','naver-ai','baidu-ernie',
  'meta-ai','grok-search','you-com'
 ]);
@@ -50,6 +50,8 @@ export function evaluateRecommendar(data,{now=Date.now()}={}){
  if(study.panel_method!=='HUMAN_TASK_SAMPLED'&&study.panel_method!=='DOCUMENTED_USER_QUESTIONS')mark(errors,'Pre-registered panel must originate in human tasks, not keyword fanout manufactured as human demand');
  if(!str(target.entity_id,3)||!str(target.brand,2))mark(errors,'Target identity and brand required');
  if(!Array.isArray(target.hosts)||!target.hosts.length||!unique(target.hosts)||target.hosts.some(x=>!host(x)||x!==x.toLowerCase()))mark(errors,'Exact distinct public target hosts required');
+ const brandNames=[target.brand,...(Array.isArray(target.competitors)?target.competitors.map(c=>c?.brand):[])].filter(x=>str(x,2)).map(compact);
+ if(!unique(brandNames))mark(errors,'Target and competitor brands must be distinct; aliases cannot inflate the ranked list');
  if(!Array.isArray(target.competitors)||target.competitors.length<2||!unique(target.competitors.map(x=>x?.entity_id))||target.competitors.some(x=>!str(x?.entity_id,3)||!str(x?.brand,2)))mark(errors,'At least two distinct real competitor IDs and brands required; no invented competitors');
  const entityMap=new Map();
  if(str(target.entity_id,3)&&str(target.brand,2))entityMap.set(target.entity_id,target.brand);
@@ -63,6 +65,16 @@ export function evaluateRecommendar(data,{now=Date.now()}={}){
  for(const q of Array.isArray(questions)?questions:[]){
   if(!str(q?.id,2)||!str(q?.text,12)||!INTENTS.has(q?.intent)||typeof q?.branded!=='boolean'||!str(q?.locale,4)||!str(q?.geo,2)||!str(q?.segment,3))
    mark(errors,'Question must have id, exact prompt, intent, branded flag, locale, region and audience segment');
+  if(q?.branded===false&&str(q?.text,12)&&str(target.brand,2)){
+   const targetTokens=compact(target.brand).split(/\s+/).filter(Boolean);
+   const promptTokens=compact(q.text).split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+   const phrase=targetTokens.join(' ');
+   for(let start=0;start<promptTokens.length;start++){
+    if(promptTokens.slice(start,start+targetTokens.length).join(' ')===phrase){
+     mark(errors,'Unbranded question contains target brand: '+q.id);break;
+    }
+   }
+  }
   if(str(q?.id,2))questionMap.set(q.id,q);
  }
  if(!Array.isArray(groups)||!groups.length||groups.length>25||!unique(groups.map(x=>JSON.stringify([x?.surface,x?.locale]))))mark(errors,'Distinct expected surface+locale cohorts required');
@@ -113,6 +125,10 @@ export function evaluateRecommendar(data,{now=Date.now()}={}){
   if(stats)stats.observed++;
   if(!isObj(r.capture)||!CAPTURES.has(r.capture.method)||!str(r.capture.artifact,8)||!str(r.capture.reviewer,2)||!str(r.capture.product_version,2))
    mark(errors,'Observed row needs named reviewer, version, permitted capture mode and artifact locator '+n);
+  if(r.surface==='openai-web-search-api'&&r.capture?.method!=='AUTHORIZED_PROVIDER_API')
+   mark(errors,'OpenAI web-search API surface needs actual permitted API capture '+n);
+  else if(r.surface!=='openai-web-search-api'&&r.capture?.method==='AUTHORIZED_PROVIDER_API')
+   mark(errors,'API output cannot masquerade as consumer AI search surface '+n);
   if(!isObj(r.answer)||!str(r.answer.raw_excerpt,15)||typeof r.answer.explicit_ranked!=='boolean'||!Array.isArray(r.answer.recommendations)||!Array.isArray(r.answer.visible_citations)||!Array.isArray(r.answer.mentions))
    {mark(errors,'Observed row requires raw answer excerpt, ranking state and separate recommendation/citation/mention arrays '+n);continue;}
   const answer=r.answer,rec=answer.recommendations;
@@ -124,6 +140,11 @@ export function evaluateRecommendar(data,{now=Date.now()}={}){
    if(seenEntities.has(item?.entity_id))mark(errors,'Duplicate recommended entity '+n);
    seenEntities.add(item?.entity_id);
    if(!['POSITIVE','NEGATIVE'].includes(item?.sentiment))mark(errors,'Recommendation sentiment missing '+n);
+   if(item?.sentiment==='POSITIVE'&&entityMap.has(item.entity_id)){
+    const phrase=compact(item.evidence_quote),name=compact(entityMap.get(item.entity_id));
+    if(phrase.includes(name+' is not recommended')||phrase.includes('do not use '+name))
+     mark(errors,'Clearly negative quote cannot be labeled positive without independent review '+n);
+   }
    if(!str(item?.evidence_quote,10)||!compact(answer.raw_excerpt).includes(compact(item.evidence_quote))||
     (entityMap.has(item?.entity_id)&&!compact(item.evidence_quote).includes(compact(entityMap.get(item.entity_id)))))
     mark(errors,'Evidence quote must literally appear in captured answer and identify the entity '+n);
