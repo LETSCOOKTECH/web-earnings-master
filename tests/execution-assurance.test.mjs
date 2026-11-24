@@ -47,3 +47,12 @@ test('strict artifact mode verifies real bytes and SHA-256',()=>{const root=fs.m
  assert.ok(verifyLocalArtifacts(p,{artifactRoot:root}).some(e=>e.includes('SHA-256 mismatch')));
 }finally{fs.rmSync(root,{recursive:true,force:true})}});
 test('strict artifact verifier rejects directory traversal',()=>{const root=fs.mkdtempSync(path.join(os.tmpdir(),'assurance-'));try{const p=base();p.evidence[0].artifact='../private.txt';assert.ok(verifyLocalArtifacts(p,{artifactRoot:root}).some(e=>e.includes('escapes approved root')))}finally{fs.rmSync(root,{recursive:true,force:true})}});
+
+test('neutral human evidence cannot establish demand',()=>{const p=base();p.evidence[0].direction='NEUTRAL';assert.equal(check(p).decision,'BLOCKED')});
+test('contradictory feasibility cannot qualify even with resolution prose',()=>{const p=base();p.evidence[2].direction='CONTRADICTS';p.contradiction_resolution='Reviewed';assert.equal(check(p).decision,'BLOCKED')});
+test('stale human evidence cannot qualify current demand',()=>{const p=base();p.evidence[0].observed_at='2025-01-01T00:00:00Z';assert.equal(check(p).decision,'BLOCKED')});
+test('snippet support cannot qualify discovery',()=>{const p=base();p.evidence.forEach(e=>e.access='SEARCH_SNIPPET');assert.equal(check(p).decision,'BLOCKED')});
+test('self-declared authorization cannot authorize external action',()=>{const p=base();p.external_action_requested=true;p.explicit_user_authorization=true;assert.equal(check(p).decision,'BLOCKED')});
+test('build stage cannot bypass production gate',()=>{const p=base();p.stage='BUILD';p.decision_requested='PRODUCTION_READY';assert.equal(check(p).decision,'REJECT')});
+test('measurement stage cannot bypass MVP gate',()=>{const p=base();p.stage='MEASUREMENT';assert.equal(check(p).decision,'REJECT')});
+test('malformed release gate does not crash',()=>{const p=base();p.stage='RELEASE';p.decision_requested='PRODUCTION_READY';p.gates=[null];assert.equal(check(p).decision,'REJECT')});
