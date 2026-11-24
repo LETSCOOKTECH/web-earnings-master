@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {evaluateRobots} from './robots-evaluator.mjs';
+import {extractGoogleRobotHeaderDirectives} from './google-robots-directives.mjs';
 export const SEARCH_MODES=Object.freeze({
  google_ai:{crawler:'Googlebot',requiresSnippet:true,requiresIndex:true},
  chatgpt_search:{crawler:'OAI-SearchBot',requiresSnippet:false,requiresIndex:false},
@@ -31,7 +32,7 @@ export function auditAiEligibility({html,robots,path:route='/',modes=Object.keys
  const main=/<main\b[^>]*>([\s\S]*?)<\/main>/i.exec(html);
  if(!main||text(main[1]).length<80)errors.push('Missing useful human-readable main content in initial HTML');
  if(!/<h1\b[^>]*>[\s\S]+?<\/h1>/i.test(html))errors.push('Missing visible primary page heading');
- const metas=[...findMeta(html,'robots'),...findMeta(html,'googlebot'),String(xRobotsTag).toLowerCase()];
+ const metas=[...findMeta(html,'robots'),...findMeta(html,'googlebot'),...extractGoogleRobotHeaderDirectives(xRobotsTag).map(x=>x.toLowerCase())];
  const noindex=metas.some(x=>/(?:^|[,\s])(?:noindex|none)(?:$|[,\s])/.test(x));
  const nosnippet=metas.some(x=>/(?:^|[,\s])nosnippet(?:$|[,\s])/.test(x));
  if(noindex)warnings.push('Initial HTML/header noindex: Google Search indexed supporting-link eligibility unavailable');
