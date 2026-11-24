@@ -1,6 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {assessExecution} from '../scripts/check-execution-assurance.mjs';
+import {assessExecution,verifyLocalArtifacts} from '../scripts/check-execution-assurance.mjs';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
 const registry={skills:[{id:'web-opportunity-intelligence'},{id:'web-product-validation'}]};
 const now=Date.parse('2026-11-24T08:00:00Z');
 const ev=(id,kind,group,direction='SUPPORTS')=>({id,kind,origin_group:group,direction,claim:'Reproducible observed relevant result',original_url:'https://github.com/example/project/issues/1',observed_at:'2026-11-24T07:00:00Z',access:'REPRODUCED',artifact:'reports/capture-1.json'});
@@ -31,3 +35,15 @@ test('ranking guarantees block',()=>{const p=base();p.claims=['GUARANTEED_RANKIN
 test('null gate fails closed without throwing',()=>{const p=base();p.gates=[null];const x=check(p);assert.equal(x.decision,'REJECT');assert.ok(x.errors.includes('Malformed acceptance gate'));});
 test('unknown status fails closed without type error',()=>{const p=base();p.gates[0].status=null;assert.equal(check(p).decision,'REJECT');});
 test('duplicate gate IDs rejected',()=>{const p=base();p.gates.push({...p.gates[0]});assert.equal(check(p).decision,'REJECT');});
+
+test('strict evidence checks reject declared paths without actual files',()=>{const root=fs.mkdtempSync(path.join(os.tmpdir(),'assurance-'));try{assert.ok(verifyLocalArtifacts(base(),{artifactRoot:root}).some(e=>e.includes('missing artifact')))}finally{fs.rmSync(root,{recursive:true,force:true})}});
+test('strict artifact mode verifies real bytes and SHA-256',()=>{const root=fs.mkdtempSync(path.join(os.tmpdir(),'assurance-'));try{
+ const body='genuine local fixture, not external source evidence';fs.writeFileSync(path.join(root,'proof.json'),body);
+ const p=base(),hash=createHash('sha256').update(body).digest('hex');
+ p.evidence=p.evidence.map(e=>({...e,artifact:'proof.json',sha256:hash}));
+ p.gates=p.gates.map(g=>({...g,artifact:'proof.json',sha256:hash}));
+ assert.deepEqual(verifyLocalArtifacts(p,{artifactRoot:root}),[]);
+ fs.writeFileSync(path.join(root,'proof.json'),body+' tampered');
+ assert.ok(verifyLocalArtifacts(p,{artifactRoot:root}).some(e=>e.includes('SHA-256 mismatch')));
+}finally{fs.rmSync(root,{recursive:true,force:true})}});
+test('strict artifact verifier rejects directory traversal',()=>{const root=fs.mkdtempSync(path.join(os.tmpdir(),'assurance-'));try{const p=base();p.evidence[0].artifact='../private.txt';assert.ok(verifyLocalArtifacts(p,{artifactRoot:root}).some(e=>e.includes('escapes approved root')))}finally{fs.rmSync(root,{recursive:true,force:true})}});
