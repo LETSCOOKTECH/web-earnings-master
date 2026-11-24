@@ -35,9 +35,9 @@ export function assessExecution(run,registry,{now=Date.now()}={}){
   if(!nonempty(e.artifact))errors.push('Missing evidence artifact: '+e.id);
   if(e.access==='SEARCH_SNIPPET'||e.access==='UNAVAILABLE')warnings.push('Evidence not directly verified: '+e.id);
   const group=e.origin_group.trim().toLowerCase();originGroups.set(group,(originGroups.get(group)||0)+1);
-  if(e.direction==='SUPPORTS')supports.add(group);
+  if(e.direction==='SUPPORTS'&&['ORIGINAL_OPENED','REPRODUCED','ACCOUNT_EXPORT'].includes(e.access)&&now-Date.parse(e.observed_at)<=({FIRST_PARTY:86400000,DEVELOPER:30*86400000,HUMAN:90*86400000,OWNED_TEST:7*86400000,INDEPENDENT:30*86400000}[e.kind]??0))supports.add(group);
   if(e.direction==='CONTRADICTS')contradicts.add(group);
-  if(e.access==='ORIGINAL_OPENED'||e.access==='REPRODUCED'||e.access==='ACCOUNT_EXPORT')kinds.add(e.kind);
+  if(e.direction==='SUPPORTS'&&['ORIGINAL_OPENED','REPRODUCED','ACCOUNT_EXPORT'].includes(e.access)&&now-Date.parse(e.observed_at)<=({FIRST_PARTY:86400000,DEVELOPER:30*86400000,HUMAN:90*86400000,OWNED_TEST:7*86400000,INDEPENDENT:30*86400000}[e.kind]??0))kinds.add(e.kind);
   if(e.kind==='HUMAN'&&e.human_identity_verified===true&&e.identity_method!=='CONSENTED_INTERVIEW')errors.push('Unsupported human identity assertion: '+e.id);
   if(e.kind==='FIRST_PARTY'&&e.access==='SEARCH_SNIPPET'&&e.provider_rule_effective===true)blockers.push('Snippet cannot establish effective provider rule: '+e.id);
  }
@@ -54,7 +54,9 @@ export function assessExecution(run,registry,{now=Date.now()}={}){
   if(g.required&&['FAIL','BLOCKED','UNKNOWN'].includes(g.status))blockers.push('Mandatory gate unresolved: '+g.id);
   if(g.status==='NOT_APPLICABLE'&&(!nonempty(g.reason)||!nonempty(g.reviewer)))errors.push('Not-applicable gate needs reason and reviewer: '+g.id);
  }}
- if(run.external_action_requested===true&&run.explicit_user_authorization!==true)blockers.push('External action not authorized');
+ if(run.external_action_requested===true)blockers.push('External action not authorized by receipt alone; trusted host approval required');
+ if(run.decision_requested==='GO_FOR_MVP'&&!['DISCOVERY','VALIDATION'].includes(run.stage))errors.push('MVP decision incompatible with stage');
+ if(run.decision_requested==='PRODUCTION_READY'&&!['RELEASE','ACQUISITION','MEASUREMENT'].includes(run.stage))errors.push('Production decision incompatible with stage');
  if(run.stage==='DISCOVERY'||run.stage==='VALIDATION'){
   if(supports.size===0)blockers.push('No independent supporting observation');
   if(!nonempty(run.cheapest_falsification))blockers.push('No cheapest falsification identified');
@@ -68,7 +70,7 @@ export function assessExecution(run,registry,{now=Date.now()}={}){
  if(['RELEASE','ACQUISITION','MEASUREMENT'].includes(run.stage)&&run.decision_requested==='PRODUCTION_READY'){
   for(const k of ['OWNED_TEST','FIRST_PARTY'])if(!kinds.has(k))blockers.push('Missing independently inspected '+k+' evidence');
   if(run.human_signoff!==true)blockers.push('Human signoff required before production');
-  if(!run.gates?.some?.(g=>g.status==='PASS_EXTERNAL'))blockers.push('Missing external property verification');
+  if(!run.gates?.some?.(g=>g?.status==='PASS_EXTERNAL'))blockers.push('Missing external property verification');
  }
  if(run.review?.same_actor===true&&!nonempty(run.review.self_review_disclosure))blockers.push('Self-review cannot be disguised as independent verification');
  return {valid:errors.length===0,decision:errors.length?'REJECT':blockers.length?'BLOCKED':'ELIGIBLE_FOR_REVIEW',errors,warnings,blockers,independent_origins:originGroups.size,independent_supports:supports.size,independent_contradictions:contradicts.size,verified_kinds:[...kinds]};
