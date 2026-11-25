@@ -43,7 +43,7 @@ export function verifyMutatingRoutes(routes=STUDIO_ROUTES){
  for(const r of routes){
   if(ids.has(r.id))failures.push('DUPLICATE_ROUTE:'+r.id);
   ids.add(r.id);
-  const sample=r.kind==='csv'?'id,name\n00501,Asha\n00502,Lee\n00502,Lee\n':r.kind==='tsv'?'id\tname\n00501\tAsha\n00502\tLee\n':
+  const sample=r.kind==='csv'?'id,name\n00502,Lee\n, \n00501,Asha\n00502,Lee\n':r.kind==='tsv'?'id\tname\n00501\tAsha\n00502\tLee\n':
     r.kind==='jsonl'?'{"id":"00501","name":"Asha"}\n{"id":"00502","name":"Lee"}\n':
     '[{"id":"00501","name":"Asha"},{"id":"00502","name":"Lee"}]';
   try{
