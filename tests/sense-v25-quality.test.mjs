@@ -94,3 +94,13 @@ test('Astro SSR build is not rejected for missing static HTML, but is held for r
  assert.ok(r.unknowns.includes('SERVER_RUNTIME_SMOKE_REQUIRED_NO_STATIC_HTML'));
  assert.equal(r.public_deployment_verified,false);
 });
+
+test('Astro dynamic output and nonliteral route prerender are held rather than assumed static',()=>{
+ const pkg={dependencies:{astro:'^7.4.13'}};
+ const r=auditAstro({config:'output: process.env.ASTRO_RENDER_MODE',packageJson:pkg});
+ assert.equal(r.status,'HOLD_DYNAMIC_CONFIG_UNRESOLVED');
+ assert.ok(r.unknowns.includes('OUTPUT_MODE_DYNAMIC_UNRESOLVED'));
+ const s=auditAstro({config:"output:'static'",packageJson:pkg,pages:{'api.ts':'export const prerender = process.env.SSR_ENABLED'}});
+ assert.equal(s.status,'HOLD_DYNAMIC_CONFIG_UNRESOLVED');
+ assert.ok(s.unknowns.some(x=>x.includes('ROUTE_PRERENDER_DYNAMIC_UNRESOLVED')));
+});
