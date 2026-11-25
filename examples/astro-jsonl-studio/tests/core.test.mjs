@@ -46,6 +46,6 @@ test('malicious-looking cell content is not sanitized or executed by pure parser
 test('no partial data export on invalid 100+ rows, errors capped',()=>{
  const source='{"bad":}\n'.repeat(110);
  const r=analyzeJsonl(source);
- assert.equal(r.canDownload,false);assert.equal(r.invalid,100);assert.equal(r.valid,0);
+ assert.equal(r.canDownload,false);assert.equal(r.invalid,110);assert.equal(r.valid,0);
  assert.equal(r.errors.length,100);
 });
