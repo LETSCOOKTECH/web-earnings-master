@@ -43,3 +43,15 @@ description: "Compare commercially permissible website hosting, CDN, VPS, server
 - `sources/architecture_provider_claims_2026-11-23.json` + official source watchlist — source/provenance ledger.
 
 **Handoff:** Provider choice ADR with current official price/terms, same-workload comparison, owner-reviewed commercial eligibility, actual pilot and fallback. Never imply a specific company endorsed this design or that a pricing calculator approves provider billing.
+
+## V26 — Trusted upstream method integration
+
+Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-skill-integration-v26.json`; verify source organization, Git blob ID and license before task-time adaptation. No unreviewed upstream script execution or bulk copying.
+
+- `vercel-optimize`: Only when actual deployed Vercel metrics exist; metrics-first candidate-gated cost review.
+- `cloudflare-router`: Choose platform based on constraints, version-specific docs, do not force Cloudflare.
+- `cloudflare-wrangler`: Wrangler only for existing Wrangler config or explicit request; preview/deploy verification.
+
+**Operational acceptance:** Vercel cost optimization is permitted only with owner-authorized Vercel production metrics, affected routes, transferred bytes and billing grain. Cloudflare deployment and Wrangler are provider-specific and must be matched to actual project config, runtime/limits and commercial eligibility. Calculate alternative host proposals using actual constraints, fail over and measured unit economics rather than vendor defaults.
+
+Record exact source/metric/oracle, stop on missing provider permissions, run `node scripts/check-official-skill-integration-v26.mjs` plus domain tests, and label unobserved external deployment/SEO/publisher results `NOT_RUN`.
