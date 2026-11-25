@@ -54,7 +54,11 @@ function spreadsheetSafe(s){
  const t=String(s);
  // CSV is data; spreadsheet apps may interpret content as formulas.
  // Keep real signed/scientific numbers unchanged while escaping expressions.
- if(/^[\s]*[=+@-]/.test(t)&&!numeric.test(t.trim()))return "'"+t;
+ // OWASP WSTG-INJT-20 also lists leading controls and fullwidth formula prefixes.
+ // U+200B etc. can hide a dangerous prefix visually; keep signed numeric values intact.
+ if(/^[\t\r\n]/.test(t)||
+    (/^[\s\u200B\u200C\u200D\u2060\uFEFF]*[-=+@＝＋－＠]/u.test(t)&&!numeric.test(t.trim())))
+  return "'"+t;
  return t;
 }
 export function serializeCsv(rows,{guardSpreadsheetFormulas=true}={}){
