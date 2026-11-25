@@ -14,7 +14,8 @@ export function auditAstro({config='',packageJson={},pages={},builtHtml=[],produ
  if((mode==='server'||dynamic.length)&&adapters.length===0)failures.push('DYNAMIC_ROUTES_REQUIRE_ADAPTER');
  if(adapters.length>1)warnings.push('MULTIPLE_ADAPTERS_REVIEW_DEPLOYMENT');
  if(production&&(!origin||!validatePublicSiteOrigin(origin).ok))failures.push('REAL_PUBLIC_ORIGIN_REQUIRED');
- if(production&&builtHtml.length===0)failures.push('BUILT_HTML_REQUIRED');
+ if(production&&builtHtml.length===0&&mode!=='server')failures.push('BUILT_HTML_REQUIRED');
+ if(production&&builtHtml.length===0&&mode==='server')unknowns.push('SERVER_RUNTIME_SMOKE_REQUIRED_NO_STATIC_HTML');
  for(const p of builtHtml){
   if(!p||typeof p.html!=='string'||typeof p.name!=='string'){failures.push('INVALID_BUILT_PAGE');continue;}
   for(const [k,re] of [['TITLE',/<title\b[^>]*>[^<]+<\/title>/i],['H1',/<h1\b/i],['MAIN',/<main\b/i],['LANG',/<html\b[^>]*\blang=/i],['CANONICAL',/<link\b[^>]*rel=["']canonical["']/i]])
@@ -22,7 +23,7 @@ export function auditAstro({config='',packageJson={},pages={},builtHtml=[],produ
  }
  if(!builtHtml.length)unknowns.push('NO_COMPILED_HTML_INSPECTED');
  unknowns.push('FULL_BROWSER_TASK_OUTPUT_AND_EXTERNAL_HOST_NOT_VERIFIED');
- return {schema:'sense-astro-audit-v25',status:failures.length?'FAIL':production?'BUILD_ONLY_PASS_NOT_DEPLOYED':'SOURCE_ONLY_NOT_DEPLOYED',
+ return {schema:'sense-astro-audit-v25',status:failures.length?'FAIL':production&&mode==='server'&&builtHtml.length===0?'SERVER_BUILD_RUNTIME_UNVERIFIED':production?'BUILD_ONLY_PASS_NOT_DEPLOYED':'SOURCE_ONLY_NOT_DEPLOYED',
   mode,adapters,dynamic_routes:dynamic,pages_checked:builtHtml.length,failures,warnings,unknowns,
   public_deployment_verified:false,seo_ranking_verified:false,adsense_verified:false};
 }
