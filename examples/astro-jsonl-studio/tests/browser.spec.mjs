@@ -49,7 +49,7 @@ test('responsive layout, no external network, and explanatory no-JS content',asy
  await page.setViewportSize({width:390,height:844});
  await page.goto('/tools/jsonl-validator/');
  await expect(page.locator('h1')).toHaveCount(1);
- await expect(page.locator('main')).toContainText('No server upload');
+ await expect(page.locator('main')).toContainText('does not upload files');
  const width=await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth);
  expect(width).toBeLessThanOrEqual(1);
  await page.locator('#jsonl-paste').fill('{"a":1}\n{"a":2}\n');
