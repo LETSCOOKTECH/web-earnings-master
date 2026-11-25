@@ -122,3 +122,17 @@ npm test
 A green test suite confirms *controlled fixtures*, not an arbitrary remote site's true topology, complete URLs, production browser behavior or legal terms. No external site was crawled for this PR. Research on real references remains opt-in and operator-scoped.
 
 Intentional limitations: This is not a continuously running global spider; not a full schema-validating XML parser; not a rendered browser navigation crawler; not a rank/keyword-volume extractor; not a source-code decompiler; and not a guarantee of 100% page coverage. For large catalog sites, use an approved provider-supported crawl or an explicitly authorized larger-resource execution design, without breaching a site's rules.
+
+## 6) Compare multiple observed sites without inventing market metrics
+
+After separately producing real, permitted site reports, create `reports-list.json` in the same directory (relative paths are resolved relative to that file):
+```json
+["competitor-a.json","competitor-b.json","competitor-c.json"]
+```
+Then run:
+```sh
+node scripts/site-intelligence.mjs --atlas-file ./reports-list.json --out ./reference-atlas.json
+```
+`sense-cross-site-intelligence-v24` groups actual observed page route families, public asset/header clues, form hints, sitemap counts, provenance, scan budget states and sampled link depths. It requires 1–15 files in the CLI with 15 MB maximum per report and does **not** normalize raw page counts into market share, visits, ranking, size or engineering superiority. Historical reports from the same origin should be compared with `--previous`, not inserted twice in the same atlas.
+
+The entire chain is: independently sourced results → source-preserving `--discover` → per-origin robots/terms permission → bounded public HTTP scan → separately supplied sanitized HAR (optional) → source-scoped `--packets-out` → cross-site atlas → **independent real user-task tests** → specialist skill handoffs. There is no automatic background crawling or private-site credential use.
