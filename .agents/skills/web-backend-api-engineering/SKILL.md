@@ -46,3 +46,13 @@ description: "Build secure minimal backend APIs, authentication, databases, job 
 ## Official primary-source starting points (re-open before action)
 - https://api-security.owasp.org/editions/2023/en/0x11-t10/
 - https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html
+
+## V26 — Trusted upstream method integration
+
+Inspect `sources/official-skill-integration-v26.json` and `docs/skills/2026-11-25-official-upstream-v26.md` before use. The source files were inspected and pinned, but upstream code is not installed or auto-executed.
+
+- `anthropic-mcp`: MCP tool contracts, auth boundaries, schema/negative tests; only when MCP needed.
+
+**Verification:** When an MCP exposure is genuinely required, define least-privilege operations, JSON-schema input/output, bounded resources and exact failure contracts. Demand authenticated user/grant scope, idempotent state writes, token redaction and penetration tests. A captured competitor HAR is evidence, never permission to replay hidden endpoints.
+
+Run `node scripts/check-official-skill-integration-v26.mjs`, domain-specific test suites and applicable real browser/server checks. Make distinctions between first-party metrics, modeled numbers, observed site public behavior and `NOT_RUN`.
