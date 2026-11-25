@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {gzipSync} from 'node:zlib';
-import {isPublicIPv4,isPublicIPv6,validateOrigin,safeURL,resolvePinnedPublicIPv4,resolvePinnedPublicAddress} from '../lib/site-intelligence/safe-http.mjs';
+import {isPublicIPv4,isPublicIPv6,validateOrigin,safeURL,resolvePinnedPublicIPv4,resolvePinnedPublicAddress,fetchPublic} from '../lib/site-intelligence/safe-http.mjs';
 import {summarizeHAR} from '../lib/site-intelligence/har.mjs';
 import {buildSkillHandoffs} from '../lib/site-intelligence/knowledge.mjs';
 import {buildSiteAtlas} from '../lib/site-intelligence/portfolio.mjs';
@@ -271,4 +271,11 @@ test('public crawler cannot disable minimum polite pacing',async()=>{
 test('out-of-origin input seeds are explicitly rejected rather than silently studied',async()=>{
  const r=await inspectSite({...opts,seedUrls:['https://evil.example/login'],fetcher:fakeTransport({'/robots.txt':{status:404},'/':{body:mkHTML('Home',[])}})});
  assert.ok(r.warnings.some(x=>x.code==='SEED_SKIPPED_OUT_OF_SCOPE_OR_NONPAGE'));
+});
+
+test('public fetch transport bounds stalled DNS without making a TLS connection',async()=>{
+ await assert.rejects(
+   fetchPublic('https://reliable-research-site.com/',{resolver:async()=>new Promise(()=>{}),timeoutMs:25}),
+   /DNS_RESOLUTION_TIMEOUT/
+ );
 });
