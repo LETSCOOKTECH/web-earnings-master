@@ -38,6 +38,9 @@ test('Astro build-only release requires actual HTML and non-reserved owner HTTPS
  const bad=auditAstro({config:"output: 'static'",packageJson:pkg,origin:'https://example.org/',production:true});
  assert.ok(bad.failures.includes('REAL_PUBLIC_ORIGIN_REQUIRED'));
  assert.ok(bad.failures.includes('BUILT_HTML_REQUIRED'));
+ const loopback=auditAstro({config:"output:'static'",packageJson:pkg,origin:'https://127.0.0.1/',production:true,builtHtml:[{name:'index.html',html:'<html lang="en"><title>A</title><link rel="canonical" href="https://127.0.0.1/"><main><h1>A</h1></main></html>'}]});
+ assert.ok(loopback.failures.includes('REAL_PUBLIC_ORIGIN_REQUIRED'));
+
  const good='<html lang="en"><head><title>Useful app</title><link rel="canonical" href="https://tools-domain.com/"></head><body><main><h1>Real tool</h1></main></body></html>';
  const r=auditAstro({config:"output:'static'",packageJson:pkg,origin:'https://tools-domain.com/',production:true,builtHtml:[{name:'index.html',html:good}]});
  assert.equal(r.status,'BUILD_ONLY_PASS_NOT_DEPLOYED');assert.equal(r.public_deployment_verified,false);
