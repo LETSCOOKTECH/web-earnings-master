@@ -1,0 +1,26 @@
+---
+interface Props {title:string;description:string;canonicalPath:string;}
+const {title,description,canonicalPath}=Astro.props;
+const site=Astro.site??new URL('https://studio.example.org/');
+const placeholder=/(?:^|\.)example\.(?:org|com|net)$/.test(site.hostname);
+const canonical=new URL(canonicalPath,site).href;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="color-scheme" content="dark"/>
+  <title>{title}</title>
+  <meta name="description" content={description}/>
+  <link rel="canonical" href={canonical}/>
+  {placeholder?<meta name="robots" content="noindex,follow"/>:<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>}
+  <link rel="stylesheet" href="/assets/studio.css"/>
+</head>
+<body>
+ <a class="skip" href="#main">Skip to content</a>
+ <header><div class="wrap head"><a class="brand" href="/">SENSE / DATA STUDIO</a><nav aria-label="Main"><a href="/">All tools</a><a href="/about/">About</a><a href="/privacy/">Privacy</a></nav></div></header>
+ <slot/>
+ <footer class="wrap foot"><span>Browser-local prototype · No ad network installed</span><nav aria-label="Legal"><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></nav></footer>
+</body>
+</html>
