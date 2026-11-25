@@ -1,0 +1,87 @@
+{
+  "schema": "sense-v25-dated-official-source-atlas",
+  "date": "2026-11-25",
+  "scope": "entrypoints only; original policy content must be reopened before consequential action",
+  "sources": [
+    {
+      "id": "astro-on-demand",
+      "url": "https://docs.astro.build/en/guides/on-demand-rendering/",
+      "review": "original-body-opened-2026-11-25",
+      "applies_to": [
+        "web-astro-engineering"
+      ],
+      "claim": "Static prerender default; adapter + per-route prerender false for on-demand; server output if appropriate"
+    },
+    {
+      "id": "astro-config",
+      "url": "https://docs.astro.build/en/reference/configuration-reference/",
+      "review": "original-body-opened-2026-11-25",
+      "applies_to": [
+        "web-astro-engineering"
+      ],
+      "claim": "Current output setting accepts static/server; obsolete hybrid docs require version context"
+    },
+    {
+      "id": "astro-testing",
+      "url": "https://docs.astro.build/en/guides/testing/",
+      "review": "official-page-search-result-only-reopen-before-action",
+      "applies_to": [
+        "web-astro-engineering",
+        "web-product-validation"
+      ],
+      "claim": "Vitest plus multi-engine browser testing"
+    },
+    {
+      "id": "astro-collections",
+      "url": "https://docs.astro.build/en/guides/content-collections/",
+      "review": "official-page-search-result-only-reopen-before-action",
+      "applies_to": [
+        "web-astro-engineering"
+      ],
+      "claim": "Typed content loaders for genuinely maintained content"
+    },
+    {
+      "id": "trends-normalization",
+      "url": "https://support.google.com/trends/answer/4365533",
+      "review": "official-page-search-result-only-reopen-before-action",
+      "applies_to": [
+        "web-opportunity-intelligence",
+        "web-keyword-intent"
+      ],
+      "claim": "Google Trends series is normalized relative popularity; not absolute volume"
+    },
+    {
+      "id": "google-sitemaps",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview",
+      "review": "official-page-search-result-only-reopen-before-action",
+      "applies_to": [
+        "web-competitor-audit",
+        "web-technical-seo"
+      ],
+      "claim": "Sitemaps assist discovery, do not guarantee index/rank"
+    },
+    {
+      "id": "google-search-updates",
+      "url": "https://developers.google.com/search/updates",
+      "review": "official-page-search-result-only-reopen-before-action",
+      "applies_to": [
+        "web-technical-seo",
+        "web-keyword-intent"
+      ],
+      "claim": "Check current documentation changes before asserting SEO/AI rules"
+    },
+    {
+      "id": "gsc-2026-api",
+      "url": "https://developers.google.com/search/blog/2026/11/search-analytics-api-update",
+      "review": "official-dated-post-search-result-only-reopen-before-action",
+      "applies_to": [
+        "web-keyword-intent",
+        "web-search-analytics"
+      ],
+      "claim": "2026 Search Analytics API adds branded and multimodal query analytics in documented scope"
+    }
+  ],
+  "source_count": 8,
+  "rights": "No third-party text or executable code copied",
+  "unverified": "No external indexing, conversion or publisher account evidence"
+}
