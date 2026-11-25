@@ -5,6 +5,7 @@ import {isPublicIPv4,isPublicIPv6,validateOrigin,safeURL,resolvePinnedPublicIPv4
 import {summarizeHAR} from '../lib/site-intelligence/har.mjs';
 import {buildSkillHandoffs} from '../lib/site-intelligence/knowledge.mjs';
 import {buildSiteAtlas} from '../lib/site-intelligence/portfolio.mjs';
+import {summarizeRenderedDOM} from '../lib/site-intelligence/rendered.mjs';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -290,4 +291,24 @@ test('public crawling skips account, reset token and destructive GET routes even
  for(const path of ['/account/','/unsubscribe/','/delete/','/invite/','/api/','/public/abcdef0123456789abcdef0123456789']){
    assert.ok(!seen.some(x=>x.url.includes(path)),path);
  }
+});
+
+test('operator-supplied rendered HTML detects extra public links without copying raw DOM',async()=>{
+ const report=await inspectSite({...opts,fetcher:fakeTransport({
+   '/robots.txt':{status:404},'/':{body:mkHTML('Home',['/docs'])},'/docs':{body:mkHTML('Docs',[])}
+ })});
+ const full='<html><body><h1>Enhanced</h1><a href="/docs">Docs</a><a href="/js-tool">Dynamic</a><a href="/account/reset/secret">Private</a><script>topsecret_password_string</script></body></html>';
+ const summary=summarizeRenderedDOM([{url:base+'/',html:full}],{report,fixture:true});
+ assert.deepEqual(summary.observations[0].links_not_in_static_html,[base+'/js-tool']);
+ assert.ok(!JSON.stringify(summary).includes('topsecret_password_string'));
+ assert.ok(!JSON.stringify(summary).includes('/account/reset/secret'));
+ assert.equal(summary.sensitive_html_retained,false);
+ report.operator_rendered_dom_observations=summary;
+ const packet=buildSkillHandoffs(report);
+ assert.ok(packet.claims.some(x=>x.category==='rendered_dom'));
+});
+test('rendered HTML must be from in-scope scanned public pages and within bounded bytes',async()=>{
+ const report=await inspectSite({...opts,fetcher:fakeTransport({'/robots.txt':{status:404},'/':{body:mkHTML('Home',[])}})});
+ assert.throws(()=>summarizeRenderedDOM([{url:'https://third-party.com/',html:'<html/>'}],{report,fixture:true}),/ORIGIN_OR_PAGE/);
+ assert.throws(()=>summarizeRenderedDOM([{url:base+'/',html:'x'.repeat(1_000_001)}],{report,fixture:true}),/BYTE_BUDGET/);
 });
