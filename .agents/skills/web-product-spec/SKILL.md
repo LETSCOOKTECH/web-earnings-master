@@ -35,3 +35,13 @@ Before freezing a feature spec, run `web-workload-architecture-router`; require 
 ## V24 — site-intelligence observations are PRD inputs, not a requirements oracle
 
 When reference websites materially affect product scope, read `docs/website-intelligence/README.md` and consume `web-competitor-audit`'s `sense-site-skill-handoffs-v24` `product` claim packet. Distinguish directly visible public tools/pages, hypothesized product capabilities and UNKNOWN functionality. An input/form hint is not a real working output, a sitemap entry is not validation, and an inferred framework is not a requirement to adopt it. Do not copy protected code or trade dress. Require actual user task, input/output oracle, independent same-fixture comparator, measurable unique value, and supported budget/privacy architecture before any site design decision.
+
+## V26 — Trusted upstream method integration
+
+Inspect `sources/official-skill-integration-v26.json` and `docs/skills/2026-11-25-official-upstream-v26.md` before use. The source files were inspected and pinned, but upstream code is not installed or auto-executed.
+
+- `anthropic-frontend`: Intentional brief-specific design and self-critique; do not copy recognizable trade dress.
+
+**Verification:** Start with the job-to-be-done, independent input-output oracle and intended audience. Apply Anthropic frontend-design brief→original identity→critique loop; avoid copying protected visual source or overusing decorative animation. Validate empty/loading/success/error states and accessibility as contractual product behavior.
+
+Run `node scripts/check-official-skill-integration-v26.mjs`, domain-specific test suites and applicable real browser/server checks. Make distinctions between first-party metrics, modeled numbers, observed site public behavior and `NOT_RUN`.

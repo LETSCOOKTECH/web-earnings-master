@@ -63,3 +63,17 @@ The source and routing registry is `sources/skill-network-v23.json`. `node --tes
 ## V24 — site scan cannot replace actual reverse-engineering test cases
 
 `sense-site-intelligence-v24` and `sense-site-skill-handoffs-v24` are admissible only as public site topology/HTTP/HTML evidence. They do not prove the rival's download bytes, conversion output, UX actions, JavaScript behavior or backend logic. For any alleged competitor weakness, run a legal same-input fixture in an allowed real browser, save the actual output, label unknown if inaccessible, and compare against an independently computed oracle. Test scanner safety itself with `node --test tests/site-intelligence.test.mjs`: invalid XML/gzip, SSRF DNS, robots failures, origin escape, workload caps, secrets in HAR, malicious and negative cases. Never promote a sampled graph or asset heuristic into a confirmed defect.
+
+## V26 — Trusted upstream method integration
+
+Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-skill-integration-v26.json`; check source ownership, exact Git blob hash, license, current relevance and domain-specific limitations before use. Methods are adapted, not executable upstream packages.
+
+- `vercel-ui` (VERCEL_OFFICIAL_ORG): Review annotated UI against pinned 8k rules, evidence by file line, verify focus/semantics; repo lacks root LICENSE.
+- `anthropic-skill-creator` (ANTHROPIC_OFFICIAL_ORG): Reproducible no-skill vs with-skill task runs; description trigger negatives and blinded comparisons.
+- `anthropic-webapp` (ANTHROPIC_OFFICIAL_ORG): Live local server Playwright and real output/screenshot/console evidence; preserve server lifecycle.
+- `addy-quality` (INDIVIDUAL_MAINTAINER_NOT_GOOGLE_OFFICIAL): Evidence-led Lighthouse+browser+SEO+accessibility with no aggregate-score certification.
+- `addy-accessibility` (INDIVIDUAL_MAINTAINER_NOT_GOOGLE_OFFICIAL): WCAG 2.2 manual keyboard + screen reader and automated audit; axe pass not WCAG completeness.
+
+**Required verification and boundaries:** Start and observe a real local server; execute normal, malformed and adversarial end-user inputs in real browser engines and capture output hashes, console errors, screenshots and actual download bytes. Couple Vercel UI findings with Addy layered quality checks; separate static checks, actual rendering, accessibility, human task completion and public-host performance. Preserve failing fixtures as nonregression tests.
+
+Run `node scripts/check-official-skill-integration-v26.mjs` and applicable existing tests. Log artifact/provenance, exact failure, source date and real browser/user metric where available; otherwise `NOT_RUN`. No skill/source label is proof of SEO rank, AI citations, ad eligibility, private architecture or profits.

@@ -29,3 +29,13 @@ High-value page brief (`templates/high-value-page-brief.md`) including source ev
 **Evidence needed:** Direct HTML/media URL verification, current supported rich result tests, original evidence rights.
 **Critical FAIL / UNKNOWN:** FAQ rich snippets retired in 2026; no fake ratings, keyword-doorway duplicates.
 **Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
+
+## V26 — Trusted upstream method integration
+
+Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-skill-integration-v26.json` before applying an upstream method. Verify exact upstream file provenance/rights and the relevance to the current stack. Do not run copied third-party scripts.
+
+- `addy-seo`: Lighthouse technical hints plus independent robots/canonicals/owner Search Console evidence.
+
+**Role-specific test oracle:** Sample independent page types for original value, image rights, descriptive alt, compressed assets and appropriate structured data. Check rendered HTML and mobile interaction, then test actual indexing and usage only through authorized owner evidence. Avoid spammy machine-generated keyword pages and unlicensed media.
+
+Check `node scripts/check-official-skill-integration-v26.mjs`, existing domain tests and real external evidence. Missing field data remains `NOT_RUN`; generated local source, SEO score and a source bibliography are not business certification.

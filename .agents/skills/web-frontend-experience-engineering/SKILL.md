@@ -61,3 +61,16 @@ Record LCP, INP and CLS from lab or approved field sources and label provenance;
 ## V24 — reference website research is output-led, not visual cloning
 
 For reference websites or competitor UX, first consume public page patterns and claim IDs from the `web-competitor-audit` website-intelligence report. Its `inspectHTML` captures raw static links/forms/meta/asset signatures and a sampled graph, **not** rendered GUI quality, real mobile behavior or script-driven UI. Use authorized interactive browser testing to measure full task completion, accessibility and actual outputs when permitted; do not infer behavior from `<form>` tags. Extract general interaction concepts and distinct user jobs, not copyrighted code, logos, trade dress or a one-to-one clone. Maintain real blank/loading/error/offline states and an independent usability oracle in product work.
+
+## V26 — Trusted upstream method integration
+
+Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-skill-integration-v26.json`; check source ownership, exact Git blob hash, license, current relevance and domain-specific limitations before use. Methods are adapted, not executable upstream packages.
+
+- `vercel-react` (VERCEL_OFFICIAL_ORG): React islands only: inspect async waterfalls, lazy bundles and hydration; no generic Astro performance guarantee.
+- `vercel-ui` (VERCEL_OFFICIAL_ORG): Review annotated UI against pinned 8k rules, evidence by file line, verify focus/semantics; repo lacks root LICENSE.
+- `anthropic-frontend` (ANTHROPIC_OFFICIAL_ORG): Intentional brief-specific design and self-critique; do not copy recognizable trade dress.
+- `addy-accessibility` (INDIVIDUAL_MAINTAINER_NOT_GOOGLE_OFFICIAL): WCAG 2.2 manual keyboard + screen reader and automated audit; axe pass not WCAG completeness.
+
+**Required verification and boundaries:** Create a brief-specific visual hierarchy with compact controls and restrained motion; review brand originality, title/body typography, actual tool-first layout and error/empty/loading/processing states. Audit source plus browser-rendered focus order, keyboard, accessible name, tap targets, contrast and reduced motion with file:line defects. Never infer WCAG completeness from automated scans or clone a rival's protected trade dress.
+
+Run `node scripts/check-official-skill-integration-v26.mjs` and applicable existing tests. Log artifact/provenance, exact failure, source date and real browser/user metric where available; otherwise `NOT_RUN`. No skill/source label is proof of SEO rank, AI citations, ad eligibility, private architecture or profits.

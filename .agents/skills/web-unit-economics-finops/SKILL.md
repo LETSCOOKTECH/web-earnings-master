@@ -47,3 +47,13 @@ description: "Model and control per-successful-tool-task costs, cloud pricing, s
 - `templates/architecture/scenarios/`
 
 **Required handoff:** ADR with tradeoffs, real file-output fixture evidence, provider limits, measured p50/p95 behavior where available, budget matrix, proof of cost guardrails and rollback. If untested, explicitly say NOT_RUN; if infrastructure/account unavailable, UNKNOWN_EXTERNAL. No fixed universal vendor winner.
+
+## V26 — Trusted upstream method integration
+
+Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-skill-integration-v26.json`; verify source organization, Git blob ID and license before task-time adaptation. No unreviewed upstream script execution or bulk copying.
+
+- `vercel-optimize`: Only when actual deployed Vercel metrics exist; metrics-first candidate-gated cost review.
+
+**Operational acceptance:** Obtain owner Vercel billing metrics before route-level optimization and preserve actual invoice granularity. Model request, egress, CPU, storage, bot, retries and worker costs per completed human job; show uncertainty and worst-case limits. Neither modeled competitor visitors nor advertiser CPC supplies real AdSense RPM or publisher profitability.
+
+Record exact source/metric/oracle, stop on missing provider permissions, run `node scripts/check-official-skill-integration-v26.mjs` plus domain tests, and label unobserved external deployment/SEO/publisher results `NOT_RUN`.

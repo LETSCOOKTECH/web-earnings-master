@@ -45,3 +45,13 @@ description: "Verify websites and asynchronous utilities under million-user dema
 - `scripts/model-tool-economics.mjs`
 
 **Required handoff:** ADR with tradeoffs, real file-output fixture evidence, provider limits, measured p50/p95 behavior where available, budget matrix, proof of cost guardrails and rollback. If untested, explicitly say NOT_RUN; if infrastructure/account unavailable, UNKNOWN_EXTERNAL. No fixed universal vendor winner.
+
+## V26 — Trusted upstream method integration
+
+Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-skill-integration-v26.json` before applying an upstream method. Verify exact upstream file provenance/rights and the relevance to the current stack. Do not run copied third-party scripts.
+
+- `cloudflare-router`: Choose platform based on constraints, version-specific docs, do not force Cloudflare.
+
+**Role-specific test oracle:** Check Cloudflare's currently published limits for the specific contract/plan before designing retries, CPU and queue concurrency. Run adversarial load with p95/p99, rate limits, idempotency, dead-letter recovery, budget alerts and real account quotas. Local browser lab cannot certify one million real users.
+
+Check `node scripts/check-official-skill-integration-v26.mjs`, existing domain tests and real external evidence. Missing field data remains `NOT_RUN`; generated local source, SEO score and a source bibliography are not business certification.

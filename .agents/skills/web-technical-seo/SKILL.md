@@ -82,3 +82,14 @@ For external reference-site sitemap/SEO reconnaissance, route to the runnable `w
 ## V25 — competitor site diagnostics are observable, not indexing/ranking proofs
 
 After the V24 site crawler's origin-scoped report, run `analyzeSiteDepth` from `scripts/analyze-site-depth-v25.mjs` to flag *observed* sitemap 404/noindex, conflicting canonicals, missing static metadata, duplicate sampled titles and links to observed errors. Check original pages and browser DOM; label missing static elements as checks, not guaranteed SEO problems or ranking losses. Never infer exact crawling budget, Google index status, backlinks, conversions or profit from a sampled public graph. Source ownership and Search Console access determine whether actual indexing/search reporting can be verified. Current Google sitemap docs: https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview and official documentation change log: https://developers.google.com/search/updates . Attach claim IDs and coverage-budget limits to every diagnosis before a recommendation. Tests: `node --test tests/sense-v25-quality.test.mjs`.
+
+## V26 — Trusted upstream method integration
+
+Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-skill-integration-v26.json` before applying an upstream method. Verify exact upstream file provenance/rights and the relevance to the current stack. Do not run copied third-party scripts.
+
+- `addy-quality`: Evidence-led Lighthouse+browser+SEO+accessibility with no aggregate-score certification.
+- `addy-seo`: Lighthouse technical hints plus independent robots/canonicals/owner Search Console evidence.
+
+**Role-specific test oracle:** Use Addy SEO's rendered-page + Lighthouse diagnosis to localize actual technical issues, but independently inspect HTTP status, robots, sitemap, canonical consistency, crawlable original content and owner Search Console. Do not claim Lighthouse SEO checks prove ranking, snippets, citations or revenue.
+
+Check `node scripts/check-official-skill-integration-v26.mjs`, existing domain tests and real external evidence. Missing field data remains `NOT_RUN`; generated local source, SEO score and a source bibliography are not business certification.

@@ -50,3 +50,13 @@ description: "Select a verified workload-specific web-tool execution architectur
 ## V24 — observed competitor technology is an evidence hint, never our architecture decision
 
 Use `scripts/site-intelligence.mjs` through `web-competitor-audit` to obtain timestamped public signal summaries, and optional redacted operator-supplied HAR *only where lawful*. Asset paths (`/_astro/`, `/_next/`), headers (`server`, `cf-ray`, `x-vercel-id`) and form actions are observable clues, not proof of private databases, microservices, server placement, implementation languages or actual costs. Preserve exact `INFERENCE_NOT_INTERNAL_PROOF` flags, route evidence to an independent workload cost/security analysis, and reject decisions that blindly clone a competitor's presumed stack. No million-user throughput statement without simulated workload and deployment measurements.
+
+## V26 — Trusted upstream method integration
+
+Inspect `sources/official-skill-integration-v26.json` and `docs/skills/2026-11-25-official-upstream-v26.md` before use. The source files were inspected and pinned, but upstream code is not installed or auto-executed.
+
+- `cloudflare-router`: Choose platform based on constraints, version-specific docs, do not force Cloudflare.
+
+**Verification:** Compare local browser, Astro static/server, Cloudflare Workers, durable queues and object stores using real user data/CPU/memory/latency/retention constraints. Cloudflare's own skill is platform product guidance, not proof that it wins every case. Select current documented runtime limits and explicit second-choice fallback.
+
+Run `node scripts/check-official-skill-integration-v26.mjs`, domain-specific test suites and applicable real browser/server checks. Make distinctions between first-party metrics, modeled numbers, observed site public behavior and `NOT_RUN`.

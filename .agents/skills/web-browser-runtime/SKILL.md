@@ -35,3 +35,14 @@ Read foundation chapters 11 (Chromium/Blink vs Firefox/Gecko/Necko vs Safari/Web
 Before blaming frontend JavaScript classify the first failing stage: reserved/typo hostname, DNS, TLS/QUIC, HTTP/redirect, CDN/stale assets, HTML, JS, UI event and downloadable result. A real localhost HTTP test exercises a different environment from public hosting. For csv-lab.example.org the earlier step (IANA documentation-only hostname) fails; no web application is deployed there.
 **Reproduce and repair:** record exact URL, browser/device/date, first error and network tab. Inspect DNS authority and A/AAAA only on authorized hosts; certificate/SNI, status and response bytes; initial HTML, no-JS state, console exceptions and failed requests; finally actual user action and exact output. Include intentional broken JS and 404/soft404 controls. Use node scripts/preview-seo-csv-lab-v20.mjs for the ACTUAL local URL rather than a document-only one.
 **Evidence:** LOCAL_HTTP_VERIFIED is not EXTERNAL_HTTP_OBSERVED. Real-mobile, external DNS/TLS, owner Search Console, WAF and revenue are separate. MDN mechanism https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview and docs/quality/real-world-release-contract-v20.md.
+
+## V26 — Trusted upstream method integration
+
+Inspect `sources/official-skill-integration-v26.json` and `docs/skills/2026-11-25-official-upstream-v26.md` before use. The source files were inspected and pinned, but upstream code is not installed or auto-executed.
+
+- `anthropic-webapp`: Live local server Playwright and real output/screenshot/console evidence; preserve server lifecycle.
+- `addy-cwv`: Page-level CrUX p75 with origin fallback; browser traces; comparable lab rerun, no fabricated field shift.
+
+**Verification:** Trace DNS/TLS/HTTP, JS waterfall, rendered DOM and actual user task output instead of assuming a loaded page works. For CWV use page-level CrUX p75 with origin fallback labeled, capture device/browser/network for repeatable lab trace and verify failed cases. Only apply React-specific improvements to actual React islands.
+
+Run `node scripts/check-official-skill-integration-v26.mjs`, domain-specific test suites and applicable real browser/server checks. Make distinctions between first-party metrics, modeled numbers, observed site public behavior and `NOT_RUN`.

@@ -39,3 +39,13 @@ For AI Search route to docs/ai-search/README.md and docs/ai-search/05-agent-exec
 Separate: working original task -> actual owned public site -> crawling eligibility -> index observation -> SERP/AI source selection -> visible citation -> affirmative recommendation -> qualified referral -> completed tool task -> verified income. The csv-lab.example.org fixture passed local browser tests but never reached "actual owned public site"; source HTML/canonical cannot jump this gate.
 For each segment use its appropriate external proof: DNS/TLS/hosted bytes for site existence; signed-in GSC/Bing for index/impression; permitted original model capture for AI citation/recommendation; analytics for human task and publisher ledger for revenue. Negative controls: reserved canonical, noindex, WAF, stale/duplicated pages, broken UI, answer citation without recommendation, and branded prompt contamination.
 Google people-first content source: https://developers.google.com/search/docs/fundamentals/creating-helpful-content . Avoid giant keyword-variant lists, buying fake reviews, undisclosed rank formulas, or the fiction that a robots sitemap produces a live site. See docs/quality/real-world-release-contract-v20.md.
+
+## V26 — Trusted upstream method integration
+
+Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-skill-integration-v26.json` before applying an upstream method. Verify exact upstream file provenance/rights and the relevance to the current stack. Do not run copied third-party scripts.
+
+- `addy-seo`: Lighthouse technical hints plus independent robots/canonicals/owner Search Console evidence.
+
+**Role-specific test oracle:** Distinguish raw HTML eligibility, tested user task completion, owned-indexing measurements, search rankings, qualified clicks and real revenue. Addy SEO/Lighthouse observations provide fix candidates, not index/rank proof. Use real source/region query evidence and original useful outputs, not SEO keyword clones.
+
+Check `node scripts/check-official-skill-integration-v26.mjs`, existing domain tests and real external evidence. Missing field data remains `NOT_RUN`; generated local source, SEO score and a source bibliography are not business certification.
