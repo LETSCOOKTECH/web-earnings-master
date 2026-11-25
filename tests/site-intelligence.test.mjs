@@ -22,7 +22,7 @@ function fakeTransport(routes,record=[]){
    const key=new URL(url).pathname;
    const item=routes[key]??{status:404,body:'Not found'};
    if(item.throw)throw new Error(item.throw);
-   return {url,status:item.status??200,headers:item.headers??{'content-type':key.endsWith('.xml')||key.endsWith('.gz')?'application/xml':'text/html'},body:body(item.body??''),redirect_followed:false};
+   return {url,status:item.status??200,headers:item.headers??{'content-type':key==='/robots.txt'?'text/plain':key.endsWith('.xml')||key.endsWith('.gz')?'application/xml':'text/html'},body:body(item.body??''),redirect_followed:false};
  };
 }
 const mkHTML=(title,links=[],extra='')=>`<!doctype html><html><head><title>${title}</title><link rel="canonical" href="${base}/${title.toLowerCase().replace(/\s+/g,'-')}"></head><body><main><h1>${title}</h1><nav>${links.map(x=>'<a href="'+x+'">Next</a>').join('')}</nav>${extra}</main></body></html>`;
