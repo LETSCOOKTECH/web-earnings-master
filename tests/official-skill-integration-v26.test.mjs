@@ -127,3 +127,16 @@ test('actual CLI can evaluate a real local receipt without claiming live agent r
   assert.equal(JSON.parse(r.stdout).status,'SYNTHETIC_NOT_PROOF');
  }finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
+
+test('pre-registered ten held-out cases contain no invented execution results',()=>{
+ const draft=JSON.parse(fs.readFileSync(path.join(root,'templates/agent-skill-trials-v26.NOT_RUN.json'),'utf8'));
+ assert.equal(draft.cases.length,10);
+ assert.ok(draft.cases.every(c=>c.baseline.status==='NOT_RUN'&&c.candidate.status==='NOT_RUN'));
+ assert.ok(draft.cases.some(c=>c.kind==='TRIGGER_NEGATIVE'));
+ assert.ok(draft.cases.some(c=>c.kind==='ADVERSARIAL'));
+ const result=assessSkillTrials(draft);
+ assert.equal(result.status,'SYNTHETIC_NOT_PROOF');
+ assert.equal(result.paired_count,0);
+ assert.equal(result.observed_delta_percentage_points,null);
+ assert.equal(result.actual_agent_runs_independently_verified,false);
+});
