@@ -29,11 +29,25 @@ export function parseCsv(input,options={}){
  for(let i=1;i<rows.length;i++)if(rows[i].length!==width)throw Error('Row '+(i+1)+' has a different number of columns');
  return rows;
 }
-export function dedupeCsv(input,{hasHeader=true,caseSensitive=true,...bounds}={}){
+export function dedupeCsv(input,{
+ hasHeader=true,caseSensitive=true,matchColumn=null,trimForMatching=false,...bounds
+}={}){
  const rows=parseCsv(input,bounds),seen=new Set(),output=[],data=hasHeader?rows.slice(1):rows;
+ const width=rows[0].length;
+ if(matchColumn!==null&&(!Number.isInteger(matchColumn)||matchColumn<1||matchColumn>width))
+  throw Error('Match column must be between 1 and '+width);
  if(hasHeader)output.push(rows[0]);
- for(const row of data){const key=JSON.stringify(row.map(x=>caseSensitive?x:x.toLocaleLowerCase('en-US')));if(seen.has(key))continue;seen.add(key);output.push(row)}
- return {rows:output,removed:data.length-seen.size,kept:seen.size,original:data.length};
+ for(const row of data){
+  const comparable=matchColumn===null?row:[row[matchColumn-1]];
+  const key=JSON.stringify(comparable.map(value=>{
+   const text=trimForMatching?value.trim():value;
+   return caseSensitive?text:text.toLocaleLowerCase('en-US');
+  }));
+  if(seen.has(key))continue;
+  seen.add(key);output.push(row);
+ }
+ return {rows:output,removed:data.length-seen.size,kept:seen.size,original:data.length,
+  width,matchColumn,hasHeader};
 }
 const numeric=/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/;
 function spreadsheetSafe(s){
