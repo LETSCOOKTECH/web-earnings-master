@@ -132,3 +132,13 @@ At Stage 0/1 market and rival analysis, dispatch `web-competitor-audit` with `do
 For an "find the best tool to build" request, route to `web-opportunity-intelligence` and `web-niche-validation`, run `scripts/run-tool-hunter-v25.mjs` on evidence-shaped candidate plans, and label structural shortlist output `NOT_MARKET_PROVEN`. Dispatch `web-keyword-intent` for correct metric/provider units, `web-competitor-audit` for permitted V24 crawl + `analyzeSiteDepth` and real same-input output tests, and `web-workload-architecture-router` for execution placement/cost before selecting Astro. Preserve missing/contradictory evidence, zero-real-traffic state and honest competing user substitutes. Never manufacture a "100× advantage" from source count, sitemap breadth, developer docs or hypothetical RPM.
 
 For Astro tool creation, read `web-astro-engineering` V25 (current Astro output modes **static/server**, selective on-demand adapter, no obsolete `hybrid`) and run `node scripts/audit-astro-v25.mjs --project REAL_PROJECT` plus its clean-room build/test/browser oracle. For a public candidate, run `--production --origin ACTUAL_OWNER_HTTPS_URL` after real build output, site static audit, host/security checks, publishing controls and source/policy review. All checks are **source/build evidence**, not automatically external deployment, ranking, AdSense approval or real profit. Mandatory regression: `node --test tests/sense-v25-quality.test.mjs`; field approval requires an actual validated user outcome.
+
+## V26 — Trusted upstream method integration
+
+Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-skill-integration-v26.json`; verify source organization, Git blob ID and license before task-time adaptation. No unreviewed upstream script execution or bulk copying.
+
+- `anthropic-skill-creator`: Reproducible no-skill vs with-skill task runs; description trigger negatives and blinded comparisons.
+
+**Operational acceptance:** Use Anthropic skill-creator methodology: preregister actual unseen tasks, compare fixed no-skill/current-skill/candidate-skill agent runs under same model/capability, save task-oracle receipts, false-trigger negatives and blind human review. Never claim 10× skill effectiveness from a source-list or simulated outputs. Every upstream method must pass provenance/applicability/license checks.
+
+Record exact source/metric/oracle, stop on missing provider permissions, run `node scripts/check-official-skill-integration-v26.mjs` plus domain tests, and label unobserved external deployment/SEO/publisher results `NOT_RUN`.
