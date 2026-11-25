@@ -1,0 +1,88 @@
+{
+  "schema": "sense-opportunity-v22",
+  "study": {
+    "mode": "SYNTHETIC",
+    "locale": "en-US",
+    "question_scope": "Developers who validate JSON Lines files on a local device",
+    "preregistered_at": "2026-11-25T08:00:00Z"
+  },
+  "user_job": {
+    "task": "Validate a small JSONL dataset and see which lines contain invalid JSON without uploading the file",
+    "target_user": "Data engineering developer",
+    "positive_oracle": "A valid two-line JSONL sample produces exactly two retained records and one explicit download"
+  },
+  "fixtures": [
+    {
+      "id": "normal",
+      "kind": "NORMAL",
+      "input_artifact": "SYNTHETIC:normal.jsonl",
+      "expected_result": "Two valid records, no errors, exact newline-preserving download",
+      "oracle_method": "Independent expected bytes written before processing"
+    },
+    {
+      "id": "broken",
+      "kind": "MALFORMED",
+      "input_artifact": "SYNTHETIC:broken.jsonl",
+      "expected_result": "Second line invalid; zero downloadable partial output",
+      "oracle_method": "Independent JSON grammar expected invalid line two"
+    },
+    {
+      "id": "hostile",
+      "kind": "ADVERSARIAL",
+      "input_artifact": "SYNTHETIC:hostile.jsonl",
+      "expected_result": "HTML-looking string remains literal text and never executes",
+      "oracle_method": "DOM contains no HTML img/script elements"
+    }
+  ],
+  "sources": [
+    {
+      "id": "e1",
+      "kind": "HUMAN_REPORT",
+      "unit": "QUALITATIVE",
+      "url": "https://forum.example.org/thread",
+      "observed_at": "2026-11-24T08:00:00Z",
+      "observation": "SYNTHETIC imagined complaint about losing private data",
+      "artifact": "SYNTHETIC:forum1"
+    },
+    {
+      "id": "e2",
+      "kind": "SEARCH_ESTIMATE",
+      "unit": "MODELED_MONTHLY_SEARCHES",
+      "url": "https://search.example.org/query",
+      "observed_at": "2026-11-24T09:00:00Z",
+      "observation": "SYNTHETIC model estimate only, no confirmed searches",
+      "artifact": "SYNTHETIC:search1"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Alpha Tools",
+      "input_fixture_id": "normal",
+      "observed_output_artifact": "SYNTHETIC:competitor-a",
+      "comparison": "INCONCLUSIVE",
+      "limitations": "No actual alternate product has been tested in this synthetic example."
+    },
+    {
+      "name": "Beta Converter",
+      "input_fixture_id": "normal",
+      "observed_output_artifact": "SYNTHETIC:competitor-b",
+      "comparison": "INCONCLUSIVE",
+      "limitations": "Any claim of better privacy or fidelity needs actual reproducible testing."
+    }
+  ],
+  "distribution": {
+    "channels": [
+      "Original developer tutorial and useful integration examples"
+    ]
+  },
+  "economics": {
+    "currency": "USD",
+    "variable_cost_per_1000": 0.15,
+    "assumptions": "Entirely hypothetical CDN and support cost; no traffic or RPM measured."
+  },
+  "claims": [],
+  "owner_review": {
+    "reviewer": "",
+    "authorized": false
+  }
+}

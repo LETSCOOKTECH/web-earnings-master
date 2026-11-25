@@ -7,11 +7,11 @@ const root=path.resolve(import.meta.dirname,'..');
 const rootNames=fs.readdirSync(path.join(root,'.agents/skills'));
 const registered=JSON.parse(fs.readFileSync(path.join(root,'sources/production_skills_v7.json'),'utf8')).skills.map(x=>x.id);
 const load=()=>Object.fromEntries(rootNames.map(name=>[name,fs.readFileSync(path.join(root,'.agents/skills',name,'SKILL.md'),'utf8')]));
-test('audits exactly 49 active skills, not stale README milestone counts',()=>{
+test('audits exactly 50 active skills, not stale README milestone counts',()=>{
  const r=auditSkillLibrary(load(),registered);
  assert.equal(r.inventory_matches_registry,true);
- assert.equal(r.counts.registered,49);
- assert.equal(r.counts.found,49);
+ assert.equal(r.counts.registered,50);
+ assert.equal(r.counts.found,50);
 });
 test('skill coverage audit does NOT call source links or local checks verified production',()=>{
  const r=auditSkillLibrary(load(),registered);

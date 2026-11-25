@@ -1,0 +1,70 @@
+import {test,expect} from '@playwright/test';
+import fs from 'node:fs';
+import AxeBuilder from '@axe-core/playwright';
+
+test('rendered real Astro tool validates data, exports exact bytes and rejects unsafe HTML',async({page},testInfo)=>{
+ const requests=[];
+ page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:4321')&&!r.url().startsWith('blob:'))requests.push(r.url());});
+ await page.goto('/tools/jsonl-validator/');
+ await expect(page.getByRole('heading',{name:/Validate JSON Lines/})).toBeVisible();
+ await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href','https://jsonl-studio.example.org/tools/jsonl-validator/');
+ await expect(page.locator('meta[name=robots]')).toHaveAttribute('content','noindex,follow');
+ await expect(page.getByRole('status')).toHaveText(/No file validated/);
+ await page.getByRole('button',{name:'Load example'}).click();
+ await expect(page.locator('#jsonl-paste')).toHaveValue(/\{"name":"Asha"/);
+ await page.getByRole('button',{name:/Validate JSONL/}).click();
+ await expect(page.getByRole('status')).toHaveText(/Validation passed: 2 JSON values/);
+ await expect(page.locator('#stat-valid')).toHaveText('2');
+ await expect(page.locator('#stat-errors')).toHaveText('0');
+ const downloadPromise=page.waitForEvent('download');
+ await page.getByRole('link',{name:/Download validated JSONL/}).click();
+ const saved=await downloadPromise;
+ const bytes=fs.readFileSync(await saved.path(),'utf8');
+ expect(bytes).toBe('{"name":"Asha","id":1}\n{"name":"Lee","id":2}\n');
+ await page.screenshot({path:testInfo.outputPath('desktop-success.png'),fullPage:true});
+ await page.locator('#jsonl-paste').fill('{"html":"<img src=x onerror=alert(1)>"}\n');
+ await expect(page.locator('#result')).toBeHidden();
+ await page.getByRole('button',{name:/Validate JSONL/}).click();
+ await expect(page.getByRole('status')).toHaveText(/Validation passed/);
+ await expect(page.locator('table img')).toHaveCount(0);
+ await expect(page.locator('#preview-body')).toContainText('<img src=x onerror=alert(1)>');
+ expect(requests).toEqual([]);
+});
+test('bad JSON and corrupt UTF-8 do not create partial downloads',async({page})=>{
+ await page.goto('/tools/jsonl-validator/');
+ await page.locator('#jsonl-paste').fill('{"ok":true}\n{"broken":}\n');
+ await page.getByRole('button',{name:/Validate JSONL/}).click();
+ await expect(page.getByRole('status')).toHaveText(/1 invalid record/);
+ await expect(page.getByText(/Line 2: Invalid JSON value/)).toBeVisible();
+ await expect(page.locator('#download')).toBeHidden();
+ await page.locator('#jsonl-file').setInputFiles({name:'bad.jsonl',mimeType:'application/x-ndjson',buffer:Buffer.from([0xff,0xfe,0x80])});
+ await expect(page.locator('#jsonl-paste')).toHaveValue('');
+ await page.getByRole('button',{name:/Validate JSONL/}).click();
+ await expect(page.getByRole('status')).toHaveText(/not valid UTF-8/);
+ await expect(page.locator('#download')).toBeHidden();
+ await page.getByRole('button',{name:'Reset'}).click();
+ await expect(page.locator('#jsonl-paste')).toHaveValue('');
+});
+test('responsive layout, no external network, and explanatory no-JS content',async({page},testInfo)=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.goto('/tools/jsonl-validator/');
+ await expect(page.locator('h1')).toHaveCount(1);
+ await expect(page.locator('main')).toContainText('does not upload files');
+ const width=await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth);
+ expect(width).toBeLessThanOrEqual(1);
+ await page.locator('#jsonl-paste').fill('{"a":1}\n{"a":2}\n');
+ await page.getByRole('button',{name:/Validate JSONL/}).click();
+ await expect(page.locator('#stat-valid')).toHaveText('2');
+ await page.screenshot({path:testInfo.outputPath('mobile-success.png'),fullPage:true});
+});
+
+test('automated WCAG scan catches critical/serious issues on the working page and results',async({page})=>{
+ await page.goto('/tools/jsonl-validator/');
+ const initial=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
+ expect(initial.violations.filter(v=>['critical','serious'].includes(v.impact)),JSON.stringify(initial.violations)).toEqual([]);
+ await page.locator('#jsonl-paste').fill('{"hello":"world"}\n');
+ await page.getByRole('button',{name:/Validate JSONL/}).click();
+ await expect(page.getByRole('status')).toHaveText(/Validation passed/);
+ const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
+ expect(result.violations.filter(v=>['critical','serious'].includes(v.impact)),JSON.stringify(result.violations)).toEqual([]);
+});

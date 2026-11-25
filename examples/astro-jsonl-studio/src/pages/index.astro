@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Sense JSONL Studio | Validate JSON Lines Locally" description="Inspect JSON Lines files and download normalized JSONL in your browser, with no uploads." canonicalPath="/">
+  <main class="shell landing" id="content">
+    <div class="eyebrow">FILE UTILITIES / OPEN STANDARDS</div>
+    <h1>Understand your JSON Lines.<br/><span class="accent">Without uploading a byte.</span></h1>
+    <p class="lead">Validate each JSONL record, find the exact line containing an error, and export normalized data. A privacy-first local tool for developers and data teams.</p>
+    <a class="btn primary" href="/tools/jsonl-validator/">Open JSONL Validator <span aria-hidden="true">↗</span></a>
+    <div class="feature-grid">
+      <article><span class="kicker">01 / EXPLAINABLE</span><h2>Line-by-line errors</h2><p>Trace malformed JSON directly to its source line without invented corrections.</p></article>
+      <article><span class="kicker">02 / LOCAL</span><h2>No server upload</h2><p>The browser parses your text and never sends file contents to an external endpoint.</p></article>
+      <article><span class="kicker">03 / DETERMINISTIC</span><h2>Reproducible export</h2><p>Export compact valid JSONL, using explicit limits and a checkable output file.</p></article>
+    </div>
+    <p class="warning">Local verification demo, not a publicly deployed service. The configured example.org origin is documentation-only.</p>
+  </main>
+</BaseLayout>

@@ -1,7 +1,7 @@
 {
   "schema": "sense-production-skill-gates-v7",
   "edition": "2026-11-25-v17",
-  "expectSkills": 49,
+  "expectSkills": 50,
   "scope": "instruction contracts only; external property validation is separate",
   "statuses": [
     "PENDING",
@@ -401,6 +401,14 @@
       "localGate": "Run source atlas validator, recommendation cohort and quote adversarial tests; inspect actual user task and benchmark",
       "externalGate": "Verify real provider/locale output, Google/Bing owner data and genuine user outcomes independently",
       "blocker": "No output authenticity, fake ranked first, missing negative responses, manufactured evidence or no actual user value"
+    },
+    {
+      "id": "web-dominant-tool-creator",
+      "category": "End-to-end web tool delivery",
+      "deliverable": "Market hypothesis and real competitor tasks, independently verified functional Astro tool, accessible UI, security/SEO checks, measured release state and acquisition experimentation",
+      "localGate": "Run demand schema adversarial tests; clean Astro 7 install/check/build; independent JSONL output tests and three real browser-engine user action tests",
+      "externalGate": "Independent owner-authorized public DNS/TLS, deployed functionality, GSC/Bing/AI results and real publisher/user outcomes when available",
+      "blocker": "Fabricated demand or rankings, missing functional output, unauthorized deployment, unsafe data, fake demo, unverified publisher approval"
     }
   ]
 }

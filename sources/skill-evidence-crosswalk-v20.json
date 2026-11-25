@@ -759,6 +759,22 @@
       "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
       "external_status": "NOT_AUTHENTICATED",
       "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-dominant-tool-creator",
+      "reference_source_ids": [
+        "astro-config",
+        "google-ai-features",
+        "google-trends-data",
+        "v21-rfc4180",
+        "v21-owasp-wstg-csv"
+      ],
+      "local_evidence_expected": "Run demand schema adversarial tests; clean Astro 7 install/check/build; independent JSONL output tests and three real browser-engine user action tests",
+      "external_evidence_expected": "Independent owner-authorized public DNS/TLS, deployed functionality, GSC/Bing/AI results and real publisher/user outcomes when available",
+      "blocking_condition": "Fabricated demand or rankings, missing functional output, unauthorized deployment, unsafe data, fake demo, unverified publisher approval",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
     }
   ]
 }

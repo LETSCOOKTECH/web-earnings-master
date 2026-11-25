@@ -1,0 +1,77 @@
+name: V22 Astro tool creator clean-room validation
+on:
+  push:
+    branches:
+      - 'feature/v22-dominant-tool-creator-astro-integration'
+  pull_request:
+    paths:
+      - 'examples/astro-jsonl-studio/**'
+      - '.agents/skills/web-dominant-tool-creator/**'
+      - 'scripts/check-dominant-tool-creator-v22.mjs'
+      - 'tests/dominant-tool-creator-v22.test.mjs'
+      - 'package.json'
+      - '.github/workflows/astro-tool-creator-v22.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  astro:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    defaults:
+      run:
+        working-directory: examples/astro-jsonl-studio
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.22.3'
+          cache: npm
+          cache-dependency-path: examples/astro-jsonl-studio/package-lock.json
+      - name: Install pinned Astro starter dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Astro strict type and framework check
+        run: npm run check
+      - name: Build real Astro 7 static pages
+        run: npm run build
+      - name: Independent exact-output JSONL parser tests
+        run: npm test
+      - name: Verify static generated HTML, asset, canonical and test-only restrictions
+        run: |
+          test -f dist/index.html
+          test -f dist/tools/jsonl-validator/index.html
+          test -f dist/assets/jsonl-worker.mjs
+          test -f dist/assets/jsonl-core.mjs
+          grep -q 'noindex,follow' dist/tools/jsonl-validator/index.html
+          grep -q 'Disallow: /' dist/robots.txt
+          grep -q 'https://jsonl-studio.example.org/tools/jsonl-validator/' dist/tools/jsonl-validator/index.html
+          grep -q 'sitemap' dist/sitemap-index.xml
+      - name: Ensure reserved-documentation domain can never ship as a public release
+        run: |
+          if SENSE_RELEASE=public SITE_URL=https://jsonl-studio.example.org npm run build; then
+            echo 'FAIL: reserved example.org origin was accepted for public release'; exit 1
+          else
+            echo 'PASS: refused public launch on reserved test-only host'
+          fi
+      - name: Blind-copy scaffold and independently build/install/test generated project
+        run: |
+          node ../../scripts/scaffold-astro-tool-v22.mjs --out ../../.tmp/astro-copy-v22
+          cd ../../.tmp/astro-copy-v22
+          npm ci --no-audit --no-fund
+          npm run check
+          npm run build
+          npm test
+          test -f dist/tools/jsonl-validator/index.html
+          grep -q noindex,follow dist/tools/jsonl-validator/index.html
+      - name: Install three real browser engines
+        run: npx playwright install --with-deps chromium firefox webkit
+      - name: Verify real tool end-to-end, accessibility and user-download bytes
+        run: npm run test:browser
+      - name: Preserve browser evidence artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v22-astro-jsonl-evidence-${{ github.run_id }}
+          path: |
+            examples/astro-jsonl-studio/artifacts/
+          if-no-files-found: warn

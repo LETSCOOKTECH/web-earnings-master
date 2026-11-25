@@ -22,13 +22,19 @@ A continuously improved technical research and execution library for the **entir
 
 **LOCAL CSV LAB — NOT PUBLIC.** The repository's [CSV deduplication example](examples/seo-csv-lab/README.md) is a **working local test fixture**, not a hosted demo. `csv-lab.example.org` is an IANA-reserved example hostname, not an actual deployable site; do not click or share it as a live product. To use the tool, run `node scripts/preview-seo-csv-lab-v20.mjs` locally and open the exact localhost address printed. To prepare a candidate root-domain build, use `node scripts/build-public-csv-demo-v20.mjs --origin https://YOUR_ACTUAL_OWNED_DOMAIN/ --out .tmp/csv-public`, then run the real domain and browser checks **after** actually deploying. A successful build or local Playwright test never means DNS, public HTTPS, Google indexing, AdSense approval or human visits are verified.
 
-**Skill-library status:** 49 registered Codex skills. Existing static manifests and tests do **not** independently validate the completeness, originality, policy accuracy or production effectiveness of all 49. See [the V20 entire-skill quality inventory](docs/audits/2026-11-25-skill-library-truth-v20.md), [49-skill first-party source and test crosswalk](sources/skill-evidence-crosswalk-v20.json) and [full-stack release evidence specification](docs/quality/real-world-release-contract-v20.md) for measured deficiencies and mandatory real-world checks.
+**Skill-library status:** 50 registered Codex skills. Existing static manifests and tests do **not** independently validate the completeness, originality, policy accuracy or production effectiveness of all 49. See [the V20 entire-skill quality inventory](docs/audits/2026-11-25-skill-library-truth-v20.md), [49-skill first-party source and test crosswalk](sources/skill-evidence-crosswalk-v20.json) and [full-stack release evidence specification](docs/quality/real-world-release-contract-v20.md) for measured deficiencies and mandatory real-world checks.
 
 ## V21: premium functioning CSV Studio — LOCAL ONLY
 
 The former minimal CSV fixture has been upgraded to a [real browser-only CSV Studio](examples/seo-csv-lab/README.md), with a responsive two-panel UI, a bounded background Worker, valid UTF-8 file reading, deterministic full-row or column-key deduplication, case/whitespace matching controls, preview/statistics, downloaded CSV and explicit error/cancel/reset states. [The V21 acceptance guide](docs/quality/21-premium-csv-studio-acceptance.md) pins exact output bytes, 2 MB / 5,000-row / 200-column boundaries, RFC/OWASP/MDN source scopes, security failures and live release conditions. [Actual browser tests](tests/seo-csv-browser-e2e.mjs) assert saved bytes and corrupted-data/HTML-injection/worker-crash failures in Chromium, Firefox and WebKit, with real screenshot artifacts recorded by CI.
 
 To actually use it on your machine, run `node scripts/preview-seo-csv-lab-v20.mjs` from this repo root, then open the printed localhost address. **This is not deployed on a public URL.** No real DNS/TLS, Google indexing, AI citation, AdSense approval, native mobile or earnings is asserted from the code.
+
+## V22 — Dominant Tool Creator: functional Astro + market gates + AI/SEO workflow
+
+The [50th master Codex skill](.agents/skills/web-dominant-tool-creator/SKILL.md) orchestrates actual user jobs, source-checked market demand, competitor output benchmarks, cost-efficient workload architecture, accessible Astro or alternative implementation, independent file/API tests, SEO/AI eligibility, authorized deployment and genuine traffic/publisher economics. It **does not guarantee a 100× improvement, ranking #1 or AdSense approval.** [Source-by-source upstream adaptation and licensing](.agents/skills/web-dominant-tool-creator/references/05-upstream-integration.md) covers Croftweaver, Astro Skills, Claude SEO and selected QA methods without blindly importing unknown instructions.
+
+Our [standalone Astro 7 JSONL Studio](examples/astro-jsonl-studio/README.md) is a working local tool, not an SEO-only placeholder: fixed package/lockfile, real Astro pages, Worker, pure JSONL parser, error line report, download, mobile-responsive original UI and 3-engine Playwright tests. Its default canonical is a reserved example.org URL with **noindex and robots Disallow** until an actual owned public domain is supplied. The old `templates/astro` remain examples-only. Run `node scripts/scaffold-astro-tool-v22.mjs --out .tmp/my-tool` to create a **local** copy. Run `npm run audit:tool-creator:demand` to verify the deliberately synthetic market brief fails to claim real demand.
 
 ## The operating loop
 
@@ -59,7 +65,7 @@ New dedicated [Dominant Recommendar skill](.agents/skills/web-dominant-recommend
 
 ## Skill library
 
-**49 active Codex skills**, stored under [`.agents/skills/`](.agents/skills/), cover:
+**50 active Codex skills**, stored under [`.agents/skills/`](.agents/skills/), cover:
 
 | Workstream | Skills | What they produce |
 | --- | --- | --- |

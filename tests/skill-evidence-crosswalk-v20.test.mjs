@@ -9,8 +9,8 @@ const base=()=>read('sources/skill-evidence-crosswalk-v20.json');
 const registry=read('sources/production_skills_v7.json');
 const official=new Set(read('sources/official_sources.json').sources.map(x=>x.id));
 const check=x=>checkCrosswalk(x,registry,official);
-test('all 49 skills have explicit first party source leads with local and external tests',()=>{
- const r=check(base());assert.equal(r.status,'MAPPED_NOT_CERTIFIED');assert.equal(r.mapped_skills,49);assert.ok(r.source_ids_referenced>=50);
+test('all 50 skills have explicit first party source leads with local and external tests',()=>{
+ const r=check(base());assert.equal(r.status,'MAPPED_NOT_CERTIFIED');assert.equal(r.mapped_skills,50);assert.ok(r.source_ids_referenced>=50);
 });
 test('every mapped source still fails to independently certify actual expert quality or real website',()=>{
  const r=check(base());assert.equal(r.current_original_semantics_automatically_verified,false);assert.equal(r.user_task_production_certified,false);
