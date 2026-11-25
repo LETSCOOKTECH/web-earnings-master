@@ -8,8 +8,10 @@ const official={
  Perplexity:new Set(['docs.perplexity.ai']),Microsoft:new Set(['blogs.bing.com']),
  Anthropic:new Set(['support.claude.com'])
 };
-export function checkRecommendarRegistry(data){
+export function checkRecommendarRegistry(data,{now=Date.now(),maxSourceAgeDays=30}={}){
  const errors=[],warnings=[];
+ if(!Number.isFinite(now)||!Number.isInteger(maxSourceAgeDays)||maxSourceAgeDays<1||maxSourceAgeDays>365)
+  errors.push('Invalid source-evidence clock or age policy');
  if(data?.schema!=='sense-recommendar-v17-official-sources'||!Array.isArray(data?.sources)||!Array.isArray(data?.providers))
   return {status:'FAIL',errors:['Missing recommendation source atlas schema'],warnings};
  const ids=new Set();
@@ -20,7 +22,10 @@ export function checkRecommendarRegistry(data){
   let url;try{url=new URL(x.url)}catch{errors.push('Bad source URL '+x.id);continue}
   if(url.protocol!=='https:'||!official[x.provider].has(url.hostname)||url.username||url.password||url.port)
    errors.push('First-party original URL host invalid '+x.id);
-  if(x.original_opened!==true||!Number.isFinite(Date.parse(x.reviewed_at_utc))||Date.parse(x.reviewed_at_utc)>Date.now()+300000||typeof x.claim!=='string'||x.claim.length<40||typeof x.limitation!=='string'||x.limitation.length<30)
+  const reviewTime=Date.parse(x.reviewed_at_utc||'');
+  if(x.original_opened!==true||!Number.isFinite(reviewTime)||reviewTime>now+300000||
+    (Number.isFinite(now)&&Number.isInteger(maxSourceAgeDays)&&now-reviewTime>maxSourceAgeDays*86400000)||
+    typeof x.claim!=='string'||x.claim.length<40||typeof x.limitation!=='string'||x.limitation.length<30)
    errors.push('Source claim must be dated, directly opened, scoped and limited '+x.id);
   if(/guaranteed rank|guaranteed #1|secret algorithm|100% inclusion/i.test(x.claim||''))errors.push('Source makes fabricated rank promise '+x.id);
  }
@@ -43,7 +48,8 @@ export function checkRecommendarRegistry(data){
  return {status:errors.length?'FAIL':'PROVIDER_METADATA_ONLY',errors,warnings,
   listed_surfaces:data.providers.length,opened_originals:data.sources.length,
   exact_ranking_algorithms_verified:false,actual_citations_verified:false,
-  source_metadata_not_live_proof:true};
+  source_metadata_not_live_proof:true,
+  source_age_gate:'Baseline reviews expire after 30 days by default; current provider action requires reopening the original regardless of age'};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  try{const root=path.resolve(import.meta.dirname,'..');
