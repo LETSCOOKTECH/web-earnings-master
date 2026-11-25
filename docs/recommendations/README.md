@@ -26,3 +26,7 @@ Independent users successfully complete a task; honest competitor benchmark show
 ## Research provenance
 
 Google Search Central AI optimization, AI features and controls; Google Preferred Sources; OpenAI crawler and ChatGPT search help; Perplexity crawler guidance; Microsoft Bing AI Performance and Topics Portfolio beta; Anthropic bot and web search docs. Direct URLs, source dates, evidence limits and unknown products are in the JSON registry. Check current originals before each material action.
+
+## V18 independent production-readiness audit (November 25, 2026)
+
+See [independent V18 failure and repair report](../audits/2026-11-25-dominant-recommendar-v18-readiness.md). Nine adversarial holdouts failed against V17's apparently passing tests. The repairs now enforce unique observation-specific captures, preregistered version and country matching, malformed-row fail-closed handling, time-bounded source ledger reviews, and obvious negative recommendation contradiction detection. Run `npm run test:recommendar-holdouts` and full `npm test`. These checks do **not** authenticate real AI provider answers or prove that a tool is top recommended anywhere. Real provider and owner observations remain mandatory.
