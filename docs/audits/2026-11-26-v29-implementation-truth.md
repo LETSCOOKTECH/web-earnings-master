@@ -6,7 +6,7 @@ The requested uploaded master execution prompt proposes nine bug classes, an add
 
 ### Actual working code delivered in V29
 
-- Separate Astro 7 Studio sample with locked dependencies, 20 functional conversion/validation routes and four category hubs.
+- Separate Astro 7 Studio sample with locked dependencies, 28 functional conversion/validation routes and four category hubs.
 - Dedicated Web Worker, actual CSV/TSV/JSON/JSONL conversion, text-only preview, download and revoke, limit/error controls.
 - Fatal streaming file decode and native gzip decompression for supported text inputs; decoded maximum 16 MiB, at most 200k rows and 500 columns. This is memory-bounded, NOT a 100–500 MB streaming product.
 - Exact-output tests for leading zeros, quoted newlines/commas, malformed CSV/JSONL, Excel BOM, formula-escape for CSV/TSV exports, negative numbers, opt-in best-effort secret masking, and distinct route outputs.
@@ -39,4 +39,4 @@ The requested uploaded master execution prompt proposes nine bug classes, an add
 
 ### Release readiness decision
 
-LOCAL_BUILD_ONLY when actual V29 Astro check, build, 20-route tests, browser tests and asset gate pass in CI. Owner-specific commercial site remains HOLD even if CI passes. Require a real DNS/TLS owned-domain deployment, legal/privacy review, browser runtime and performance results, GSC/AI-source observations, ad network compliance and real cohort economics before any production certification.
+LOCAL_BUILD_ONLY when actual V29 Astro check, build, 28-route tests, browser tests and asset gate pass in CI. Owner-specific commercial site remains HOLD even if CI passes. Require a real DNS/TLS owned-domain deployment, legal/privacy review, browser runtime and performance results, GSC/AI-source observations, ad network compliance and real cohort economics before any production certification.
