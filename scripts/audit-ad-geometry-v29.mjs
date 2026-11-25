@@ -30,6 +30,6 @@ export function auditAdGeometry(packet,{target=INTERNAL_AD_TARGETS}={}){
    if(gap<target.minGapPx)errors.push('AD_ACTION_GAP_BELOW_INTERNAL_TARGET:'+i+':'+j+':'+gap.toFixed(1));
   }
  }
- return {status:errors.length?'FAIL_INTERNAL_TARGETS':packet.source==='OWNED_PLAYWRIGHT_MEASUREMENT'?'PASS_MEASURED_LAYOUT_ONLY':'FIXTURE_ONLY_NOT_LIVE',errors,warnings,ad_controls_checked:checked,min_gap_px:minimum,cls:packet.cls,
-  google_policy_certified:false,invalid_traffic_absent_verified:false,real_ad_fill_verified:false};
+ return {status:errors.length?'FAIL_INTERNAL_TARGETS':packet.source==='OWNED_PLAYWRIGHT_MEASUREMENT'?'STRUCTURAL_GEOMETRY_PASS_BROWSER_RECEIPT_UNAUTHENTICATED':'FIXTURE_ONLY_NOT_LIVE',errors,warnings,ad_controls_checked:checked,min_gap_px:minimum,cls:packet.cls,
+  browser_receipt_authenticated:false,google_policy_certified:false,invalid_traffic_absent_verified:false,real_ad_fill_verified:false};
 }
