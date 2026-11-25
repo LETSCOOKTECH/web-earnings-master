@@ -75,7 +75,9 @@
     "audit:site-depth:v25": "node scripts/analyze-site-depth-v25.mjs",
     "audit:upstream:v26": "node scripts/check-official-skill-integration-v26.mjs",
     "test:upstream:v26": "node --test tests/official-skill-integration-v26.test.mjs",
-    "eval:agent-skills:v26": "node scripts/evaluate-agent-skill-trials-v26.mjs"
+    "eval:agent-skills:v26": "node scripts/evaluate-agent-skill-trials-v26.mjs",
+    "audit:public-agent:v27": "node scripts/check-public-agent-access-v27.mjs",
+    "test:public-agent:v27": "node --test tests/public-agent-discovery-v27.test.mjs"
   },
   "description": "Evidence-first Codex skill engine for SEO/AEO/GEO/ASO, safe utility execution, million-user capacity and publisher-margin planning"
 }
