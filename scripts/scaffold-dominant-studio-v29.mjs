@@ -20,7 +20,7 @@ export function scaffoldDominantStudio(dest){
  fs.mkdirSync(absolute,{recursive:true});
  fs.cpSync(src,absolute,{recursive:true,filter:p=>p===src||!banned.has(path.basename(p))});
  const receipt={schema:'sense-studio-scaffold-v29',status:'LOCAL_COPY_NOT_DEPLOYED',path:absolute,
-  routes:20,parquet_implemented:false,toon_implemented:false,large_file_500mb_verified:false,
+  routes:28,parquet_implemented:false,toon_implemented:false,large_file_500mb_verified:false,
   public_https_verified:false,adsense_verified:false,real_search_demand_verified:false,
   next:'npm ci && npm run check && npm run build && npm test; browser tests require installed Playwright browsers'};
  fs.writeFileSync(path.join(absolute,'SENSE_STUDIO_RECEIPT.json'),JSON.stringify(receipt,null,2)+'\n');
