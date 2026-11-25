@@ -42,3 +42,7 @@ Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-ski
 **Required verification and boundaries:** Run actual keyboard tab/shift-tab, skip-navigation, escape/return, focus restore, labels, live status and rendered accessibility-tree checks. Use Playwright/axe as finding aids and manually verify high-impact WCAG failures including screen reader and reduced motion. Every issue must name reproducible route, state and observed user task outcome; no score alone certifies WCAG.
 
 Run `node scripts/check-official-skill-integration-v26.mjs` and applicable existing tests. Log artifact/provenance, exact failure, source date and real browser/user metric where available; otherwise `NOT_RUN`. No skill/source label is proof of SEO rank, AI citations, ad eligibility, private architecture or profits.
+
+## V29 additive practical Studio UX
+Review examples/astro-dominant-studio-v29/src/pages/tools/[slug].astro for real labels, status messages, preview, keyboard focus, file input, download and no-JavaScript explanations. Run Playwright Chromium/Firefox/WebKit test against actual built worker and file bytes, and test mobile overflow rather than approving based on one static screenshot. Existing read-only WebMCP status only exposes converter metadata, not private file contents. Screen-reader and physical-device outcomes are NOT_RUN until recorded independently.
+
