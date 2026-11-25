@@ -30,6 +30,8 @@ const sample=tool.kind==='csv'?'id,name\n00501,Asha\n00502,Lee\n':tool.kind==='t
     <pre class="preview" id="studio-preview" tabindex="0">Output preview will appear here.</pre>
     <div class="buttons"><a hidden id="studio-download" class="primary" download>Download result</a><button type="button" id="studio-copy" disabled>Copy result</button></div>
     <p class="hint" id="studio-receipt">No remote processing. Output available after conversion.</p>
+    <button type="button" id="studio-chain" hidden>Continue in a compatible local tool</button>
+    <p class="hint">Optional: explicit consent can save up to 2 MiB of output in this browser's IndexedDB for a one-time handoff. It expires logically after 30 minutes and is deleted on use. Never use for secrets.</p>
    </div>
   </section>
   <section class="note"><h2>Limits and fidelity</h2>
