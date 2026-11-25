@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="JSONL Validator & Clean Export | Sense Lab" description="Validate JSON Lines locally, identify error line numbers, and safely download valid JSONL without uploading your data." canonicalPath="/tools/jsonl-validator/">
+<main class="shell tool-page" id="content">
+ <div class="eyebrow">TOOLS / JSONL VALIDATOR / NO UPLOAD</div>
+ <h1>Validate JSON Lines.<br/><span class="accent">Keep every byte private.</span></h1>
+ <p class="lead">Find malformed JSON values by line number and download a normalized newline-separated file. No signup, backend, trackers, or invented fixes.</p>
+ <div class="trust"><span>✓ Private browser processing</span><span>✓ Per-line reporting</span><span>✓ Strict UTF-8 files</span></div>
+ <section class="tool-grid" aria-label="JSONL processing workspace">
+  <div class="panel">
+   <header class="panel-head"><div><span class="kicker">01 / INPUT</span><h2>Source JSONL</h2></div><span class="step">01</span></header>
+   <form id="jsonl-form">
+    <label for="jsonl-file">Select a JSONL, NDJSON or TXT file</label>
+    <input type="file" id="jsonl-file" accept=".jsonl,.ndjson,.txt,application/x-ndjson,text/plain" aria-describedby="limits"/>
+    <p id="limits" class="hint">UTF-8 only · Up to 2 MB and 5,000 lines. Selecting a file clears pasted text.</p>
+    <div class="or">OR PASTE THE FILE</div>
+    <div class="label-line"><label for="jsonl-paste">Paste JSON Lines</label><button type="button" class="link-button" id="sample">Load example</button></div>
+    <textarea id="jsonl-paste" rows="13" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder='{"name":"Asha","id":1}&#10;{"name":"Lee","id":2}'></textarea>
+    <p class="hint">Each nonempty line must be one complete JSON value. Blank lines are ignored. Original valid JSON values are not reserialized, preserving large numeric literals.</p>
+    <div class="buttons"><button class="btn primary" id="run" type="submit">Validate JSONL <span aria-hidden="true">↗</span></button><button class="btn secondary" id="reset" type="button">Reset</button><button class="btn secondary" id="cancel" type="button" hidden>Cancel</button></div>
+    <p role="status" id="status" aria-live="polite" aria-atomic="true">No file validated.</p>
+   </form>
+  </div>
+  <div class="panel output">
+   <header class="panel-head"><div><span class="kicker">02 / OUTPUT</span><h2>Validation report</h2></div><span class="step">02</span></header>
+   <div id="empty" class="empty"><div class="empty-icon" aria-hidden="true">{}</div><h3>Results appear here.</h3><p>Validate a file to see record counts, exact error line numbers, a text-only preview and a safe downloadable export.</p><span class="micro">PROCESSING HAPPENS ON THIS DEVICE</span></div>
+   <div id="result" hidden>
+    <div class="stats"><div><span>LINES</span><strong id="stat-lines">0</strong></div><div><span>VALID</span><strong id="stat-valid">0</strong></div><div><span>ERRORS</span><strong id="stat-errors">0</strong></div><div><span>BLANK</span><strong id="stat-blank">0</strong></div></div>
+    <h3 class="subhead">Record preview <span>(up to six)</span></h3>
+    <div class="table-wrap" tabindex="0" aria-label="Scrollable JSONL preview"><table><caption>JSONL record preview</caption><thead><tr><th scope="col">LINE</th><th scope="col">TYPE</th><th scope="col">VALUE</th></tr></thead><tbody id="preview-body"></tbody></table></div>
+    <h3 id="error-heading" class="subhead">Invalid records</h3><ul id="errors" class="errors"></ul>
+    <p id="note" class="hint"></p><a id="download" hidden class="btn primary download" download="validated.jsonl">Download validated JSONL <span aria-hidden="true">↓</span></a>
+   </div>
+  </div>
+ </section>
+ <section class="reading">
+  <div><span class="kicker">HOW IT WORKS</span><h2>Truthful output. No silent loss.</h2><p>JSON Lines is one independent JSON value per line. The tool reports malformed lines and blocks download when errors exist, rather than silently deleting your data.</p></div>
+  <div><span class="kicker">SCOPE & LIMITS</span><h2>Built for bounded local files.</h2><p>Handles up to 2 MB, 5,000 lines and 100 reported parse errors. It does not upload files, convert XLSX, repair malformed JSON, provide schema validation, or promise support for every mobile browser.</p></div>
+ </section>
+ <p class="warning">This is an independently tested local Astro utility; the configured example.org canonical is for documentation only. No public deployment, Google indexing, AI recommendation or AdSense approval is claimed.</p>
+ <noscript><p class="warning">JavaScript is required for local validation. No file is submitted without it.</p></noscript>
+</main>
+<script type="module" src="/assets/jsonl-ui.mjs"></script>
+</BaseLayout>
