@@ -5,6 +5,7 @@ on:
       - 'lib/site-intelligence/**'
       - 'scripts/site-intelligence.mjs'
       - 'tests/site-intelligence.test.mjs'
+      - 'scripts/run-owned-site-intelligence-lab-v24.mjs'
       - '.agents/skills/web-competitor-audit/SKILL.md'
       - 'docs/website-intelligence/**'
       - '.github/workflows/site-intelligence-v24.yml'
@@ -22,5 +23,14 @@ jobs:
           node-version: '22'
       - name: Run bounded discovery and adversarial website intelligence tests
         run: node --test tests/site-intelligence.test.mjs
+      - name: Run actual local HTTP end-to-end evidence laboratory
+        run: node scripts/run-owned-site-intelligence-lab-v24.mjs --out .tmp/v24/site-intelligence-local-evidence.json
+      - name: Upload local-only real HTTP evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v24-owned-http-evidence
+          path: .tmp/v24/site-intelligence-local-evidence.json
+          if-no-files-found: warn
       - name: Verify CLI usage
         run: node scripts/site-intelligence.mjs --help
