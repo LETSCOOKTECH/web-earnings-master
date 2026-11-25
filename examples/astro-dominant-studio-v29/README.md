@@ -25,7 +25,7 @@ Twenty-eight-eight route-specific browser Worker jobs: CSV to JSON, JSONL, TSV, 
 
 File.stream with streaming fatal TextDecoder and native DecompressionStream for .csv.gz/.tsv.gz/.jsonl.gz is supported on eligible browsers. It **still aggregates text** and limits post-decompression input to 16 MiB, at most 200,000 rows and 500 columns. This is an intentional safety contract, not proof of high-volume throughput. The filename classifier recognizes Parquet .zst/.snappy suffixes but does NOT decompress or parse Parquet. Flat JSON objects only; nested data and unsafe numeric integers are refused. Converting null to CSV empty string is inherently lossy and explicitly warned.
 
-Do not paste confidential records into public issue reports. The current frontend performs no external requests, does not upload files, and has no ad scripts, cookie consent vendor or IndexedDB persistence. Browser extensions and local device security remain outside this promise.
+Do not paste confidential records into public issue reports. The current frontend performs no external requests, does not upload files, and has no ad scripts or cookie consent vendor. Optional IndexedDB cross-tool handoff stores at most 2 MiB only after explicit user approval, with 30-minute logical expiry and one-time consumption; raw bytes may remain until cleanup or site-data clearing. Browser extensions and local device security remain outside this promise.
 
 ## Authorized production workflow
 
