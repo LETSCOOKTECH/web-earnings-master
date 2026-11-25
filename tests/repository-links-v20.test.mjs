@@ -37,3 +37,12 @@ test('cannot link outside repository root',()=>{
   const r=auditMarkdownLocalLinks(d,{paths:['README.md']});assert.match(r.failures[0].issue,/escapes repository/);
  }finally{fs.rmSync(d,{recursive:true,force:true});}
 });
+
+
+test('GitHub directory links without README are valid navigation targets',()=>{
+ const d=fs.mkdtempSync(path.join(os.tmpdir(),'sense-dir-'));
+ try{fs.mkdirSync(path.join(d,'assets'));fs.writeFileSync(path.join(d,'README.md'),'[assets](assets/)');
+  const r=auditMarkdownLocalLinks(d,{paths:['README.md']});
+  assert.equal(r.status,'LOCAL_LINKS_OK_EXTERNAL_UNKNOWN');
+ }finally{fs.rmSync(d,{recursive:true,force:true});}
+});
