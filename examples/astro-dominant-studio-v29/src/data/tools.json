@@ -56,6 +56,20 @@
     "description": "Work with a delimited CSV file or pasted CSV. No upload is required."
   },
   {
+    "id": "csv-sort-rows",
+    "group": "csv",
+    "label": "Sort CSV Rows by First Column",
+    "kind": "csv",
+    "description": "Work with a delimited CSV file or pasted CSV. No upload is required."
+  },
+  {
+    "id": "csv-remove-empty-rows",
+    "group": "csv",
+    "label": "Remove Empty CSV Rows",
+    "kind": "csv",
+    "description": "Work with a delimited CSV file or pasted CSV. No upload is required."
+  },
+  {
     "id": "tsv-to-csv",
     "group": "tsv",
     "label": "TSV to CSV",
@@ -77,6 +91,20 @@
     "description": "Work with a tab-separated file or pasted TSV. No upload is required."
   },
   {
+    "id": "tsv-to-markdown",
+    "group": "tsv",
+    "label": "TSV to Markdown Table",
+    "kind": "tsv",
+    "description": "Work with a tab-separated file or pasted TSV. No upload is required."
+  },
+  {
+    "id": "tsv-to-html",
+    "group": "tsv",
+    "label": "TSV to HTML Table",
+    "kind": "tsv",
+    "description": "Work with a tab-separated file or pasted TSV. No upload is required."
+  },
+  {
     "id": "jsonl-to-json",
     "group": "jsonl",
     "label": "JSONL to JSON Array",
@@ -94,6 +122,20 @@
     "id": "jsonl-to-markdown",
     "group": "jsonl",
     "label": "JSONL to Markdown",
+    "kind": "jsonl",
+    "description": "Validate or convert one JSON value per line locally."
+  },
+  {
+    "id": "jsonl-to-tsv",
+    "group": "jsonl",
+    "label": "JSONL to TSV",
+    "kind": "jsonl",
+    "description": "Validate or convert one JSON value per line locally."
+  },
+  {
+    "id": "jsonl-to-html",
+    "group": "jsonl",
+    "label": "JSONL to HTML Table",
     "kind": "jsonl",
     "description": "Validate or convert one JSON value per line locally."
   },
@@ -122,6 +164,20 @@
     "id": "json-to-markdown",
     "group": "json",
     "label": "JSON Array to Markdown",
+    "kind": "json",
+    "description": "Convert a supported JSON array or value within your browser."
+  },
+  {
+    "id": "json-to-tsv",
+    "group": "json",
+    "label": "JSON Array to TSV",
+    "kind": "json",
+    "description": "Convert a supported JSON array or value within your browser."
+  },
+  {
+    "id": "json-to-html",
+    "group": "json",
+    "label": "JSON Array to HTML Table",
     "kind": "json",
     "description": "Convert a supported JSON array or value within your browser."
   },
