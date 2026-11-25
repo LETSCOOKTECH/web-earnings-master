@@ -1,6 +1,6 @@
 # Sense Data Studio — V29 local Astro prototype
 
-This is a real, testable Astro 7 static website and browser-local converter sample, derived from the pinned toolchain of V22. It is **not** the publicly hosted commercial tool ecosystem, and its 20 supported transformations should not be represented as a 28-tool Parquet/TOON product. Google indexing, traffic, AI citations, AdSense approval, monetization and 500 MB file support are **NOT VERIFIED**.
+This is a real, testable Astro 7 static website and browser-local converter sample, derived from the pinned toolchain of V22. It is **not** the publicly hosted commercial tool ecosystem, and its 28 supported transformations should not be represented as a 28-tool Parquet/TOON product. Google indexing, traffic, AI citations, AdSense approval, monetization and 500 MB file support are **NOT VERIFIED**.
 
 ## Run
 
@@ -21,7 +21,7 @@ The default hostname is an IANA example; the site deliberately emits noindex and
 
 ## Implemented end-to-end features
 
-Twenty route-specific browser Worker jobs: CSV to JSON, JSONL, TSV, Markdown, HTML table, SQL INSERT, Excel-friendly BOM CSV, CSV deduplication; TSV to CSV, JSON and JSONL; JSONL to JSON, CSV, Markdown and validation; JSON to JSONL, CSV, Markdown, pretty formatting and minification. Four category hub pages, static semantic explanations, real preview and downloads, opt-in best-effort secret masking and enabled-by-default spreadsheet formula escaping for CSV/TSV data cells.
+Twenty-eight route-specific browser Worker jobs: CSV to JSON, JSONL, TSV, Markdown, HTML table, SQL INSERT, Excel-friendly BOM CSV, CSV deduplication; TSV to CSV, JSON and JSONL; JSONL to JSON, CSV, Markdown and validation; JSON to JSONL, CSV, Markdown, pretty formatting and minification. Four category hub pages, static semantic explanations, real preview and downloads, opt-in best-effort secret masking and enabled-by-default spreadsheet formula escaping for CSV/TSV data cells.
 
 File.stream with streaming fatal TextDecoder and native DecompressionStream for .csv.gz/.tsv.gz/.jsonl.gz is supported on eligible browsers. It **still aggregates text** and limits post-decompression input to 16 MiB, at most 200,000 rows and 500 columns. This is an intentional safety contract, not proof of high-volume throughput. The filename classifier recognizes Parquet .zst/.snappy suffixes but does NOT decompress or parse Parquet. Flat JSON objects only; nested data and unsafe numeric integers are refused. Converting null to CSV empty string is inherently lossy and explicitly warned.
 
