@@ -22,6 +22,11 @@ export async function readLocalText(file){
    text+=decoder.decode(value,{stream:true});
   }
   text+=decoder.decode();
+ }catch(error){
+  // Safari/WebKit commonly reports malformed UTF-8 as a bare TypeError.
+  // Present a stable, actionable error without weakening fatal decoding.
+  if(error instanceof TypeError)throw Error('File is not valid UTF-8');
+  throw error;
  }finally{reader.releaseLock();}
  return text;
 }
