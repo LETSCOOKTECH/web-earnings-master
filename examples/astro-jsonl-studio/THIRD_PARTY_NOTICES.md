@@ -1,5 +1,7 @@
 # Astro starter dependency provenance
 
+Full upstream original MIT license and copyright (c) 2026 Daniel Melter is reproduced verbatim in [CROFTWEAVER_LICENSE](CROFTWEAVER_LICENSE); that notice controls the copied dependency manifest/lockfile.
+
 The project code in this folder was authored for Sense and is not a wholesale copy of upstream skill instructions.
 
 Dependency manifest and npm lockfile were adapted from:
