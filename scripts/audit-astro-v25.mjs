@@ -1,6 +1,7 @@
 // Astro 7 static/server and adapter source audit; not a deployment certificate.
 import fs from 'node:fs';
 import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 export function auditAstro({config='',packageJson={},pages={},builtHtml=[],production=false,origin=null}={}){
  const failures=[],warnings=[],unknowns=[];
  const dep={...packageJson.dependencies,...packageJson.devDependencies};
@@ -39,5 +40,25 @@ export function auditAstroProject(directory,{origin=null,production=false}={}){
    }
   }
  }scan(src);
- return auditAstro({config,packageJson,pages,origin,production});
+ const builtHtml=[];const dist=path.join(root,'dist');
+ function scanBuilt(dir,depth=0){if(!fs.existsSync(dir))return;if(depth>8)throw Error('BUILD_DEPTH_LIMIT');
+  for(const ent of fs.readdirSync(dir,{withFileTypes:true})){
+   const full=path.join(dir,ent.name);if(ent.isSymbolicLink())throw Error('SYMLINK_DIST_REFUSED');
+   if(ent.isDirectory())scanBuilt(full,depth+1);
+   else if(ent.name.endsWith('.html')){
+    if(builtHtml.length>=1000||fs.statSync(full).size>2_000_000)throw Error('HTML_OUTPUT_LIMIT');
+    builtHtml.push({name:path.relative(dist,full).replace(/\\/g,'/'),html:fs.readFileSync(full,'utf8')});
+   }
+  }
+ }scanBuilt(dist);
+ return auditAstro({config,packageJson,pages,builtHtml,origin,production});
+}
+
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
+ try{
+  const i=process.argv.indexOf('--project'),o=process.argv.indexOf('--origin');
+  if(i<0||!process.argv[i+1])throw Error('Usage: --project DIR [--production --origin https://owned-site.tld/]');
+  const report=auditAstroProject(process.argv[i+1],{production:process.argv.includes('--production'),origin:o<0?null:process.argv[o+1]});
+  console.log(JSON.stringify(report,null,2));if(report.failures.length)process.exitCode=1;
+ }catch(e){console.error('ASTRO_GATE_FAIL: '+e.message);process.exitCode=2;}
 }
