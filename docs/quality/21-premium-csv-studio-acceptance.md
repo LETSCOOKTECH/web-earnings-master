@@ -64,6 +64,6 @@ For a candidate owned root-domain build, run the V20 root-hosted artifact genera
 
 Index state in Search Console/Bing, AI answer citations and positive recommendations, AdSense account status, real sessions, retention and earnings are independent further gates. No local screenshots, source URLs or passing CI can certify them.
 
-## Known limitations / no fake certificates
+## NOT VERIFIED: external production, user and publisher outcomes
 
 No verified real iOS/Android device, independent user study, Safari physical accessibility review, 2MB/5K-row benchmark across hardware classes, public owned domain, search indexing, AdSense approval or revenue. CSV export spreadsheet protection depends on client behavior and must be tested by the owner for high-risk contexts. Current status is LOCAL_TOOL_ENGINEERING_UNDER_TEST until all CI is green. Even after green it remains LOCAL_HTTP_VERIFIED, not a public SaaS deployment.
