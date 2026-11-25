@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {auditPublisherRoute,findNoindexDirectives} from '../scripts/publisher-indexability-v28.mjs';
-const ok='User-agent: *\\nAllow: /\\n';
+const ok='User-agent: *\nAllow: /\n';
 test('detects noindex independent of HTML attribute order and meta casing',()=>{
  for(const html of ['<meta content="noindex,follow" name="robots">','<META NAME="GOOGLEBOT" CONTENT="none">']){
   const r=auditPublisherRoute({html,robotsText:ok});
@@ -16,14 +16,14 @@ test('scoped optional AI noindex does not impersonate global noindex',()=>{
  assert.deepEqual(findNoindexDirectives('',{'X-Robots-Tag':'OAI-SearchBot: noindex'}).map(x=>x.agent),['oai-searchbot']);
 });
 test('detects route-level search crawler blocks and optional bot warnings',()=>{
- const robots='User-agent: Googlebot\\nDisallow: /tools/\\n\\nUser-agent: OAI-SearchBot\\nDisallow: /tools/\\n\\nUser-agent: *\\nAllow: /\\n';
+ const robots='User-agent: Googlebot\nDisallow: /tools/\n\nUser-agent: OAI-SearchBot\nDisallow: /tools/\n\nUser-agent: *\nAllow: /\n';
  const r=auditPublisherRoute({route:'/tools/convert/',robotsText:robots,aiDiscovery:true});
  assert.equal(r.status,'FAIL');
  assert.ok(r.failures.some(x=>x.includes('ROBOTS_BLOCKS_GOOGLEBOT')));
  assert.ok(r.warnings.some(x=>x.includes('OAI-SEARCHBOT')));
 });
 test('Mediapartners-Google restrictions matter only for declared monetized routes',()=>{
- const robots='User-agent: Mediapartners-Google\\nDisallow: /tools/\\n\\nUser-agent: *\\nAllow: /\\n';
+ const robots='User-agent: Mediapartners-Google\nDisallow: /tools/\n\nUser-agent: *\nAllow: /\n';
  assert.equal(auditPublisherRoute({route:'/tools/a/',robotsText:robots}).status,'PASS_BOUNDED_ONLY');
  const r=auditPublisherRoute({route:'/tools/a/',robotsText:robots,monetized:true});
  assert.ok(r.failures.some(x=>x.includes('MEDIAPARTNERS_GOOGLE')));
