@@ -26,3 +26,13 @@ description: "Design measurable SEO, product, referral and ad monetization exper
 **Evidence needed:** Preregistered hypothesis, baseline, denominators, guardrails, actual results and rollback.
 **Critical FAIL / UNKNOWN:** No posthoc claim a ranking change was caused by confounded edits.
 **Mandatory freshness procedure:** Read docs/foundations/19-provider-source-verification.md and docs/RESEARCH_PROTOCOL.md. Re-open official body, log exact applicable claim, evidence date, announced versus effective status, geography/account and contradiction. Use sources/verified_claims.json only as a dated baseline; source watch hashes are not semantic verification. Record tests/actual results, open blockers and rollback; do not infer live indexing, AI citations or AdSense revenue from local tests.
+
+## V26 — Trusted upstream method integration
+
+Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-skill-integration-v26.json`; verify source organization, Git blob ID and license before task-time adaptation. No unreviewed upstream script execution or bulk copying.
+
+- `anthropic-skill-creator`: Reproducible no-skill vs with-skill task runs; description trigger negatives and blinded comparisons.
+
+**Operational acceptance:** Run paired, comparable skill/task evaluations with reproducible prompts, all attempts and errors, blind review, source timestamp and actual outcome artifact. Preserve unsuccessful tasks and baseline. Avoid inventing uplift percentages or claiming significant improvement without observed sample size and uncertainty. Skill creation is an experimental program, not document length.
+
+Record exact source/metric/oracle, stop on missing provider permissions, run `node scripts/check-official-skill-integration-v26.mjs` plus domain tests, and label unobserved external deployment/SEO/publisher results `NOT_RUN`.
