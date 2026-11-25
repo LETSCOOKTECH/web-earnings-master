@@ -32,7 +32,7 @@ export function detectExtension(filename){
  const kinds=['.parquet.snappy','.parquet.zst','.jsonl.gz','.csv.gz','.tsv.gz','.parquet','.jsonl','.tsv','.csv','.json','.md'];
  const suffix=kinds.find(ext=>name.endsWith(ext));
  if(!suffix)return {type:'unknown',compression:null};
- const compound=suffix.endsWith('.gz')?suffix.slice(0,-3):suffix;
+ const compound=suffix.endsWith('.gz')?suffix.slice(0,-3):suffix.endsWith('.zst')?suffix.slice(0,-4):suffix.endsWith('.snappy')?suffix.slice(0,-7):suffix;
  return {type:compound.slice(1),compression:suffix.endsWith('.gz')?'gzip':suffix.endsWith('.zst')?'zstd':suffix.endsWith('.snappy')?'snappy':null};
 }
 const NEGATIVE=/^-(?:(?:\d+(?:\.\d*)?)|(?:\.\d+))(?:[eE][+-]?\d+)?$/;
