@@ -1,3 +1,61 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-test('V25 audit bootstrap',()=>assert.ok(true));
+import fs from 'node:fs';
+import path from 'node:path';
+import {huntWebTools} from '../scripts/hunt-web-tools-v25.mjs';
+import {auditAstro,auditAstroProject} from '../scripts/audit-astro-v25.mjs';
+import {analyzeSiteDepth} from '../scripts/analyze-site-depth-v25.mjs';
+
+const root=path.resolve(import.meta.dirname,'..');
+const candidate=()=>JSON.parse(fs.readFileSync(path.join(root,'templates/opportunity/idea.example.json'),'utf8'));
+test('hunter holds unverified synthetic proposal, never calls it revenue evidence',()=>{
+ const p=candidate();const r=huntWebTools({schema:'sense-tool-hunter-v25',candidates:[{id:'photo',plan:p,evidence_source:'SYNTHETIC_TEST'}]},{now:Date.parse('2026-11-25T15:00:00Z')});
+ assert.equal(r.candidates[0].state,'SYNTHETIC_ONLY');
+ assert.equal(r.candidates[0].actual_demand_verified,false);
+ assert.equal(r.candidates[0].automatically_authorized_to_build,false);
+});
+test('hunter policy violations cannot outrank safe but unverified concepts',()=>{
+ const a=candidate(),b=candidate();a.risk_flags=['unauthorized_scrape'];
+ const r=huntWebTools({schema:'sense-tool-hunter-v25',candidates:[{id:'unsafe',plan:a,evidence_source:'OWNER_EXPORT'},{id:'safe',plan:b,evidence_source:'OWNER_EXPORT'}]});
+ assert.equal(r.candidates[0].id,'safe');
+ assert.equal(r.candidates[1].state,'POLICY_STOP');
+});
+test('hunter refuses duplicate IDs and unsupported fabricated evidence source',()=>{
+ const p=candidate();
+ assert.throws(()=>huntWebTools({schema:'sense-tool-hunter-v25',candidates:[{id:'x',plan:p,evidence_source:'SYNTHETIC_TEST'},{id:'x',plan:p,evidence_source:'OWNER_EXPORT'}]}),/Invalid/);
+ assert.throws(()=>huntWebTools({schema:'sense-tool-hunter-v25',candidates:[{id:'x',plan:p,evidence_source:'LIVE_SEMRUSH'}]}),/Invalid/);
+});
+test('current Astro static/server mode check blocks old hybrid and missing adapters',()=>{
+ const pkg={dependencies:{astro:'^7.4.13'}};
+ assert.equal(auditAstro({config:"output: 'hybrid'",packageJson:pkg}).status,'FAIL');
+ assert.ok(auditAstro({config:"output: 'server'",packageJson:pkg}).failures.includes('DYNAMIC_ROUTES_REQUIRE_ADAPTER'));
+ assert.ok(auditAstro({config:"output: 'static'",packageJson:pkg,pages:{'api.ts':'export const prerender = false;'}}).failures.includes('DYNAMIC_ROUTES_REQUIRE_ADAPTER'));
+ assert.equal(auditAstro({config:"output: 'static'",packageJson:pkg}).status,'SOURCE_ONLY_NOT_DEPLOYED');
+});
+test('Astro build-only release requires actual HTML and non-reserved owner HTTPS origin',()=>{
+ const pkg={dependencies:{astro:'^7.4.13'}};
+ const bad=auditAstro({config:"output: 'static'",packageJson:pkg,origin:'https://example.org/',production:true});
+ assert.ok(bad.failures.includes('REAL_PUBLIC_ORIGIN_REQUIRED'));
+ assert.ok(bad.failures.includes('BUILT_HTML_REQUIRED'));
+ const good='<html lang="en"><head><title>Useful app</title><link rel="canonical" href="https://tools-domain.com/"></head><body><main><h1>Real tool</h1></main></body></html>';
+ const r=auditAstro({config:"output:'static'",packageJson:pkg,origin:'https://tools-domain.com/',production:true,builtHtml:[{name:'index.html',html:good}]});
+ assert.equal(r.status,'BUILD_ONLY_PASS_NOT_DEPLOYED');assert.equal(r.public_deployment_verified,false);
+});
+test('Astro real checked source example is recognized, never promoted to deployed site',()=>{
+ const p=auditAstroProject(path.join(root,'examples/astro-jsonl-studio'));
+ assert.equal(p.mode,'static');assert.equal(p.status,'SOURCE_ONLY_NOT_DEPLOYED');
+});
+test('deep site audit flags observed issues, never invents Google indexing or true orphan state',()=>{
+ const origin='https://real-site.org';
+ const sample={schema:'sense-site-intelligence-v24',origin,observed_at:'2026-11-25T00:00:00Z',pages:[
+   {url:origin+'/',status:'HTTP_200',title:'Same',h1:'Home',description:'x',canonical:origin+'/',links:[origin+'/broken'],noindex:false},
+   {url:origin+'/tool',status:'HTTP_200',title:'Same',h1:'',description:null,canonical:null,links:[],noindex:true},
+   {url:origin+'/broken',status:'HTTP_404',links:[]}
+ ],sitemap_urls:[origin+'/tool',origin+'/broken'],sitemaps:[{status:'PARSED'}],graph:{possible_unlinked_sitemap_pages:[origin+'/tool']},truncated:true};
+ const r=analyzeSiteDepth(sample);
+ const names=r.findings.map(x=>x.code);
+ for(const name of ['SAMPLED_DUPLICATE_TITLE','SITEMAP_NOINDEX','MISSING_H1','MISSING_CANONICAL','BUDGET_TRUNCATED','LINKED_SAMPLED_ERROR','POSSIBLY_UNLINKED_SITEMAP_URL'])assert.ok(names.includes(name),name);
+ assert.equal(r.public_production_verified,false);
+ assert.ok(r.unknowns.includes('Search indexing/rank'));
+ assert.throws(()=>analyzeSiteDepth({schema:'bogus',pages:[],sitemaps:[]}),/V24_SITE_REPORT_REQUIRED/);
+});
