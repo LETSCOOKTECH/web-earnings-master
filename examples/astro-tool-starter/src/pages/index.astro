@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Useful web utilities, verified output" description="A minimal, premium Astro web-tool starter with real JSONL validation, explicit limits and testable local-file processing.">
+ <section class="hero home-hero">
+  <span class="eyebrow"><span class="pulse"></span> SENSE TOOL ATELIER / WORKING STARTER</span>
+  <h1>Make the data useful.<br/><span class="muted-heading">Keep the process clear.</span></h1>
+  <p class="hero-description">Purpose-built local tools for real files. No account, no upload endpoint, no opaque AI promise. Start with a working JSONL inspector that you can verify independently.</p>
+  <div class="hero-actions"><a class="button button-primary" href="/tools/jsonl-inspector/">Open JSONL inspector <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="/about/">How this starter works</a></div>
+  <div class="proof-strip"><span>UTF-8 files</span><span>1 MiB input limit</span><span>Actual downloadable output</span><span>No third-party scripts</span></div>
+ </section>
+ <section class="section"><div class="section-head"><div><span class="kicker">01 / ACTUAL UTILITY</span><h2>One tool. Real behavior.</h2></div><p>Each utility must have a deterministic output and an independently checked error path before its page is called complete.</p></div>
+  <article class="tool-card"><div class="tool-card-copy"><span class="category">DATA / VALIDATE & NORMALIZE</span><h3>JSONL Inspector</h3><p>Inspect JSON Lines records, find malformed input with line numbers, preview normalized objects and download an exact UTF-8 JSONL file.</p><div class="mini-features"><span>5,000 records</span><span>Strict UTF-8</span><span>Worker processing</span></div><a class="inline-link" href="/tools/jsonl-inspector/">Use inspector <span aria-hidden="true">↗</span></a></div><div class="mock-output" aria-hidden="true"><div class="mock-top"><span></span><span></span><span></span></div><div class="mock-line">{'{'}"id":1,"name":"Asha"{'}'}</div><div class="mock-line">{'{'}"id":2,"name":"Lee"{'}'}</div><div class="mock-success">VALID · 2 RECORDS</div></div></article>
+ </section>
+ <section class="section"><div class="section-head"><div><span class="kicker">02 / ENGINEERING</span><h2>Tool first. Content second.</h2></div></div><div class="three-grid"><article><span class="number">01</span><h3>Test the output</h3><p>Exact transformation oracles, malformed lines and downloadable byte checks—not decorative dashboards.</p></article><article><span class="number">02</span><h3>Minimize the exposure</h3><p>Processing runs in the browser. No upload endpoint, user account or advertising script is part of this starter.</p></article><article><span class="number">03</span><h3>Release with evidence</h3><p>A local build is not a live website. Hosting, indexing and publisher accounts each need their own verification.</p></article></div></section>
+</Base>
