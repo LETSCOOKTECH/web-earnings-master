@@ -90,7 +90,7 @@ Use exact state ladder from docs/quality/real-world-release-contract-v20.md:
 4. EXTERNAL_HTTP_OBSERVED
 5. EXTERNAL_BUSINESS_OUTCOMES
 
-For an actual owner-authorized website, ensure DNS control, HTTPS/TLS, externally served release hash, redirects/404, WAF/headers, real deployed browser action, operational budgets, security/consent and rollback. PUBLIC SITE URL must be one actually tested, not example.org, localhost or a source code page. The V22 Astro config blocks public intent with an example domain but cannot certify ownership of a syntactically valid domain.
+For an actual owner-authorized website, ensure DNS control, HTTPS/TLS, externally served release hash, redirects/404, WAF/headers, real deployed browser action, operational budgets, security/consent and rollback. PUBLIC SITE URL must be one actually tested, not example.org, localhost or a source code page. The V22 Astro config requires SENSE_RELEASE=public alongside SITE_URL=https://ACTUAL_OWNED_DOMAIN to build in public-intent mode, refuses reserved/example hosts, and cannot independently certify ownership, DNS or actual deployment of a syntactically valid domain.
 
 ## Stage 7 — ethically acquire traffic and measure the business (GATE H)
 
