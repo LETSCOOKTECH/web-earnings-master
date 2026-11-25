@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+interface Props {title:string;description:string;section?:string}
+const {title,description,section='Tools'}=Astro.props;
+const canonical=new URL(Astro.url.pathname,Astro.site).toString();
+const fixture=process.env.RELEASE_STAGE!=='BUILD_ONLY_NOT_DEPLOYED';
+---
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"/>
+ <meta name="viewport" content="width=device-width,initial-scale=1"/>
+ <meta name="color-scheme" content="dark"/>
+ <title>{title} | Sense Tool Atelier</title>
+ <meta name="description" content={description}/>
+ <link rel="canonical" href={canonical}/>
+ <meta property="og:type" content="website"/>
+ <meta property="og:title" content={title+' | Sense Tool Atelier'}/>
+ <meta property="og:description" content={description}/>
+ <meta property="og:url" content={canonical}/>
+ {fixture && <meta name="robots" content="noindex,nofollow"/>}
+ <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+ <a class="skip" href="#main">Skip to main content</a>
+ <header class="header"><div class="container nav">
+  <a href="/" class="brand" aria-label="Sense Tool Atelier, home"><span aria-hidden="true" class="brand-icon">S</span><span>Sense <span class="brand-light">/ Tool Atelier</span></span></a>
+  <nav aria-label="Primary navigation"><a href="/tools/jsonl-inspector/" class={section==='Tools'?'active':''}>Tools</a><a href="/about/" class={section==='About'?'active':''}>About</a><a href="/privacy/" class={section==='Privacy'?'active':''}>Privacy</a></nav>
+  <span class="edition">ASTRO 7 · BROWSER FIRST</span>
+ </div></header>
+ <main id="main" class="container"><slot/></main>
+ <footer class="footer"><div class="container foot">
+   <a href="/">Sense Tool Atelier</a><p>Local data processing. No invented results or paid rankings.</p><span>Independent test starter · Not publicly deployed</span>
+ </div></footer>
+</body>
+</html>

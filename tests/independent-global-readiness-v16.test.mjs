@@ -62,7 +62,7 @@ test('HOLDOUT provider guidance distinguishes Anthropic already-supported AIPREF
 });
 test('HOLDOUT README current skill count is not misleading to a new agent',()=>{
  const count=fs.readdirSync(path.join(root,'.agents/skills'),{withFileTypes:true}).filter(x=>x.isDirectory()&&fs.existsSync(path.join(root,'.agents/skills',x.name,'SKILL.md'))).length;
- assert.equal(count,49);
+ assert.equal(count,JSON.parse(read('sources/production_skills_v7.json')).expectSkills);
  const readme=read('README.md');
  assert.doesNotMatch(readme,/\*\*28 specialized Codex skills\*\*/);
 });

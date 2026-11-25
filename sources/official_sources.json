@@ -1602,6 +1602,56 @@
       "reviewed_at": "2026-11-25",
       "review_every_days": 30,
       "authority": "first-party documentation or normative technical standard"
+    },
+    {
+      "id": "v22-astro-official",
+      "category": "framework",
+      "url": "https://docs.astro.build/en/getting-started/",
+      "purpose": "Current supported Astro API, static/build and routing entrypoint",
+      "verification": "Read action-time original and Astro release notes; template CI confirms pinned version only, not universally current",
+      "reviewed_at": "2026-11-25",
+      "review_every_days": 14,
+      "authority": "first-party documentation"
+    },
+    {
+      "id": "v22-astro-routing",
+      "category": "framework",
+      "url": "https://docs.astro.build/en/guides/routing/",
+      "purpose": "Astro file-based routes, page/server boundary and static endpoint semantics",
+      "verification": "Original docs change across major versions and require current-section review",
+      "reviewed_at": "2026-11-25",
+      "review_every_days": 14,
+      "authority": "first-party documentation"
+    },
+    {
+      "id": "v22-google-ai-guide",
+      "category": "discovery",
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "purpose": "Current first-party AI Overviews/Mode eligibility and limitations on llms.txt/magic markup",
+      "verification": "Original source guidance; Google does not guarantee inclusion or rank from these practices",
+      "reviewed_at": "2026-11-25",
+      "review_every_days": 14,
+      "authority": "first-party documentation"
+    },
+    {
+      "id": "v22-openai-skill-evals",
+      "category": "agent-evaluations",
+      "url": "https://developers.openai.com/blog/eval-skills",
+      "purpose": "Independently assess agent-skill behavioral impact and repeatable task oracles",
+      "verification": "First-party evaluation methodology, not automatic proof that any specific Sense skill improves agents",
+      "reviewed_at": "2026-11-25",
+      "review_every_days": 30,
+      "authority": "first-party documentation"
+    },
+    {
+      "id": "v22-astro7-announcement",
+      "category": "framework",
+      "url": "https://astro.build/blog/astro-7/",
+      "purpose": "Astro 7 release behavior and request lifecycle version context",
+      "verification": "Release article is historical scope; API behavior must be checked against current version docs",
+      "reviewed_at": "2026-11-25",
+      "review_every_days": 30,
+      "authority": "first-party release note"
     }
   ]
 }

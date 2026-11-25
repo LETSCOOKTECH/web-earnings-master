@@ -1,0 +1,61 @@
+name: Real Astro tool creator build and browser acceptance
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'examples/astro-tool-starter/**'
+      - '.agents/skills/web-dominant-tool-creator/**'
+      - '.github/workflows/astro-tool-creator-v22.yml'
+      - 'scripts/evaluate-tool-creator-v22.mjs'
+  pull_request:
+    paths:
+      - 'examples/astro-tool-starter/**'
+      - '.agents/skills/web-dominant-tool-creator/**'
+      - '.github/workflows/astro-tool-creator-v22.yml'
+      - 'scripts/evaluate-tool-creator-v22.mjs'
+      - 'docs/creator/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  astro-real-tool:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    defaults:
+      run:
+        working-directory: examples/astro-tool-starter
+    env:
+      SITE_URL: https://starter.example.org
+      RELEASE_STAGE: FIXTURE_ONLY
+      CI: 'true'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: examples/astro-tool-starter/package-lock.json
+      - name: Clean exact dependency installation
+        run: npm ci --no-audit --no-fund
+      - name: Astro type checks
+        run: npm run check
+      - name: Build actual Astro website
+        run: npm run build
+      - name: Independently audit emitted HTML, worker and fixture crawl state
+        run: npm run verify:build
+      - name: JSONL true-output and malicious/size tests
+        run: npm test
+      - name: Install real headless Chrome Firefox and WebKit engines
+        run: npx playwright install --with-deps chromium firefox webkit
+      - name: Run real three-engine user task and accessibility tests
+        run: npm run test:e2e
+      - name: Upload actual screenshots and failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: astro-tool-creator-proof
+          path: |
+            examples/astro-tool-starter/artifacts/screenshots/*.png
+            examples/astro-tool-starter/test-results/**
+            examples/astro-tool-starter/playwright-report/**
+          if-no-files-found: warn
