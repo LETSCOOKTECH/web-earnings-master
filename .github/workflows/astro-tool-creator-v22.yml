@@ -46,6 +46,23 @@ jobs:
           grep -q 'Disallow: /' dist/robots.txt
           grep -q 'https://jsonl-studio.example.org/tools/jsonl-validator/' dist/tools/jsonl-validator/index.html
           grep -q 'sitemap' dist/sitemap-index.xml
+      - name: Ensure reserved-documentation domain can never ship as a public release
+        run: |
+          if SENSE_RELEASE=public SITE_URL=https://jsonl-studio.example.org npm run build; then
+            echo 'FAIL: reserved example.org origin was accepted for public release'; exit 1
+          else
+            echo 'PASS: refused public launch on reserved test-only host'
+          fi
+      - name: Blind-copy scaffold and independently build/install/test generated project
+        run: |
+          node ../../scripts/scaffold-astro-tool-v22.mjs --out ../../.tmp/astro-copy-v22
+          cd ../../.tmp/astro-copy-v22
+          npm ci --no-audit --no-fund
+          npm run check
+          npm run build
+          npm test
+          test -f dist/tools/jsonl-validator/index.html
+          grep -q noindex,follow dist/tools/jsonl-validator/index.html
       - name: Install three real browser engines
         run: npx playwright install --with-deps chromium firefox webkit
       - name: Verify real tool end-to-end, accessibility and user-download bytes
