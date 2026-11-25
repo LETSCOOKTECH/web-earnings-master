@@ -279,3 +279,15 @@ test('public fetch transport bounds stalled DNS without making a TLS connection'
    /DNS_RESOLUTION_TIMEOUT/
  );
 });
+
+test('public crawling skips account, reset token and destructive GET routes even if linked',async()=>{
+ const seen=[];
+ const html=mkHTML('Home',['/tool','/account/reset/secret','/unsubscribe/abc','/delete/123','/invite/abcd1234','/api/user','/public/abcdef0123456789abcdef0123456789']);
+ const r=await inspectSite({...opts,fetcher:fakeTransport({
+ '/robots.txt':{status:404},'/':{body:html},'/tool':{body:mkHTML('Tool',[])}
+ },seen)});
+ assert.ok(r.pages.some(p=>p.url===base+'/tool'));
+ for(const path of ['/account/','/unsubscribe/','/delete/','/invite/','/api/','/public/abcdef0123456789abcdef0123456789']){
+   assert.ok(!seen.some(x=>x.url.includes(path)),path);
+ }
+});
