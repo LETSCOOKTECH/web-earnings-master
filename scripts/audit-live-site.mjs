@@ -49,8 +49,7 @@ async function load(route,kind){
    const c=[...body.matchAll(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi)].map(m=>m[0]);
    const href=c[0]?.match(/href=["']([^"']+)["']/i)?.[1];
    if(c.length!==1||href!==url)failures.push('Missing/wrong self canonical');
-   if(/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(body))failures.push('Indexable page has noindex in initial HTML');
-   if((r.headers.get('x-robots-tag')||'').toLowerCase().includes('noindex'))failures.push('Indexable page has X-Robots-Tag noindex');
+   // V28 parser below preserves per-agent scope; a bot-specific noindex is not a global noindex.
    if(!/<main\b/i.test(body))failures.push('Missing meaningful main semantic area');
    const page=pageFlags.get(route);
    const release=auditPublisherRoute({html:body,headers:r.headers,robotsText,route,indexable:true,monetized:page?.monetized===true,aiDiscovery:manifest.ai_discovery===true});
