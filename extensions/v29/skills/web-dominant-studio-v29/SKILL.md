@@ -9,7 +9,7 @@ description: Build, verify and release an evidence-led browser-local data studio
 
 Load this standalone companion when the actual job involves browser-local CSV, TSV, JSON, JSONL, table repair, structured-data formatting or a proposed Parquet/TOON expansion. Coordinate with web-dominant-tool-creator and the task-specific specialist skill; never load all 50 by default. The V23 registry and its frozen 50-skill tests remain untouched. This file is an OPTIONAL 51st companion, not activated in the registry.
 
-Working prototype: examples/astro-dominant-studio-v29. Exactly twenty deterministic CSV/TSV/JSON/JSONL workflows and four hubs, with an actual Astro build, background Web Worker, strict UTF-8 reader, gzip support for selected text formats, export, and formula-escape option. Not a 28-route Parquet/TOON platform, not an AdSense-approved property, and not a live website.
+Working prototype: examples/astro-dominant-studio-v29. Exactly twenty-eight deterministic CSV/TSV/JSON/JSONL workflows and four hubs, with an actual Astro build, background Web Worker, strict UTF-8 reader, gzip support for selected text formats, export, and formula-escape option. Not a 28-route Parquet/TOON platform, not an AdSense-approved property, and not a live website.
 
 ## 0. Demand and competition gate
 
