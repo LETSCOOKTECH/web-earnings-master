@@ -7,10 +7,15 @@ export function auditAstro({config='',packageJson={},pages={},builtHtml=[],produ
  const failures=[],warnings=[],unknowns=[];
  const dep={...packageJson.dependencies,...packageJson.devDependencies};
  if(!dep.astro)failures.push('ASTRO_DEPENDENCY_MISSING');
- const mode=/\boutput\s*:\s*['"](static|server|hybrid)['"]/i.exec(config)?.[1]||'static';
+ const declared=/\boutput\s*:/i.test(config);
+ const parsed=/\boutput\s*:\s*['"](static|server|hybrid)['"]/i.exec(config)?.[1];
+ const mode=parsed||(declared?'unresolved':'static');
+ if(mode==='unresolved')unknowns.push('OUTPUT_MODE_DYNAMIC_UNRESOLVED');
  if(mode==='hybrid')failures.push('OBSOLETE_ASTRO_OUTPUT_HYBRID');
  const adapters=Object.keys(dep).filter(x=>['@astrojs/node','@astrojs/cloudflare','@astrojs/vercel','@astrojs/netlify'].includes(x));
  const dynamic=Object.entries(pages).filter(([_,c])=>/export\s+const\s+prerender\s*=\s*false\b/.test(c)).map(([name])=>name);
+ const undecided=Object.entries(pages).filter(([_,c])=>/export\s+const\s+prerender\s*=/.test(c)&&!/export\s+const\s+prerender\s*=\s*(true|false)\b/.test(c)).map(([name])=>name);
+ if(undecided.length)unknowns.push('ROUTE_PRERENDER_DYNAMIC_UNRESOLVED:'+undecided.join(','));
  if((mode==='server'||dynamic.length)&&adapters.length===0)failures.push('DYNAMIC_ROUTES_REQUIRE_ADAPTER');
  if(adapters.length>1)warnings.push('MULTIPLE_ADAPTERS_REVIEW_DEPLOYMENT');
  if(production&&(!origin||!validatePublicSiteOrigin(origin).ok))failures.push('REAL_PUBLIC_ORIGIN_REQUIRED');
@@ -23,7 +28,7 @@ export function auditAstro({config='',packageJson={},pages={},builtHtml=[],produ
  }
  if(!builtHtml.length)unknowns.push('NO_COMPILED_HTML_INSPECTED');
  unknowns.push('FULL_BROWSER_TASK_OUTPUT_AND_EXTERNAL_HOST_NOT_VERIFIED');
- return {schema:'sense-astro-audit-v25',status:failures.length?'FAIL':production&&mode==='server'&&builtHtml.length===0?'SERVER_BUILD_RUNTIME_UNVERIFIED':production?'BUILD_ONLY_PASS_NOT_DEPLOYED':'SOURCE_ONLY_NOT_DEPLOYED',
+ return {schema:'sense-astro-audit-v25',status:failures.length?'FAIL':mode==='unresolved'||undecided.length?'HOLD_DYNAMIC_CONFIG_UNRESOLVED':production&&mode==='server'&&builtHtml.length===0?'SERVER_BUILD_RUNTIME_UNVERIFIED':production?'BUILD_ONLY_PASS_NOT_DEPLOYED':'SOURCE_ONLY_NOT_DEPLOYED',
   mode,adapters,dynamic_routes:dynamic,pages_checked:builtHtml.length,failures,warnings,unknowns,
   public_deployment_verified:false,seo_ranking_verified:false,adsense_verified:false};
 }
