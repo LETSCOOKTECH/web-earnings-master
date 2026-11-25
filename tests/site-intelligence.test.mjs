@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {gzipSync} from 'node:zlib';
 import {isPublicIPv4,isPublicIPv6,validateOrigin,safeURL,resolvePinnedPublicIPv4,resolvePinnedPublicAddress} from '../lib/site-intelligence/safe-http.mjs';
 import {summarizeHAR} from '../lib/site-intelligence/har.mjs';
+import {buildSkillHandoffs} from '../lib/site-intelligence/knowledge.mjs';
 import {decodeXmlEntities,decodeSitemapBody,parseSitemapXML,sitemapLocationsFromRobots} from '../lib/site-intelligence/xml.mjs';
 import {inspectHTML} from '../lib/site-intelligence/html.mjs';
 import {buildDiscoveryInventory} from '../lib/site-intelligence/discovery.mjs';
@@ -203,4 +204,20 @@ test('HAR summaries preserve public network shapes but never leak query, tokens,
 test('HAR import rejects invalid logs and massive entries',()=>{
  assert.throws(()=>summarizeHAR({log:{}},{origin:'https://research-site.org/'}),/INVALID_HAR/);
  assert.throws(()=>summarizeHAR({log:{entries:Array(3001).fill({})}},{origin:'https://research-site.org/'}),/HAR_REQUEST_ENTRY_CAP/);
+});
+
+test('evidence graph routes real source-scoped observations to ten existing specialists',async()=>{
+ const routes={'/robots.txt':{status:404},'/':{body:mkHTML('Home',['/tool'])},'/tool':{body:mkHTML('Tool',[])}};
+ const report=await inspectSite({...opts,fetcher:fakeTransport(routes)});
+ const packet=buildSkillHandoffs(report);
+ assert.equal(packet.schema,'sense-site-skill-handoffs-v24');
+ assert.equal(Object.keys(packet.handoffs).length,10);
+ assert.ok(packet.claims.every(c=>c.id.startsWith('web-observation-')&&c.source_url.startsWith(base)));
+ assert.equal(packet.handoffs.competitor.owner,'web-competitor-audit');
+ assert.equal(packet.handoffs.ai_discovery.owner,'web-ai-discovery');
+ assert.match(packet.trust,/UNTRUSTED/);
+ assert.equal(packet.production_gate,'NOT_A_PUBLIC_SITE_OWNERSHIP_INDEXING_AD_REVENUE_CERTIFICATE');
+});
+test('evidence graph rejects an unrelated JSON claim pretending to be an actual scan',()=>{
+ assert.throws(()=>buildSkillHandoffs({schema:'hacked',origin:base}),/NOT_A_SITE/);
 });
