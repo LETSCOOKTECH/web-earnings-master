@@ -11,5 +11,5 @@ function withCopy(fn){const dir=fs.mkdtempSync(path.join(os.tmpdir(),'sense-asse
 test('Example actual shipped HTML and local JS/CSS assets pass static SEO',()=>{const r=audit(original);assert.equal(r.status,0,r.stdout+r.stderr);});
 test('Removing actual shipped tool JS is a static missing asset blocker',()=>withCopy(dir=>{fs.rmSync(path.join(dir,'assets/tool.mjs'));const r=audit(dir);assert.equal(r.status,1);assert.match(r.stderr,/missing or unsafe local script/);}));
 test('Removing actual CSS is a missing stylesheet blocker',()=>withCopy(dir=>{fs.rmSync(path.join(dir,'assets/style.css'));const r=audit(dir);assert.equal(r.status,1);assert.match(r.stderr,/missing or unsafe local script\/stylesheet/);}));
-test('Production static audit refuses synthetic example.org canonical/host',()=>{const r=audit(original,'--production');assert.equal(r.status,2);assert.match(r.stderr,/placeholder or test origin/);});
+test('Production static audit refuses synthetic example.org canonical/host',()=>{const r=audit(original,'--production');assert.equal(r.status,2);assert.match(r.stderr,/IANA example domain|placeholder or test origin/);});
 test('Production cannot be certified from a local CSV lab even when SEO passes',()=>{const r=audit(original);assert.equal(r.status,0);assert.match(r.stdout,/STATIC SIGNALS ONLY/);});
