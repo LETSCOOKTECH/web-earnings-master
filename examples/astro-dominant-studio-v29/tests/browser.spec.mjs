@@ -61,3 +61,21 @@ test('mobile layout does not overflow and category hub links resolve',async({pag
  const difference=await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth);
  expect(difference).toBeLessThanOrEqual(1);
 });
+
+test('workflow handoff only saves after explicit user approval, then consumes local output once',async({page})=>{
+ await page.goto('/tools/csv-to-json/');
+ await page.locator('#studio-input').fill('id,name\n00501,Asha\n');
+ await page.locator('#studio-run').click();
+ await expect(page.locator('#studio-status')).toContainText('Conversion completed');
+ await expect(page.locator('#studio-chain')).toBeVisible();
+ page.once('dialog',dialog=>dialog.dismiss());
+ await page.locator('#studio-chain').click();
+ await expect(page).toHaveURL(/csv-to-json/);
+ page.once('dialog',dialog=>dialog.accept());
+ await page.locator('#studio-chain').click();
+ await expect(page).toHaveURL(/json-pretty/);
+ await expect(page.locator('#studio-input')).toHaveValue(/00501/);
+ await expect(page.locator('#studio-status')).toContainText('Previous output loaded locally');
+ await page.locator('#studio-run').click();
+ await expect(page.locator('#studio-status')).toContainText('Conversion completed');
+});
