@@ -17,6 +17,11 @@ function fixture(edit=()=>{}){
   }
   fs.mkdirSync(path.join(root,'sources'),{recursive:true});
   fs.writeFileSync(path.join(root,'sources/skill-network-v23.json'),JSON.stringify(data));
+  const skills=data.stages.flatMap(stage=>stage.skills);
+  const ids=[...new Set(skills.flatMap(s=>s.official_source_ids??[]))];
+  while(ids.length<data.first_party_source_count)ids.push(`fixture-${ids.length}`);
+  fs.writeFileSync(path.join(root,'sources/official_sources.json'),JSON.stringify({sources:ids.map(id=>({id,url:'https://example.org/original-doc'}))}));
+  fs.writeFileSync(path.join(root,'sources/skill-evidence-crosswalk-v20.json'),JSON.stringify({skills:skills.map(s=>({id:s.id,reference_source_ids:s.official_source_ids??[]}))}));
   return root;
 }
 function run(edit){const root=fixture(edit);try{return checkNetwork(root);}finally{fs.rmSync(root,{recursive:true,force:true});}}
@@ -50,4 +55,13 @@ test('reject fabricated active skill totals',()=>{
 });
 test('reject impossible handoff stage',()=>{
   const r=run(d=>d.stages[1].next_stage_ids.push('imaginary-stage'));assert.equal(r.ok,false);assert.match(r.errors.join('\n'),/missing next stage/);
+});
+
+test('reject missing actual first-party original lead',()=>{
+  const r=run(d=>d.stages[1].skills[0].official_source_ids.push('fabricated-official-policy'));
+  assert.equal(r.ok,false);assert.match(r.errors.join('\n'),/unresolvable first-party source/);
+});
+test('reject individual skill lacking a local output oracle',()=>{
+  const r=run(d=>delete d.stages[2].skills[0].local_oracle);
+  assert.equal(r.ok,false);assert.match(r.errors.join('\n'),/missing individual deliverable/);
 });
