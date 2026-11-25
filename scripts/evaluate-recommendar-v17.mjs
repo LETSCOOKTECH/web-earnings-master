@@ -86,7 +86,7 @@ export function evaluateRecommendar(data,{now=Date.now()}={}){
  if(!Array.isArray(repeats)||!repeats.length||repeats.length>20||repeats.some(x=>!str(x,1))||!unique(repeats))mark(errors,'Distinct pre-registered repeat IDs required');
  if(!Array.isArray(obs)||!obs.length||obs.length>100000)mark(errors,'Nonempty bounded observation array required');
  if(!Number.isFinite(now))mark(errors,'Evaluation clock invalid');
- const keys=new Set(),counts=new Map();
+ const keys=new Set(),captureArtifacts=new Set(),counts=new Map();
  const groupExpected=Array.isArray(groups)?groups:[];
  for(const g of groupExpected){
   if(!SURFACE_SET.has(g?.surface)||!str(g?.locale,4))continue;
@@ -108,6 +108,8 @@ export function evaluateRecommendar(data,{now=Date.now()}={}){
   if(!question)mark(errors,'Unregistered question '+n);
   if(!Array.isArray(repeats)||!repeats.includes(repeat))mark(errors,'Unregistered repeat '+n);
   if(question&&r.locale!==question.locale)mark(errors,'Prompt locale differs from provider locale '+n);
+  if(!/^[A-Z]{2}$/.test(r.geo||'')||(question&&r.geo!==question.geo))
+   mark(errors,'Attempted country/region must be explicitly recorded and equal preregistered question geography '+n);
   if(!date(r?.observed_at)||Date.parse(r.observed_at)<Date.parse(study.preregistered_at)||Date.parse(r.observed_at)>now+300000)
    mark(errors,'Invalid/out-of-order observed timestamp '+n);
   if(!['OBSERVED','UNAVAILABLE'].includes(r?.status))mark(errors,'Invalid observation status '+n);
@@ -125,6 +127,14 @@ export function evaluateRecommendar(data,{now=Date.now()}={}){
   if(stats)stats.observed++;
   if(!isObj(r.capture)||!CAPTURES.has(r.capture.method)||!str(r.capture.artifact,8)||!str(r.capture.reviewer,2)||!str(r.capture.product_version,2))
    mark(errors,'Observed row needs named reviewer, version, permitted capture mode and artifact locator '+n);
+  if(str(r.capture?.artifact,8)){
+   if(captureArtifacts.has(r.capture.artifact))mark(errors,'Capture artifact reused across distinct attempts '+n);
+   captureArtifacts.add(r.capture.artifact);
+  }
+  if(group&&isObj(r.capture)&&r.capture.product_version!==group.product_version)
+   mark(errors,'Provider/model version differs from preregistered cohort '+n);
+  if(!/^[A-Z]{2}$/.test(r.capture?.geo||'')||r.capture.geo!==r.geo)
+   mark(errors,'Observed capture country differs from attempted country '+n);
   if(r.surface==='openai-web-search-api'&&r.capture?.method!=='AUTHORIZED_PROVIDER_API')
    mark(errors,'OpenAI web-search API surface needs actual permitted API capture '+n);
   else if(r.surface!=='openai-web-search-api'&&r.capture?.method==='AUTHORIZED_PROVIDER_API')
@@ -136,13 +146,15 @@ export function evaluateRecommendar(data,{now=Date.now()}={}){
   let rankCorrect=true;
   const seenEntities=new Set(),seenRanks=new Set();
   for(const item of rec){
+   if(!isObj(item)){mark(errors,'Null/invalid recommendation entry in observed answer '+n);continue;}
    if(!entityMap.has(item?.entity_id))mark(errors,'Unknown recommendation entity '+n);
    if(seenEntities.has(item?.entity_id))mark(errors,'Duplicate recommended entity '+n);
    seenEntities.add(item?.entity_id);
    if(!['POSITIVE','NEGATIVE'].includes(item?.sentiment))mark(errors,'Recommendation sentiment missing '+n);
    if(item?.sentiment==='POSITIVE'&&entityMap.has(item.entity_id)){
     const phrase=compact(item.evidence_quote),name=compact(entityMap.get(item.entity_id));
-    if(phrase.includes(name+' is not recommended')||phrase.includes('do not use '+name))
+    if([name+' is not recommended',name+" isn't recommended",name+' is unsuitable',name+' is worse',
+      name+' is a poor choice','avoid '+name,'do not use '+name,"don't use "+name].some(x=>phrase.includes(x)))
      mark(errors,'Clearly negative quote cannot be labeled positive without independent review '+n);
    }
    if(!str(item?.evidence_quote,10)||!compact(answer.raw_excerpt).includes(compact(item.evidence_quote))||
@@ -160,7 +172,7 @@ export function evaluateRecommendar(data,{now=Date.now()}={}){
   }
   for(const u of answer.visible_citations)if(!validUrl(u))mark(errors,'Invalid citation URL '+n);
   const own=(answer.visible_citations||[]).some(u=>(target.hosts||[]).includes(urlHost(u)));
-  const targetRec=rec.find(x=>x.entity_id===target.entity_id);
+  const targetRec=rec.find(x=>isObj(x)&&x.entity_id===target.entity_id);
   if(stats&&question&&!question.branded){
    if(targetRec?.sentiment==='POSITIVE')stats.unbranded_recommended++;
    if(targetRec?.sentiment==='NEGATIVE')stats.unbranded_disrecommended++;
