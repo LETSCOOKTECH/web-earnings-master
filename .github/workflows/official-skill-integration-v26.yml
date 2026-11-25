@@ -1,0 +1,27 @@
+name: Sense V26 Official Upstream Skill Integration
+on:
+  pull_request:
+    paths:
+      - 'sources/official-skill-integration-v26.json'
+      - 'scripts/check-official-skill-integration-v26.mjs'
+      - 'scripts/evaluate-agent-skill-trials-v26.mjs'
+      - 'tests/official-skill-integration-v26.test.mjs'
+      - '.agents/skills/**'
+      - 'docs/skills/2026-11-25-official-upstream-v26.md'
+      - '.github/workflows/official-skill-integration-v26.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check original sources, licenses and source-linked specialist handoffs
+        run: npm run audit:upstream:v26
+      - name: Run forged-owner, license, unsafe-copy and agent-A/B negative tests
+        run: npm run test:upstream:v26
