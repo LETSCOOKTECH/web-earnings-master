@@ -65,3 +65,12 @@ test('reject individual skill lacking a local output oracle',()=>{
   const r=run(d=>delete d.stages[2].skills[0].local_oracle);
   assert.equal(r.ok,false);assert.match(r.errors.join('\n'),/missing individual deliverable/);
 });
+
+test('reject misleading source strategy on official-only skill',()=>{
+  const r=run(d=>{const s=d.stages.find(x=>x.id==='engineering').skills.find(s=>s.id==='web-browser-runtime');s.source_strategy='vetted-external-method-plus-official-originals';});
+  assert.equal(r.ok,false);assert.match(r.errors.join('\n'),/false or missing source strategy/);
+});
+test('reject dropped pre-existing first-party source links',()=>{
+  const r=run(d=>d.stages.find(x=>x.id==='research').skills[0].official_source_ids.pop());
+  assert.equal(r.ok,false);assert.match(r.errors.join('\n'),/dropped original first-party source/);
+});
