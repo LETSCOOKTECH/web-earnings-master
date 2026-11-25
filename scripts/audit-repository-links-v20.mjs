@@ -13,7 +13,7 @@ function recurse(dir){if(!fs.existsSync(dir))return [];
   return x.isFile()&&x.name.endsWith('.md')?[path.join(dir,x.name)]:[];
  });
 }
-const isRealFile=f=>fs.existsSync(f)&&(fs.statSync(f).isFile()||fs.statSync(f).isDirectory()&&fs.existsSync(path.join(f,'README.md')));
+const isRealFile=f=>fs.existsSync(f)&&(fs.statSync(f).isFile()||fs.statSync(f).isDirectory());
 export function auditMarkdownLocalLinks(rootDir,{paths=null}={}){
  const input=paths||['README.md','AGENTS.md',...['docs','references','learning','examples','.agents/skills'].flatMap(x=>recurse(path.join(rootDir,x)).map(f=>path.relative(rootDir,f)))];
  const failures=[],warnings=[],checked=[];
