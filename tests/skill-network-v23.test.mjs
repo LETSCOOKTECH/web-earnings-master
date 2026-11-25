@@ -17,7 +17,7 @@ function fixture(edit=()=>{}){
   }
   fs.mkdirSync(path.join(root,'sources'),{recursive:true});
   fs.writeFileSync(path.join(root,'sources/skill-network-v23.json'),JSON.stringify(data));
-  const skills=data.stages.flatMap(stage=>stage.skills);
+  const skills=reference.stages.flatMap(stage=>stage.skills);
   const ids=[...new Set(skills.flatMap(s=>s.official_source_ids??[]))];
   while(ids.length<data.first_party_source_count)ids.push(`fixture-${ids.length}`);
   fs.writeFileSync(path.join(root,'sources/official_sources.json'),JSON.stringify({sources:ids.map(id=>({id,url:'https://example.org/original-doc'}))}));
