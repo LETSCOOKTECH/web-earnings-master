@@ -84,3 +84,7 @@ For website engineering and technical/keyword SEO start with `docs/seo-master/RE
 
 ## V12 independent observatory
 For SEO or full website builds start with docs/seo-master/07-agent-execution-v12.md, then verify the ten distinct local criteria in docs/seo-master/05-independent-observatory-v12.md. Real functional CSV lab: examples/seo-csv-lab/README.md. Run npm test and GitHub Playwright browser suite, check per-crawler robots policy and the release truth firewall. A self-attested JSON PASS cannot prove Google indexing, valid traffic or AdSense approval.
+
+## V22 full tool business and Astro master execution
+
+For market demand -> comparative actual user outputs -> premium Astro website -> verified search/AI eligibility -> authorized deployment -> measured human visitors and publisher economics, read [Dominant Tool Creator](../.agents/skills/web-dominant-tool-creator/SKILL.md). It does NOT auto-approve market demand or rank #1. The [Astro JSONL Studio starter](../examples/astro-jsonl-studio/README.md) is an installable, actual local tool with lockfile, parser, Worker, source HTML, robots/canonical and separate browser tests; the former templates/astro collection remains uncompiled snippets. Run `npm run audit:tool-creator:demand` for the synthetic demand fixture and treat its SYNTHETIC_NOT_MARKET_PROVEN label as mandatory. Real public launch, GSC/AI recommendation and AdSense all require external authorized evidence.
