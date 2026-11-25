@@ -14,6 +14,7 @@ export function analyzeJsonl(input,{maxBytes=LIMITS.maxBytes,maxLines=LIMITS.max
  if(lines.at(-1)==='')lines.pop(); // a final newline is a terminator, not a blank record
  if(lines.length>maxLines)throw Error('Input exceeds 5,000 lines');
  const errors=[],valid=[],preview=[];
+ let invalidCount=0;
  let blanks=0;
  for(let i=0;i<lines.length;i++){
   const text=lines[i].trim();
@@ -25,15 +26,16 @@ export function analyzeJsonl(input,{maxBytes=LIMITS.maxBytes,maxLines=LIMITS.max
    if(preview.length<6)preview.push({line:i+1,type:Array.isArray(parsed)?'array':parsed===null?'null':typeof parsed,
      sample:text.length>120?text.slice(0,117)+'...':text});
   }catch(e){
+   invalidCount++;
    if(errors.length<LIMITS.maxErrors)errors.push({line:i+1,message:'Invalid JSON value: '+(e instanceof Error?e.message:'parse failed').slice(0,160)});
   }
  }
  if(!valid.length&&errors.length===0)throw Error('No JSON values found; input contains only blank lines');
  return {
-  lines:lines.length,valid:valid.length,invalid:errors.length,blank:blanks,
+  lines:lines.length,valid:valid.length,invalid:invalidCount,blank:blanks,
   errors,preview,
-  output:errors.length===0?valid.join('\n')+'\n':null,
-  canDownload:errors.length===0&&valid.length>0,
-  note:errors.length?'Fix invalid lines before downloading; partial data export is blocked.':'Original valid JSON values are preserved; blank lines are removed.'
+  output:invalidCount===0?valid.join('\n')+'\n':null,
+  canDownload:invalidCount===0&&valid.length>0,
+  note:invalidCount?'Fix invalid lines before downloading; partial data export is blocked.':'Original valid JSON values are preserved; blank lines are removed.'
  };
 }
