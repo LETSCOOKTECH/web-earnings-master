@@ -149,3 +149,11 @@ node scripts/site-intelligence.mjs \
   --out ./site-evidence.json --packets-out ./site-skill-handoffs.json
 ```
 Operator-supplied rendered links are classified `OPERATOR_SUPPLIED_UNAUTHENTICATED` and kept distinct from crawler-observed HTML links in the handoff packet.
+
+## Actual local HTTP end-to-end acceptance (not mock-only)
+
+```sh
+node scripts/run-owned-site-intelligence-lab-v24.mjs --out .tmp/v24/site-intelligence-local-evidence.json
+```
+
+This boots Sense's existing ephemeral HTTP fixture bound to `127.0.0.1`, fetches its real `robots.txt` and XML sitemap, obtains real HTML responses, follows public internal links and creates ten connected skill handoffs. The acceptance output is intentionally redacted to avoid treating loopback as production. It does **not** exercise live public DNS/TLS or a competitor website; that separate field gate still requires user permission. The GitHub Actions V24 workflow runs and uploads the local acceptance artifact on each relevant PR. Fixture injection is explicit; the public transport rejects loopback addresses.
