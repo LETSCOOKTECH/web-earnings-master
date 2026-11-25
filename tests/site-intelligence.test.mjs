@@ -257,3 +257,18 @@ test('real CLI rejects unsafe local crawl before network I/O',()=>{
  assert.equal(r.status,2);
  assert.match(r.stderr,/HTTPS_STANDARD_PORT_REQUIRED/);
 });
+
+test('robots HTML challenge is not silently misinterpreted as permission',async()=>{
+ const seen=[];
+ const r=await inspectSite({...opts,fetcher:fakeTransport({'/robots.txt':{body:'<html><title>Just a moment</title><body>Checking your browser</body></html>',headers:{'content-type':'text/html'}}},seen)});
+ assert.equal(r.status,'BLOCKED_ROBOTS_UNAVAILABLE');
+ assert.equal(r.robots.status,'BLOCKED_ROBOTS_HTML_OR_CHALLENGE');
+ assert.equal(seen.length,1);
+});
+test('public crawler cannot disable minimum polite pacing',async()=>{
+ await assert.rejects(inspectSite({origin:'https://reliable-research-site.com/',authorizedOrigin:'https://reliable-research-site.com/',limits:{minDelayMs:0},fetcher:async()=>{throw Error('Must not call transport');}}),/PUBLIC_CRAWL_DELAY_MINIMUM/);
+});
+test('out-of-origin input seeds are explicitly rejected rather than silently studied',async()=>{
+ const r=await inspectSite({...opts,seedUrls:['https://evil.example/login'],fetcher:fakeTransport({'/robots.txt':{status:404},'/':{body:mkHTML('Home',[])}})});
+ assert.ok(r.warnings.some(x=>x.code==='SEED_SKIPPED_OUT_OF_SCOPE_OR_NONPAGE'));
+});
