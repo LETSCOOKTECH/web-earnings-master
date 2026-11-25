@@ -312,3 +312,45 @@ test('rendered HTML must be from in-scope scanned public pages and within bounde
  assert.throws(()=>summarizeRenderedDOM([{url:'https://third-party.com/',html:'<html/>'}],{report,fixture:true}),/ORIGIN_OR_PAGE/);
  assert.throws(()=>summarizeRenderedDOM([{url:base+'/',html:'x'.repeat(1_000_001)}],{report,fixture:true}),/BYTE_BUDGET/);
 });
+
+test('valid robots disallowing captcha paths does not become a false WAF block',async()=>{
+ const r=await inspectSite({...opts,fetcher:fakeTransport({
+   '/robots.txt':{body:'User-agent: *\nDisallow: /captcha/\n',headers:{'content-type':'text/plain'}},
+   '/':{body:mkHTML('Home',['/captcha/challenge','/docs'])},'/docs':{body:mkHTML('Docs',[])}
+ })});
+ assert.equal(r.robots.status,'READ_AND_ENFORCED_SUBSET');
+ assert.ok(r.pages.some(p=>p.url===base+'/docs'&&p.status==='HTTP_200'));
+ assert.ok(r.pages.some(p=>p.url===base+'/captcha/challenge'&&p.status==='BLOCKED_ROBOTS'));
+});
+test('gzip robots is decompressed before access rules are evaluated',async()=>{
+ const r=await inspectSite({...opts,fetcher:fakeTransport({
+   '/robots.txt':{body:gzipSync('User-agent: *\nDisallow: /blocked\n'),headers:{'content-type':'text/plain','content-encoding':'gzip'}},
+   '/':{body:mkHTML('Home',['/blocked','/docs'])},'/docs':{body:mkHTML('Docs',[])}
+ })});
+ assert.equal(r.robots.status,'READ_AND_ENFORCED_SUBSET');
+ assert.ok(r.pages.some(p=>p.url===base+'/blocked'&&p.status==='BLOCKED_ROBOTS'));
+});
+test('unsupported HTTP HTML content encoding fails as an observation, not a fabricated page parse',async()=>{
+ const r=await inspectSite({...opts,fetcher:fakeTransport({
+   '/robots.txt':{status:404},
+   '/':{body:Buffer.from([0xca,0xfe]),headers:{'content-type':'text/html','content-encoding':'br'}}
+ })});
+ assert.ok(r.errors.some(x=>x.code==='PAGE_UNREADABLE'&&x.detail.includes('UNSUPPORTED_HTML_ENCODING')));
+ assert.equal(r.pages.find(p=>p.url===base+'/').status,'ERROR');
+});
+test('site digest changes with sanitized HAR and rendered-DOM evidence, and claim packet fingerprints match',async()=>{
+ const report=await inspectSite({...opts,fetcher:fakeTransport({
+   '/robots.txt':{status:404},'/':{body:mkHTML('Home',['/docs'])},'/docs':{body:mkHTML('Docs',[])}
+ })});
+ const baseline=report.digest;
+ report.operator_har_observations=summarizeHAR({log:{entries:[
+   {request:{url:base+'/api/check?token=hidden',method:'GET'},response:{status:200,content:{mimeType:'application/json'}},time:30}
+ ]}},{origin:base,fixture:true});
+ report.operator_rendered_dom_observations=summarizeRenderedDOM([{url:base+'/',html:mkHTML('Home',['/docs','/js-new'])}],{report,fixture:true});
+ report.digest=compactSiteDigest(report);
+ assert.notEqual(report.digest,baseline);
+ const packet=buildSkillHandoffs(report);
+ assert.equal(packet.source_report_digest,report.digest);
+ assert.ok(packet.claims.some(c=>c.category==='network'));
+ assert.ok(packet.claims.some(c=>c.category==='rendered_dom'));
+});
