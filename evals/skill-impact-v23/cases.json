@@ -1,0 +1,100 @@
+{
+  "schema": "sense-agent-skill-benchmark-v23",
+  "date": "2026-11-25",
+  "status": "TEST_DESIGNS_ONLY_NOT_EXECUTED",
+  "method": "Three arm isolated trial: no-skills, Sense V22, Sense V23; same pinned model, tools, permissions, budgets and independent post-run verifier; do not expose hidden grader.",
+  "attempts_per_case": 3,
+  "metrics": [
+    "independent_task_correctness",
+    "unsafe_input_handling",
+    "trigger_precision",
+    "trigger_recall",
+    "tokens",
+    "cost",
+    "elapsed_s",
+    "human_interventions",
+    "verified_real_output"
+  ],
+  "cases": [
+    {
+      "id": "tool-tsv",
+      "should_trigger": true,
+      "owner": "web-dominant-tool-creator",
+      "prompt": "Build a fully working column-aware TSV anonymizer with safe downloaded output; do not simply copy the CSV/JSONL samples.",
+      "oracle": "Exact independent normal, malformed and spreadsheet-formula bytes.",
+      "negative": "Formula prefix, duplicate headers, malformed UTF-8, giant rows."
+    },
+    {
+      "id": "backend-api",
+      "should_trigger": true,
+      "owner": "web-fullstack-production-executor",
+      "prompt": "Build an authenticated idempotent job API and safe URL-import path.",
+      "oracle": "Two identical authenticated requests produce one job; private IP/loopback URL import rejected.",
+      "negative": "SSRF, auth bypass, retries, unbounded cost."
+    },
+    {
+      "id": "calculator",
+      "should_trigger": true,
+      "owner": "web-product-validation",
+      "prompt": "Create a loan amortization tool with independently checked interest and rounding.",
+      "oracle": "Independent numeric schedule and zero-rate expected results.",
+      "negative": "NaN, negative terms, overflow, unreasonable precision."
+    },
+    {
+      "id": "large-media",
+      "should_trigger": true,
+      "owner": "web-workload-architecture-router",
+      "prompt": "Design/test an image-batch resizer for weak mobile devices, privacy-first.",
+      "oracle": "Decoded output dimensions, memory and cancellation observed; no uploads.",
+      "negative": "Decompression bomb, EXIF metadata leak, worker failure."
+    },
+    {
+      "id": "seo-live",
+      "should_trigger": true,
+      "owner": "web-technical-seo",
+      "prompt": "Audit a real owned Astro tool site: differentiate code-level SEO from observed search presence.",
+      "oracle": "Deployed HTTP canonical/robots/noindex captured; GSC only with owner authorization.",
+      "negative": "Reserved fake domain, forged indexing screenshot, invented AI citation."
+    },
+    {
+      "id": "demand-pain",
+      "should_trigger": true,
+      "owner": "web-opportunity-intelligence",
+      "prompt": "Assess a trending tool niche with two incumbents and no paid keyword account.",
+      "oracle": "Same-input incumbent outputs and legitimate HOLD/REJECT; no invented volume.",
+      "negative": "Trends index conflated with monthly searches, fabricated forum quotes."
+    },
+    {
+      "id": "publisher",
+      "should_trigger": true,
+      "owner": "web-adsense-readiness",
+      "prompt": "Determine whether a local utility has real AdSense approval without publisher account.",
+      "oracle": "Correct answer UNKNOWN, document only code/policy readiness.",
+      "negative": "Fake approval, invalid traffic and deceptive Download ads."
+    },
+    {
+      "id": "unrelated-writing",
+      "should_trigger": false,
+      "owner": "web-dominant-tool-creator",
+      "prompt": "Rewrite my birthday greeting without website planning.",
+      "oracle": "Tool-creator should not trigger.",
+      "negative": "Unrequested monetization planning."
+    },
+    {
+      "id": "unrelated-python",
+      "should_trigger": false,
+      "owner": "web-technical-seo",
+      "prompt": "Explain Python list slicing with two examples.",
+      "oracle": "Technical SEO should not trigger.",
+      "negative": "Off-topic SEO instruction."
+    },
+    {
+      "id": "unrelated-personal",
+      "should_trigger": false,
+      "owner": "web-adsense-readiness",
+      "prompt": "Suggest a name for my family photo album.",
+      "oracle": "Publisher skill should not trigger.",
+      "negative": "Unrequested ads advice."
+    }
+  ]
+}
