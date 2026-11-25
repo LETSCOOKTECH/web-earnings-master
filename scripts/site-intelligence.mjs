@@ -4,6 +4,7 @@ import path from 'node:path';
 import {inspectSite,diffSiteReports} from '../lib/site-intelligence/engine.mjs';
 import {buildDiscoveryInventory} from '../lib/site-intelligence/discovery.mjs';
 import {summarizeHAR} from '../lib/site-intelligence/har.mjs';
+import {buildSkillHandoffs} from '../lib/site-intelligence/knowledge.mjs';
 
 const args=process.argv.slice(2);
 function option(name){const index=args.indexOf(name);if(index<0)return null;const value=args[index+1];if(!value||value.startsWith('--'))throw new Error('MISSING_VALUE_'+name);return value;}
@@ -23,7 +24,7 @@ async function run(){
      'Sense Website Intelligence v24 — non-authenticated read-only public evidence',
      'Discovery: node scripts/site-intelligence.mjs --discover path/search-results.json --out path/discovery.json',
      'Audit: node scripts/site-intelligence.mjs --origin https://site.tld/ --authorized-origin https://site.tld/ --out path/report.json [--seed-file inputs.json]',
-     'Options: --max-pages N --max-sitemaps N --min-delay-ms N --previous previous-report.json --har-file SANITIZED.har --overwrite',
+     'Options: --max-pages N --max-sitemaps N --min-delay-ms N --previous previous-report.json --har-file SANITIZED.har --packets-out skill-evidence.json --overwrite',
      'Never run on private services, inaccessible networks, logged-in accounts or sites where automation is disallowed.',
      'The --authorized-origin flag records operator intent, NOT verified ownership/terms clearance.',
      'Search-result imports are leads only; there is no built-in search-engine scraping.',
@@ -60,7 +61,10 @@ async function run(){
    report.architecture.har_source='OPERATOR_SUPPLIED_HAR_NOT_INDEPENDENTLY_AUTHENTICATED';
  }
  if(option('--previous'))report.comparison_to_previous=diffSiteReports(loadJSON(option('--previous')),report);
+ report.skill_evidence_ref='Run --packets-out for verified-scope claims and 10 specialist handoffs; not a model training operation.';
  writeResult(out,report);
+ const packetsFile=option('--packets-out');
+ if(packetsFile)writeResult(packetsFile,buildSkillHandoffs(report));
  if(report.status.startsWith('BLOCKED'))process.exitCode=1;
 }
 run().catch(e=>{process.stderr.write(JSON.stringify({status:'REFUSED_OR_FAILED',error:String(e.message).slice(0,250)})+'\n');process.exitCode=2;});
