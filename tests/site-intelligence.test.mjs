@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {gzipSync} from 'node:zlib';
-import {isPublicIPv4,validateOrigin,safeURL,resolvePinnedPublicIPv4} from '../lib/site-intelligence/safe-http.mjs';
+import {isPublicIPv4,isPublicIPv6,validateOrigin,safeURL,resolvePinnedPublicIPv4,resolvePinnedPublicAddress} from '../lib/site-intelligence/safe-http.mjs';
+import {summarizeHAR} from '../lib/site-intelligence/har.mjs';
 import {decodeXmlEntities,decodeSitemapBody,parseSitemapXML,sitemapLocationsFromRobots} from '../lib/site-intelligence/xml.mjs';
 import {inspectHTML} from '../lib/site-intelligence/html.mjs';
 import {buildDiscoveryInventory} from '../lib/site-intelligence/discovery.mjs';
@@ -174,4 +175,32 @@ test('private backend claims and actual revenue never appear in deterministic ob
  assert.ok(result.external_unknowns.includes('Databases and infrastructure topology'));
  assert.ok(result.external_unknowns.some(x=>x.includes('publisher')));
  assert.equal(result.authorization,'OPERATOR_DECLARED_NOT_OWNERSHIP_VERIFIED');
+});
+
+test('dual-stack DNS supports public IPv6 and IPv4 while pinning IPv4 where available',async()=>{
+ assert.equal(isPublicIPv6('2606:4700:4700::1111'),true);
+ assert.equal(isPublicIPv6('2001:db8::1'),false);
+ assert.equal(isPublicIPv6('fc00::1'),false);
+ const x=await resolvePinnedPublicAddress('example-research-site.com',{resolver:async()=>[
+   {family:6,address:'2606:4700:4700::1111'},{family:4,address:'1.1.1.1'}]});
+ assert.deepEqual(x,{address:'1.1.1.1',family:4});
+ const y=await resolvePinnedPublicAddress('only-v6-site.com',{resolver:async()=>[{family:6,address:'2606:4700:4700::1111'}]});
+ assert.equal(y.family,6);
+});
+test('HAR summaries preserve public network shapes but never leak query, tokens, bodies or cookies',()=>{
+ const har={log:{entries:[
+   {request:{url:'https://research-site.org/api/files/123456?secret=VERY_SECRET',method:'POST',headers:[{name:'Authorization',value:'Bearer TOPSECRET'}],postData:{text:'PASSWORDDATA'}},response:{status:201,content:{mimeType:'application/json',text:'PRIVATE'},headers:[{name:'Set-Cookie',value:'cookie_secret'}]},time:123.45},
+   {request:{url:'https://tracker.tld/track?email=sensitive',method:'GET'},response:{status:200},time:2},
+   {request:{url:'https://research-site.org/assets/site.js',method:'GET'},response:{status:200,content:{mimeType:'application/javascript'}},time:6},
+ ]}};
+ const out=summarizeHAR(har,{origin:'https://research-site.org/'});
+ const serialized=JSON.stringify(out);
+ assert.equal(out.stats.same_origin,2);assert.equal(out.stats.external,1);
+ assert.ok(out.observable_routes.some(r=>r.path==='/api/files/:redacted'&&r.classification==='api_candidate'));
+ for(const secret of ['VERY_SECRET','TOPSECRET','PASSWORDDATA','PRIVATE','cookie_secret','sensitive'])assert.ok(!serialized.includes(secret),secret);
+ assert.equal(out.sensitive_fields_retained,false);
+});
+test('HAR import rejects invalid logs and massive entries',()=>{
+ assert.throws(()=>summarizeHAR({log:{}},{origin:'https://research-site.org/'}),/INVALID_HAR/);
+ assert.throws(()=>summarizeHAR({log:{entries:Array(3001).fill({})}},{origin:'https://research-site.org/'}),/HAR_REQUEST_ENTRY_CAP/);
 });
