@@ -27,6 +27,31 @@ function transact(db,mode,fn){
   tx.onabort=()=>{db.close();reject(tx.error||Error('IndexedDB transaction aborted'));};
  });
 }
+/**
+ * Prune all expired records on explicit workflow interaction. No background timer:
+ * browser storage may retain them until the next visit or manual site-data clearing.
+ */
+export async function pruneExpiredWorkflows(now=Date.now()){
+ const db=await open();
+ return new Promise((resolve,reject)=>{
+  const tx=db.transaction(STORE,'readwrite'),store=tx.objectStore(STORE);
+  const request=store.openCursor();let deleted=0;
+  request.onsuccess=()=>{
+   const cursor=request.result;
+   if(!cursor)return;
+   if(cursor.value?.expires<=now){cursor.delete();deleted++;}
+   cursor.continue();
+  };
+  tx.oncomplete=()=>{db.close();resolve(deleted);};
+  tx.onerror=()=>{db.close();reject(tx.error||Error('Workflow pruning failed'));};
+  tx.onabort=()=>{db.close();reject(tx.error||Error('Workflow pruning aborted'));};
+ });
+}
+export async function clearAllWorkflows(){
+ const db=await open();
+ await transact(db,'readwrite',store=>store.clear());
+ return true;
+}
 export function chooseFollowUp(route,filename){
  const ext=String(filename||'').split('.').at(-1);
  if(ext==='csv')return route==='csv-to-jsonl'?'csv-deduplicate':'csv-to-jsonl';
@@ -43,16 +68,28 @@ export async function saveWorkflow({route,filename,output},now=Date.now()){
  if(!target)throw Error('There is no compatible next tool for this output format');
  if(typeof crypto?.randomUUID!=='function')throw Error('Secure random browser IDs required');
  const id=crypto.randomUUID();
+ await pruneExpiredWorkflows(now);
  const db=await open();
  await transact(db,'readwrite',store=>store.put({id,route,target,filename,output,created:now,expires:now+WORKFLOW_TTL_MS}));
  return {id,target,expires:now+WORKFLOW_TTL_MS,bytes};
 }
 export async function loadWorkflow(id,expectedTarget,now=Date.now()){
  if(!/^[a-f0-9-]{30,50}$/i.test(String(id)))throw Error('Invalid workflow reference');
- const db=await open();const record=await transact(db,'readonly',store=>store.get(id));
- if(!record)return null;
- const fresh=record.expires>now&&record.target===expectedTarget;
- // One-time use deletes local sensitive payload even when a wrong target is attempted.
- const second=await open();await transact(second,'readwrite',store=>store.delete(id));
- return fresh?{output:record.output,filename:record.filename,bytes:new TextEncoder().encode(record.output).length}:null;
+ await pruneExpiredWorkflows(now);
+ const db=await open();
+ return new Promise((resolve,reject)=>{
+  const tx=db.transaction(STORE,'readwrite'),store=tx.objectStore(STORE),req=store.get(id);
+  let record=null;
+  req.onsuccess=()=>{
+   record=req.result||null;
+   if(record)store.delete(id); // Consume atomically with read in the same transaction.
+  };
+  tx.oncomplete=()=>{
+   db.close();
+   const fresh=record&&record.expires>now&&record.target===expectedTarget;
+   resolve(fresh?{output:record.output,filename:record.filename,bytes:new TextEncoder().encode(record.output).length}:null);
+  };
+  tx.onerror=()=>{db.close();reject(tx.error||Error('Workflow read failed'));};
+  tx.onabort=()=>{db.close();reject(tx.error||Error('Workflow read aborted'));};
+ });
 }
