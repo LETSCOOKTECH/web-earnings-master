@@ -1,0 +1,27 @@
+name: Sense V23 Trusted Skill Network
+on:
+  pull_request:
+    paths:
+      - '.agents/skills/**'
+      - 'sources/skill-network-v23.json'
+      - 'scripts/check-skill-network-v23.mjs'
+      - 'tests/skill-network-v23.test.mjs'
+      - '.github/workflows/skill-network-v23.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-skill-network:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify every registered Sense skill is reachable and source-linked
+        run: node scripts/check-skill-network-v23.mjs
+      - name: Run ten independent adversarial negative controls
+        run: node --test tests/skill-network-v23.test.mjs
