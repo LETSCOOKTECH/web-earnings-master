@@ -12,6 +12,12 @@
 
 ---
 
+## V22 — Dominant Tool Creator and installable Astro tool starter
+
+The library now has **50 active Codex skills**, including the master web-dominant-tool-creator orchestrator. This routes demand, real competitor test, workload economics, Astro/frontend/backend implementation, independent output/security/UX verification, owner-approved release, SEO/AEO/AI measurement and publisher economics to specialists. See .agents/skills/web-dominant-tool-creator/SKILL.md and docs/creator/00-orchestration.md. The integrated upstream technique/license matrix is docs/creator/04-open-source-integrations.md.
+
+A new examples/astro-tool-starter/ contains an actual installable Astro 7 project and JSONL validation tool, a checked-in MIT-attributed dependency lock, original accessible UI/worker and real file-output tests, stage-correct noindex/robots, and three-engine Playwright/axe workflow .github/workflows/astro-tool-creator-v22.yml. The tool is a FIXTURE_ONLY candidate, **NOT a publicly deployed website**. Pass/fail status is governed by CI, not a documentation claim; no Search Console, AI citation, ad approval or earnings is implied. Machine-checkable decision input is templates/creator/BRIEF.SYNTHETIC.json and must never be treated as genuine demand.
+
 ## Mission
 
 A continuously improved technical research and execution library for the **entire lifecycle of high-value websites**: understanding browsers and servers; validating genuine market demand; designing and shipping useful products; making pages eligible for search and AI retrieval; building legitimate distribution; meeting monetization and privacy requirements; and improving profitability from observed data.
