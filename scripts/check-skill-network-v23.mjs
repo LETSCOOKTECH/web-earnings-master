@@ -14,10 +14,12 @@ export function checkNetwork(root) {
   const fail=m=>errors.push(m);
   if(network.schema!=='sense-skill-network-v23')fail('schema mismatch');
   if(!Array.isArray(network.upstreams)||!Array.isArray(network.stages))return {ok:false,errors:[...errors,'upstreams/stages must be arrays'],skills:0,upstreams:0};
-  const upstreamIds=new Set();
+  const upstreamIds=new Set(), deprecatedIds=new Set();
   for(const source of network.upstreams){
     if(!source||typeof source.id!=='string'||upstreamIds.has(source.id)){fail(`duplicate or missing upstream id: ${source?.id}`);continue;}
     upstreamIds.add(source.id);
+    if(source.deprecated)deprecatedIds.add(source.id);
+    if(source.copy_authorization!=='NOT_GRANTED'||!source.license_observed)fail(`${source.id}: missing license/copy quarantine`);
     if(!reviewed.has(source.review))fail(`${source.id}: invalid review depth`);
     if(!transfers.has(source.transfer))fail(`${source.id}: unsafe transfer declaration`);
     if(!/^https:\/\/(github\.com|agentskills\.io|developers\.google\.com|docs\.astro\.build|developers\.cloudflare\.com|support\.google\.com)\//.test(source.url))fail(`${source.id}: invalid source URL`);
@@ -56,7 +58,7 @@ export function checkNetwork(root) {
         const expected=item.upstreams.length?'vetted-external-method-plus-official-originals':'official-originals-only';
         if(item.source_strategy!==expected)fail(`${item.id}: false or missing source strategy`);
       }
-      for(const ref of item.upstreams??[])if(!upstreamIds.has(ref))fail(`${item.id}: unknown upstream ${ref}`);
+      for(const ref of item.upstreams??[]){if(!upstreamIds.has(ref))fail(`${item.id}: unknown upstream ${ref}`);if(deprecatedIds.has(ref))fail(`${item.id}: deprecated upstream ${ref}`);}
       if(!item.deliverable||!item.fail_case||!item.local_oracle||!item.external_gate)fail(`${item.id}: missing individual deliverable, local/real-world oracle or fail case`);
       const original=legacySkills.get(item.id);
       if(!original)fail(`${item.id}: missing first-party crosswalk record`);
