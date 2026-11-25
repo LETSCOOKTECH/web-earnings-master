@@ -140,3 +140,12 @@ test('pre-registered ten held-out cases contain no invented execution results',(
  assert.equal(result.observed_delta_percentage_points,null);
  assert.equal(result.actual_agent_runs_independently_verified,false);
 });
+
+test('publisher licensing must be grounded in exact previously fetched README or license blobs',()=>{
+ const a=copy();a.records.find(r=>r.id==='anthropic-frontend').license_evidence.blob_sha='0'.repeat(40);
+ bad(a,'LICENSE_RECEIPT_TAMPERED');
+ const b=copy();b.records.find(r=>r.id==='vercel-ui').license_evidence.path='LICENSE';
+ bad(b,'LICENSE_RECEIPT_TAMPERED');
+ const s=copy();s.supporting_sources[0].path='skills/rogue/auto-exec.js';
+ bad(s,'REFERENCE_RULE_SOURCE_INVALID');
+});
