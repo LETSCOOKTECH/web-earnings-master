@@ -9,6 +9,7 @@ The requested uploaded master execution prompt proposes nine bug classes, an add
 - Separate Astro 7 Studio sample with locked dependencies, 28 functional conversion/validation routes and four category hubs.
 - Dedicated Web Worker, actual CSV/TSV/JSON/JSONL conversion, text-only preview, download and revoke, limit/error controls.
 - Fatal streaming file decode and native gzip decompression for supported text inputs; decoded maximum 16 MiB, at most 200k rows and 500 columns. This is memory-bounded, NOT a 100–500 MB streaming product.
+- Explicit-consent one-time IndexedDB output handoff using an opaque URL reference, 2 MiB cap and logical 30-minute TTL, with cross-browser E2E planned. No raw data in the URL.
 - Exact-output tests for leading zeros, quoted newlines/commas, malformed CSV/JSONL, Excel BOM, formula-escape for CSV/TSV exports, negative numbers, opt-in best-effort secret masking, and distinct route outputs.
 - Cloudflare 24 MiB build artifact gate under published 25 MiB individual file maximum; 26 MiB sparse regression.
 - Conservative WebMCP metadata summary and optional browser capability registration, never raw private file content to an agent.
@@ -21,7 +22,7 @@ The requested uploaded master execution prompt proposes nine bug classes, an add
 1. Fully streaming/zero-copy 100–500 MB file and export architecture: NOT IMPLEMENTED. Requires measured memory profiles and output-writer/browser fallback.
 2. Binary Parquet, Arrow, Zstd/Snappy decompression, DuckDB-Wasm with OPFS spill and version/integrity/CDN hardening: NOT IMPLEMENTED.
 3. TOON ecosystem, live tokenizer comparison, Markdown-table and HTML table input parsing, Excel XLSX workbooks: NOT IMPLEMENTED.
-4. IndexedDB cross-route zero-reupload workflow, optional controlled private hash state, locally hosted SQL AI: NOT IMPLEMENTED. Sensitive persistence should not be hidden.
+4. IndexedDB cross-route one-time workflow is now implemented with explicit user consent, 2 MiB limit and 30-minute logical expiry; real privacy and physical expiry beyond the next access remain human-review tasks. URL hash payload sharing and locally hosted SQL AI remain NOT IMPLEMENTED.
 5. AdSense ad placement, real CLS and visual ad-control gap under a live ad script, consent management and third-party policy review: NOT IMPLEMENTED; no AdSense account used.
 6. Microsoft Edge / Firefox store packaging: NOT IMPLEMENTED.
 7. External public website, Search Console impressions/indexing, real user demand, AI citations, publisher payouts, paid provider reviews and profitability: NOT VERIFIED.
