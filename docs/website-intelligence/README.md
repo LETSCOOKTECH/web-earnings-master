@@ -1,6 +1,6 @@
 # Sense Website Intelligence v24 — executable, evidence-gated competitor mapping
 
-**Release status: PR-only, not production-certified.** This subsystem extracts **publicly observable** facts from an operator-selected origin using safe HTTP. It does not reconstruct private source code, database schemas, proprietary ranking algorithms or actual competitor revenue. The solution uses no third-party code copied from a referenced website.
+**Release status: MERGED INTO MAIN / INTERNAL LAB VALIDATED / NOT EXTERNALLY PRODUCTION CERTIFIED.** See [V24 merged-main release-readiness audit](../audits/2026-11-25-main-readiness-v24.md) for actual CI evidence and outstanding field gates. This subsystem extracts **publicly observable** facts from an operator-selected origin using safe HTTP. It does not reconstruct private source code, database schemas, proprietary ranking algorithms or actual competitor revenue. The solution uses no third-party code copied from a referenced website.
 
 ## Code and exact reproducible commands
 

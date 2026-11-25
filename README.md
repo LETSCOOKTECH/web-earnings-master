@@ -230,13 +230,16 @@ V13 includes [legitimate authority and distribution research](docs/seo-master/15
 ## V15 AI Search current provider controls (November 24 2026)
 Retains the existing 48 skills. Adds first-party Google generative AI control separation, corrected August 31 2026 reporting rollout, stricter surface/locale citation prompt completeness and independent local adversarial tests. See docs/ai-search/07-2026-11-24-provider-controls-v15.md and npm run audit:ai-controls. Neither code nor guides can certify actual external citations or monetization.
 
-## V23 — trusted upstream expertise and complete specialist routing (review branch)
+## V23 — trusted upstream expertise and complete specialist routing (merged)
 
 The curated `sources/skill-network-v23.json` maps **all 50 active Sense skills** to seven evidence-gated lifecycle owners and **30 upstream methodology leads plus 160 existing first-party source records (70 distinct IDs linked to the 50 skills)**. Source methods from OpenAI, Anthropic, Superpowers, Croftweaver, Astro specialists, Semrush, SE Ranking, Addy Osmani, Corey Haines, Cloudflare and Vercel are **methodology references only**: no third-party skill installation or execution is implied. The [V23 integration manual](docs/skills/2026-11-25-trusted-upstream-integration-v23.md) specifies concrete source risks, handoffs and controlled skill-evaluation cases.
 
 Run `node scripts/check-skill-network-v23.mjs` and `node --test tests/skill-network-v23.test.mjs`. The new sixteen integrity and adversarial tests cover owner/source mapping, dropped originals, misleading upstream associations, and ownership, source provenance, unsupported installation claims, missing upstream links and broken routing. They are **not** evidence of live SEO ranking, actual agent uplift, public deployment, AdSense approval or business revenue. A controlled isolated real-agent benchmark and authorized account/hosting experiments remain separate future work.
 
-## V24 — real website discovery and observable competitor-intelligence engine
+## V24 — real website discovery and observable competitor-intelligence engine (merged)
+
+**Verified release state:** The V23 and V24 source changes were merged to `main` on 2026-11-25. Local/CI tooling and controlled HTTP evidence passed, but public deployment, genuine search traffic, AI citations and publisher earnings remain unverified. See the [main-branch release readiness audit](docs/audits/2026-11-25-main-readiness-v24.md) before claiming real-world production readiness.
+
 
 **Implementation:** `scripts/site-intelligence.mjs` plus `lib/site-intelligence/` provides an actual public HTTPS, DNS-pinned, robots-first bounded site crawler, recursive sitemap index/gzip reader, public HTML navigation graph, evidence-qualified asset/header/framework hints, imported legal search-result leads, a privacy-minimized sanitized HAR analyzer and **ten connected Sense-skill evidence handoffs**. Use `--discover search-results.json` for source-preserving imported candidate sites; use `--origin https://selected-site.tld/ --authorized-origin https://selected-site.tld/ --out report.json --packets-out claims.json` only with operator approval and applicable terms. Read [the complete operator manual](docs/website-intelligence/README.md).
 
