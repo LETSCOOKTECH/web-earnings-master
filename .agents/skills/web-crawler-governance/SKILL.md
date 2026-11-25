@@ -35,3 +35,9 @@ Read docs/ai-search/07-2026-11-24-provider-controls-v15.md. Explicitly separate 
 
 ## V16 independent global-production acceptance
 Read docs/audits/2026-11-24-independent-global-readiness-v16.md and docs/ai-search/01-provider-crawlers-controls.md. Google `none` must block indexing; apply only Googlebot-scoped X-Robots-Tag values. The Perplexity primary original was opened, with Perplexity-User distinct from search crawling; Anthropic began rolling out `__usage_ai-training` recognition October 30 2026 while Google adoption is future. For GEO, preregister provider+locale+human-question+repeat cells, preserving UNAVAILABLE. Run npm run audit:independent-readiness, npm test and real-browser QA. Do not label the knowledge library globally production certified without blind-agent, deployment, live provider and user/revenue proofs.
+
+## V23 Google AI control scope and permission gate
+
+The November 24, 2026 Google generative-AI controls documentation introduces or clarifies a Search Console Search generative AI inclusion control: https://developers.google.com/search/docs/fundamentals/gen-ai-controls. Independently reconcile its current applicability with `https://developers.google.com/search/docs/crawling-indexing/control-what-you-share`, robots/meta/`X-Robots-Tag`, snippet directives, `Google-Extended` and the future-effective AI-training token. Never treat any one setting as a universal AI-crawler block or ranking boost. A planned effective date is NOT current policy.
+
+Before changes, record: domain/property owner, affected surface (Search, Search generative features, training, unrelated bot), decision maker's instruction, observed effective current settings, reversible change and verification. DO NOT flip user-owned controls from a recommendation or an upstream skill. Preserve `OAI-SearchBot`, `GPTBot` and user-initiated fetch policy separately; disclose UNKNOWN where verified provider bot access is unavailable.
