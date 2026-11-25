@@ -190,14 +190,14 @@ test('dual-stack DNS supports public IPv6 and IPv4 while pinning IPv4 where avai
 test('HAR summaries preserve public network shapes but never leak query, tokens, bodies or cookies',()=>{
  const har={log:{entries:[
    {request:{url:'https://research-site.org/api/files/123456?secret=VERY_SECRET',method:'POST',headers:[{name:'Authorization',value:'Bearer TOPSECRET'}],postData:{text:'PASSWORDDATA'}},response:{status:201,content:{mimeType:'application/json',text:'PRIVATE'},headers:[{name:'Set-Cookie',value:'cookie_secret'}]},time:123.45},
-   {request:{url:'https://tracker.tld/track?email=sensitive',method:'GET'},response:{status:200},time:2},
+   {request:{url:'https://tracker.tld/track?email=LEAK_PROBE_QUERY_123',method:'GET'},response:{status:200},time:2},
    {request:{url:'https://research-site.org/assets/site.js',method:'GET'},response:{status:200,content:{mimeType:'application/javascript'}},time:6},
  ]}};
  const out=summarizeHAR(har,{origin:'https://research-site.org/'});
  const serialized=JSON.stringify(out);
  assert.equal(out.stats.same_origin,2);assert.equal(out.stats.external,1);
  assert.ok(out.observable_routes.some(r=>r.path==='/api/files/:redacted'&&r.classification==='api_candidate'));
- for(const secret of ['VERY_SECRET','TOPSECRET','PASSWORDDATA','PRIVATE','cookie_secret','sensitive'])assert.ok(!serialized.includes(secret),secret);
+ for(const secret of ['VERY_SECRET','TOPSECRET','PASSWORDDATA','PRIVATE','cookie_secret','LEAK_PROBE_QUERY_123'])assert.ok(!serialized.includes(secret),secret);
  assert.equal(out.sensitive_fields_retained,false);
 });
 test('HAR import rejects invalid logs and massive entries',()=>{
