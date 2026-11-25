@@ -1,5 +1,6 @@
 import {test,expect} from '@playwright/test';
 import fs from 'node:fs';
+import AxeBuilder from '@axe-core/playwright';
 
 test('rendered real Astro tool validates data, exports exact bytes and rejects unsafe HTML',async({page},testInfo)=>{
  const requests=[];
@@ -55,4 +56,15 @@ test('responsive layout, no external network, and explanatory no-JS content',asy
  await page.getByRole('button',{name:/Validate JSONL/}).click();
  await expect(page.locator('#stat-valid')).toHaveText('2');
  await page.screenshot({path:testInfo.outputPath('mobile-success.png'),fullPage:true});
+});
+
+test('automated WCAG scan catches critical/serious issues on the working page and results',async({page})=>{
+ await page.goto('/tools/jsonl-validator/');
+ const initial=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
+ expect(initial.violations.filter(v=>['critical','serious'].includes(v.impact)),JSON.stringify(initial.violations)).toEqual([]);
+ await page.locator('#jsonl-paste').fill('{"hello":"world"}\n');
+ await page.getByRole('button',{name:/Validate JSONL/}).click();
+ await expect(page.getByRole('status')).toHaveText(/Validation passed/);
+ const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
+ expect(result.violations.filter(v=>['critical','serious'].includes(v.impact)),JSON.stringify(result.violations)).toEqual([]);
 });
