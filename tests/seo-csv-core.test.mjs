@@ -123,3 +123,19 @@ test('capacity boundary rejects one byte above stated 2 MB',()=>{
  const row='x,'.repeat(199)+'x\n';
  assert.throws(()=>cleanCsv(row.repeat(5000)+'a',{hasHeader:false}),/exceeds 2 MB/);
 });
+
+
+test('OWASP formula guard covers ASCII, control, zero-width and fullwidth prefixes with numeric exception',()=>{
+ const risky=['=1+1','+SUM(A1)','-CMD','@SUM(A1)','\t=1+1','\rfoo','\nfoo',
+  '\u200B=1+1','\u2060@SUM','＝1+1','＋SUM','－CMD','＠SUM'];
+ const safe=['-2e3','+1e4','-.5','+0.75','plain',' Asha '];
+ const output=parseCsv(serializeCsv([risky.concat(safe)]))[0];
+ assert.deepEqual(output,risky.map(v=>"'"+v).concat(safe));
+ const raw=parseCsv(serializeCsv([risky.concat(safe)],{guardSpreadsheetFormulas:false}))[0];
+ assert.deepEqual(raw,risky.concat(safe));
+});
+test('CSV cell breakout is prevented by proper separator and quote serialization',()=>{
+ const values=['a,b','a"b','=1+1";=1+1','normal'];
+ const encoded=serializeCsv([values]);
+ assert.deepEqual(parseCsv(encoded)[0],values.map(v=>v.startsWith('=')?"'"+v:v));
+});
