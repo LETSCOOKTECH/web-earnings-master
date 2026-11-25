@@ -45,3 +45,18 @@ npm run audit:site-depth:v25 -- --file OBSERVED_V24_REPORT.json
 The last two inputs require real previously collected data; they must never be synthesized and presented as evidence of external research. The Astro example is source-only until built and deployed; a local build is not an owner-controlled externally observed service.
 
 **Final conclusion:** **50/50 entrypoint integrity audit** is a foundation check. It is defensible to begin a bounded research and first-site pilot, but **not** to declare every domain skill production-perfect, the toolkit a competitive winner, or the web business profitable until actual reproducible external outcomes and benchmark comparisons exist.
+
+## CI-measured audit baseline — not a subjective score
+
+Actual GitHub Actions source: run `45653926439` on commit `b080ded8b5d2bd7b17ce8b15990b975fd3130c92`, `npm run audit:skills:depth`. A reproducible 50-record snapshot is committed at `sources/skill-verification-v25.json`. **This snapshot predates some later V25 entrypoint changes**; rerun the exact auditor when comparing against the final merge.
+
+| Exact CI metric | Measured |
+| --- | ---: |
+| Registered active skill directories | 50 |
+| Actual matching entrypoints | 50 |
+| Entrypoints flagged for domain review by text heuristics | 32 |
+| Entrypoints shorter than 650 words | 22 |
+| Entrypoints without direct runnable command cited | 26 |
+| Entrypoints without a linked source/manual/document reference | 0 |
+
+These warnings identify a maintenance queue; they **do not** imply 32 broken tools or prove 18 fully working agent skills. A short entrypoint can correctly delegate to substantial supporting manuals, while a long entrypoint can still fail a real task. Focus future remediation on independent real task tests, permission gates, field failures and re-opened official originals—not forcing documents to meet a word count.
