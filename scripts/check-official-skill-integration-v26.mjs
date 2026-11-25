@@ -46,7 +46,7 @@ export function checkOfficialIntegration(root=ROOT,{manifest=null,skills=null}={
   if(!(record.repository in AUTHORITIES)||AUTHORITIES[record.repository]!==record.authority)fail('UNVERIFIED_OWNER_CLAIM:'+id);
   if(!LICENSES[record.repository]?.has(record.license_basis))fail('LICENSE_NOT_VERIFIED:'+id);
   const legal=record.repository==='anthropics/skills'
-    ?{path:String(record.skill_path).replace(/SKILL\\.md$/,'LICENSE.txt'),sha:ANTHROPIC_LICENSE_BLOBS[id]}
+    ?{path:String(record.skill_path).endsWith('SKILL.md')?String(record.skill_path).slice(0,-8)+'LICENSE.txt':null,sha:ANTHROPIC_LICENSE_BLOBS[id]}
     :LICENSE_RECEIPTS[record.repository];
   if(!legal||record.license_evidence?.path!==legal.path||record.license_evidence?.blob_sha!==legal.sha)
     fail('LICENSE_RECEIPT_TAMPERED:'+id);
