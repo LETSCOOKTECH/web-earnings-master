@@ -21,7 +21,7 @@ export function inspectPublicAgentFiles(root=ROOT){
  let skills=[];
  try{skills=fs.readdirSync(basedir,{withFileTypes:true}).filter(d=>d.isDirectory()&&fs.existsSync(path.join(basedir,d.name,'SKILL.md'))).map(d=>d.name).sort();}catch(e){errors.push('SKILL_DIRECTORY_MISSING');}
  if(skills.length!==50)errors.push('SKILL_REGISTRY_EXPECTED_50_GOT_'+skills.length);
- const links=[...index.matchAll(/\]\(\.agents\/skills\/([a-z0-9-]+)\/SKILL\.md\)/g)].map(m=>m[1]);
+ const links=[...index.matchAll(/^\\d{2}\\. \\[\\`[a-z0-9-]+\\`\\]\\(\\.agents\\/skills\\/([a-z0-9-]+)\\/SKILL\\.md\\)$/gm)].map(m=>m[1]);
  if(links.length!==skills.length||new Set(links).size!==links.length||links.slice().sort().join('|')!==skills.join('|'))errors.push('INDEX_NOT_COMPLETE_OR_DUPLICATE');
  for(const s of skills){
   const file=find('.agents/skills/'+s+'/SKILL.md');
