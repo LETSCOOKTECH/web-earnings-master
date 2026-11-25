@@ -79,3 +79,12 @@ Provider docs can change after this date: reopen originals when acting on polici
 - Public owned domain, live DNS/TLS, Search Console/Bing, AI answer samples and AdSense account state are unobserved.
 - No authorization for third-party package install, bulk copy, cloud deployment or data-provider spending. Keep these blocked.
 - The graph links owners and methods, but does not replace domain-specific independent fixture tests and first-party human verification.
+
+
+## Second-pass trust audit: updated OpenAI skill home and actual licenses
+
+During V23 review, `openai/skills` README explicitly identified the repository as **deprecated** and referred users to `openai/plugins`. The old `skill-creator` source remains as a historical inspected artifact, flagged `deprecated=true`; no active Sense specialist should route to it. The current OpenAI plugin suite supplied additional complete source reads for `frontend-app-builder`, `frontend-testing-debugging`, `plugin-eval/improve-skill` and `plugin-creator`; their content SHAs and applicability are in the registry. Neither a current plugin description nor an MIT field in its manifest is blanket authorization to copy nested skill code. OpenAI plugin packaging is not automatically identical to Codex portable SKILL.md routing.
+
+The license check directly opened root LICENSE texts for Superpowers (MIT), Croftweaver (MIT), Addy Osmani Web Quality (MIT), SE Ranking (MIT), Corey Haines Marketing Skills (MIT), agent-skill-eval (MIT), Methedrone Astro (Apache-2.0), Semrush Skills (Apache-2.0), Cloudflare Skills (Apache-2.0) and Cisco Skill Scanner (Apache-2.0). Anthropic's `frontend-design`, `webapp-testing`, `skill-creator` package-local LICENSE.txt files show Apache-2.0. No root LICENSE was located for `openai/plugins` or `vercel-labs/agent-skills` through the tested path; treat copying rights as UNKNOWN pending file-specific review. Source code and dependencies were **not** copied or installed by this change.
+
+The local gate treats all upstream source copying as `NOT_GRANTED`, rejects deprecated references in active skill routes, and verifies individual per-skill official original source completeness. Source inspection, package licenses, independently validated task performance and publisher approval are **four different checks**.
