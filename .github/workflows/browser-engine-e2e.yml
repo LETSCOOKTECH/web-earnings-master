@@ -42,4 +42,5 @@ jobs:
           path: |
             .tmp/browser-e2e-results.json
             .tmp/seo-csv-lab-browser-results.json
+            .tmp/premium-csv-screenshots/*.png
           if-no-files-found: warn

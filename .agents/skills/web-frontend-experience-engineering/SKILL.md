@@ -45,3 +45,9 @@ description: "Implement fast accessible responsive frontend and individual high-
 ## Official primary-source starting points (re-open before action)
 - https://developers.google.com/search/docs/appearance/ai-features
 - https://www.w3.org/TR/WCAG22/
+
+
+## V21 premium verified interface: one task, actual feedback
+Inspect examples/seo-csv-lab/site/index.html and style.css and follow docs/quality/21-premium-csv-studio-acceptance.md. The premium screen has one actual task with restrained near-black cards, clear 2-panel INPUT/OUTPUT hierarchy, original explanatory text, real source/file selection, advanced comparison controls, empty/loading/error/success/cancel states, live summary, an eight-row safe preview and an output download. It does not substitute decorative charts for user progress. UI controller tool.mjs renders cells using textContent and only createElement; never interpolate uploaded CSV as HTML or render synthetic statistics.
+
+For UI acceptance run the exact shipped browser E2E on Chromium/Firefox/WebKit, not a design mockup. Verify that pasted input clears a previously selected file, options and source changes invalidate a prior Blob download, reset and cancellation preserve no stale result, invalid UTF-8 reports an error, XSS-looking CSV remains literal text, and malformed quotation cannot produce a download. For accessibility: check keyboard focus, semantic labels, legend, status role and live-region announcements, zoom/reflow and reduced motion; actual iOS Safari, Android hardware and screen readers remain a separate HOLD until observed. The initial HTML must explain how the tool works with JS disabled, but without JS the cleanup action itself cannot function; disclose this. No off-site font or imagery fetches. Current WCAG original: https://www.w3.org/TR/WCAG22/ .

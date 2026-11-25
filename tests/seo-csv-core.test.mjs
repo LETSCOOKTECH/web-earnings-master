@@ -68,3 +68,74 @@ test('Server only binds local ephemeral port and does not need remote API',async
  assert.equal((await fetch(lab.origin+'/assets/tool.mjs')).headers.get('content-type'),'text/javascript; charset=utf-8');
  }finally{await lab.close()}
 });
+
+
+test('column-based deduplication keeps first complete record and may discard different later data',()=>{
+ const data='id,name,amount\n1,Asha,10\n1,Asha,999\n2,Lee,20\n';
+ const r=cleanCsv(data,{matchColumn:1});
+ assert.equal(r.removed,1);assert.equal(r.kept,2);
+ assert.equal(r.csv,'id,name,amount\r\n1,Asha,10\r\n2,Lee,20\r\n');
+ assert.equal(r.matchColumn,1);assert.equal(r.width,3);
+});
+test('trim-for-matching affects duplicate comparison ONLY, not original output values',()=>{
+ const data='id,name\n1, Asha \n1,Asha\n';
+ assert.equal(dedupeCsv(data).kept,2);
+ const result=cleanCsv(data,{trimForMatching:true});
+ assert.equal(result.kept,1);assert.equal(result.csv,'id,name\r\n1, Asha \r\n');
+});
+test('case-insensitive and whitespace-insensitive matching combine in column mode',()=>{
+ const input='id,name\n 1,Asha\n1,Lee\n2,NOOR\n';
+ const result=dedupeCsv(input,{matchColumn:1,trimForMatching:true,caseSensitive:false});
+ assert.deepEqual(result.rows,[['id','name'],[' 1','Asha'],['2','NOOR']]);
+});
+test('invalid column index or unsupported fractional index rejects without silently losing records',()=>{
+ for(const index of [-2,0,1.5,NaN,Infinity,201,'1',true]){
+  assert.throws(()=>dedupeCsv('a,b\n1,2\n',{matchColumn:index}),/Match column/);
+ }
+ assert.throws(()=>dedupeCsv('a,b\n1,2\n',{matchColumn:3}),/between 1 and 2/);
+});
+test('blank header-only CSV is valid with zero data rows and deterministic output',()=>{
+ const r=cleanCsv('id,name\n',{matchColumn:2});
+ assert.equal(r.kept,0);assert.equal(r.removed,0);assert.equal(r.csv,'id,name\r\n');
+});
+test('whole-row dedupe does not collapse records merely because one field repeats',()=>{
+ const result=dedupeCsv('id,name\n1,Asha\n1,Noor\n',{hasHeader:true});
+ assert.equal(result.kept,2);
+});
+
+
+test('hard capacity boundary: exactly 2 MB, 5000 records, 200 columns succeeds with correct counts',()=>{
+ const row='x,'.repeat(199)+'x\n';
+ const source=row.repeat(5000);
+ assert.equal(new TextEncoder().encode(source).length,2_000_000);
+ const at=performance.now();
+ const result=cleanCsv(source,{hasHeader:false});
+ const elapsedMs=Math.round(performance.now()-at);
+ assert.equal(result.width,200);
+ assert.equal(result.original,5000);
+ assert.equal(result.kept,1);
+ assert.equal(result.removed,4999);
+ assert.equal(result.csv,row.trimEnd().replace(/\n$/,'')+'\r\n');
+ // Diagnostic bound on Node CI only; NOT proof of mobile user latency.
+ assert.ok(elapsedMs<20000,'Upper limit unexpectedly consumed more than 20s: '+elapsedMs+'ms');
+});
+test('capacity boundary rejects one byte above stated 2 MB',()=>{
+ const row='x,'.repeat(199)+'x\n';
+ assert.throws(()=>cleanCsv(row.repeat(5000)+'a',{hasHeader:false}),/exceeds 2 MB/);
+});
+
+
+test('OWASP formula guard covers ASCII, control, zero-width and fullwidth prefixes with numeric exception',()=>{
+ const risky=['=1+1','+SUM(A1)','-CMD','@SUM(A1)','\t=1+1','\rfoo','\nfoo',
+  '\u200B=1+1','\u2060@SUM','＝1+1','＋SUM','－CMD','＠SUM'];
+ const safe=['-2e3','+1e4','-.5','+0.75','plain',' Asha '];
+ const output=parseCsv(serializeCsv([risky.concat(safe)]))[0];
+ assert.deepEqual(output,risky.map(v=>"'"+v).concat(safe));
+ const raw=parseCsv(serializeCsv([risky.concat(safe)],{guardSpreadsheetFormulas:false}))[0];
+ assert.deepEqual(raw,risky.concat(safe));
+});
+test('CSV cell breakout is prevented by proper separator and quote serialization',()=>{
+ const values=['a,b','a"b','=1+1";=1+1','normal'];
+ const encoded=serializeCsv([values]);
+ assert.deepEqual(parseCsv(encoded)[0],values.map(v=>v.startsWith('=')?"'"+v:v));
+});

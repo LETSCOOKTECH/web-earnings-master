@@ -11,7 +11,7 @@ import {validatePublicSiteOrigin} from './validate-public-origin-v20.mjs';
 const projectRoot=path.resolve(import.meta.dirname,'..');
 const sourceRoot=path.join(projectRoot,'examples/seo-csv-lab/site');
 const files=['index.html','404.html','robots.txt','sitemap-index.xml','sitemap-0.xml',
- 'assets/csv-core.mjs','assets/tool.mjs','assets/style.css'];
+ 'assets/csv-core.mjs','assets/csv-worker.mjs','assets/tool.mjs','assets/style.css'];
 export function buildPublicCsvDemo({origin,outDir}){
  const gate=validatePublicSiteOrigin(origin);
  if(!gate.ok)throw new Error('Invalid production-candidate origin: '+gate.issues.join('; '));
