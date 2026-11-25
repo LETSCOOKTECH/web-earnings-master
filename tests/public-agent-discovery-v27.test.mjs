@@ -30,7 +30,7 @@ test('readability documented without pretending third-party platforms have web t
 });
 test('public index has no repeated skill links and points to the physically existing entrypoints',()=>{
  const index=fs.readFileSync(path.join(root,'SKILLS.md'),'utf8');
- const links=[...index.matchAll(/^\\d{2}\\. \\[\\`[a-z0-9-]+\\`\\]\\(\\.agents\\/skills\\/([a-z0-9-]+)\\/SKILL\\.md\\)$/gm)].map(x=>x[1]);
+ const links=[...index.matchAll(/^\d{2}\. \[`[a-z0-9-]+`\]\(\.agents\/skills\/([a-z0-9-]+)\/SKILL\.md\)$/gm)].map(x=>x[1]);
  assert.equal(links.length,50);
  assert.equal(new Set(links).size,50);
  for(const name of links)assert.equal(fs.existsSync(path.join(root,'.agents/skills',name,'SKILL.md')),true,name);
