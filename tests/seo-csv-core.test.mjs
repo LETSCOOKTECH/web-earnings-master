@@ -102,3 +102,24 @@ test('whole-row dedupe does not collapse records merely because one field repeat
  const result=dedupeCsv('id,name\n1,Asha\n1,Noor\n',{hasHeader:true});
  assert.equal(result.kept,2);
 });
+
+
+test('hard capacity boundary: exactly 2 MB, 5000 records, 200 columns succeeds with correct counts',()=>{
+ const row='x,'.repeat(199)+'x\n';
+ const source=row.repeat(5000);
+ assert.equal(new TextEncoder().encode(source).length,2_000_000);
+ const at=performance.now();
+ const result=cleanCsv(source,{hasHeader:false});
+ const elapsedMs=Math.round(performance.now()-at);
+ assert.equal(result.width,200);
+ assert.equal(result.original,5000);
+ assert.equal(result.kept,1);
+ assert.equal(result.removed,4999);
+ assert.equal(result.csv,row.trimEnd().replace(/\n$/,'')+'\r\n');
+ // Diagnostic bound on Node CI only; NOT proof of mobile user latency.
+ assert.ok(elapsedMs<20000,'Upper limit unexpectedly consumed more than 20s: '+elapsedMs+'ms');
+});
+test('capacity boundary rejects one byte above stated 2 MB',()=>{
+ const row='x,'.repeat(199)+'x\n';
+ assert.throws(()=>cleanCsv(row.repeat(5000)+'a',{hasHeader:false}),/exceeds 2 MB/);
+});
