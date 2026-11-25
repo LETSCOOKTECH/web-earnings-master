@@ -23,5 +23,5 @@ jobs:
           node-version: '22'
       - name: Verify every registered Sense skill is reachable and source-linked
         run: node scripts/check-skill-network-v23.mjs
-      - name: Run fourteen independent adversarial negative controls
+      - name: Run sixteen independent adversarial negative controls
         run: node --test tests/skill-network-v23.test.mjs
