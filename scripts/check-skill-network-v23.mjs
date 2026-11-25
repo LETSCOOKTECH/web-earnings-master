@@ -51,12 +51,17 @@ export function checkNetwork(root) {
     for(const item of stage.skills){
       if(!item||!item.id||skills.has(item.id)){fail(`duplicate/invalid skill ${item?.id}`);continue;}
       skills.set(item.id,{stage:stage.id,owner:stage.owner,item});
-      if(!Array.isArray(item.upstreams)||item.upstreams.length===0)fail(`${item.id}: no source methods linked`);
+      if(!Array.isArray(item.upstreams))fail(`${item.id}: upstreams must be an array`);
+      if(Array.isArray(item.upstreams)){
+        const expected=item.upstreams.length?'vetted-external-method-plus-official-originals':'official-originals-only';
+        if(item.source_strategy!==expected)fail(`${item.id}: false or missing source strategy`);
+      }
       for(const ref of item.upstreams??[])if(!upstreamIds.has(ref))fail(`${item.id}: unknown upstream ${ref}`);
       if(!item.deliverable||!item.fail_case||!item.local_oracle||!item.external_gate)fail(`${item.id}: missing individual deliverable, local/real-world oracle or fail case`);
       const original=legacySkills.get(item.id);
       if(!original)fail(`${item.id}: missing first-party crosswalk record`);
       if(!Array.isArray(item.official_source_ids)||item.official_source_ids.length===0)fail(`${item.id}: no first-party original source IDs`);
+      if(original&&Array.isArray(item.official_source_ids))for(const expected of original.reference_source_ids)if(!item.official_source_ids.includes(expected))fail(`${item.id}: dropped original first-party source ${expected}`);
       for(const ref of item.official_source_ids??[]){
         if(!officialIds.has(ref))fail(`${item.id}: unresolvable first-party source ${ref}`);
         if(original&&!original.reference_source_ids.includes(ref))fail(`${item.id}: source ${ref} not in first-party crosswalk`);
