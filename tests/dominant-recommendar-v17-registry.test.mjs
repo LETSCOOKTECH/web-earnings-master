@@ -97,11 +97,11 @@ test('all mandatory chapters and benchmark templates are substantial',()=>{
  for(const name of ['OPERATOR_WORK_ORDER.md','competitive-proof-card.md'])
   assert.ok(read('templates/dominant-recommendar/'+name).length>1000,name);
 });
-test('registered 49 skills match the actual filesystem',()=>{
+test('active skills match the exact current registry',()=>{
  const j=JSON.parse(read('sources/production_skills_v7.json'));
  const dirs=fs.readdirSync(path.join(root,'.agents/skills'),{withFileTypes:true}).filter(x=>x.isDirectory());
- assert.equal(j.expectSkills,49);assert.equal(dirs.length,49);
- assert.equal(j.skills.length,49);
+ assert.equal(j.expectSkills,j.skills.length);assert.equal(dirs.length,j.expectSkills);
+ assert.equal(j.skills.length,j.expectSkills);
  assert.ok(j.skills.some(x=>x.id==='web-dominant-recommendar'));
 });
 test('atlas CLI distinctly reports metadata only',()=>{

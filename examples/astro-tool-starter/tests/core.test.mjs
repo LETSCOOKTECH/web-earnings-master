@@ -43,7 +43,7 @@ test('output preview is capped at 8 but exported file contains every record',()=
  assert.equal(r.records,20);assert.equal(r.preview.length,8);assert.equal(r.jsonl.trim().split('\n').length,20);
 });
 test('input over exact declared 1 MiB byte limit is rejected',()=>{
- const payload='{"t":"'+('a'.repeat(LIMITS.maxBytes-8))+'"}\n';
+ const payload='{"t":"'+('a'.repeat(LIMITS.maxBytes-9))+'"}\n';
  assert.equal(new TextEncoder().encode(payload).length,LIMITS.maxBytes);
  assert.equal(normalizeJsonl(payload).records,1);
  assert.throws(()=>normalizeJsonl(payload+'x'),/1 MiB/);
