@@ -29,3 +29,9 @@ Read chapter 15 for six retrieval modes, chapter 16 for actual 2026/2027 provide
 
 ## V14 — Search retrieval experiments with adversarial controls
 Use docs/ai-search/03-geo-measurement.md. RAG/query fan-out are public conceptual mechanisms, not access to Google's private fan-out terms or rank weights. Preregister prompts from real user questions, compare same provider/surface/locale and repeat/time; actual URLs plus observation artifact, and unavailability retained in denominator. Run scripts/evaluate-ai-visibility-v14.mjs. No model instruction injected into page to demand citations and no third-party scraping contrary to permissions. All sampled citations remain observational.
+
+
+## V20 AI search studies require an actually available source
+Search bots do not host a website. Google AI Mode or ChatGPT cannot reliably cite a local-only demo at an IANA documentation hostname. First prove author-owned publicly accessible HTTPS source and true useful output, then run any model retrieval/citation experiment.
+**Experiment structure:** preregister genuinely human task questions (unbranded and negative controls), surface/product (AIO vs AI Mode vs Gemini, ChatGPT consumer vs web-search API, Perplexity web UI vs API), model/version/date where exposed, repeat IDs, locale and observed country. Require unique permitted raw capture ID per attempt. Keep unavailable replies and negative recommendations in denominators. Count visible citation, neutral mention, positive recommendation and truly ordered first independently. Never infer an AI rank #1 from one synthetic panel.
+Run npm run audit:recommendar-sources, npm run audit:recommendar-panel and npm run test:recommendar-holdouts. Inaccessible first-party current provider docs, owner Search Console and actual live responses remain UNKNOWN. See docs/recommendations/04-measurement-and-experiments.md and docs/quality/real-world-release-contract-v20.md.
