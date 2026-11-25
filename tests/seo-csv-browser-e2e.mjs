@@ -32,6 +32,8 @@ for(const [name,engine] of [['Chromium',chromium],['Firefox',firefox],['WebKit',
    const [dl]=await Promise.all([page.waitForEvent('download'),page.getByRole('link',{name:'Download cleaned CSV'}).click()]);
    const bytes=fs.readFileSync(await dl.path(),'utf8');
    assert.equal(bytes,"id,value\r\n1,-2e3\r\n2,'=2+2\r\n");
+   fs.mkdirSync('.tmp/premium-csv-screenshots',{recursive:true});
+   await page.screenshot({path:'.tmp/premium-csv-screenshots/'+name.toLowerCase()+'-mobile.png',fullPage:true});
    entry.checks.push('REAL_PASTE_AND_DOWNLOAD_BYTES_AND_SCIENTIFIC_NUMBER');
    await page.getByRole('checkbox',{name:'Escape spreadsheet formulas (may modify text)'}).uncheck();
    await page.getByRole('button',{name:'Remove duplicate rows'}).click();
