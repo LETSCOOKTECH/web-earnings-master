@@ -1,7 +1,7 @@
 {
   "schema": "sense-skill-source-crosswalk-v20",
-  "created_at_utc": "2026-11-25T08:30:00Z",
-  "scope": "Curated first-party original leads for 49 skill domains; links are NOT evidence of current original-body access, correctness or external outcome. Action-time original review mandatory. V21 adds targeted actual CSV tool originals and executable product acceptance; current source mapping remains non-certification.",
+  "created_at_utc": "2026-11-25T10:00:00Z",
+  "scope": "Curated first-party original leads for 49 skill domains; links are NOT evidence of current original-body access, correctness or external outcome. Action-time original review mandatory. V21 adds targeted actual CSV tool originals and executable product acceptance; current source mapping remains non-certification. V22 routes the new master orchestrator with bounded Astro/market/AI and skill-evaluation source leads.",
   "cited_registry": "sources/official_sources.json",
   "primary_originals_opened_during_this_audit": [
     {
@@ -756,6 +756,23 @@
       "local_evidence_expected": "Run source atlas validator, recommendation cohort and quote adversarial tests; inspect actual user task and benchmark",
       "external_evidence_expected": "Verify real provider/locale output, Google/Bing owner data and genuine user outcomes independently",
       "blocking_condition": "No output authenticity, fake ranked first, missing negative responses, manufactured evidence or no actual user value",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-dominant-tool-creator",
+      "reference_source_ids": [
+        "v22-astro-official",
+        "v22-astro-routing",
+        "v22-google-ai-guide",
+        "v22-openai-skill-evals",
+        "v21-wcag22",
+        "v21-owasp-wstg-csv"
+      ],
+      "local_evidence_expected": "Build actual Astro JSONL product and validate exact normalized output, malformed input, real 3-engine Playwright, security and build artifact",
+      "external_evidence_expected": "Owner-authorized externally observed hosting plus actual source-indexed state, AI recommendations and publisher/user outcomes",
+      "blocking_condition": "No independent product output, false demand, incorrect or unlicensed upstream imports, missing lockfile, fake live URL or unsupported SEO claim",
       "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
       "external_status": "NOT_AUTHENTICATED",
       "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
