@@ -1,5 +1,5 @@
 import {readLocalText} from './studio-reader.mjs';
-import {saveWorkflow,loadWorkflow,chooseFollowUp,MAX_CHAIN_BYTES} from './studio-workflow.mjs';
+import {saveWorkflow,loadWorkflow,clearAllWorkflows,chooseFollowUp,MAX_CHAIN_BYTES} from './studio-workflow.mjs';
 const el=id=>document.getElementById(id);
 const box=document.querySelector('[data-studio-route]');
 if(box){
@@ -45,6 +45,10 @@ if(box){
    worker.addEventListener('error',()=>{if(id!==serial)return;active?.terminate();active=null;run.disabled=false;message('Worker failed. No output produced.',true);},{once:true});
    worker.postMessage({job:id,route,input:text,sanitize:el('studio-escape').checked,maskSecrets:el('studio-mask').checked});
   }catch(error){if(id!==serial)return;active?.terminate();active=null;run.disabled=false;message(error instanceof Error?error.message:'Input failed.',true);}
+ });
+ el('studio-clear-workflows').addEventListener('click',async()=>{
+  try{await clearAllWorkflows();message('Saved local workflow handoffs deleted from this browser.');}
+  catch{message('Could not clear local handoffs; use browser site-data controls.',true);}
  });
  chain.addEventListener('click',async()=>{
   if(!lastResult||!output)return;
