@@ -1,3 +1,6 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 // Source-limited diagnostics for V24 public HTTP observations, not full site reconstruction.
 export function analyzeSiteDepth(report){
  if(report?.schema!=='sense-site-intelligence-v24'||!Array.isArray(report.pages)||!Array.isArray(report.sitemaps))throw Error('V24_SITE_REPORT_REQUIRED');
@@ -28,4 +31,14 @@ export function analyzeSiteDepth(report){
   observed_pages:report.pages.length,sitemap_urls:sitemap.size,findings,
   unknowns:['True orphan status','Private backend','Search indexing/rank','AI citations','User task success','AdSense/revenue'],
   public_production_verified:false};
+}
+
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
+ try{
+  const index=process.argv.indexOf('--file');
+  if(index<0||!process.argv[index+1])throw Error('Usage: --file previously-captured-v24-report.json');
+  const file=path.resolve(process.argv[index+1]);
+  if(fs.statSync(file).size>15_000_000)throw Error('REPORT_EXCEEDS_15MB');
+  console.log(JSON.stringify(analyzeSiteDepth(JSON.parse(fs.readFileSync(file,'utf8'))),null,2));
+ }catch(e){console.error('SITE_DEPTH_HOLD: '+e.message);process.exitCode=2;}
 }
