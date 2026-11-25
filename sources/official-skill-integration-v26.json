@@ -33,7 +33,12 @@
       "adaptation": "React islands only: inspect async waterfalls, lazy bundles and hydration; no generic Astro performance guarantee",
       "source_author_not_individually_verified": true,
       "git_blob_sha_immutable": "237988de4a66dd8a71d30a2c24ebe1a86b58d04e",
-      "url_ref_mutable": true
+      "url_ref_mutable": true,
+      "license_evidence": {
+        "path": "README.md",
+        "blob_sha": "396ef38284797174c737942a9cc84fc09680b705",
+        "statement": "Repository README MIT; no root LICENSE file observed; only original method adaptation"
+      }
     },
     {
       "id": "vercel-ui",
@@ -56,7 +61,12 @@
       "adaptation": "Review annotated UI against pinned 8k rules, evidence by file line, verify focus/semantics; repo lacks root LICENSE",
       "source_author_not_individually_verified": true,
       "git_blob_sha_immutable": "6e67f6e080d104973fe89a7903464c74d980edca",
-      "url_ref_mutable": true
+      "url_ref_mutable": true,
+      "license_evidence": {
+        "path": "README.md",
+        "blob_sha": "396ef38284797174c737942a9cc84fc09680b705",
+        "statement": "Repository README MIT; no root LICENSE file observed; only original method adaptation"
+      }
     },
     {
       "id": "vercel-optimize",
@@ -79,7 +89,12 @@
       "adaptation": "Only when actual deployed Vercel metrics exist; metrics-first candidate-gated cost review",
       "source_author_not_individually_verified": true,
       "git_blob_sha_immutable": "c8a6d6d7075b2cc3f7921da89de86e6926f78985",
-      "url_ref_mutable": true
+      "url_ref_mutable": true,
+      "license_evidence": {
+        "path": "README.md",
+        "blob_sha": "396ef38284797174c737942a9cc84fc09680b705",
+        "statement": "Repository README MIT; no root LICENSE file observed; only original method adaptation"
+      }
     },
     {
       "id": "anthropic-skill-creator",
@@ -102,7 +117,12 @@
       "adaptation": "Reproducible no-skill vs with-skill task runs; description trigger negatives and blinded comparisons",
       "source_author_not_individually_verified": true,
       "git_blob_sha_immutable": "65b3a402dbd09b8e83f9d637c6b553875189085c",
-      "url_ref_mutable": true
+      "url_ref_mutable": true,
+      "license_evidence": {
+        "path": "skills/skill-creator/LICENSE.txt",
+        "blob_sha": "4f881c52d1f72f4cfb720e339e2d35c3058d01a9",
+        "statement": "Per-skill Apache License 2.0"
+      }
     },
     {
       "id": "anthropic-webapp",
@@ -125,7 +145,12 @@
       "adaptation": "Live local server Playwright and real output/screenshot/console evidence; preserve server lifecycle",
       "source_author_not_individually_verified": true,
       "git_blob_sha_immutable": "4726215301db64a0cc4d41fc3219c61f37a30f4a",
-      "url_ref_mutable": true
+      "url_ref_mutable": true,
+      "license_evidence": {
+        "path": "skills/webapp-testing/LICENSE.txt",
+        "blob_sha": "4f881c52d1f72f4cfb720e339e2d35c3058d01a9",
+        "statement": "Per-skill Apache License 2.0"
+      }
     },
     {
       "id": "anthropic-frontend",
@@ -147,7 +172,12 @@
       "adaptation": "Intentional brief-specific design and self-critique; do not copy recognizable trade dress",
       "source_author_not_individually_verified": true,
       "git_blob_sha_immutable": "a5333457c414d20d625f307df945842c0952ecc3",
-      "url_ref_mutable": true
+      "url_ref_mutable": true,
+      "license_evidence": {
+        "path": "skills/frontend-design/LICENSE.txt",
+        "blob_sha": "f433b1a53f5b830a205fd2df78e2b34974656c7b",
+        "statement": "Per-skill Apache License 2.0"
+      }
     },
     {
       "id": "anthropic-mcp",
@@ -169,7 +199,12 @@
       "adaptation": "MCP tool contracts, auth boundaries, schema/negative tests; only when MCP needed",
       "source_author_not_individually_verified": true,
       "git_blob_sha_immutable": "d61a9056202a0f8b2d064c896e62f415c45b1bf1",
-      "url_ref_mutable": true
+      "url_ref_mutable": true,
+      "license_evidence": {
+        "path": "skills/mcp-builder/LICENSE.txt",
+        "blob_sha": "4f881c52d1f72f4cfb720e339e2d35c3058d01a9",
+        "statement": "Per-skill Apache License 2.0"
+      }
     },
     {
       "id": "cloudflare-router",
@@ -192,7 +227,12 @@
       "adaptation": "Choose platform based on constraints, version-specific docs, do not force Cloudflare",
       "source_author_not_individually_verified": true,
       "git_blob_sha_immutable": "1ac5d6b7ca11036d5d3960f8f7f54789987d51cd",
-      "url_ref_mutable": true
+      "url_ref_mutable": true,
+      "license_evidence": {
+        "path": "LICENSE",
+        "blob_sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+        "statement": "Root Apache License 2.0"
+      }
     },
     {
       "id": "cloudflare-wrangler",
@@ -214,7 +254,12 @@
       "adaptation": "Wrangler only for existing Wrangler config or explicit request; preview/deploy verification",
       "source_author_not_individually_verified": true,
       "git_blob_sha_immutable": "d5cef1c15fd2434202c33f071cf502b5d69b141d",
-      "url_ref_mutable": true
+      "url_ref_mutable": true,
+      "license_evidence": {
+        "path": "LICENSE",
+        "blob_sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+        "statement": "Root Apache License 2.0"
+      }
     },
     {
       "id": "addy-quality",
@@ -237,7 +282,12 @@
       "adaptation": "Evidence-led Lighthouse+browser+SEO+accessibility with no aggregate-score certification",
       "source_author_not_individually_verified": true,
       "git_blob_sha_immutable": "581ec7c5e8e05e6ac93d99d872906595581efc42",
-      "url_ref_mutable": true
+      "url_ref_mutable": true,
+      "license_evidence": {
+        "path": "LICENSE",
+        "blob_sha": "90715bb429f374dcc4e05c35535b049d3c077313",
+        "statement": "Root MIT license; individual maintainer, not Google corporate skill"
+      }
     },
     {
       "id": "addy-cwv",
@@ -260,7 +310,12 @@
       "adaptation": "Page-level CrUX p75 with origin fallback; browser traces; comparable lab rerun, no fabricated field shift",
       "source_author_not_individually_verified": true,
       "git_blob_sha_immutable": "60343a52d1832f89eb0ebf6722f4d150fe806777",
-      "url_ref_mutable": true
+      "url_ref_mutable": true,
+      "license_evidence": {
+        "path": "LICENSE",
+        "blob_sha": "90715bb429f374dcc4e05c35535b049d3c077313",
+        "statement": "Root MIT license; individual maintainer, not Google corporate skill"
+      }
     },
     {
       "id": "addy-seo",
@@ -283,7 +338,12 @@
       "adaptation": "Lighthouse technical hints plus independent robots/canonicals/owner Search Console evidence",
       "source_author_not_individually_verified": true,
       "git_blob_sha_immutable": "015c2f589896bcb0b08b5b77e058ca3bedcfe9b7",
-      "url_ref_mutable": true
+      "url_ref_mutable": true,
+      "license_evidence": {
+        "path": "LICENSE",
+        "blob_sha": "90715bb429f374dcc4e05c35535b049d3c077313",
+        "statement": "Root MIT license; individual maintainer, not Google corporate skill"
+      }
     },
     {
       "id": "addy-accessibility",
@@ -306,7 +366,28 @@
       "adaptation": "WCAG 2.2 manual keyboard + screen reader and automated audit; axe pass not WCAG completeness",
       "source_author_not_individually_verified": true,
       "git_blob_sha_immutable": "22a244430f890fe44cbd7a50590d5cbf8528c77b",
-      "url_ref_mutable": true
+      "url_ref_mutable": true,
+      "license_evidence": {
+        "path": "LICENSE",
+        "blob_sha": "90715bb429f374dcc4e05c35535b049d3c077313",
+        "statement": "Root MIT license; individual maintainer, not Google corporate skill"
+      }
+    }
+  ],
+  "supporting_sources": [
+    {
+      "id": "vercel-web-design-rules",
+      "repository": "vercel-labs/agent-skills",
+      "path": "skills/web-design-guidelines/references/command.md",
+      "blob_sha": "3eb3a212b7b89493922ea418489d4c6f67ae8bd5",
+      "role": "Pinned UI reviewer guidance snapshot; no redistribution"
+    },
+    {
+      "id": "vercel-async-parallel-rule",
+      "repository": "vercel-labs/agent-skills",
+      "path": "skills/react-best-practices/rules/async-parallel.md",
+      "blob_sha": "64133f6c31fec81eaaabd712586337d20122e09f",
+      "role": "Example React-only independent-call parallelization; measured context required"
     }
   ]
 }
