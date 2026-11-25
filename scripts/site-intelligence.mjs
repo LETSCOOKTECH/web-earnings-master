@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {inspectSite,diffSiteReports} from '../lib/site-intelligence/engine.mjs';
 import {buildDiscoveryInventory} from '../lib/site-intelligence/discovery.mjs';
+import {summarizeHAR} from '../lib/site-intelligence/har.mjs';
 
 const args=process.argv.slice(2);
 function option(name){const index=args.indexOf(name);if(index<0)return null;const value=args[index+1];if(!value||value.startsWith('--'))throw new Error('MISSING_VALUE_'+name);return value;}
@@ -22,7 +23,7 @@ async function run(){
      'Sense Website Intelligence v24 — non-authenticated read-only public evidence',
      'Discovery: node scripts/site-intelligence.mjs --discover path/search-results.json --out path/discovery.json',
      'Audit: node scripts/site-intelligence.mjs --origin https://site.tld/ --authorized-origin https://site.tld/ --out path/report.json [--seed-file inputs.json]',
-     'Options: --max-pages N --max-sitemaps N --min-delay-ms N --previous previous-report.json --overwrite',
+     'Options: --max-pages N --max-sitemaps N --min-delay-ms N --previous previous-report.json --har-file SANITIZED.har --overwrite',
      'Never run on private services, inaccessible networks, logged-in accounts or sites where automation is disallowed.',
      'The --authorized-origin flag records operator intent, NOT verified ownership/terms clearance.',
      'Search-result imports are leads only; there is no built-in search-engine scraping.',
@@ -51,6 +52,13 @@ async function run(){
    }
  }
  const report=await inspectSite({origin,authorizedOrigin:approved,seedUrls:seeds,limits:overrides});
+ const harPath=option('--har-file');
+ if(harPath){
+   const har=loadJSON(harPath);
+   report.operator_har_observations=summarizeHAR(har,{origin:report.origin});
+   report.architecture??={source:'NOT_OBSERVED',hosting_backend_database:'UNKNOWN_NOT_OBSERVABLE'};
+   report.architecture.har_source='OPERATOR_SUPPLIED_HAR_NOT_INDEPENDENTLY_AUTHENTICATED';
+ }
  if(option('--previous'))report.comparison_to_previous=diffSiteReports(loadJSON(option('--previous')),report);
  writeResult(out,report);
  if(report.status.startsWith('BLOCKED'))process.exitCode=1;
