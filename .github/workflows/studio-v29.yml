@@ -32,7 +32,7 @@ jobs:
         run: npm run check
       - name: Build real static HTML routes
         run: npm run build
-      - name: Run 20-route pure transformation tests
+      - name: Run 28-route pure transformation tests
         run: npm test
       - name: Validate concrete build output
         run: |
@@ -49,6 +49,23 @@ jobs:
         run: npx playwright install --with-deps chromium firefox webkit
       - name: Run real browser functional tests
         run: npm run test:browser
+      - name: Prove release flag is required even with a plausible HTTPS origin
+        run: |
+          SITE_URL=https://candidate-web-tool-domain.com SENSE_RELEASE=local npm run build
+          grep -q 'noindex,follow' dist/tools/csv-to-jsonl/index.html
+          grep -q 'Disallow: /' dist/robots.txt
+      - name: Simulate public-source mode only (NOT a real deployed or owned website)
+        run: |
+          SITE_URL=https://candidate-web-tool-domain.com SENSE_RELEASE=public npm run build
+          grep -q 'max-snippet:-1' dist/tools/csv-to-jsonl/index.html
+          if grep -q 'noindex' dist/tools/csv-to-jsonl/index.html; then
+            echo 'FAIL: public source build contains noindex'; exit 1
+          fi
+          grep -q 'Allow: /' dist/robots.txt
+          node ../../scripts/audit-v29-production-gates.mjs --dist dist --origin https://candidate-web-tool-domain.com --production
+          if SITE_URL=https://studio.example.org SENSE_RELEASE=public npm run build; then
+            echo 'FAIL: reserved example.org host accepted as public'; exit 1
+          fi
       - name: Archive browser receipts
         if: always()
         uses: actions/upload-artifact@v4
