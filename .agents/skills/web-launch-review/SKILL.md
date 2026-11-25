@@ -37,3 +37,9 @@ Local gate (npm test, npm run audit:seo-example, Playwright owned-server E2E on 
 
 ## V13 — Web-verified professional production protocol
 V13 docs/seo-master/14-agent-orchestration-v13.md and 11-end-to-end-web-development-v13.md. Mandatory local shipped functionality and negative tests, independent browser output bytes, real security/privacy/consent, crawling/index eligibility, actual HTTPS origin/404/CDN/WAF and rollback. GSC indexed, AdSense approved and revenue need real owner-account evidence; no self-attested JSON or source body SHA can grant production-ready status. Coverage matrix missing critical domain = HOLD.
+
+
+## V20 launch sign-off must survive human clicking the link
+The release reviewer must open the EXACT claimed public URL and verify owner authorization, external DNS/TLS, actual version and working user action. A placeholder under example.org/.com/.net, .test or localhost is a hard blocker to calling the site public. The user-observed csv-lab.example.org NXDOMAIN was a false live-demo presentation, NOT a failure of the user's network. IANA source: https://www.iana.org/help/example-domains .
+**Run:** npm run audit:demo:origin, npm test and browser E2E; for a real authorized live site inspect HTTP, canonical/robots/sitemap, status including 404, real browser action and output, CSP, accessible controls and privacy. Local candidate builder output status BUILD_ONLY_NOT_DEPLOYED must NOT pass external release gate. Separate GSC/Bing indexing, real AI answer evidence, AdSense approval and earned revenue from local site quality. Save actual URL, tested time, release SHA, independent reviewer and rollback. No owner-approved public deployment -> HOLD_EXTERNAL, not READY.
+See docs/quality/real-world-release-contract-v20.md.
