@@ -1,0 +1,498 @@
+{
+  "schema": "sense-v25-50-skill-execution-inventory",
+  "observed_utc": "2026-11-25",
+  "evidence_source_run_id": 45653926439,
+  "evidence_branch_commit": "b080ded8b5d2bd7b17ce8b15990b975fd3130c92",
+  "safety": "Text signals only; not semantic/domain or agent-run proof.",
+  "counts": {
+    "registered": 50,
+    "found": 50,
+    "needs_domain_review": 32,
+    "shorter_than_650_words": 22,
+    "lacking_executable_reference": 26,
+    "lacking_direct_source_or_doc_pointer": 0
+  },
+  "skills": [
+    {
+      "id": "web-experiments",
+      "words": 380,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-app-store-discovery",
+      "words": 415,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add ",
+        "No explicit negative/UNKNOWN proof rule in skill"
+      ]
+    },
+    {
+      "id": "web-domain-operations",
+      "words": 470,
+      "needs_domain_review": true,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)"
+      ]
+    },
+    {
+      "id": "web-portfolio-growth",
+      "words": 470,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-ad-experience",
+      "words": 485,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-content-and-image-seo",
+      "words": 486,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-accessibility-agent-ux",
+      "words": 503,
+      "needs_domain_review": true,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)"
+      ]
+    },
+    {
+      "id": "web-privacy-consent",
+      "words": 510,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-authority-distribution",
+      "words": 511,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-browser-runtime",
+      "words": 516,
+      "needs_domain_review": true,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)"
+      ]
+    },
+    {
+      "id": "web-release-observability-operator",
+      "words": 518,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-search-internals",
+      "words": 531,
+      "needs_domain_review": true,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)"
+      ]
+    },
+    {
+      "id": "web-backend-api-engineering",
+      "words": 572,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-security-performance",
+      "words": 574,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-monetization-network-operator",
+      "words": 577,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-search-forensic-evidence",
+      "words": 579,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-scale-reliability",
+      "words": 605,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-product-spec",
+      "words": 607,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-network-monetization",
+      "words": 630,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-search-visibility-systems",
+      "words": 631,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)",
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-niche-validation",
+      "words": 641,
+      "needs_domain_review": true,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)"
+      ]
+    },
+    {
+      "id": "web-ai-retrieval-lab",
+      "words": 649,
+      "needs_domain_review": true,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "Short entrypoint (<650 words)"
+      ]
+    },
+    {
+      "id": "web-conversion-job-platform",
+      "words": 651,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-aso-apple-app-store",
+      "words": 669,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-aso-google-play",
+      "words": 672,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-unit-economics-finops",
+      "words": 713,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-publisher-policy-eligibility",
+      "words": 725,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-crawler-governance",
+      "words": 742,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-workload-architecture-router",
+      "words": 787,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-browser-compute",
+      "words": 824,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-hosting-vendor-evaluation",
+      "words": 827,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-security-assurance-asvs",
+      "words": 828,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-research-freshness",
+      "words": 847,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-aeo-answer-optimization",
+      "words": 862,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-launch-review",
+      "words": 882,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-adsense-readiness",
+      "words": 961,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-search-analytics",
+      "words": 985,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-frontend-experience-engineering",
+      "words": 1003,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-astro-engineering",
+      "words": 1052,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-keyword-intent",
+      "words": 1085,
+      "needs_domain_review": true,
+      "direct_executable_instruction": false,
+      "linked_source_or_doc": true,
+      "warning_codes": [
+        "No concrete executable check cited within skill; verify external linked tests or add "
+      ]
+    },
+    {
+      "id": "web-competitor-audit",
+      "words": 1172,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-fullstack-production-executor",
+      "words": 1235,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-product-validation",
+      "words": 1302,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-traffic-hunter",
+      "words": 1323,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-generative-engine-optimization",
+      "words": 1340,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-ai-discovery",
+      "words": 1377,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-opportunity-intelligence",
+      "words": 1755,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-technical-seo",
+      "words": 1806,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-dominant-tool-creator",
+      "words": 2012,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    },
+    {
+      "id": "web-dominant-recommendar",
+      "words": 2038,
+      "needs_domain_review": false,
+      "direct_executable_instruction": true,
+      "linked_source_or_doc": true,
+      "warning_codes": []
+    }
+  ]
+}
