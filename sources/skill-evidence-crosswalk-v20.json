@@ -1,7 +1,7 @@
 {
   "schema": "sense-skill-source-crosswalk-v20",
-  "created_at_utc": "2026-11-25T06:20:00Z",
-  "scope": "Curated first-party original leads for 49 skill domains; links are NOT evidence of current original-body access, correctness or external outcome. Action-time original review mandatory.",
+  "created_at_utc": "2026-11-25T08:30:00Z",
+  "scope": "Curated first-party original leads for 49 skill domains; links are NOT evidence of current original-body access, correctness or external outcome. Action-time original review mandatory. V21 adds targeted actual CSV tool originals and executable product acceptance; current source mapping remains non-certification.",
   "cited_registry": "sources/official_sources.json",
   "primary_originals_opened_during_this_audit": [
     {
@@ -56,6 +56,35 @@
         "web-fullstack-production-executor"
       ],
       "verified_limited_claim": "security requirements model, not penetration-test certificate"
+    },
+    {
+      "id": "v21-rfc4180",
+      "url": "https://www.rfc-editor.org/rfc/rfc4180",
+      "applies_to": [
+        "web-browser-compute",
+        "web-product-validation",
+        "web-fullstack-production-executor"
+      ],
+      "verified_limited_claim": "CSV field quotation and comma-delimited record conventions; application extends accepted line endings"
+    },
+    {
+      "id": "v21-owasp-wstg-csv",
+      "url": "https://wstg.owasp.org/latest/11-Injection/20-CSV_Injection/",
+      "applies_to": [
+        "web-security-assurance-asvs",
+        "web-product-validation",
+        "web-launch-review"
+      ],
+      "verified_limited_claim": "Spreadsheet formula injection includes ASCII, control and fullwidth triggers; no universal mitigation"
+    },
+    {
+      "id": "v21-mdn-textdecoder",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder",
+      "applies_to": [
+        "web-product-validation",
+        "web-browser-compute"
+      ],
+      "verified_limited_claim": "Fatal UTF8 decoding raises rather than silently replacing invalid file byte sequences"
     }
   ],
   "skills": [
@@ -90,7 +119,8 @@
       "reference_source_ids": [
         "google-adsense-site-ready",
         "google-adsense-site-status",
-        "google-adsense-program"
+        "google-adsense-program",
+        "v21-wcag22"
       ],
       "local_evidence_expected": "Audit ad placement content restrictions ownership and ads.txt",
       "external_evidence_expected": "Verify real Google publisher site/account state",
@@ -223,7 +253,10 @@
       "id": "web-browser-compute",
       "reference_source_ids": [
         "architecture-browser-wasm-perf",
-        "architecture-browser-quotas"
+        "architecture-browser-quotas",
+        "v21-rfc4180",
+        "v21-mdn-worker",
+        "v21-whatwg-encoding"
       ],
       "local_evidence_expected": "Run valid corrupt huge-file worker cancellation fixtures",
       "external_evidence_expected": "Test low-memory real browsers and actual file output",
@@ -328,7 +361,9 @@
       "id": "web-frontend-experience-engineering",
       "reference_source_ids": [
         "astro-islands",
-        "google-core-web-vitals"
+        "google-core-web-vitals",
+        "v21-wcag22",
+        "v21-mdn-blob-url"
       ],
       "local_evidence_expected": "Test empty loading success failure mobile and keyboard paths",
       "external_evidence_expected": "Run real-device interaction performance and accessibility",
@@ -342,7 +377,9 @@
       "reference_source_ids": [
         "astro-config",
         "v6-security-23",
-        "google-js-seo"
+        "google-js-seo",
+        "v21-rfc4180",
+        "v21-mdn-worker"
       ],
       "local_evidence_expected": "Run build E2E API security output and rollback test",
       "external_evidence_expected": "Observe deployed task end to end and resource budgets",
@@ -398,7 +435,9 @@
       "reference_source_ids": [
         "google-search-essentials",
         "google-adsense-site-status",
-        "vendor-github-pages-commercial"
+        "vendor-github-pages-commercial",
+        "v21-owasp-wstg-csv",
+        "v21-wcag22"
       ],
       "local_evidence_expected": "Verify gates with hashes commands and owner blockers",
       "external_evidence_expected": "Inspect deployed site user output and provider status",
@@ -505,7 +544,10 @@
       "id": "web-product-validation",
       "reference_source_ids": [
         "google-js-seo",
-        "v6-security-23"
+        "v6-security-23",
+        "v21-rfc4180",
+        "v21-mdn-textdecoder",
+        "v21-owasp-wstg-csv"
       ],
       "local_evidence_expected": "Run unit integration fuzz E2E and low-end test fixtures",
       "external_evidence_expected": "Repeat real output and error handling on supported devices",
@@ -625,7 +667,9 @@
       "id": "web-security-assurance-asvs",
       "reference_source_ids": [
         "v6-security-23",
-        "v6-security-24"
+        "v6-security-24",
+        "v21-owasp-wstg-csv",
+        "v21-owasp-community-csv"
       ],
       "local_evidence_expected": "Test access control SSRF uploads XSS supply chain",
       "external_evidence_expected": "Perform authorized pentest and negative production tests",
@@ -652,7 +696,8 @@
       "reference_source_ids": [
         "google-search-robots",
         "google-search-canonical",
-        "google-sitemaps"
+        "google-sitemaps",
+        "v21-rfc4180"
       ],
       "local_evidence_expected": "Test robots noindex sitemap 404 redirect rendered HTML",
       "external_evidence_expected": "Verify real GSC indexed canonical and bot logs",
