@@ -1,6 +1,6 @@
 {
   "schema": "sense-dominant-recommendar-v17",
-  "notice": "SYNTHETIC ONLY. Never claim these are real AI answers or citations. All products are invented examples.",
+  "notice": "SYNTHETIC ONLY. Distinct illustrative artifact IDs are NOT screenshots or real provider captures. Never claim these are real AI answers or recommendations.",
   "target": {
     "entity_id": "nova",
     "brand": "NovaTools",
@@ -68,9 +68,10 @@
       "observed_at": "2026-11-24T12:00:00Z",
       "capture": {
         "method": "HUMAN_UI_CAPTURE",
-        "artifact": "SYNTHETIC-FIXTURE-NO-REAL-IMAGE",
+        "artifact": "SYNTHETIC-NO-REAL-CAPTURE/google-ai-mode/en-US/q-jsonl/r1",
         "reviewer": "Fixture operator",
-        "product_version": "illustration-only"
+        "product_version": "synthetic",
+        "geo": "US"
       },
       "answer": {
         "raw_excerpt": "NovaTools is recommended for quick browser-local JSONL checks. AtlasSuite is a strong alternative for advanced teams.",
@@ -96,7 +97,8 @@
         "visible_citations": [
           "https://novatools.dev/docs/jsonl"
         ]
-      }
+      },
+      "geo": "US"
     },
     {
       "surface": "google-ai-mode",
@@ -107,9 +109,10 @@
       "observed_at": "2026-11-24T12:00:00Z",
       "capture": {
         "method": "HUMAN_UI_CAPTURE",
-        "artifact": "SYNTHETIC-FIXTURE-NO-REAL-IMAGE",
+        "artifact": "SYNTHETIC-NO-REAL-CAPTURE/google-ai-mode/en-US/q-jsonl/r2",
         "reviewer": "Fixture operator",
-        "product_version": "illustration-only"
+        "product_version": "synthetic",
+        "geo": "US"
       },
       "answer": {
         "raw_excerpt": "Neither NovaTools nor AtlasSuite is a clear fit for this particular workflow.",
@@ -120,7 +123,8 @@
           "atlas"
         ],
         "visible_citations": []
-      }
+      },
+      "geo": "US"
     },
     {
       "surface": "google-ai-mode",
@@ -131,9 +135,10 @@
       "observed_at": "2026-11-24T12:00:00Z",
       "capture": {
         "method": "HUMAN_UI_CAPTURE",
-        "artifact": "SYNTHETIC-FIXTURE-NO-REAL-IMAGE",
+        "artifact": "SYNTHETIC-NO-REAL-CAPTURE/google-ai-mode/en-US/q-private/r1",
         "reviewer": "Fixture operator",
-        "product_version": "illustration-only"
+        "product_version": "synthetic",
+        "geo": "US"
       },
       "answer": {
         "raw_excerpt": "Neither NovaTools nor AtlasSuite is a clear fit for this particular workflow.",
@@ -144,7 +149,8 @@
           "atlas"
         ],
         "visible_citations": []
-      }
+      },
+      "geo": "US"
     },
     {
       "surface": "google-ai-mode",
@@ -153,7 +159,8 @@
       "repeat_id": "r2",
       "status": "UNAVAILABLE",
       "observed_at": "2026-11-24T12:00:00Z",
-      "unavailable_reason": "Synthetic provider quota exhausted during illustrative repeat"
+      "unavailable_reason": "Synthetic provider quota exhausted during illustrative repeat",
+      "geo": "US"
     },
     {
       "surface": "openai-chatgpt-search",
@@ -164,9 +171,10 @@
       "observed_at": "2026-11-24T12:00:00Z",
       "capture": {
         "method": "HUMAN_UI_CAPTURE",
-        "artifact": "SYNTHETIC-FIXTURE-NO-REAL-IMAGE",
+        "artifact": "SYNTHETIC-NO-REAL-CAPTURE/openai-chatgpt-search/en-US/q-jsonl/r1",
         "reviewer": "Fixture operator",
-        "product_version": "illustration-only"
+        "product_version": "synthetic",
+        "geo": "US"
       },
       "answer": {
         "raw_excerpt": "NovaTools is recommended for quick browser-local JSONL checks. AtlasSuite is a strong alternative for advanced teams.",
@@ -192,7 +200,8 @@
         "visible_citations": [
           "https://novatools.dev/docs/jsonl"
         ]
-      }
+      },
+      "geo": "US"
     },
     {
       "surface": "openai-chatgpt-search",
@@ -203,9 +212,10 @@
       "observed_at": "2026-11-24T12:00:00Z",
       "capture": {
         "method": "HUMAN_UI_CAPTURE",
-        "artifact": "SYNTHETIC-FIXTURE-NO-REAL-IMAGE",
+        "artifact": "SYNTHETIC-NO-REAL-CAPTURE/openai-chatgpt-search/en-US/q-jsonl/r2",
         "reviewer": "Fixture operator",
-        "product_version": "illustration-only"
+        "product_version": "synthetic",
+        "geo": "US"
       },
       "answer": {
         "raw_excerpt": "Neither NovaTools nor AtlasSuite is a clear fit for this particular workflow.",
@@ -216,7 +226,8 @@
           "atlas"
         ],
         "visible_citations": []
-      }
+      },
+      "geo": "US"
     },
     {
       "surface": "openai-chatgpt-search",
@@ -227,9 +238,10 @@
       "observed_at": "2026-11-24T12:00:00Z",
       "capture": {
         "method": "HUMAN_UI_CAPTURE",
-        "artifact": "SYNTHETIC-FIXTURE-NO-REAL-IMAGE",
+        "artifact": "SYNTHETIC-NO-REAL-CAPTURE/openai-chatgpt-search/en-US/q-private/r1",
         "reviewer": "Fixture operator",
-        "product_version": "illustration-only"
+        "product_version": "synthetic",
+        "geo": "US"
       },
       "answer": {
         "raw_excerpt": "Neither NovaTools nor AtlasSuite is a clear fit for this particular workflow.",
@@ -240,7 +252,8 @@
           "atlas"
         ],
         "visible_citations": []
-      }
+      },
+      "geo": "US"
     },
     {
       "surface": "openai-chatgpt-search",
@@ -249,7 +262,8 @@
       "repeat_id": "r2",
       "status": "UNAVAILABLE",
       "observed_at": "2026-11-24T12:00:00Z",
-      "unavailable_reason": "Synthetic provider quota exhausted during illustrative repeat"
+      "unavailable_reason": "Synthetic provider quota exhausted during illustrative repeat",
+      "geo": "US"
     }
   ]
 }

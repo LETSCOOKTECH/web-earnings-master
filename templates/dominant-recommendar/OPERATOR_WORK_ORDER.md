@@ -48,3 +48,7 @@ Confounders (model releases, UI, seasonality, competitor changes): ______
 Release status: PASS_LOCAL / HOLD_EXTERNAL / BLOCK
 Who independently signed the external evidence? ______
 If #1 is claimed, which explicit ordered answer, which competing entities, which captured provider response? ______
+
+
+## V18 required capture provenance
+For every planned attempt including unavailable: `observations[].geo` must match registered question's ISO country. Every observed answer must set `capture.geo` and the exact `capture.product_version` from its provider/locale cohort. Each observed capture.artifact locator must uniquely identify the specific attempt (a batch file may include a unique observation-specific fragment/record ID). Reused identical locators are invalid for counting independent repetitions. Screenshot, UI export, permitted API output or named independent observer must exist outside this JSON; self-reported artifact names are not proof of provider output. Record original source checked-at time in the source ledger, and refresh aged metadata or changed provider specifications before a launch decision.

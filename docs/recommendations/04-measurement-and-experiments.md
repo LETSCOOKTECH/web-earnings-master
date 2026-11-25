@@ -39,3 +39,9 @@ Wilson intervals for a preregistered non-random panel are descriptive only. They
 
 ### What counts as improvement?
 Set a baseline, attempt one change with documented rationale, hold out previously unseen human questions and comparable cohorts, collect follow-up results, compare with confidence and report external confounders (new model, indexes, UI mode, seasonality, competitor launches). Track human task outcomes and trust simultaneously; a citation-only lift that produces no useful work may not justify costs. Accept "no evidence of lift" when measured effect is not convincing.
+
+
+## V18 evidence integrity and regional comparability
+A panel is not genuinely balanced just because its question IDs and repeat IDs are complete. Require distinct per-attempt evidence IDs for permitted actual captures; preserve source trace ID, reviewer, product version, capture country and timestamp. For each observed answer `capture.product_version` must exactly match its preregistered `study.expected_groups[].product_version`, and `capture.geo` must equal the attempted `observations[].geo` and registered `questions[].geo`. `UNAVAILABLE` still needs `observations[].geo`, because moving unavailable cases into another region distorts denominators. An actual model release during an experiment means stratify into a new version/campaign rather than quietly mixing it.
+
+The synthetic fixture's per-attempt capture.artifact strings are fake demonstration IDs, not actual AI UI/API receipts; they satisfy only schema uniqueness. Raw output authenticity, independent reviewer agreement, personalized response context and provider access remain external proofs. A source atlas review timestamp older than 30 days fails local recency, but newer timestamps also do not certify original source body or current owner rollout. Short negation heuristics only catch obvious contradictory labels, not every nuance, sarcasm or comparative weakness.

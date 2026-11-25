@@ -10,6 +10,9 @@ When the job is to be the first recommended website/tool in Google AI Overviews,
 ## V15 current AI Search controls and observational evidence (2026-11-24)
 For AEO/GEO read docs/ai-search/07-2026-11-24-provider-controls-v15.md with the task-relevant V14 chapter. Verify current first-party originals. Separate Search Console Search generative AI controls and Googlebot eligibility from Google-Extended training/non-Search grounding, GoogleOther and future 2027 training. Google reports worldwide GenAI reporting rollout as of August 31, 2026; individual property data still requires owner access. Run npm run audit:ai-controls and V14 checks; preregister surface+locale cohorts and reject omitted prompt attempts. Local checks never certify actual ranking, citations, traffic or revenue.
 
+## V18 — AI recommendation evidence integrity is a mandatory gate (2026-11-25)
+For web-dominant-recommendar, require unique per-attempt raw-answer artifact IDs, exactly matching actual observed provider/model version versus preregistered cohort, attempted and captured ISO country matching the human-question geo (including unavailable attempts), and no null/malformed recommendation item crashes. Reject clearly negative product quotes mislabeled POSITIVE; human audit remains essential for semantic nuance. The original source ledger expires after 30 days by default and consequential claims require the current first-party body regardless. Run npm run test:recommendar-holdouts, npm run audit:recommendar-sources, npm run audit:recommendar-panel and npm test. Synthetic identifiers are NOT authentic source receipts. Local PASS never proves AI recommendations, universal #1 rank, indexing, actual human referrals or revenue.
+
 # Codex operating guide — Web Earnings Master
 
 ## V16 mandatory independent holdout and global-readiness boundary (2026-11-24)
