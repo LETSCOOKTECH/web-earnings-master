@@ -1522,6 +1522,86 @@
       "review_every_days": 30,
       "authority": "first-party provider or court exhibit",
       "verification": "Indexed first-party search excerpt, full-body current review outstanding"
+    },
+    {
+      "id": "v21-rfc4180",
+      "category": "data-format",
+      "url": "https://www.rfc-editor.org/rfc/rfc4180",
+      "purpose": "Quoted CSV, escaped quote and canonical comma-delimited grammar",
+      "verification": "Direct RFC section 2 opened; tool explicitly extends allowed record newlines; not vendor file-dialect certification",
+      "reviewed_at": "2026-11-25",
+      "review_every_days": 30,
+      "authority": "first-party documentation or normative technical standard"
+    },
+    {
+      "id": "v21-owasp-wstg-csv",
+      "category": "security",
+      "url": "https://wstg.owasp.org/latest/11-Injection/20-CSV_Injection/",
+      "purpose": "WSTG-INJT-20 formula injection prefixes, cell breakout, Excel save/reopen reliability limits",
+      "verification": "Original WSTG latest scenario opened; use its current version and exact spreadsheet/client scope",
+      "reviewed_at": "2026-11-25",
+      "review_every_days": 30,
+      "authority": "first-party documentation or normative technical standard"
+    },
+    {
+      "id": "v21-owasp-community-csv",
+      "category": "security",
+      "url": "https://community.owasp.org/attacks/CSV_Injection",
+      "purpose": "Cross-application formula injection and incomplete single-quote mitigation",
+      "verification": "Original OWASP community body opened; no universal safe CSV escaping claim",
+      "reviewed_at": "2026-11-25",
+      "review_every_days": 30,
+      "authority": "first-party documentation or normative technical standard"
+    },
+    {
+      "id": "v21-mdn-textdecoder",
+      "category": "browser",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder",
+      "purpose": "TextDecoder UTF-8 fatal option rejects invalid selected-file bytes",
+      "verification": "Original MDN constructor original opened, other encoding and input modes need separate verification",
+      "reviewed_at": "2026-11-25",
+      "review_every_days": 30,
+      "authority": "first-party documentation or normative technical standard"
+    },
+    {
+      "id": "v21-whatwg-encoding",
+      "category": "browser",
+      "url": "https://encoding.spec.whatwg.org/",
+      "purpose": "TextEncoder and TextDecoder normative algorithm and byte-order-mark semantics",
+      "verification": "Current living standard opened; not a guarantee files are UTF-8",
+      "reviewed_at": "2026-11-25",
+      "review_every_days": 30,
+      "authority": "first-party documentation or normative technical standard"
+    },
+    {
+      "id": "v21-mdn-worker",
+      "category": "browser",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Worker",
+      "purpose": "Dedicated Worker constructor and terminate lifecycle for local bounded tasks",
+      "verification": "Read current MDN at next implementation change; actual 3-engine compatibility requires browser tests",
+      "reviewed_at": "2026-11-25",
+      "review_every_days": 30,
+      "authority": "first-party documentation or normative technical standard"
+    },
+    {
+      "id": "v21-mdn-blob-url",
+      "category": "browser",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL_static",
+      "purpose": "Local downloadable Blob URLs and explicit lifecycle management",
+      "verification": "Reopen official MDN at action time and test revoke behavior; no public hosting proof",
+      "reviewed_at": "2026-11-25",
+      "review_every_days": 30,
+      "authority": "first-party documentation or normative technical standard"
+    },
+    {
+      "id": "v21-wcag22",
+      "category": "accessibility",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "purpose": "Accessibility semantics, keyboard/focus and error/status announcements",
+      "verification": "W3C standard; no certification without real assistive technology tests",
+      "reviewed_at": "2026-11-25",
+      "review_every_days": 30,
+      "authority": "first-party documentation or normative technical standard"
     }
   ]
 }
