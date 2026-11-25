@@ -6,7 +6,7 @@ Date: 2026-11-25. Repository: LETSCOOKTECH/web-earnings-master. Owner: Codex age
 
 This version does **not** bulk-install third-party skills. It preserves 20 fully read external SKILL.md files at their GitHub blob SHA, two README-reviewed evaluation/scanning systems, and four current provider documentation leads in `sources/skill-network-v23.json`. Those are research/reproducibility leads, not trusted executable dependencies or a list of source-code imports. Upstream license, third-party notices and transitive dependency checks are required before copying files or executing scripts. No third-party prompt or code has privilege merely because it appears in an upstream repo.
 
-The graph assigns all 50 **existing** Sense skills to seven owned lifecycle stages, preserving the actual specialist inventory. It DOES NOT prove that all possible skills on GitHub were enumerated, or that each Sense skill has passed an independent real-agent benchmark. Its source count is a curated subset, not the world.
+The graph assigns all 50 **existing** Sense skills to seven owned lifecycle stages and now links each entrypoint to its individual previously curated first-party original IDs, local oracle, external validation gate and blocking condition. The inherited registry includes 160 official source records, of which 70 distinct IDs are referenced by the 50 skills, preserving the actual specialist inventory. It DOES NOT prove that all possible skills on GitHub were enumerated, or that each Sense skill has passed an independent real-agent benchmark. Its source count is a curated subset, not the world.
 
 ## Evidence-first flow and handoff contracts
 
