@@ -5,8 +5,8 @@ const csv='id,name,amount\r\n00501,Asha,-42.50\r\n00502,"Lee, Jr.",12.25\r\n0050
 const tsv='id\tname\tamount\n00501\tAsha\t-42.50\n00502\tLee\t12.25\n';
 const jsonl='{"id":"00501","name":"Asha","amount":"-42.50"}\n{"id":"00502","name":"Lee","amount":"12.25"}\n';
 const json='[{"id":"00501","name":"Asha","amount":"-42.50"},{"id":"00502","name":"Lee","amount":"12.25"}]';
-test('all 20 distinct route specs run a meaningful transformation with real output',()=>{
- assert.equal(STUDIO_ROUTES.length,20);assert.equal(new Set(STUDIO_ROUTES.map(x=>x.id)).size,20);
+test('all 28 distinct route specs run a meaningful transformation with real output',()=>{
+ assert.equal(STUDIO_ROUTES.length,28);assert.equal(new Set(STUDIO_ROUTES.map(x=>x.id)).size,20);
  for(const route of STUDIO_ROUTES){
   const input=route.kind==='csv'?csv:route.kind==='tsv'?tsv:route.kind==='jsonl'?jsonl:json;
   const result=executeStudio(route.id,input);
