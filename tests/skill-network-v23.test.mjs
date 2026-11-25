@@ -26,7 +26,7 @@ function fixture(edit=()=>{}){
 }
 function run(edit){const root=fixture(edit);try{return checkNetwork(root);}finally{fs.rmSync(root,{recursive:true,force:true});}}
 test('all 50 routes are unique, reachable, sourced and gated',()=>{
-  const r=run();assert.equal(r.ok,true,JSON.stringify(r.errors));assert.equal(r.skills,50);assert.equal(r.upstreams,26);assert.equal(r.stages,7);
+  const r=run();assert.equal(r.ok,true,JSON.stringify(r.errors));assert.equal(r.skills,50);assert.equal(r.upstreams,30);assert.equal(r.stages,7);
 });
 test('reject unowned real on-disk specialist',()=>{
   const r=run((_data,root)=>{const d=path.join(root,'.agents','skills','web-orphan');fs.mkdirSync(d,{recursive:true});fs.writeFileSync(path.join(d,'SKILL.md'),'test');});
@@ -73,4 +73,13 @@ test('reject misleading source strategy on official-only skill',()=>{
 test('reject dropped pre-existing first-party source links',()=>{
   const r=run(d=>d.stages.find(x=>x.id==='research').skills[0].official_source_ids.pop());
   assert.equal(r.ok,false);assert.match(r.errors.join('\n'),/dropped original first-party source/);
+});
+
+test('reject deprecated creator reattached to a current skill',()=>{
+  const r=run(d=>d.stages[0].skills[0].upstreams.push('openai-creator'));
+  assert.equal(r.ok,false);assert.match(r.errors.join('\n'),/deprecated upstream/);
+});
+test('reject upstream with unsupported copying rights',()=>{
+  const r=run(d=>d.upstreams[0].copy_authorization='GRANTED');
+  assert.equal(r.ok,false);assert.match(r.errors.join('\n'),/missing license\/copy quarantine/);
 });
