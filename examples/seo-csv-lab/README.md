@@ -1,6 +1,6 @@
 # Sense CSV Studio — premium browser-only data utility
 
-**Deployment status: LOCAL WORKING PRODUCT FIXTURE — NOT PUBLICLY DEPLOYED.**
+**Deployment status: LOCAL WORKING PRODUCT FIXTURE — NOT DEPLOYED (NO PUBLIC HOST).**
 
 This is a fully interactive, static web tool intended to prove whether the Sense development skills can produce a real product rather than simply an SEO landing page. The hostname `csv-lab.example.org` is an **IANA-reserved documentation domain**, so there is no public website at that address. It must never be shown as an online demo.
 
