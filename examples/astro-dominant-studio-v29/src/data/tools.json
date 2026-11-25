@@ -1,0 +1,142 @@
+[
+  {
+    "id": "csv-to-jsonl",
+    "group": "csv",
+    "label": "CSV to JSONL",
+    "kind": "csv",
+    "description": "Work with a delimited CSV file or pasted CSV. No upload is required."
+  },
+  {
+    "id": "csv-to-json",
+    "group": "csv",
+    "label": "CSV to JSON",
+    "kind": "csv",
+    "description": "Work with a delimited CSV file or pasted CSV. No upload is required."
+  },
+  {
+    "id": "csv-to-tsv",
+    "group": "csv",
+    "label": "CSV to TSV",
+    "kind": "csv",
+    "description": "Work with a delimited CSV file or pasted CSV. No upload is required."
+  },
+  {
+    "id": "csv-to-markdown",
+    "group": "csv",
+    "label": "CSV to Markdown Table",
+    "kind": "csv",
+    "description": "Work with a delimited CSV file or pasted CSV. No upload is required."
+  },
+  {
+    "id": "csv-to-html",
+    "group": "csv",
+    "label": "CSV to HTML Table",
+    "kind": "csv",
+    "description": "Work with a delimited CSV file or pasted CSV. No upload is required."
+  },
+  {
+    "id": "csv-to-sql",
+    "group": "csv",
+    "label": "CSV to SQL INSERT",
+    "kind": "csv",
+    "description": "Work with a delimited CSV file or pasted CSV. No upload is required."
+  },
+  {
+    "id": "csv-to-excel-csv",
+    "group": "csv",
+    "label": "CSV to Excel-friendly UTF-8",
+    "kind": "csv",
+    "description": "Work with a delimited CSV file or pasted CSV. No upload is required."
+  },
+  {
+    "id": "csv-deduplicate",
+    "group": "csv",
+    "label": "Remove Duplicate CSV Rows",
+    "kind": "csv",
+    "description": "Work with a delimited CSV file or pasted CSV. No upload is required."
+  },
+  {
+    "id": "tsv-to-csv",
+    "group": "tsv",
+    "label": "TSV to CSV",
+    "kind": "tsv",
+    "description": "Work with a tab-separated file or pasted TSV. No upload is required."
+  },
+  {
+    "id": "tsv-to-json",
+    "group": "tsv",
+    "label": "TSV to JSON",
+    "kind": "tsv",
+    "description": "Work with a tab-separated file or pasted TSV. No upload is required."
+  },
+  {
+    "id": "tsv-to-jsonl",
+    "group": "tsv",
+    "label": "TSV to JSONL",
+    "kind": "tsv",
+    "description": "Work with a tab-separated file or pasted TSV. No upload is required."
+  },
+  {
+    "id": "jsonl-to-json",
+    "group": "jsonl",
+    "label": "JSONL to JSON Array",
+    "kind": "jsonl",
+    "description": "Validate or convert one JSON value per line locally."
+  },
+  {
+    "id": "jsonl-to-csv",
+    "group": "jsonl",
+    "label": "JSONL to CSV",
+    "kind": "jsonl",
+    "description": "Validate or convert one JSON value per line locally."
+  },
+  {
+    "id": "jsonl-to-markdown",
+    "group": "jsonl",
+    "label": "JSONL to Markdown",
+    "kind": "jsonl",
+    "description": "Validate or convert one JSON value per line locally."
+  },
+  {
+    "id": "jsonl-validator",
+    "group": "jsonl",
+    "label": "Validate JSON Lines",
+    "kind": "jsonl",
+    "description": "Validate or convert one JSON value per line locally."
+  },
+  {
+    "id": "json-to-jsonl",
+    "group": "json",
+    "label": "JSON Array to JSONL",
+    "kind": "json",
+    "description": "Convert a supported JSON array or value within your browser."
+  },
+  {
+    "id": "json-to-csv",
+    "group": "json",
+    "label": "JSON Array to CSV",
+    "kind": "json",
+    "description": "Convert a supported JSON array or value within your browser."
+  },
+  {
+    "id": "json-to-markdown",
+    "group": "json",
+    "label": "JSON Array to Markdown",
+    "kind": "json",
+    "description": "Convert a supported JSON array or value within your browser."
+  },
+  {
+    "id": "json-pretty",
+    "group": "json",
+    "label": "Format JSON",
+    "kind": "json",
+    "description": "Convert a supported JSON array or value within your browser."
+  },
+  {
+    "id": "json-minify",
+    "group": "json",
+    "label": "Minify JSON",
+    "kind": "json",
+    "description": "Convert a supported JSON array or value within your browser."
+  }
+]
