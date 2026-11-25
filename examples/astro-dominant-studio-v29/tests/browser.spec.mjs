@@ -55,7 +55,7 @@ test('mobile layout does not overflow and category hub links resolve',async({pag
  const hubs=page.locator('.category a[href^="/hubs/"]');
  await expect(hubs).toHaveCount(4);
  await hubs.first().click();
- await expect(page.locator('.tool-tile')).toHaveCount(8);
+ await expect(page.locator('.tool-tile')).toHaveCount(10);
  await page.getByRole('link',{name:'CSV to JSONL'}).click();
  await expect(page.locator('h1')).toHaveCount(1);
  const difference=await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth);
