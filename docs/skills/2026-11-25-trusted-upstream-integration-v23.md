@@ -20,7 +20,7 @@ The graph assigns all 50 **existing** Sense skills to seven owned lifecycle stag
 | Publisher | web-publisher-policy-eligibility | Actual ad-provider rules, consent region, own account state; no deceptive download ads | HOLD AdSense approval and RPM until account observations; BLOCK invalid traffic |
 | Growth | web-traffic-hunter | Distinct real impressions/referrals/task starts/completions/retention, honest RPM and operating costs | REJECT sponsored-spam/AI-prompt injection and fake traffic projections |
 
-Every stage writes an inspectable evidence packet, never a plain PASS label. Stable record fields: `stage_id`, `question`, `source_url`, `source_kind`, `retrieved_at_utc`, `effective_at`, `scope`, `observed`, `assumptions`, `contradictions`, `artifact_paths`, `negative_cases`, `release_state`, `external_unknowns`, `next_gate`.
+The reference graph now distinguishes **44 skills with task-relevant vetted methodology leads** from **6 first-party-only specialist skills** (browser runtime, domains, app-store discovery, Apple ASO, Google Play ASO and privacy/consent). None of those six is falsely supported by generic SEO instructions. Every stage writes an inspectable evidence packet, never a plain PASS label. Stable record fields: `stage_id`, `question`, `source_url`, `source_kind`, `retrieved_at_utc`, `effective_at`, `scope`, `observed`, `assumptions`, `contradictions`, `artifact_paths`, `negative_cases`, `release_state`, `external_unknowns`, `next_gate`.
 
 ### Cross-skill routing: machine-checked, not implied
 
