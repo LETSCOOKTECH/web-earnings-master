@@ -1,8 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import tools from '../../data/tools.json';
-const groups=['csv','tsv','jsonl','json'];
-export function getStaticPaths(){return groups.map(group=>({params:{group},props:{group}}));}
+export function getStaticPaths(){return ['csv','tsv','jsonl','json'].map(group=>({params:{group},props:{group}}));}
 const {group}=Astro.props;
 const subset=tools.filter(t=>t.group===group);
 const title=group.toUpperCase()+' converters and validators';
