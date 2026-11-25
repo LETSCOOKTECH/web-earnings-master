@@ -21,7 +21,7 @@ The default hostname is an IANA example; the site deliberately emits noindex and
 
 ## Implemented end-to-end features
 
-Twenty-eight route-specific browser Worker jobs: CSV to JSON, JSONL, TSV, Markdown, HTML table, SQL INSERT, Excel-friendly BOM CSV, CSV deduplication; TSV to CSV, JSON and JSONL; JSONL to JSON, CSV, Markdown and validation; JSON to JSONL, CSV, Markdown, pretty formatting and minification. Four category hub pages, static semantic explanations, real preview and downloads, opt-in best-effort secret masking and enabled-by-default spreadsheet formula escaping for CSV/TSV data cells.
+Twenty-eight-eight route-specific browser Worker jobs: CSV to JSON, JSONL, TSV, Markdown, HTML table, SQL INSERT, Excel-friendly BOM CSV, CSV deduplication; TSV to CSV, JSON and JSONL; JSONL to JSON, CSV, Markdown and validation; JSON to JSONL, CSV, Markdown, pretty formatting and minification. Four category hub pages, static semantic explanations, real preview and downloads, opt-in best-effort secret masking and enabled-by-default spreadsheet formula escaping for CSV/TSV data cells.
 
 File.stream with streaming fatal TextDecoder and native DecompressionStream for .csv.gz/.tsv.gz/.jsonl.gz is supported on eligible browsers. It **still aggregates text** and limits post-decompression input to 16 MiB, at most 200,000 rows and 500 columns. This is an intentional safety contract, not proof of high-volume throughput. The filename classifier recognizes Parquet .zst/.snappy suffixes but does NOT decompress or parse Parquet. Flat JSON objects only; nested data and unsafe numeric integers are refused. Converting null to CSV empty string is inherently lossy and explicitly warned.
 
