@@ -30,5 +30,5 @@ import Base from '../../layouts/Base.astro';
  </div>
  <section class="section explanation"><div class="section-head"><div><span class="kicker">02 / REFERENCE</span><h2>How validation works</h2></div></div><div class="three-grid"><article><span class="number">01</span><h3>Decode the file</h3><p>Selected files are read as UTF-8. Invalid byte sequences fail rather than being silently replaced.</p></article><article><span class="number">02</span><h3>Validate each line</h3><p>Each non-empty line must contain a JSON object. Broken syntax and unsupported primitives are rejected with a line number.</p></article><article><span class="number">03</span><h3>Export the result</h3><p>Each accepted object is JSON-stringified and written as one line. The preview is text only, never executable HTML.</p></article></div></section>
  <section class="notice">This is a bounded local technical demonstration. It does not validate a schema, detect duplicate JSON object keys, preserve original whitespace, support JSON5 or guarantee compatibility with all JSONL consumers. The example-domain canonical is a placeholder; this starter is NOT publicly deployed.</section>
- <script type="module" src="/scripts/jsonl-ui.mjs"></script>
+ <script is:inline type="module" src="/scripts/jsonl-ui.mjs"></script>
 </Base>
