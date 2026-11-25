@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {validatePublicSiteOrigin} from './validate-public-origin-v20.mjs';
 export function auditAstro({config='',packageJson={},pages={},builtHtml=[],production=false,origin=null}={}){
  const failures=[],warnings=[],unknowns=[];
  const dep={...packageJson.dependencies,...packageJson.devDependencies};
@@ -12,7 +13,7 @@ export function auditAstro({config='',packageJson={},pages={},builtHtml=[],produ
  const dynamic=Object.entries(pages).filter(([_,c])=>/export\s+const\s+prerender\s*=\s*false\b/.test(c)).map(([name])=>name);
  if((mode==='server'||dynamic.length)&&adapters.length===0)failures.push('DYNAMIC_ROUTES_REQUIRE_ADAPTER');
  if(adapters.length>1)warnings.push('MULTIPLE_ADAPTERS_REVIEW_DEPLOYMENT');
- if(production&&(!origin||!/^https:\/\/[a-z0-9][a-z0-9.-]+\.[a-z]{2,}\/?$/i.test(origin)||/(?:^|\.)example\.(?:org|com|net)|localhost|\.test|\.invalid/.test(new URL(origin).hostname)))failures.push('REAL_PUBLIC_ORIGIN_REQUIRED');
+ if(production&&(!origin||!validatePublicSiteOrigin(origin).ok))failures.push('REAL_PUBLIC_ORIGIN_REQUIRED');
  if(production&&builtHtml.length===0)failures.push('BUILT_HTML_REQUIRED');
  for(const p of builtHtml){
   if(!p||typeof p.html!=='string'||typeof p.name!=='string'){failures.push('INVALID_BUILT_PAGE');continue;}
