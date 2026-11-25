@@ -5,6 +5,7 @@ import path from 'node:path';
 import {huntWebTools} from '../scripts/hunt-web-tools-v25.mjs';
 import {auditAstro,auditAstroProject} from '../scripts/audit-astro-v25.mjs';
 import {analyzeSiteDepth} from '../scripts/analyze-site-depth-v25.mjs';
+import {auditSkillLibrary} from '../scripts/audit-skill-depth-v20.mjs';
 
 const root=path.resolve(import.meta.dirname,'..');
 const candidate=()=>JSON.parse(fs.readFileSync(path.join(root,'templates/opportunity/idea.example.json'),'utf8'));
@@ -58,4 +59,28 @@ test('deep site audit flags observed issues, never invents Google indexing or tr
  assert.equal(r.public_production_verified,false);
  assert.ok(r.unknowns.includes('Search indexing/rank'));
  assert.throws(()=>analyzeSiteDepth({schema:'bogus',pages:[],sitemaps:[]}),/V24_SITE_REPORT_REQUIRED/);
+});
+
+test('all 50 active skill entrypoints physically exist, match frontmatter and carry bounded evidence audit',()=>{
+ const registry=JSON.parse(fs.readFileSync(path.join(root,'sources/skill-network-v23.json'),'utf8'));
+ const ids=registry.stages.flatMap(s=>s.skills.map(x=>x.id));
+ assert.equal(ids.length,50);
+ assert.equal(new Set(ids).size,50);
+ const active=path.join(root,'.agents/skills');
+ const files=Object.fromEntries(fs.readdirSync(active,{withFileTypes:true}).filter(x=>x.isDirectory()).map(x=>[x.name,fs.readFileSync(path.join(active,x.name,'SKILL.md'),'utf8')]));
+ const report=auditSkillLibrary(files,ids);
+ assert.equal(report.counts.registered,50);
+ assert.equal(report.counts.found,50);
+ assert.equal(report.inventory_matches_registry,true,JSON.stringify(report.errors));
+ assert.equal(report.all_skills_production_certified,false);
+ assert.equal(report.agent_realworld_task_outcomes_verified,false);
+ assert.ok(report.counts.lacking_executable_reference>=0);
+});
+test('master, research, competitor and Astro entries route to actual V25 modules',()=>{
+ const paths=['web-dominant-tool-creator','web-opportunity-intelligence','web-competitor-audit','web-astro-engineering'];
+ const files=paths.map(id=>fs.readFileSync(path.join(root,'.agents','skills',id,'SKILL.md'),'utf8'));
+ assert.match(files[0],/scripts\/run-tool-hunter-v25.mjs/);
+ assert.match(files[1],/docs\/skills\/2026-11-25-v25-validation-field-playbook.md/);
+ assert.match(files[2],/analyzeSiteDepth/);
+ assert.match(files[3],/scripts\/audit-astro-v25.mjs/);
 });
