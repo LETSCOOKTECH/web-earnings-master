@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 import {validatePublicSiteOrigin} from './validate-public-origin-v20.mjs';
+import {auditPublisherRoute} from './publisher-indexability-v28.mjs';
 const args=process.argv.slice(2);
 const opt=(flag)=>{const i=args.indexOf(flag);return i<0?null:args[i+1];};
 const fail=(msg)=>{console.error('INVALID:',msg);process.exit(2);};
@@ -20,18 +21,20 @@ try{manifest=JSON.parse(fs.readFileSync(path.resolve(file),'utf8'));}catch(e){fa
 if(!Array.isArray(manifest?.pages)||!manifest.pages.length)fail('Project route manifest must contain nonempty pages array');
 if(manifest.site_origin&&manifest.site_origin!==origin.origin)fail('Manifest origin conflicts with target origin');
 if(manifest.fixture===true&&!args.includes('--allow-fixture'))fail('Synthetic route manifest not accepted for production live audit');
-const paths=[];
+const paths=[],pageFlags=new Map();
 for(const p of manifest.pages){
  const route=p?.path;
  if(typeof route!=='string'||!/^\/(?:[a-z0-9_-]+\/)*$/.test(route))fail('Invalid project route: '+String(route));
- if(p.indexable===true)paths.push(route);
+ if(p.monetized!==undefined&&typeof p.monetized!=='boolean')fail('Page monetized must be boolean: '+route);
+ if(p.indexable===true){paths.push(route);pageFlags.set(route,p);}
 }
 if(!paths.length)fail('No declared indexable project pages');
 const unique=[...new Set(paths)];
 if(unique.length!==paths.length)fail('Duplicate page routes in manifest');
 const result={schema:'sense-live-site-v11',audit_started_at:new Date().toISOString(),origin:origin.origin,
- project_routes:unique,results:[],errors:[],status:'NOT_YET_RUN',
+ project_routes:unique,declared_monetized_routes:unique.filter(p=>pageFlags.get(p)?.monetized===true),results:[],errors:[],warnings:[],status:'NOT_YET_RUN',
  disclaimer:'HTTP and initial HTML observations only; not live browser, owner Search Console indexing, AI citations, AdSense approval, policy or revenue.'};
+let robotsText=null;
 async function load(route,kind){
  const url=new URL(route,origin).href;
  try{
@@ -49,16 +52,22 @@ async function load(route,kind){
    if(/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(body))failures.push('Indexable page has noindex in initial HTML');
    if((r.headers.get('x-robots-tag')||'').toLowerCase().includes('noindex'))failures.push('Indexable page has X-Robots-Tag noindex');
    if(!/<main\b/i.test(body))failures.push('Missing meaningful main semantic area');
+   const page=pageFlags.get(route);
+   const release=auditPublisherRoute({html:body,headers:r.headers,robotsText,route,indexable:true,monetized:page?.monetized===true,aiDiscovery:manifest.ai_discovery===true});
+   failures.push(...release.failures);
+   result.warnings.push(...release.warnings.map(w=>route+': '+w));
   }
   if(kind==='robots'&&!body.toLowerCase().includes('user-agent:'))failures.push('Missing robots groups');
+  if(kind==='robots'&&r.status===200)robotsText=body;
   if(kind==='sitemap'&&!/(<urlset\b|<sitemapindex\b)/i.test(body))failures.push('Unexpected sitemap XML body');
   const outcome={path:route,url,status_code:r.status,content_type:type,canonical_checked:kind==='page',http_result:failures.length?'FAIL':'PASS',issues:failures};
   result.results.push(outcome);
   if(failures.length)result.errors.push(route+': '+failures.join(', '));
  }catch(err){const message=String(err.message||err);result.results.push({path:route,url,http_result:'FAIL',issues:[message]});result.errors.push(route+': '+message);}
 }
-for(const r of unique)await load(r,'page');
+// Load robots first so route-level crawler policy can be evaluated with the actual response.
 await load('/robots.txt','robots');
+for(const r of unique)await load(r,'page');
 await load(manifest.sitemap_path||'/sitemap.xml','sitemap');
 const notFound=opt('--missing-path');
 if(notFound){
