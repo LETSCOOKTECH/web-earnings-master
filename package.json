@@ -59,7 +59,8 @@
     "audit:ai-controls": "node scripts/audit-ai-controls-v15.mjs --html examples/seo-csv-lab/site/index.html --robots examples/seo-csv-lab/site/robots.txt --route /",
     "audit:independent-readiness": "node --test tests/independent-global-readiness-v16.test.mjs",
     "audit:recommendar-sources": "node scripts/check-dominant-recommendar-v17.mjs",
-    "audit:recommendar-panel": "node scripts/evaluate-recommendar-v17.mjs --file templates/dominant-recommendar/SYNTHETIC-panel.json"
+    "audit:recommendar-panel": "node scripts/evaluate-recommendar-v17.mjs --file templates/dominant-recommendar/SYNTHETIC-panel.json",
+    "test:recommendar-holdouts": "node --test tests/dominant-recommendar-v18-holdouts.test.mjs"
   },
   "description": "Evidence-first Codex skill engine for SEO/AEO/GEO/ASO, safe utility execution, million-user capacity and publisher-margin planning"
 }
