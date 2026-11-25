@@ -1,0 +1,26 @@
+name: Sense V24 Website Intelligence
+on:
+  pull_request:
+    paths:
+      - 'lib/site-intelligence/**'
+      - 'scripts/site-intelligence.mjs'
+      - 'tests/site-intelligence.test.mjs'
+      - '.agents/skills/web-competitor-audit/SKILL.md'
+      - 'docs/website-intelligence/**'
+      - '.github/workflows/site-intelligence-v24.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  website-intelligence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run bounded discovery and adversarial website intelligence tests
+        run: node --test tests/site-intelligence.test.mjs
+      - name: Verify CLI usage
+        run: node scripts/site-intelligence.mjs --help
