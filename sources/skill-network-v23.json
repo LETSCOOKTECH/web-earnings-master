@@ -290,7 +290,17 @@
             "eval-harness"
           ],
           "deliverable": "Evaluated end-to-end release packet (web-dominant-tool-creator)",
-          "fail_case": "HOLD without independent user, market or launch evidence"
+          "fail_case": "Fabricated demand or rankings, missing functional output, unauthorized deployment, unsafe data, fake demo, unverified publisher approval",
+          "official_source_ids": [
+            "astro-config",
+            "google-ai-features",
+            "google-trends-data",
+            "v21-rfc4180",
+            "v21-owasp-wstg-csv"
+          ],
+          "local_oracle": "Run demand schema adversarial tests; clean Astro 7 install/check/build; independent JSONL output tests and three real browser-engine user action tests",
+          "external_gate": "Independent owner-authorized public DNS/TLS, deployed functionality, GSC/Bing/AI results and real publisher/user outcomes when available",
+          "status": "NOT_AUTHENTICATED"
         }
       ]
     },
@@ -311,7 +321,15 @@
             "semrush-keywords"
           ],
           "deliverable": "Dated demand ledger and independent competitor oracle (web-opportunity-intelligence)",
-          "fail_case": "REJECT unsupported demand or invented metrics"
+          "fail_case": "Unauthorized scraping or paid API; fake market metrics, synthetic human sources, absent product oracle/first user acquisition or unapproved development spend",
+          "official_source_ids": [
+            "google-trends-data",
+            "keyword-planner",
+            "semrush-kd"
+          ],
+          "local_oracle": "Validate evidence provenance, Trends CSV metadata, independent origin clusters, hard budget caps, contradictory sources and real competitor output test requirements",
+          "external_gate": "Authorize relevant browser/account scope, open original Google Trends and licensed keyword UI/CSV, inspect human problems and reproduce competitor tasks before owner-reviewed MVP decision",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-research-freshness",
@@ -321,7 +339,15 @@
             "corey-free"
           ],
           "deliverable": "Dated demand ledger and independent competitor oracle (web-research-freshness)",
-          "fail_case": "REJECT unsupported demand or invented metrics"
+          "fail_case": "Stale snippet assumed current official policy",
+          "official_source_ids": [
+            "google-search-updates",
+            "google-search-blog",
+            "google-crawling-changelog"
+          ],
+          "local_oracle": "Enforce original-body source date and claim scope",
+          "external_gate": "Reopen vendor policy at action time",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-niche-validation",
@@ -331,7 +357,14 @@
             "corey-free"
           ],
           "deliverable": "Dated demand ledger and independent competitor oracle (web-niche-validation)",
-          "fail_case": "REJECT unsupported demand or invented metrics"
+          "fail_case": "Commodity clone without defensible workflow",
+          "official_source_ids": [
+            "google-trends-data",
+            "semrush-volume"
+          ],
+          "local_oracle": "Validate sourced market estimates task gap and downside",
+          "external_gate": "Observe actual search and user validation evidence",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-keyword-intent",
@@ -340,7 +373,15 @@
             "corey-customers"
           ],
           "deliverable": "Dated demand ledger and independent competitor oracle (web-keyword-intent)",
-          "fail_case": "REJECT unsupported demand or invented metrics"
+          "fail_case": "Invented volume KD or duplicate intent pages",
+          "official_source_ids": [
+            "keyword-planner",
+            "google-trends-data",
+            "semrush-volume"
+          ],
+          "local_oracle": "Check source types dedupe keyword clusters and click potential",
+          "external_gate": "Compare real SERPs and first-party demand data",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-competitor-audit",
@@ -350,7 +391,14 @@
             "corey-free"
           ],
           "deliverable": "Dated demand ledger and independent competitor oracle (web-competitor-audit)",
-          "fail_case": "REJECT unsupported demand or invented metrics"
+          "fail_case": "Unverified weakness or modeled traffic presented as fact",
+          "official_source_ids": [
+            "google-seo-starter",
+            "semrush-traffic"
+          ],
+          "local_oracle": "Check fixtures source dates screenshots and error taxonomy",
+          "external_gate": "Repeat rival tool tasks with genuine inputs",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-search-forensic-evidence",
@@ -360,7 +408,14 @@
             "corey-free"
           ],
           "deliverable": "Dated demand ledger and independent competitor oracle (web-search-forensic-evidence)",
-          "fail_case": "REJECT unsupported demand or invented metrics"
+          "fail_case": "Speculative internal weights sold as facts",
+          "official_source_ids": [
+            "google-search-spam",
+            "google-how-search-works"
+          ],
+          "local_oracle": "Validate citation provenance and confidence classes",
+          "external_gate": "Recheck original dated court/official text",
+          "status": "NOT_AUTHENTICATED"
         }
       ]
     },
@@ -385,7 +440,17 @@
             "official-astro"
           ],
           "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-fullstack-production-executor)",
-          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+          "fail_case": "Code-only solution with no useful verified output",
+          "official_source_ids": [
+            "astro-config",
+            "v6-security-23",
+            "google-js-seo",
+            "v21-rfc4180",
+            "v21-mdn-worker"
+          ],
+          "local_oracle": "Run build E2E API security output and rollback test",
+          "external_gate": "Observe deployed task end to end and resource budgets",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-product-spec",
@@ -398,7 +463,14 @@
             "official-astro"
           ],
           "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-product-spec)",
-          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+          "fail_case": "Feature scope without correct output acceptance",
+          "official_source_ids": [
+            "astro-config",
+            "v6-accessibility-26"
+          ],
+          "local_oracle": "Check acceptance fixtures error cases and resource ceiling",
+          "external_gate": "Verify user acceptance on actual task",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-astro-engineering",
@@ -409,7 +481,15 @@
             "official-astro"
           ],
           "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-astro-engineering)",
-          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+          "fail_case": "Client shell only or broken primary tool",
+          "official_source_ids": [
+            "astro-config",
+            "astro-sitemap",
+            "astro-islands"
+          ],
+          "local_oracle": "Build real HTML and test robots redirects and hydration",
+          "external_gate": "Verify deployed pages across devices browsers and CDN",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-backend-api-engineering",
@@ -422,7 +502,14 @@
             "official-astro"
           ],
           "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-backend-api-engineering)",
-          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+          "fail_case": "Cross-tenant data leak or unbounded job bill",
+          "official_source_ids": [
+            "architecture-owasp-api4",
+            "v6-security-23"
+          ],
+          "local_oracle": "Test auth BOLA SSRF timeouts input bounds and idempotency",
+          "external_gate": "Test real authenticated staging and rollback",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-browser-runtime",
@@ -435,7 +522,14 @@
             "official-astro"
           ],
           "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-browser-runtime)",
-          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+          "fail_case": "Network failure misreported as ranking failure",
+          "official_source_ids": [
+            "architecture-browser-quotas",
+            "google-js-seo"
+          ],
+          "local_oracle": "Run owned HTTP redirects robots TLS and DOM fixtures",
+          "external_gate": "Capture real waterfall and server/CDN headers",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-browser-compute",
@@ -448,7 +542,17 @@
             "official-astro"
           ],
           "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-browser-compute)",
-          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+          "fail_case": "Unexpected remote upload or corrupt output",
+          "official_source_ids": [
+            "architecture-browser-wasm-perf",
+            "architecture-browser-quotas",
+            "v21-rfc4180",
+            "v21-mdn-worker",
+            "v21-whatwg-encoding"
+          ],
+          "local_oracle": "Run valid corrupt huge-file worker cancellation fixtures",
+          "external_gate": "Test low-memory real browsers and actual file output",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-conversion-job-platform",
@@ -461,7 +565,14 @@
             "official-astro"
           ],
           "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-conversion-job-platform)",
-          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+          "fail_case": "Unbounded compute egress or private file leak",
+          "official_source_ids": [
+            "architecture-workers-limits",
+            "architecture-queues-limits"
+          ],
+          "local_oracle": "Test retries max-size auth cancellation rate and bills",
+          "external_gate": "Perform realistic load test plus vendor budget evidence",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-frontend-experience-engineering",
@@ -471,7 +582,16 @@
             "vercel-react"
           ],
           "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-frontend-experience-engineering)",
-          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+          "fail_case": "Broken controls on small screens",
+          "official_source_ids": [
+            "astro-islands",
+            "google-core-web-vitals",
+            "v21-wcag22",
+            "v21-mdn-blob-url"
+          ],
+          "local_oracle": "Test empty loading success failure mobile and keyboard paths",
+          "external_gate": "Run real-device interaction performance and accessibility",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-workload-architecture-router",
@@ -481,7 +601,15 @@
             "official-astro"
           ],
           "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-workload-architecture-router)",
-          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+          "fail_case": "Framework selected without task or budget evidence",
+          "official_source_ids": [
+            "architecture-workers-limits",
+            "architecture-pages-limits",
+            "architecture-queues-limits"
+          ],
+          "local_oracle": "Validate size latency privacy vendor cost and fallback",
+          "external_gate": "Test candidate workload on target devices and cloud",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-hosting-vendor-evaluation",
@@ -494,7 +622,15 @@
             "official-astro"
           ],
           "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-hosting-vendor-evaluation)",
-          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+          "fail_case": "Noncommercial tier used for business without permission",
+          "official_source_ids": [
+            "vendor-vercel-pricing",
+            "vendor-github-pages-commercial",
+            "architecture-workers-pricing"
+          ],
+          "local_oracle": "Validate terms quotes limits and failure alternatives",
+          "external_gate": "Confirm current plan and actual deployment invoices",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-domain-operations",
@@ -507,7 +643,14 @@
             "official-astro"
           ],
           "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-domain-operations)",
-          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+          "fail_case": "Expired control or broken canonical redirects",
+          "official_source_ids": [
+            "google-search-canonical",
+            "vendor-github-pages-commercial"
+          ],
+          "local_oracle": "Test DNS record invariants redirect mapping and expiry",
+          "external_gate": "Validate actual domain authority and HTTPS responses",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-scale-reliability",
@@ -520,7 +663,14 @@
             "official-astro"
           ],
           "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-scale-reliability)",
-          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+          "fail_case": "Claims 1M concurrency from theoretical free tier",
+          "official_source_ids": [
+            "architecture-workers-limits",
+            "architecture-queues-limits"
+          ],
+          "local_oracle": "Test queue backpressure retry overflow and cost budget",
+          "external_gate": "Load test realistic traffic peaks and recovery",
+          "status": "NOT_AUTHENTICATED"
         }
       ]
     },
@@ -542,7 +692,17 @@
             "security-scanner"
           ],
           "deliverable": "Independent output oracle and adversarial UX/security tests (web-product-validation)",
-          "fail_case": "BLOCK misleading local-vs-public or uncontrolled attack cases"
+          "fail_case": "Silent corruption or undisclosed unsupported files",
+          "official_source_ids": [
+            "google-js-seo",
+            "v6-security-23",
+            "v21-rfc4180",
+            "v21-mdn-textdecoder",
+            "v21-owasp-wstg-csv"
+          ],
+          "local_oracle": "Run unit integration fuzz E2E and low-end test fixtures",
+          "external_gate": "Repeat real output and error handling on supported devices",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-security-assurance-asvs",
@@ -554,7 +714,16 @@
             "security-scanner"
           ],
           "deliverable": "Independent output oracle and adversarial UX/security tests (web-security-assurance-asvs)",
-          "fail_case": "BLOCK misleading local-vs-public or uncontrolled attack cases"
+          "fail_case": "Any critical auth or private data flaw",
+          "official_source_ids": [
+            "v6-security-23",
+            "v6-security-24",
+            "v21-owasp-wstg-csv",
+            "v21-owasp-community-csv"
+          ],
+          "local_oracle": "Test access control SSRF uploads XSS supply chain",
+          "external_gate": "Perform authorized pentest and negative production tests",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-security-performance",
@@ -566,7 +735,14 @@
             "security-scanner"
           ],
           "deliverable": "Independent output oracle and adversarial UX/security tests (web-security-performance)",
-          "fail_case": "BLOCK misleading local-vs-public or uncontrolled attack cases"
+          "fail_case": "Security controls bypassed or fabricated vitals",
+          "official_source_ids": [
+            "v6-security-23",
+            "google-core-web-vitals"
+          ],
+          "local_oracle": "Run auth CSP upload and performance regression fixtures",
+          "external_gate": "Verify production headers logs and field metrics",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-accessibility-agent-ux",
@@ -578,7 +754,14 @@
             "security-scanner"
           ],
           "deliverable": "Independent output oracle and adversarial UX/security tests (web-accessibility-agent-ux)",
-          "fail_case": "BLOCK misleading local-vs-public or uncontrolled attack cases"
+          "fail_case": "Primary action unusable or unlabeled",
+          "official_source_ids": [
+            "v6-accessibility-26",
+            "google-core-web-vitals"
+          ],
+          "local_oracle": "Run accessible form, keyboard, error and reduced-motion fixtures",
+          "external_gate": "Test real users assistive technology mobile and agent task",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-experiments",
@@ -590,7 +773,14 @@
             "security-scanner"
           ],
           "deliverable": "Independent output oracle and adversarial UX/security tests (web-experiments)",
-          "fail_case": "BLOCK misleading local-vs-public or uncontrolled attack cases"
+          "fail_case": "Uncontrolled confounders claimed causal",
+          "official_source_ids": [
+            "google-search-console",
+            "discovery-google-play-listing-experiments"
+          ],
+          "local_oracle": "Validate denominator assignment baseline and rollback",
+          "external_gate": "Measure statistically appropriate real user outcomes",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-launch-review",
@@ -602,7 +792,17 @@
             "security-scanner"
           ],
           "deliverable": "Independent output oracle and adversarial UX/security tests (web-launch-review)",
-          "fail_case": "BLOCK misleading local-vs-public or uncontrolled attack cases"
+          "fail_case": "Live outcome inferred from a passing local test",
+          "official_source_ids": [
+            "google-search-essentials",
+            "google-adsense-site-status",
+            "vendor-github-pages-commercial",
+            "v21-owasp-wstg-csv",
+            "v21-wcag22"
+          ],
+          "local_oracle": "Verify gates with hashes commands and owner blockers",
+          "external_gate": "Inspect deployed site user output and provider status",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-release-observability-operator",
@@ -614,7 +814,14 @@
             "security-scanner"
           ],
           "deliverable": "Independent output oracle and adversarial UX/security tests (web-release-observability-operator)",
-          "fail_case": "BLOCK misleading local-vs-public or uncontrolled attack cases"
+          "fail_case": "No rollback or monitoring for critical flows",
+          "official_source_ids": [
+            "google-search-console",
+            "google-adsense-site-status"
+          ],
+          "local_oracle": "Validate alerts error budgets and rollout simulations",
+          "external_gate": "Perform staged release and incident drill",
+          "status": "NOT_AUTHENTICATED"
         }
       ]
     },
@@ -636,7 +843,16 @@
             "official-search"
           ],
           "deliverable": "Original technical discovery evidence and actual external attribution states (web-technical-seo)",
-          "fail_case": "BLOCK fake AI first-place or doorway pages"
+          "fail_case": "Indexability inferred from source HTML alone",
+          "official_source_ids": [
+            "google-search-robots",
+            "google-search-canonical",
+            "google-sitemaps",
+            "v21-rfc4180"
+          ],
+          "local_oracle": "Test robots noindex sitemap 404 redirect rendered HTML",
+          "external_gate": "Verify real GSC indexed canonical and bot logs",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-content-and-image-seo",
@@ -648,7 +864,14 @@
             "corey-pseo"
           ],
           "deliverable": "Original technical discovery evidence and actual external attribution states (web-content-and-image-seo)",
-          "fail_case": "BLOCK fake AI first-place or doorway pages"
+          "fail_case": "Duplicated doorway or invented testimonials",
+          "official_source_ids": [
+            "google-image-seo",
+            "google-seo-starter"
+          ],
+          "local_oracle": "Validate intent headings licensing alt and schema truth",
+          "external_gate": "Observe real Search visibility and user task usefulness",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-ai-discovery",
@@ -657,7 +880,15 @@
             "seranking-ai"
           ],
           "deliverable": "Original technical discovery evidence and actual external attribution states (web-ai-discovery)",
-          "fail_case": "BLOCK fake AI first-place or doorway pages"
+          "fail_case": "Training crawler confused with search or invented citations",
+          "official_source_ids": [
+            "google-ai-features",
+            "openai-crawlers",
+            "perplexity-crawlers"
+          ],
+          "local_oracle": "Test search bot purpose robots and raw HTML fixture",
+          "external_gate": "Verify actual crawler identities and provider citations",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-ai-retrieval-lab",
@@ -669,7 +900,15 @@
             "corey-pseo"
           ],
           "deliverable": "Original technical discovery evidence and actual external attribution states (web-ai-retrieval-lab)",
-          "fail_case": "BLOCK fake AI first-place or doorway pages"
+          "fail_case": "Single prompt treated as universal ranking proof",
+          "official_source_ids": [
+            "google-ai-features",
+            "openai-crawlers",
+            "bing-ai-performance"
+          ],
+          "local_oracle": "Run citation URL normalization and sampling fixtures",
+          "external_gate": "Sample provider outputs with timestamp version and prompt",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-aeo-answer-optimization",
@@ -681,7 +920,14 @@
             "corey-pseo"
           ],
           "deliverable": "Original technical discovery evidence and actual external attribution states (web-aeo-answer-optimization)",
-          "fail_case": "BLOCK fake AI first-place or doorway pages"
+          "fail_case": "Unverifiable answers or fake special-schema claims",
+          "official_source_ids": [
+            "discovery-aeo-featured-snippets",
+            "google-ai-features"
+          ],
+          "local_oracle": "Validate actual answers and snippet eligibility",
+          "external_gate": "Observe actual SERP answer placements by query and locale",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-generative-engine-optimization",
@@ -693,7 +939,15 @@
             "corey-pseo"
           ],
           "deliverable": "Original technical discovery evidence and actual external attribution states (web-generative-engine-optimization)",
-          "fail_case": "BLOCK fake AI first-place or doorway pages"
+          "fail_case": "Manufactured citations or unsupported ranking guarantees",
+          "official_source_ids": [
+            "google-ai-features",
+            "google-generative-guidance",
+            "perplexity-crawlers"
+          ],
+          "local_oracle": "Verify citations against exact claim and source URL",
+          "external_gate": "Sample real AI answers by locale and time",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-dominant-recommendar",
@@ -702,7 +956,15 @@
             "seranking-ai"
           ],
           "deliverable": "Original technical discovery evidence and actual external attribution states (web-dominant-recommendar)",
-          "fail_case": "BLOCK fake AI first-place or doorway pages"
+          "fail_case": "No output authenticity, fake ranked first, missing negative responses, manufactured evidence or no actual user value",
+          "official_source_ids": [
+            "google-ai-features",
+            "openai-crawlers",
+            "bing-ai-performance"
+          ],
+          "local_oracle": "Run source atlas validator, recommendation cohort and quote adversarial tests; inspect actual user task and benchmark",
+          "external_gate": "Verify real provider/locale output, Google/Bing owner data and genuine user outcomes independently",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-crawler-governance",
@@ -710,7 +972,15 @@
             "official-search"
           ],
           "deliverable": "Original technical discovery evidence and actual external attribution states (web-crawler-governance)",
-          "fail_case": "BLOCK fake AI first-place or doorway pages"
+          "fail_case": "Verified bots blocked or anonymous bots whitelisted",
+          "official_source_ids": [
+            "google-crawler-overview",
+            "openai-crawlers",
+            "perplexity-crawlers"
+          ],
+          "local_oracle": "Validate RFC robots user agents headers and request parity",
+          "external_gate": "Verify authentic source IP and provider policy live",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-search-internals",
@@ -722,7 +992,14 @@
             "corey-pseo"
           ],
           "deliverable": "Original technical discovery evidence and actual external attribution states (web-search-internals)",
-          "fail_case": "BLOCK fake AI first-place or doorway pages"
+          "fail_case": "Toy retriever equated with Google algorithms",
+          "official_source_ids": [
+            "google-how-search-works",
+            "google-ranking-systems-v4"
+          ],
+          "local_oracle": "Run owned index BM25 rank and canonical fixtures",
+          "external_gate": "Compare controlled live SERP without weight claims",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-search-visibility-systems",
@@ -734,7 +1011,15 @@
             "corey-pseo"
           ],
           "deliverable": "Original technical discovery evidence and actual external attribution states (web-search-visibility-systems)",
-          "fail_case": "BLOCK fake AI first-place or doorway pages"
+          "fail_case": "No citation equated to ranking success",
+          "official_source_ids": [
+            "google-search-essentials",
+            "google-ai-features",
+            "bing-guidelines"
+          ],
+          "local_oracle": "Verify stage-specific discovery indexing and citation gates",
+          "external_gate": "Measure real organic and AI visits with task outcomes",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-app-store-discovery",
@@ -746,7 +1031,14 @@
             "corey-pseo"
           ],
           "deliverable": "Original technical discovery evidence and actual external attribution states (web-app-store-discovery)",
-          "fail_case": "BLOCK fake AI first-place or doorway pages"
+          "fail_case": "PWA misrepresented as native approved app",
+          "official_source_ids": [
+            "discovery-google-play-ranking",
+            "discovery-apple-search-discovery"
+          ],
+          "local_oracle": "Check distribution target and listing evidence",
+          "external_gate": "Read actual store console and app result evidence",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-aso-apple-app-store",
@@ -758,7 +1050,14 @@
             "corey-pseo"
           ],
           "deliverable": "Original technical discovery evidence and actual external attribution states (web-aso-apple-app-store)",
-          "fail_case": "BLOCK fake AI first-place or doorway pages"
+          "fail_case": "Fake reviews or unsupported app features",
+          "official_source_ids": [
+            "discovery-apple-app-store-keyword-bytes",
+            "discovery-apple-product-page-optimization"
+          ],
+          "local_oracle": "Validate name subtitle keyword UTF-8 bytes and feature claims",
+          "external_gate": "Test listing in actual App Store Connect by locale",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-aso-google-play",
@@ -770,7 +1069,14 @@
             "corey-pseo"
           ],
           "deliverable": "Original technical discovery evidence and actual external attribution states (web-aso-google-play)",
-          "fail_case": "BLOCK fake AI first-place or doorway pages"
+          "fail_case": "No real Android app or fabricated installs",
+          "official_source_ids": [
+            "discovery-google-play-ranking",
+            "discovery-google-play-listing-metadata"
+          ],
+          "local_oracle": "Validate listing lengths image assets privacy and vitals inputs",
+          "external_gate": "Observe real Play Console conversion and vitals",
+          "status": "NOT_AUTHENTICATED"
         }
       ]
     },
@@ -790,7 +1096,14 @@
             "security-scanner"
           ],
           "deliverable": "Applicable ad/consent policy decision and real account status (web-publisher-policy-eligibility)",
-          "fail_case": "HOLD publisher approval and earnings without original account"
+          "fail_case": "Misleading ad controls or falsely approved account",
+          "official_source_ids": [
+            "google-publisher-policies",
+            "google-adsense-site-ready"
+          ],
+          "local_oracle": "Run page-value layout disclosure and account-state gates",
+          "external_gate": "Verify current AdSense review and real page policies",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-adsense-readiness",
@@ -798,7 +1111,16 @@
             "official-ads"
           ],
           "deliverable": "Applicable ad/consent policy decision and real account status (web-adsense-readiness)",
-          "fail_case": "HOLD publisher approval and earnings without original account"
+          "fail_case": "Unapproved site claimed Ready or invalid traffic",
+          "official_source_ids": [
+            "google-adsense-site-ready",
+            "google-adsense-site-status",
+            "google-adsense-program",
+            "v21-wcag22"
+          ],
+          "local_oracle": "Audit ad placement content restrictions ownership and ads.txt",
+          "external_gate": "Verify real Google publisher site/account state",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-network-monetization",
@@ -807,7 +1129,15 @@
             "security-scanner"
           ],
           "deliverable": "Applicable ad/consent policy decision and real account status (web-network-monetization)",
-          "fail_case": "HOLD publisher approval and earnings without original account"
+          "fail_case": "Estimated RPM asserted as observed revenue",
+          "official_source_ids": [
+            "monetag-adsense",
+            "raptive-eligibility-2026",
+            "mediavine-apply"
+          ],
+          "local_oracle": "Audit approval data format privacy and provider terms",
+          "external_gate": "Verify real publisher account and net ad revenue",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-monetization-network-operator",
@@ -816,7 +1146,15 @@
             "security-scanner"
           ],
           "deliverable": "Applicable ad/consent policy decision and real account status (web-monetization-network-operator)",
-          "fail_case": "HOLD publisher approval and earnings without original account"
+          "fail_case": "Incompatible exclusivity or unsafe ad inventory",
+          "official_source_ids": [
+            "monetag-publisher-rules",
+            "google-adsense-program",
+            "raptive-eligibility-2026"
+          ],
+          "local_oracle": "Check eligibility exclusivity ad formats revenue share",
+          "external_gate": "Verify actual network response contract and paid invoices",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-privacy-consent",
@@ -825,7 +1163,14 @@
             "security-scanner"
           ],
           "deliverable": "Applicable ad/consent policy decision and real account status (web-privacy-consent)",
-          "fail_case": "HOLD publisher approval and earnings without original account"
+          "fail_case": "Unconsented third-party leakage or missing rights",
+          "official_source_ids": [
+            "google-adsense-cmp",
+            "google-adsense-cmp-framework"
+          ],
+          "local_oracle": "Test pre-consent scripts delete requests and cookies",
+          "external_gate": "Inspect real region-specific CMP and legal review",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-ad-experience",
@@ -834,7 +1179,14 @@
             "security-scanner"
           ],
           "deliverable": "Applicable ad/consent policy decision and real account status (web-ad-experience)",
-          "fail_case": "HOLD publisher approval and earnings without original account"
+          "fail_case": "Ad can be mistaken for download or primary action",
+          "official_source_ids": [
+            "google-ads-placement",
+            "google-adsense-program"
+          ],
+          "local_oracle": "Check misleading controls CLS ad separation and no ad-only pages",
+          "external_gate": "Review actual ad render and human interactions",
+          "status": "NOT_AUTHENTICATED"
         }
       ]
     },
@@ -856,7 +1208,14 @@
             "seranking-ai"
           ],
           "deliverable": "Qualified acquisition, completion, retention and marginal cost evidence (web-traffic-hunter)",
-          "fail_case": "REJECT invented clicks/RPM and spam acquisition"
+          "fail_case": "Any invalid paid traffic, fake engagement, platform disallowed promotion, unverified product or publisher harm",
+          "official_source_ids": [
+            "google-search-links",
+            "google-search-spam"
+          ],
+          "local_oracle": "Validate full traffic-hunter source and channel contracts with 40 negative and positive Node tests",
+          "external_gate": "Observe real permitted publication, qualified landing sessions, validated tool tasks, publisher alerts and reconciled spend",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-authority-distribution",
@@ -867,7 +1226,14 @@
             "seranking-ai"
           ],
           "deliverable": "Qualified acquisition, completion, retention and marginal cost evidence (web-authority-distribution)",
-          "fail_case": "REJECT invented clicks/RPM and spam acquisition"
+          "fail_case": "Manipulated links fabricated endorsements or click farms",
+          "official_source_ids": [
+            "google-search-links",
+            "google-search-spam"
+          ],
+          "local_oracle": "Test partner relevance and paid link spam exclusions",
+          "external_gate": "Verify authentic referrals links and completed tasks",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-search-analytics",
@@ -878,7 +1244,15 @@
             "seranking-ai"
           ],
           "deliverable": "Qualified acquisition, completion, retention and marginal cost evidence (web-search-analytics)",
-          "fail_case": "REJECT invented clicks/RPM and spam acquisition"
+          "fail_case": "AI citation counted as human ad visit",
+          "official_source_ids": [
+            "google-search-console",
+            "bing-ai-performance",
+            "google-ai-report"
+          ],
+          "local_oracle": "Validate privacy-safe event schema denominators and query coverage",
+          "external_gate": "Reconcile GSC Bing server logs and actual sessions",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-portfolio-growth",
@@ -889,7 +1263,14 @@
             "seranking-ai"
           ],
           "deliverable": "Qualified acquisition, completion, retention and marginal cost evidence (web-portfolio-growth)",
-          "fail_case": "REJECT invented clicks/RPM and spam acquisition"
+          "fail_case": "Revenue estimate called realized profit",
+          "official_source_ids": [
+            "google-search-console",
+            "google-adsense-site-status"
+          ],
+          "local_oracle": "Validate revenue-cost denominator and accounting period",
+          "external_gate": "Reconcile provider statements bills and returning users",
+          "status": "NOT_AUTHENTICATED"
         },
         {
           "id": "web-unit-economics-finops",
@@ -898,9 +1279,21 @@
             "corey-free"
           ],
           "deliverable": "Qualified acquisition, completion, retention and marginal cost evidence (web-unit-economics-finops)",
-          "fail_case": "REJECT invented clicks/RPM and spam acquisition"
+          "fail_case": "Zero cost declared with uncounted resource costs",
+          "official_source_ids": [
+            "architecture-workers-pricing",
+            "vendor-vercel-pricing"
+          ],
+          "local_oracle": "Check units bill assumptions and agent-abuse scenarios",
+          "external_gate": "Reconcile actual provider bills and traffic",
+          "status": "NOT_AUTHENTICATED"
         }
       ]
     }
-  ]
+  ],
+  "official_source_registry": "sources/official_sources.json",
+  "existing_skill_source_crosswalk": "sources/skill-evidence-crosswalk-v20.json",
+  "first_party_source_count": 160,
+  "verified_primary_source_reference_count": 70,
+  "note": "A source ID is a time-sensitive first-party document lead, not semantically verified policy or production evidence. Individual source IDs are inherited from existing V20 crosswalk and must be reopened."
 }
