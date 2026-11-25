@@ -1,6 +1,6 @@
 # Contributing to Web Earnings Master
 
-This is a private LETSCOOKTECH research and engineering repository. Only authorized collaborators may contribute. Contributions should strengthen the reliability and usefulness of the library rather than increasing skill count for its own sake.
+This is a public, open-source LETSCOOKTECH research and engineering repository. Contributions are welcome through reviewed pull requests and must be licensed compatibly with Apache-2.0. Contributions should strengthen the reliability and usefulness of the library rather than increasing skill count for its own sake.
 
 ## Change protocol
 
@@ -12,6 +12,7 @@ This is a private LETSCOOKTECH research and engineering repository. Only authori
 6. Extend automated tests for technical rules; never claim that scripts can prove publisher approval or ranking.
 7. Execute `npm test`; describe manual checks not yet performed.
 8. Prefer a reviewed pull request, clear change summary, and no unrelated formatting churn.
+9. For public-agent changes, run `npm run audit:public-agent:v27` and `npm run test:public-agent:v27`; verify the full [skill index](SKILLS.md) stays accurate.
 
 ## Skills format
 
@@ -19,4 +20,4 @@ Each active skill lives at `.agents/skills/<skill-name>/SKILL.md` with valid YAM
 
 ## Security and licensing
 
-Do not commit tokens, private publisher or ad network account details, private search-console exports, user files or unpublished business secrets beyond the authorized repository scope. Third-party material requires proper licensing; links to primary references are preferred over copying extensive content. See `SECURITY.md` and `LICENSE`.
+Do not commit tokens, private publisher or ad network account details, private search-console exports, user files or unpublished business secrets to this public repository. Third-party material requires proper licensing; links to primary references are preferred over copying extensive content. See `SECURITY.md`, `LICENSE`, `NOTICE` and [the public agent access guide](docs/AGENT_ACCESS.md). By contributing, submitters represent that they can license their original contributions under Apache-2.0; third-party works retain their own rights.

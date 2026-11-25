@@ -4,7 +4,9 @@
 
 ### Engineering knowledge. Evidence-based discovery. Sustainable website businesses.
 
-**Private Codex skill system maintained by LETSCOOKTECH**
+**Public open-source agent skill system maintained by LETSCOOKTECH — Apache-2.0 for LETSCOOKTECH-owned materials**
+
+**For AI agents:** Read [SKILLS.md — all 50 first-party entrypoints](SKILLS.md), [AGENTS.md](AGENTS.md), and [Public agent access guide](docs/AGENT_ACCESS.md). All are directly readable as GitHub files or raw HTTPS Markdown; search engine indexing is **not required**. [How to retrieve files via API](docs/AGENT_ACCESS.md#exact-public-urls-no-indexing-required).
 
 [Getting started](docs/START_HERE.md) · [Skill library](#skill-library) · [Research protocol](docs/RESEARCH_PROTOCOL.md) · [Official sources](sources/official_sources.json) · [Governance](AGENTS.md)
 
@@ -166,7 +168,7 @@ For each change: cite a current source or test, explain the affected scope, upda
 - **Repository:** `LETSCOOKTECH/web-earnings-master` — intended **private** research and skills workspace.
 - **Baseline:** 28 Codex skills and a dated primary-source registry. These are living references, not a comprehensive proof that every provider requirement has been satisfied.
 - **Scope today:** Research, verification and skill improvement. Site development begins separately when requirements and evidence justify it.
-- **License:** [Proprietary — All rights reserved](LICENSE). Authorized internal use only. External references and third-party components retain their own terms.
+- **License:** [Apache-2.0](LICENSE) for LETSCOOKTECH-owned work; see the [NOTICE](NOTICE) for third-party, trademark and source-rights boundaries. This repository is public and is not an agent execution service.
 
 ---
 

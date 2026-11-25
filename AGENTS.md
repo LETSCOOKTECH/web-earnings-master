@@ -179,3 +179,8 @@ Route substantial SEO/full-stack jobs through docs/seo-master/05-independent-obs
 
 ### V13 ethical distribution gate
 Consult docs/seo-master/15-earned-authority-distribution-v13.md and web-authority-distribution when acquiring legitimate referrals and editorial citations. Original useful tool evidence and human task outcomes precede outreach. Do not buy rank-passing links, create link exchanges/guest-post farms, spam forums or assert a backlink guarantees SEO ranking; re-open Google Search spam policy before changes.
+
+
+## V27 — Public Apache-2.0 skill access for external agents
+
+Sense is a **public** repository and current LETSCOOKTECH-owned material is under [Apache-2.0](LICENSE), with [NOTICE](NOTICE) preserving third-party rights and trademarks. For any external AI agent, read [SKILLS.md](SKILLS.md) (exactly 50 skill entrypoints), [docs/AGENT_ACCESS.md](docs/AGENT_ACCESS.md), then the task-specific `.agents/skills/<skill-id>/SKILL.md` and linked references. Direct GitHub raw GET and public GitHub Contents API do **not** depend on search engine indexing. If an agent cannot access a URL, distinguish agent network capabilities, rate limits and cached answers from repository visibility. Do not claim remote skill installers, live SEO ranking or production outcomes from public readability alone. Do not run upstream code without license and safety review.

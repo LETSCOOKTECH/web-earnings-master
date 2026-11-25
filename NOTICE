@@ -1,0 +1,32 @@
+Sense / Web Earnings Master
+Copyright 2026 LETSCOOKTECH
+
+This repository makes the original source code, agent skills, tests, templates,
+examples, and documentation that LETSCOOKTECH has the right to license available
+under the Apache License, Version 2.0. See LICENSE for the full terms.
+
+Licensing applies to materials for which LETSCOOKTECH owns or controls the
+necessary copyright. It does not relicense third-party works, examples, source
+documents, logos, assets, trademarks, service marks, datasets or other
+independently licensed content. Respect the licenses and attribution rules
+stated in individual files, dependency manifests and linked upstream sources.
+URLs, citations and references to third-party engineering guidance are not
+claims of ownership, affiliation or official endorsement.
+
+The names "LETSCOOKTECH" and "Sense", branding and logos are not licensed for
+confusing trademark use merely because the underlying materials are open source.
+Apache-2.0 Section 6 preserves this distinction.
+
+The repository's source manifests record upstream methodology leads, not
+packages that this repository installs or files it copies. Users should
+independently inspect source licenses before importing any upstream scripts,
+code or documents.
+
+This repository previously used a proprietary root license. The Apache-2.0
+license in the current public release covers the current LETSCOOKTECH-owned
+materials; historical third-party materials remain subject to their rights.
+
+Agent instructions are guidance rather than a guarantee of Google ranking,
+AI citations, advertising approval, traffic, income, security certification or
+fitness for a particular production use. The Apache-2.0 warranty disclaimer
+and all applicable platform terms continue to apply.
