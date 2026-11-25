@@ -30,3 +30,7 @@ description: "Implement restrained, policy-aware ad layouts and measurable user 
 
 ## V6 production and research handoff (2026-11-23)
 Verify actual ad interaction against primary download, submit and file-picker controls. Prevent deceptive lookalikes, accidental clicks and CLS; verify consent and network script behavior. Delegate site/page policy to web-publisher-policy-eligibility and contract to web-monetization-network-operator.
+
+## V29 additive real browser advertising controls
+Do not insert demo ads to inflate the number of route visits. Avoid arbitrary timer-refresh, misleading download-like advertisements, or forced page-hopping. Only declare an ad separation/CLS check PASS when a real monetized page and dynamic idle/loading/error/preview states have been tested in Chromium and mobile browsers. Provisional internal geometry goals (>=32px from actions, CLS <=0.01) must never be represented as official Google policy or as proven by a placeholder. Prototype Studio currently has NO ads and therefore ad-fill/invalid-traffic evidence is NOT_RUN.
+
