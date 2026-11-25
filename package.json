@@ -68,7 +68,11 @@
     "audit:skills:sources": "node scripts/check-skill-evidence-crosswalk-v20.mjs",
     "audit:links:local": "node scripts/audit-repository-links-v20.mjs --strict-critical",
     "audit:tool-creator:demand": "node scripts/evaluate-tool-opportunity-v22.mjs --file templates/dominant-tool-creator/brief.SYNTHETIC.json",
-    "lab:tool-creator:scaffold": "node scripts/scaffold-astro-tool-v22.mjs"
+    "lab:tool-creator:scaffold": "node scripts/scaffold-astro-tool-v22.mjs",
+    "test:v25": "node --test tests/sense-v25-quality.test.mjs",
+    "audit:astro:v25": "node scripts/audit-astro-v25.mjs",
+    "hunt:tools:v25": "node scripts/run-tool-hunter-v25.mjs",
+    "audit:site-depth:v25": "node scripts/analyze-site-depth-v25.mjs"
   },
   "description": "Evidence-first Codex skill engine for SEO/AEO/GEO/ASO, safe utility execution, million-user capacity and publisher-margin planning"
 }

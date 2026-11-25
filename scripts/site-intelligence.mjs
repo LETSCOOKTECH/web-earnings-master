@@ -6,6 +6,7 @@ import {buildDiscoveryInventory} from '../lib/site-intelligence/discovery.mjs';
 import {summarizeHAR} from '../lib/site-intelligence/har.mjs';
 import {buildSkillHandoffs} from '../lib/site-intelligence/knowledge.mjs';
 import {buildSiteAtlas} from '../lib/site-intelligence/portfolio.mjs';
+import {analyzeSiteDepth} from './analyze-site-depth-v25.mjs';
 import {summarizeRenderedDOM} from '../lib/site-intelligence/rendered.mjs';
 
 const args=process.argv.slice(2);
@@ -27,7 +28,7 @@ async function run(){
      'Discovery: node scripts/site-intelligence.mjs --discover path/search-results.json --out path/discovery.json',
      'Compare: node scripts/site-intelligence.mjs --atlas-file path/reports-list.json --out path/reference-atlas.json',
      'Audit: node scripts/site-intelligence.mjs --origin https://site.tld/ --authorized-origin https://site.tld/ --out path/report.json [--seed-file inputs.json]',
-     'Options: --max-pages N --max-sitemaps N --min-delay-ms N --previous previous-report.json --har-file SANITIZED.har --rendered-snapshots public-dom-snapshots.json --packets-out skill-evidence.json --overwrite',
+     'Options: --max-pages N --max-sitemaps N --min-delay-ms N --previous previous-report.json --har-file SANITIZED.har --rendered-snapshots public-dom-snapshots.json --packets-out skill-evidence.json --deep-out site-depth.json --overwrite',
      'Never run on private services, inaccessible networks, logged-in accounts or sites where automation is disallowed.',
      'The --authorized-origin flag records operator intent, NOT verified ownership/terms clearance.',
      'Search-result imports are leads only; there is no built-in search-engine scraping.',
@@ -82,6 +83,8 @@ async function run(){
  writeResult(out,report);
  const packetsFile=option('--packets-out');
  if(packetsFile)writeResult(packetsFile,buildSkillHandoffs(report));
+ const deepFile=option('--deep-out');
+ if(deepFile)writeResult(deepFile,analyzeSiteDepth(report));
  if(report.status.startsWith('BLOCKED'))process.exitCode=1;
 }
 run().catch(e=>{process.stderr.write(JSON.stringify({status:'REFUSED_OR_FAILED',error:String(e.message).slice(0,250)})+'\n');process.exitCode=2;});

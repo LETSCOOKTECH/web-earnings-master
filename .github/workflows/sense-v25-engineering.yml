@@ -1,0 +1,25 @@
+name: Sense V25 Astro and Demand Intelligence
+on:
+  pull_request:
+    paths:
+      - 'scripts/*v25.mjs'
+      - 'tests/sense-v25-quality.test.mjs'
+      - '.agents/skills/**'
+      - 'docs/skills/**'
+      - '.github/workflows/sense-v25-engineering.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate V25 research, Astro and site evidence
+        run: node --test tests/sense-v25-quality.test.mjs
+      - name: Audit real Astro 7 source starter
+        run: node scripts/audit-astro-v25.mjs --project examples/astro-jsonl-studio
