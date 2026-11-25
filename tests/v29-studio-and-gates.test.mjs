@@ -8,11 +8,11 @@ import {scanAssetSizes,checkNoindex,checkBuiltRoute,verifyMutatingRoutes} from '
 test('V29 keeps V23 registry of 50 existing active skills intact with a separate candidate companion',()=>{
  const registry=JSON.parse(fs.readFileSync('sources/skill-network-v23.json','utf8'));
  assert.equal(registry.declared_active_skills,50);
- assert.equal(STUDIO_ROUTES.length,20);
+ assert.equal(STUDIO_ROUTES.length,28);
 });
 test('all 20 route output mutation contracts run on kind-specific identical inputs',()=>{
  const result=verifyMutatingRoutes();
- assert.equal(result.checked,20);
+ assert.equal(result.checked,28);
  assert.deepEqual(result.failures,[]);
 });
 test('Cloudflare deployment artifact gate catches a sparse 26 MiB file without allocating a 26MiB string',()=>{
