@@ -262,3 +262,10 @@ Sense integrates **13 directly inspected original skill instructions** from Verc
 This is a **source-pinned, methodology-integrated** release, not proof that 13 upstream skills are installed or that any provider guarantees search rank. Vercel guidance is React/Vercel-scoped, Cloudflare guidance is platform-scoped, Anthropic examples require adaptation to the actual agent runtime, and Addy's collection is independently maintained rather than an official Google repo.
 
 Use `npm run audit:upstream:v26` and `npm run test:upstream:v26` for provenance/negative tests, and `npm run eval:agent-skills:v26 -- --file ACTUAL_TRIALS.json` for transparent paired-task arithmetic (not independently authenticated results). See [the complete V26 official-source and engineering transfer playbook](docs/skills/2026-11-25-official-upstream-v26.md). Human task completion, safe live deployment, market demand, rankings and monetized traffic remain separate evidence gates.
+
+## V29 — browser-local Data Studio companion and verified engineering additions
+
+The [additive V29 Studio](examples/astro-dominant-studio-v29/README.md) provides an Astro 7 sample with 20 separately functioning CSV, TSV, JSON and JSONL transformations, four category hubs, a browser Worker, real downloadable outputs, a conservative 16 MiB text cap, and explicit error/precision/formula safety contracts. Its [opt-in execution skill](extensions/v29/skills/web-dominant-studio-v29/SKILL.md) extends — and does not replace — the protected 50-skill V23 registry. New tooling adds 24 MiB static-asset checks for Cloudflare Pages, output-mutation tests, manual zero-paid research receipts, an opt-in IndexNow diff sender, and conservative WebMCP responses.
+
+**Not implemented or externally verified:** Parquet/TOON binaries, DuckDB/OPFS, Excel workbooks, universal 500 MB streams, live AdSense ad/consent integration, owned-domain launch, indexing, search traffic, AI citations, paid customers or profitability. [Detailed truth matrix and corrected official requirements](docs/audits/2026-11-26-v29-implementation-truth.md). Example.org remains noindex/robots-blocked intentionally.
+
