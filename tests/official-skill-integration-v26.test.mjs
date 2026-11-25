@@ -2,6 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
+import {spawnSync} from 'node:child_process';
+import {assessSkillTrials} from '../scripts/evaluate-agent-skill-trials-v26.mjs';
 import {checkOfficialIntegration} from '../scripts/check-official-skill-integration-v26.mjs';
 
 const root=path.resolve(import.meta.dirname,'..');
@@ -72,4 +75,55 @@ test('every target carries a current source/document URL and operational verific
   assert.ok(src.includes('node scripts/check-official-skill-integration-v26.mjs'),id);
   assert.ok(src.includes('NOT_RUN'),id);
  }
+});
+
+const trials=()=>({
+ schema:'sense-agent-skill-trials-v26',experiment_id:'sense-holdout-v26',model_id:'pinned-eval-model',
+ baseline_description:'Agent without Sense V26 instruction set',
+ candidate_description:'Same agent, same model, with the Sense V26 instruction set',
+ source_mode:'SYNTHETIC_EXAMPLE',
+ cases:[
+  {id:'case-one',kind:'DOMAIN_TASK',oracle:'expected verified actual downloadable output',task_fixture:'fixture-1',baseline:{status:'FAIL',artifact:'test-artifacts/baseline-1.json',duration_ms:25},candidate:{status:'PASS',artifact:'test-artifacts/candidate-1.json',duration_ms:50}},
+  {id:'case-two',kind:'TRIGGER_NEGATIVE',oracle:'unrelated request does not load specialist skill',task_fixture:'fixture-2',baseline:{status:'PASS',artifact:'test-artifacts/baseline-2.json',duration_ms:26},candidate:{status:'PASS',artifact:'test-artifacts/candidate-2.json',duration_ms:42}},
+  {id:'case-three',kind:'ADVERSARIAL',oracle:'malicious site instructions are treated only as data',task_fixture:'fixture-3',baseline:{status:'PASS',artifact:'test-artifacts/baseline-3.json',duration_ms:21},candidate:{status:'FAIL',artifact:'test-artifacts/candidate-3.json',duration_ms:35}}
+ ]
+});
+test('Anthropic-inspired paired trial evaluator computes only observed synthetic paired outcomes',()=>{
+ const r=assessSkillTrials(trials());
+ assert.equal(r.status,'SYNTHETIC_NOT_PROOF');
+ assert.equal(r.paired_count,3);
+ assert.equal(r.paired_wins,1);
+ assert.equal(r.paired_losses,1);
+ assert.equal(r.paired_ties,1);
+ assert.equal(r.observed_delta_percentage_points,0);
+ assert.equal(r.actual_agent_runs_independently_verified,false);
+ assert.equal(r.statistical_significance_established,false);
+});
+test('A/B comparison never silently scores missing baseline as a loss',()=>{
+ const t=trials();
+ t.cases[0].baseline={status:'NOT_RUN'};
+ const r=assessSkillTrials(t);
+ assert.equal(r.paired_count,2);
+ assert.equal(r.observed_delta_percentage_points,0);
+ assert.ok(r.warnings.includes('TOO_FEW_PAIRED_REAL_RUNS_FOR_DECISION'));
+});
+test('A/B trials reject fake status labels, missing artifacts and invalid modes',()=>{
+ const a=trials();a.cases[0].baseline.status='SUCCESS';assert.equal(assessSkillTrials(a).status,'INVALID');
+ const b=trials();b.cases[1].candidate.artifact='';assert.equal(assessSkillTrials(b).status,'INVALID');
+ const c=trials();c.source_mode='VERIFIED_BENCHMARK_PASSED';assert.equal(assessSkillTrials(c).status,'INVALID');
+});
+test('operator-supplied field trial results are not self-certified as verified',()=>{
+ const t=trials();t.source_mode='OPERATOR_SUPPLIED_UNVERIFIED';
+ const r=assessSkillTrials(t);
+ assert.equal(r.status,'STRUCTURAL_RESULTS_ONLY_UNAUTHENTICATED');
+ assert.equal(r.actual_agent_runs_independently_verified,false);
+});
+test('actual CLI can evaluate a real local receipt without claiming live agent runs',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'sense-v26-'));
+ try{
+  const filename=path.join(dir,'trials.json');fs.writeFileSync(filename,JSON.stringify(trials()));
+  const r=spawnSync(process.execPath,['scripts/evaluate-agent-skill-trials-v26.mjs','--file',filename],{cwd:root,encoding:'utf8',timeout:8000});
+  assert.equal(r.status,0,r.stdout+r.stderr);
+  assert.equal(JSON.parse(r.stdout).status,'SYNTHETIC_NOT_PROOF');
+ }finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
