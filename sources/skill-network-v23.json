@@ -1,0 +1,906 @@
+{
+  "schema": "sense-skill-network-v23",
+  "date_utc": "2026-11-25",
+  "declared_active_skills": 50,
+  "release_status": "methods-mapped-not-upstream-installed",
+  "rights": "Do not execute any upstream skill code or copy prose without checking each applicable license. Provenance is not certification.",
+  "upstreams": [
+    {
+      "id": "openai-creator",
+      "url": "https://github.com/openai/skills/blob/main/skills/.system/skill-creator/SKILL.md",
+      "blob_sha": "72bc0b97e7a6476254a9d5c424c9971748402ec3",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Concise progressive skill loading and reusable resources",
+      "risk": "Format quality is not performance proof"
+    },
+    {
+      "id": "anthropic-creator",
+      "url": "https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md",
+      "blob_sha": "65b3a402dbd09b8e83f9d637c6b553875189085c",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Repeated baseline and with-skill tests plus feedback loops",
+      "risk": "Claude runner does not imply Codex compatibility"
+    },
+    {
+      "id": "superpowers-tdd",
+      "url": "https://github.com/obra/superpowers/blob/main/skills/writing-skills/SKILL.md",
+      "blob_sha": "09d76b79dd4080fe4dcc9bfb3c54d05dbff8a563",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Test-first skill instructions and RED/GREEN/REFACTOR",
+      "risk": "No external outcome guarantee"
+    },
+    {
+      "id": "astro-orchestration",
+      "url": "https://github.com/Methedrone/astro-skills/blob/main/astro-expert-orchestrator/SKILL.md",
+      "blob_sha": "88ed24b63a417c7917f0472b314efe1ed42295b8",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Astro-native versioned specialist routing",
+      "risk": "Always check currently installed Astro version"
+    },
+    {
+      "id": "astro-verification",
+      "url": "https://github.com/Methedrone/astro-skills/blob/main/astro-verification/SKILL.md",
+      "blob_sha": "4c407c5ec103aff60ffb2f8662d5883408ed895f",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Build and output-centric Astro verification",
+      "risk": "Build is not a live production result"
+    },
+    {
+      "id": "croftweaver",
+      "url": "https://github.com/karero/croftweaver/blob/main/skills/new-website/SKILL.md",
+      "blob_sha": "eb4b46facfbb1fd82adf3d11c4f3e0c47dac9b2f",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Integrated website staging and handoff",
+      "risk": "General business sites are not validated computational tools"
+    },
+    {
+      "id": "addy-quality",
+      "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/web-quality-audit/SKILL.md",
+      "blob_sha": "581ec7c5e8e05e6ac93d99d872906595581efc42",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Measurement-first web quality and agent browsing",
+      "risk": "Unofficial skill and Lighthouse is not ranking proof"
+    },
+    {
+      "id": "addy-performance",
+      "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/performance/SKILL.md",
+      "blob_sha": "913a36c6ad869d530053f20fd05698804cb24e3e",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "LCP/resource/runtime diagnosis",
+      "risk": "Lab and field results are distinct"
+    },
+    {
+      "id": "semrush-keywords",
+      "url": "https://github.com/semrush/skills/blob/main/keyword-research/SKILL.md",
+      "blob_sha": "14a138c9592e1171e37085e6b86490ac8c9a0000",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Live keyword metrics, provenance, cost and fallback tiers",
+      "risk": "Requires permitted MCP and account entitlement"
+    },
+    {
+      "id": "semrush-technical",
+      "url": "https://github.com/semrush/skills/blob/main/technical-seo-audit/SKILL.md",
+      "blob_sha": "70d375ba2943e25acf9d296ea55585194d81625c",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Technical SEO priority and evidence segmentation",
+      "risk": "No authenticated account data provided"
+    },
+    {
+      "id": "seranking-ai",
+      "url": "https://github.com/seranking/seo-skills/blob/main/skills/seo-ai-search-share-of-voice/SKILL.md",
+      "blob_sha": "be7d1d8596fdc2853eaa588760a47d2ef4ab3aa3",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Competitive AI visibility observations",
+      "risk": "Share of voice not equivalent to human traffic"
+    },
+    {
+      "id": "seranking-technical",
+      "url": "https://github.com/seranking/seo-skills/blob/main/skills/seo-technical-audit/SKILL.md",
+      "blob_sha": "51ad9343a042f5a3b57d5b90ff2caed4d9c38927",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Full technical audit and field corroboration",
+      "risk": "Provider dependency and site entitlement"
+    },
+    {
+      "id": "corey-free",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/free-tools/SKILL.md",
+      "blob_sha": "cfef9eaf83f07b1ace96f9e8726399703ad24e56",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Free tool acquisition and focused usefulness",
+      "risk": "Free acquisition funnel is not ad-funded profit proof"
+    },
+    {
+      "id": "corey-customers",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/customer-research/SKILL.md",
+      "blob_sha": "6fb68214bda721ddeff6a63266ce6d0ceaddefc9",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Interview/review evidence with selection bias checks",
+      "risk": "Customer commentary is untrusted and often nonrepresentative"
+    },
+    {
+      "id": "corey-pseo",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/programmatic-seo/SKILL.md",
+      "blob_sha": "09a87f78a6f86e30a4333a7f7623425588b13961",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Unique value per scaled template page",
+      "risk": "Doorway or low-value scaling is a spam risk"
+    },
+    {
+      "id": "corey-community",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/community-marketing/SKILL.md",
+      "blob_sha": "336b9fb9af2d27e54c82f06ab47299c626cc9f1c",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Human value-first acquisition and support",
+      "risk": "No automated spam or community outreach"
+    },
+    {
+      "id": "anthropic-webtest",
+      "url": "https://github.com/anthropics/skills/blob/main/skills/webapp-testing/SKILL.md",
+      "blob_sha": "4726215301db64a0cc4d41fc3219c61f37a30f4a",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Browser task walkthroughs and reproducible local Playwright",
+      "risk": "Headless screenshots not real device accessibility"
+    },
+    {
+      "id": "anthropic-design",
+      "url": "https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md",
+      "blob_sha": "a5333457c414d20d625f307df945842c0952ecc3",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Intentional non-template visual design",
+      "risk": "Human critique still necessary"
+    },
+    {
+      "id": "cloudflare-runtime",
+      "url": "https://github.com/cloudflare/skills/blob/main/skills/cloudflare/SKILL.md",
+      "blob_sha": "1ac5d6b7ca11036d5d3960f8f7f54789987d51cd",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Vendor runtime product selection and docs",
+      "risk": "Do not force Cloudflare on every architecture"
+    },
+    {
+      "id": "vercel-react",
+      "url": "https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md",
+      "blob_sha": "237988de4a66dd8a71d30a2c24ebe1a86b58d04e",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "React performance and waterfall rules",
+      "risk": "React-only patterns cannot be forced onto Astro"
+    },
+    {
+      "id": "eval-harness",
+      "url": "https://github.com/tardigrde/agent-skill-eval",
+      "blob_sha": null,
+      "review": "readme-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Codex/Claude/OpenCode A/B evaluation and pass-k",
+      "risk": "Not installed or run; separate credentials required"
+    },
+    {
+      "id": "security-scanner",
+      "url": "https://github.com/cisco-ai-defense/skill-scanner",
+      "blob_sha": null,
+      "review": "readme-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Source quarantine and static scanning",
+      "risk": "Scanner has false negatives"
+    },
+    {
+      "id": "official-search",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "blob_sha": null,
+      "review": "original-doc-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Indexability and Google generative Search requirements",
+      "risk": "Revisit current body; not a third-party agent skill"
+    },
+    {
+      "id": "official-ads",
+      "url": "https://support.google.com/adsense/answer/48182",
+      "blob_sha": null,
+      "review": "original-doc-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Publisher policy and invalid traffic",
+      "risk": "Account approval unobserved"
+    },
+    {
+      "id": "official-astro",
+      "url": "https://docs.astro.build/en/guides/on-demand-rendering/",
+      "blob_sha": null,
+      "review": "original-doc-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Rendering and static vs SSR boundary",
+      "risk": "Version-sensitive docs"
+    },
+    {
+      "id": "official-edge",
+      "url": "https://developers.cloudflare.com/workers/platform/limits/",
+      "blob_sha": null,
+      "review": "original-doc-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Plan-specific edge platform limits",
+      "risk": "Model costs not real load test"
+    }
+  ],
+  "stages": [
+    {
+      "id": "orchestration",
+      "owner": "web-dominant-tool-creator",
+      "output": "Evaluated end-to-end release packet",
+      "gate": "HOLD without independent user, market or launch evidence",
+      "next_stage_ids": [
+        "research",
+        "engineering",
+        "quality",
+        "discovery",
+        "publisher",
+        "growth"
+      ],
+      "skills": [
+        {
+          "id": "web-dominant-tool-creator",
+          "upstreams": [
+            "openai-creator",
+            "anthropic-creator",
+            "superpowers-tdd",
+            "eval-harness"
+          ],
+          "deliverable": "Evaluated end-to-end release packet (web-dominant-tool-creator)",
+          "fail_case": "HOLD without independent user, market or launch evidence"
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "owner": "web-opportunity-intelligence",
+      "output": "Dated demand ledger and independent competitor oracle",
+      "gate": "REJECT unsupported demand or invented metrics",
+      "next_stage_ids": [
+        "engineering"
+      ],
+      "skills": [
+        {
+          "id": "web-opportunity-intelligence",
+          "upstreams": [
+            "corey-customers",
+            "corey-free",
+            "semrush-keywords"
+          ],
+          "deliverable": "Dated demand ledger and independent competitor oracle (web-opportunity-intelligence)",
+          "fail_case": "REJECT unsupported demand or invented metrics"
+        },
+        {
+          "id": "web-research-freshness",
+          "upstreams": [
+            "corey-customers",
+            "semrush-keywords",
+            "corey-free"
+          ],
+          "deliverable": "Dated demand ledger and independent competitor oracle (web-research-freshness)",
+          "fail_case": "REJECT unsupported demand or invented metrics"
+        },
+        {
+          "id": "web-niche-validation",
+          "upstreams": [
+            "corey-customers",
+            "semrush-keywords",
+            "corey-free"
+          ],
+          "deliverable": "Dated demand ledger and independent competitor oracle (web-niche-validation)",
+          "fail_case": "REJECT unsupported demand or invented metrics"
+        },
+        {
+          "id": "web-keyword-intent",
+          "upstreams": [
+            "semrush-keywords",
+            "corey-customers"
+          ],
+          "deliverable": "Dated demand ledger and independent competitor oracle (web-keyword-intent)",
+          "fail_case": "REJECT unsupported demand or invented metrics"
+        },
+        {
+          "id": "web-competitor-audit",
+          "upstreams": [
+            "corey-customers",
+            "semrush-keywords",
+            "corey-free"
+          ],
+          "deliverable": "Dated demand ledger and independent competitor oracle (web-competitor-audit)",
+          "fail_case": "REJECT unsupported demand or invented metrics"
+        },
+        {
+          "id": "web-search-forensic-evidence",
+          "upstreams": [
+            "corey-customers",
+            "semrush-keywords",
+            "corey-free"
+          ],
+          "deliverable": "Dated demand ledger and independent competitor oracle (web-search-forensic-evidence)",
+          "fail_case": "REJECT unsupported demand or invented metrics"
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "owner": "web-fullstack-production-executor",
+      "output": "Functional built tool with verifiable outputs and cost bounds",
+      "gate": "BLOCK broken primary action, unsafe data or unsupported capacity",
+      "next_stage_ids": [
+        "quality",
+        "discovery"
+      ],
+      "skills": [
+        {
+          "id": "web-fullstack-production-executor",
+          "upstreams": [
+            "astro-orchestration",
+            "astro-verification",
+            "croftweaver",
+            "cloudflare-runtime",
+            "vercel-react",
+            "official-astro"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-fullstack-production-executor)",
+          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+        },
+        {
+          "id": "web-product-spec",
+          "upstreams": [
+            "astro-orchestration",
+            "astro-verification",
+            "croftweaver",
+            "cloudflare-runtime",
+            "vercel-react",
+            "official-astro"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-product-spec)",
+          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+        },
+        {
+          "id": "web-astro-engineering",
+          "upstreams": [
+            "astro-orchestration",
+            "astro-verification",
+            "croftweaver",
+            "official-astro"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-astro-engineering)",
+          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+        },
+        {
+          "id": "web-backend-api-engineering",
+          "upstreams": [
+            "astro-orchestration",
+            "astro-verification",
+            "croftweaver",
+            "cloudflare-runtime",
+            "vercel-react",
+            "official-astro"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-backend-api-engineering)",
+          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+        },
+        {
+          "id": "web-browser-runtime",
+          "upstreams": [
+            "astro-orchestration",
+            "astro-verification",
+            "croftweaver",
+            "cloudflare-runtime",
+            "vercel-react",
+            "official-astro"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-browser-runtime)",
+          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+        },
+        {
+          "id": "web-browser-compute",
+          "upstreams": [
+            "astro-orchestration",
+            "astro-verification",
+            "croftweaver",
+            "cloudflare-runtime",
+            "vercel-react",
+            "official-astro"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-browser-compute)",
+          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+        },
+        {
+          "id": "web-conversion-job-platform",
+          "upstreams": [
+            "astro-orchestration",
+            "astro-verification",
+            "croftweaver",
+            "cloudflare-runtime",
+            "vercel-react",
+            "official-astro"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-conversion-job-platform)",
+          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+        },
+        {
+          "id": "web-frontend-experience-engineering",
+          "upstreams": [
+            "anthropic-design",
+            "addy-quality",
+            "vercel-react"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-frontend-experience-engineering)",
+          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+        },
+        {
+          "id": "web-workload-architecture-router",
+          "upstreams": [
+            "cloudflare-runtime",
+            "official-edge",
+            "official-astro"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-workload-architecture-router)",
+          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+        },
+        {
+          "id": "web-hosting-vendor-evaluation",
+          "upstreams": [
+            "astro-orchestration",
+            "astro-verification",
+            "croftweaver",
+            "cloudflare-runtime",
+            "vercel-react",
+            "official-astro"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-hosting-vendor-evaluation)",
+          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+        },
+        {
+          "id": "web-domain-operations",
+          "upstreams": [
+            "astro-orchestration",
+            "astro-verification",
+            "croftweaver",
+            "cloudflare-runtime",
+            "vercel-react",
+            "official-astro"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-domain-operations)",
+          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+        },
+        {
+          "id": "web-scale-reliability",
+          "upstreams": [
+            "astro-orchestration",
+            "astro-verification",
+            "croftweaver",
+            "cloudflare-runtime",
+            "vercel-react",
+            "official-astro"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-scale-reliability)",
+          "fail_case": "BLOCK broken primary action, unsafe data or unsupported capacity"
+        }
+      ]
+    },
+    {
+      "id": "quality",
+      "owner": "web-product-validation",
+      "output": "Independent output oracle and adversarial UX/security tests",
+      "gate": "BLOCK misleading local-vs-public or uncontrolled attack cases",
+      "next_stage_ids": [
+        "discovery",
+        "publisher"
+      ],
+      "skills": [
+        {
+          "id": "web-product-validation",
+          "upstreams": [
+            "anthropic-webtest",
+            "addy-quality",
+            "security-scanner"
+          ],
+          "deliverable": "Independent output oracle and adversarial UX/security tests (web-product-validation)",
+          "fail_case": "BLOCK misleading local-vs-public or uncontrolled attack cases"
+        },
+        {
+          "id": "web-security-assurance-asvs",
+          "upstreams": [
+            "addy-quality",
+            "addy-performance",
+            "anthropic-webtest",
+            "anthropic-design",
+            "security-scanner"
+          ],
+          "deliverable": "Independent output oracle and adversarial UX/security tests (web-security-assurance-asvs)",
+          "fail_case": "BLOCK misleading local-vs-public or uncontrolled attack cases"
+        },
+        {
+          "id": "web-security-performance",
+          "upstreams": [
+            "addy-quality",
+            "addy-performance",
+            "anthropic-webtest",
+            "anthropic-design",
+            "security-scanner"
+          ],
+          "deliverable": "Independent output oracle and adversarial UX/security tests (web-security-performance)",
+          "fail_case": "BLOCK misleading local-vs-public or uncontrolled attack cases"
+        },
+        {
+          "id": "web-accessibility-agent-ux",
+          "upstreams": [
+            "addy-quality",
+            "addy-performance",
+            "anthropic-webtest",
+            "anthropic-design",
+            "security-scanner"
+          ],
+          "deliverable": "Independent output oracle and adversarial UX/security tests (web-accessibility-agent-ux)",
+          "fail_case": "BLOCK misleading local-vs-public or uncontrolled attack cases"
+        },
+        {
+          "id": "web-experiments",
+          "upstreams": [
+            "addy-quality",
+            "addy-performance",
+            "anthropic-webtest",
+            "anthropic-design",
+            "security-scanner"
+          ],
+          "deliverable": "Independent output oracle and adversarial UX/security tests (web-experiments)",
+          "fail_case": "BLOCK misleading local-vs-public or uncontrolled attack cases"
+        },
+        {
+          "id": "web-launch-review",
+          "upstreams": [
+            "addy-quality",
+            "addy-performance",
+            "anthropic-webtest",
+            "anthropic-design",
+            "security-scanner"
+          ],
+          "deliverable": "Independent output oracle and adversarial UX/security tests (web-launch-review)",
+          "fail_case": "BLOCK misleading local-vs-public or uncontrolled attack cases"
+        },
+        {
+          "id": "web-release-observability-operator",
+          "upstreams": [
+            "addy-quality",
+            "addy-performance",
+            "anthropic-webtest",
+            "anthropic-design",
+            "security-scanner"
+          ],
+          "deliverable": "Independent output oracle and adversarial UX/security tests (web-release-observability-operator)",
+          "fail_case": "BLOCK misleading local-vs-public or uncontrolled attack cases"
+        }
+      ]
+    },
+    {
+      "id": "discovery",
+      "owner": "web-technical-seo",
+      "output": "Original technical discovery evidence and actual external attribution states",
+      "gate": "BLOCK fake AI first-place or doorway pages",
+      "next_stage_ids": [
+        "publisher",
+        "growth"
+      ],
+      "skills": [
+        {
+          "id": "web-technical-seo",
+          "upstreams": [
+            "semrush-technical",
+            "seranking-technical",
+            "official-search"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-technical-seo)",
+          "fail_case": "BLOCK fake AI first-place or doorway pages"
+        },
+        {
+          "id": "web-content-and-image-seo",
+          "upstreams": [
+            "official-search",
+            "semrush-technical",
+            "seranking-ai",
+            "seranking-technical",
+            "corey-pseo"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-content-and-image-seo)",
+          "fail_case": "BLOCK fake AI first-place or doorway pages"
+        },
+        {
+          "id": "web-ai-discovery",
+          "upstreams": [
+            "official-search",
+            "seranking-ai"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-ai-discovery)",
+          "fail_case": "BLOCK fake AI first-place or doorway pages"
+        },
+        {
+          "id": "web-ai-retrieval-lab",
+          "upstreams": [
+            "official-search",
+            "semrush-technical",
+            "seranking-ai",
+            "seranking-technical",
+            "corey-pseo"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-ai-retrieval-lab)",
+          "fail_case": "BLOCK fake AI first-place or doorway pages"
+        },
+        {
+          "id": "web-aeo-answer-optimization",
+          "upstreams": [
+            "official-search",
+            "semrush-technical",
+            "seranking-ai",
+            "seranking-technical",
+            "corey-pseo"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-aeo-answer-optimization)",
+          "fail_case": "BLOCK fake AI first-place or doorway pages"
+        },
+        {
+          "id": "web-generative-engine-optimization",
+          "upstreams": [
+            "official-search",
+            "semrush-technical",
+            "seranking-ai",
+            "seranking-technical",
+            "corey-pseo"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-generative-engine-optimization)",
+          "fail_case": "BLOCK fake AI first-place or doorway pages"
+        },
+        {
+          "id": "web-dominant-recommendar",
+          "upstreams": [
+            "official-search",
+            "seranking-ai"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-dominant-recommendar)",
+          "fail_case": "BLOCK fake AI first-place or doorway pages"
+        },
+        {
+          "id": "web-crawler-governance",
+          "upstreams": [
+            "official-search"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-crawler-governance)",
+          "fail_case": "BLOCK fake AI first-place or doorway pages"
+        },
+        {
+          "id": "web-search-internals",
+          "upstreams": [
+            "official-search",
+            "semrush-technical",
+            "seranking-ai",
+            "seranking-technical",
+            "corey-pseo"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-search-internals)",
+          "fail_case": "BLOCK fake AI first-place or doorway pages"
+        },
+        {
+          "id": "web-search-visibility-systems",
+          "upstreams": [
+            "official-search",
+            "semrush-technical",
+            "seranking-ai",
+            "seranking-technical",
+            "corey-pseo"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-search-visibility-systems)",
+          "fail_case": "BLOCK fake AI first-place or doorway pages"
+        },
+        {
+          "id": "web-app-store-discovery",
+          "upstreams": [
+            "official-search",
+            "semrush-technical",
+            "seranking-ai",
+            "seranking-technical",
+            "corey-pseo"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-app-store-discovery)",
+          "fail_case": "BLOCK fake AI first-place or doorway pages"
+        },
+        {
+          "id": "web-aso-apple-app-store",
+          "upstreams": [
+            "official-search",
+            "semrush-technical",
+            "seranking-ai",
+            "seranking-technical",
+            "corey-pseo"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-aso-apple-app-store)",
+          "fail_case": "BLOCK fake AI first-place or doorway pages"
+        },
+        {
+          "id": "web-aso-google-play",
+          "upstreams": [
+            "official-search",
+            "semrush-technical",
+            "seranking-ai",
+            "seranking-technical",
+            "corey-pseo"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-aso-google-play)",
+          "fail_case": "BLOCK fake AI first-place or doorway pages"
+        }
+      ]
+    },
+    {
+      "id": "publisher",
+      "owner": "web-publisher-policy-eligibility",
+      "output": "Applicable ad/consent policy decision and real account status",
+      "gate": "HOLD publisher approval and earnings without original account",
+      "next_stage_ids": [
+        "growth"
+      ],
+      "skills": [
+        {
+          "id": "web-publisher-policy-eligibility",
+          "upstreams": [
+            "official-ads",
+            "security-scanner"
+          ],
+          "deliverable": "Applicable ad/consent policy decision and real account status (web-publisher-policy-eligibility)",
+          "fail_case": "HOLD publisher approval and earnings without original account"
+        },
+        {
+          "id": "web-adsense-readiness",
+          "upstreams": [
+            "official-ads"
+          ],
+          "deliverable": "Applicable ad/consent policy decision and real account status (web-adsense-readiness)",
+          "fail_case": "HOLD publisher approval and earnings without original account"
+        },
+        {
+          "id": "web-network-monetization",
+          "upstreams": [
+            "official-ads",
+            "security-scanner"
+          ],
+          "deliverable": "Applicable ad/consent policy decision and real account status (web-network-monetization)",
+          "fail_case": "HOLD publisher approval and earnings without original account"
+        },
+        {
+          "id": "web-monetization-network-operator",
+          "upstreams": [
+            "official-ads",
+            "security-scanner"
+          ],
+          "deliverable": "Applicable ad/consent policy decision and real account status (web-monetization-network-operator)",
+          "fail_case": "HOLD publisher approval and earnings without original account"
+        },
+        {
+          "id": "web-privacy-consent",
+          "upstreams": [
+            "official-ads",
+            "security-scanner"
+          ],
+          "deliverable": "Applicable ad/consent policy decision and real account status (web-privacy-consent)",
+          "fail_case": "HOLD publisher approval and earnings without original account"
+        },
+        {
+          "id": "web-ad-experience",
+          "upstreams": [
+            "official-ads",
+            "security-scanner"
+          ],
+          "deliverable": "Applicable ad/consent policy decision and real account status (web-ad-experience)",
+          "fail_case": "HOLD publisher approval and earnings without original account"
+        }
+      ]
+    },
+    {
+      "id": "growth",
+      "owner": "web-traffic-hunter",
+      "output": "Qualified acquisition, completion, retention and marginal cost evidence",
+      "gate": "REJECT invented clicks/RPM and spam acquisition",
+      "next_stage_ids": [
+        "research"
+      ],
+      "skills": [
+        {
+          "id": "web-traffic-hunter",
+          "upstreams": [
+            "corey-community",
+            "corey-free",
+            "semrush-keywords",
+            "seranking-ai"
+          ],
+          "deliverable": "Qualified acquisition, completion, retention and marginal cost evidence (web-traffic-hunter)",
+          "fail_case": "REJECT invented clicks/RPM and spam acquisition"
+        },
+        {
+          "id": "web-authority-distribution",
+          "upstreams": [
+            "corey-community",
+            "corey-free",
+            "semrush-keywords",
+            "seranking-ai"
+          ],
+          "deliverable": "Qualified acquisition, completion, retention and marginal cost evidence (web-authority-distribution)",
+          "fail_case": "REJECT invented clicks/RPM and spam acquisition"
+        },
+        {
+          "id": "web-search-analytics",
+          "upstreams": [
+            "corey-community",
+            "corey-free",
+            "semrush-keywords",
+            "seranking-ai"
+          ],
+          "deliverable": "Qualified acquisition, completion, retention and marginal cost evidence (web-search-analytics)",
+          "fail_case": "REJECT invented clicks/RPM and spam acquisition"
+        },
+        {
+          "id": "web-portfolio-growth",
+          "upstreams": [
+            "corey-community",
+            "corey-free",
+            "semrush-keywords",
+            "seranking-ai"
+          ],
+          "deliverable": "Qualified acquisition, completion, retention and marginal cost evidence (web-portfolio-growth)",
+          "fail_case": "REJECT invented clicks/RPM and spam acquisition"
+        },
+        {
+          "id": "web-unit-economics-finops",
+          "upstreams": [
+            "official-edge",
+            "corey-free"
+          ],
+          "deliverable": "Qualified acquisition, completion, retention and marginal cost evidence (web-unit-economics-finops)",
+          "fail_case": "REJECT invented clicks/RPM and spam acquisition"
+        }
+      ]
+    }
+  ]
+}
