@@ -31,12 +31,12 @@ test('oversized input, 5001 lines, only blank records and wrong types fail close
  assert.throws(()=>analyzeJsonl('0',{maxBytes:LIMITS.maxBytes+1}),/Invalid input byte limit/);
 });
 test('2MB exact size and 5k rows accepted without losing a byte',()=>{
- const row='{"x":"'+ 'a'.repeat(390) +'"}\n';
- assert.equal(new TextEncoder().encode(row).length,399);
- const source=row.repeat(5000)+' '; // 1,995,001 bytes; within limits, but trailing space is nonempty
+ const row='{"x":"'+ 'a'.repeat(391) +'"}\n';
+ assert.equal(new TextEncoder().encode(row).length,400);
+ const source=row.repeat(5000); // exactly 2,000,000 bytes across exactly 5,000 lines
  const r=analyzeJsonl(source);
  assert.equal(r.lines,5000);assert.equal(r.valid,5000);assert.equal(r.invalid,0);
- assert.equal(r.output.length,row.repeat(5000).trimEnd().length+1);
+ assert.equal(r.output,source);
 });
 test('malicious-looking cell content is not sanitized or executed by pure parser',()=>{
  const malicious='{"name":"<img src=x onerror=alert(1)>"}\n';
