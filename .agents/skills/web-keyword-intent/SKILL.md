@@ -36,3 +36,9 @@ Before any programmatic SEO landing page, require actual user job and its workin
 
 ## V13 — Web-verified professional production protocol
 Use V13 09-keyword-and-serp-mastery-v13.md + 08-live-source-verification-v13.md with exact current source receipts and real geo/device SERP. Run scripts/seo-keyword-provenance-v13.mjs and scripts/audit-keyword-map.mjs. Google Trends normalized 0–100, Planner advertiser estimates, modeled Semrush/Ahrefs volume/KD, owned GSC impressions and real SERP are distinct metric types. No invented source export, keyword density, advertiser CPC as AdSense RPM, doorway pages or fake Google ranking guarantees. Missing access = UNKNOWN. Reopen original Search spam and Keyword Planner docs at decision time.
+
+## V23 source-specific metric integrity
+
+When using reviewed Semrush keyword-research methods, require authenticated MCP/account permission, exact country, date, query, database/currency, sampling and source-specific units. Do not infer available Semrush access from a skill file. Google Trends 0–100 is not monthly searches; Keyword Planner advertising demand, third-party volume/KD/CPC, first-party Search Console impressions and Bing AI topical opportunity are not interchangeable. Always show gaps and uncertainty.
+
+Derive one *actual distinct task* and a tested page from each selected intent cluster. If multiple keyword variations lead to identical user output, consolidate rather than multiplying thin Astro pages. Coordinate `web-opportunity-intelligence`, `web-competitor-audit`, `web-technical-seo` and `web-traffic-hunter` through `sources/skill-network-v23.json`. A provider's modelled traffic projection must never be recorded as an observed organic click.
