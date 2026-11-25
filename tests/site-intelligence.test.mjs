@@ -354,3 +354,16 @@ test('site digest changes with sanitized HAR and rendered-DOM evidence, and clai
  assert.ok(packet.claims.some(c=>c.category==='network'));
  assert.ok(packet.claims.some(c=>c.category==='rendered_dom'));
 });
+
+test('real loopback HTTP integration independently exercises Sitemap/HTML/graph/ten skill handoffs',()=>{
+ const p=spawnSync(process.execPath,['scripts/run-owned-site-intelligence-lab-v24.mjs'],
+   {cwd:path.resolve(import.meta.dirname,'..'),encoding:'utf8',timeout:12000});
+ assert.equal(p.status,0,p.stdout+'\n'+p.stderr);
+ const r=JSON.parse(p.stdout);
+ assert.equal(r.result,'PASS_LOCAL_HTTP_ONLY');
+ assert.ok(r.observed_pages>=2);
+ assert.ok(r.parsed_sitemaps>=1);
+ assert.ok(r.graph_edges>=1);
+ assert.equal(r.skill_handoffs.length,10);
+ assert.equal(r.no_public_production_or_search_claims,true);
+});
