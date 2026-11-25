@@ -104,7 +104,7 @@ test('A/B comparison never silently scores missing baseline as a loss',()=>{
  t.cases[0].baseline={status:'NOT_RUN'};
  const r=assessSkillTrials(t);
  assert.equal(r.paired_count,2);
- assert.equal(r.observed_delta_percentage_points,0);
+ assert.equal(r.observed_delta_percentage_points,-50); // Only the remaining two PAIRS count; no imputed missing baseline.
  assert.ok(r.warnings.includes('TOO_FEW_PAIRED_REAL_RUNS_FOR_DECISION'));
 });
 test('A/B trials reject fake status labels, missing artifacts and invalid modes',()=>{
