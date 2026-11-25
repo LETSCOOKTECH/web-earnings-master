@@ -50,3 +50,17 @@ Before loading or using any upstream method: authenticate official organization 
 6. **Agent effectiveness:** execute paired actual agents with pinned prompts/models and blinded review; store factual outputs, not imagined comparative gains. No skill list, CI run, source count, or publisher brand guarantees demand, rankings or earnings.
 
 **Explicit exclusions:** paid Vercel/Cloudflare data without owner connection; third-party anti-bot bypass; simulated human testimony; scraping or running scripts inside upstream skills; copying copyright-protected design; automated self-approval; claims that Google/Anthropic/Vercel guaranteed anything about Sense's website income.
+
+
+## 6. Preregistered paired evaluations — no invented performance
+
+The repo includes `templates/agent-skill-trials-v26.NOT_RUN.json`, containing ten specific holdout task objectives across research, sitemaps, Astro, React islands, a11y, Cloudflare, Vercel cost, MCP security, AdSense and unrelated negative triggers. Every baseline and candidate run is **NOT_RUN** by design.
+
+To run the structural receipt grader:
+```sh
+npm run eval:agent-skills:v26 -- --file templates/agent-skill-trials-v26.NOT_RUN.json
+```
+
+This produces `SYNTHETIC_NOT_PROOF`, zero paired observations, no claimed score. To evaluate improvements for real: execute each frozen prompt in separate no-skill and V26-capable agents using identical model/tool permissions; preserve real generated artifacts and complete unsuccessful attempts; have a blinded reviewer inspect user-task oracle outcomes; fill `PASS`/`FAIL`, artifact and elapsed milliseconds per attempt; use `OPERATOR_SUPPLIED_UNVERIFIED` for imported receipts. The evaluator returns paired wins/losses/ties and an arithmetic percentage-point delta, **not** statistically significant performance improvement or independently verified model runs. Unpaired `NOT_RUN` cases are excluded from the denominator and explicitly counted.
+
+See the upstream Anthropic skill-creator original for methodology, not for permission to execute Claude/Cowork-specific scripts in Sense.
