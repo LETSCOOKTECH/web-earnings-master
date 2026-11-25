@@ -4,6 +4,7 @@ import path from 'node:path';
 import {startOwnedWebLab} from './owned-web-lab.mjs';
 import {inspectSite} from '../lib/site-intelligence/engine.mjs';
 import {buildSkillHandoffs} from '../lib/site-intelligence/knowledge.mjs';
+import {analyzeSiteDepth} from './analyze-site-depth-v25.mjs';
 
 const outIndex=process.argv.indexOf('--out');
 const out=outIndex>=0?process.argv[outIndex+1]:null;
@@ -20,6 +21,8 @@ try{
     limits:{maxPages:8,maxSitemaps:4,maxDepth:2,minDelayMs:0,maxTimeMs:5000},
   });
   const packet=buildSkillHandoffs(report);
+  const deep=analyzeSiteDepth(report);
+  if(deep.schema!=='sense-site-depth-v25'||deep.observed_pages!==report.pages.length)throw new Error('V25 site depth failed real HTTP lab integration');
   if(report.status.startsWith('BLOCKED'))throw new Error('Unexpected robots block in owned HTTP laboratory');
   if(!report.pages.some(p=>p.url===live.origin+'/document'&&p.status==='HTTP_200'))throw new Error('Document page never observed by the real HTTP crawler');
   if(!report.sitemaps.some(s=>s.status==='PARSED'))throw new Error('No real XML sitemap parsed');
@@ -30,6 +33,7 @@ try{
     result:'PASS_LOCAL_HTTP_ONLY',origin:'LOOPBACK_PRIVATE_FIXTURE_REDACTED',
     observed_pages:report.pages.length,parsed_sitemaps:report.sitemaps.filter(x=>x.status==='PARSED').length,
     graph_edges:report.graph.edges,skill_handoffs:Object.keys(packet.handoffs),
+    v25_site_depth_scope:deep.scope,v25_site_depth_findings:deep.findings.length,
     no_public_production_or_search_claims:true,
     limits:'Explicit fixture injection; production network transport rejects loopback/private origins',
   };
