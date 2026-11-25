@@ -13,16 +13,24 @@ export const STUDIO_ROUTES=Object.freeze([
  {id:'csv-to-sql',group:'csv',label:'CSV to SQL INSERT',kind:'csv'},
  {id:'csv-to-excel-csv',group:'csv',label:'CSV to Excel-friendly UTF-8',kind:'csv'},
  {id:'csv-deduplicate',group:'csv',label:'Remove Duplicate CSV Rows',kind:'csv'},
+ {id:'csv-sort-rows',group:'csv',label:'Sort CSV Rows by First Column',kind:'csv'},
+ {id:'csv-remove-empty-rows',group:'csv',label:'Remove Empty CSV Rows',kind:'csv'},
  {id:'tsv-to-csv',group:'tsv',label:'TSV to CSV',kind:'tsv'},
  {id:'tsv-to-json',group:'tsv',label:'TSV to JSON',kind:'tsv'},
  {id:'tsv-to-jsonl',group:'tsv',label:'TSV to JSONL',kind:'tsv'},
+ {id:'tsv-to-markdown',group:'tsv',label:'TSV to Markdown Table',kind:'tsv'},
+ {id:'tsv-to-html',group:'tsv',label:'TSV to HTML Table',kind:'tsv'},
  {id:'jsonl-to-json',group:'jsonl',label:'JSONL to JSON Array',kind:'jsonl'},
  {id:'jsonl-to-csv',group:'jsonl',label:'JSONL to CSV',kind:'jsonl'},
  {id:'jsonl-to-markdown',group:'jsonl',label:'JSONL to Markdown',kind:'jsonl'},
+ {id:'jsonl-to-tsv',group:'jsonl',label:'JSONL to TSV',kind:'jsonl'},
+ {id:'jsonl-to-html',group:'jsonl',label:'JSONL to HTML Table',kind:'jsonl'},
  {id:'jsonl-validator',group:'jsonl',label:'Validate JSON Lines',kind:'jsonl'},
  {id:'json-to-jsonl',group:'json',label:'JSON Array to JSONL',kind:'json'},
  {id:'json-to-csv',group:'json',label:'JSON Array to CSV',kind:'json'},
  {id:'json-to-markdown',group:'json',label:'JSON Array to Markdown',kind:'json'},
+ {id:'json-to-tsv',group:'json',label:'JSON Array to TSV',kind:'json'},
+ {id:'json-to-html',group:'json',label:'JSON Array to HTML Table',kind:'json'},
  {id:'json-pretty',group:'json',label:'Format JSON',kind:'json'},
  {id:'json-minify',group:'json',label:'Minify JSON',kind:'json'}
 ]);
@@ -169,22 +177,26 @@ export function executeStudio(id,input,{sanitize=true,maskSecrets=false}={}){
  if(id==='csv-to-jsonl'||id==='csv-to-json'||id==='tsv-to-json'||id==='tsv-to-jsonl'){
   const data=recordsFromRows(rows);
   set(id.endsWith('jsonl')?data.map(x=>JSON.stringify(x)).join('\n')+'\n':JSON.stringify(data,null,2)+'\n','application/json',id.endsWith('jsonl')?'jsonl':'json');
- }else if(id==='csv-to-tsv'||id==='tsv-to-csv'||id==='csv-to-excel-csv'||id==='csv-deduplicate'){
+ }else if(['csv-to-tsv','tsv-to-csv','csv-to-excel-csv','csv-deduplicate','csv-sort-rows','csv-remove-empty-rows'].includes(id)){
   let data=rows;
   if(id==='csv-deduplicate'){
    const seen=new Set([JSON.stringify(rows[0])]);
    data=[rows[0],...rows.slice(1).filter(row=>{const key=JSON.stringify(row);if(seen.has(key))return false;seen.add(key);return true;})];
   }
+  if(id==='csv-sort-rows')data=[rows[0],...rows.slice(1).sort((a,b)=>a[0].localeCompare(b[0],'en',{numeric:false}))];
+  if(id==='csv-remove-empty-rows')data=[rows[0],...rows.slice(1).filter(row=>row.some(v=>v.trim().length>0))];
   const separator=id==='csv-to-tsv'?'\t':',';
   set(serializeDelimited(data,separator,{sanitize,bom:id==='csv-to-excel-csv'}),'text/'+(separator==='\t'?'tab-separated-values':'csv'),separator==='\t'?'tsv':'csv');
- }else if(['csv-to-markdown','jsonl-to-markdown','json-to-markdown'].includes(id)){
+ }else if(['csv-to-markdown','tsv-to-markdown','jsonl-to-markdown','json-to-markdown'].includes(id)){
   set(markdown(rows||rowsFromRecords(id==='jsonl-to-markdown'?objects:json())),'text/markdown','md');
- }else if(id==='csv-to-html')set(htmlTable(rows),'text/html','html');
+ }else if(['csv-to-html','tsv-to-html','jsonl-to-html','json-to-html'].includes(id))set(htmlTable(rows||rowsFromRecords(id==='jsonl-to-html'?objects:json())),'text/html','html');
  else if(id==='csv-to-sql')set(sql(rows),'application/sql','sql');
  else if(id==='jsonl-validator'||id==='jsonl-to-json'){
   set(id==='jsonl-validator'?source.split(/\r\n|\r|\n/).filter(Boolean).join('\n')+'\n':JSON.stringify(objects,null,2)+'\n','application/json',id==='jsonl-validator'?'jsonl':'json');
  }else if(id==='jsonl-to-csv')set(serializeDelimited(rowsFromRecords(objects),',',{sanitize}),'text/csv','csv');
+ else if(id==='jsonl-to-tsv')set(serializeDelimited(rowsFromRecords(objects),'\t',{sanitize}),'text/tab-separated-values','tsv');
  else if(id==='json-to-csv')set(serializeDelimited(rowsFromRecords(json()),',',{sanitize}),'text/csv','csv');
+ else if(id==='json-to-tsv')set(serializeDelimited(rowsFromRecords(json()),'\t',{sanitize}),'text/tab-separated-values','tsv');
  else if(id==='json-to-jsonl'){
   const values=json();if(!Array.isArray(values)||!values.length)throw Error('Expected nonempty JSON array');
   set(values.map(x=>JSON.stringify(x)).join('\n')+'\n','application/json','jsonl');
