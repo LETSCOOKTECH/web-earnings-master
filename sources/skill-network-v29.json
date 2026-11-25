@@ -1,0 +1,19 @@
+{
+  "schema": "sense-extension-overlay-v29",
+  "created_utc": "2026-11-26",
+  "base": "sources/skill-network-v23.json",
+  "base_active_skill_count": 50,
+  "additional_companions": [
+    {
+      "id": "web-dominant-studio-v29",
+      "path": "extensions/v29/skills/web-dominant-studio-v29/SKILL.md",
+      "status": "OPT_IN_NOT_V23_REGISTERED",
+      "level": "STAGING_NEEDS_REAL_CUSTOMER_VALIDATION"
+    }
+  ],
+  "project_example": "examples/astro-dominant-studio-v29",
+  "implemented_studio_routes": 20,
+  "source_verified_traffic": false,
+  "seo_rankings_verified": false,
+  "adsense_verified": false
+}
