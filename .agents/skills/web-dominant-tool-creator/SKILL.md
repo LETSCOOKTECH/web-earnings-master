@@ -96,7 +96,7 @@ For an actual owner-authorized website, ensure DNS control, HTTPS/TLS, externall
 
 Route web-traffic-hunter, web-dominant-recommendar, web-search-analytics, web-publisher-policy-eligibility, web-monetization-network-operator and web-unit-economics-finops. Use genuine community tutorials, partnerships, references and appropriate search intent—not fake reviews, automated spam, cloaking, paid click fraud or assistant prompt injection.
 
-AI visibility tests need preregistered authentic unbranded user questions by provider/surface, locale/country/version/repeats, including unavailable and unfavorable cases, independent answer captures and visible citation URLs. Never call a citation a top recommendation. Owner GSC/Bing/ad account evidence and real human task events are separate. Track qualified users, task completion, retention, real ad RPM and true variable+fixed costs. Product benefit and legal/publisher policy must never be sacrificed for ad placement.
+AI visibility tests need preregistered authentic unbranded user questions by provider/surface, locale/country/version/repeats, including unavailable and unfavorable cases, independent answer captures and visible citation URLs. Never call a citation a top recommendation. Owner GSC/Bing/Google AdSense and alternative publisher-account evidence plus real human task events are separate. A passing content or HTML audit does not grant AdSense approval. Track qualified users, task completion, retention, real ad RPM and true variable+fixed costs. Product benefit and legal/publisher policy must never be sacrificed for ad placement.
 
 ## Final evidence packet, refusal conditions
 
