@@ -52,3 +52,14 @@ Run `node scripts/audit-astro-v25.mjs --project PROJECT_DIR` as the Astro 7 stat
 Build gate: `cd examples/astro-jsonl-studio && npm ci && npm run check && npm run build && npm test && npm run test:browser` on a clean copy with installed 3 browsers and actual output bytes. For any new project, additionally run the repo's `node scripts/audit-static-site.mjs --dist DIST --origin REAL_HTTPS_ORIGIN --production`, public host DNS/TLS and real task output tests before production. Test redirects/statuses/404, HTML title/H1/text without JS, actual focus/input/worker/status and accessible feedback, large input & cancellation, failed imports, malicious values, MIME spoofing, time/memory, generated output, reduced-motion, mobile and performance budgets. Keep build-only vs local HTTP vs public HTTP vs indexing/AdSense states separate.
 
 Never equate Lighthouse green, static HTML presence, choice of Astro, or schema validity with rankings, business conversion or universal tool correctness. Content collections use current typed loader APIs (`glob()`, `file()` and `schema`) for real editorial data, not programmatically cloned near-duplicate pages. Astro's official Testing guide documents Vitest via `getViteConfig()` and Playwright across browser engines: https://docs.astro.build/en/guides/testing/ . Use independent, testable user-task requirements and true provenance.
+
+## V26 — Trusted upstream method integration
+
+Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-skill-integration-v26.json`; check source ownership, exact Git blob hash, license, current relevance and domain-specific limitations before use. Methods are adapted, not executable upstream packages.
+
+- `vercel-react` (VERCEL_OFFICIAL_ORG): React islands only: inspect async waterfalls, lazy bundles and hydration; no generic Astro performance guarantee.
+- `anthropic-webapp` (ANTHROPIC_OFFICIAL_ORG): Live local server Playwright and real output/screenshot/console evidence; preserve server lifecycle.
+
+**Required verification and boundaries:** For Astro verify static/server/adapter using V25 gate; only apply Vercel React performance rules to installed React islands, not Astro templates. Test initial HTML/no-JS usefulness, lazy-load heavy codecs, network waterfall, worker cancellation and byte-correct downloads on Playwright Chromium/Firefox/WebKit. No app is production-ready until real owned-origin browser output is verified.
+
+Run `node scripts/check-official-skill-integration-v26.mjs` and applicable existing tests. Log artifact/provenance, exact failure, source date and real browser/user metric where available; otherwise `NOT_RUN`. No skill/source label is proof of SEO rank, AI citations, ad eligibility, private architecture or profits.
