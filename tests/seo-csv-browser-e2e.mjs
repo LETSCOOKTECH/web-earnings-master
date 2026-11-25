@@ -4,9 +4,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {chromium,firefox,webkit} from 'playwright';
 import {startSeoCsvLab} from '../scripts/serve-seo-csv-lab.mjs';
-const site=await startSeoCsvLab(),broken=await startSeoCsvLab({broken:true}),brokenWorker=await startSeoCsvLab({brokenWorker:true}),results=[];
+const site=await startSeoCsvLab(),broken=await startSeoCsvLab({broken:true}),brokenWorker=await startSeoCsvLab({brokenWorker:true}),slow=await startSeoCsvLab({slowWorker:true}),results=[];
 test.after(async()=>{
- await Promise.all([site.close(),broken.close(),brokenWorker.close()]);
+ await Promise.all([site.close(),broken.close(),brokenWorker.close(),slow.close()]);
  const file='.tmp/seo-csv-lab-browser-results.json';
  fs.mkdirSync(path.dirname(file),{recursive:true});
  fs.writeFileSync(file,JSON.stringify({at:new Date().toISOString(),status:'OWNED_LOCAL_BROWSER_TESTS_ONLY',results,limits:['No native Android or iPhone','No Google indexing','No public DNS/TLS','No publisher approval']},null,2));
@@ -129,5 +129,25 @@ for(const [name,engine] of [['Chromium',chromium],['Firefox',firefox],['WebKit',
    assert.equal(await badPage.getByRole('link',{name:/Download cleaned CSV/}).count(),0);
    await context.close();
   }finally{await b.close()}
+ });
+}
+
+for(const [name,engine] of [['Chromium',chromium],['Firefox',firefox],['WebKit',webkit]]){
+ test(name+' cancellation holdout: delayed worker cannot publish a late CSV',async()=>{
+  const browser=await engine.launch({headless:true});
+  try{
+   const page=await browser.newPage({acceptDownloads:true});
+   await page.goto(slow.origin+'/');
+   await page.getByRole('textbox',{name:'Or paste CSV text'}).fill('id\n1\n1\n');
+   await page.getByRole('button',{name:'Remove duplicate rows'}).click();
+   await page.locator('#cancel-tool').waitFor({state:'visible'});
+   await page.getByRole('button',{name:'Cancel'}).click();
+   assert.match(await page.getByRole('status').textContent(),/Processing cancelled/);
+   assert.equal(await page.getByRole('link',{name:/Download cleaned CSV/}).count(),0);
+   await page.waitForTimeout(1400);
+   assert.equal(await page.getByRole('link',{name:/Download cleaned CSV/}).count(),0);
+   assert.equal(await page.locator('#result-view').isVisible(),false);
+   assert.equal(await page.locator('#run-tool').isEnabled(),true);
+  }finally{await browser.close()}
  });
 }
