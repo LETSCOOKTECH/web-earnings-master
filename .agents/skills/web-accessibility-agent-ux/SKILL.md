@@ -30,3 +30,15 @@ Accessible task-state inventory and tests; see `references/astro-production.md` 
 
 ## V14 — Agent-friendly genuine task UX
 Use docs/ai-search/04-agent-task-reliability.md and current web.dev ai-agent-site-ux guide. Accessible semantic buttons/input labels, stable DOM and layout, reliable error/progress, human confirmation of sensitive actions and actual bytes/output help browser agents. Agent use is NOT equivalent to model crawl, citation or Google ranking. WebMCP is optional emerging enhancement, never a mandatory Google AI Mode optimization; real browser/low-memory/mobile task tests and privacy network traces required.
+
+## V26 — Trusted upstream method integration
+
+Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-skill-integration-v26.json`; check source ownership, exact Git blob hash, license, current relevance and domain-specific limitations before use. Methods are adapted, not executable upstream packages.
+
+- `vercel-ui` (VERCEL_OFFICIAL_ORG): Review annotated UI against pinned 8k rules, evidence by file line, verify focus/semantics; repo lacks root LICENSE.
+- `addy-quality` (INDIVIDUAL_MAINTAINER_NOT_GOOGLE_OFFICIAL): Evidence-led Lighthouse+browser+SEO+accessibility with no aggregate-score certification.
+- `addy-accessibility` (INDIVIDUAL_MAINTAINER_NOT_GOOGLE_OFFICIAL): WCAG 2.2 manual keyboard + screen reader and automated audit; axe pass not WCAG completeness.
+
+**Required verification and boundaries:** Run actual keyboard tab/shift-tab, skip-navigation, escape/return, focus restore, labels, live status and rendered accessibility-tree checks. Use Playwright/axe as finding aids and manually verify high-impact WCAG failures including screen reader and reduced motion. Every issue must name reproducible route, state and observed user task outcome; no score alone certifies WCAG.
+
+Run `node scripts/check-official-skill-integration-v26.mjs` and applicable existing tests. Log artifact/provenance, exact failure, source date and real browser/user metric where available; otherwise `NOT_RUN`. No skill/source label is proof of SEO rank, AI citations, ad eligibility, private architecture or profits.
