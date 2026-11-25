@@ -114,7 +114,7 @@
 ## 2026-11-26 — V29 additive Data Studio companion (review branch)
 
 - Added an optional Studio agent skill outside the frozen 50-entry V23 registry and appended scoped reference guidance to nine existing skills without removing previous content.
-- Added a real Astro 7 static Studio: twenty functional CSV/TSV/JSON/JSONL transformations, four category hubs, local Worker, downloadable outputs, formula escape, no third-party file upload and accessible state/preview UI.
+- Added a real Astro 7 static Studio: twenty-eight functional CSV/TSV/JSON/JSONL transformations, four category hubs, local Worker, downloadable outputs, formula escape, no third-party file upload and accessible state/preview UI.
 - Added measured-by-test build and source gates for 24 MiB Cloudflare asset margin, source-to-route output mutation, metadata and bounded WebMCP summaries, dry-run-first owner-authorized IndexNow URL diffs, and non-paid manual research source ledgers.
 - Fixed compound file extension parsing, Astro dynamic static-path build problem and hidden-attribute override on a stale output download link caught by cross-engine Playwright.
 - Preserved V21/V22 and V28 modules. Real Parquet/TOON, DuckDB-Wasm, true 500 MB streaming, real ad placement/CLS, legal/publisher approval, external traffic and revenue remain NOT_RUN / NOT_IMPLEMENTED. This release is an experimental local sample, not a production claim.
