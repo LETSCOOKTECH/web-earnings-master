@@ -1,26 +1,94 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
 <title>Remove Duplicate CSV Rows in Your Browser | Sense Lab</title>
-<meta name="description" content="Remove exact duplicate CSV records in your browser with a tested download. Supports quoted CSV fields, offline processing and clear spreadsheet formula safety.">
+<meta name="description" content="Clean duplicate CSV records locally, preview the result, choose a match column and download a checked CSV. No account or server upload.">
 <link rel="canonical" href="https://csv-lab.example.org/">
-<link rel="stylesheet" href="/assets/style.css"></head>
-<body><header><nav aria-label="Main"><a href="/">Sense CSV Lab</a><a href="#how">How it works</a><a href="#limits">Limits</a></nav></header>
-<main><h1>Remove Duplicate CSV Rows in Your Browser</h1><p>Paste CSV text or select a CSV file to remove identical records. Your files are processed locally in your browser; this demonstration does not provide an upload endpoint.</p>
-<section aria-labelledby="tool-title" class="panel"><h2 id="tool-title">Clean a CSV file</h2>
-<form id="csv-form">
-<label for="csv-file">Choose a CSV file (2 MB maximum)</label><input type="file" id="csv-file" accept=".csv,text/csv,text/plain">
-<label for="csv-paste">Or paste CSV text</label><textarea id="csv-paste" rows="6" placeholder="id,name&#10;1,Asha&#10;1,Asha" aria-describedby="csv-help"></textarea>
-<p id="csv-help">Comma-separated UTF-8. Up to 5,000 rows and 200 columns. Quoted commas and multiline fields are supported.</p>
-<div class="checks">
-<label><input type="checkbox" id="header" checked>First row contains column headers</label>
-<label><input type="checkbox" id="case" checked>Preserve uppercase and lowercase distinctions</label>
-<label><input type="checkbox" id="spreadsheet" checked>Escape spreadsheet formulas (may modify text)</label>
-</div>
-<button type="submit">Remove duplicate rows</button>
-<p role="status" id="status" aria-live="polite">No file processed.</p>
-<a id="download" class="download" hidden download="cleaned.csv">Download cleaned CSV</a>
-</form></section>
-<section id="how"><h2>How duplicates are detected</h2><p>Records are compared cell by cell, with the first row optionally treated as headers. Commas inside quoted fields and escaped quotes are parsed before comparison. The tool does not remove partially similar records, and mismatched column counts cause an error.</p></section>
-<section id="limits"><h2>Data integrity and safety</h2><p>Only UTF-8 comma-separated values are supported, not XLSX or arbitrary legacy encodings. Blank single-column records are preserved. The spreadsheet-safety option escapes formula-like values beginning with dangerous operators, so turn it off only if you need unchanged raw data and understand spreadsheet injection risk. Signed numbers and scientific notation are preserved.</p><p>This demonstration contains no advertisements, analytics, form submissions or server-side file storage. It does not establish ranking, indexing, traffic or AdSense approval.</p></section>
-</main><footer>Sense Lab — independently testable local example</footer>
-<script type="module" src="/assets/tool.mjs"></script></body></html>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#workspace">Skip to CSV workspace</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/" aria-label="Sense CSV Lab home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span>Sense<span class="brand-muted"> / CSV Lab</span></span></a>
+    <nav aria-label="Main"><a href="#workspace">Workspace</a><a href="#how">How it works</a><a href="#limits">Privacy &amp; limits</a></nav>
+    <span class="env-label">Browser-first utility</span>
+  </div>
+</header>
+<main class="shell">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> DATA WORKSPACE <span class="tiny-divider" aria-hidden="true"></span> FREE · LOCAL</div>
+    <h1 id="hero-title">Remove Duplicate CSV Rows in Your Browser</h1>
+    <p class="hero-subtitle">Turn messy CSV into a clean, ready-to-download file. Match full records or a specific column, see what changed, and keep your data on your device.</p>
+    <div class="trust-row" aria-label="Tool properties"><span><span class="trust-symbol" aria-hidden="true">✓</span> No upload endpoint</span><span><span class="trust-symbol" aria-hidden="true">✓</span> No registration</span><span><span class="trust-symbol" aria-hidden="true">✓</span> Reproducible output</span></div>
+  </section>
+  <section id="workspace" class="workspace" aria-label="CSV cleanup workspace">
+    <div class="workspace-heading"><div><span class="section-kicker">01 / WORKSPACE</span><h2>Clean your dataset</h2></div><span class="workspace-meta">CSV · UTF-8 · 2 MB max</span></div>
+    <div class="workspace-grid">
+      <section class="panel input-panel" aria-labelledby="input-title">
+        <div class="panel-header"><div><span class="panel-index">INPUT</span><h3 id="input-title">Source data</h3></div><span class="step-bubble" aria-hidden="true">01</span></div>
+        <form id="csv-form">
+          <div class="field-group">
+            <label for="csv-file">Choose a CSV file (2 MB maximum)</label>
+            <input id="csv-file" type="file" accept=".csv,text/csv,text/plain" aria-describedby="source-note">
+            <p id="source-note" class="field-help">Your file is read in this browser only. Selecting a file clears pasted data.</p>
+          </div>
+          <div class="source-separator" aria-hidden="true"><span>OR PASTE DATA</span></div>
+          <div class="field-group">
+            <div class="label-row"><label for="csv-paste">Or paste CSV text</label><button type="button" id="load-sample" class="text-button">Load sample</button></div>
+            <textarea id="csv-paste" rows="9" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="id,name,city&#10;1,Asha,Jaipur&#10;1,Asha,Jaipur&#10;2,Lee,Delhi" aria-describedby="csv-help"></textarea>
+            <p id="csv-help" class="field-help">Comma-separated UTF-8 · up to 5,000 rows and 200 columns · supports quoted fields and line breaks.</p>
+          </div>
+          <fieldset class="options-fieldset">
+            <legend>Cleanup settings</legend>
+            <div class="option-line"><label for="header">First row contains column headers</label><input type="checkbox" id="header" checked></div>
+            <div class="option-line"><label for="case">Preserve uppercase and lowercase distinctions</label><input type="checkbox" id="case" checked></div>
+            <div class="option-line"><label for="trim">Ignore leading and trailing spaces when matching</label><input type="checkbox" id="trim"></div>
+            <div class="option-line"><label for="spreadsheet">Escape spreadsheet formulas (may modify text)</label><input type="checkbox" id="spreadsheet" checked></div>
+            <div class="option-split"><label for="scope">Duplicate detection</label><select id="scope"><option value="all">All columns — exact record</option><option value="column">One column — first match wins</option></select></div>
+            <div class="option-split" id="column-controls" hidden><label for="column">Column number (starting at 1)</label><input id="column" type="number" inputmode="numeric" min="1" max="200" step="1" value="1" aria-describedby="column-note"><p id="column-note" class="field-help">The first matching record is kept; differing values in other columns may be dropped.</p></div>
+          </fieldset>
+          <div class="form-actions"><button type="submit" id="run-tool" class="primary-button"><span>Remove duplicate rows</span><span aria-hidden="true">↗</span></button><button type="button" id="reset-tool" class="secondary-button">Reset</button><button type="button" id="cancel-tool" class="secondary-button" hidden>Cancel</button></div>
+          <p role="status" id="status" aria-live="polite" aria-atomic="true">No file processed.</p>
+        </form>
+      </section>
+      <section class="panel output-panel" aria-labelledby="output-title">
+        <div class="panel-header"><div><span class="panel-index">OUTPUT</span><h3 id="output-title">Results &amp; preview</h3></div><span class="step-bubble" aria-hidden="true">02</span></div>
+        <div id="empty-state" class="empty-state">
+          <div class="empty-illustration" aria-hidden="true"><span class="empty-grid"></span><span class="empty-check">✓</span></div>
+          <h4>Ready when you are.</h4>
+          <p>Paste your CSV or choose a file. Your cleaned rows, exact removal count and download will appear here.</p>
+          <div class="empty-divider"></div><span class="empty-hint">NO DATA LEAVES YOUR BROWSER</span>
+        </div>
+        <div id="result-view" hidden>
+          <div class="result-banner"><span class="result-icon" aria-hidden="true">✓</span><div><strong>Cleanup complete</strong><span>Your results are ready to inspect.</span></div></div>
+          <div class="stats-grid" aria-label="Cleanup statistics">
+            <div class="stat"><span class="stat-label">INPUT ROWS</span><strong id="stat-original">0</strong></div>
+            <div class="stat"><span class="stat-label">KEPT</span><strong id="stat-kept">0</strong></div>
+            <div class="stat"><span class="stat-label">REMOVED</span><strong id="stat-removed">0</strong></div>
+          </div>
+          <div class="preview-heading"><h4>Cleaned preview</h4><span id="preview-count">First 0 rows</span></div>
+          <div class="table-scroll" tabindex="0" aria-label="Scrollable result preview"><table id="result-table"><caption>Preview of cleaned CSV data</caption><thead></thead><tbody></tbody></table></div>
+          <p id="result-note" class="result-note"></p>
+          <a id="download" class="download primary-button" hidden download="cleaned.csv">Download cleaned CSV <span aria-hidden="true">↓</span></a>
+          <button type="button" id="copy-result" class="secondary-button copy-button" hidden>Copy CSV text</button>
+          <p class="result-smallprint">Generated locally. Review spreadsheet exports before opening untrusted CSV in spreadsheet software.</p>
+        </div>
+      </section>
+    </div>
+  </section>
+  <section class="information" id="how" aria-labelledby="how-title"><div class="info-heading"><span class="section-kicker">02 / UNDER THE HOOD</span><h2 id="how-title">How duplicates are detected</h2><p>No mystery rules. Each CSV record is parsed before comparison so commas inside quotes or multiline fields do not break the results.</p></div>
+    <div class="info-grid"><article><span class="info-no">01</span><h3>Parse the records</h3><p>Handles escaped quotes, quoted commas and multiline fields. Mismatched column counts are rejected instead of silently shifted.</p></article><article><span class="info-no">02</span><h3>Compare with control</h3><p>Match entire records or one chosen column, with optional case-insensitive and whitespace-trimmed comparisons. The first record wins.</p></article><article><span class="info-no">03</span><h3>Review and export</h3><p>See the kept and removed counts, preview up to eight rows, then export comma-separated data with CRLF line breaks.</p></article></div>
+  </section>
+  <section class="information limits" id="limits" aria-labelledby="limits-title"><div class="info-heading"><span class="section-kicker">03 / TRUST &amp; LIMITS</span><h2 id="limits-title">Your data stays yours</h2><p>The tool runs entirely in your browser with no upload endpoint, analytics or advertisement scripts. There is no user account or storage service.</p></div>
+    <div class="limits-grid"><div><h3>What is supported?</h3><p>UTF-8 comma-separated files only, up to 2 MB, 5,000 records and 200 columns. Excel XLSX, TSV, unsupported encodings, malformed quotes and rows with unequal column counts are not accepted.</p></div><div><h3>What happens to the values?</h3><p>Unless you enable one-column matching, the first occurrence of each complete row is retained. Whitespace trimming affects matching only; exported values are unchanged except the optional spreadsheet-formula guard. Leading apostrophe protection is not a guarantee against every spreadsheet or save/reopen behavior.</p></div></div>
+    <p class="fixture-note">This is an independently testable local demonstration, not a publicly deployed site. Its example.org canonical is a documentation placeholder. Local tests do not establish search ranking, Google indexing, AdSense approval or income.</p>
+  </section>
+</main>
+<footer class="site-footer"><div class="shell footer-inner"><span><strong>Sense CSV Lab</strong> <span class="footer-muted">/ Local data utility</span></span><span class="footer-muted">No trackers. No uploads. No invented results.</span></div></footer>
+<script type="module" src="/assets/tool.mjs"></script>
+</body>
+</html>
