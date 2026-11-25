@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
+import {spawnSync} from 'node:child_process';
 import {huntWebTools} from '../scripts/hunt-web-tools-v25.mjs';
 import {auditAstro,auditAstroProject} from '../scripts/audit-astro-v25.mjs';
 import {analyzeSiteDepth} from '../scripts/analyze-site-depth-v25.mjs';
@@ -118,4 +120,27 @@ test('V25 official-source atlas retains per-source review depth and concrete ski
   assert.match(s.review,/original-body-opened|reopen-before-action/);
  }
  assert.match(atlas.scope,/reopened before consequential action/);
+});
+
+test('real tool-hunter CLI runs with a bounded synthetic batch and cannot award market GO',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'sense-v25-hunt-'));
+ try{
+  const file=path.join(dir,'candidates.json');
+  fs.writeFileSync(file,JSON.stringify({schema:'sense-tool-hunter-v25',candidates:[{id:'photo_limits',evidence_source:'SYNTHETIC_TEST',plan:candidate()}]}));
+  const p=spawnSync(process.execPath,['scripts/run-tool-hunter-v25.mjs','--file',file],{cwd:root,encoding:'utf8',timeout:8000});
+  assert.equal(p.status,0,p.stdout+p.stderr);
+  const result=JSON.parse(p.stdout);
+  assert.equal(result.candidates[0].state,'SYNTHETIC_ONLY');
+  assert.equal(result.candidates[0].automatically_authorized_to_build,false);
+ }finally{fs.rmSync(dir,{recursive:true,force:true});}
+});
+test('real deep-site CLI analyzes supplied V24 evidence without initiating a network scan',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'sense-v25-site-'));
+ try{
+  const file=path.join(dir,'scan.json');
+  fs.writeFileSync(file,JSON.stringify({schema:'sense-site-intelligence-v24',origin:'https://real-demo-site.org',pages:[{url:'https://real-demo-site.org/',status:'HTTP_200',title:'Home',h1:'Home',description:'Useful',canonical:'https://real-demo-site.org/',links:[]}],sitemaps:[],sitemap_urls:[],truncated:false}));
+  const p=spawnSync(process.execPath,['scripts/analyze-site-depth-v25.mjs','--file',file],{cwd:root,encoding:'utf8',timeout:8000});
+  assert.equal(p.status,0,p.stdout+p.stderr);
+  assert.equal(JSON.parse(p.stdout).observed_pages,1);
+ }finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
