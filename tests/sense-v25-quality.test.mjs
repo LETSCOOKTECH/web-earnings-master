@@ -87,3 +87,10 @@ test('master, research, competitor and Astro entries route to actual V25 modules
  assert.match(files[2],/analyzeSiteDepth/);
  assert.match(files[3],/scripts\/audit-astro-v25.mjs/);
 });
+
+test('Astro SSR build is not rejected for missing static HTML, but is held for runtime proof',()=>{
+ const r=auditAstro({config:"output:'server'",packageJson:{dependencies:{astro:'^7.4.13','@astrojs/node':'^9.0.0'}},production:true,origin:'https://tools-domain.com/',builtHtml:[]});
+ assert.equal(r.status,'SERVER_BUILD_RUNTIME_UNVERIFIED');
+ assert.ok(r.unknowns.includes('SERVER_RUNTIME_SMOKE_REQUIRED_NO_STATIC_HTML'));
+ assert.equal(r.public_deployment_verified,false);
+});
