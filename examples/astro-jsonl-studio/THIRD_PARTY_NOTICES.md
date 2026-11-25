@@ -9,7 +9,7 @@ Dependency manifest and npm lockfile were adapted from:
 
 MIT permission notice for substantial reuse:
 
-Copyright (c) Croftweaver contributors. Original terms: https://github.com/karero/croftweaver/blob/main/LICENSE
+Copyright (c) 2026 Daniel Melter. Original terms: https://github.com/karero/croftweaver/blob/main/LICENSE
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies, subject to preserving the copyright and permission notices.
 
