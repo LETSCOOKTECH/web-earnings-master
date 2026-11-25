@@ -58,3 +58,7 @@ Read docs/audits/2026-11-24-independent-global-readiness-v16.md and docs/ai-sear
 ## V24 — reference site discovery is not AI-citation evidence
 
 Use the authorized `web-competitor-audit` / `scripts/site-intelligence.mjs` report only for directly seen public page/robots/canonical signals, and read the `ai_discovery` claim packet. An accessible sitemap, public HTML, structured data or third-party reference site does **not** show indexing by Google, Bing, ChatGPT/Perplexity recommendations, AI answer citations, qualified referrals or increased advertising income. Keep external platform attribution and owner-authenticated measurements UNKNOWN until independently captured. Never infer provider-specific retrieval internals from competitor asset paths.
+
+## V29 additive search and browser-agent scope
+An owner-controlled indexable page must first pass ordinary Search crawling/index/snippet eligibility. Google AI Overviews and AI Mode have no mandatory special FAQ JSON-LD, llms.txt, or max-snippet:-1 directive. Training crawlers are separate owner-policy choices; do not unconditionally allow every bot. For WebMCP, detect document.modelContext and optionally navigator.modelContext; Chrome recommends 30/150/500-character metadata budgets and approximately 1.5K characters for tool output, not normative hard W3C limits. See scripts/webmcp-contract-v29.mjs for local conservative 1,400-byte receipts; never expose private uploaded data automatically.
+
