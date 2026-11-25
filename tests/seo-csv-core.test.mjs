@@ -68,3 +68,37 @@ test('Server only binds local ephemeral port and does not need remote API',async
  assert.equal((await fetch(lab.origin+'/assets/tool.mjs')).headers.get('content-type'),'text/javascript; charset=utf-8');
  }finally{await lab.close()}
 });
+
+
+test('column-based deduplication keeps first complete record and may discard different later data',()=>{
+ const data='id,name,amount\n1,Asha,10\n1,Asha,999\n2,Lee,20\n';
+ const r=cleanCsv(data,{matchColumn:1});
+ assert.equal(r.removed,1);assert.equal(r.kept,2);
+ assert.equal(r.csv,'id,name,amount\r\n1,Asha,10\r\n2,Lee,20\r\n');
+ assert.equal(r.matchColumn,1);assert.equal(r.width,3);
+});
+test('trim-for-matching affects duplicate comparison ONLY, not original output values',()=>{
+ const data='id,name\n1, Asha \n1,Asha\n';
+ assert.equal(dedupeCsv(data).kept,2);
+ const result=cleanCsv(data,{trimForMatching:true});
+ assert.equal(result.kept,1);assert.equal(result.csv,'id,name\r\n1, Asha \r\n');
+});
+test('case-insensitive and whitespace-insensitive matching combine in column mode',()=>{
+ const input='id,name\n 1,Asha\n1,Lee\n2,NOOR\n';
+ const result=dedupeCsv(input,{matchColumn:1,trimForMatching:true,caseSensitive:false});
+ assert.deepEqual(result.rows,[['id','name'],[' 1','Asha'],['2','NOOR']]);
+});
+test('invalid column index or unsupported fractional index rejects without silently losing records',()=>{
+ for(const index of [-2,0,1.5,NaN,Infinity,201,'1',true]){
+  assert.throws(()=>dedupeCsv('a,b\n1,2\n',{matchColumn:index}),/Match column/);
+ }
+ assert.throws(()=>dedupeCsv('a,b\n1,2\n',{matchColumn:3}),/between 1 and 2/);
+});
+test('blank header-only CSV is valid with zero data rows and deterministic output',()=>{
+ const r=cleanCsv('id,name\n',{matchColumn:2});
+ assert.equal(r.kept,0);assert.equal(r.removed,0);assert.equal(r.csv,'id,name\r\n');
+});
+test('whole-row dedupe does not collapse records merely because one field repeats',()=>{
+ const result=dedupeCsv('id,name\n1,Asha\n1,Noor\n',{hasHeader:true});
+ assert.equal(result.kept,2);
+});
