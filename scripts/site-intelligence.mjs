@@ -5,11 +5,12 @@ import {inspectSite,diffSiteReports} from '../lib/site-intelligence/engine.mjs';
 import {buildDiscoveryInventory} from '../lib/site-intelligence/discovery.mjs';
 import {summarizeHAR} from '../lib/site-intelligence/har.mjs';
 import {buildSkillHandoffs} from '../lib/site-intelligence/knowledge.mjs';
+import {buildSiteAtlas} from '../lib/site-intelligence/portfolio.mjs';
 
 const args=process.argv.slice(2);
 function option(name){const index=args.indexOf(name);if(index<0)return null;const value=args[index+1];if(!value||value.startsWith('--'))throw new Error('MISSING_VALUE_'+name);return value;}
 function has(name){return args.includes(name);}
-function loadJSON(p){const file=path.resolve(p);if(fs.statSync(file).size>3_000_000)throw new Error('INPUT_JSON_SIZE_LIMIT');return JSON.parse(fs.readFileSync(file,'utf8'));}
+function loadJSON(p,maxBytes=3_000_000){const file=path.resolve(p);if(fs.statSync(file).size>maxBytes)throw new Error('INPUT_JSON_SIZE_LIMIT');return JSON.parse(fs.readFileSync(file,'utf8'));}
 function writeResult(out,data){
  const body=JSON.stringify(data,null,2)+'\n';
  if(!out){process.stdout.write(body);return;}
@@ -23,6 +24,7 @@ async function run(){
    process.stdout.write([
      'Sense Website Intelligence v24 — non-authenticated read-only public evidence',
      'Discovery: node scripts/site-intelligence.mjs --discover path/search-results.json --out path/discovery.json',
+     'Compare: node scripts/site-intelligence.mjs --atlas-file path/reports-list.json --out path/reference-atlas.json',
      'Audit: node scripts/site-intelligence.mjs --origin https://site.tld/ --authorized-origin https://site.tld/ --out path/report.json [--seed-file inputs.json]',
      'Options: --max-pages N --max-sitemaps N --min-delay-ms N --previous previous-report.json --har-file SANITIZED.har --packets-out skill-evidence.json --overwrite',
      'Never run on private services, inaccessible networks, logged-in accounts or sites where automation is disallowed.',
@@ -34,6 +36,14 @@ async function run(){
  if(option('--discover')){
    const inventory=buildDiscoveryInventory(loadJSON(option('--discover')));
    writeResult(out,inventory);return;
+ }
+ const atlasFile=option('--atlas-file');
+ if(atlasFile){
+   const inputs=loadJSON(atlasFile);
+   if(!Array.isArray(inputs)||!inputs.length||inputs.length>15||inputs.some(x=>typeof x!=='string'))throw new Error('ATLAS_INPUT_LIST_REQUIRES_1_TO_15_FILE_PATHS');
+   const folder=path.dirname(path.resolve(atlasFile));
+   const reports=inputs.map(p=>loadJSON(path.resolve(folder,p),15_000_000));
+   writeResult(out,buildSiteAtlas(reports));return;
  }
  const origin=option('--origin'),approved=option('--authorized-origin');
  if(!origin||!approved)throw new Error('EXPLICIT_ORIGIN_AND_AUTHORIZATION_REQUIRED');
@@ -55,7 +65,7 @@ async function run(){
  const report=await inspectSite({origin,authorizedOrigin:approved,seedUrls:seeds,limits:overrides});
  const harPath=option('--har-file');
  if(harPath){
-   const har=loadJSON(harPath);
+   const har=loadJSON(harPath,10_000_000);
    report.operator_har_observations=summarizeHAR(har,{origin:report.origin});
    report.architecture??={source:'NOT_OBSERVED',hosting_backend_database:'UNKNOWN_NOT_OBSERVABLE'};
    report.architecture.har_source='OPERATOR_SUPPLIED_HAR_NOT_INDEPENDENTLY_AUTHENTICATED';
