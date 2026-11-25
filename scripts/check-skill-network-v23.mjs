@@ -26,6 +26,19 @@ export function checkNetwork(root) {
     if(['certified','installed','trusted-executable','production-ready'].includes(source.install_state))fail(`${source.id}: upstream improperly declared installed/certified`);
     if(!source.scope||!source.risk)fail(`${source.id}: missing scope or limitation`);
   }
+  let officialIds=new Set(), legacySkills=new Map();
+  try {
+    const official=JSON.parse(fs.readFileSync(path.join(root,network.official_source_registry??'sources/official_sources.json'),'utf8'));
+    if(!Array.isArray(official.sources))throw new Error('official sources is not an array');
+    for(const s of official.sources){
+      if(!s.id||officialIds.has(s.id)||!/^https:\/\//.test(s.url))fail(`invalid/duplicate first-party source: ${s.id}`);
+      officialIds.add(s.id);
+    }
+    if(network.first_party_source_count!==official.sources.length)fail('first-party source count mismatch');
+    const legacy=JSON.parse(fs.readFileSync(path.join(root,network.existing_skill_source_crosswalk??'sources/skill-evidence-crosswalk-v20.json'),'utf8'));
+    if(!Array.isArray(legacy.skills))throw new Error('legacy crosswalk is not an array');
+    legacySkills=new Map(legacy.skills.map(x=>[x.id,x]));
+  } catch(e){fail(`first-party source/crosswalk unavailable: ${e.message}`);}
   const skillsDir=path.join(root,'.agents','skills');
   let onDisk=[];
   try{onDisk=fs.readdirSync(skillsDir,{withFileTypes:true}).filter(e=>e.isDirectory()&&fs.existsSync(path.join(skillsDir,e.name,'SKILL.md'))).map(e=>e.name).sort();}
@@ -40,7 +53,15 @@ export function checkNetwork(root) {
       skills.set(item.id,{stage:stage.id,owner:stage.owner,item});
       if(!Array.isArray(item.upstreams)||item.upstreams.length===0)fail(`${item.id}: no source methods linked`);
       for(const ref of item.upstreams??[])if(!upstreamIds.has(ref))fail(`${item.id}: unknown upstream ${ref}`);
-      if(!item.deliverable||!item.fail_case)fail(`${item.id}: missing deliverable/fail case`);
+      if(!item.deliverable||!item.fail_case||!item.local_oracle||!item.external_gate)fail(`${item.id}: missing individual deliverable, local/real-world oracle or fail case`);
+      const original=legacySkills.get(item.id);
+      if(!original)fail(`${item.id}: missing first-party crosswalk record`);
+      if(!Array.isArray(item.official_source_ids)||item.official_source_ids.length===0)fail(`${item.id}: no first-party original source IDs`);
+      for(const ref of item.official_source_ids??[]){
+        if(!officialIds.has(ref))fail(`${item.id}: unresolvable first-party source ${ref}`);
+        if(original&&!original.reference_source_ids.includes(ref))fail(`${item.id}: source ${ref} not in first-party crosswalk`);
+      }
+
     }
   }
   if(!skills.has(MASTER))fail('missing master orchestrator');
