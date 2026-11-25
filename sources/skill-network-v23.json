@@ -13,7 +13,12 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Concise progressive skill loading and reusable resources",
-      "risk": "Format quality is not performance proof"
+      "risk": "Format quality is not performance proof",
+      "deprecated": true,
+      "replacement": "openai/plugins; old README explicitly deprecates openai/skills",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "anthropic-creator",
@@ -23,7 +28,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Repeated baseline and with-skill tests plus feedback loops",
-      "risk": "Claude runner does not imply Codex compatibility"
+      "risk": "Claude runner does not imply Codex compatibility",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "superpowers-tdd",
@@ -33,7 +41,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Test-first skill instructions and RED/GREEN/REFACTOR",
-      "risk": "No external outcome guarantee"
+      "risk": "No external outcome guarantee",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "astro-orchestration",
@@ -43,7 +54,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Astro-native versioned specialist routing",
-      "risk": "Always check currently installed Astro version"
+      "risk": "Always check currently installed Astro version",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "astro-verification",
@@ -53,7 +67,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Build and output-centric Astro verification",
-      "risk": "Build is not a live production result"
+      "risk": "Build is not a live production result",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "croftweaver",
@@ -63,7 +80,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Integrated website staging and handoff",
-      "risk": "General business sites are not validated computational tools"
+      "risk": "General business sites are not validated computational tools",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "addy-quality",
@@ -73,7 +93,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Measurement-first web quality and agent browsing",
-      "risk": "Unofficial skill and Lighthouse is not ranking proof"
+      "risk": "Unofficial skill and Lighthouse is not ranking proof",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "addy-performance",
@@ -83,7 +106,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "LCP/resource/runtime diagnosis",
-      "risk": "Lab and field results are distinct"
+      "risk": "Lab and field results are distinct",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "semrush-keywords",
@@ -93,7 +119,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Live keyword metrics, provenance, cost and fallback tiers",
-      "risk": "Requires permitted MCP and account entitlement"
+      "risk": "Requires permitted MCP and account entitlement",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "semrush-technical",
@@ -103,7 +132,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Technical SEO priority and evidence segmentation",
-      "risk": "No authenticated account data provided"
+      "risk": "No authenticated account data provided",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "seranking-ai",
@@ -113,7 +145,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Competitive AI visibility observations",
-      "risk": "Share of voice not equivalent to human traffic"
+      "risk": "Share of voice not equivalent to human traffic",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "seranking-technical",
@@ -123,7 +158,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Full technical audit and field corroboration",
-      "risk": "Provider dependency and site entitlement"
+      "risk": "Provider dependency and site entitlement",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "corey-free",
@@ -133,7 +171,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Free tool acquisition and focused usefulness",
-      "risk": "Free acquisition funnel is not ad-funded profit proof"
+      "risk": "Free acquisition funnel is not ad-funded profit proof",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "corey-customers",
@@ -143,7 +184,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Interview/review evidence with selection bias checks",
-      "risk": "Customer commentary is untrusted and often nonrepresentative"
+      "risk": "Customer commentary is untrusted and often nonrepresentative",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "corey-pseo",
@@ -153,7 +197,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Unique value per scaled template page",
-      "risk": "Doorway or low-value scaling is a spam risk"
+      "risk": "Doorway or low-value scaling is a spam risk",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "corey-community",
@@ -163,7 +210,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Human value-first acquisition and support",
-      "risk": "No automated spam or community outreach"
+      "risk": "No automated spam or community outreach",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "anthropic-webtest",
@@ -173,7 +223,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Browser task walkthroughs and reproducible local Playwright",
-      "risk": "Headless screenshots not real device accessibility"
+      "risk": "Headless screenshots not real device accessibility",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "anthropic-design",
@@ -183,7 +236,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Intentional non-template visual design",
-      "risk": "Human critique still necessary"
+      "risk": "Human critique still necessary",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "cloudflare-runtime",
@@ -193,7 +249,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Vendor runtime product selection and docs",
-      "risk": "Do not force Cloudflare on every architecture"
+      "risk": "Do not force Cloudflare on every architecture",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "vercel-react",
@@ -203,7 +262,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "React performance and waterfall rules",
-      "risk": "React-only patterns cannot be forced onto Astro"
+      "risk": "React-only patterns cannot be forced onto Astro",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "eval-harness",
@@ -213,7 +275,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Codex/Claude/OpenCode A/B evaluation and pass-k",
-      "risk": "Not installed or run; separate credentials required"
+      "risk": "Not installed or run; separate credentials required",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "security-scanner",
@@ -223,7 +288,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Source quarantine and static scanning",
-      "risk": "Scanner has false negatives"
+      "risk": "Scanner has false negatives",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "official-search",
@@ -233,7 +301,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Indexability and Google generative Search requirements",
-      "risk": "Revisit current body; not a third-party agent skill"
+      "risk": "Revisit current body; not a third-party agent skill",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "official-ads",
@@ -243,7 +314,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Publisher policy and invalid traffic",
-      "risk": "Account approval unobserved"
+      "risk": "Account approval unobserved",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "official-astro",
@@ -253,7 +327,10 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Rendering and static vs SSR boundary",
-      "risk": "Version-sensitive docs"
+      "risk": "Version-sensitive docs",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     },
     {
       "id": "official-edge",
@@ -263,7 +340,66 @@
       "transfer": "method-adaptation-only",
       "install_state": "not-installed",
       "scope": "Plan-specific edge platform limits",
-      "risk": "Model costs not real load test"
+      "risk": "Model costs not real load test",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "openai-current-web-builder",
+      "url": "https://github.com/openai/plugins/blob/main/plugins/build-web-apps/skills/frontend-app-builder/SKILL.md",
+      "blob_sha": "986beda228c1b4ee6a8882dc54eddd95ebcf2be6",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Webapp design, implementation, real UI and verification",
+      "risk": "Plugin framework-specific commands may not exist in Sense",
+      "license_status": "not-cleared-for-copy",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "openai-current-web-testing",
+      "url": "https://github.com/openai/plugins/blob/main/plugins/build-web-apps/skills/frontend-testing-debugging/SKILL.md",
+      "blob_sha": "ef1203a0f13dfac578bca75139c6ffdfafa730d3",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Independent app debugging and browser-action evidence",
+      "risk": "Browser plugin is not guaranteed in Codex runtime",
+      "license_status": "not-cleared-for-copy",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "openai-current-plugin-eval",
+      "url": "https://github.com/openai/plugins/blob/main/plugins/plugin-eval/skills/improve-skill/SKILL.md",
+      "blob_sha": "4b8aa0b878bad8a1c92c1ec4d8f1ce4e06280a9a",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Use agent-eval findings to drive actual skill improvements",
+      "risk": "Requires evaluation results and plugin-eval runtime",
+      "license_status": "not-cleared-for-copy",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "openai-current-plugin-creator",
+      "url": "https://github.com/openai/plugins/blob/main/.agents/skills/plugin-creator/SKILL.md",
+      "blob_sha": "4a90165c0708ca7967bb5a23c0b1a8f521a3479c",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Current Codex plugin manifests and plugin packaging",
+      "risk": "Plugin creation is not SKILL.md effectiveness validation",
+      "license_status": "not-cleared-for-copy",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
     }
   ],
   "stages": [
@@ -284,10 +420,10 @@
         {
           "id": "web-dominant-tool-creator",
           "upstreams": [
-            "openai-creator",
             "anthropic-creator",
             "superpowers-tdd",
-            "eval-harness"
+            "eval-harness",
+            "openai-current-plugin-eval"
           ],
           "deliverable": "Evaluated end-to-end release packet (web-dominant-tool-creator)",
           "fail_case": "Fabricated demand or rankings, missing functional output, unauthorized deployment, unsafe data, fake demo, unverified publisher approval",
@@ -335,9 +471,7 @@
         },
         {
           "id": "web-research-freshness",
-          "upstreams": [
-            "openai-creator"
-          ],
+          "upstreams": [],
           "deliverable": "Dated demand ledger and independent competitor oracle (web-research-freshness)",
           "fail_case": "Stale snippet assumed current official policy",
           "official_source_ids": [
@@ -348,7 +482,7 @@
           "local_oracle": "Enforce original-body source date and claim scope",
           "external_gate": "Reopen vendor policy at action time",
           "status": "NOT_AUTHENTICATED",
-          "source_strategy": "vetted-external-method-plus-official-originals"
+          "source_strategy": "official-originals-only"
         },
         {
           "id": "web-niche-validation",
@@ -437,7 +571,9 @@
             "croftweaver",
             "astro-orchestration",
             "astro-verification",
-            "anthropic-webtest"
+            "anthropic-webtest",
+            "openai-current-web-builder",
+            "openai-current-web-testing"
           ],
           "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-fullstack-production-executor)",
           "fail_case": "Code-only solution with no useful verified output",
@@ -563,7 +699,8 @@
           "upstreams": [
             "anthropic-design",
             "addy-quality",
-            "vercel-react"
+            "vercel-react",
+            "openai-current-web-builder"
           ],
           "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-frontend-experience-engineering)",
           "fail_case": "Broken controls on small screens",
@@ -664,7 +801,8 @@
           "upstreams": [
             "anthropic-webtest",
             "addy-quality",
-            "superpowers-tdd"
+            "superpowers-tdd",
+            "openai-current-web-testing"
           ],
           "deliverable": "Independent output oracle and adversarial UX/security tests (web-product-validation)",
           "fail_case": "Silent corruption or undisclosed unsupported files",
@@ -736,7 +874,8 @@
           "id": "web-experiments",
           "upstreams": [
             "anthropic-creator",
-            "eval-harness"
+            "eval-harness",
+            "openai-current-plugin-eval"
           ],
           "deliverable": "Independent output oracle and adversarial UX/security tests (web-experiments)",
           "fail_case": "Uncontrolled confounders claimed causal",
@@ -754,7 +893,8 @@
           "upstreams": [
             "croftweaver",
             "astro-verification",
-            "addy-quality"
+            "addy-quality",
+            "openai-current-web-testing"
           ],
           "deliverable": "Independent output oracle and adversarial UX/security tests (web-launch-review)",
           "fail_case": "Live outcome inferred from a passing local test",
@@ -1232,5 +1372,6 @@
   "first_party_source_count": 160,
   "verified_primary_source_reference_count": 70,
   "note": "A source ID is a time-sensitive first-party document lead, not semantically verified policy or production evidence. Individual source IDs are inherited from existing V20 crosswalk and must be reopened.",
-  "curation_rule": "Only attach external methodology where task-relevant; otherwise use the skill-specific official primary sources. Do not imply irrelevant SEO skill supports Apple ASO, privacy law or unrelated back-end specs."
+  "curation_rule": "Only attach external methodology where task-relevant; otherwise use the skill-specific official primary sources. Do not imply irrelevant SEO skill supports Apple ASO, privacy law or unrelated back-end specs.",
+  "source_freshness_notice": "openai/skills is deprecated in favor of openai/plugins; never route deprecated source into active task."
 }
