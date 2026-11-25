@@ -104,3 +104,18 @@ test('Astro dynamic output and nonliteral route prerender are held rather than a
  assert.equal(s.status,'HOLD_DYNAMIC_CONFIG_UNRESOLVED');
  assert.ok(s.unknowns.some(x=>x.includes('ROUTE_PRERENDER_DYNAMIC_UNRESOLVED')));
 });
+
+test('V25 official-source atlas retains per-source review depth and concrete skill ownership',()=>{
+ const atlas=JSON.parse(fs.readFileSync(path.join(root,'sources/v25-astro-demand-officials.json'),'utf8'));
+ assert.equal(atlas.source_count,8);
+ assert.equal(atlas.sources.length,8);
+ const ids=new Set();
+ for(const s of atlas.sources){
+  assert.ok(!ids.has(s.id));ids.add(s.id);
+  const u=new URL(s.url);assert.equal(u.protocol,'https:');
+  assert.ok(['docs.astro.build','support.google.com','developers.google.com'].includes(u.hostname));
+  assert.ok(Array.isArray(s.applies_to)&&s.applies_to.length>=1);
+  assert.match(s.review,/original-body-opened|reopen-before-action/);
+ }
+ assert.match(atlas.scope,/reopened before consequential action/);
+});
