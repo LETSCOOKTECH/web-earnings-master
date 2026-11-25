@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import tools from '../data/tools.json';
+const groups=[{id:'csv',title:'CSV utilities',desc:'Clean and transform tabular values without sending files away.'},{id:'tsv',title:'TSV utilities',desc:'Convert tab-separated records into interoperable data.'},{id:'jsonl',title:'JSON Lines utilities',desc:'Validate newline-delimited records and prepare structured data.'},{id:'json',title:'JSON utilities',desc:'Read and export structured objects with explicit type limitations.'}];
+---
+<BaseLayout title="Sense Data Studio | Private in-browser format utilities" description="A collection of deterministic CSV, TSV, JSON and JSON Lines tools that run locally in your browser." canonicalPath="/">
+ <main class="wrap" id="main">
+  <p class="eyebrow">BROWSER-LOCAL FILE UTILITIES</p>
+  <h1>Transform your data. Keep your files local.</h1>
+  <p class="intro">Use deterministic file converters without an account or upload. File contents stay in your browser; preview, copy, and download the output. This is a bounded technical prototype, not a deployed commercial service or an assurance of unlimited file sizes.</p>
+  <section class="groups" aria-label="Tool categories">{groups.map(g=><article class="category">
+   <p class="eyebrow">{tools.filter(t=>t.group===g.id).length} WORKFLOWS</p><h2><a href={'/hubs/'+g.id+'/'}>{g.title}</a></h2><p>{g.desc}</p>
+   <ul>{tools.filter(t=>t.group===g.id).slice(0,4).map(t=><li><a href={'/tools/'+t.id+'/'}>{t.label}</a></li>)}</ul>
+  </article>)}</section>
+  <section class="note"><h2>What the local engine guarantees</h2><p>Transformations execute in a dedicated browser Worker, and no input is sent to our server. The current build limits decoded input to 16 MiB and 200,000 table rows. Binary Parquet, TOON and Excel workbook conversion are not implemented; the site does not claim otherwise.</p></section>
+ </main>
+</BaseLayout>
