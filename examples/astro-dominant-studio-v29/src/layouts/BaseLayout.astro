@@ -3,6 +3,7 @@ interface Props {title:string;description:string;canonicalPath:string;}
 const {title,description,canonicalPath}=Astro.props;
 const site=Astro.site??new URL('https://studio.example.org/');
 const placeholder=/(?:^|\.)example\.(?:org|com|net)$/.test(site.hostname);
+const allowIndexing=process.env.SENSE_RELEASE==='public'&&!placeholder;
 const canonical=new URL(canonicalPath,site).href;
 ---
 <!doctype html>
@@ -14,7 +15,7 @@ const canonical=new URL(canonicalPath,site).href;
   <title>{title}</title>
   <meta name="description" content={description}/>
   <link rel="canonical" href={canonical}/>
-  {placeholder?<meta name="robots" content="noindex,follow"/>:<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>}
+  {allowIndexing?<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>:<meta name="robots" content="noindex,follow"/>}
   <link rel="stylesheet" href="/assets/studio.css"/>
 </head>
 <body>
