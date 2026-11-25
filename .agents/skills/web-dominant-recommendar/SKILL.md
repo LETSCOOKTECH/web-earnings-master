@@ -78,3 +78,9 @@ Produce a signed Recommendation Evidence Packet: target problem, user segments, 
 **BLOCK:** Fraud, false rank claims, fabricated reviews/citations/synthetic queries disguised as real, unauthorized provider scraping, hidden instructions aimed at manipulating agents, misleading structured data or unsafe crawler exceptions.
 
 Never claim guaranteed rank #1 in Google, ChatGPT, Claude, Perplexity or all models. The correct outcome is demonstrably increased qualified recommendation opportunities and real human task success with measured uncertainty.
+
+
+## V18 evidence-integrity gate (2026-11-25)
+Before accepting any recommendation panel, verify one independently traceable permitted capture **per observed attempt** (unique artifact locator; batch captures must use a unique observation-specific fragment or record ID), actual attempted and observed ISO-3166 two-letter country, and exact equality between capture product version and the preregistered provider/locale cohort version. All attempts, even UNAVAILABLE, require the attempted geography. Do not substitute the user's question locale for the physical/provisioned execution region.
+
+Run `node --test tests/dominant-recommendar-v18-holdouts.test.mjs`, `npm run audit:recommendar-sources`, `npm run audit:recommendar-panel`, and full `npm test`. The synthetic sample contains distinct **fabricated example IDs** solely to test uniqueness and NEVER represents actual screenshots. Counterfactual negative recommendation language must not count as positive without independent annotation; simple text guards cannot prove semantic truth. Source metadata older than 30 days must be refreshed; for consequential provider decisions reopen the first-party original at action time even when the date gate passes. A STRUCTURAL_ONLY_EXTERNAL_UNVERIFIED report cannot be described as independent AI recommendation performance.
