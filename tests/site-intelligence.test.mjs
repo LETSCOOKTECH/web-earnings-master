@@ -4,6 +4,11 @@ import {gzipSync} from 'node:zlib';
 import {isPublicIPv4,isPublicIPv6,validateOrigin,safeURL,resolvePinnedPublicIPv4,resolvePinnedPublicAddress} from '../lib/site-intelligence/safe-http.mjs';
 import {summarizeHAR} from '../lib/site-intelligence/har.mjs';
 import {buildSkillHandoffs} from '../lib/site-intelligence/knowledge.mjs';
+import {buildSiteAtlas} from '../lib/site-intelligence/portfolio.mjs';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
 import {decodeXmlEntities,decodeSitemapBody,parseSitemapXML,sitemapLocationsFromRobots} from '../lib/site-intelligence/xml.mjs';
 import {inspectHTML} from '../lib/site-intelligence/html.mjs';
 import {buildDiscoveryInventory} from '../lib/site-intelligence/discovery.mjs';
@@ -220,4 +225,35 @@ test('evidence graph routes real source-scoped observations to ten existing spec
 });
 test('evidence graph rejects an unrelated JSON claim pretending to be an actual scan',()=>{
  assert.throws(()=>buildSkillHandoffs({schema:'hacked',origin:base}),/NOT_A_SITE/);
+});
+
+test('multi-site atlas retains only reproducible public evidence and never fabricates private internals',async()=>{
+ const make=async(originName)=>inspectSite({...opts,origin:'http://'+originName+':9472/',authorizedOrigin:'http://'+originName+':9472/',fetcher:fakeTransport({'/robots.txt':{status:404},'/':{body:'<html><title>A tool</title><form action="/calculate" method="post"></form></html>'}})});
+ const a=await make('first.fixture'),b=await make('second.fixture');
+ const atlas=buildSiteAtlas([a,b]);
+ assert.equal(atlas.site_count,2);
+ assert.equal(atlas.status,'OBSERVED_PARTIAL_REFERENCE_COMPARISON');
+ assert.ok(atlas.sites.every(x=>!('estimated_traffic' in x)&&!('private_backend' in x)));
+ assert.ok(atlas.analysis_limitations.some(x=>x.includes('NOT normalized')));
+ assert.throws(()=>buildSiteAtlas([a,a]),/DUPLICATE_ORIGIN/);
+ assert.throws(()=>buildSiteAtlas([a,{foo:1}]),/INVALID_REPORT/);
+});
+test('real CLI can import discovery leads and produce a JSON file with explicit unknowns',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'sense-v24-cli-'));
+ try{
+   const seed=path.join(dir,'seeds.json'),out=path.join(dir,'discovered.json');
+   fs.writeFileSync(seed,JSON.stringify([{url:'https://real-competitor-demo.org/tool',query:'test research',region:'US'}]));
+   const result=spawnSync(process.execPath,['scripts/site-intelligence.mjs','--discover',seed,'--out',out],{cwd:path.resolve(import.meta.dirname,'..'),encoding:'utf8',timeout:8000});
+   assert.equal(result.status,0,result.stdout+'\n'+result.stderr);
+   const data=JSON.parse(fs.readFileSync(out,'utf8'));
+   assert.equal(data.sites.length,1);
+   assert.equal(data.status,'SEARCH_RESULT_IMPORT_ONLY_NOT_A_LIVE_SEARCH');
+   assert.equal(data.sites[0].site_status,'DISCOVERED_UNFETCHED_AUTHORIZATION_REQUIRED');
+ }finally{fs.rmSync(dir,{recursive:true,force:true});}
+});
+test('real CLI rejects unsafe local crawl before network I/O',()=>{
+ const r=spawnSync(process.execPath,['scripts/site-intelligence.mjs','--origin','http://127.0.0.1:9999/','--authorized-origin','http://127.0.0.1:9999/'],
+ {cwd:path.resolve(import.meta.dirname,'..'),encoding:'utf8',timeout:8000});
+ assert.equal(r.status,2);
+ assert.match(r.stderr,/HTTPS_STANDARD_PORT_REQUIRED/);
 });
