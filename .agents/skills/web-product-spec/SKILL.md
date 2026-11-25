@@ -31,3 +31,7 @@ One concise PRD (`templates/product-prd.md`), test matrix and expected metric fu
 
 ## Costed and executable PRD gate (V5)
 Before freezing a feature spec, run `web-workload-architecture-router`; require average/p95 file bytes, CPU-seconds, browser RAM, output oracle, target device and cloud/consent route. Hand pricing to `web-unit-economics-finops` and capacity to `web-scale-reliability`. Reject "unlimited free conversion" with unbounded billable cloud CPU, or any format supported only as a marketing button. Each claimed feature must have a rights-cleared success/failure fixture and user recovery. `docs/architecture/02-client-and-media-pipelines.md`.
+
+## V24 — site-intelligence observations are PRD inputs, not a requirements oracle
+
+When reference websites materially affect product scope, read `docs/website-intelligence/README.md` and consume `web-competitor-audit`'s `sense-site-skill-handoffs-v24` `product` claim packet. Distinguish directly visible public tools/pages, hypothesized product capabilities and UNKNOWN functionality. An input/form hint is not a real working output, a sitemap entry is not validation, and an inferred framework is not a requirement to adopt it. Do not copy protected code or trade dress. Require actual user task, input/output oracle, independent same-fixture comparator, measurable unique value, and supported budget/privacy architecture before any site design decision.
