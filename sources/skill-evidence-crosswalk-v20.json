@@ -1,0 +1,719 @@
+{
+  "schema": "sense-skill-source-crosswalk-v20",
+  "created_at_utc": "2026-11-25T06:20:00Z",
+  "scope": "Curated first-party original leads for 49 skill domains; links are NOT evidence of current original-body access, correctness or external outcome. Action-time original review mandatory.",
+  "cited_registry": "sources/official_sources.json",
+  "primary_originals_opened_during_this_audit": [
+    {
+      "id": "v20-iana-example",
+      "url": "https://www.iana.org/help/example-domains",
+      "applies_to": [
+        "web-domain-operations",
+        "web-browser-runtime",
+        "web-launch-review",
+        "web-technical-seo",
+        "web-fullstack-production-executor",
+        "web-product-validation"
+      ],
+      "verified_limited_claim": "example.org and sibling examples are documentation-only, not production host guarantee"
+    },
+    {
+      "id": "v20-github-pages",
+      "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site",
+      "applies_to": [
+        "web-domain-operations",
+        "web-hosting-vendor-evaluation",
+        "web-fullstack-production-executor",
+        "web-launch-review"
+      ],
+      "verified_limited_claim": "Pages publishing requires allowed plan/repo configuration; private repo does not automatically mean publicly private website"
+    },
+    {
+      "id": "v20-google-canonical",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+      "applies_to": [
+        "web-technical-seo",
+        "web-search-internals",
+        "web-search-visibility-systems"
+      ],
+      "verified_limited_claim": "canonical identifies preferred duplicate URL; does not cause hosting, indexing or ranking"
+    },
+    {
+      "id": "v20-mdn-http",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview",
+      "applies_to": [
+        "web-browser-runtime",
+        "web-backend-api-engineering"
+      ],
+      "verified_limited_claim": "request/response protocol semantics distinct from site product correctness"
+    },
+    {
+      "id": "v20-owasp-asvs",
+      "url": "https://asvs.owasp.org/",
+      "applies_to": [
+        "web-security-assurance-asvs",
+        "web-security-performance",
+        "web-fullstack-production-executor"
+      ],
+      "verified_limited_claim": "security requirements model, not penetration-test certificate"
+    }
+  ],
+  "skills": [
+    {
+      "id": "web-accessibility-agent-ux",
+      "reference_source_ids": [
+        "v6-accessibility-26",
+        "google-core-web-vitals"
+      ],
+      "local_evidence_expected": "Run accessible form, keyboard, error and reduced-motion fixtures",
+      "external_evidence_expected": "Test real users assistive technology mobile and agent task",
+      "blocking_condition": "Primary action unusable or unlabeled",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-ad-experience",
+      "reference_source_ids": [
+        "google-ads-placement",
+        "google-adsense-program"
+      ],
+      "local_evidence_expected": "Check misleading controls CLS ad separation and no ad-only pages",
+      "external_evidence_expected": "Review actual ad render and human interactions",
+      "blocking_condition": "Ad can be mistaken for download or primary action",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-adsense-readiness",
+      "reference_source_ids": [
+        "google-adsense-site-ready",
+        "google-adsense-site-status",
+        "google-adsense-program"
+      ],
+      "local_evidence_expected": "Audit ad placement content restrictions ownership and ads.txt",
+      "external_evidence_expected": "Verify real Google publisher site/account state",
+      "blocking_condition": "Unapproved site claimed Ready or invalid traffic",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-aeo-answer-optimization",
+      "reference_source_ids": [
+        "discovery-aeo-featured-snippets",
+        "google-ai-features"
+      ],
+      "local_evidence_expected": "Validate actual answers and snippet eligibility",
+      "external_evidence_expected": "Observe actual SERP answer placements by query and locale",
+      "blocking_condition": "Unverifiable answers or fake special-schema claims",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-ai-discovery",
+      "reference_source_ids": [
+        "google-ai-features",
+        "openai-crawlers",
+        "perplexity-crawlers"
+      ],
+      "local_evidence_expected": "Test search bot purpose robots and raw HTML fixture",
+      "external_evidence_expected": "Verify actual crawler identities and provider citations",
+      "blocking_condition": "Training crawler confused with search or invented citations",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-ai-retrieval-lab",
+      "reference_source_ids": [
+        "google-ai-features",
+        "openai-crawlers",
+        "bing-ai-performance"
+      ],
+      "local_evidence_expected": "Run citation URL normalization and sampling fixtures",
+      "external_evidence_expected": "Sample provider outputs with timestamp version and prompt",
+      "blocking_condition": "Single prompt treated as universal ranking proof",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-app-store-discovery",
+      "reference_source_ids": [
+        "discovery-google-play-ranking",
+        "discovery-apple-search-discovery"
+      ],
+      "local_evidence_expected": "Check distribution target and listing evidence",
+      "external_evidence_expected": "Read actual store console and app result evidence",
+      "blocking_condition": "PWA misrepresented as native approved app",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-aso-apple-app-store",
+      "reference_source_ids": [
+        "discovery-apple-app-store-keyword-bytes",
+        "discovery-apple-product-page-optimization"
+      ],
+      "local_evidence_expected": "Validate name subtitle keyword UTF-8 bytes and feature claims",
+      "external_evidence_expected": "Test listing in actual App Store Connect by locale",
+      "blocking_condition": "Fake reviews or unsupported app features",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-aso-google-play",
+      "reference_source_ids": [
+        "discovery-google-play-ranking",
+        "discovery-google-play-listing-metadata"
+      ],
+      "local_evidence_expected": "Validate listing lengths image assets privacy and vitals inputs",
+      "external_evidence_expected": "Observe real Play Console conversion and vitals",
+      "blocking_condition": "No real Android app or fabricated installs",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-astro-engineering",
+      "reference_source_ids": [
+        "astro-config",
+        "astro-sitemap",
+        "astro-islands"
+      ],
+      "local_evidence_expected": "Build real HTML and test robots redirects and hydration",
+      "external_evidence_expected": "Verify deployed pages across devices browsers and CDN",
+      "blocking_condition": "Client shell only or broken primary tool",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-authority-distribution",
+      "reference_source_ids": [
+        "google-search-links",
+        "google-search-spam"
+      ],
+      "local_evidence_expected": "Test partner relevance and paid link spam exclusions",
+      "external_evidence_expected": "Verify authentic referrals links and completed tasks",
+      "blocking_condition": "Manipulated links fabricated endorsements or click farms",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-backend-api-engineering",
+      "reference_source_ids": [
+        "architecture-owasp-api4",
+        "v6-security-23"
+      ],
+      "local_evidence_expected": "Test auth BOLA SSRF timeouts input bounds and idempotency",
+      "external_evidence_expected": "Test real authenticated staging and rollback",
+      "blocking_condition": "Cross-tenant data leak or unbounded job bill",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-browser-compute",
+      "reference_source_ids": [
+        "architecture-browser-wasm-perf",
+        "architecture-browser-quotas"
+      ],
+      "local_evidence_expected": "Run valid corrupt huge-file worker cancellation fixtures",
+      "external_evidence_expected": "Test low-memory real browsers and actual file output",
+      "blocking_condition": "Unexpected remote upload or corrupt output",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-browser-runtime",
+      "reference_source_ids": [
+        "architecture-browser-quotas",
+        "google-js-seo"
+      ],
+      "local_evidence_expected": "Run owned HTTP redirects robots TLS and DOM fixtures",
+      "external_evidence_expected": "Capture real waterfall and server/CDN headers",
+      "blocking_condition": "Network failure misreported as ranking failure",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-competitor-audit",
+      "reference_source_ids": [
+        "google-seo-starter",
+        "semrush-traffic"
+      ],
+      "local_evidence_expected": "Check fixtures source dates screenshots and error taxonomy",
+      "external_evidence_expected": "Repeat rival tool tasks with genuine inputs",
+      "blocking_condition": "Unverified weakness or modeled traffic presented as fact",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-content-and-image-seo",
+      "reference_source_ids": [
+        "google-image-seo",
+        "google-seo-starter"
+      ],
+      "local_evidence_expected": "Validate intent headings licensing alt and schema truth",
+      "external_evidence_expected": "Observe real Search visibility and user task usefulness",
+      "blocking_condition": "Duplicated doorway or invented testimonials",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-conversion-job-platform",
+      "reference_source_ids": [
+        "architecture-workers-limits",
+        "architecture-queues-limits"
+      ],
+      "local_evidence_expected": "Test retries max-size auth cancellation rate and bills",
+      "external_evidence_expected": "Perform realistic load test plus vendor budget evidence",
+      "blocking_condition": "Unbounded compute egress or private file leak",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-crawler-governance",
+      "reference_source_ids": [
+        "google-crawler-overview",
+        "openai-crawlers",
+        "perplexity-crawlers"
+      ],
+      "local_evidence_expected": "Validate RFC robots user agents headers and request parity",
+      "external_evidence_expected": "Verify authentic source IP and provider policy live",
+      "blocking_condition": "Verified bots blocked or anonymous bots whitelisted",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-domain-operations",
+      "reference_source_ids": [
+        "google-search-canonical",
+        "vendor-github-pages-commercial"
+      ],
+      "local_evidence_expected": "Test DNS record invariants redirect mapping and expiry",
+      "external_evidence_expected": "Validate actual domain authority and HTTPS responses",
+      "blocking_condition": "Expired control or broken canonical redirects",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-experiments",
+      "reference_source_ids": [
+        "google-search-console",
+        "discovery-google-play-listing-experiments"
+      ],
+      "local_evidence_expected": "Validate denominator assignment baseline and rollback",
+      "external_evidence_expected": "Measure statistically appropriate real user outcomes",
+      "blocking_condition": "Uncontrolled confounders claimed causal",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-frontend-experience-engineering",
+      "reference_source_ids": [
+        "astro-islands",
+        "google-core-web-vitals"
+      ],
+      "local_evidence_expected": "Test empty loading success failure mobile and keyboard paths",
+      "external_evidence_expected": "Run real-device interaction performance and accessibility",
+      "blocking_condition": "Broken controls on small screens",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-fullstack-production-executor",
+      "reference_source_ids": [
+        "astro-config",
+        "v6-security-23",
+        "google-js-seo"
+      ],
+      "local_evidence_expected": "Run build E2E API security output and rollback test",
+      "external_evidence_expected": "Observe deployed task end to end and resource budgets",
+      "blocking_condition": "Code-only solution with no useful verified output",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-generative-engine-optimization",
+      "reference_source_ids": [
+        "google-ai-features",
+        "google-generative-guidance",
+        "perplexity-crawlers"
+      ],
+      "local_evidence_expected": "Verify citations against exact claim and source URL",
+      "external_evidence_expected": "Sample real AI answers by locale and time",
+      "blocking_condition": "Manufactured citations or unsupported ranking guarantees",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-hosting-vendor-evaluation",
+      "reference_source_ids": [
+        "vendor-vercel-pricing",
+        "vendor-github-pages-commercial",
+        "architecture-workers-pricing"
+      ],
+      "local_evidence_expected": "Validate terms quotes limits and failure alternatives",
+      "external_evidence_expected": "Confirm current plan and actual deployment invoices",
+      "blocking_condition": "Noncommercial tier used for business without permission",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-keyword-intent",
+      "reference_source_ids": [
+        "keyword-planner",
+        "google-trends-data",
+        "semrush-volume"
+      ],
+      "local_evidence_expected": "Check source types dedupe keyword clusters and click potential",
+      "external_evidence_expected": "Compare real SERPs and first-party demand data",
+      "blocking_condition": "Invented volume KD or duplicate intent pages",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-launch-review",
+      "reference_source_ids": [
+        "google-search-essentials",
+        "google-adsense-site-status",
+        "vendor-github-pages-commercial"
+      ],
+      "local_evidence_expected": "Verify gates with hashes commands and owner blockers",
+      "external_evidence_expected": "Inspect deployed site user output and provider status",
+      "blocking_condition": "Live outcome inferred from a passing local test",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-monetization-network-operator",
+      "reference_source_ids": [
+        "monetag-publisher-rules",
+        "google-adsense-program",
+        "raptive-eligibility-2026"
+      ],
+      "local_evidence_expected": "Check eligibility exclusivity ad formats revenue share",
+      "external_evidence_expected": "Verify actual network response contract and paid invoices",
+      "blocking_condition": "Incompatible exclusivity or unsafe ad inventory",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-network-monetization",
+      "reference_source_ids": [
+        "monetag-adsense",
+        "raptive-eligibility-2026",
+        "mediavine-apply"
+      ],
+      "local_evidence_expected": "Audit approval data format privacy and provider terms",
+      "external_evidence_expected": "Verify real publisher account and net ad revenue",
+      "blocking_condition": "Estimated RPM asserted as observed revenue",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-niche-validation",
+      "reference_source_ids": [
+        "google-trends-data",
+        "semrush-volume"
+      ],
+      "local_evidence_expected": "Validate sourced market estimates task gap and downside",
+      "external_evidence_expected": "Observe actual search and user validation evidence",
+      "blocking_condition": "Commodity clone without defensible workflow",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-opportunity-intelligence",
+      "reference_source_ids": [
+        "google-trends-data",
+        "keyword-planner",
+        "semrush-kd"
+      ],
+      "local_evidence_expected": "Validate evidence provenance, Trends CSV metadata, independent origin clusters, hard budget caps, contradictory sources and real competitor output test requirements",
+      "external_evidence_expected": "Authorize relevant browser/account scope, open original Google Trends and licensed keyword UI/CSV, inspect human problems and reproduce competitor tasks before owner-reviewed MVP decision",
+      "blocking_condition": "Unauthorized scraping or paid API; fake market metrics, synthetic human sources, absent product oracle/first user acquisition or unapproved development spend",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-portfolio-growth",
+      "reference_source_ids": [
+        "google-search-console",
+        "google-adsense-site-status"
+      ],
+      "local_evidence_expected": "Validate revenue-cost denominator and accounting period",
+      "external_evidence_expected": "Reconcile provider statements bills and returning users",
+      "blocking_condition": "Revenue estimate called realized profit",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-privacy-consent",
+      "reference_source_ids": [
+        "google-adsense-cmp",
+        "google-adsense-cmp-framework"
+      ],
+      "local_evidence_expected": "Test pre-consent scripts delete requests and cookies",
+      "external_evidence_expected": "Inspect real region-specific CMP and legal review",
+      "blocking_condition": "Unconsented third-party leakage or missing rights",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-product-spec",
+      "reference_source_ids": [
+        "astro-config",
+        "v6-accessibility-26"
+      ],
+      "local_evidence_expected": "Check acceptance fixtures error cases and resource ceiling",
+      "external_evidence_expected": "Verify user acceptance on actual task",
+      "blocking_condition": "Feature scope without correct output acceptance",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-product-validation",
+      "reference_source_ids": [
+        "google-js-seo",
+        "v6-security-23"
+      ],
+      "local_evidence_expected": "Run unit integration fuzz E2E and low-end test fixtures",
+      "external_evidence_expected": "Repeat real output and error handling on supported devices",
+      "blocking_condition": "Silent corruption or undisclosed unsupported files",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-publisher-policy-eligibility",
+      "reference_source_ids": [
+        "google-publisher-policies",
+        "google-adsense-site-ready"
+      ],
+      "local_evidence_expected": "Run page-value layout disclosure and account-state gates",
+      "external_evidence_expected": "Verify current AdSense review and real page policies",
+      "blocking_condition": "Misleading ad controls or falsely approved account",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-release-observability-operator",
+      "reference_source_ids": [
+        "google-search-console",
+        "google-adsense-site-status"
+      ],
+      "local_evidence_expected": "Validate alerts error budgets and rollout simulations",
+      "external_evidence_expected": "Perform staged release and incident drill",
+      "blocking_condition": "No rollback or monitoring for critical flows",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-research-freshness",
+      "reference_source_ids": [
+        "google-search-updates",
+        "google-search-blog",
+        "google-crawling-changelog"
+      ],
+      "local_evidence_expected": "Enforce original-body source date and claim scope",
+      "external_evidence_expected": "Reopen vendor policy at action time",
+      "blocking_condition": "Stale snippet assumed current official policy",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-scale-reliability",
+      "reference_source_ids": [
+        "architecture-workers-limits",
+        "architecture-queues-limits"
+      ],
+      "local_evidence_expected": "Test queue backpressure retry overflow and cost budget",
+      "external_evidence_expected": "Load test realistic traffic peaks and recovery",
+      "blocking_condition": "Claims 1M concurrency from theoretical free tier",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-search-analytics",
+      "reference_source_ids": [
+        "google-search-console",
+        "bing-ai-performance",
+        "google-ai-report"
+      ],
+      "local_evidence_expected": "Validate privacy-safe event schema denominators and query coverage",
+      "external_evidence_expected": "Reconcile GSC Bing server logs and actual sessions",
+      "blocking_condition": "AI citation counted as human ad visit",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-search-forensic-evidence",
+      "reference_source_ids": [
+        "google-search-spam",
+        "google-how-search-works"
+      ],
+      "local_evidence_expected": "Validate citation provenance and confidence classes",
+      "external_evidence_expected": "Recheck original dated court/official text",
+      "blocking_condition": "Speculative internal weights sold as facts",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-search-internals",
+      "reference_source_ids": [
+        "google-how-search-works",
+        "google-ranking-systems-v4"
+      ],
+      "local_evidence_expected": "Run owned index BM25 rank and canonical fixtures",
+      "external_evidence_expected": "Compare controlled live SERP without weight claims",
+      "blocking_condition": "Toy retriever equated with Google algorithms",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-search-visibility-systems",
+      "reference_source_ids": [
+        "google-search-essentials",
+        "google-ai-features",
+        "bing-guidelines"
+      ],
+      "local_evidence_expected": "Verify stage-specific discovery indexing and citation gates",
+      "external_evidence_expected": "Measure real organic and AI visits with task outcomes",
+      "blocking_condition": "No citation equated to ranking success",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-security-assurance-asvs",
+      "reference_source_ids": [
+        "v6-security-23",
+        "v6-security-24"
+      ],
+      "local_evidence_expected": "Test access control SSRF uploads XSS supply chain",
+      "external_evidence_expected": "Perform authorized pentest and negative production tests",
+      "blocking_condition": "Any critical auth or private data flaw",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-security-performance",
+      "reference_source_ids": [
+        "v6-security-23",
+        "google-core-web-vitals"
+      ],
+      "local_evidence_expected": "Run auth CSP upload and performance regression fixtures",
+      "external_evidence_expected": "Verify production headers logs and field metrics",
+      "blocking_condition": "Security controls bypassed or fabricated vitals",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-technical-seo",
+      "reference_source_ids": [
+        "google-search-robots",
+        "google-search-canonical",
+        "google-sitemaps"
+      ],
+      "local_evidence_expected": "Test robots noindex sitemap 404 redirect rendered HTML",
+      "external_evidence_expected": "Verify real GSC indexed canonical and bot logs",
+      "blocking_condition": "Indexability inferred from source HTML alone",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-traffic-hunter",
+      "reference_source_ids": [
+        "google-search-links",
+        "google-search-spam"
+      ],
+      "local_evidence_expected": "Validate full traffic-hunter source and channel contracts with 40 negative and positive Node tests",
+      "external_evidence_expected": "Observe real permitted publication, qualified landing sessions, validated tool tasks, publisher alerts and reconciled spend",
+      "blocking_condition": "Any invalid paid traffic, fake engagement, platform disallowed promotion, unverified product or publisher harm",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-unit-economics-finops",
+      "reference_source_ids": [
+        "architecture-workers-pricing",
+        "vendor-vercel-pricing"
+      ],
+      "local_evidence_expected": "Check units bill assumptions and agent-abuse scenarios",
+      "external_evidence_expected": "Reconcile actual provider bills and traffic",
+      "blocking_condition": "Zero cost declared with uncounted resource costs",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-workload-architecture-router",
+      "reference_source_ids": [
+        "architecture-workers-limits",
+        "architecture-pages-limits",
+        "architecture-queues-limits"
+      ],
+      "local_evidence_expected": "Validate size latency privacy vendor cost and fallback",
+      "external_evidence_expected": "Test candidate workload on target devices and cloud",
+      "blocking_condition": "Framework selected without task or budget evidence",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    },
+    {
+      "id": "web-dominant-recommendar",
+      "reference_source_ids": [
+        "google-ai-features",
+        "openai-crawlers",
+        "bing-ai-performance"
+      ],
+      "local_evidence_expected": "Run source atlas validator, recommendation cohort and quote adversarial tests; inspect actual user task and benchmark",
+      "external_evidence_expected": "Verify real provider/locale output, Google/Bing owner data and genuine user outcomes independently",
+      "blocking_condition": "No output authenticity, fake ranked first, missing negative responses, manufactured evidence or no actual user value",
+      "source_status": "REFERENCE_LEADS_ACTION_TIME_ORIGINAL_REQUIRED",
+      "external_status": "NOT_AUTHENTICATED",
+      "quality_status": "DOMAIN_SPECIFIC_TEST_REQUIRED"
+    }
+  ]
+}

@@ -33,3 +33,9 @@ Maintain provider/date/account-scoped proof; no cross-channel composite "ranking
 
 ## V14 — AI Search source-to-traffic observation
 For AI Search route to docs/ai-search/README.md and docs/ai-search/05-agent-execution.md. Define actual provider surface/locale, verify technical access, original answer usefulness, dated source and report availability, sampled visible citations vs background retrieval vs human referrals. Do not claim simultaneous platform domination or inferred revenue. Search Engine performance improvements need actual indexed/owner data and valid task completion, not an SEO theater score.
+
+
+## V20 source-to-human outcome funnel
+Separate: working original task -> actual owned public site -> crawling eligibility -> index observation -> SERP/AI source selection -> visible citation -> affirmative recommendation -> qualified referral -> completed tool task -> verified income. The csv-lab.example.org fixture passed local browser tests but never reached "actual owned public site"; source HTML/canonical cannot jump this gate.
+For each segment use its appropriate external proof: DNS/TLS/hosted bytes for site existence; signed-in GSC/Bing for index/impression; permitted original model capture for AI citation/recommendation; analytics for human task and publisher ledger for revenue. Negative controls: reserved canonical, noindex, WAF, stale/duplicated pages, broken UI, answer citation without recommendation, and branded prompt contamination.
+Google people-first content source: https://developers.google.com/search/docs/fundamentals/creating-helpful-content . Avoid giant keyword-variant lists, buying fake reviews, undisclosed rank formulas, or the fiction that a robots sitemap produces a live site. See docs/quality/real-world-release-contract-v20.md.

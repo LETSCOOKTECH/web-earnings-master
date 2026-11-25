@@ -56,3 +56,8 @@ Use docs/seo-master/06-robots-crawler-v12.md and 05-independent-observatory-v12.
 
 ## V13 — Web-verified professional production protocol
 V13 technical source rules are docs/seo-master/10-technical-seo-developer-v13.md. On deployed properties verify real DNS/HTTP/TLS, initial/rendered JS, per-crawler robots, canonical, indexable sitemap, real links, mobile field CWV and valid structured data; GSC indexed state requires owner property. Reopen source bodies (Google technical, robots, JS, canonical, sitemap) and track effective dates using docs/seo-master/08-live-source-verification-v13.md. No guaranteed rank from static PASS.
+
+
+## V20 actual domain and canonical validation
+A locally testable page using https://csv-lab.example.org/ in canonical and sitemap has no verified public existence. example.org is IANA's reserved documentation hostname; do not direct real users there. For a real website require owner-approved deployment, public HTTPS, actual page bytes, robots at host root, reachable sitemap, a self-consistent final-hop canonical, 404/410, correct index/snippet controls, usable initial HTML, mobile/browser behavior and crawler WAF inspection.
+Use node scripts/build-public-csv-demo-v20.mjs only to create a candidate root-hosted artifact, then node scripts/audit-static-site.mjs --dist OUTPUT_DIR --origin OWNED_HTTPS_ORIGIN --production to verify local metadata. These scripts DO NOT publish a site, test DNS/TLS or prove Google indexing. After actual deploy inspect GSC URL Inspection, server logs and provider-specific AI inclusion. Google canonical original: https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls . See docs/quality/real-world-release-contract-v20.md.

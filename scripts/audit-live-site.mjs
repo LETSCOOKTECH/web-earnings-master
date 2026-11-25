@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
+import {validatePublicSiteOrigin} from './validate-public-origin-v20.mjs';
 const args=process.argv.slice(2);
 const opt=(flag)=>{const i=args.indexOf(flag);return i<0?null:args[i+1];};
 const fail=(msg)=>{console.error('INVALID:',msg);process.exit(2);};
@@ -11,7 +12,8 @@ if(!originText||!file||!approved)fail('Usage: --origin https://owned-domain --ro
 let origin;
 try{origin=new URL(originText);}catch{fail('Invalid origin');}
 if(origin.protocol!=='https:'||origin.pathname!=='/'||origin.search||origin.hash||origin.username||origin.password)fail('HTTPS origin with root path required');
-if(['localhost','127.0.0.1','0.0.0.0','::1'].includes(origin.hostname)||origin.hostname.endsWith('.localhost'))fail('Public audit cannot target local host; use owned sandbox test');
+const originGate=validatePublicSiteOrigin(originText);
+if(!originGate.ok)fail('Refusing unverified, private, or reserved example hostname: '+originGate.issues.join('; '));
 if(origin.origin!==new URL(approved).origin)fail('Exact user-authorized origin does not match target');
 let manifest;
 try{manifest=JSON.parse(fs.readFileSync(path.resolve(file),'utf8'));}catch(e){fail('Cannot read page route manifest: '+e.message);}

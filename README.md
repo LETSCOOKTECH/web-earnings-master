@@ -18,6 +18,12 @@ A continuously improved technical research and execution library for the **entir
 
 **This repository is a knowledge and verification system—not a website template, not a guarantee of Google rankings, and not proof of AdSense approval.** Research is dated; provider rules must be checked against current primary sources before consequential decisions.
 
+## CURRENT LAUNCH TRUTH — local examples are not public websites
+
+**LOCAL CSV LAB — NOT PUBLIC.** The repository's [CSV deduplication example](examples/seo-csv-lab/README.md) is a **working local test fixture**, not a hosted demo. `csv-lab.example.org` is an IANA-reserved example hostname, not an actual deployable site; do not click or share it as a live product. To use the tool, run `node scripts/preview-seo-csv-lab-v20.mjs` locally and open the exact localhost address printed. To prepare a candidate root-domain build, use `node scripts/build-public-csv-demo-v20.mjs --origin https://YOUR_ACTUAL_OWNED_DOMAIN/ --out .tmp/csv-public`, then run the real domain and browser checks **after** actually deploying. A successful build or local Playwright test never means DNS, public HTTPS, Google indexing, AdSense approval or human visits are verified.
+
+**Skill-library status:** 49 registered Codex skills. Existing static manifests and tests do **not** independently validate the completeness, originality, policy accuracy or production effectiveness of all 49. See [the V20 entire-skill quality inventory](docs/audits/2026-11-25-skill-library-truth-v20.md), [49-skill first-party source and test crosswalk](sources/skill-evidence-crosswalk-v20.json) and [full-stack release evidence specification](docs/quality/real-world-release-contract-v20.md) for measured deficiencies and mandatory real-world checks.
+
 ## The operating loop
 
 ```text
@@ -200,7 +206,7 @@ New browser-first market research and idea-validation system: documented Google 
 Added `scripts/check-computer-use-permission.mjs`, a conservative action-specific gate for actual advertised tool capability, original provider permissions, user/account scope, destination and credits. Its example is deliberately HOLD; it neither launches a browser nor claims live vendor approval. See `docs/opportunity/08-computer-use-permission.md`.
 
 ## V11 — SEO + fullstack mastery operating guide
-Source-backed [SEO Master execution protocol](docs/seo-master/README.md), [keyword intelligence](docs/seo-master/01-keyword-intelligence.md), [technical website engineering](docs/seo-master/02-technical-fullstack.md), [Google Search/Ads/AdSense separation](docs/seo-master/03-policy-separation.md), [negative and production acceptance](docs/seo-master/04-evidence-and-sandbox.md), and [31 first-party source leads](sources/seo_v11_source_map.json). Includes root homepage validator repair, AEO self-report uncertainty guard, noindex/sitemap blocker tightening and regression tests. Independent sandbox laboratory exists as a companion user artifact, not a deployed website. This repository still has 48 skills; no ranking or publisher account evidence implied.
+Source-backed [SEO Master execution protocol](docs/seo-master/README.md), [keyword intelligence](docs/seo-master/01-keyword-intelligence.md), [technical website engineering](docs/seo-master/02-technical-fullstack.md), [Google Search/Ads/AdSense separation](docs/seo-master/03-policy-separation.md), [negative and production acceptance](docs/seo-master/04-evidence-and-sandbox.md), and [31 first-party source leads](sources/seo_v11_source_map.json). Includes root homepage validator repair, AEO self-report uncertainty guard, noindex/sitemap blocker tightening and regression tests. Independent sandbox laboratory exists as a companion user artifact, not a deployed website. At the historical V11 milestone there were 48 skills; the current verified inventory is 49. No ranking or publisher account evidence implied.
 
 **V11 live HTTP auditor:** requires an actual owner-authorized HTTPS origin and a project-specific nonfixture route manifest: `node scripts/audit-live-site.mjs --origin https://owned-domain/ --authorized-origin https://owned-domain --routes-file live-routes.json`. It never certifies indexing or revenue. 25 newly added SEO/manifest regression tests exercise scope, evidence uncertainty and fail-closed behavior.
 
