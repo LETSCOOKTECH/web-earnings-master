@@ -3,13 +3,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 import {evaluateRobots} from './robots-evaluator.mjs';
+import {validatePublicSiteOrigin} from './validate-public-origin-v20.mjs';
 
 function args(a){const m={};for(let i=0;i<a.length;i++){if(!a[i].startsWith('--'))continue;const key=a[i].slice(2);if(a[i+1]&&!a[i+1].startsWith('--'))m[key]=a[++i];else m[key]=true;}return m;}
 const opt=args(process.argv.slice(2));
 if(!opt.dist||!opt.origin){console.error('Usage: node scripts/audit-static-site.mjs --dist dist --origin https://example.com');process.exit(2);}
 let origin;try{origin=new URL(opt.origin)}catch{console.error('Invalid --origin');process.exit(2)}
 if(origin.protocol!=='https:'||origin.pathname!=='/'||origin.search){console.error('HTTPS origin must have / path and no query');process.exit(2)}
-if(opt.production&&/(?:^|\.)example(?:\.|$)|(?:^|\.)test$|localhost|\.invalid$/i.test(origin.hostname)){console.error('PRODUCTION FAIL: placeholder or test origin cannot certify a deployed site');process.exit(2)}
+if(opt.production){const g=validatePublicSiteOrigin(opt.origin);if(!g.ok){console.error('PRODUCTION FAIL: '+g.issues.join('; '));process.exit(2)}}
 const dir=path.resolve(opt.dist);if(!fs.existsSync(dir)){console.error(`Missing dist folder: ${dir}`);process.exit(2)}
 const warnings=[],errors=[];
 const titleMap=new Map(),canonicalMap=new Map(),siteUrls=[];
