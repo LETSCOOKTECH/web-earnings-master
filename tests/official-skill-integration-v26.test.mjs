@@ -47,7 +47,10 @@ test('Git blob IDs must be real 40-hex and separate from mutable browser URLs',(
 test('all 13 mapped source IDs must occur in the destination skill V26 section',()=>{
  const f=copy(),target=f.records[0].target_skills[0];const file=fs.readFileSync(path.join(root,'.agents/skills',target,'SKILL.md'),'utf8');
  const modified={ [target]:file.replace('`vercel-react`','`FAKE_UNRELATED`') };
- bad(f,'SOURCE_NOT_ROUTED_IN_SKILL'); 
+ const result=inspect(f,{skills:modified});
+ assert.equal(result.ok,false);
+ assert.ok(result.errors.some(x=>x.includes('SOURCE_NOT_ROUTED_IN_SKILL:vercel-react:'+target)));
+ 
 });
 test('missing or forged skill handoff is detected independently',()=>{
  const f=copy();f.records[0].target_skills.push('invented-v26-skill');bad(f,'MISSING_TARGET_SKILL');
