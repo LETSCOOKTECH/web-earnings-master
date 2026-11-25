@@ -27,6 +27,7 @@ for(const [name,engine] of [['Chromium',chromium],['Firefox',firefox],['WebKit',
    entry.checks.push('MOBILE_VIEWPORT_AND_REAL_INITIAL_HTML');
    await page.getByRole('textbox',{name:'Or paste CSV text'}).fill('id,value\n1,-2e3\n1,-2e3\n2,=2+2\n');
    await page.getByRole('button',{name:'Remove duplicate rows'}).click();
+   await page.waitForFunction(()=>/Removed 1 duplicate rows; kept 2 rows/.test(document.getElementById('status').textContent));
    assert.match(await page.getByRole('status').textContent(),/Removed 1 duplicate rows; kept 2 rows/);
    const [dl]=await Promise.all([page.waitForEvent('download'),page.getByRole('link',{name:'Download cleaned CSV'}).click()]);
    const bytes=fs.readFileSync(await dl.path(),'utf8');
@@ -39,6 +40,7 @@ for(const [name,engine] of [['Chromium',chromium],['Firefox',firefox],['WebKit',
    entry.checks.push('EXPLICIT_RAW_FIDELITY_OPTION');
    await page.getByRole('textbox',{name:'Or paste CSV text'}).fill('id,name\n1\n');
    await page.getByRole('button',{name:'Remove duplicate rows'}).click();
+   await page.waitForFunction(()=>/different number of columns/.test(document.getElementById('status').textContent));
    assert.match(await page.getByRole('status').textContent(),/different number of columns/);
    assert.equal(await page.getByRole('link',{name:'Download cleaned CSV'}).count(),0);
    entry.checks.push('INVALID_INPUT_REJECTED_NO_DOWNLOAD');
