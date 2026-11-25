@@ -42,3 +42,8 @@ Use examples/seo-csv-lab and tests/seo-csv-browser-e2e.mjs as an independently r
 
 ## V13 — Web-verified professional production protocol
 V13 docs/seo-master/11-end-to-end-web-development-v13.md. Test shipped tool not mock, real file output decoded/reopened, malformed/oversized input, safety/privacy, browser Chromium/Firefox/WebKit and real device where required, negative broken-script test, accessibility. Current external docs should be reopened before policy claims. Static SEO PASS is not executable UI correctness.
+
+
+## V20 product-value oracle and adversarial human-site check
+Test actual primary user jobs rather than counting tool pages or attractive hero sections. For a CSV deduplicator preserve representative original CSV, exact expected cleaned bytes, malformed input, formula-safety exception, size/row limit, browser download and JS crash cases. Confirm genuine actions on the shipped version in Chromium/Firefox/WebKit where available and physical device when required; a static HTML audit is not function proof.
+**Availability failure:** localhost browser passes but a README links csv-lab.example.org as though it were live. The product is still NOT PUBLIC. Audit the actual link's DNS/HTTPS and working action before concluding user-ready; IANA example.org is explicitly reserved for examples. Record both task output PASS_LOCAL and public deploy UNKNOWN/NO. No invented 10/10 or AdSense outcome. See docs/quality/real-world-release-contract-v20.md and tests/public-demo-v20.test.mjs.
