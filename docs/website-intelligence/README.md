@@ -136,3 +136,16 @@ node scripts/site-intelligence.mjs --atlas-file ./reports-list.json --out ./refe
 `sense-cross-site-intelligence-v24` groups actual observed page route families, public asset/header clues, form hints, sitemap counts, provenance, scan budget states and sampled link depths. It requires 1–15 files in the CLI with 15 MB maximum per report and does **not** normalize raw page counts into market share, visits, ranking, size or engineering superiority. Historical reports from the same origin should be compared with `--previous`, not inserted twice in the same atlas.
 
 The entire chain is: independently sourced results → source-preserving `--discover` → per-origin robots/terms permission → bounded public HTTP scan → separately supplied sanitized HAR (optional) → source-scoped `--packets-out` → cross-site atlas → **independent real user-task tests** → specialist skill handoffs. There is no automatic background crawling or private-site credential use.
+
+## 7) Compare raw HTML against an operator-captured public rendered DOM (optional)
+
+For an expressly permitted, **unauthenticated** page, an operator or Work browser can save a local rendered DOM snapshot. Supply a local JSON array of `{"url":"https://approved-site.tld/","html":"<html>...public DOM...</html>"}` entries through `--rendered-snapshots ./public-dom-snapshots.json`. The analyzer never opens those URLs and never executes scripts; it compares DOM links with the exact same page's previously inspected raw HTML, rejects private/auth paths and token-like URL segments, and exports **only** hashes, public links, H1 metadata and JS-added-link candidates. It neither copies entire DOM nor proves all dynamic navigation. Original DOM snapshots may be sensitive; never commit them, capture from authenticated sessions or send them to unauthorized systems. Snapshot limit: 15 pages, 1 MB per snapshot and 6 MB total.
+
+Example:
+```sh
+node scripts/site-intelligence.mjs \
+  --origin https://approved-site.tld/ --authorized-origin https://approved-site.tld/ \
+  --rendered-snapshots ./public-dom-snapshots.json \
+  --out ./site-evidence.json --packets-out ./site-skill-handoffs.json
+```
+Operator-supplied rendered links are classified `OPERATOR_SUPPLIED_UNAUTHENTICATED` and kept distinct from crawler-observed HTML links in the handoff packet.
