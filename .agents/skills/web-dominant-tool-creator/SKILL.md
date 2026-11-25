@@ -142,3 +142,7 @@ Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-ski
 **Operational acceptance:** Use Anthropic skill-creator methodology: preregister actual unseen tasks, compare fixed no-skill/current-skill/candidate-skill agent runs under same model/capability, save task-oracle receipts, false-trigger negatives and blind human review. Never claim 10× skill effectiveness from a source-list or simulated outputs. Every upstream method must pass provenance/applicability/license checks.
 
 Record exact source/metric/oracle, stop on missing provider permissions, run `node scripts/check-official-skill-integration-v26.mjs` plus domain tests, and label unobserved external deployment/SEO/publisher results `NOT_RUN`.
+
+## V29 optional Studio companion routing
+When the requested output is a browser-local structured-data studio, explicitly consider extensions/v29/skills/web-dominant-studio-v29/SKILL.md after V22 demand/user-job gates. The new Astro sample is real and bounded (20 working CSV/TSV/JSON/JSONL transformations), while Parquet/TOON/Excel workbook, unlimited exports, 500 MB and AdSense production outcomes remain UNVERIFIED or NOT_IMPLEMENTED. Preserve the V23 original 50-skill registry and V21/V22 independent tests. Do not equate an optional companion with semantic certification.
+
