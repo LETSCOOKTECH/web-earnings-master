@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'node:fs';
 import path from 'node:path';
-import {inspectSite,diffSiteReports} from '../lib/site-intelligence/engine.mjs';
+import {inspectSite,diffSiteReports,compactSiteDigest} from '../lib/site-intelligence/engine.mjs';
 import {buildDiscoveryInventory} from '../lib/site-intelligence/discovery.mjs';
 import {summarizeHAR} from '../lib/site-intelligence/har.mjs';
 import {buildSkillHandoffs} from '../lib/site-intelligence/knowledge.mjs';
@@ -77,6 +77,7 @@ async function run(){
    report.operator_rendered_dom_observations=summarizeRenderedDOM(snapshots,{report});
  }
   if(option('--previous'))report.comparison_to_previous=diffSiteReports(loadJSON(option('--previous')),report);
+ report.digest=compactSiteDigest(report);
  report.skill_evidence_ref='Run --packets-out for verified-scope claims and 10 specialist handoffs; not a model training operation.';
  writeResult(out,report);
  const packetsFile=option('--packets-out');
