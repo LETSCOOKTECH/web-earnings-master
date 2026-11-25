@@ -43,3 +43,9 @@ Read docs/ai-search/07-2026-11-24-provider-controls-v15.md. Explicitly separate 
 
 ## V16 independent global-production acceptance
 Read docs/audits/2026-11-24-independent-global-readiness-v16.md and docs/ai-search/01-provider-crawlers-controls.md. Google `none` must block indexing; apply only Googlebot-scoped X-Robots-Tag values. The Perplexity primary original was opened, with Perplexity-User distinct from search crawling; Anthropic began rolling out `__usage_ai-training` recognition October 30 2026 while Google adoption is future. For GEO, preregister provider+locale+human-question+repeat cells, preserving UNAVAILABLE. Run npm run audit:independent-readiness, npm test and real-browser QA. Do not label the knowledge library globally production certified without blind-agent, deployment, live provider and user/revenue proofs.
+
+## V23 November 2026 Search Analytics API contract
+
+The November 16, 2026 Search Analytics API update documents branded/non-branded query classification, `webMultimodal` type and multi-country/device filters: https://developers.google.com/search/blog/2026/11/search-analytics-api-update. Before recommending implementation, inspect the current API reference, authenticated property response and quotas/row limits. Preserve what is actually supported for the specific owned property; missing fields or no access must be marked UNKNOWN, not converted to zero values.
+
+For each measurement include query/filter definitions, country, device, dates, search type, API/report version, time zone, aggregation and sampling/latency caveats. Distinguish normal Search clicks, generative AI reporting, Bing AI visibility, AI answer mentions, qualified human task completion and AdSense earnings. Use `sources/skill-network-v23.json` to route modelled competitor demand back to research and on-site task/retention metrics to growth. Never invent provider account data.

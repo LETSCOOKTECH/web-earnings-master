@@ -34,3 +34,9 @@ Astro is a rendering/build option, not the default answer to every cost or perfo
 
 ## V6 production and research handoff (2026-11-23)
 Astro is a frontend option not a direct Google ranking guarantee; use web-fullstack-production-executor and web-frontend-experience-engineering for real tool outcome and initial accessible HTML. web-backend-api-engineering owns state and API where truly necessary. docs/v6/02-fullstack-production-blueprint.md.
+
+## V23 active Astro starter and upstream review
+
+Implementation source of truth: `examples/astro-jsonl-studio` and `scripts/scaffold-astro-tool-v22.mjs`, **not** legacy `templates/astro` snippets (those are examples only). Route full products through `web-dominant-tool-creator`, and stage/ownership through `sources/skill-network-v23.json`. Before code, use actual installed Astro version and current official docs; Methedrone's pinned `astro-orchestration` and `astro-verification` are methodology references, not installed dependencies. Write an independent job oracle; explicitly choose static Worker vs SSR/adapter/API/queue depending on secrets, input size, latency, data retention and cost. Do not force Astro for unsuitable workloads.
+
+For any new tool: fresh `npm ci`, `npm run check`, `npm run build`, `npm test`, Chromium/Firefox/WebKit browser download/API output, hostile input, no-JS, responsive and a11y checks. Reject the assumption that JSONL/CSV test success generalizes to PDF, media or authenticated server jobs. Public hosting, rendered production HTML, indexing, AI citations and ad approval are separate observation gates.

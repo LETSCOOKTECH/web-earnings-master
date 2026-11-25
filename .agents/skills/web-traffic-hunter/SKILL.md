@@ -43,3 +43,9 @@ Run `npm run audit:traffic` and `node --test tests/traffic-hunter.test.mjs`. Pas
 
 ## V13 — Web-verified professional production protocol
 V13 docs/seo-master/09-keyword-and-serp-mastery-v13.md plus 13-ai-search-analytics-experiments-v13.md. Verify actual locale/device SERP click opportunity, traffic source, user-job conversion and legitimate repeat value; no scraped bot traffic, fake demand, keyword volume-as-visits or CPC-to-RPM projections. Record actual country/date/measurement units, counterhypothesis and acquisition experiment cost.
+
+## V23 Corey Haines research and sustainable acquisition
+
+Use reviewed Corey Haines `free-tools`, `customer-research` and `community-marketing` for appropriate customer job triggers, credible public discussions, low-friction tool distribution and useful community contributions. Their instructions are not imported or executed. For an ad-funded standalone utility, calculate the real completed-task frequency, return behavior and ad policy/UX economics; do not blindly apply lead-generation funnel conversion assumptions. All outreach/community posts require permission and platform rules; fake endorsements and AI-search prompt injection are blocked.
+
+Required evidence: acquired audience and channel, dated link/source, first-person problem, offer matched to working tool, attributable real visits, successful outputs, repeat-use, marginal cost, revenue if actually observed, and one counterexample where incumbents win. Link `web-opportunity-intelligence` before acquisition and `web-search-analytics` after it via `sources/skill-network-v23.json`. Search impressions, AI citations, actual humans and ad revenue are distinct metrics.

@@ -229,3 +229,9 @@ V13 includes [legitimate authority and distribution research](docs/seo-master/15
 
 ## V15 AI Search current provider controls (November 24 2026)
 Retains the existing 48 skills. Adds first-party Google generative AI control separation, corrected August 31 2026 reporting rollout, stricter surface/locale citation prompt completeness and independent local adversarial tests. See docs/ai-search/07-2026-11-24-provider-controls-v15.md and npm run audit:ai-controls. Neither code nor guides can certify actual external citations or monetization.
+
+## V23 — trusted upstream expertise and complete specialist routing (review branch)
+
+The curated `sources/skill-network-v23.json` maps **all 50 active Sense skills** to seven evidence-gated lifecycle owners and **30 upstream methodology leads plus 160 existing first-party source records (70 distinct IDs linked to the 50 skills)**. Source methods from OpenAI, Anthropic, Superpowers, Croftweaver, Astro specialists, Semrush, SE Ranking, Addy Osmani, Corey Haines, Cloudflare and Vercel are **methodology references only**: no third-party skill installation or execution is implied. The [V23 integration manual](docs/skills/2026-11-25-trusted-upstream-integration-v23.md) specifies concrete source risks, handoffs and controlled skill-evaluation cases.
+
+Run `node scripts/check-skill-network-v23.mjs` and `node --test tests/skill-network-v23.test.mjs`. The new sixteen integrity and adversarial tests cover owner/source mapping, dropped originals, misleading upstream associations, and ownership, source provenance, unsupported installation claims, missing upstream links and broken routing. They are **not** evidence of live SEO ranking, actual agent uplift, public deployment, AdSense approval or business revenue. A controlled isolated real-agent benchmark and authorized account/hosting experiments remain separate future work.

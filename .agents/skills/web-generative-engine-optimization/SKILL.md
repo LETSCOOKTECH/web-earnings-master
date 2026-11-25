@@ -73,3 +73,9 @@ Read docs/ai-search/07-2026-11-24-provider-controls-v15.md and verify original v
 
 ## V16 independent global-production acceptance
 Read docs/audits/2026-11-24-independent-global-readiness-v16.md and docs/ai-search/01-provider-crawlers-controls.md. Google `none` must block indexing; apply only Googlebot-scoped X-Robots-Tag values. The Perplexity primary original was opened, with Perplexity-User distinct from search crawling; Anthropic began rolling out `__usage_ai-training` recognition October 30 2026 while Google adoption is future. For GEO, preregister provider+locale+human-question+repeat cells, preserving UNAVAILABLE. Run npm run audit:independent-readiness, npm test and real-browser QA. Do not label the knowledge library globally production certified without blind-agent, deployment, live provider and user/revenue proofs.
+
+## V23 independent provider visibility and source-gated claims
+
+For cross-provider AI Search advice, consult reviewed SE Ranking `seo-ai-search-share-of-voice` as a **method only** (record locale, date, topic cohorts, brand prompts versus unbranded prompts, complete citations and negative results). The external skill is not installed; use its owner-authorized service data only if actually available. A response containing our URL is a citation; not necessarily a positive recommendation, ranked first, human referral or revenue. Never fabricate model samples or infer platform ranking weights.
+
+Google generative Search eligibility uses core indexed/snippet quality rules; recheck https://developers.google.com/search/docs/appearance/ai-features and the control at https://developers.google.com/search/docs/fundamentals/gen-ai-controls before changing crawler policy. Keep other provider controls separate. Pass eligible live crawl outputs to `web-dominant-recommendar`, search/account observations to `web-search-analytics` and authentic user outcomes to `web-traffic-hunter` via the V23 network graph.

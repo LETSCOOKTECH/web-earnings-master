@@ -1,0 +1,1377 @@
+{
+  "schema": "sense-skill-network-v23",
+  "date_utc": "2026-11-25",
+  "declared_active_skills": 50,
+  "release_status": "methods-mapped-not-upstream-installed",
+  "rights": "Do not execute any upstream skill code or copy prose without checking each applicable license. Provenance is not certification.",
+  "upstreams": [
+    {
+      "id": "openai-creator",
+      "url": "https://github.com/openai/skills/blob/main/skills/.system/skill-creator/SKILL.md",
+      "blob_sha": "72bc0b97e7a6476254a9d5c424c9971748402ec3",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Concise progressive skill loading and reusable resources",
+      "risk": "Format quality is not performance proof",
+      "deprecated": true,
+      "replacement": "openai/plugins; old README explicitly deprecates openai/skills",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "anthropic-creator",
+      "url": "https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md",
+      "blob_sha": "65b3a402dbd09b8e83f9d637c6b553875189085c",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Repeated baseline and with-skill tests plus feedback loops",
+      "risk": "Claude runner does not imply Codex compatibility",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "superpowers-tdd",
+      "url": "https://github.com/obra/superpowers/blob/main/skills/writing-skills/SKILL.md",
+      "blob_sha": "09d76b79dd4080fe4dcc9bfb3c54d05dbff8a563",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Test-first skill instructions and RED/GREEN/REFACTOR",
+      "risk": "No external outcome guarantee",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "astro-orchestration",
+      "url": "https://github.com/Methedrone/astro-skills/blob/main/astro-expert-orchestrator/SKILL.md",
+      "blob_sha": "88ed24b63a417c7917f0472b314efe1ed42295b8",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Astro-native versioned specialist routing",
+      "risk": "Always check currently installed Astro version",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "astro-verification",
+      "url": "https://github.com/Methedrone/astro-skills/blob/main/astro-verification/SKILL.md",
+      "blob_sha": "4c407c5ec103aff60ffb2f8662d5883408ed895f",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Build and output-centric Astro verification",
+      "risk": "Build is not a live production result",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "croftweaver",
+      "url": "https://github.com/karero/croftweaver/blob/main/skills/new-website/SKILL.md",
+      "blob_sha": "eb4b46facfbb1fd82adf3d11c4f3e0c47dac9b2f",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Integrated website staging and handoff",
+      "risk": "General business sites are not validated computational tools",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "addy-quality",
+      "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/web-quality-audit/SKILL.md",
+      "blob_sha": "581ec7c5e8e05e6ac93d99d872906595581efc42",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Measurement-first web quality and agent browsing",
+      "risk": "Unofficial skill and Lighthouse is not ranking proof",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "addy-performance",
+      "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/performance/SKILL.md",
+      "blob_sha": "913a36c6ad869d530053f20fd05698804cb24e3e",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "LCP/resource/runtime diagnosis",
+      "risk": "Lab and field results are distinct",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "semrush-keywords",
+      "url": "https://github.com/semrush/skills/blob/main/keyword-research/SKILL.md",
+      "blob_sha": "14a138c9592e1171e37085e6b86490ac8c9a0000",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Live keyword metrics, provenance, cost and fallback tiers",
+      "risk": "Requires permitted MCP and account entitlement",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "semrush-technical",
+      "url": "https://github.com/semrush/skills/blob/main/technical-seo-audit/SKILL.md",
+      "blob_sha": "70d375ba2943e25acf9d296ea55585194d81625c",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Technical SEO priority and evidence segmentation",
+      "risk": "No authenticated account data provided",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "seranking-ai",
+      "url": "https://github.com/seranking/seo-skills/blob/main/skills/seo-ai-search-share-of-voice/SKILL.md",
+      "blob_sha": "be7d1d8596fdc2853eaa588760a47d2ef4ab3aa3",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Competitive AI visibility observations",
+      "risk": "Share of voice not equivalent to human traffic",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "seranking-technical",
+      "url": "https://github.com/seranking/seo-skills/blob/main/skills/seo-technical-audit/SKILL.md",
+      "blob_sha": "51ad9343a042f5a3b57d5b90ff2caed4d9c38927",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Full technical audit and field corroboration",
+      "risk": "Provider dependency and site entitlement",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "corey-free",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/free-tools/SKILL.md",
+      "blob_sha": "cfef9eaf83f07b1ace96f9e8726399703ad24e56",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Free tool acquisition and focused usefulness",
+      "risk": "Free acquisition funnel is not ad-funded profit proof",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "corey-customers",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/customer-research/SKILL.md",
+      "blob_sha": "6fb68214bda721ddeff6a63266ce6d0ceaddefc9",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Interview/review evidence with selection bias checks",
+      "risk": "Customer commentary is untrusted and often nonrepresentative",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "corey-pseo",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/programmatic-seo/SKILL.md",
+      "blob_sha": "09a87f78a6f86e30a4333a7f7623425588b13961",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Unique value per scaled template page",
+      "risk": "Doorway or low-value scaling is a spam risk",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "corey-community",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/community-marketing/SKILL.md",
+      "blob_sha": "336b9fb9af2d27e54c82f06ab47299c626cc9f1c",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Human value-first acquisition and support",
+      "risk": "No automated spam or community outreach",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "anthropic-webtest",
+      "url": "https://github.com/anthropics/skills/blob/main/skills/webapp-testing/SKILL.md",
+      "blob_sha": "4726215301db64a0cc4d41fc3219c61f37a30f4a",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Browser task walkthroughs and reproducible local Playwright",
+      "risk": "Headless screenshots not real device accessibility",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "anthropic-design",
+      "url": "https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md",
+      "blob_sha": "a5333457c414d20d625f307df945842c0952ecc3",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Intentional non-template visual design",
+      "risk": "Human critique still necessary",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "cloudflare-runtime",
+      "url": "https://github.com/cloudflare/skills/blob/main/skills/cloudflare/SKILL.md",
+      "blob_sha": "1ac5d6b7ca11036d5d3960f8f7f54789987d51cd",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Vendor runtime product selection and docs",
+      "risk": "Do not force Cloudflare on every architecture",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "vercel-react",
+      "url": "https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md",
+      "blob_sha": "237988de4a66dd8a71d30a2c24ebe1a86b58d04e",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "React performance and waterfall rules",
+      "risk": "React-only patterns cannot be forced onto Astro",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "eval-harness",
+      "url": "https://github.com/tardigrde/agent-skill-eval",
+      "blob_sha": null,
+      "review": "readme-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Codex/Claude/OpenCode A/B evaluation and pass-k",
+      "risk": "Not installed or run; separate credentials required",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "security-scanner",
+      "url": "https://github.com/cisco-ai-defense/skill-scanner",
+      "blob_sha": null,
+      "review": "readme-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Source quarantine and static scanning",
+      "risk": "Scanner has false negatives",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "official-search",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "blob_sha": null,
+      "review": "original-doc-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Indexability and Google generative Search requirements",
+      "risk": "Revisit current body; not a third-party agent skill",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "official-ads",
+      "url": "https://support.google.com/adsense/answer/48182",
+      "blob_sha": null,
+      "review": "original-doc-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Publisher policy and invalid traffic",
+      "risk": "Account approval unobserved",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "official-astro",
+      "url": "https://docs.astro.build/en/guides/on-demand-rendering/",
+      "blob_sha": null,
+      "review": "original-doc-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Rendering and static vs SSR boundary",
+      "risk": "Version-sensitive docs",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "official-edge",
+      "url": "https://developers.cloudflare.com/workers/platform/limits/",
+      "blob_sha": null,
+      "review": "original-doc-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Plan-specific edge platform limits",
+      "risk": "Model costs not real load test",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "openai-current-web-builder",
+      "url": "https://github.com/openai/plugins/blob/main/plugins/build-web-apps/skills/frontend-app-builder/SKILL.md",
+      "blob_sha": "986beda228c1b4ee6a8882dc54eddd95ebcf2be6",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Webapp design, implementation, real UI and verification",
+      "risk": "Plugin framework-specific commands may not exist in Sense",
+      "license_status": "not-cleared-for-copy",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "openai-current-web-testing",
+      "url": "https://github.com/openai/plugins/blob/main/plugins/build-web-apps/skills/frontend-testing-debugging/SKILL.md",
+      "blob_sha": "ef1203a0f13dfac578bca75139c6ffdfafa730d3",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Independent app debugging and browser-action evidence",
+      "risk": "Browser plugin is not guaranteed in Codex runtime",
+      "license_status": "not-cleared-for-copy",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "openai-current-plugin-eval",
+      "url": "https://github.com/openai/plugins/blob/main/plugins/plugin-eval/skills/improve-skill/SKILL.md",
+      "blob_sha": "4b8aa0b878bad8a1c92c1ec4d8f1ce4e06280a9a",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Use agent-eval findings to drive actual skill improvements",
+      "risk": "Requires evaluation results and plugin-eval runtime",
+      "license_status": "not-cleared-for-copy",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    },
+    {
+      "id": "openai-current-plugin-creator",
+      "url": "https://github.com/openai/plugins/blob/main/.agents/skills/plugin-creator/SKILL.md",
+      "blob_sha": "4a90165c0708ca7967bb5a23c0b1a8f521a3479c",
+      "review": "full-file-reviewed",
+      "transfer": "method-adaptation-only",
+      "install_state": "not-installed",
+      "scope": "Current Codex plugin manifests and plugin packaging",
+      "risk": "Plugin creation is not SKILL.md effectiveness validation",
+      "license_status": "not-cleared-for-copy",
+      "license_observed": "UNKNOWN_OR_PROVIDER_DOC_TERMS",
+      "license_scope": "no wholesale copying authorized",
+      "copy_authorization": "NOT_GRANTED"
+    }
+  ],
+  "stages": [
+    {
+      "id": "orchestration",
+      "owner": "web-dominant-tool-creator",
+      "output": "Evaluated end-to-end release packet",
+      "gate": "HOLD without independent user, market or launch evidence",
+      "next_stage_ids": [
+        "research",
+        "engineering",
+        "quality",
+        "discovery",
+        "publisher",
+        "growth"
+      ],
+      "skills": [
+        {
+          "id": "web-dominant-tool-creator",
+          "upstreams": [
+            "anthropic-creator",
+            "superpowers-tdd",
+            "eval-harness",
+            "openai-current-plugin-eval"
+          ],
+          "deliverable": "Evaluated end-to-end release packet (web-dominant-tool-creator)",
+          "fail_case": "Fabricated demand or rankings, missing functional output, unauthorized deployment, unsafe data, fake demo, unverified publisher approval",
+          "official_source_ids": [
+            "astro-config",
+            "google-ai-features",
+            "google-trends-data",
+            "v21-rfc4180",
+            "v21-owasp-wstg-csv"
+          ],
+          "local_oracle": "Run demand schema adversarial tests; clean Astro 7 install/check/build; independent JSONL output tests and three real browser-engine user action tests",
+          "external_gate": "Independent owner-authorized public DNS/TLS, deployed functionality, GSC/Bing/AI results and real publisher/user outcomes when available",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "owner": "web-opportunity-intelligence",
+      "output": "Dated demand ledger and independent competitor oracle",
+      "gate": "REJECT unsupported demand or invented metrics",
+      "next_stage_ids": [
+        "engineering"
+      ],
+      "skills": [
+        {
+          "id": "web-opportunity-intelligence",
+          "upstreams": [
+            "corey-customers",
+            "corey-free",
+            "semrush-keywords"
+          ],
+          "deliverable": "Dated demand ledger and independent competitor oracle (web-opportunity-intelligence)",
+          "fail_case": "Unauthorized scraping or paid API; fake market metrics, synthetic human sources, absent product oracle/first user acquisition or unapproved development spend",
+          "official_source_ids": [
+            "google-trends-data",
+            "keyword-planner",
+            "semrush-kd"
+          ],
+          "local_oracle": "Validate evidence provenance, Trends CSV metadata, independent origin clusters, hard budget caps, contradictory sources and real competitor output test requirements",
+          "external_gate": "Authorize relevant browser/account scope, open original Google Trends and licensed keyword UI/CSV, inspect human problems and reproduce competitor tasks before owner-reviewed MVP decision",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-research-freshness",
+          "upstreams": [],
+          "deliverable": "Dated demand ledger and independent competitor oracle (web-research-freshness)",
+          "fail_case": "Stale snippet assumed current official policy",
+          "official_source_ids": [
+            "google-search-updates",
+            "google-search-blog",
+            "google-crawling-changelog"
+          ],
+          "local_oracle": "Enforce original-body source date and claim scope",
+          "external_gate": "Reopen vendor policy at action time",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "official-originals-only"
+        },
+        {
+          "id": "web-niche-validation",
+          "upstreams": [
+            "corey-customers",
+            "corey-free"
+          ],
+          "deliverable": "Dated demand ledger and independent competitor oracle (web-niche-validation)",
+          "fail_case": "Commodity clone without defensible workflow",
+          "official_source_ids": [
+            "google-trends-data",
+            "semrush-volume"
+          ],
+          "local_oracle": "Validate sourced market estimates task gap and downside",
+          "external_gate": "Observe actual search and user validation evidence",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-keyword-intent",
+          "upstreams": [
+            "semrush-keywords",
+            "corey-customers"
+          ],
+          "deliverable": "Dated demand ledger and independent competitor oracle (web-keyword-intent)",
+          "fail_case": "Invented volume KD or duplicate intent pages",
+          "official_source_ids": [
+            "keyword-planner",
+            "google-trends-data",
+            "semrush-volume"
+          ],
+          "local_oracle": "Check source types dedupe keyword clusters and click potential",
+          "external_gate": "Compare real SERPs and first-party demand data",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-competitor-audit",
+          "upstreams": [
+            "corey-customers",
+            "semrush-keywords"
+          ],
+          "deliverable": "Dated demand ledger and independent competitor oracle (web-competitor-audit)",
+          "fail_case": "Unverified weakness or modeled traffic presented as fact",
+          "official_source_ids": [
+            "google-seo-starter",
+            "semrush-traffic"
+          ],
+          "local_oracle": "Check fixtures source dates screenshots and error taxonomy",
+          "external_gate": "Repeat rival tool tasks with genuine inputs",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-search-forensic-evidence",
+          "upstreams": [
+            "semrush-technical",
+            "seranking-technical"
+          ],
+          "deliverable": "Dated demand ledger and independent competitor oracle (web-search-forensic-evidence)",
+          "fail_case": "Speculative internal weights sold as facts",
+          "official_source_ids": [
+            "google-search-spam",
+            "google-how-search-works"
+          ],
+          "local_oracle": "Validate citation provenance and confidence classes",
+          "external_gate": "Recheck original dated court/official text",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "owner": "web-fullstack-production-executor",
+      "output": "Functional built tool with verifiable outputs and cost bounds",
+      "gate": "BLOCK broken primary action, unsafe data or unsupported capacity",
+      "next_stage_ids": [
+        "quality",
+        "discovery"
+      ],
+      "skills": [
+        {
+          "id": "web-fullstack-production-executor",
+          "upstreams": [
+            "croftweaver",
+            "astro-orchestration",
+            "astro-verification",
+            "anthropic-webtest",
+            "openai-current-web-builder",
+            "openai-current-web-testing"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-fullstack-production-executor)",
+          "fail_case": "Code-only solution with no useful verified output",
+          "official_source_ids": [
+            "astro-config",
+            "v6-security-23",
+            "google-js-seo",
+            "v21-rfc4180",
+            "v21-mdn-worker"
+          ],
+          "local_oracle": "Run build E2E API security output and rollback test",
+          "external_gate": "Observe deployed task end to end and resource budgets",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-product-spec",
+          "upstreams": [
+            "corey-customers",
+            "corey-free"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-product-spec)",
+          "fail_case": "Feature scope without correct output acceptance",
+          "official_source_ids": [
+            "astro-config",
+            "v6-accessibility-26"
+          ],
+          "local_oracle": "Check acceptance fixtures error cases and resource ceiling",
+          "external_gate": "Verify user acceptance on actual task",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-astro-engineering",
+          "upstreams": [
+            "astro-orchestration",
+            "astro-verification",
+            "croftweaver",
+            "official-astro"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-astro-engineering)",
+          "fail_case": "Client shell only or broken primary tool",
+          "official_source_ids": [
+            "astro-config",
+            "astro-sitemap",
+            "astro-islands"
+          ],
+          "local_oracle": "Build real HTML and test robots redirects and hydration",
+          "external_gate": "Verify deployed pages across devices browsers and CDN",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-backend-api-engineering",
+          "upstreams": [
+            "cloudflare-runtime",
+            "anthropic-webtest"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-backend-api-engineering)",
+          "fail_case": "Cross-tenant data leak or unbounded job bill",
+          "official_source_ids": [
+            "architecture-owasp-api4",
+            "v6-security-23"
+          ],
+          "local_oracle": "Test auth BOLA SSRF timeouts input bounds and idempotency",
+          "external_gate": "Test real authenticated staging and rollback",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-browser-runtime",
+          "upstreams": [],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-browser-runtime)",
+          "fail_case": "Network failure misreported as ranking failure",
+          "official_source_ids": [
+            "architecture-browser-quotas",
+            "google-js-seo"
+          ],
+          "local_oracle": "Run owned HTTP redirects robots TLS and DOM fixtures",
+          "external_gate": "Capture real waterfall and server/CDN headers",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "official-originals-only"
+        },
+        {
+          "id": "web-browser-compute",
+          "upstreams": [
+            "astro-verification",
+            "anthropic-webtest"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-browser-compute)",
+          "fail_case": "Unexpected remote upload or corrupt output",
+          "official_source_ids": [
+            "architecture-browser-wasm-perf",
+            "architecture-browser-quotas",
+            "v21-rfc4180",
+            "v21-mdn-worker",
+            "v21-whatwg-encoding"
+          ],
+          "local_oracle": "Run valid corrupt huge-file worker cancellation fixtures",
+          "external_gate": "Test low-memory real browsers and actual file output",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-conversion-job-platform",
+          "upstreams": [
+            "astro-orchestration",
+            "croftweaver"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-conversion-job-platform)",
+          "fail_case": "Unbounded compute egress or private file leak",
+          "official_source_ids": [
+            "architecture-workers-limits",
+            "architecture-queues-limits"
+          ],
+          "local_oracle": "Test retries max-size auth cancellation rate and bills",
+          "external_gate": "Perform realistic load test plus vendor budget evidence",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-frontend-experience-engineering",
+          "upstreams": [
+            "anthropic-design",
+            "addy-quality",
+            "vercel-react",
+            "openai-current-web-builder"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-frontend-experience-engineering)",
+          "fail_case": "Broken controls on small screens",
+          "official_source_ids": [
+            "astro-islands",
+            "google-core-web-vitals",
+            "v21-wcag22",
+            "v21-mdn-blob-url"
+          ],
+          "local_oracle": "Test empty loading success failure mobile and keyboard paths",
+          "external_gate": "Run real-device interaction performance and accessibility",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-workload-architecture-router",
+          "upstreams": [
+            "cloudflare-runtime",
+            "official-edge",
+            "official-astro"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-workload-architecture-router)",
+          "fail_case": "Framework selected without task or budget evidence",
+          "official_source_ids": [
+            "architecture-workers-limits",
+            "architecture-pages-limits",
+            "architecture-queues-limits"
+          ],
+          "local_oracle": "Validate size latency privacy vendor cost and fallback",
+          "external_gate": "Test candidate workload on target devices and cloud",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-hosting-vendor-evaluation",
+          "upstreams": [
+            "cloudflare-runtime",
+            "official-edge"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-hosting-vendor-evaluation)",
+          "fail_case": "Noncommercial tier used for business without permission",
+          "official_source_ids": [
+            "vendor-vercel-pricing",
+            "vendor-github-pages-commercial",
+            "architecture-workers-pricing"
+          ],
+          "local_oracle": "Validate terms quotes limits and failure alternatives",
+          "external_gate": "Confirm current plan and actual deployment invoices",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-domain-operations",
+          "upstreams": [],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-domain-operations)",
+          "fail_case": "Expired control or broken canonical redirects",
+          "official_source_ids": [
+            "google-search-canonical",
+            "vendor-github-pages-commercial"
+          ],
+          "local_oracle": "Test DNS record invariants redirect mapping and expiry",
+          "external_gate": "Validate actual domain authority and HTTPS responses",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "official-originals-only"
+        },
+        {
+          "id": "web-scale-reliability",
+          "upstreams": [
+            "cloudflare-runtime",
+            "official-edge",
+            "addy-performance"
+          ],
+          "deliverable": "Functional built tool with verifiable outputs and cost bounds (web-scale-reliability)",
+          "fail_case": "Claims 1M concurrency from theoretical free tier",
+          "official_source_ids": [
+            "architecture-workers-limits",
+            "architecture-queues-limits"
+          ],
+          "local_oracle": "Test queue backpressure retry overflow and cost budget",
+          "external_gate": "Load test realistic traffic peaks and recovery",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        }
+      ]
+    },
+    {
+      "id": "quality",
+      "owner": "web-product-validation",
+      "output": "Independent output oracle and adversarial UX/security tests",
+      "gate": "BLOCK misleading local-vs-public or uncontrolled attack cases",
+      "next_stage_ids": [
+        "discovery",
+        "publisher"
+      ],
+      "skills": [
+        {
+          "id": "web-product-validation",
+          "upstreams": [
+            "anthropic-webtest",
+            "addy-quality",
+            "superpowers-tdd",
+            "openai-current-web-testing"
+          ],
+          "deliverable": "Independent output oracle and adversarial UX/security tests (web-product-validation)",
+          "fail_case": "Silent corruption or undisclosed unsupported files",
+          "official_source_ids": [
+            "google-js-seo",
+            "v6-security-23",
+            "v21-rfc4180",
+            "v21-mdn-textdecoder",
+            "v21-owasp-wstg-csv"
+          ],
+          "local_oracle": "Run unit integration fuzz E2E and low-end test fixtures",
+          "external_gate": "Repeat real output and error handling on supported devices",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-security-assurance-asvs",
+          "upstreams": [
+            "security-scanner"
+          ],
+          "deliverable": "Independent output oracle and adversarial UX/security tests (web-security-assurance-asvs)",
+          "fail_case": "Any critical auth or private data flaw",
+          "official_source_ids": [
+            "v6-security-23",
+            "v6-security-24",
+            "v21-owasp-wstg-csv",
+            "v21-owasp-community-csv"
+          ],
+          "local_oracle": "Test access control SSRF uploads XSS supply chain",
+          "external_gate": "Perform authorized pentest and negative production tests",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-security-performance",
+          "upstreams": [
+            "addy-performance",
+            "security-scanner"
+          ],
+          "deliverable": "Independent output oracle and adversarial UX/security tests (web-security-performance)",
+          "fail_case": "Security controls bypassed or fabricated vitals",
+          "official_source_ids": [
+            "v6-security-23",
+            "google-core-web-vitals"
+          ],
+          "local_oracle": "Run auth CSP upload and performance regression fixtures",
+          "external_gate": "Verify production headers logs and field metrics",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-accessibility-agent-ux",
+          "upstreams": [
+            "addy-quality",
+            "anthropic-webtest"
+          ],
+          "deliverable": "Independent output oracle and adversarial UX/security tests (web-accessibility-agent-ux)",
+          "fail_case": "Primary action unusable or unlabeled",
+          "official_source_ids": [
+            "v6-accessibility-26",
+            "google-core-web-vitals"
+          ],
+          "local_oracle": "Run accessible form, keyboard, error and reduced-motion fixtures",
+          "external_gate": "Test real users assistive technology mobile and agent task",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-experiments",
+          "upstreams": [
+            "anthropic-creator",
+            "eval-harness",
+            "openai-current-plugin-eval"
+          ],
+          "deliverable": "Independent output oracle and adversarial UX/security tests (web-experiments)",
+          "fail_case": "Uncontrolled confounders claimed causal",
+          "official_source_ids": [
+            "google-search-console",
+            "discovery-google-play-listing-experiments"
+          ],
+          "local_oracle": "Validate denominator assignment baseline and rollback",
+          "external_gate": "Measure statistically appropriate real user outcomes",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-launch-review",
+          "upstreams": [
+            "croftweaver",
+            "astro-verification",
+            "addy-quality",
+            "openai-current-web-testing"
+          ],
+          "deliverable": "Independent output oracle and adversarial UX/security tests (web-launch-review)",
+          "fail_case": "Live outcome inferred from a passing local test",
+          "official_source_ids": [
+            "google-search-essentials",
+            "google-adsense-site-status",
+            "vendor-github-pages-commercial",
+            "v21-owasp-wstg-csv",
+            "v21-wcag22"
+          ],
+          "local_oracle": "Verify gates with hashes commands and owner blockers",
+          "external_gate": "Inspect deployed site user output and provider status",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-release-observability-operator",
+          "upstreams": [
+            "addy-performance"
+          ],
+          "deliverable": "Independent output oracle and adversarial UX/security tests (web-release-observability-operator)",
+          "fail_case": "No rollback or monitoring for critical flows",
+          "official_source_ids": [
+            "google-search-console",
+            "google-adsense-site-status"
+          ],
+          "local_oracle": "Validate alerts error budgets and rollout simulations",
+          "external_gate": "Perform staged release and incident drill",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        }
+      ]
+    },
+    {
+      "id": "discovery",
+      "owner": "web-technical-seo",
+      "output": "Original technical discovery evidence and actual external attribution states",
+      "gate": "BLOCK fake AI first-place or doorway pages",
+      "next_stage_ids": [
+        "publisher",
+        "growth"
+      ],
+      "skills": [
+        {
+          "id": "web-technical-seo",
+          "upstreams": [
+            "semrush-technical",
+            "seranking-technical",
+            "addy-quality",
+            "official-search"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-technical-seo)",
+          "fail_case": "Indexability inferred from source HTML alone",
+          "official_source_ids": [
+            "google-search-robots",
+            "google-search-canonical",
+            "google-sitemaps",
+            "v21-rfc4180"
+          ],
+          "local_oracle": "Test robots noindex sitemap 404 redirect rendered HTML",
+          "external_gate": "Verify real GSC indexed canonical and bot logs",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-content-and-image-seo",
+          "upstreams": [
+            "addy-quality",
+            "official-search",
+            "corey-pseo"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-content-and-image-seo)",
+          "fail_case": "Duplicated doorway or invented testimonials",
+          "official_source_ids": [
+            "google-image-seo",
+            "google-seo-starter"
+          ],
+          "local_oracle": "Validate intent headings licensing alt and schema truth",
+          "external_gate": "Observe real Search visibility and user task usefulness",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-ai-discovery",
+          "upstreams": [
+            "official-search",
+            "seranking-ai"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-ai-discovery)",
+          "fail_case": "Training crawler confused with search or invented citations",
+          "official_source_ids": [
+            "google-ai-features",
+            "openai-crawlers",
+            "perplexity-crawlers"
+          ],
+          "local_oracle": "Test search bot purpose robots and raw HTML fixture",
+          "external_gate": "Verify actual crawler identities and provider citations",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-ai-retrieval-lab",
+          "upstreams": [
+            "seranking-ai"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-ai-retrieval-lab)",
+          "fail_case": "Single prompt treated as universal ranking proof",
+          "official_source_ids": [
+            "google-ai-features",
+            "openai-crawlers",
+            "bing-ai-performance"
+          ],
+          "local_oracle": "Run citation URL normalization and sampling fixtures",
+          "external_gate": "Sample provider outputs with timestamp version and prompt",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-aeo-answer-optimization",
+          "upstreams": [
+            "official-search"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-aeo-answer-optimization)",
+          "fail_case": "Unverifiable answers or fake special-schema claims",
+          "official_source_ids": [
+            "discovery-aeo-featured-snippets",
+            "google-ai-features"
+          ],
+          "local_oracle": "Validate actual answers and snippet eligibility",
+          "external_gate": "Observe actual SERP answer placements by query and locale",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-generative-engine-optimization",
+          "upstreams": [
+            "official-search",
+            "seranking-ai"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-generative-engine-optimization)",
+          "fail_case": "Manufactured citations or unsupported ranking guarantees",
+          "official_source_ids": [
+            "google-ai-features",
+            "google-generative-guidance",
+            "perplexity-crawlers"
+          ],
+          "local_oracle": "Verify citations against exact claim and source URL",
+          "external_gate": "Sample real AI answers by locale and time",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-dominant-recommendar",
+          "upstreams": [
+            "official-search",
+            "seranking-ai"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-dominant-recommendar)",
+          "fail_case": "No output authenticity, fake ranked first, missing negative responses, manufactured evidence or no actual user value",
+          "official_source_ids": [
+            "google-ai-features",
+            "openai-crawlers",
+            "bing-ai-performance"
+          ],
+          "local_oracle": "Run source atlas validator, recommendation cohort and quote adversarial tests; inspect actual user task and benchmark",
+          "external_gate": "Verify real provider/locale output, Google/Bing owner data and genuine user outcomes independently",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-crawler-governance",
+          "upstreams": [
+            "official-search"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-crawler-governance)",
+          "fail_case": "Verified bots blocked or anonymous bots whitelisted",
+          "official_source_ids": [
+            "google-crawler-overview",
+            "openai-crawlers",
+            "perplexity-crawlers"
+          ],
+          "local_oracle": "Validate RFC robots user agents headers and request parity",
+          "external_gate": "Verify authentic source IP and provider policy live",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-search-internals",
+          "upstreams": [
+            "official-search"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-search-internals)",
+          "fail_case": "Toy retriever equated with Google algorithms",
+          "official_source_ids": [
+            "google-how-search-works",
+            "google-ranking-systems-v4"
+          ],
+          "local_oracle": "Run owned index BM25 rank and canonical fixtures",
+          "external_gate": "Compare controlled live SERP without weight claims",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-search-visibility-systems",
+          "upstreams": [
+            "official-search",
+            "semrush-technical"
+          ],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-search-visibility-systems)",
+          "fail_case": "No citation equated to ranking success",
+          "official_source_ids": [
+            "google-search-essentials",
+            "google-ai-features",
+            "bing-guidelines"
+          ],
+          "local_oracle": "Verify stage-specific discovery indexing and citation gates",
+          "external_gate": "Measure real organic and AI visits with task outcomes",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-app-store-discovery",
+          "upstreams": [],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-app-store-discovery)",
+          "fail_case": "PWA misrepresented as native approved app",
+          "official_source_ids": [
+            "discovery-google-play-ranking",
+            "discovery-apple-search-discovery"
+          ],
+          "local_oracle": "Check distribution target and listing evidence",
+          "external_gate": "Read actual store console and app result evidence",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "official-originals-only"
+        },
+        {
+          "id": "web-aso-apple-app-store",
+          "upstreams": [],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-aso-apple-app-store)",
+          "fail_case": "Fake reviews or unsupported app features",
+          "official_source_ids": [
+            "discovery-apple-app-store-keyword-bytes",
+            "discovery-apple-product-page-optimization"
+          ],
+          "local_oracle": "Validate name subtitle keyword UTF-8 bytes and feature claims",
+          "external_gate": "Test listing in actual App Store Connect by locale",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "official-originals-only"
+        },
+        {
+          "id": "web-aso-google-play",
+          "upstreams": [],
+          "deliverable": "Original technical discovery evidence and actual external attribution states (web-aso-google-play)",
+          "fail_case": "No real Android app or fabricated installs",
+          "official_source_ids": [
+            "discovery-google-play-ranking",
+            "discovery-google-play-listing-metadata"
+          ],
+          "local_oracle": "Validate listing lengths image assets privacy and vitals inputs",
+          "external_gate": "Observe real Play Console conversion and vitals",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "official-originals-only"
+        }
+      ]
+    },
+    {
+      "id": "publisher",
+      "owner": "web-publisher-policy-eligibility",
+      "output": "Applicable ad/consent policy decision and real account status",
+      "gate": "HOLD publisher approval and earnings without original account",
+      "next_stage_ids": [
+        "growth"
+      ],
+      "skills": [
+        {
+          "id": "web-publisher-policy-eligibility",
+          "upstreams": [
+            "official-ads"
+          ],
+          "deliverable": "Applicable ad/consent policy decision and real account status (web-publisher-policy-eligibility)",
+          "fail_case": "Misleading ad controls or falsely approved account",
+          "official_source_ids": [
+            "google-publisher-policies",
+            "google-adsense-site-ready"
+          ],
+          "local_oracle": "Run page-value layout disclosure and account-state gates",
+          "external_gate": "Verify current AdSense review and real page policies",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-adsense-readiness",
+          "upstreams": [
+            "official-ads"
+          ],
+          "deliverable": "Applicable ad/consent policy decision and real account status (web-adsense-readiness)",
+          "fail_case": "Unapproved site claimed Ready or invalid traffic",
+          "official_source_ids": [
+            "google-adsense-site-ready",
+            "google-adsense-site-status",
+            "google-adsense-program",
+            "v21-wcag22"
+          ],
+          "local_oracle": "Audit ad placement content restrictions ownership and ads.txt",
+          "external_gate": "Verify real Google publisher site/account state",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-network-monetization",
+          "upstreams": [
+            "official-ads"
+          ],
+          "deliverable": "Applicable ad/consent policy decision and real account status (web-network-monetization)",
+          "fail_case": "Estimated RPM asserted as observed revenue",
+          "official_source_ids": [
+            "monetag-adsense",
+            "raptive-eligibility-2026",
+            "mediavine-apply"
+          ],
+          "local_oracle": "Audit approval data format privacy and provider terms",
+          "external_gate": "Verify real publisher account and net ad revenue",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-monetization-network-operator",
+          "upstreams": [
+            "official-ads"
+          ],
+          "deliverable": "Applicable ad/consent policy decision and real account status (web-monetization-network-operator)",
+          "fail_case": "Incompatible exclusivity or unsafe ad inventory",
+          "official_source_ids": [
+            "monetag-publisher-rules",
+            "google-adsense-program",
+            "raptive-eligibility-2026"
+          ],
+          "local_oracle": "Check eligibility exclusivity ad formats revenue share",
+          "external_gate": "Verify actual network response contract and paid invoices",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-privacy-consent",
+          "upstreams": [],
+          "deliverable": "Applicable ad/consent policy decision and real account status (web-privacy-consent)",
+          "fail_case": "Unconsented third-party leakage or missing rights",
+          "official_source_ids": [
+            "google-adsense-cmp",
+            "google-adsense-cmp-framework"
+          ],
+          "local_oracle": "Test pre-consent scripts delete requests and cookies",
+          "external_gate": "Inspect real region-specific CMP and legal review",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "official-originals-only"
+        },
+        {
+          "id": "web-ad-experience",
+          "upstreams": [
+            "official-ads",
+            "addy-quality"
+          ],
+          "deliverable": "Applicable ad/consent policy decision and real account status (web-ad-experience)",
+          "fail_case": "Ad can be mistaken for download or primary action",
+          "official_source_ids": [
+            "google-ads-placement",
+            "google-adsense-program"
+          ],
+          "local_oracle": "Check misleading controls CLS ad separation and no ad-only pages",
+          "external_gate": "Review actual ad render and human interactions",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        }
+      ]
+    },
+    {
+      "id": "growth",
+      "owner": "web-traffic-hunter",
+      "output": "Qualified acquisition, completion, retention and marginal cost evidence",
+      "gate": "REJECT invented clicks/RPM and spam acquisition",
+      "next_stage_ids": [
+        "research"
+      ],
+      "skills": [
+        {
+          "id": "web-traffic-hunter",
+          "upstreams": [
+            "corey-community",
+            "corey-free"
+          ],
+          "deliverable": "Qualified acquisition, completion, retention and marginal cost evidence (web-traffic-hunter)",
+          "fail_case": "Any invalid paid traffic, fake engagement, platform disallowed promotion, unverified product or publisher harm",
+          "official_source_ids": [
+            "google-search-links",
+            "google-search-spam"
+          ],
+          "local_oracle": "Validate full traffic-hunter source and channel contracts with 40 negative and positive Node tests",
+          "external_gate": "Observe real permitted publication, qualified landing sessions, validated tool tasks, publisher alerts and reconciled spend",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-authority-distribution",
+          "upstreams": [
+            "corey-community",
+            "corey-pseo"
+          ],
+          "deliverable": "Qualified acquisition, completion, retention and marginal cost evidence (web-authority-distribution)",
+          "fail_case": "Manipulated links fabricated endorsements or click farms",
+          "official_source_ids": [
+            "google-search-links",
+            "google-search-spam"
+          ],
+          "local_oracle": "Test partner relevance and paid link spam exclusions",
+          "external_gate": "Verify authentic referrals links and completed tasks",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-search-analytics",
+          "upstreams": [
+            "semrush-keywords",
+            "seranking-ai"
+          ],
+          "deliverable": "Qualified acquisition, completion, retention and marginal cost evidence (web-search-analytics)",
+          "fail_case": "AI citation counted as human ad visit",
+          "official_source_ids": [
+            "google-search-console",
+            "bing-ai-performance",
+            "google-ai-report"
+          ],
+          "local_oracle": "Validate privacy-safe event schema denominators and query coverage",
+          "external_gate": "Reconcile GSC Bing server logs and actual sessions",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-portfolio-growth",
+          "upstreams": [
+            "corey-free",
+            "corey-customers"
+          ],
+          "deliverable": "Qualified acquisition, completion, retention and marginal cost evidence (web-portfolio-growth)",
+          "fail_case": "Revenue estimate called realized profit",
+          "official_source_ids": [
+            "google-search-console",
+            "google-adsense-site-status"
+          ],
+          "local_oracle": "Validate revenue-cost denominator and accounting period",
+          "external_gate": "Reconcile provider statements bills and returning users",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        },
+        {
+          "id": "web-unit-economics-finops",
+          "upstreams": [
+            "official-edge",
+            "corey-free"
+          ],
+          "deliverable": "Qualified acquisition, completion, retention and marginal cost evidence (web-unit-economics-finops)",
+          "fail_case": "Zero cost declared with uncounted resource costs",
+          "official_source_ids": [
+            "architecture-workers-pricing",
+            "vendor-vercel-pricing"
+          ],
+          "local_oracle": "Check units bill assumptions and agent-abuse scenarios",
+          "external_gate": "Reconcile actual provider bills and traffic",
+          "status": "NOT_AUTHENTICATED",
+          "source_strategy": "vetted-external-method-plus-official-originals"
+        }
+      ]
+    }
+  ],
+  "official_source_registry": "sources/official_sources.json",
+  "existing_skill_source_crosswalk": "sources/skill-evidence-crosswalk-v20.json",
+  "first_party_source_count": 160,
+  "verified_primary_source_reference_count": 70,
+  "note": "A source ID is a time-sensitive first-party document lead, not semantically verified policy or production evidence. Individual source IDs are inherited from existing V20 crosswalk and must be reopened.",
+  "curation_rule": "Only attach external methodology where task-relevant; otherwise use the skill-specific official primary sources. Do not imply irrelevant SEO skill supports Apple ASO, privacy law or unrelated back-end specs.",
+  "source_freshness_notice": "openai/skills is deprecated in favor of openai/plugins; never route deprecated source into active task."
+}
