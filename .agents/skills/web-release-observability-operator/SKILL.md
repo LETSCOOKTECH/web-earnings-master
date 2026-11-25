@@ -44,3 +44,15 @@ description: "Manage production CI/CD, SRE, crawl and publisher readiness, telem
 ## Official primary-source starting points (re-open before action)
 - https://developers.google.com/search/blog/2026/11/crawling-cdn
 - https://asvs.owasp.org/
+
+## V26 — Trusted upstream method integration
+
+Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-skill-integration-v26.json`; verify source organization, Git blob ID and license before task-time adaptation. No unreviewed upstream script execution or bulk copying.
+
+- `vercel-optimize`: Only when actual deployed Vercel metrics exist; metrics-first candidate-gated cost review.
+- `cloudflare-wrangler`: Wrangler only for existing Wrangler config or explicit request; preview/deploy verification.
+- `addy-cwv`: Page-level CrUX p75 with origin fallback; browser traces; comparable lab rerun, no fabricated field shift.
+
+**Operational acceptance:** Compare actual Vercel route metrics and CWV before choosing code changes. Inspect Wrangler project/version and previews before any Cloudflare deploy; keep cloud credentials and changes with explicit authorization. Require deployed DNS/TLS/status/browser task evidence, incident rollback and cost alarms. No first-party data means UNKNOWN, not site is healthy.
+
+Record exact source/metric/oracle, stop on missing provider permissions, run `node scripts/check-official-skill-integration-v26.mjs` plus domain tests, and label unobserved external deployment/SEO/publisher results `NOT_RUN`.
