@@ -54,3 +54,7 @@ Read docs/ai-search/07-2026-11-24-provider-controls-v15.md. Explicitly separate 
 
 ## V16 independent global-production acceptance
 Read docs/audits/2026-11-24-independent-global-readiness-v16.md and docs/ai-search/01-provider-crawlers-controls.md. Google `none` must block indexing; apply only Googlebot-scoped X-Robots-Tag values. The Perplexity primary original was opened, with Perplexity-User distinct from search crawling; Anthropic began rolling out `__usage_ai-training` recognition October 30 2026 while Google adoption is future. For GEO, preregister provider+locale+human-question+repeat cells, preserving UNAVAILABLE. Run npm run audit:independent-readiness, npm test and real-browser QA. Do not label the knowledge library globally production certified without blind-agent, deployment, live provider and user/revenue proofs.
+
+## V24 — reference site discovery is not AI-citation evidence
+
+Use the authorized `web-competitor-audit` / `scripts/site-intelligence.mjs` report only for directly seen public page/robots/canonical signals, and read the `ai_discovery` claim packet. An accessible sitemap, public HTML, structured data or third-party reference site does **not** show indexing by Google, Bing, ChatGPT/Perplexity recommendations, AI answer citations, qualified referrals or increased advertising income. Keep external platform attribution and owner-authenticated measurements UNKNOWN until independently captured. Never infer provider-specific retrieval internals from competitor asset paths.
