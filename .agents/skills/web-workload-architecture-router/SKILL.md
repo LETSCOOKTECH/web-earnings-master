@@ -46,3 +46,7 @@ description: "Select a verified workload-specific web-tool execution architectur
 - `scripts/model-tool-economics.mjs`
 
 **Required handoff:** ADR with tradeoffs, real file-output fixture evidence, provider limits, measured p50/p95 behavior where available, budget matrix, proof of cost guardrails and rollback. If untested, explicitly say NOT_RUN; if infrastructure/account unavailable, UNKNOWN_EXTERNAL. No fixed universal vendor winner.
+
+## V24 — observed competitor technology is an evidence hint, never our architecture decision
+
+Use `scripts/site-intelligence.mjs` through `web-competitor-audit` to obtain timestamped public signal summaries, and optional redacted operator-supplied HAR *only where lawful*. Asset paths (`/_astro/`, `/_next/`), headers (`server`, `cf-ray`, `x-vercel-id`) and form actions are observable clues, not proof of private databases, microservices, server placement, implementation languages or actual costs. Preserve exact `INFERENCE_NOT_INTERNAL_PROOF` flags, route evidence to an independent workload cost/security analysis, and reject decisions that blindly clone a competitor's presumed stack. No million-user throughput statement without simulated workload and deployment measurements.
