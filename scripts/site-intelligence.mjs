@@ -6,6 +6,7 @@ import {buildDiscoveryInventory} from '../lib/site-intelligence/discovery.mjs';
 import {summarizeHAR} from '../lib/site-intelligence/har.mjs';
 import {buildSkillHandoffs} from '../lib/site-intelligence/knowledge.mjs';
 import {buildSiteAtlas} from '../lib/site-intelligence/portfolio.mjs';
+import {summarizeRenderedDOM} from '../lib/site-intelligence/rendered.mjs';
 
 const args=process.argv.slice(2);
 function option(name){const index=args.indexOf(name);if(index<0)return null;const value=args[index+1];if(!value||value.startsWith('--'))throw new Error('MISSING_VALUE_'+name);return value;}
@@ -26,7 +27,7 @@ async function run(){
      'Discovery: node scripts/site-intelligence.mjs --discover path/search-results.json --out path/discovery.json',
      'Compare: node scripts/site-intelligence.mjs --atlas-file path/reports-list.json --out path/reference-atlas.json',
      'Audit: node scripts/site-intelligence.mjs --origin https://site.tld/ --authorized-origin https://site.tld/ --out path/report.json [--seed-file inputs.json]',
-     'Options: --max-pages N --max-sitemaps N --min-delay-ms N --previous previous-report.json --har-file SANITIZED.har --packets-out skill-evidence.json --overwrite',
+     'Options: --max-pages N --max-sitemaps N --min-delay-ms N --previous previous-report.json --har-file SANITIZED.har --rendered-snapshots public-dom-snapshots.json --packets-out skill-evidence.json --overwrite',
      'Never run on private services, inaccessible networks, logged-in accounts or sites where automation is disallowed.',
      'The --authorized-origin flag records operator intent, NOT verified ownership/terms clearance.',
      'Search-result imports are leads only; there is no built-in search-engine scraping.',
@@ -70,7 +71,12 @@ async function run(){
    report.architecture??={source:'NOT_OBSERVED',hosting_backend_database:'UNKNOWN_NOT_OBSERVABLE'};
    report.architecture.har_source='OPERATOR_SUPPLIED_HAR_NOT_INDEPENDENTLY_AUTHENTICATED';
  }
- if(option('--previous'))report.comparison_to_previous=diffSiteReports(loadJSON(option('--previous')),report);
+ const renderedFile=option('--rendered-snapshots');
+ if(renderedFile){
+   const snapshots=loadJSON(renderedFile,6_500_000);
+   report.operator_rendered_dom_observations=summarizeRenderedDOM(snapshots,{report});
+ }
+  if(option('--previous'))report.comparison_to_previous=diffSiteReports(loadJSON(option('--previous')),report);
  report.skill_evidence_ref='Run --packets-out for verified-scope claims and 10 specialist handoffs; not a model training operation.';
  writeResult(out,report);
  const packetsFile=option('--packets-out');
