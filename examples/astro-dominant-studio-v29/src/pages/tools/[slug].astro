@@ -5,6 +5,7 @@ export function getStaticPaths(){return tools.map(tool=>({params:{slug:tool.id},
 const {tool}=Astro.props;
 const related=tools.filter(t=>t.id!==tool.id&&t.group===tool.group).slice(0,8);
 const schema={"@context":"https://schema.org","@type":"WebApplication","name":tool.label,"applicationCategory":"DeveloperApplication","operatingSystem":"Web","description":tool.description};
+const accepted={csv:'.csv,.csv.gz,text/csv',tsv:'.tsv,.tsv.gz',jsonl:'.jsonl,.jsonl.gz',json:'.json,application/json'}[tool.kind];
 const sample=tool.kind==='csv'?'id,name\n00501,Asha\n00502,Lee\n':tool.kind==='tsv'?'id\tname\n00501\tAsha\n00502\tLee\n':tool.kind==='jsonl'?'{"id":"00501","name":"Asha"}\n{"id":"00502","name":"Lee"}\n':'[{"id":"00501","name":"Asha"},{"id":"00502","name":"Lee"}]';
 ---
 <BaseLayout title={tool.label+' | Sense Data Studio'} description={tool.description+' Browser-local execution, real downloadable output and explicit limitations.'} canonicalPath={'/tools/'+tool.id+'/'}>
@@ -17,7 +18,7 @@ const sample=tool.kind==='csv'?'id,name\n00501,Asha\n00502,Lee\n':tool.kind==='t
    <form id="studio-form" class="panel">
     <h2>Source data</h2>
     <label for="studio-file">Choose a {tool.kind.toUpperCase()} file</label>
-    <input id="studio-file" type="file" accept=".csv,.tsv,.jsonl,.json,.csv.gz,.tsv.gz,.jsonl.gz,text/plain,application/json" />
+    <input id="studio-file" type="file" accept={accepted} />
     <label for="studio-input">Or paste your data</label>
     <textarea id="studio-input" spellcheck="false" rows="11" placeholder="Paste file contents here"></textarea>
     <div class="options"><label><input type="checkbox" id="studio-escape" checked/> Protect CSV/TSV spreadsheet formulas</label>
@@ -34,6 +35,12 @@ const sample=tool.kind==='csv'?'id,name\n00501,Asha\n00502,Lee\n':tool.kind==='t
     <button type="button" id="studio-clear-workflows">Delete saved local handoffs</button>
     <p class="hint">Optional: explicit consent can save up to 2 MiB of output in this browser's IndexedDB for a one-time handoff. It expires logically after 30 minutes and is deleted on use. Never use for secrets.</p>
    </div>
+  </section>
+  <section class="note route-guidance" aria-labelledby="route-guidance-title">
+   <h2 id="route-guidance-title">How this specific conversion works</h2>
+   <p data-route-use-case>{tool.useCase}</p>
+   <h2>Download format</h2><p data-route-output>{tool.outputNotes}</p>
+   <h2>Limitations to check</h2><p data-route-caveat>{tool.caveat}</p>
   </section>
   <section class="note"><h2>Limits and fidelity</h2>
    <table><caption>Practical constraints for this tool</caption><tbody>

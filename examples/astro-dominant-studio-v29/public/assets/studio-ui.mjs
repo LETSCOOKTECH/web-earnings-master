@@ -22,7 +22,7 @@ if(box){
  form.addEventListener('submit',async event=>{
   event.preventDefault();reset('Reading source locally…');const id=serial;run.disabled=true;
   try{
-   const text=file.files?.length?await readLocalText(file.files[0]):input.value;
+   const text=file.files?.length?await readLocalText(file.files[0],route.split('-')[0]):input.value;
    if(id!==serial)return;
    if(!text.trim())throw Error('Choose a file or paste nonempty text');
    if(typeof Worker!=='function')throw Error('This browser does not support module Workers');
