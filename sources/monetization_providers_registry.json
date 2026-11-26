@@ -1,0 +1,510 @@
+{
+  "schema": "sense-omni-monetization-registry-v31",
+  "snapshot_date_utc": "2026-11-26",
+  "scope": "PUBLIC WEBSITE AND BROWSER TOOL EARNING MODELS; not a complete index of global commercial activity",
+  "verification_rule": "OFFICIAL_REVIEWED means the cited original page was manually inspected on snapshot date for the stated narrow claim, never that the publisher is eligible or approved; machine hashes do not prove semantic policy.",
+  "discovery_modes": [
+    "PROVIDER_RESEARCH",
+    "COMPETITOR_PUBLIC_EVIDENCE",
+    "OWNED_UNIT_ECONOMICS",
+    "NEW_CHANNEL_CANDIDATES"
+  ],
+  "status_values": [
+    "OFFICIAL_REVIEWED",
+    "CANDIDATE_SOURCE_ONLY",
+    "STALE_REVERIFY",
+    "HOLD_UNVERIFIED_PROVIDER",
+    "REJECTED_POLICY_RISK"
+  ],
+  "public_channels": [
+    {
+      "id": "contextual-display",
+      "label": "Programmatic/contextual display ads",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "managed-display",
+      "label": "Managed header bidding and AdX/GAM partner inventory",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "developer-native",
+      "label": "Privacy-minded native placements and ads for technical audiences",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "direct-sponsorship",
+      "label": "Direct sold campaigns, newsletters and editorial underwriting",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "affiliate",
+      "label": "Relevant disclosed product referrals and revenue share",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "licensing",
+      "label": "Software source and commercial IP licenses",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "subscription",
+      "label": "Feature subscriptions, member-only advanced workflows and team plans",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "one-time-license",
+      "label": "Perpetual or time-limited software/tool unlocks",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "usage-credits",
+      "label": "Metered API, batch processing and compute credits",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "white-label",
+      "label": "Brandable embeddable widgets and OEM data engines",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "lead-generation",
+      "label": "Opt-in qualified client introductions and B2B lead forms",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "marketplace",
+      "label": "Commission on relevant seller/buyer transactions",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "training",
+      "label": "Paid lessons, templates, certification and training",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "consulting",
+      "label": "Services, audits, support retainers and implementation work",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "digital-products",
+      "label": "Templates, presets, guides, plugins and export bundles",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "data-products",
+      "label": "Lawfully licensed/consented original datasets and insights",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "agent-api-licensing",
+      "label": "Paid tool calls, verified API/agent execution and MCP endpoints",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "ai-crawler-licensing",
+      "label": "Paid permissioned AI crawler access and content licensing",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "donations",
+      "label": "Voluntary patronage, donations and GitHub Sponsors",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "newsletter",
+      "label": "Newsletter sponsorships and opt-in email subscriptions",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "jobs-and-listings",
+      "label": "Ethical classified listings, recruiter fees and paid featured posts",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "enterprise-support",
+      "label": "Enterprise SLAs, privacy/hosting plans, compliance and integrations",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "embedded-payments",
+      "label": "Referral/partner revenue on authorized payment services without touching funds",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "events",
+      "label": "Tickets, workshops and workshops sponsorship",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    },
+    {
+      "id": "hardware-and-merch",
+      "label": "Optional legitimate physical products, books and branded merchandise",
+      "profit_model": "UNKNOWN_UNTIL_ACCOUNT_DATA",
+      "suitability": "REQUIRES_USER_TASK_FIT_AND_MEASURED_ECONOMICS"
+    }
+  ],
+  "providers": [
+    {
+      "id": "adsense",
+      "category": "contextual-display",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://support.google.com/adsense/answer/48182",
+      "last_verified": "2026-11-26",
+      "verification_status": "OFFICIAL_REVIEWED",
+      "official_claim_scope": "Google AdSense account/site review and placement/consent restrictions; no universal minimum monthly traffic.",
+      "integration_risk_notes": "Google AdSense account/site review and placement/consent restrictions; no universal minimum monthly traffic.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "google-ad-manager-gpt",
+      "category": "managed-ad-exchange",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://developers.google.com/publisher-tag/samples/refresh",
+      "last_verified": "2026-11-26",
+      "verification_status": "OFFICIAL_REVIEWED",
+      "official_claim_scope": "GPT refresh requires declared inventory and proper partner rights; not general permission to auto-refresh AdSense.",
+      "integration_risk_notes": "GPT refresh requires declared inventory and proper partner rights; not general permission to auto-refresh AdSense.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "journey-mediavine",
+      "category": "managed-display",
+      "min_traffic_requirement": {
+        "sessions_per_month_qualifying_geo": 5000,
+        "domain_months": 4
+      },
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://www.journeymv.com/",
+      "last_verified": "2026-11-26",
+      "verification_status": "OFFICIAL_REVIEWED",
+      "official_claim_scope": "5,000 sessions/month from specified countries, not total global sessions; other editorial checks apply.",
+      "integration_risk_notes": "5,000 sessions/month from specified countries, not total global sessions; other editorial checks apply.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "raptive",
+      "category": "managed-display",
+      "min_traffic_requirement": {
+        "pageviews_per_month": 25000,
+        "domain_months": 6
+      },
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://help.raptive.com/hc/en-us/articles/360032840891-Who-is-eligible-for-Raptive",
+      "last_verified": "2026-11-26",
+      "verification_status": "OFFICIAL_REVIEWED",
+      "official_claim_scope": "25k–99,999 monthly views require 50% specified geo and majority long-form; at 100k+, specified geo ratio differs.",
+      "integration_risk_notes": "25k–99,999 monthly views require 50% specified geo and majority long-form; at 100k+, specified geo ratio differs.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "carbon-ads",
+      "category": "developer-native",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": false,
+      "official_policy_url": "https://www.carbonads.net/faq",
+      "last_verified": "2026-11-26",
+      "verification_status": "OFFICIAL_REVIEWED",
+      "official_claim_scope": "Invitation/manual review, only its ad network on site; do not combine with other ad networks.",
+      "integration_risk_notes": "Invitation/manual review, only its ad network on site; do not combine with other ad networks.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "ethicalads",
+      "category": "developer-native",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://www.ethicalads.io/publishers/",
+      "last_verified": "2026-11-26",
+      "verification_status": "OFFICIAL_REVIEWED",
+      "official_claim_scope": "One ad per page and sole third-party network on the page; payout minimum documented separately; commercial publisher approval required.",
+      "integration_risk_notes": "One ad per page and sole third-party network on the page; payout minimum documented separately; commercial publisher approval required.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "lemon-squeezy",
+      "category": "merchant-of-record",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
+      "last_verified": "2026-11-26",
+      "verification_status": "OFFICIAL_REVIEWED",
+      "official_claim_scope": "India bank payout conditional on Stripe-approved Indian account; otherwise PayPal per current provider text.",
+      "integration_risk_notes": "India bank payout conditional on Stripe-approved Indian account; otherwise PayPal per current provider text.",
+      "payout_evidence": "INDIA_PAYPAL_OPTION;BANK_PAYOUT_REQUIRES_APPROVED_STRIPE_ACCOUNT",
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "paddle",
+      "category": "merchant-of-record",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://developer.paddle.com/get-started/how-paddle-works/",
+      "last_verified": "2026-11-26",
+      "verification_status": "OFFICIAL_REVIEWED",
+      "official_claim_scope": "MoR handles specified buyer transaction taxes; seller's India entity taxes, export classification and payout ability must still be checked.",
+      "integration_risk_notes": "MoR handles specified buyer transaction taxes; seller's India entity taxes, export classification and payout ability must still be checked.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "partnerstack",
+      "category": "affiliate-platform",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": true,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://support.partnerstack.com/hc/en-us/articles/360009377934-Configuring-payout-providers",
+      "last_verified": "2026-11-26",
+      "verification_status": "OFFICIAL_REVIEWED",
+      "official_claim_scope": "Provider lists India among bank/PayPal payout options; each partner program has separate qualification and approval.",
+      "integration_risk_notes": "Provider lists India among bank/PayPal payout options; each partner program has separate qualification and approval.",
+      "payout_evidence": "INDIA_LISTED;ACCOUNT_SPECIFIC",
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "cloudflare-pay-per-crawl",
+      "category": "ai-licensing",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://developers.cloudflare.com/ai-crawl-control/features/pay-per-crawl/what-is-pay-per-crawl/",
+      "last_verified": "2026-11-26",
+      "verification_status": "OFFICIAL_REVIEWED",
+      "official_claim_scope": "Cloudflare describes HTTP 402 pay-per-crawl; beta/account enablement and real buyer demand, Stripe payout eligibility and region need checking.",
+      "integration_risk_notes": "Cloudflare describes HTTP 402 pay-per-crawl; beta/account enablement and real buyer demand, Stripe payout eligibility and region need checking.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "ads-txt",
+      "category": "publisher-ad-supply",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://support.google.com/adsense/answer/12171612",
+      "last_verified": "2026-11-26",
+      "verification_status": "OFFICIAL_REVIEWED",
+      "official_claim_scope": "Only publish authorized seller IDs actually granted to publisher by the network; ads.txt does not confer site approval.",
+      "integration_risk_notes": "Only publish authorized seller IDs actually granted to publisher by the network; ads.txt does not confer site approval.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "google-cmp",
+      "category": "consent-infrastructure",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://support.google.com/adsense/answer/13554116",
+      "last_verified": "2026-11-26",
+      "verification_status": "OFFICIAL_REVIEWED",
+      "official_claim_scope": "EEA/UK/Switzerland Google publisher rules require relevant certified CMP and IAB TCF; consent mode is not substitute.",
+      "integration_risk_notes": "EEA/UK/Switzerland Google publisher rules require relevant certified CMP and IAB TCF; consent mode is not substitute.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "polar",
+      "category": "merchant-of-record",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://polar.sh/",
+      "last_verified": null,
+      "verification_status": "CANDIDATE_SOURCE_ONLY",
+      "official_claim_scope": null,
+      "integration_risk_notes": "Re-check India account activation, payout rails and license fees directly with Polar before use.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "snigel",
+      "category": "managed-display",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://snigel.com/",
+      "last_verified": null,
+      "verification_status": "CANDIDATE_SOURCE_ONLY",
+      "official_claim_scope": null,
+      "integration_risk_notes": "No account threshold, exclusivity, partner type or India payout asserted without original contract.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "freestar",
+      "category": "managed-display",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://freestar.com/",
+      "last_verified": null,
+      "verification_status": "CANDIDATE_SOURCE_ONLY",
+      "official_claim_scope": null,
+      "integration_risk_notes": "Network eligibility and any exclusive ad inventory require original publisher terms.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "buysellads",
+      "category": "direct-ad-marketplace",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://www.buysellads.com/",
+      "last_verified": null,
+      "verification_status": "CANDIDATE_SOURCE_ONLY",
+      "official_claim_scope": null,
+      "integration_risk_notes": "Marketplace acceptance and permitted competing ad placements must be verified.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "impact",
+      "category": "affiliate-platform",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://impact.com/",
+      "last_verified": null,
+      "verification_status": "CANDIDATE_SOURCE_ONLY",
+      "official_claim_scope": null,
+      "integration_risk_notes": "Program-specific commission, attribution, disclosure and India payout rules require direct verification.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "cj-affiliate",
+      "category": "affiliate-platform",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://www.cj.com/",
+      "last_verified": null,
+      "verification_status": "CANDIDATE_SOURCE_ONLY",
+      "official_claim_scope": null,
+      "integration_risk_notes": "Approval and payouts are advertiser/publisher-country specific; no commission guaranteed.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "patreon",
+      "category": "community-memberships",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://www.patreon.com/",
+      "last_verified": null,
+      "verification_status": "CANDIDATE_SOURCE_ONLY",
+      "official_claim_scope": null,
+      "integration_risk_notes": "Local eligibility, tax, fees, sanctions and content rules unverified.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    },
+    {
+      "id": "github-sponsors",
+      "category": "patronage",
+      "min_traffic_requirement": null,
+      "adblock_resilient": null,
+      "india_payout_supported": null,
+      "coexists_with_adsense": null,
+      "official_policy_url": "https://github.com/sponsors",
+      "last_verified": null,
+      "verification_status": "CANDIDATE_SOURCE_ONLY",
+      "official_claim_scope": null,
+      "integration_risk_notes": "Creator region and funding payout support require program settings verification.",
+      "payout_evidence": null,
+      "approval_confirmed": false,
+      "seller_contract_reviewed": false
+    }
+  ],
+  "global_guardrails": {
+    "no_auto_approve_provider": true,
+    "no_ad_traffic_fabrication": true,
+    "no_bot_clicks": true,
+    "no_forced_adblock_bypass": true,
+    "no_automatic_ad_refresh": true,
+    "no_opaque_affiliate_links": true,
+    "no_unverified_payout_claims": true,
+    "india_legal_review_required": true,
+    "publisher_contract_review_required": true
+  }
+}
