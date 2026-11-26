@@ -82,6 +82,14 @@ export async function run(args=argv){
  const has=k=>args.includes(k);
  const registry=localJSON(REGISTRY),quality=validateRegistry(registry);
  if(quality.errors.length)throw Error('PROVIDER_REGISTRY_INVALID:'+quality.errors.join(','));
+ if(has('--catalog')){
+  return {schema:'sense-earning-channel-catalog-v31',source_snapshot:registry.snapshot_date_utc,
+   channels:registry.public_channels,
+   provider_evidence:registry.providers.map(p=>({id:p.id,category:p.category,status:p.verification_status,official_policy_url:p.official_policy_url,
+    last_verified:p.last_verified,india_payout_supported:p.india_payout_supported,coexists_with_adsense:p.coexists_with_adsense})),
+   registry_health:quality,net_earning_claims_verified:false,
+   instruction:'Use this category universe for task-based research, not as a claim that all 25 channels fit or produce money.'};
+ }
  if(has('--recommend')){
   const profile=get('--profile')?localJSON(get('--profile')):{
    niche:get('--niche'),expected_adblock_rate:get('--expected-adblock-rate')??0.2,
