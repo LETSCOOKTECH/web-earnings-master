@@ -1,0 +1,44 @@
+name: V32 AdSense Business Evidence
+on:
+  push:
+    branches:
+      - 'feature/v32-adsense-evidence-growth-system'
+  pull_request:
+    paths:
+      - 'extensions/v32/**'
+      - 'sources/adsense_growth_primary_atlas_v32.json'
+      - 'sources/skill-network-v32.json'
+      - 'docs/adsense-v32/**'
+      - 'scripts/audit-adsense-business-v32.mjs'
+      - 'tests/adsense-business-v32.test.mjs'
+      - 'templates/adsense-v32/**'
+      - '.github/workflows/adsense-business-v32.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  adsense-business:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.22.3'
+      - name: V32 source gates and adversarial tests
+        run: node --test tests/adsense-business-v32.test.mjs
+      - name: V32 sample deliberately shows all missing external proof
+        run: |
+          node scripts/audit-adsense-business-v32.mjs --packet templates/adsense-v32/operator-evidence.example.json > /tmp/adsense-v32-audit.json
+          node -e "const x=require('/tmp/adsense-v32-audit.json');if(x.blockers.length!==7||x.authorized_to_build_automatically!==false||x.ad_approval_verified_by_google!==false)process.exit(1)"
+      - name: V32 economic scenario is not presented as real income
+        run: |
+          node scripts/audit-adsense-business-v32.mjs --scenario '{"monthly_pageviews":100000,"page_rpm_usd":1,"monthly_cash_costs_usd":40}' > /tmp/adsense-v32-scenario.json
+          node -e "const x=require('/tmp/adsense-v32-scenario.json');if(x.gross_revenue_usd!==100||x.net_before_taxes_adjustments_usd!==60||x.does_not_predict_real_income!==true)process.exit(1)"
+      - name: Original 50 registered skills are still independently routed
+        run: |
+          node scripts/check-skill-network-v23.mjs
+          node scripts/validate-skills.mjs
+          node scripts/check-public-agent-access-v27.mjs
+      - name: Full root regression
+        run: npm test
