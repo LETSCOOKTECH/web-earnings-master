@@ -33,6 +33,7 @@ A continuously improved technical research and execution library for the **entir
 The [Omni Monetization Engine](extensions/v31/skills/web-omni-monetization-engine/SKILL.md) helps research **25 legitimate earning channels** for useful websites and browser tools, assess current publisher/affiliate/MoR eligibility, identify public monetization signals, compare revenue-stacks without fabricated RPM, and plan lawful paid-product or B2B experiments. See the [20-provider dated source registry](sources/monetization_providers_registry.json), [source evidence and corrections](docs/monetization/OMNI_EVIDENCE.md) and [read-only discovery CLI](scripts/discover-monetization-stack.mjs). Tested examples use synthetic data. **V31 is an opt-in companion outside the frozen 50 active V23 skills** and cannot autonomously run unscheduled background searches or enroll real publisher accounts. An ad slot template is static and installs no third-party ads; site deployment and revenue remain unverified.
 
 ```bash
+node scripts/discover-monetization-stack.mjs --catalog
 node scripts/discover-monetization-stack.mjs --recommend --niche "developer CSV and JSON tools" --expected-adblock-rate 0.42 --desktop-pct 90 --primary-geo mixed --server-cost 0
 node --test tests/omni-monetization.test.mjs
 ```
