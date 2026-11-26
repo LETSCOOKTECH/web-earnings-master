@@ -128,3 +128,11 @@
 - Added original Astro `MonetizationSlot` template, evidence document, synthetic test receipts, adversarial unit tests and V31 dedicated CI.
 - Real providers' India payout status, ad account approvals, advertiser RPM and earnings are not inferred. Carbon and EthicalAds exclusivity is preserved, AdSense auto-refresh is rejected, and "AI paid crawler access" is experimental until actual funds settle.
 
+
+## V32 — AdSense-first research, website and business operating system (2026-11-26)
+- Added opt-in 7-stage owner-routed master skill without modifying the original 50 V23 registered specialists.
+- Captured 41 date-scoped primary Google/Search/web quality reference entry points (13 opened/reviewed; others require real original inspection) in `sources/adsense_growth_primary_atlas_v32.json`.
+- Added detailed chapters for demand/keyword provenance and AI-substitution tests, production utility correctness/security and SEO/AI eligibility, legitimate acquisition/AdSense and actual net-revenue accounting, and adversarial stage proof.
+- Added `scripts/audit-adsense-business-v32.mjs` with strict metric kinds, multiple evidence origins, competitor real-task fixtures, known invalid traffic hard stops, AdSense account Ready with owner claims, and cost/payout scenarios. Every valid operator JSON packet is explicitly not authenticated business proof.
+- Added V32 adversarial tests, fail-first sample, dedicated GitHub CI and non-destructive routing from existing AdSense, SEO, opportunity and traffic specialists.
+- No real organic traffic, AdSense status, live site deployment, publisher earnings, or proprietary ranking reverse engineering claimed.

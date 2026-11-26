@@ -98,3 +98,13 @@ https://api.github.com/repos/LETSCOOKTECH/web-earnings-master/contents/extension
 
 The original 50 registered skills are still under `.agents/skills/`; the V31 monetization specialist is an optional companion. Agents with no internet can request pasted/uploaded Markdown. The research CLI only accesses external websites with operator authorization; no open-source license creates an external service's payout entitlement or policy compliance.
 
+
+## Optional V32 AdSense research agent — raw public access
+Read `extensions/v32/skills/web-adsense-evidence-growth-operator/SKILL.md` and `sources/adsense_growth_primary_atlas_v32.json` directly:
+
+```text
+https://raw.githubusercontent.com/LETSCOOKTECH/web-earnings-master/main/extensions/v32/skills/web-adsense-evidence-growth-operator/SKILL.md
+https://raw.githubusercontent.com/LETSCOOKTECH/web-earnings-master/main/sources/adsense_growth_primary_atlas_v32.json
+```
+
+This is an **opt-in** skill outside the exact 50 V23 index. Public access to research instructions is not an authenticated Google Search Console, AdSense or real revenue account. No automatic background SEO monitoring is started and no deployment or publisher action occurs without authorization.

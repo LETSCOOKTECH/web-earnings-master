@@ -129,3 +129,7 @@ For every user request that materially depends on current provider terms, run `-
 ### No-go / adversarial challenge set
 
 Before endorsement, ask the agent to prove these fail: AdSense auto-refresh, Carbon combined with AdSense, "HTTP 402 means you are paid", automated promotion of a newly invented network, static ads.txt interpreted as live bidder, missing Indian payout receipt, MoR-as-universal-GST waiver, unapproved publisher ad slots, forced adblock override, fake downloads near ads and cited invented CPC. Prefer an explicit honest `UNKNOWN` over a profitable-looking unverified number.
+
+
+## V32 — AdSense-first deep website execution handoff
+When the user selects **only Google AdSense** as the revenue model, load `extensions/v32/skills/web-adsense-evidence-growth-operator/SKILL.md` and its four research/engineering/distribution chapters. V31 remains the general revenue taxonomy. V32 specializes in original search demand, same-input competitor task comparisons, production utility/SEO, Google organic/AI Search, legitimate audience growth, owner-authorized AdSense account Ready and settled revenue. Do not infer a website's approval or rank from V31 candidate registry, public ads.txt, simulated RPM or static policy links.
