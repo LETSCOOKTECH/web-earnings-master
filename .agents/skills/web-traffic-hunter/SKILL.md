@@ -53,3 +53,7 @@ Required evidence: acquired audience and channel, dated link/source, first-perso
 ## V24 — sampled reference-site URLs are discovery leads, not traffic estimates
 
 Read `web-competitor-audit` source-backed V24 website-intelligence results and its `growth` claims when planning distribution. Distinguish a sitemap URL, indexed URL, ranking keyword, actual human visit, completed task, legitimate ad impression and monetized revenue. Raw page counts, route taxonomy, sampled internal-link structure, CDN or framework signals do not supply search demand or competitor traffic. Get legal distribution/serp evidence separately with dates, region, provider, licensed metric grain and campaign outcomes. Use cross-site atlas solely as a collection of observed website examples and testable acquisition hypotheses.
+
+
+## V32 Google AdSense safe distribution and real visitors
+For AdSense-first businesses use `extensions/v32/skills/web-adsense-evidence-growth-operator/SKILL.md` stages MARKET_DEMAND, REAL_DISTRIBUTION and RECONCILED_ECONOMICS. Test genuine distribution with source/medium and completed human task receipts. No paid-to-click, autosurf, proxies or high-CPM geo impersonation; Google invalid-traffic policy is mandatory. Organic search impressions are not AdSense monetizable pageviews. Zero-party-owner analytics means external outcomes are UNKNOWN.

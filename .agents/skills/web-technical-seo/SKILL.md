@@ -93,3 +93,7 @@ Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-ski
 **Role-specific test oracle:** Use Addy SEO's rendered-page + Lighthouse diagnosis to localize actual technical issues, but independently inspect HTTP status, robots, sitemap, canonical consistency, crawlable original content and owner Search Console. Do not claim Lighthouse SEO checks prove ranking, snippets, citations or revenue.
 
 Check `node scripts/check-official-skill-integration-v26.mjs`, existing domain tests and real external evidence. Missing field data remains `NOT_RUN`; generated local source, SEO score and a source bibliography are not business certification.
+
+
+## V32 AdSense-only crawl/index/AI Search handoff
+For a practical tool business load `extensions/v32/skills/web-adsense-evidence-growth-operator/SKILL.md` stage SEARCH_DEPLOYMENT and `docs/adsense-v32/02-tool-quality-and-search-production.md`. Differentiate crawl/index/serve/organic click/AI citation/fulfilled tool job. Google 2026 AI Search requires no special llms.txt or fan-out pages; spam rules reject scaled doorway pages. Actual production Search Console and indexing receipt remains NOT_RUN if not authorized; passing a local SEO audit is not ranking.

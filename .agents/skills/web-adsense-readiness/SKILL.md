@@ -57,3 +57,6 @@ Apply the V28 publisher route audit and V29 build artifact checks, and inspect a
 
 If the user asks about all earning methods rather than AdSense qualification alone, invoke `extensions/v31/skills/web-omni-monetization-engine/SKILL.md`. Keep the AdSense admission and real publisher account gates separate from the candidate revenue-stack heuristic. Never promise AdSense auto-fill or refresh; verify original Google AdSense policy, CMP, invalid traffic, real site review, ads.txt publisher ID and genuine human results. The V31 static ad slot does **not** serve ads or grant approval. Carbon/other network exclusivity can disallow a proposed "waterfall". No traffic- or income-guarantee claims from candidate registries.
 
+
+## V32 complete website-to-AdSense owner/account verification
+Invoke `extensions/v32/skills/web-adsense-evidence-growth-operator/SKILL.md` for the seven-stage AdSense-first business. Google requires actual site review and Ready status before serving ads; no universal article, monthly traffic or age minimum. Enforce meaningful original tool content, one publisher account rules, relevant certified TCF CMP, current original policies and no clickable download-like ads. The V32 auditor only validates research *structure* and cannot certify account approval.

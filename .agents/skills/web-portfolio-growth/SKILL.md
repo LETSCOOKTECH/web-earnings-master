@@ -29,3 +29,7 @@ description: "Review multiple websites with verifiable organic acquisition, retu
 
 ## Portfolio economics and constrained growth (V5)
 Prioritize human task completions and gross margin per verified success before scaling templates across websites. `web-unit-economics-finops` models hosting, CPU, AI, storage, support, abuse and net revenue; `web-hosting-vendor-evaluation` rejects disallowed commercial free-tier plans. Scaling an unprofitable heavy converter from 10K to 1M MAU multiplies losses and may hurt Ads quality. Store per-product usage and service costs with source dates and kill criteria. `docs/architecture/03-million-user-economics.md`.
+
+
+## V32 revenue-tested AdSense portfolio release
+Read `extensions/v32/skills/web-adsense-evidence-growth-operator/SKILL.md` stage RECONCILED_ECONOMICS. Do not expand from a created tools list or modeled keyword volumes. Require owner's actual GSC, valid publisher ads and net cost/income evidence, repeat user-task success, trend risk and owner approval. A video dashboard screenshot and third-party Ahrefs estimated traffic cannot certify a profitable website.

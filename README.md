@@ -285,3 +285,12 @@ The [additive V29 Studio](examples/astro-dominant-studio-v29/README.md) provides
 
 **Not implemented or externally verified:** Parquet/TOON binaries, DuckDB/OPFS, Excel workbooks, universal 500 MB streams, live AdSense ad/consent integration, owned-domain launch, indexing, search traffic, AI citations, paid customers or profitability. [Detailed truth matrix and corrected official requirements](docs/audits/2026-11-26-v29-implementation-truth.md). Example.org remains noindex/robots-blocked intentionally.
 
+
+## V32 — AdSense-only, evidence-gated search-to-revenue operating system
+The [optional seven-stage AdSense-first growth skill](extensions/v32/skills/web-adsense-evidence-growth-operator/SKILL.md) expands the full site development and monetization workflow: real market demand → 3 independent competitor tests → correct production-quality web tools → crawl/index/AI Search eligibility → legitimate human traffic → official AdSense site/account Ready → cash-adjusted unit economics. It includes a [41-source official primary atlas](sources/adsense_growth_primary_atlas_v32.json), [four detailed reference chapters](docs/adsense-v32/01-market-evidence-and-competitor-intelligence.md), deterministic [offline evidence auditor](scripts/audit-adsense-business-v32.mjs), intentionally unverified sample packet and [adversarial tests](tests/adsense-business-v32.test.mjs). V32 intentionally does NOT fabricate Google traffic, site approval, advertiser RPM, actual AdSense earnings or external testing. The frozen 50 specialist network and V31 all-channel monetization extension remain unchanged.
+
+```sh
+node scripts/audit-adsense-business-v32.mjs --packet templates/adsense-v32/operator-evidence.example.json
+node scripts/audit-adsense-business-v32.mjs --scenario '{"monthly_pageviews":100000,"page_rpm_usd":1,"monthly_cash_costs_usd":40}'
+node --test tests/adsense-business-v32.test.mjs
+```

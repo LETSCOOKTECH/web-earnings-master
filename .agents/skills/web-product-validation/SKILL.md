@@ -77,3 +77,7 @@ Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-ski
 **Required verification and boundaries:** Start and observe a real local server; execute normal, malformed and adversarial end-user inputs in real browser engines and capture output hashes, console errors, screenshots and actual download bytes. Couple Vercel UI findings with Addy layered quality checks; separate static checks, actual rendering, accessibility, human task completion and public-host performance. Preserve failing fixtures as nonregression tests.
 
 Run `node scripts/check-official-skill-integration-v26.mjs` and applicable existing tests. Log artifact/provenance, exact failure, source date and real browser/user metric where available; otherwise `NOT_RUN`. No skill/source label is proof of SEO rank, AI citations, ad eligibility, private architecture or profits.
+
+
+## V32 test-before-publish AdSense utility handoff
+Refer to `extensions/v32/skills/web-adsense-evidence-growth-operator/SKILL.md` stage PRODUCT_ORACLE for actual normal/malformed/boundary correct output, cross-browser E2E, accessibility, security and data retention. No website may be deemed monetization-ready from code generation alone, a single screenshot, inflated content word count or passing fictional unit tests.

@@ -1,0 +1,440 @@
+{
+  "schema": "sense-adsense-source-atlas-v32",
+  "snapshot_utc": "2026-11-26",
+  "evidence_tiers": {
+    "OPENED_OFFICIAL_PAGE_2026_11_26": "Official page was opened and narrow claim reviewed; all policies still must be rechecked before an actual action.",
+    "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED": "Credible original URL, but not fully checked in this research session; action-time original required."
+  },
+  "stages": [
+    "MARKET_DEMAND",
+    "COMPETITOR_GAP",
+    "PRODUCT_ORACLE",
+    "SEARCH_DEPLOYMENT",
+    "REAL_DISTRIBUTION",
+    "ADSENSE_SITE_ACCOUNT",
+    "RECONCILED_ECONOMICS"
+  ],
+  "records": [
+    {
+      "id": "market_trends",
+      "stage": "MARKET_DEMAND",
+      "official_url": "https://support.google.com/trends/answer/4365533",
+      "claim_scope": "Trends normalized search interest, noise and low volume 0 are not absolute monthly searches",
+      "evidence_status": "OPENED_OFFICIAL_PAGE_2026_11_26",
+      "opened_on": "2026-11-26",
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "market_planner",
+      "stage": "MARKET_DEMAND",
+      "official_url": "https://support.google.com/google-ads/answer/7337243",
+      "claim_scope": "Keyword Planner keyword search forecasts and advertiser economics; account billing access can be required",
+      "evidence_status": "OPENED_OFFICIAL_PAGE_2026_11_26",
+      "opened_on": "2026-11-26",
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "market_helpful",
+      "stage": "MARKET_DEMAND",
+      "official_url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "claim_scope": "Original task-value and helpfulness are search publication priorities",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "market_gsc",
+      "stage": "MARKET_DEMAND",
+      "official_url": "https://developers.google.com/search/docs/monitor-debug/search-console-start",
+      "claim_scope": "Owned verified property performance is clicks, impressions by queries and pages",
+      "evidence_status": "OPENED_OFFICIAL_PAGE_2026_11_26",
+      "opened_on": "2026-11-26",
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "market_gsc_api",
+      "stage": "MARKET_DEMAND",
+      "official_url": "https://developers.google.com/webmaster-tools/v1/searchanalytics",
+      "claim_scope": "Search API returns limited/top rows; not exhaustive universal query database",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "market_starter",
+      "stage": "MARKET_DEMAND",
+      "official_url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+      "claim_scope": "Useful content first; SEO not a monetization guarantee",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "competitor_spam",
+      "stage": "COMPETITOR_GAP",
+      "official_url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "claim_scope": "Doorways, scaled content, link spam and search-manipulative content can be penalized",
+      "evidence_status": "OPENED_OFFICIAL_PAGE_2026_11_26",
+      "opened_on": "2026-11-26",
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "competitor_ai",
+      "stage": "COMPETITOR_GAP",
+      "official_url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "claim_scope": "No special AI markup, no query fan-out doorway strategy; indexed/eligible pages and real value",
+      "evidence_status": "OPENED_OFFICIAL_PAGE_2026_11_26",
+      "opened_on": "2026-11-26",
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "competitor_search",
+      "stage": "COMPETITOR_GAP",
+      "official_url": "https://developers.google.com/search/docs/fundamentals/how-search-works",
+      "claim_scope": "Crawling, rendering, indexing and serving are distinct processes",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "competitor_canon",
+      "stage": "COMPETITOR_GAP",
+      "official_url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+      "claim_scope": "Canonical clustering avoids wasting crawl resources on duplicate pages",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "product_webvitals",
+      "stage": "PRODUCT_ORACLE",
+      "official_url": "https://web.dev/articles/defining-core-web-vitals-thresholds",
+      "claim_scope": "LCP, INP, CLS field thresholds and P75 rationale",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "product_page_experience",
+      "stage": "PRODUCT_ORACLE",
+      "official_url": "https://developers.google.com/search/docs/appearance/page-experience",
+      "claim_scope": "Page experience quality matters but passing Core Web Vitals does not guarantee ranking",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "product_javascript",
+      "stage": "PRODUCT_ORACLE",
+      "official_url": "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
+      "claim_scope": "SSR/prerender plus visible initial content for users and bots",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "product_spam",
+      "stage": "PRODUCT_ORACLE",
+      "official_url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "claim_scope": "Misleading download and unwanted software violate search rules",
+      "evidence_status": "OPENED_OFFICIAL_PAGE_2026_11_26",
+      "opened_on": "2026-11-26",
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "product_seo_software",
+      "stage": "PRODUCT_ORACLE",
+      "official_url": "https://developers.google.com/search/docs/appearance/structured-data/software-app",
+      "claim_scope": "SoftwareApplication structured data when appropriate; no guaranteed rich result",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "product_googlebot_2mb",
+      "stage": "PRODUCT_ORACLE",
+      "official_url": "https://developers.google.com/search/blog/2026/03/crawler-blog-post",
+      "claim_scope": "Googlebot indexing system processes first 2MB of many HTML responses; verify exact scope",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "search_essential",
+      "stage": "SEARCH_DEPLOYMENT",
+      "official_url": "https://developers.google.com/search/docs/essentials",
+      "claim_scope": "Crawl-access and index eligibility are prerequisites; no guaranteed organic rank",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "search_technical",
+      "stage": "SEARCH_DEPLOYMENT",
+      "official_url": "https://developers.google.com/search/docs/essentials/technical",
+      "claim_scope": "Public HTTP Googlebot access and nonblocked content essential",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "search_sitemap",
+      "stage": "SEARCH_DEPLOYMENT",
+      "official_url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
+      "claim_scope": "Sitemaps are hints, not indexing promises",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "search_js",
+      "stage": "SEARCH_DEPLOYMENT",
+      "official_url": "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
+      "claim_scope": "Blocking robots or serving noindex in initial HTML can prevent desired rendering",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "search_ai",
+      "stage": "SEARCH_DEPLOYMENT",
+      "official_url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "claim_scope": "AI Mode and AIO require same search foundation; no llms.txt or special markup",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "search_ai_analytics",
+      "stage": "SEARCH_DEPLOYMENT",
+      "official_url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+      "claim_scope": "2026 new generative AI visibility report rolled out to subset, not universally enabled",
+      "evidence_status": "OPENED_OFFICIAL_PAGE_2026_11_26",
+      "opened_on": "2026-11-26",
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "search_structured",
+      "stage": "SEARCH_DEPLOYMENT",
+      "official_url": "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data",
+      "claim_scope": "Markup must reflect visible content; rich results not assured",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "distribution_links",
+      "stage": "REAL_DISTRIBUTION",
+      "official_url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "claim_scope": "Purchased exchange or artificial backlinks can violate link spam policy",
+      "evidence_status": "OPENED_OFFICIAL_PAGE_2026_11_26",
+      "opened_on": "2026-11-26",
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "distribution_traffic",
+      "stage": "REAL_DISTRIBUTION",
+      "official_url": "https://support.google.com/adsense/answer/1348729",
+      "claim_scope": "Auto-surf, paid-to-click and click-exchange invalid traffic prohibited",
+      "evidence_status": "OPENED_OFFICIAL_PAGE_2026_11_26",
+      "opened_on": "2026-11-26",
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "distribution_invalid",
+      "stage": "REAL_DISTRIBUTION",
+      "official_url": "https://support.google.com/adsense/answer/16737",
+      "claim_scope": "Publisher invalid traffic and click encouragement restricted",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "distribution_buy",
+      "stage": "REAL_DISTRIBUTION",
+      "official_url": "https://support.google.com/adsense/answer/1348722",
+      "claim_scope": "Purchased traffic sources need careful quality and provenance review",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "distribution_gsc",
+      "stage": "REAL_DISTRIBUTION",
+      "official_url": "https://developers.google.com/search/docs/monitor-debug/google-analytics-search-console",
+      "claim_scope": "GSC click and impression reports differ from GA sessions; reconcile not add directly",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "adsense_eligibility",
+      "stage": "ADSENSE_SITE_ACCOUNT",
+      "official_url": "https://support.google.com/adsense/answer/9724",
+      "claim_scope": "Publisher owns valuable compliant content and is adult or approved guardian",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "adsense_site_ready",
+      "stage": "ADSENSE_SITE_ACCOUNT",
+      "official_url": "https://support.google.com/adsense/answer/12131223",
+      "claim_scope": "Own site, verify, review, Ready status before serving ads",
+      "evidence_status": "OPENED_OFFICIAL_PAGE_2026_11_26",
+      "opened_on": "2026-11-26",
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "adsense_content",
+      "stage": "ADSENSE_SITE_ACCOUNT",
+      "official_url": "https://support.google.com/adsense/answer/7299563",
+      "claim_scope": "Original relevant content, accessible site and no copyright violations",
+      "evidence_status": "OPENED_OFFICIAL_PAGE_2026_11_26",
+      "opened_on": "2026-11-26",
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "adsense_policy",
+      "stage": "ADSENSE_SITE_ACCOUNT",
+      "official_url": "https://support.google.com/adsense/answer/48182",
+      "claim_scope": "Program policy and publisher restriction applicability",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "adsense_placement",
+      "stage": "ADSENSE_SITE_ACCOUNT",
+      "official_url": "https://support.google.com/adsense/answer/1346295",
+      "claim_scope": "Do not place ads by navigation/download buttons causing accidental clicks",
+      "evidence_status": "OPENED_OFFICIAL_PAGE_2026_11_26",
+      "opened_on": "2026-11-26",
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "adsense_cmp",
+      "stage": "ADSENSE_SITE_ACCOUNT",
+      "official_url": "https://support.google.com/adsense/answer/13554116",
+      "claim_scope": "Certified IAB TCF CMP for applicable EEA, UK, CH traffic",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "adsense_site_add",
+      "stage": "ADSENSE_SITE_ACCOUNT",
+      "official_url": "https://support.google.com/adsense/answer/12169212",
+      "claim_scope": "Site verification and crawler access; no automatic approval",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "adsense_accounts",
+      "stage": "ADSENSE_SITE_ACCOUNT",
+      "official_url": "https://support.google.com/adsense/answer/81904",
+      "claim_scope": "One AdSense account per publisher, not arbitrary account farms",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "adsense_ads_txt",
+      "stage": "ADSENSE_SITE_ACCOUNT",
+      "official_url": "https://support.google.com/adsense/answer/12171612",
+      "claim_scope": "Authorized ads.txt is recommended with actual publisher ID",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "economics_rpm",
+      "stage": "RECONCILED_ECONOMICS",
+      "official_url": "https://support.google.com/adsense/answer/112030",
+      "claim_scope": "Page RPM calculated from estimated revenue and pageviews",
+      "evidence_status": "OPENED_OFFICIAL_PAGE_2026_11_26",
+      "opened_on": "2026-11-26",
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "economics_ad_rpm",
+      "stage": "RECONCILED_ECONOMICS",
+      "official_url": "https://support.google.com/adsense/answer/112032",
+      "claim_scope": "Ad impressions RPM denominator distinct from pageviews",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "economics_gsc",
+      "stage": "RECONCILED_ECONOMICS",
+      "official_url": "https://developers.google.com/search/docs/monitor-debug/google-analytics-search-console",
+      "claim_scope": "Search clicks, sessions, actual AdSense pageviews not interchangeable",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    },
+    {
+      "id": "economics_accuracy",
+      "stage": "RECONCILED_ECONOMICS",
+      "official_url": "https://support.google.com/adsense/answer/16737",
+      "claim_scope": "Invalid traffic adjustments possible; payout/cash receipts source of settlement",
+      "evidence_status": "OFFICIAL_STARTING_POINT_NOT_FULLY_REVIEWED",
+      "opened_on": null,
+      "applicable_geography": "CHECK_OFFICIAL_ORIGINAL_AT_ACTION_TIME",
+      "policy_claim_not_account_approval": true
+    }
+  ],
+  "caveats": {
+    "snapshots_are_not_current_terms": true,
+    "third_party_traffic_is_modeled": true,
+    "keyword_planner_advertiser_competition_not_seo_difficulty": true,
+    "trends_0_100_not_search_volume": true,
+    "owner_gsc_vs_owner_adsense_distinct": true,
+    "site_approved": false,
+    "revenue_observed": false,
+    "live_search_rankings_measured": false,
+    "rankings_and_income_guaranteed": false
+  }
+}

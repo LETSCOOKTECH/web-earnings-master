@@ -1,0 +1,90 @@
+{
+  "schema": "sense-opt-in-adsense-growth-extension-v32",
+  "snapshot_date": "2026-11-26",
+  "state": "OPT_IN_COMPANION_NOT_V23_REGISTERED",
+  "base_manifest": "sources/skill-network-v23.json",
+  "declared_active_skills_unchanged": 50,
+  "skill_path": "extensions/v32/skills/web-adsense-evidence-growth-operator/SKILL.md",
+  "stages": [
+    {
+      "id": "MARKET_DEMAND",
+      "owner": "web-opportunity-intelligence",
+      "handoffs": [
+        "web-niche-validation",
+        "web-traffic-hunter"
+      ],
+      "gate": "2 independent source origins with human need, search estimate relative vs absolute not conflated"
+    },
+    {
+      "id": "COMPETITOR_GAP",
+      "owner": "web-competitor-audit",
+      "handoffs": [
+        "web-product-validation"
+      ],
+      "gate": "3 same-input actual competitor tests and strongest contrary case"
+    },
+    {
+      "id": "PRODUCT_ORACLE",
+      "owner": "web-product-validation",
+      "handoffs": [
+        "web-astro-engineering",
+        "web-security-performance",
+        "web-workload-architecture-router"
+      ],
+      "gate": "independent correct outputs security accessibility and end-to-end real browsers"
+    },
+    {
+      "id": "SEARCH_DEPLOYMENT",
+      "owner": "web-technical-seo",
+      "handoffs": [
+        "web-search-analytics",
+        "web-ai-search-optimization"
+      ],
+      "gate": "actual HTTPS, robots/noindex/canonical, owned GSC and no doorway abuse"
+    },
+    {
+      "id": "REAL_DISTRIBUTION",
+      "owner": "web-traffic-hunter",
+      "handoffs": [
+        "web-search-analytics"
+      ],
+      "gate": "real human legitimate usage; no proxy or artificial ad clicks"
+    },
+    {
+      "id": "ADSENSE_SITE_ACCOUNT",
+      "owner": "web-adsense-readiness",
+      "handoffs": [
+        "web-publisher-policy-eligibility",
+        "web-ad-experience",
+        "web-privacy-consent"
+      ],
+      "gate": "real AdSense Ready owner evidence, policy/CMP and placement review"
+    },
+    {
+      "id": "RECONCILED_ECONOMICS",
+      "owner": "web-unit-economics-finops",
+      "handoffs": [
+        "web-portfolio-growth"
+      ],
+      "gate": "actual publisher revenue receipts, cash settlement, costs, no CPC-to-RPM inference"
+    }
+  ],
+  "corpus": [
+    "docs/adsense-v32/01-market-evidence-and-competitor-intelligence.md",
+    "docs/adsense-v32/02-tool-quality-and-search-production.md",
+    "docs/adsense-v32/03-distribution-approval-and-economics.md",
+    "docs/adsense-v32/04-executable-contract-and-red-team.md"
+  ],
+  "official_atlas": "sources/adsense_growth_primary_atlas_v32.json",
+  "auditor": "scripts/audit-adsense-business-v32.mjs",
+  "sample": "templates/adsense-v32/operator-evidence.example.json",
+  "tests": "tests/adsense-business-v32.test.mjs",
+  "output_flags": {
+    "verified_search_rankings": false,
+    "verified_adsense_site_approval": false,
+    "verified_monthly_profit": false,
+    "worldwide_competitor_age_census": false,
+    "live_serps_tested_for_specific_niche": false
+  },
+  "knowledge_cutoff_is_not_perpetual_policy": true
+}
