@@ -84,3 +84,23 @@ test('V34 allows structurally complete packet only as unverified human review, n
  assert.equal(r.source_artifact_authenticity_verified,false);
  assert.ok(r.hold.some(x=>x.startsWith('GB_')));
 });
+
+test('V34 admits properly attributed GB/CA/AU Planner receipts but still requires competitors and users',()=>{
+ const p=structuredClone(blank);
+ for(const country of ['US','GB','CA','AU'])p.keyword_receipts.push({
+  country,keyword:'heic to jpg',
+  source_url:'https://support.google.com/google-ads/answer/7337243',
+  original_export_receipt:'Illustrative receipt placeholder for schema testing only',
+  metric:'GKP_COUNTRY_MONTHLY_SEARCHES', searches:240,
+  export_authenticated_by_owner:true
+ });
+ const r=auditFieldPacket(p,{now:today});
+ assert.ok(!r.hold.some(x=>x.endsWith('_KEYWORD_EXPORT_NOT_AUTHENTICATED')));
+ assert.ok(!r.hold.includes('US_KEYWORD_ACCOUNT_EXPORT_NOT_AUTHENTICATED'));
+ assert.equal(r.status,'HOLD_DISCOVERY');
+ assert.equal(r.source_artifact_authenticity_verified,false);
+});
+test('V34 malformed null keyword rows do not crash validator',()=>{
+ const p=structuredClone(blank);p.keyword_receipts=[null];
+ assert.ok(auditFieldPacket(p,{now:today}).errors.includes('KEYWORD_RECEIPT_INVALID'));
+});
