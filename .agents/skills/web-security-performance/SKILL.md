@@ -43,3 +43,7 @@ Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-ski
 **Role-specific test oracle:** Collect page-level CrUX p75 field CWV where available, and label origin-wide CrUX fallback; use browser performance traces with equivalent conditions to isolate LCP/INP/CLS issues. Re-run after changes and track field behavior over a real window, never promise a certain ranking or conversion from a lab score.
 
 Check `node scripts/check-official-skill-integration-v26.mjs`, existing domain tests and real external evidence. Missing field data remains `NOT_RUN`; generated local source, SEO score and a source bibliography are not business certification.
+
+## V29 additive browser-data controls
+The V29 prototype validates compound extensions and decodes supported gzip text locally with a post-decompression 16 MiB limit. Downloadable CSV/TSV data has enabled-by-default best-effort CWE-1236 spreadsheet-formula escaping; lexical negative numbers are preserved, but spreadsheet save/reopen testing remains required. Secret redaction is opt-in and heuristic. Never store file payload in public URL hashes or IndexedDB automatically. Ad-supported routes must pass V28 COEP/robots checks, then actual browser ad-compatibility testing; do not silently add global require-corp headers.
+

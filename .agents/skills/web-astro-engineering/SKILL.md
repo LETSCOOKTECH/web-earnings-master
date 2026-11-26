@@ -63,3 +63,7 @@ Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-ski
 **Required verification and boundaries:** For Astro verify static/server/adapter using V25 gate; only apply Vercel React performance rules to installed React islands, not Astro templates. Test initial HTML/no-JS usefulness, lazy-load heavy codecs, network waterfall, worker cancellation and byte-correct downloads on Playwright Chromium/Firefox/WebKit. No app is production-ready until real owned-origin browser output is verified.
 
 Run `node scripts/check-official-skill-integration-v26.mjs` and applicable existing tests. Log artifact/provenance, exact failure, source date and real browser/user metric where available; otherwise `NOT_RUN`. No skill/source label is proof of SEO rank, AI citations, ad eligibility, private architecture or profits.
+
+## V29 additive Studio engineering route
+For browser-local CSV/TSV/JSON/JSONL jobs, review extensions/v29/skills/web-dominant-studio-v29/SKILL.md and the built examples/astro-dominant-studio-v29 project. Its current 16 MiB decoded-text cap and 28 functioning routes are deliberate. Do not describe File.stream() plus an accumulated string as 500 MB zero-memory processing. Run scripts/audit-v29-production-gates.mjs against a genuine Astro dist to enforce a 24 MiB Cloudflare Pages per-asset safety margin, then a live host check. Parquet/TOON, CDN DuckDB-Wasm and OPFS spilling remain NOT_IMPLEMENTED until separate browser, integrity and memory evidence exists.
+

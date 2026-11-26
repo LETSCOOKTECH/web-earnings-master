@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import tools from '../../data/tools.json';
+export function getStaticPaths(){return ['csv','tsv','jsonl','json'].map(group=>({params:{group},props:{group}}));}
+const {group}=Astro.props;
+const subset=tools.filter(t=>t.group===group);
+const title=group.toUpperCase()+' converters and validators';
+---
+<BaseLayout title={title+' | Sense Data Studio'} description={'Explore tested browser-local '+group.toUpperCase()+' transformation tools and outputs.'} canonicalPath={'/hubs/'+group+'/'}>
+ <main class="wrap" id="main"><a class="back" href="/">All categories</a><p class="eyebrow">FORMAT / {group.toUpperCase()}</p><h1>{title}</h1>
+ <p class="intro">Choose a real transformation. Each tool uses an explicit input and output contract, not a renamed landing page. Uploaded files remain on your device, with visible size and format restrictions.</p>
+ <section aria-label="Workflows" class="tool-grid">{subset.map(t=><article class="tool-tile"><h2><a href={'/tools/'+t.id+'/'}>{t.label}</a></h2><p>{t.description}</p></article>)}</section>
+ </main>
+</BaseLayout>

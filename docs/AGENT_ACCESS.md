@@ -61,6 +61,25 @@ cd web-earnings-master
 - **`403`**: API rate limit, policy/proxy restriction or GitHub access controls may be responsible. Inspect response headers; do not fabricate a workaround.
 - **Tool does not support URLs or HTTP**: paste the relevant `SKILL.md` text or provide an archive/upload. No repo setting fixes a tool lacking network access.
 
+## V29 Studio skill — direct agent retrieval
+
+The **optional** Studio companion is publicly readable at:
+
+- Human-readable Markdown: https://github.com/LETSCOOKTECH/web-earnings-master/blob/main/extensions/v29/skills/web-dominant-studio-v29/SKILL.md
+- Raw Markdown for agents: https://raw.githubusercontent.com/LETSCOOKTECH/web-earnings-master/main/extensions/v29/skills/web-dominant-studio-v29/SKILL.md
+- Machine-readable extension overlay: https://raw.githubusercontent.com/LETSCOOKTECH/web-earnings-master/main/sources/skill-network-v29.json
+- Working Astro source: https://github.com/LETSCOOKTECH/web-earnings-master/tree/main/examples/astro-dominant-studio-v29
+
+The 50 registered specialist skills still live at `.agents/skills/<skill-name>/SKILL.md`. The Studio companion is kept separate to preserve original V23 registry contracts. Agents must read its file explicitly from the public index; it is not a hosted API and is not a universal auto-installer. Current source code provides 28 bounded CSV/TSV/JSON/JSONL transformations; it does not implement Parquet/TOON, high-memory-scale streaming or production monetization.
+
+Agents can use GitHub's public Contents API as a fallback if the raw endpoint is unavailable:
+
+```text
+https://api.github.com/repos/LETSCOOKTECH/web-earnings-master/contents/extensions/v29/skills/web-dominant-studio-v29/SKILL.md?ref=main
+```
+
+Read the [root Apache-2.0 license](../LICENSE), [copyright and trademark limitations](../NOTICE) and the [V29 example's upstream MIT attribution](../examples/astro-dominant-studio-v29/THIRD_PARTY_NOTICES.md). A third-party model may require an explicitly supplied raw URL, repo clone, or uploaded skill text; public visibility alone does not grant network access.
+
 ## License and security boundary
 
 The project once used a proprietary license. This release applies Apache-2.0 to eligible current original work. Third-party texts, external URLs, libraries, datasets, trademarks and artwork retain their own rights. Publishing a repository makes its files and history visible, not secure by default. Before sharing credentials or personal data, keep them outside source control; revoke and rotate any credentials exposed in historical commits. A filename-only scan cannot prove secrets absent.

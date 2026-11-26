@@ -48,3 +48,7 @@ Route through `web-publisher-policy-eligibility`, `web-privacy-consent`, `web-ad
 ## V24 — public competitor sites cannot prove publisher approval
 
 Use the `ads` source-linked claim packet from `scripts/site-intelligence.mjs` only to inspect publicly visible layout/navigation potential and observed ad-related resource hints; those hints do not certify that competitors earn ad revenue or meet AdSense policy. Publisher account state, permitted impressions/clicks, CMP acceptance, geographic consent and actual RPM remain external UNKNOWN without provider/owner proof. Never run automation that clicks ads or fabricates views while auditing competitor references. Apply Google policy directly rather than copying an incumbent's placement.
+
+## V29 additive publisher readiness, with official-rule separation
+Apply the V28 publisher route audit and V29 build artifact checks, and inspect actual ad scripts, consent modes and ad-control geometry only on an owner-authorized live property. A CLS <=0.01 target and >=32px visual clearance are internal engineering guardrails, not official AdSense thresholds. Neither 20 indexed pages nor 15 guides of 800 words is a universal Google AdSense acceptance rule. Verify live updated Google sources and account settings before approval claims. For Indian payees, consult RBI service-export FAQs: resident-individual EDF treatment differs from non-individual remittances exceeding ₹10 lakh, and filing dates differ for software vs other services; no universal 30-day mandate.
+

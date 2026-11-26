@@ -1,0 +1,75 @@
+name: V29 Studio actual Astro and browser validation
+on:
+  push:
+    branches:
+      - 'feature/v29-studio-additive'
+  pull_request:
+    paths:
+      - 'examples/astro-dominant-studio-v29/**'
+      - 'scripts/audit-v29-production-gates.mjs'
+      - 'tests/v29-studio-and-gates.test.mjs'
+      - '.github/workflows/studio-v29.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  studio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: examples/astro-dominant-studio-v29
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.22.3'
+          cache: npm
+          cache-dependency-path: examples/astro-dominant-studio-v29/package-lock.json
+      - name: Install pinned Astro dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run source-level Astro type check
+        run: npm run check
+      - name: Build real static HTML routes
+        run: npm run build
+      - name: Run 28-route pure transformation tests
+        run: npm test
+      - name: Validate concrete build output
+        run: |
+          test -f dist/index.html
+          test -f dist/tools/csv-to-jsonl/index.html
+          test -f dist/tools/jsonl-validator/index.html
+          test -f dist/hubs/csv/index.html
+          test -f dist/assets/studio-worker.mjs
+          grep -q 'noindex,follow' dist/tools/csv-to-jsonl/index.html
+          grep -q 'Disallow: /' dist/robots.txt
+      - name: Run bounded release artifact audit
+        run: node ../../scripts/audit-v29-production-gates.mjs --dist dist --origin https://studio.example.org
+      - name: Install real browser engines
+        run: npx playwright install --with-deps chromium firefox webkit
+      - name: Run real browser functional tests
+        run: npm run test:browser
+      - name: Prove release flag is required even with a plausible HTTPS origin
+        run: |
+          SITE_URL=https://candidate-web-tool-domain.com SENSE_RELEASE=local npm run build
+          grep -q 'noindex,follow' dist/tools/csv-to-jsonl/index.html
+          grep -q 'Disallow: /' dist/robots.txt
+      - name: Simulate public-source mode only (NOT a real deployed or owned website)
+        run: |
+          SITE_URL=https://candidate-web-tool-domain.com SENSE_RELEASE=public npm run build
+          grep -q 'max-snippet:-1' dist/tools/csv-to-jsonl/index.html
+          if grep -q 'noindex' dist/tools/csv-to-jsonl/index.html; then
+            echo 'FAIL: public source build contains noindex'; exit 1
+          fi
+          grep -q 'Allow: /' dist/robots.txt
+          node ../../scripts/audit-v29-production-gates.mjs --dist dist --origin https://candidate-web-tool-domain.com --production
+          if SITE_URL=https://studio.example.org SENSE_RELEASE=public npm run build; then
+            echo 'FAIL: reserved example.org host accepted as public'; exit 1
+          fi
+      - name: Archive browser receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: studio-v29
+          path: examples/astro-dominant-studio-v29/artifacts/
+          if-no-files-found: warn

@@ -1,0 +1,33 @@
+{
+  "schema": "sense-free-research-v29",
+  "study": "SYNTHETIC_EXAMPLE_NOT_A_REAL_DEMAND_CHECK",
+  "paid_api_required": false,
+  "receipts": [
+    {
+      "type": "TRENDS_RELATIVE",
+      "url": "https://trends.google.com/trends/explore",
+      "artifact": "operator/google-trends-batch.csv",
+      "observed_at": "2026-11-20T09:00:00Z",
+      "independence_group": "google-trends",
+      "control": "csv to json",
+      "unit": "NORMALIZED_GOOGLE_TRENDS_0_100",
+      "observation": "Synthetic placeholder: needs the dated original multi-keyword Google Trends CSV export."
+    },
+    {
+      "type": "COMPETITOR_SAME_TASK",
+      "url": "https://example.com",
+      "artifact": "operator/competitor-screenshot.png",
+      "observed_at": "2026-11-20T09:00:00Z",
+      "independence_group": "competitor-task",
+      "observation": "Synthetic placeholder: run identical real input and capture output and restrictions."
+    },
+    {
+      "type": "PUBLIC_CPC_PROXY",
+      "url": "https://www.semrush.com/analytics/keywordoverview/",
+      "artifact": "operator/cpc-snapshot.png",
+      "observed_at": "2026-11-20T09:00:00Z",
+      "independence_group": "keyword-provider",
+      "observation": "Synthetic placeholder: CPC is only advertiser demand proxy, not search traffic."
+    }
+  ]
+}

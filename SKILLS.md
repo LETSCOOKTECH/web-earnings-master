@@ -71,3 +71,8 @@ Read only the skills relevant to the user's task, follow their relative referenc
 Current LETSCOOKTECH-owned material is available under [Apache License 2.0](LICENSE), subject to the [NOTICE](NOTICE). External sources, upstream methodology links and third-party components are **not automatically relicensed**. No source, score, or successful local test is proof of Google rankings, advertiser approval, human traffic or income.
 
 **Agent access errors:** If a tool claims the repository is private or unindexed, directly request a raw URL or the GitHub public Contents API `https://api.github.com/repos/LETSCOOKTECH/web-earnings-master/contents/AGENTS.md?ref=main`. Search indexing and file permission are distinct. A tool may still be blocked by its own network capabilities, rate limits or stale cache; public visibility cannot override that.
+
+## Optional V29 Studio companion (outside the frozen 50-skill registry)
+
+The experimental [web-dominant-studio-v29 companion](extensions/v29/skills/web-dominant-studio-v29/SKILL.md) is a distinct opt-in module for browser-local data work, not a replacement for, or a silently registered 51st active V23 skill. See [working Astro source](examples/astro-dominant-studio-v29/README.md), [the source/production truth ledger](docs/audits/2026-11-26-v29-implementation-truth.md) and [V29 extension overlay](sources/skill-network-v29.json). The 50 numbered original entries remain authoritative for legacy agents and tests.
+
