@@ -20,6 +20,8 @@ A continuously improved technical research and execution library for the **entir
 
 **This repository is a knowledge and verification system—not a website template, not a guarantee of Google rankings, and not proof of AdSense approval.** Research is dated; provider rules must be checked against current primary sources before consequential decisions.
 
+**V28 evidence-backed release review:** see the [cross-chat reconciliation and publisher/indexability release gates](docs/audits/2026-11-26-cross-chat-v28-reconciliation.md) for the current seven-issue triage, crawler/ad-header checks, runnable commands, and explicitly unverified production, search and monetization claims.
+
 ## CURRENT LAUNCH TRUTH — local examples are not public websites
 
 **LOCAL CSV LAB — NOT PUBLIC.** The repository's [CSV deduplication example](examples/seo-csv-lab/README.md) is a **working local test fixture**, not a hosted demo. `csv-lab.example.org` is an IANA-reserved example hostname, not an actual deployable site; do not click or share it as a live product. To use the tool, run `node scripts/preview-seo-csv-lab-v20.mjs` locally and open the exact localhost address printed. To prepare a candidate root-domain build, use `node scripts/build-public-csv-demo-v20.mjs --origin https://YOUR_ACTUAL_OWNED_DOMAIN/ --out .tmp/csv-public`, then run the real domain and browser checks **after** actually deploying. A successful build or local Playwright test never means DNS, public HTTPS, Google indexing, AdSense approval or human visits are verified.

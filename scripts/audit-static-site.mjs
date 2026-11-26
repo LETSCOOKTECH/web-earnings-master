@@ -4,6 +4,7 @@ import path from 'node:path';
 import process from 'node:process';
 import {evaluateRobots} from './robots-evaluator.mjs';
 import {validatePublicSiteOrigin} from './validate-public-origin-v20.mjs';
+import {findNoindexDirectives} from './publisher-indexability-v28.mjs';
 
 function args(a){const m={};for(let i=0;i<a.length;i++){if(!a[i].startsWith('--'))continue;const key=a[i].slice(2);if(a[i+1]&&!a[i+1].startsWith('--'))m[key]=a[++i];else m[key]=true;}return m;}
 const opt=args(process.argv.slice(2));
@@ -52,7 +53,9 @@ for(const f of htmls){
  if(h1!==1)errors.push(`${relative}: expected one h1, got ${h1}`);
  if(canTag.length!==1)errors.push(`${relative}: expected exactly one canonical link`);
  if(canonical!==target)errors.push(`${relative}: expected canonical ${target}, got ${canonical}`);
- if(/<meta\s+[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html))errors.push(`${relative}: noindex on a built page in this indexable-page audit; use an explicit noindex-aware project route manifest for intentional exclusions`);
+ for(const d of findNoindexDirectives(html)){
+  if(['robots','googlebot','bingbot'].includes(d.agent))errors.push(`${relative}: indexable built page has ${d.agent} ${d.source} noindex/none; intentional exclusions require an explicit noindex-aware route manifest`);
+ }
  if(titleMap.has(title))errors.push(`${relative}: duplicate title with ${titleMap.get(title)}`);titleMap.set(title,relative);
  if(canonicalMap.has(canonical))errors.push(`${relative}: duplicate canonical with ${canonicalMap.get(canonical)}`);canonicalMap.set(canonical,relative);
  siteUrls.push(target);
@@ -63,7 +66,7 @@ else{
  const r=fs.readFileSync(robots,'utf8');
  for(const target of siteUrls){
    const pathname=new URL(target).pathname;
-   for(const bot of ['Googlebot','Bingbot']){
+   for(const bot of (opt.monetized?['Googlebot','Bingbot','Mediapartners-Google']:['Googlebot','Bingbot'])){
     const decision=evaluateRobots(r,bot,pathname);
     if(!decision.allowed)errors.push(`Robots blocks ${bot} from indexable ${pathname}; applicable group: ${decision.selectedAgents.join(',')} matched: ${JSON.stringify(decision.match)}`);
    }
@@ -87,7 +90,8 @@ else{
  for(const u of siteUrls)if(!urlsInMaps.has(u))errors.push(`Canonical page omitted from sitemap: ${u}`);
  for(const u of urlsInMaps)if(!siteUrls.includes(u))warnings.push(`Sitemap URL has no matching built HTML: ${u}`);
 }
-console.log(`Checked ${htmls.length} built HTML pages, robots, sitemap. (STATIC SIGNALS ONLY)`);
+console.log(`Checked ${htmls.length} built HTML pages, robots, sitemap. (STATIC SIGNALS ONLY${opt.monetized?'; ALL routes declared monetized':''})`);
+if(opt.monetized)warnings.push('Ad monetization: static HTML/robots checks cannot verify deployed HTTP headers, live AdSense fill, visual ad placement or accidental clicks. Run owned-domain live and browser audits.');
 if(warnings.length)console.warn('WARNINGS:\n'+warnings.join('\n'));
 if(errors.length){console.error('FAIL:\n'+errors.join('\n'));process.exitCode=1;}
 else console.log('PASS: static SEO artifact checks (does NOT prove indexing, ranking, live HTTP or policy approval).');
