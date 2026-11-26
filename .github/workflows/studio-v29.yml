@@ -8,6 +8,8 @@ on:
       - 'examples/astro-dominant-studio-v29/**'
       - 'scripts/audit-v29-production-gates.mjs'
       - 'tests/v29-studio-and-gates.test.mjs'
+      - 'tests/v30-report-hardening.test.mjs'
+      - 'scripts/audit-ad-geometry-v29.mjs'
       - '.github/workflows/studio-v29.yml'
   workflow_dispatch:
 permissions:
