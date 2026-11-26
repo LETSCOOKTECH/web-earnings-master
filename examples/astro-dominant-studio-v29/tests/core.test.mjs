@@ -74,3 +74,13 @@ test('secret masking is opt-in and not presented as universal PII detection',()=
 test('maximum decoded text size fails instead of silently truncating',()=>{
  assert.throws(()=>executeStudio('json-pretty','a'.repeat(MAX_INPUT_BYTES+1)),/16 MiB/);
 });
+
+test('spreadsheet exports also escape dangerous HEADER cells, not just row data',()=>{
+ const unsafe='=1+1,id\nitem,00501\n';
+ const out=executeStudio('csv-to-excel-csv',unsafe).output;
+ assert.equal(out,"\ufeff'=1+1,id\r\nitem,00501\r\n");
+ assert.equal(executeStudio('csv-to-tsv',unsafe).output,"'=1+1\tid\r\nitem\t00501\r\n");
+ const json=executeStudio('json-to-csv','[{"=1+1":"ok","id":"00501"}]').output;
+ assert.equal(json,"'=1+1,id\r\nok,00501\r\n");
+ assert.equal(serializeDelimited([['+DANGER'],['-42.50']],',',{sanitize:false}),'+DANGER\r\n-42.50\r\n');
+});
