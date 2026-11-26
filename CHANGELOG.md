@@ -119,3 +119,12 @@
 - Fixed compound file extension parsing, Astro dynamic static-path build problem and hidden-attribute override on a stale output download link caught by cross-engine Playwright.
 - Preserved V21/V22 and V28 modules. Real Parquet/TOON, DuckDB-Wasm, true 500 MB streaming, real ad placement/CLS, legal/publisher approval, external traffic and revenue remain NOT_RUN / NOT_IMPLEMENTED. This release is an experimental local sample, not a production claim.
 
+
+## V31 — Omni monetization research companion (2026-11-26)
+
+- Added opt-in `extensions/v31/skills/web-omni-monetization-engine/SKILL.md` without changing the 50 registered skills.
+- Added dated source registry covering 25 earning channels and 20 provider/primary-document starting points, with explicit unknown payout or contract fields.
+- Added read-only, opt-in `scripts/discover-monetization-stack.mjs` and `scripts/omni-monetization-core.mjs`: profile-based recommendation, offline synthetic or robots-respecting public HTTPS fingerprint, candidate verification and narrow official policy watch. Network reads require explicit exact-domain allowlist; no automatic registry mutation.
+- Added original Astro `MonetizationSlot` template, evidence document, synthetic test receipts, adversarial unit tests and V31 dedicated CI.
+- Real providers' India payout status, ad account approvals, advertiser RPM and earnings are not inferred. Carbon and EthicalAds exclusivity is preserved, AdSense auto-refresh is rejected, and "AI paid crawler access" is experimental until actual funds settle.
+

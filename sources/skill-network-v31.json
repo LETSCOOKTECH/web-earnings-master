@@ -1,0 +1,36 @@
+{
+  "schema": "sense-opt-in-monetization-extension-v31",
+  "created_utc": "2026-11-26",
+  "status": "OPT_IN_NOT_V23_REGISTERED",
+  "base_manifest": "sources/skill-network-v23.json",
+  "declared_active_skills_unchanged": 50,
+  "opt_in_companions": [
+    {
+      "id": "web-omni-monetization-engine",
+      "skill_path": "extensions/v31/skills/web-omni-monetization-engine/SKILL.md",
+      "owners": [
+        "web-network-monetization",
+        "web-adsense-readiness",
+        "web-monetization-network-operator",
+        "web-unit-economics-finops"
+      ],
+      "input": "Observed audience profile, candidate websites, real source permissions, geo and legal context",
+      "output": "25-channel discovery, risk-gated provider shortlist, actual unit-economics evidence and cheapest tests",
+      "excludes": [
+        "Account verification",
+        "Guaranteed earnings",
+        "Live AdSense placement",
+        "Automatic approval",
+        "Background discovery without scheduling"
+      ]
+    }
+  ],
+  "evidence_registry": "sources/monetization_providers_registry.json",
+  "CLI": "scripts/discover-monetization-stack.mjs",
+  "safe_core": "scripts/omni-monetization-core.mjs",
+  "static_slot": "templates/astro-monetization-slot/MonetizationSlot.astro",
+  "security_test": "tests/omni-monetization.test.mjs",
+  "completed_source_review_is_not_perpetual_policy_verification": true,
+  "verified_payouts_received": false,
+  "financial_outcomes_observed": false
+}

@@ -57,3 +57,8 @@ Read `docs/skills/2026-11-25-official-upstream-v26.md` and `sources/official-ski
 **Operational acceptance:** Obtain owner Vercel billing metrics before route-level optimization and preserve actual invoice granularity. Model request, egress, CPU, storage, bot, retries and worker costs per completed human job; show uncertainty and worst-case limits. Neither modeled competitor visitors nor advertiser CPC supplies real AdSense RPM or publisher profitability.
 
 Record exact source/metric/oracle, stop on missing provider permissions, run `node scripts/check-official-skill-integration-v26.mjs` plus domain tests, and label unobserved external deployment/SEO/publisher results `NOT_RUN`.
+
+## V31 — per-channel earned cash and cost-of-service ledger
+
+When reviewing candidate monetization sources, open `extensions/v31/skills/web-omni-monetization-engine/SKILL.md`. A recommendation is an unapproved experiment; use owner-provided actual ad account payments, collected subscriptions, net invoice revenue and refunds rather than advertiser CPC anecdotes. Deduct real hosting/CPU, partner revenue share, KYC/FX fees, merchant-of-record charges, support, payment failures and tax/compliance expenses before computing real net per fulfilled human task. No Chrome browser fingerprint/ad script/HTTP 402 event constitutes a paid impression or customer settlement.
+

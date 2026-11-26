@@ -45,3 +45,8 @@ description: "Compare Google AdSense, Journey/Mediavine, Raptive, Ezoic, Media.n
 ## Official primary-source starting points (re-open before action)
 - https://help.raptive.com/hc/en-us/articles/360032840891-Who-is-eligible-for-Raptive
 - https://www.mediavine.com/application-requirements/
+
+## V31 — revenue channel incompatibility and live discovery routing
+
+Before recommending a multi-network mix, inspect `extensions/v31/skills/web-omni-monetization-engine/SKILL.md` and source-check each partner's current exclusivity, payout rails and approval rules. Public ads.txt is merely an authorized seller declaration; HTML ad scripts cannot establish active auctions, geo fill, RPM or income. Developer native networks may be exclusive and incompatible with programmatic display. No adblock circumvention, automatic AdSense ad refresh, or deceptive fallback. A new provider candidate never self-certifies or updates `sources/monetization_providers_registry.json` from self-authored claims.
+

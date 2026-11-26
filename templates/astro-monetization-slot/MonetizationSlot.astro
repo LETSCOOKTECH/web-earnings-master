@@ -1,0 +1,56 @@
+---
+/**
+ * EXAMPLE ONLY: no third-party ad scripts are installed or approved here.
+ * One mode at a time; does not detect, defeat or bypass ad blockers.
+ * Reserve space to reduce shift risk; zero CLS must be measured in actual browser.
+ */
+interface Props {
+ id:string;
+ mode?:'sponsor'|'ad'|'none';
+ provider?:'adsense'|'gam'|'carbon'|'ethicalads'|'other';
+ sponsorName?:string;
+ sponsorUrl?:string;
+ sponsorCopy?:string;
+ approvedByOwner?:boolean;
+ refreshSeconds?:number;
+}
+const {
+ id,mode='none',provider='other',
+ sponsorName='',sponsorUrl='',sponsorCopy='',
+ approvedByOwner=false,refreshSeconds=0
+}=Astro.props;
+if(!/^[a-z][a-z0-9-]{1,60}$/.test(id))throw new Error('SLOT_ID_INVALID');
+if(!['sponsor','ad','none'].includes(mode))throw new Error('SLOT_MODE_INVALID');
+if(!['adsense','gam','carbon','ethicalads','other'].includes(provider))throw new Error('PROVIDER_NOT_IN_TEMPLATE');
+if(refreshSeconds!==0)throw new Error('POLICY_HOLD_NO_AUTOMATIC_REFRESH_IN_THIS_TEMPLATE');
+if(mode==='ad'&&!approvedByOwner)throw new Error('HOLD_AD_SLOT_OWNER_APPROVAL_REQUIRED');
+if(mode==='sponsor'){
+ if(!sponsorName.trim()||!sponsorCopy.trim())throw new Error('SPONSOR_DISCLOSURE_REQUIRED');
+ let u:URL;
+ try{u=new URL(sponsorUrl);}catch{throw new Error('SPONSOR_URL_INVALID');}
+ if(u.protocol!=='https:'||u.username||u.password)throw new Error('SPONSOR_URL_MUST_BE_HTTPS');
+}
+---
+{mode!=='none'&&<aside class="sense-monetization-slot" aria-label={mode==='sponsor'?'Sponsored recommendation':'Advertisement'} data-slot-id={id} data-mode={mode} data-provider={mode==='ad'?provider:'none'}>
+ {mode==='sponsor'?<div class="sense-sponsored">
+   <span class="sense-ad-label">Sponsored · Paid placement</span>
+   <a href={sponsorUrl} target="_blank" rel="sponsored nofollow noopener noreferrer" class="sense-ad-name">{sponsorName}</a>
+   <p>{sponsorCopy}</p>
+ </div>:<div class="sense-publisher-ad" aria-label="Advertisement">
+   <span class="sense-ad-label">Advertisement</span>
+   <slot name="publisher-ad" />
+ </div>}
+</aside>}
+<style>
+.sense-monetization-slot{--min-h:110px;display:block;min-height:var(--min-h);
+ margin-block:32px;contain:layout style;box-sizing:border-box;background:#151b25;
+ border:1px solid #303a48;border-radius:8px;overflow:hidden}
+.sense-publisher-ad,.sense-sponsored{min-height:var(--min-h);padding:12px 16px;
+ display:flex;flex-direction:column;justify-content:center;box-sizing:border-box}
+.sense-ad-label{display:block;font:600 10px/1.4 system-ui,sans-serif;
+ letter-spacing:.12em;text-transform:uppercase;color:#a5aec2}
+.sense-ad-name{color:#e9eef8;font:600 14px/1.5 system-ui,sans-serif;
+ text-decoration:underline;text-underline-offset:3px;margin-top:6px}
+.sense-sponsored p{font:400 12px/1.55 system-ui,sans-serif;color:#bcc4d3;margin:5px 0 0}
+@media(min-width:1024px){.sense-monetization-slot{--min-h:124px}}
+</style>

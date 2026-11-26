@@ -1,0 +1,5 @@
+# SYNTHETIC ads.txt declaration; NOT valid publisher IDs
+google.com, pub-SYNTHETIC0000000, DIRECT, f08c47fec0942fa0
+example-ad-exchange.com, seller-SYNTHETIC, RESELLER
+OWNERDOMAIN=example.org
+malformed seller line
