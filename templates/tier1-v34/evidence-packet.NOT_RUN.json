@@ -1,0 +1,22 @@
+{
+  "schema": "sense-tier1-field-packet-v34",
+  "site_id": "format-safe-provisional",
+  "candidate_id": "heic-jpg",
+  "researched_at": "2026-11-26",
+  "decision_requested": "DISCOVERY_HOLD",
+  "owner_authorized": false,
+  "authentic_exports_confirmed": false,
+  "independent_reviewer_confirmed": false,
+  "keyword_receipts": [],
+  "competitor_runs": [],
+  "fixtures": [],
+  "user_sessions": [],
+  "product_oracle_confirmed": false,
+  "adsense_approval_claimed": false,
+  "publisher_page_rpm_proven": false,
+  "forced_or_incentivized_ad_clicks": false,
+  "artificial_traffic": false,
+  "actual_gsc_claimed": false,
+  "actual_pageviews_claimed": false,
+  "notes": "All empty receipt collections are intentional. This sample is not real US/GB/CA/AU keyword research, file conversion QA, or AdSense account evidence."
+}
