@@ -30,18 +30,18 @@ The user supplied URLs/transcripts for lessons including these IDs (some uploade
 | yMVq4T65cfQ | Device, network, demographic, hour performance | “Lowest CPC = best result” is false without conversion value, quality and attribution |
 | wXhMZljFcEA | Keywords and negative exclusions | Broad match modifier was removed; current broad/phrase/exact semantics must be rechecked |
 | X3vWmNz_83c | Google Keyword Planner, locations, estimates | Planner ad competition and top-of-page bid are **advertiser signals**, not organic difficulty or publisher page RPM |
-| 8zIfFEadn7A, pctNKNO7-1I, rce7zWhVsI4, 0DVVlzkojac | Campaign settings / audience / app/search workflows in uploaded transcripts | Use only for advertising-literacy context; not automatic profit model for publisher |
-| 9BSPb0IuAIw | Third-party ad exchange, alternative monetization | User requested **AdSense only**; no “guaranteed easy ADX approval” or reseller payout assumptions |
-| K40SzAnfTKk | High-income screenshots and “loading” with proxy identities | Explicit **POLICY_HAZARD**: fake clicks/impressions, account farms, anti-detect browsers. Never implement |
-| uiUj6Nlrleo | Publisher economics, tools / mortgage case study | Self-reported lifetime earnings; publisher revenue shares and payout threshold depend on current program/account/country |
-| FQCzh13eEYY | Ahrefs low-DR site discovery, vibe coding and semantic content | DR<10 is not Google KD; AI generated prototype is not verified production; keyword insertion density not proven ranking formula |
-| autzRHtt-RM | AI engine / GEO recommendations | Search assistants do not share a universal four-step RAG architecture; 40%-citation, 7%-overlap, ranking odds need exact cited study and test conditions |
-| -OzCNzHGFE8 | Ingredient-aware conversion, programmatic pages | Ingredient densities matter; 100 similar number-swapped URLs could create scaled-content/doorway concerns; one approved site does not guarantee another |
-| t_Y5kznd2rk | Blog and paid/organic traffic explanations | Paid Ads spend rarely makes sense against low page RPM alone; high daily returns require own audited costs and invalid traffic proof |
-| lV4Vo8QVwCs | Tool web income, AdSense accounts, hosting tutorial | Google's one-account-per-publisher rules and account-review process override multiple-account “protection” advice |
-| GtYXyApAjeM | AdSense website promotion course | Distinguish an actual user-task workflow from publisher payment receipts and arbitrage claims |
+| 8zIfFEadn7A, pctNKNO7-1I, rce7zWhVsI4 | Campaign settings / audience / app/search workflows in uploaded transcripts | Use only for advertising-literacy context; not automatic profit model for publisher |
+| 9BSPb0IuAIw | Creator's self-reported $500k AdSense history and mortgage tools; explains ad versus affiliate models | Self-reported lifetime income, payout mechanics, claimed shares and universal RPM need verification |
+| 0DVVlzkojac | High-income screenshots and “loading” with proxy identities | Explicit **POLICY_HAZARD**: fake clicks/impressions, account farms, anti-detect browsers. Never implement |
+| uiUj6Nlrleo | Tool site case study, search ranking examples and hosting promotion | Claims about monthly AdSense earnings, site age, competition and account portfolio need primary/owner verification |
+| -OzCNzHGFE8 | Ahrefs low-DR site discovery, vibe coding and semantic content | DR<10 is not Google KD; AI generated prototype is not verified production; keyword insertion density not proven ranking formula |
+| t_Y5kznd2rk | AI engine / GEO recommendations | Search assistants do not share a universal four-step RAG architecture; 40%-citation, 7%-overlap, ranking odds need exact cited study and test conditions |
+| lV4Vo8QVwCs | Ingredient-aware conversion, programmatic pages | Ingredient densities matter; 100 similar number-swapped URLs could create scaled-content/doorway concerns; one approved site does not guarantee another |
+| K40SzAnfTKk | Blog and paid/organic traffic explanations | Paid Ads spend rarely makes sense against low page RPM alone; high daily returns require own audited costs and invalid traffic proof |
+| 0DVVlzkojac, uiUj6Nlrleo | Proxy-farm versus legitimate hosting/tool tutorials, in separate transcripts | Reject invalid traffic; publisher account count and revenue claims need independent review |
+| GtYXyApAjeM | Intro to third-party AdX alternatives and course monetization | Not our AdSense-only scope; do not assume third-party approval, eligibility or payout |
 
-Some video IDs are listed twice or have transcript attachment numbering that differs from playlist ordering. **Do not infer unique coverage from row count.** Create a permanent full claim ledger with per-claim video ID, transcript span, date and policy link before claiming every sentence has been reviewed.
+Some video IDs overlap subject groups; transcript attachment numbering differs from playlist ordering. The mapping above relies on the ordering in the user's provided URL-to-attachment sequence, not YouTube metadata. **Do not infer unique coverage from row count.** Create a permanent full claim ledger with per-claim video ID, transcript span, date and policy link before claiming every sentence has been reviewed.
 
 ## 3 — Research questions and field study design (no fabricated census)
 
