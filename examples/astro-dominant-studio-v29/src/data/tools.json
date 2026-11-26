@@ -154,90 +154,129 @@
     "group": "jsonl",
     "label": "JSONL to JSON Array",
     "kind": "jsonl",
-    "description": "Validate or convert one JSON value per line locally."
+    "description": "Combine valid JSON Lines values into a single JSON array for local inspection or APIs.",
+    "useCase": "Combine valid JSON Lines values into a single JSON array for local inspection or APIs.",
+    "outputNotes": "A pretty-printed JSON array contains the parsed value from every nonblank JSONL line.",
+    "caveat": "Blank internal lines fail and large JSON integers can exceed JavaScript precision."
   },
   {
     "id": "jsonl-to-csv",
     "group": "jsonl",
     "label": "JSONL to CSV",
     "kind": "jsonl",
-    "description": "Validate or convert one JSON value per line locally."
+    "description": "Export flat JSON Lines object records into a table accepted by CSV software.",
+    "useCase": "Export flat JSON Lines object records into a table accepted by CSV software.",
+    "outputNotes": "Object properties across all lines become headers, followed by serialized CSV rows.",
+    "caveat": "Nested values are rejected and missing or null values become empty cells."
   },
   {
     "id": "jsonl-to-markdown",
     "group": "jsonl",
     "label": "JSONL to Markdown",
     "kind": "jsonl",
-    "description": "Validate or convert one JSON value per line locally."
+    "description": "Summarize flat JSON Lines object records as a Markdown table for documentation.",
+    "useCase": "Summarize flat JSON Lines object records as a Markdown table for documentation.",
+    "outputNotes": "A pipe table is generated using the union of keys as column headings.",
+    "caveat": "Nested JSON content is unsupported and long prose values can create unwieldy tables."
   },
   {
     "id": "jsonl-to-tsv",
     "group": "jsonl",
     "label": "JSONL to TSV",
     "kind": "jsonl",
-    "description": "Validate or convert one JSON value per line locally."
+    "description": "Move newline-delimited flat JSON records into a TSV-oriented spreadsheet workflow.",
+    "useCase": "Move newline-delimited flat JSON records into a TSV-oriented spreadsheet workflow.",
+    "outputNotes": "The union of property keys becomes a TSV header, with a row for each object.",
+    "caveat": "Null and absent properties become blank cells; formula-looking values are protected by default."
   },
   {
     "id": "jsonl-to-html",
     "group": "jsonl",
     "label": "JSONL to HTML Table",
     "kind": "jsonl",
-    "description": "Validate or convert one JSON value per line locally."
+    "description": "Render a JSON Lines object batch as a static escaped HTML table fragment.",
+    "useCase": "Render a JSON Lines object batch as a static escaped HTML table fragment.",
+    "outputNotes": "HTML table headers are derived from object keys, with escaped text in body cells.",
+    "caveat": "Nested structures cannot be flattened by this route; no interactive grid is provided."
   },
   {
     "id": "jsonl-validator",
     "group": "jsonl",
     "label": "Validate JSON Lines",
     "kind": "jsonl",
-    "description": "Validate or convert one JSON value per line locally."
+    "description": "Identify invalid JSON Lines syntax before submitting a local batch file for processing.",
+    "useCase": "Identify invalid JSON Lines syntax before submitting a local batch file for processing.",
+    "outputNotes": "Every nonblank line is parsed as JSON; successful output normalizes line separators.",
+    "caveat": "This is not vendor-specific schema validation and accepts valid JSON scalar lines."
   },
   {
     "id": "json-to-jsonl",
     "group": "json",
     "label": "JSON Array to JSONL",
     "kind": "json",
-    "description": "Convert a supported JSON array or value within your browser."
+    "description": "Convert one JSON array into JSON Lines for jobs that read one record per line.",
+    "useCase": "Convert one JSON array into JSON Lines for jobs that read one record per line.",
+    "outputNotes": "Each JSON array element is serialized on its own output line.",
+    "caveat": "Only nonempty top-level arrays are accepted; unsafe numeric lexemes cannot be recovered."
   },
   {
     "id": "json-to-csv",
     "group": "json",
     "label": "JSON Array to CSV",
     "kind": "json",
-    "description": "Convert a supported JSON array or value within your browser."
+    "description": "Create a CSV file from an array of flat JSON objects for spreadsheet import.",
+    "useCase": "Create a CSV file from an array of flat JSON objects for spreadsheet import.",
+    "outputNotes": "All encountered object keys become CSV headers, with one serialized row per object.",
+    "caveat": "Nested values are rejected; JSON null and a missing property both become blank CSV cells."
   },
   {
     "id": "json-to-markdown",
     "group": "json",
     "label": "JSON Array to Markdown",
     "kind": "json",
-    "description": "Convert a supported JSON array or value within your browser."
+    "description": "Move a flat JSON array into a Markdown document as a readable pipe table.",
+    "useCase": "Move a flat JSON array into a Markdown document as a readable pipe table.",
+    "outputNotes": "A header separator and one Markdown table row per JSON object are created.",
+    "caveat": "Only flat object arrays work; multiline cell values are flattened for display."
   },
   {
     "id": "json-to-tsv",
     "group": "json",
     "label": "JSON Array to TSV",
     "kind": "json",
-    "description": "Convert a supported JSON array or value within your browser."
+    "description": "Export an array of flat JSON objects as tab-delimited records for local data tools.",
+    "useCase": "Export an array of flat JSON objects as tab-delimited records for local data tools.",
+    "outputNotes": "A TSV header is built from property names and each object supplies one data row.",
+    "caveat": "Missing fields become blanks, and no automatic number or date typing is provided."
   },
   {
     "id": "json-to-html",
     "group": "json",
     "label": "JSON Array to HTML Table",
     "kind": "json",
-    "description": "Convert a supported JSON array or value within your browser."
+    "description": "Create escaped HTML table markup from flat JSON records for static technical pages.",
+    "useCase": "Create escaped HTML table markup from flat JSON records for static technical pages.",
+    "outputNotes": "The result has table headings from object keys and escaped body cell values.",
+    "caveat": "Nested data is not supported; add your own responsive layout and styling."
   },
   {
     "id": "json-pretty",
     "group": "json",
     "label": "Format JSON",
     "kind": "json",
-    "description": "Convert a supported JSON array or value within your browser."
+    "description": "Inspect compact JSON data using stable two-space indentation and readable line breaks.",
+    "useCase": "Inspect compact JSON data using stable two-space indentation and readable line breaks.",
+    "outputNotes": "A reformatted JSON document with a final newline is downloaded after parsing.",
+    "caveat": "Formatting is not schema validation and may normalize numeric notation."
   },
   {
     "id": "json-minify",
     "group": "json",
     "label": "Minify JSON",
     "kind": "json",
-    "description": "Convert a supported JSON array or value within your browser."
+    "description": "Remove optional whitespace from a valid JSON document for compact local fixtures.",
+    "useCase": "Remove optional whitespace from a valid JSON document for compact local fixtures.",
+    "outputNotes": "A minimal JSON serialization is downloaded with a single final newline.",
+    "caveat": "This does not apply gzip compression or preserve every original numeric token."
   }
 ]
