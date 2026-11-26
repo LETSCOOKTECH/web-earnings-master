@@ -139,7 +139,7 @@ export async function run(args=argv){
    body_sha256:createHash('sha256').update(response.content).digest('hex'),
    inspection:'FETCH_ONLY_HUMAN_SEMANTIC_REVIEW_REQUIRED',country_and_contract_unverified:true,registry_mutated:false};
  }
- throw Error('USAGE: --recommend --niche X [--expected-adblock-rate .4 --desktop-pct 90 --primary-geo US --server-cost 5] | --fingerprint https://site [--html-file file --ads-file file] | --fingerprint https://site --live --allow-domain site | --ingest-candidate file.json | --watch --provider ID --live --allow-domain official.domain');
+ throw Error('USAGE: --catalog | --recommend --niche X [--expected-adblock-rate .4 --desktop-pct 90 --primary-geo US --server-cost 5] | --fingerprint https://site [--html-file file --ads-file file] | --fingerprint https://site --live --allow-domain site | --ingest-candidate file.json | --watch --provider ID --live --allow-domain official.domain');
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  try{const result=await run();output(result);
