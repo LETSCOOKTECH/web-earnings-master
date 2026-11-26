@@ -1,0 +1,28 @@
+{
+  "schema": "sense-adsense-research-v32",
+  "researched_on": "2026-11-26",
+  "study_mode": "SYNTHETIC_ILLUSTRATION_NOT_REAL_OPERATOR_EVIDENCE",
+  "job": {
+    "id": "EXAMPLE_DATA_VALIDATOR",
+    "user_task": "Find a real underserved document-processing task and test actual user demand before coding a website.",
+    "target_user": "Hypothetical technical analyst",
+    "geo": "US",
+    "task_completion_oracle": "Independent benchmark must compare resulting exported files to known golden test fixtures.",
+    "hypothesis": "An original browser-local tool could solve a task if research confirms it."
+  },
+  "evidence": [],
+  "fixtures": [],
+  "competitors": [],
+  "product": {},
+  "deployment": {},
+  "distribution": {},
+  "adsense": {
+    "site_status": "UNKNOWN"
+  },
+  "economics": {},
+  "notes": [
+    "Purposefully no market receipts or live AdSense status",
+    "All seven stages should HOLD and automatic build permission should remain false",
+    "Replace with real owner/operator evidence; do not fake any GSC or earnings numbers"
+  ]
+}
