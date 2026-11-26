@@ -89,3 +89,8 @@ For seven-stage AdSense-first website strategy, load [web-adsense-evidence-growt
 ### V33 transcript research and reality checks
 
 Before relying on AdSense tutorials, SEO case studies, videos showing dashboard income, AI citation formulas or tool-site sale prices, consult the [video-claim and market falsification laboratory](docs/adsense-v32/05-video-claims-and-market-falsification-v33.md). This V32 companion audits historical Google Ads vocabulary, unverifiable revenue, sample bias and invalid-traffic dangers; it is **not** a 51st registered skill or a verification of every video claim.
+
+
+## Optional V34 Tier-1 AdSense market selection research
+
+The 2026-11-26 [Tier-1 market decision](docs/projects/2026-11-26-tier1-adsense-selection/DECISION.md) compares 40 real-task hypotheses, links a [dated 28-source register and candidate dataset](sources/tier1_utility_market_v34.json), and records the provisional **Image Compatibility & Repair Studio** winner with explicit failure conditions. See its [production-oriented PRD](docs/projects/2026-11-26-tier1-adsense-selection/PRODUCT_SPEC.md), [end-to-end field plan](docs/projects/2026-11-26-tier1-adsense-selection/EVIDENCE_AND_EXECUTION.md), and read-only [anti-fabrication evidence gate](scripts/audit-tier1-opportunity-v34.mjs). It extends opt-in V32 with **no new registered skill**, no new site deployment, no authenticated publisher earnings and no guaranteed search ranking. Run `npm run audit:tier1:v34` and the field-packet tool before consequential choices.
