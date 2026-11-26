@@ -1,0 +1,11 @@
+{
+  "schema": "sense-new-monetization-provider-candidate-v31",
+  "id": "synthetic-unverified-model",
+  "category": "ai-licensing",
+  "official_policy_url": "https://example.org/not-an-official-policy",
+  "last_verified": "2026-11-26",
+  "india_payout_supported": null,
+  "integration_risk_notes": "SYNTHETIC HOLD fixture, no actual publisher eligibility or payout proof",
+  "official_claim_receipts": [],
+  "payout_official_url": null
+}
