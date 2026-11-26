@@ -31,6 +31,10 @@ Do not paste confidential records into public issue reports. The current fronten
 
 Set SITE_URL to your actual owned HTTPS root and SENSE_RELEASE=public, replacing the placeholder brand, owner contacts and disclosure/legal draft with correct details. Build and run the v29 artifact audit with --production. Then run V28 owner-authorized live HTTP, crawler/header and any intended ads tests. Validate CSP, caching, compression, physical mobile devices, real search index observations, actual user tasks and application-level accessibility. Do not publish an unreviewed legal template or fabricate an ads.txt seller ID. Use scripts/ping-indexnow-diff-v29.mjs only as a reviewed, opt-in changed-page notification; dry-run is default.
 
+## Open-source reuse and third-party provenance
+
+Original LETSCOOKTECH-owned Studio source is released under the [root Apache-2.0 license](../../LICENSE) and [NOTICE](../../NOTICE). The Astro 7 dependency manifest and lockfile were adapted from an MIT-licensed Croftweaver starter through the earlier V22 sample. Retain the [full upstream MIT permission and copyright notice](CROFTWEAVER_LICENSE) and [third-party provenance](THIRD_PARTY_NOTICES.md) when copying or redistributing that material. Other npm dependencies retain their own licenses; review the lockfile and each package's terms. LETSCOOKTECH/Sense branding and trademarks are not automatically granted as project naming rights.
+
 ## Original source and verification constraints
 
 - Cloudflare Pages 25 MiB individual static asset cap: https://developers.cloudflare.com/pages/platform/limits/
