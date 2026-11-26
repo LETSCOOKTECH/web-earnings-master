@@ -28,6 +28,12 @@ A continuously improved technical research and execution library for the **entir
 
 **Skill-library status:** 50 registered Codex skills. Existing static manifests and tests do **not** independently validate the completeness, originality, policy accuracy or production effectiveness of all 49. See [the V20 entire-skill quality inventory](docs/audits/2026-11-25-skill-library-truth-v20.md), [49-skill first-party source and test crosswalk](sources/skill-evidence-crosswalk-v20.json) and [full-stack release evidence specification](docs/quality/real-world-release-contract-v20.md) for measured deficiencies and mandatory real-world checks.
 
+## V30 security and real-route guidance hardening — candidate patch
+
+A [dated nine-claim reality audit](docs/audits/2026-11-26-v30-external-claims-reality.md) separates the external report's outdated V26, unverifiable CPC/traffic/scores, and the nine proposed tasks from measured code. The V29 Studio's exported CSV/TSV **header** cells previously bypassed spreadsheet formula protection; the V30 patch protects header and body cells when the safety option is enabled. Local file selection is checked against the active converter's expected source format. Each of the 28 actual tool routes now has distinct task guidance, exact output semantics, and limitations enforced by a source/build audit. These changes require independent CI validation before merge.
+
+**Open:** real 50–500 MiB streaming, binary Parquet, TOON, genuine XLSX, real ads and consent/CLS tests, external production deployment, observed keyword demand, rankings, AI citations and revenue. The current 16 MiB cap remains. Do not interpret a static quality score as a commercial release certificate.
+
 ## V21: premium functioning CSV Studio — LOCAL ONLY
 
 The former minimal CSV fixture has been upgraded to a [real browser-only CSV Studio](examples/seo-csv-lab/README.md), with a responsive two-panel UI, a bounded background Worker, valid UTF-8 file reading, deterministic full-row or column-key deduplication, case/whitespace matching controls, preview/statistics, downloaded CSV and explicit error/cancel/reset states. [The V21 acceptance guide](docs/quality/21-premium-csv-studio-acceptance.md) pins exact output bytes, 2 MB / 5,000-row / 200-column boundaries, RFC/OWASP/MDN source scopes, security failures and live release conditions. [Actual browser tests](tests/seo-csv-browser-e2e.mjs) assert saved bytes and corrupted-data/HTML-injection/worker-crash failures in Chromium, Firefox and WebKit, with real screenshot artifacts recorded by CI.

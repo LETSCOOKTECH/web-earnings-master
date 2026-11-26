@@ -79,3 +79,24 @@ test('workflow handoff only saves after explicit user approval, then consumes lo
  await page.locator('#studio-run').click();
  await expect(page.locator('#studio-status')).toContainText('Conversion completed');
 });
+
+test('real browser download escapes formula-like column headings as text',async({page})=>{
+ await page.goto('/tools/csv-to-excel-csv/');
+ await expect(page.locator('[data-route-use-case]')).toContainText('UTF-8');
+ await page.locator('#studio-input').fill('=1+1,id\nrow,00501\n');
+ await page.locator('#studio-run').click();
+ await expect(page.locator('#studio-status')).toContainText('Conversion completed');
+ const saved=page.waitForEvent('download');
+ await page.locator('#studio-download').click();
+ const file=await saved;
+ expect(fs.readFileSync(await file.path(),'utf8')).toBe("\ufeff'=1+1,id\r\nrow,00501\r\n");
+});
+test('wrong file kind is rejected even when browser input selection is bypassed',async({page})=>{
+ await page.goto('/tools/csv-to-json/');
+ const select=page.locator('#studio-file');
+ await expect(select).toHaveAttribute('accept',/\.csv/);
+ await select.setInputFiles({name:'mismatch.json',mimeType:'application/json',buffer:Buffer.from('[{"id":1}]')});
+ await page.locator('#studio-run').click();
+ await expect(page.locator('#studio-status')).toContainText('Expected a CSV file');
+ await expect(page.locator('#studio-download')).toBeHidden();
+});

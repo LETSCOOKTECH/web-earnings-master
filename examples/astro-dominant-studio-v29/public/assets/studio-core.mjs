@@ -138,9 +138,9 @@ function parseJsonl(text){
 function flatJsonRows(text){const value=JSON.parse(ensureText(text));return rowsFromRecords(value);}
 export function serializeDelimited(rows,separator=',',{sanitize=true,bom=false}={}){
  if(!Array.isArray(rows)||!rows.length)throw Error('No rows to export');
- return (bom?'\ufeff':'')+rows.map((row,rowIndex)=>row.map(cell=>{
+ return (bom?'\ufeff':'')+rows.map(row=>row.map(cell=>{
   let str=String(cell??'');
-  if(sanitize&&rowIndex>0)str=protectSpreadsheetCell(str);
+  if(sanitize)str=protectSpreadsheetCell(str);
   return str.includes('"')||str.includes(separator)||/[\r\n]/.test(str)?'"'+str.replaceAll('"','""')+'"':str;
  }).join(separator)).join('\r\n')+'\r\n';
 }
