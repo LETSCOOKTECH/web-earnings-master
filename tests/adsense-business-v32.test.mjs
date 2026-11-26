@@ -185,6 +185,6 @@ test('no extra special AI schema or automatic ranking/approval claims in V32 con
  const s=read('extensions/v32/skills/web-adsense-evidence-growth-operator/SKILL.md');
  assert.match(s,/no mandatory/);
  assert.match(s,/not a Google ranking guarantee/i);
- assert.match(s,/AdSense site/account/i);
+ assert.match(s,/AdSense site\/account/i);
  assert.match(s,/no automatic background/i);
 });
