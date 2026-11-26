@@ -1,0 +1,1339 @@
+{
+  "schema": "sense-tier1-market-v34",
+  "researched_on": "2026-11-26",
+  "target_regions": [
+    "US",
+    "GB",
+    "CA",
+    "AU"
+  ],
+  "decision": "IMAGE_COMPATIBILITY_REPAIR_STUDIO_CONDITIONAL_DISCOVERY_ONLY",
+  "gates_all_real_work_pending": true,
+  "candidate_count": 40,
+  "metadata": "Search numbers modeled third-party, NOT confirmed original GKP exports or GSC; no derived rankings or ROI claims",
+  "sources": [
+    {
+      "id": "AHREFS_FREE_TOOLS_2026",
+      "url": "https://ahrefs.com/blog/the-free-tools-seo-strategy/",
+      "kind": "THIRD_PARTY_SEO_MODEL",
+      "reviewed": "OPENED_ARTICLE",
+      "observed_at": "2026-11-26",
+      "scope": "2026 sampled US keyword cases",
+      "caveat": "Publisher sells SEO tooling; modeled volume, KD, TP and competitor organic traffic are NOT actual owned Google analytics."
+    },
+    {
+      "id": "FORMATDROP_PRESS_2026_08",
+      "url": "https://signalnewswilkesbarre.com/press-releases/11938/an-estimated-half-a-million-plus-u-s-searches-a-month-look-for-a-way-to-convert-image-files-back-to-jpeg/",
+      "kind": "VENDOR_AFFILIATED_PRESS_RELEASE",
+      "reviewed": "SEARCH_RESULT_SUMMARY",
+      "observed_at": "2026-11-26",
+      "scope": "August 20 2026 Ahrefs modeled US conversion keyword sample",
+      "caveat": "Commercial interest; quoted figures not independently authenticated; combined searches not unique users or site visits."
+    },
+    {
+      "id": "KWS_GRAVEL_2026_11",
+      "url": "https://www.kwstrends.com/keywords/us/gravel-calculator",
+      "kind": "SECONDARY_KEYWORD_MODEL",
+      "reviewed": "SEARCH_RESULT_SUMMARY",
+      "observed_at": "2026-11-26",
+      "scope": "US 2026-11-06 report",
+      "caveat": "Search volume and difficulty third-party modeled; not independently validated Google Ads original export."
+    },
+    {
+      "id": "KWS_HOURS_2026_11",
+      "url": "https://www.kwstrends.com/keywords/us/hours-calculator",
+      "kind": "SECONDARY_KEYWORD_MODEL",
+      "reviewed": "SEARCH_RESULT_SUMMARY",
+      "observed_at": "2026-11-26",
+      "scope": "US 2026-11-09 report",
+      "caveat": "Broad ambiguous intent; modeled."
+    },
+    {
+      "id": "KWS_DURATION_2026_11",
+      "url": "https://www.kwstrends.com/keywords/us/time-duration-calculator",
+      "kind": "SECONDARY_KEYWORD_MODEL",
+      "reviewed": "SEARCH_RESULT_SUMMARY",
+      "observed_at": "2026-11-26",
+      "scope": "US 2026-11-09 report",
+      "caveat": "Modeled, zero-click answer exposure."
+    },
+    {
+      "id": "KWS_CONCRETE_2026_11",
+      "url": "https://www.kwstrends.com/keywords/us/concrete-calculator",
+      "kind": "SECONDARY_KEYWORD_MODEL",
+      "reviewed": "SEARCH_RESULT_SUMMARY",
+      "observed_at": "2026-11-26",
+      "scope": "US 2026 Q4",
+      "caveat": "Modeled, strong seasonality and retailer competition."
+    },
+    {
+      "id": "KWS_TIMESHEET_2026_11",
+      "url": "https://www.kwstrends.com/keywords/us/timesheet-calculator",
+      "kind": "SECONDARY_KEYWORD_MODEL",
+      "reviewed": "SEARCH_RESULT_SUMMARY",
+      "observed_at": "2026-11-26",
+      "scope": "US updated 2026-11-22",
+      "caveat": "CPC is advertiser price, not publisher RPM."
+    },
+    {
+      "id": "KWS_PAVER_2026_11",
+      "url": "https://www.kwstrends.com/keywords/us/paver-calculator",
+      "kind": "SECONDARY_KEYWORD_MODEL",
+      "reviewed": "SEARCH_RESULT_SUMMARY",
+      "observed_at": "2026-11-26",
+      "scope": "US 2026 Q4",
+      "caveat": "Seasonal, model estimated."
+    },
+    {
+      "id": "KWS_METHODOLOGY",
+      "url": "https://www.kwstrends.com/methodology",
+      "kind": "PROVIDER_EXPLANATION",
+      "reviewed": "SEARCH_RESULT_SUMMARY",
+      "observed_at": "2026-11-26",
+      "scope": "KWS Trends calculation methodology",
+      "caveat": "Self-reported Google Keyword Planner plus secondary database model; not direct account export."
+    },
+    {
+      "id": "CLEANOR_OPEN_DATA",
+      "url": "https://github.com/cleanor-app/search-index",
+      "kind": "OPEN_DATASET_GKP_DERIVED",
+      "reviewed": "GITHUB_README",
+      "observed_at": "2026-11-26",
+      "scope": "149 terms 10 categories 20 countries 2026-06 snapshot (2025-06 to 2026-05)",
+      "caveat": "Mostly brand/format/language head terms, NOT target convert-X-to-Y queries; CC BY 4.0 attribution required; do not claim this dataset validated HEIC-to-JPG demand."
+    },
+    {
+      "id": "FREECONVERT_HEIC",
+      "url": "https://www.freeconvert.com/heic-to-jpg",
+      "kind": "COMPETITOR_PUBLIC",
+      "reviewed": "SEARCH_RESULT_TEXT_PLUS_AHREFS_MODELED_EXAMPLE",
+      "observed_at": "2026-11-26",
+      "scope": "HEIC to JPG web converter",
+      "caveat": "Not yet tested with identical uploaded files."
+    },
+    {
+      "id": "OFFLINECONVERT_HEIC",
+      "url": "https://offlineconvert.com/heic-to-jpg/",
+      "kind": "COMPETITOR_PUBLIC",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "Browser-local HEIC to JPG free batch",
+      "caveat": "Marketing feature claims not verified by network and output tests."
+    },
+    {
+      "id": "HEIC_DEV",
+      "url": "https://heic.dev/",
+      "kind": "COMPETITOR_PUBLIC",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "HEIC/HEIF browser-local conversion",
+      "caveat": "Not yet tested."
+    },
+    {
+      "id": "NOHEIC",
+      "url": "https://noheic.com/bulk-heic-to-jpg/",
+      "kind": "COMPETITOR_PUBLIC",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "Bulk HEIC JPG",
+      "caveat": "Unverified benchmark self-reported."
+    },
+    {
+      "id": "DIY_CALCS",
+      "url": "https://diycalcs.org/",
+      "kind": "COMPETITOR_PUBLIC",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "Project plans and printable bills of materials",
+      "caveat": "Refutes naive unique shopping-list idea, functionality untested."
+    },
+    {
+      "id": "TERRAINITY",
+      "url": "https://www.terrainity.com/",
+      "kind": "COMPETITOR_PUBLIC",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "Multi-material construction and landscape project tools",
+      "caveat": "Refutes naive integrated project value proposition, functionality untested."
+    },
+    {
+      "id": "HOURPEAK",
+      "url": "https://hourpeak.com/",
+      "kind": "COMPETITOR_PUBLIC",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "Timecard/overtime/exports",
+      "caveat": "Refutes naive overnight-breaks-export unique claim, functionality untested."
+    },
+    {
+      "id": "SHOPIFY_IMPORT",
+      "url": "https://help.shopify.com/en/manual/products/import-export/import-products",
+      "kind": "FIRST_PARTY_PLATFORM_DOCS",
+      "reviewed": "SEARCH_EVIDENCE_PRIOR_CONVERSATION",
+      "observed_at": "2026-11-26",
+      "scope": "Shopify CSV product import requirements",
+      "caveat": "Platform documentation changes; check original exact section at execution time."
+    },
+    {
+      "id": "GKP_HELP",
+      "url": "https://support.google.com/google-ads/answer/7337243",
+      "kind": "FIRST_PARTY_POLICY",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "Google Keyword Planner purpose and limitations",
+      "caveat": "Advertiser metrics != SEO difficulty or AdSense RPM; action-time recheck required."
+    },
+    {
+      "id": "GOOGLE_ADSENSE_SITE",
+      "url": "https://support.google.com/adsense/answer/7299563",
+      "kind": "FIRST_PARTY_POLICY",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "AdSense unique original publisher-value requirements",
+      "caveat": "Cannot predict approval."
+    },
+    {
+      "id": "GOOGLE_ADSENSE_ADS",
+      "url": "https://support.google.com/adsense/answer/1346295",
+      "kind": "FIRST_PARTY_POLICY",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "Ads near download/buttons, deceptive interaction, no automatic refresh",
+      "caveat": "Ad placement must be reviewed live."
+    },
+    {
+      "id": "GOOGLE_ADSENSE_PROGRAM",
+      "url": "https://support.google.com/adsense/answer/48182",
+      "kind": "FIRST_PARTY_POLICY",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "AdSense program policies invalid clicks, ad deception, accounts",
+      "caveat": "Current legal/provider text controls at action time."
+    },
+    {
+      "id": "GOOGLE_SEARCH_SPAM",
+      "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "kind": "FIRST_PARTY_POLICY",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "Scaled content, doorway abuse, link spam",
+      "caveat": "No bulk thin format query pages."
+    },
+    {
+      "id": "GOOGLE_AI_MODE",
+      "url": "https://blog.google/products-and-platforms/products/search/ai-mode-canvas-writing-coding/",
+      "kind": "FIRST_PARTY_PRODUCT_NEWS",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "Search AI Mode can generate custom interactive tools",
+      "caveat": "Do not claim converters AI-proof."
+    },
+    {
+      "id": "MDN_IMAGE",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types",
+      "kind": "ENGINEERING_REFERENCE",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "Supported image formats and cross-browser distinctions",
+      "caveat": "Dynamic codec support requires real browser tests."
+    },
+    {
+      "id": "LIBHEIF",
+      "url": "https://github.com/strukturag/libheif",
+      "kind": "UPSTREAM_ENGINEERING_AND_LICENSE",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "HEIF decoder with WASM and LGPL; codec/patent review",
+      "caveat": "LGPL compliance and encoder/decoder patent issues require legal review; not preapproved."
+    },
+    {
+      "id": "REDDIT_HEIC_PRIVACY",
+      "url": "https://www.reddit.com/r/techsupport/comments/1se5g00/heic_to_jpg/",
+      "kind": "USER_REPORT",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "~10,000 files and offline conversion request",
+      "caveat": "One unverified, nonrepresentative community anecdote."
+    },
+    {
+      "id": "REDDIT_HEIC_BATCH",
+      "url": "https://www.reddit.com/r/ApplePhotos/comments/1qz6dhi/batch_converting_heic_to_jpg/",
+      "kind": "USER_REPORT",
+      "reviewed": "SEARCH_RESULT_TEXT",
+      "observed_at": "2026-11-26",
+      "scope": "Batch 1200+ HEIC files need",
+      "caveat": "Small anecdote; user comments not neutral controlled study."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "heic-jpg",
+      "group": "IMAGE",
+      "job": "Convert unsupported iPhone HEIC photos to compatible JPEG",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "AHREFS_FREE_TOOLS_2026",
+        "FREECONVERT_HEIC",
+        "OFFLINECONVERT_HEIC"
+      ],
+      "volume_us_month": 222000,
+      "kd": 31,
+      "decision": "CONDITIONAL_TOP",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "webp-png",
+      "group": "IMAGE",
+      "job": "Preserve transparency converting WebP product images to PNG",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "FORMATDROP_PRESS_2026_08"
+      ],
+      "volume_us_month": 149000,
+      "kd": null,
+      "decision": "CONDITIONAL_TOP",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "webp-jpg",
+      "group": "IMAGE",
+      "job": "Convert WebP images to widely supported JPEG",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "FORMATDROP_PRESS_2026_08"
+      ],
+      "volume_us_month": 103000,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "heic-png",
+      "group": "IMAGE",
+      "job": "Convert HEIC assets to PNG without color mistakes",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "FORMATDROP_PRESS_2026_08"
+      ],
+      "volume_us_month": 42000,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "avif-jpg",
+      "group": "IMAGE",
+      "job": "Convert AVIF images to JPEG with correct alpha/background",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "FORMATDROP_PRESS_2026_08"
+      ],
+      "volume_us_month": 37000,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "heic-pdf",
+      "group": "IMAGE",
+      "job": "Make a multipage PDF from selected HEIC photos",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "FORMATDROP_PRESS_2026_08"
+      ],
+      "volume_us_month": 30000,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "webp-gif",
+      "group": "IMAGE",
+      "job": "Convert still WebP or animation with explicit frame semantics",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "FORMATDROP_PRESS_2026_08"
+      ],
+      "volume_us_month": 26000,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "image-orientation-fix",
+      "group": "IMAGE",
+      "job": "Fix image EXIF rotation errors after export",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "MDN_IMAGE"
+      ],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "image-metadata-removal",
+      "group": "IMAGE",
+      "job": "Inspect and remove photo EXIF/GPS before sharing",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "REDDIT_HEIC_PRIVACY"
+      ],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "icc-color-repair",
+      "group": "IMAGE",
+      "job": "Detect wide-gamut image color-profile drift on conversion",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "MDN_IMAGE"
+      ],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "time-card-calculator",
+      "group": "TIME",
+      "job": "Calculate shift hours with breaks and overnight shifts",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "KWS_TIMESHEET_2026_11",
+        "HOURPEAK"
+      ],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "timesheet-calculator",
+      "group": "TIME",
+      "job": "Export weekly and biweekly timesheet summaries",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "KWS_TIMESHEET_2026_11",
+        "HOURPEAK"
+      ],
+      "volume_us_month": 55000,
+      "kd": 64,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "time-duration-calculator",
+      "group": "TIME",
+      "job": "Calculate elapsed time between instants",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "KWS_DURATION_2026_11"
+      ],
+      "volume_us_month": 110000,
+      "kd": 28,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "hours-calculator",
+      "group": "TIME",
+      "job": "Add work hours and subtract multiple breaks",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "KWS_HOURS_2026_11"
+      ],
+      "volume_us_month": 250000,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "decimal-hours",
+      "group": "TIME",
+      "job": "Convert hours and minutes to payroll decimal format",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "HOURPEAK"
+      ],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "pay-period",
+      "group": "TIME",
+      "job": "Calculate payroll period calendar dates",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "overtime-calculator",
+      "group": "TIME",
+      "job": "Compare regular/extra worked minutes without asserting legal rules",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "HOURPEAK"
+      ],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "business-days",
+      "group": "TIME",
+      "job": "Count business days and region holidays",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "shift-schedule-maker",
+      "group": "TIME",
+      "job": "Build printable rotating shift schedule",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "concrete-calculator",
+      "group": "HOME",
+      "job": "Calculate concrete volume and bag quantity",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "KWS_CONCRETE_2026_11"
+      ],
+      "volume_us_month": 410000,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "gravel-calculator",
+      "group": "HOME",
+      "job": "Estimate gravel bulk volume, weight and cost",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "KWS_GRAVEL_2026_11"
+      ],
+      "volume_us_month": 50000,
+      "kd": 23,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "mulch-calculator",
+      "group": "HOME",
+      "job": "Plan mulch bags/bulk yards for beds",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "TERRAINITY"
+      ],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "paver-calculator",
+      "group": "HOME",
+      "job": "Estimate pavers, base and bedding with waste",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "KWS_PAVER_2026_11",
+        "DIY_CALCS"
+      ],
+      "volume_us_month": 9000,
+      "kd": 34,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "roof-pitch",
+      "group": "HOME",
+      "job": "Convert rise and run to roof angle and pitch",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "AHREFS_FREE_TOOLS_2026"
+      ],
+      "volume_us_month": 11000,
+      "kd": 13,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "deck-materials",
+      "group": "HOME",
+      "job": "Plan deck board and fastener counts",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "AHREFS_FREE_TOOLS_2026"
+      ],
+      "volume_us_month": 1200,
+      "kd": 9,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "square-footage",
+      "group": "HOME",
+      "job": "Compute irregular room area",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "cubic-yard",
+      "group": "HOME",
+      "job": "Convert layered area into bulk volume",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "TERRAINITY"
+      ],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "soil-topsoil",
+      "group": "HOME",
+      "job": "Plan topsoil depth and bulk bags",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "TERRAINITY"
+      ],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "fence-material",
+      "group": "HOME",
+      "job": "Estimate posts, panels and spans",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "DIY_CALCS"
+      ],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "shopify-csv-preflight",
+      "group": "DATA_COMMERCE",
+      "job": "Check and repair dangerous Shopify product CSV imports",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "SHOPIFY_IMPORT"
+      ],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "merchant-feed-validator",
+      "group": "DATA_COMMERCE",
+      "job": "Find Google Merchant Center feed errors",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "csv-deduper",
+      "group": "DATA_COMMERCE",
+      "job": "Deduplicate large CSV without losing row order",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "csv-schema-validator",
+      "group": "DATA_COMMERCE",
+      "job": "Validate data against typed schema",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "csv-encoding-fix",
+      "group": "DATA_COMMERCE",
+      "job": "Repair UTF-8/BOM/Excel CSV encoding problems",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [],
+      "volume_us_month": null,
+      "kd": null,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "UNKNOWN",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "yaml-json",
+      "group": "DATA_COMMERCE",
+      "job": "Convert YAML to JSON without data mutation",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "AHREFS_FREE_TOOLS_2026"
+      ],
+      "volume_us_month": 2900,
+      "kd": 1,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "pdf-bank-to-csv",
+      "group": "DATA_COMMERCE",
+      "job": "Extract tabular bank transactions with privacy checks",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "AHREFS_FREE_TOOLS_2026"
+      ],
+      "volume_us_month": 90,
+      "kd": 5,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "pdf-word",
+      "group": "DATA_COMMERCE",
+      "job": "Convert PDF to editable Word document with fidelity",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "AHREFS_FREE_TOOLS_2026"
+      ],
+      "volume_us_month": 220000,
+      "kd": 81,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "invoice-generator",
+      "group": "DATA_COMMERCE",
+      "job": "Create an invoice file and line-item totals",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "AHREFS_FREE_TOOLS_2026"
+      ],
+      "volume_us_month": 183000,
+      "kd": 63,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "qr-generator",
+      "group": "DATA_COMMERCE",
+      "job": "Generate downloadable QR codes",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "AHREFS_FREE_TOOLS_2026"
+      ],
+      "volume_us_month": 776000,
+      "kd": 90,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    },
+    {
+      "id": "construction-estimate-template",
+      "group": "DATA_COMMERCE",
+      "job": "Produce editable construction estimate spreadsheet",
+      "target_geos": [
+        "US",
+        "GB",
+        "CA",
+        "AU"
+      ],
+      "source_ids": [
+        "AHREFS_FREE_TOOLS_2026"
+      ],
+      "volume_us_month": 1200,
+      "kd": 2,
+      "decision": "SCREEN_ONLY",
+      "geo_volume_verified": {
+        "US": "THIRD_PARTY_MODELED",
+        "GB": "UNKNOWN",
+        "CA": "UNKNOWN",
+        "AU": "UNKNOWN"
+      },
+      "real_serp_test": "NOT_RUN",
+      "same_input_competitor_test": "NOT_RUN",
+      "user_task_interview": "NOT_RUN",
+      "adsense_rpm": "UNKNOWN"
+    }
+  ]
+}
