@@ -70,3 +70,13 @@ Record each stage as PASS_TESTED, FAIL, HOLD or NOT_RUN, with exact browser, fil
 9. Manual demand research: structural source bridge; original market evidence NOT AUTHENTICATED.
 
 Prioritize real large-file streaming and cross-browser output fidelity before adding complex Parquet/TOON dependencies or multiplying routes.
+
+## V30 hardening: real bug evidence, not a simulated score
+
+For any CSV/TSV export, **validate both the header row and data rows** with adversarial formula cells. The original V29 serializer missed dangerous header names; V30 guards all exported cells whenever formula escaping is enabled. Explicitly warn that the user can switch this best-effort safety off, and that Excel type coercion can still damage identifiers.
+
+Before reading a local file, the UI must verify its extension and compression match the active converter's supported input kind. An accepted filename is not proof of valid data; run the relevant parser after strict UTF-8 decoding and refuse unsupported binary Parquet/TOON as before.
+
+For SEO-quality routing, audit the actual original use-case, emitted format and failure limitations for **each** of the 28 pages. Run the source- and built-page gate in `scripts/audit-v29-production-gates.mjs`. The `verifyEditorialDistinctness` gate catches identical/thin route explanations; the existing transformation oracle verifies behavior. Neither gate is proof of Google doorway-policy acceptance, rankings, or monetizable human demand.
+
+Read `docs/audits/2026-11-26-v30-external-claims-reality.md` for the measured state of all nine external V26-report claims before repeating them. Keep 16 MiB / 200k row constraints and no live ads/deployment claims. Do not automatically install DuckDB, TOON, XLSX, COEP, third-party CDNs or advertising code merely because an outside report asserts they are missing.
