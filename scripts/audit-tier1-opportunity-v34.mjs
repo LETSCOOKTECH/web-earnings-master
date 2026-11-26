@@ -4,9 +4,7 @@ import {fileURLToPath} from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const TARGETS=new Set(['US','GB','CA','AU']);
-const INTERNAL=['actual_rank','revenue_verified','adsense_approved'];
 const realDomain=(s)=>{try{const u=new URL(s);return u.protocol==='https:'&&!/(^|\.)((localhost)|(example\.(com|org|net))|(test)|(invalid))$/i.test(u.hostname)}catch{return false}};
-const fail=()=>false;
 const nonempty=(s,n=5)=>typeof s==='string'&&s.trim().length>=n;
 export function auditPortfolio(data){
  const errors=[], warnings=[];
@@ -43,13 +41,14 @@ export function auditFieldPacket(p,{now=Date.now()}={}){
  const geos=new Set();
  for(const k of kws){
   if(!TARGETS.has(k?.country)||!nonempty(k?.keyword)||!realDomain(k?.source_url)||!nonempty(k?.original_export_receipt,12))errors.push('KEYWORD_RECEIPT_INVALID');
-  if(k?.metric==='GOOGLE_TRENDS_RELATIVE'&&('monthly_searches' in k||k?.claimed_monthly_volume!==undefined))errors.push('TRENDS_VOLUME_FABRICATION');
+  if(!k||typeof k!=='object'){errors.push('KEYWORD_RECEIPT_INVALID');continue}
+  if(k.metric==='GOOGLE_TRENDS_RELATIVE'&&('monthly_searches' in k||k.claimed_monthly_volume!==undefined))errors.push('TRENDS_VOLUME_FABRICATION');
   if(k?.metric==='ADVERTISER_CPC'&&(k?.publisher_rpm!==undefined||k?.organic_difficulty!==undefined))errors.push('ADVERTISER_TO_PUBLISHER_OR_SEO_CONFUSION');
-  if(k?.metric==='GKP_US_MONTHLY_SEARCHES'||k?.metric==='MODELED_MONTHLY_SEARCHES'){
+  if(k.metric==='GKP_US_MONTHLY_SEARCHES'||k.metric==='GKP_COUNTRY_MONTHLY_SEARCHES'||k.metric==='MODELED_MONTHLY_SEARCHES'){
    if(typeof k?.searches!=='number'||k.searches<0)errors.push('KEYWORD_SEARCHES_UNIT_INVALID');
    if(k.metric==='GKP_US_MONTHLY_SEARCHES'&&k.country!=='US')errors.push('GKP_US_METRIC_WRONG_GEO');
-   if(k.metric==='GKP_US_MONTHLY_SEARCHES'&&k?.export_authenticated_by_owner!==true)errors.push('UNAUTHENTICATED_GKP_CLAIM');
-   if(k.metric==='GKP_US_MONTHLY_SEARCHES'&&k?.export_authenticated_by_owner===true)geos.add(k.country);
+   if(['GKP_US_MONTHLY_SEARCHES','GKP_COUNTRY_MONTHLY_SEARCHES'].includes(k.metric)&&k.export_authenticated_by_owner!==true)errors.push('UNAUTHENTICATED_GKP_CLAIM');
+   if(['GKP_US_MONTHLY_SEARCHES','GKP_COUNTRY_MONTHLY_SEARCHES'].includes(k.metric)&&k.export_authenticated_by_owner===true)geos.add(k.country);
   }
  }
  if(!geos.has('US'))hold.push('US_KEYWORD_ACCOUNT_EXPORT_NOT_AUTHENTICATED');
