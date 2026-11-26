@@ -110,3 +110,8 @@ Google page RPM = (estimated AdSense earnings / actual pageviews) × 1,000. Thre
 Create a **real evidence packet** for this first candidate. Collect authenticated keyword metrics, identify source-qualified competitor URLs from target-country SERPs, run identical file-output oracle against three incumbents, and interview real users. Then **GO** to the product brief at `PRODUCT_SPEC.md` only if it survives falsification. Do not execute mass launch or spend on account creation based on this decision record.
 
 **Source registry:** `sources/tier1_utility_market_v34.json` — URLs, units, dates and provenance, including selected original Google policies. **Agent routing:** existing V32 Seven Stages + V34 source and product checks; older 50 first-party skills remain untouched.
+
+
+## V35 extended category portfolio
+
+The provisional image compatibility thesis now has a [20-tool ranked backlog](20-IMAGE-TOOLS-V35.md) with [individual per-query US models and source URLs](../../../sources/image_tool_portfolio_v35.json). Six first-stage tools share a decoding core; eight general media jobs and six specialist jobs are deferred. This is **not** permission to launch 20 thin pages or a declaration of 20 proven organic traffic winners. Earlier V34 real-account and same-input competitor gates remain mandatory.

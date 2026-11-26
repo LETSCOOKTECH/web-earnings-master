@@ -94,3 +94,8 @@ Before relying on AdSense tutorials, SEO case studies, videos showing dashboard 
 ## Optional V34 Tier-1 AdSense market selection research
 
 The 2026-11-26 [Tier-1 market decision](docs/projects/2026-11-26-tier1-adsense-selection/DECISION.md) compares 40 real-task hypotheses, links a [dated 28-source register and candidate dataset](sources/tier1_utility_market_v34.json), and records the provisional **Image Compatibility & Repair Studio** winner with explicit failure conditions. See its [production-oriented PRD](docs/projects/2026-11-26-tier1-adsense-selection/PRODUCT_SPEC.md), [end-to-end field plan](docs/projects/2026-11-26-tier1-adsense-selection/EVIDENCE_AND_EXECUTION.md), and read-only [anti-fabrication evidence gate](scripts/audit-tier1-opportunity-v34.mjs). It extends opt-in V32 with **no new registered skill**, no new site deployment, no authenticated publisher earnings and no guaranteed search ranking. Run `npm run audit:tier1:v34` and the field-packet tool before consequential choices.
+
+
+## V35 Image Toolkit — conditional 20-tool research backlog
+
+The [20-image-tool source-backed shortlist](docs/projects/2026-11-26-tier1-adsense-selection/20-IMAGE-TOOLS-V35.md) and [individual keyword evidence ledger](sources/image_tool_portfolio_v35.json) expand the V34 image compatibility hypothesis into six discovery-priority tools, eight general media tools and six specialist tasks on **one** site. All keyword numbers are secondary/provider-modeled **US searches, not available clicks**, and every route remains HOLD pending real user/competitor/output and Google indexing evidence. No additional active V23 skill is registered. Run `node --test tests/image-portfolio-v35.test.mjs`.
