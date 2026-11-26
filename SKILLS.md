@@ -84,3 +84,8 @@ For website earning research and continually reverified program discovery, load 
 
 ## Optional V32 AdSense Evidence & Growth Operator (not in the numbered V23 registry)
 For seven-stage AdSense-first website strategy, load [web-adsense-evidence-growth-operator](extensions/v32/skills/web-adsense-evidence-growth-operator/SKILL.md). Read the [41-source dated official atlas](sources/adsense_growth_primary_atlas_v32.json), [market research and competitor lab](docs/adsense-v32/01-market-evidence-and-competitor-intelligence.md), [production tool/SEO guidance](docs/adsense-v32/02-tool-quality-and-search-production.md), [traffic, AdSense and economics](docs/adsense-v32/03-distribution-approval-and-economics.md), [red-team testing and evidence schema](docs/adsense-v32/04-executable-contract-and-red-team.md), and [opt-in V32 routing overlay](sources/skill-network-v32.json). This skill does not change the original **50** public skill entries or make any ranking/approval/revenue guarantees.
+
+
+### V33 transcript research and reality checks
+
+Before relying on AdSense tutorials, SEO case studies, videos showing dashboard income, AI citation formulas or tool-site sale prices, consult the [video-claim and market falsification laboratory](docs/adsense-v32/05-video-claims-and-market-falsification-v33.md). This V32 companion audits historical Google Ads vocabulary, unverifiable revenue, sample bias and invalid-traffic dangers; it is **not** a 51st registered skill or a verification of every video claim.
