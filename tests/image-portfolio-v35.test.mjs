@@ -30,7 +30,7 @@ test('V35 stage counts are 6+8+6 and V34 remains source of go/no-go truth',()=>{
  for(const t of data.tools)counts[t.phase]=(counts[t.phase]||0)+1;
  assert.deepEqual(counts,{A:6,B:8,C:6});
  const d=read('docs/projects/2026-11-26-tier1-adsense-selection/20-IMAGE-TOOLS-V35.md');
- assert.match(d,/NOT.*independently proven winners/);
+ assert.match(d,/not yet independently proven winners/i);
  assert.match(d,/same-input test/);
  assert.match(d,/Google Search spam policies/);
 });
