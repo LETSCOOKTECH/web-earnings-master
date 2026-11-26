@@ -60,9 +60,10 @@ The checked registry has at least 25 named channels; the above is a conceptual g
 
 ## 3. Agent tool modes and reproducible commands
 
-Commands do not require any paid keyword or affiliate API key:
+Commands do not require any paid keyword or affiliate API key. Start with the complete 25-channel catalog and read [the current-source research playbook](references/01-live-discovery.md) for new providers and non-obvious earning avenues:
 
 ```bash
+node scripts/discover-monetization-stack.mjs --catalog
 node scripts/discover-monetization-stack.mjs --recommend --niche "developer csv tools" --expected-adblock-rate 0.42 --desktop-pct 90 --primary-geo mixed --server-cost 0
 
 # Offline evidence inspection; never downloads third-party pages:
