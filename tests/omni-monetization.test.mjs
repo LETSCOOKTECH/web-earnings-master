@@ -155,3 +155,14 @@ test('original V23 50-skill registry remains frozen and extension is readable',(
  assert.ok(read('extensions/v31/skills/web-omni-monetization-engine/SKILL.md').startsWith('---\nname: web-omni-monetization-engine'));
  assert.equal(read('AGENTS.md').startsWith('## V13 MANDATORY'),true);
 });
+
+test('CLI catalog exposes the entire researched earning-channel universe without claiming income',async()=>{
+ const r=await run(['--catalog']);
+ assert.equal(r.schema,'sense-earning-channel-catalog-v31');
+ assert.ok(r.channels.length>=25);
+ assert.ok(r.provider_evidence.length>=20);
+ assert.equal(r.net_earning_claims_verified,false);
+ const lemon=r.provider_evidence.find(x=>x.id==='lemon-squeezy');
+ assert.equal(lemon.india_payout_supported,null);
+ assert.equal(lemon.status,'OFFICIAL_REVIEWED');
+});
