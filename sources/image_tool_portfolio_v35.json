@@ -332,9 +332,9 @@
       "us_modeled_monthly_searches": 5400,
       "volume_source": "https://www.kwstrends.com/keywords/us/png-maker",
       "source_class": "PNG",
-      "phase": "B",
+      "phase": "C",
       "distinct_output": "Color-key transparency from a uniform background, edge control",
-      "stage": "VALIDATE_AFTER_WEDGE",
+      "stage": "RISK_OR_SMALL_DEMAND",
       "actual_us_serp_test": "NOT_RUN",
       "competitor_same_input_test": "NOT_RUN",
       "original_gkp_export": "NOT_RUN",
@@ -358,5 +358,8 @@
       "indexability_status": "UNDEPLOYED",
       "page_publish_gate": "HOLD_UNTIL_UNIQUE_FUNCTIONALITY_AND_EVIDENCE"
     }
-  ]
+  ],
+  "all_pages_eligible_or_indexed_guarantee": false,
+  "demand_estimates_are_not_additive": true,
+  "no_build_authorization": true
 }
