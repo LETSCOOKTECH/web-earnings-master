@@ -1,6 +1,6 @@
 # 02 — Production-ready tools, classic SEO, AI search and release verification
 
-**Date:** 2026-11-26. **Owners:** web-astro-engineering, web-browser-runtime, web-product-validation, web-security-performance, web-technical-seo, web-ai-search-optimization. This is implementation guidance with fail-closed receipts, not a promise that any framework dominates Google.
+**Date:** 2026-11-26. **Owners:** web-astro-engineering, web-browser-runtime, web-product-validation, web-security-performance, web-technical-seo, web-ai-discovery. This is implementation guidance with fail-closed receipts, not a promise that any framework dominates Google.
 
 ## 1. Convert the research thesis to a testable software contract
 
