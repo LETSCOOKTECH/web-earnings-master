@@ -1,0 +1,49 @@
+name: V31 Omni Monetization Agent and Policy Gates
+on:
+  push:
+    branches:
+      - 'feature/v31-omni-monetization'
+  pull_request:
+    paths:
+      - 'extensions/v31/**'
+      - 'sources/monetization_providers_registry.json'
+      - 'sources/skill-network-v31.json'
+      - 'scripts/omni-monetization-core.mjs'
+      - 'scripts/discover-monetization-stack.mjs'
+      - 'templates/astro-monetization-slot/**'
+      - 'tests/omni-monetization.test.mjs'
+      - 'tests/fixtures/omni/**'
+      - 'docs/monetization/**'
+      - '.github/workflows/omni-monetization-v31.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  omnimonetization:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.22.3'
+      - name: Run V31 adversarial provider and SSRF tests
+        run: node --test tests/omni-monetization.test.mjs
+      - name: Retain original 50 registered skills and public agent contract
+        run: |
+          node scripts/check-skill-network-v23.mjs
+          npm run lint:skills
+          npm run audit:public-agent:v27
+      - name: Run all existing regression tests and source quality gates
+        run: npm test
+      - name: Execute real zero-key local recommendation and synthetic fingerprint
+        run: |
+          node scripts/discover-monetization-stack.mjs --recommend --niche "developer csv tools" --expected-adblock-rate 0.42 --desktop-pct 91 --primary-geo mixed --server-cost 0 > /tmp/v31-plan.json
+          node -e "const r=require('/tmp/v31-plan.json');if(r.profile_class!=='B2B_UTILITY_MIX'||r.ranked_layers.length<3||r.projected_revenue!==null)process.exit(1)"
+          node scripts/discover-monetization-stack.mjs --fingerprint https://synthetic.invalid/ --html-file tests/fixtures/omni/sample.html --ads-file tests/fixtures/omni/sample-ads.txt > /tmp/v31-footprint.json
+          node -e "const r=require('/tmp/v31-footprint.json');if(r.sourceMode!=='OFFLINE_FIXTURE_ONLY'||r.real_revenue_verified!==false||r.publicSellerDeclarations.length!==2)process.exit(1)"
+      - name: Verify unsupported new provider cannot self-register
+        run: |
+          if node scripts/discover-monetization-stack.mjs --ingest-candidate templates/monetization/provider-candidate.example.json; then
+            echo 'FAIL: synthetic candidate accepted for automatic registration'; exit 1
+          fi
