@@ -28,6 +28,15 @@ A continuously improved technical research and execution library for the **entir
 
 **Skill-library status:** 50 registered Codex skills. Existing static manifests and tests do **not** independently validate the completeness, originality, policy accuracy or production effectiveness of all 49. See [the V20 entire-skill quality inventory](docs/audits/2026-11-25-skill-library-truth-v20.md), [49-skill first-party source and test crosswalk](sources/skill-evidence-crosswalk-v20.json) and [full-stack release evidence specification](docs/quality/real-world-release-contract-v20.md) for measured deficiencies and mandatory real-world checks.
 
+## V31 — open-source omni monetization discovery companion (opt-in)
+
+The [Omni Monetization Engine](extensions/v31/skills/web-omni-monetization-engine/SKILL.md) helps research **25 legitimate earning channels** for useful websites and browser tools, assess current publisher/affiliate/MoR eligibility, identify public monetization signals, compare revenue-stacks without fabricated RPM, and plan lawful paid-product or B2B experiments. See the [20-provider dated source registry](sources/monetization_providers_registry.json), [source evidence and corrections](docs/monetization/OMNI_EVIDENCE.md) and [read-only discovery CLI](scripts/discover-monetization-stack.mjs). Tested examples use synthetic data. **V31 is an opt-in companion outside the frozen 50 active V23 skills** and cannot autonomously run unscheduled background searches or enroll real publisher accounts. An ad slot template is static and installs no third-party ads; site deployment and revenue remain unverified.
+
+```bash
+node scripts/discover-monetization-stack.mjs --recommend --niche "developer CSV and JSON tools" --expected-adblock-rate 0.42 --desktop-pct 90 --primary-geo mixed --server-cost 0
+node --test tests/omni-monetization.test.mjs
+```
+
 ## V30 security and real-route guidance hardening — candidate patch
 
 A [dated nine-claim reality audit](docs/audits/2026-11-26-v30-external-claims-reality.md) separates the external report's outdated V26, unverifiable CPC/traffic/scores, and the nine proposed tasks from measured code. The V29 Studio's exported CSV/TSV **header** cells previously bypassed spreadsheet formula protection; the V30 patch protects header and body cells when the safety option is enabled. Local file selection is checked against the active converter's expected source format. Each of the 28 actual tool routes now has distinct task guidance, exact output semantics, and limitations enforced by a source/build audit. These changes require independent CI validation before merge.

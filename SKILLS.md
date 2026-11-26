@@ -76,3 +76,8 @@ Current LETSCOOKTECH-owned material is available under [Apache License 2.0](LICE
 
 The experimental [web-dominant-studio-v29 companion](extensions/v29/skills/web-dominant-studio-v29/SKILL.md) is a distinct opt-in module for browser-local data work, not a replacement for, or a silently registered 51st active V23 skill. See [working Astro source](examples/astro-dominant-studio-v29/README.md), [the source/production truth ledger](docs/audits/2026-11-26-v29-implementation-truth.md) and [V29 extension overlay](sources/skill-network-v29.json). The 50 numbered original entries remain authoritative for legacy agents and tests.
 
+
+## Optional V31 Omni Monetization Engine (not a registered V23 specialist)
+
+For website earning research and continually reverified program discovery, load [web-omni-monetization-engine](extensions/v31/skills/web-omni-monetization-engine/SKILL.md). Its [25-channel registry](sources/monetization_providers_registry.json), [dated first-party evidence](docs/monetization/OMNI_EVIDENCE.md), [offline-first research CLI](scripts/discover-monetization-stack.mjs) and [V31 extension overlay](sources/skill-network-v31.json) are public. Do not treat the companion as an automatically registered 51st active V23 skill. Invoke it by its raw URL or file path; original 50 numbered skills remain unchanged. Live discovery requires explicit domain authorization and never grants a provider account or payout automatically.
+

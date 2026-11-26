@@ -52,3 +52,8 @@ Use the `ads` source-linked claim packet from `scripts/site-intelligence.mjs` on
 ## V29 additive publisher readiness, with official-rule separation
 Apply the V28 publisher route audit and V29 build artifact checks, and inspect actual ad scripts, consent modes and ad-control geometry only on an owner-authorized live property. A CLS <=0.01 target and >=32px visual clearance are internal engineering guardrails, not official AdSense thresholds. Neither 20 indexed pages nor 15 guides of 800 words is a universal Google AdSense acceptance rule. Verify live updated Google sources and account settings before approval claims. For Indian payees, consult RBI service-export FAQs: resident-individual EDF treatment differs from non-individual remittances exceeding ₹10 lakh, and filing dates differ for software vs other services; no universal 30-day mandate.
 
+
+## V31 — optional income diversification routing
+
+If the user asks about all earning methods rather than AdSense qualification alone, invoke `extensions/v31/skills/web-omni-monetization-engine/SKILL.md`. Keep the AdSense admission and real publisher account gates separate from the candidate revenue-stack heuristic. Never promise AdSense auto-fill or refresh; verify original Google AdSense policy, CMP, invalid traffic, real site review, ads.txt publisher ID and genuine human results. The V31 static ad slot does **not** serve ads or grant approval. Carbon/other network exclusivity can disallow a proposed "waterfall". No traffic- or income-guarantee claims from candidate registries.
+

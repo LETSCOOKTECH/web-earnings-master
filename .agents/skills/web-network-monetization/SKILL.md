@@ -34,3 +34,8 @@ Do not compare estimated Ahrefs CPC or random eRPM against speculative API costs
 
 ## V6 production and research handoff (2026-11-23)
 Route network fit and exclusive contract terms to web-monetization-network-operator; Raptive long-form/geo/age requirements and Mediavine revenue minimum do not ensure acceptance. Journey requirements changed 2026-11-18 and must be rechecked at action time. See docs/v6/04-publisher-networks-and-policy-engine.md.
+
+## V31 — all-channel monetization opportunity handoff
+
+For ads versus sponsorship versus licensed tools, paid batch APIs, merchant-of-record checkouts, affiliates or AI licensing, read `extensions/v31/skills/web-omni-monetization-engine/SKILL.md` and `sources/monetization_providers_registry.json`. Use the dated primary-source packet for provider eligibility and `scripts/discover-monetization-stack.mjs` for conservative heuristic comparison. Carbon Ads says it is exclusive and cannot be used as backfill. Journey requires qualifying-geo sessions; Raptive needs editorial fit. Unknown India payouts, account eligibility or partner contracts remain HOLD. No fabricated RPM, guaranteed adblock coverage, or blanket 20-lakh GST/30-day EDF rule.
+

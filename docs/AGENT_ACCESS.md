@@ -85,3 +85,16 @@ Read the [root Apache-2.0 license](../LICENSE), [copyright and trademark limitat
 The project once used a proprietary license. This release applies Apache-2.0 to eligible current original work. Third-party texts, external URLs, libraries, datasets, trademarks and artwork retain their own rights. Publishing a repository makes its files and history visible, not secure by default. Before sharing credentials or personal data, keep them outside source control; revoke and rotate any credentials exposed in historical commits. A filename-only scan cannot prove secrets absent.
 
 Do not claim a working deployed website, live ranking, income, AdSense approval or browser access based purely on passing local repository tests.
+
+## V31 — publicly readable monetization agent skill
+
+Read the **optional** [Omni Monetization Engine](../extensions/v31/skills/web-omni-monetization-engine/SKILL.md) directly, including the dated provider registry and linked evidence. Raw and API GET addresses:
+
+```text
+https://raw.githubusercontent.com/LETSCOOKTECH/web-earnings-master/main/extensions/v31/skills/web-omni-monetization-engine/SKILL.md
+https://raw.githubusercontent.com/LETSCOOKTECH/web-earnings-master/main/sources/monetization_providers_registry.json
+https://api.github.com/repos/LETSCOOKTECH/web-earnings-master/contents/extensions/v31/skills/web-omni-monetization-engine/SKILL.md?ref=main
+```
+
+The original 50 registered skills are still under `.agents/skills/`; the V31 monetization specialist is an optional companion. Agents with no internet can request pasted/uploaded Markdown. The research CLI only accesses external websites with operator authorization; no open-source license creates an external service's payout entitlement or policy compliance.
+
